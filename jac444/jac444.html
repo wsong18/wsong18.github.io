@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>JAC444-W.Song</title>
+    <meta name="viewport" content="width=1000, initial-scale=1.0, maximum-scale=1.0">
+
+    <!-- Loading Bootstrap -->
+    <link href="../Flat-UI-master/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Loading Flat UI -->
+    <link href="../Flat-UI-master/css/flat-ui.css" rel="stylesheet">
+    <link href="../Flat-UI-master/css/demo.css" rel="stylesheet">
+    <link href="../Flat-UI-master/css/mystyle.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="../Flat-UI-master/js/html5shiv.js"></script>
+      <script src="../Flat-UI-master/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body onload="init();">
+    <div class="container">
+      
+      <a id="top"></a> 	
+      <div class="page-header">
+        <h3>JAC444</h3>
+	<p>
+	  JAC444 - Introduction To Java for C++ Programmers - 
+	  <a href="http://www.senecacollege.ca/"><img src=../Flat-UI-master/images/seneca_logo.png alt="Seneca"/></a> College
+	</p>
+      </div> <!-- /page-header -->	  
+	  
+      <div class="row demo-row">
+          <nav class="navbar navbar-inverse navbar-embossed" role="navigation">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
+                <span class="sr-only">Toggle navigation</span>
+              </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse-01">
+              <ul class="nav navbar-nav navbar-left">
+		<li><a href="../index.html"><span class="fui-user"></span></a></li>
+                <li><a href="#top">Announcements</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#standards">Standards</a></li>
+                <li><a href="https://scs.senecac.on.ca/course/jac444">Outline</a></li>
+               </ul>
+            </div><!-- /.navbar-collapse -->
+          </nav><!-- /navbar -->	
+      </div> <!-- /row -->	
+	
+      
+      <div class="demo-row typography-row">
+        <div class="demo-content">
+	  <h3>
+	    <!--img src="../Flat-UI-master/images/announcements.png" alt="">&nbsp;-->
+	    Announcements
+	  </h3>
+	  <h3 class="demo-panel-title">Welcome</h3>
+	  <p>Welcome to JAC444. I'll be teaching this course in the second half of the semester.</p>
+	  <p>All course information, assignments, workshops and course materials are available on your
+	    <a href="https://my.senecacollege.ca/webapps/portal/frameset.jsp">My.Seneca - the Blackboard</a>.
+	    For my timetable and contact information, please go to my
+            <a href="https://scs.senecac.on.ca/~wei.song/">home page</a>.
+	  </p>
+	  <br><br>
+	</div><!-- /demo-content -->
+      </div><!-- /demo-row -->
+  
+  
+      <a id="schedule"></a> 
+      <div class="demo-row typography-row">
+        <div class="demo-content">
+	  <h3>
+<!--	    <img src="../Flat-UI-master/images/icons/svg/calendar.svg" alt="">&nbsp;&nbsp;-->
+	    <canvas id="calendarCanvas" width="100" height="100">
+	      <img src="../Flat-UI-master/images/calendar_background.png" alt="">
+	    </canvas>&nbsp;&nbsp;
+	    JAC444 Weekly Schedule&nbsp;&nbsp;
+	    <a href="#top" class="back">^</a>
+	  </h3>
+	  <br>
+	  <p>JAC444 Section A - Summer 2014
+	    <span class="legend">
+	      LEGEND:
+	      <button type="button" class="btn btn-xs btn-default"
+		          title="The task or lecture has not be released yet."
+			  onclick="alert(this.title);">Not Available
+	      </button>
+	      <button type="button" class="btn btn-xs btn-info"
+		          title="For released lectures, tasks or examples."
+			  onclick="alert(this.title);">Released
+	      </button>
+	      <button type="button" class="btn btn-xs btn-danger"
+		          title="Indicates a task is due or a test will be held in this week."
+			  onclick="alert(this.title);">Task Due
+	      </button>
+	      <button type="button" class="btn btn-xs btn-success"
+		          title="For references, solutions or notifications."
+			  onclick="alert(this.title);">References
+	      </button>
+	    </span>
+	  </p>
+	  
+	  <table class="table table-bordered">
+	    <thead>
+	      <tr id=row0>
+		<th class=center>Week<br></th>
+		<th class=center>Date<br></th>
+		<th class=center>Topics<br></th>
+		<th>Lectures<br></th>
+		<th>Assignment,<br>Workshops</th>
+		<th>Task Due,<br>References</th>
+	      </tr>
+	    </thead>
+	    <tbody>
+	      <tr id=row1>
+		<th class=center>1</th>
+		<td>May 6</td>
+		<td>
+		  <ul>
+		    <li>Introduction</li>
+		  </ul>
+		</td>
+		<td>
+		  <button type="button" class="btn btn-xs btn-default" 
+			  title="Lecture slides not available"
+			  onclick="alert(this.title);">
+		    Lecture 1
+		  </button>
+		</td>
+		<td>
+		  <button type="button" class="btn btn-xs btn-default"
+			  title="JAC444 workshop 0"
+			  onclick="alert(this.title);"
+			  >workshop 0</button>  
+		</td>
+		<td>
+		  &nbsp;
+		</td>
+	      </tr>
+	      <tr id="row2">
+		<th class=center>2</th>
+		<td>May 12</td>
+		<td>
+		  <ul>
+		    <li>OOP in Java</li>
+		  </ul>
+		</td>
+		<td>
+		  <button type="button" class="btn btn-xs btn-default" 
+			  title="Lecture slides not available"
+			  onclick="alert(this.title);">
+		    Lecture 2
+		  </button>
+		</td>
+		<td>
+		  <button type="button" class="btn btn-xs btn-default"
+			  title="JAC444 workshop 1"
+			  onclick="alert(this.title);"
+			  >workshop 1</button>  
+		</td>
+		<td>
+		  &nbsp;
+		</td>
+	      </tr>		
+	      <tr id=row3>
+		<th class=center>3</th>
+		<td>May 20</td>
+		<td>
+		  <ul>
+		    <li>Java packages</li>
+		    
+		  </ul>
+		</td>
+		<td>
+		  <button type="button" class="btn btn-xs btn-default" 
+			  title="Lecture slides not available"
+			  onclick="alert(this.title);">
+		    Lecture 3
+		  </button>
+		</td>
+		<td>
+		  <button type="button" class="btn btn-xs btn-default"
+			  title="JAC444 workshop 2"
+			  onclick="alert(this.title);"
+			  >workshop 2</button>
+		  <br>
+		  <button type="button" class="btn btn-xs btn-default"
+			  title="JAC444 Assignment 1"
+			  onclick="alert(this.title);"
+			  >Assignment 1</button>
+		</td>
+		<td>
+		  &nbsp;
+		</td>
+	      </tr>
+	      <tr id=row4>
+		<th class=center>4</th>
+		<td>May 26</td>
+		<td>
+		  <ul>
+		    <li>JUnit testing with Eclipse</li>
+		  </ul>
+		</td>
+		<td>
+		  <button type="button" class="btn btn-xs btn-default" 
+			  title="Lecture slides not available"
+			  onclick="alert(this.title);">
+		    Lecture 4
+		  </button>
+		</td>
+		<td>
+		  <button type="button" class="btn btn-xs btn-default"
+			  title="JAC444 workshop 3"
+			  onclick="alert(this.title);"
+			  >workshop 3</button>  
+		</td>
+		<td>
+		  &nbsp;
+		</td>
+	      </tr>
+	      <tr id=row5>
+		<th class=center>5</th>
+		<td>June 2</td>
+		<td>
+		  <ul>
+		    <li>Exception handling in Java</li>
+		    <li>Event-driven Programming(GUI programming)</li>
+		   </ul>
+		</td>
+		<td>
+		  <button type="button" class="btn btn-xs btn-default" 
+			  title="Lecture slides not available"
+			  onclick="alert(this.title);">
+		    Lecture 5
+		  </button>
+		</td>
+		<td>
+		  <button type="button" class="btn btn-xs btn-default"
+			  title="JAC444 workshop 4"
+			  onclick="alert(this.title);"
+			  >workshop 4</button>  
+		</td>
+		<td>
+		  <button type="button" class="btn btn-xs btn-default"
+			  title="JAC444 Assignment 1 due"
+			  onclick="alert(this.title);"
+			  >Assign 1 due</button>
+		</td>
+	      </tr>
+	      <tr id=row6>
+		<th class=center>6</th>
+		<td>June 9</td>
+		<td>
+		  <ul>
+		    <li>GUI programming in Java
+		      <ul>
+		       <li>Swing Classes</li>
+		       <li>Layout Managers</li>
+		      </ul></li>
+		   </ul>
+		</td>
+		<td>
+		  <button type="button" class="btn btn-xs btn-default" 
+			  title="Lecture slides not available"
+			  onclick="alert(this.title);">
+		    Lecture 6
+		  </button>
+		</td>
+		<td>
+		  <button type="button" class="btn btn-xs btn-default"
+			  title="JAC444 workshop 5"
+			  onclick="alert(this.title);"
+			  >workshop 5</button>  
+		</td>
+		<td>
+		  <button type="button" class="btn btn-xs btn-default" 
+			  title="Test #1"
+			  onclick="alert(this.title);">
+		    Test #1
+		  </button>
+		  <br>
+		  
+		</td>
+	      </tr>
+	      <tr id=row7>
+		<th class=center>7</th>
+		<td>June 16</td>
+		<td>
+		  <ul>
+		    <li>Applets and Graphics programming 
+		      <ul>
+		       <li>KeyListener</li>
+		       <li>MouseListener</li>
+		      </ul></li>
+		   </ul>
+		</td>
+		<td>
+		  <button type="button" class="btn btn-xs btn-default" 
+			  title="Lecture slides not available"
+			  onclick="alert(this.title);">
+		    Lecture 7
+		  </button>
+		</td>
+		<td>
+		  <button type="button" class="btn btn-xs btn-default"
+			  title="JAC444 workshop 6"
+			  onclick="alert(this.title);"
+			  >workshop 6</button>  
+		</td>
+		<td>
+		  &nbsp;
+		</td>
+	      </tr>
+	      <tr id=row8>
+		<th class=center>Study<br>Week</th>
+		<td>June 23</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	      </tr>
+	      <tr id=row9>
+		<th class=center>8</th>
+		<td>June 30</td>
+		<td>
+		  <ul>
+		    <li>Socket-based client/server programming</li>
+		  </ul>
+		</td>
+		<td>
+		  <button type="button" class="btn btn-xs btn-default" 
+			  title="Please see the Assignment section on the Blackboard"
+			  onclick="alert(this.title);">
+		    Lecture 8
+		  </button>
+		</td>
+		<td>
+		  <button type="button" class="btn btn-xs btn-default"
+			  title="Please see the Assignment section on the Blackboard"
+			  onclick="alert(this.title);"
+			  >workshop 7</button>  
+		</td>
+		<td>
+		  &nbsp;
+		</td>
+	      </tr>
+	      <tr id=row10>
+		<th class=center>9</th>
+		<td>July 7</td>
+		<td>
+		  <ul>
+		    <li>Thread programming</li>
+		  </ul>
+		</td>
+		<td>
+		  <button type="button" class="btn btn-xs btn-default" 
+			  title="Please see the Assignment section on the Blackboard"
+			  onclick="alert(this.title);">
+		    Lecture 9
+		  </button>
+		</td>
+		<td>
+		  <button type="button" class="btn btn-xs btn-default"
+			  title="Please see the Assignment section on the Blackboard"
+			  onclick="alert(this.title);"
+			  >workshop 8</button>
+		  <br>
+		  <button type="button" class="btn btn-xs btn-default"
+			  title="Please see the Assignment section on the Blackboard"
+			  onclick="alert(this.title);"
+			  >Assignment 3</button>
+		</td>
+		<td>
+		  &nbsp;
+		</td>
+	      </tr>
+	      <tr id=row11>
+		<th class=center>10</th>
+		<td>July 15</td>
+		<td>
+		  <ul>
+		    <li>Remote method invocation (RMI)</li>
+		  </ul>
+		</td>
+		<td>
+		  <button type="button" class="btn btn-xs btn-default" 
+			  title="Please see the Assignment section on the Blackboard"
+			  onclick="alert(this.title);">
+		    Lecture 10
+		  </button>
+		</td>
+		<td>
+		  <button type="button" class="btn btn-xs btn-default"
+			  title="Please see the Assignment section on the Blackboard"
+			  onclick="alert(this.title);"
+			  >workshop 9</button>  
+		</td>
+		<td>
+		  &nbsp;
+		</td>
+	      </tr>
+	      <tr id=row12>
+		<th class=center>11</th>
+		<td>July 21</td>
+		<td>
+		  <ul>
+		    <li>Java database connectivity (JDBC)</li>
+		  </ul>
+		</td>
+		<td>
+		  <button type="button" class="btn btn-xs btn-default" 
+			  title="Please see the Assignment section on the Blackboard"
+			  onclick="alert(this.title);">
+		    Lecture 11
+		  </button>
+		</td>
+		<td>
+		  <button type="button" class="btn btn-xs btn-default"
+			  title="Please see the Assignment section on the Blackboard"
+			  onclick="alert(this.title);"
+			  >workshop 10</button>  
+		</td>
+		<td>
+		  &nbsp;
+		</td>
+	      </tr>
+	      <tr id=row13>
+		<th class=center>12</th>
+		<td>July 28</td>
+		<td>
+		  <ul>
+		    <li>Java Input/Output</li>
+		    <li>Java Annotations</li>
+		    <li>Java Collections Framework</li>
+		  </ul>
+		</td>
+		<td>
+		  <button type="button" class="btn btn-xs btn-default" 
+			  title="Please see the Assignment section on the Blackboard"
+			  onclick="alert(this.title);">
+		    Lecture 12
+		  </button>
+		</td>
+		<td>
+		  <button type="button" class="btn btn-xs btn-default" 
+			  title="Test #2"
+			  onclick="alert(this.title);">
+		    Test #2
+		  </button>
+		</td>
+		<td>
+		  <button type="button" class="btn btn-xs btn-default"
+			  title="Please see the Assignment section on the Blackboard"
+			  onclick="alert(this.title);"
+			  >Assign 3 due</button>
+		  <br>
+		</td>
+	      </tr>
+	      <tr id=row14>
+		<th class=center>13</th>
+		<td>Aug. 5</td>
+		<td>
+		  <ul>
+		    <li>Catch-up and review</li>
+		  </ul>
+		</td>
+		<td>
+		  <button type="button" class="btn btn-xs btn-default" 
+			  title="Please see the Assignment section on the Blackboard"
+			  onclick="alert(this.title);">
+		    Lecture 13
+		  </button>
+		</td>
+		<td>
+		  &nbsp; 
+		</td>
+		<td>
+		  &nbsp;
+		</td>
+	      </tr>
+	      <tr id=row15>
+		<th class=center>Exam<br>Week</th>
+		<td>Aug. 11</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	      </tr>
+	    </tbody>
+	  </table>
+	</div><!-- /demo-content -->
+      </div><!-- /demo-row -->
+      
+      <br><br>
+      
+      
+      <a id="standards"></a>
+      <div class="demo-row typography-row">
+        <div class="demo-content">
+	  <h3>
+	    <img src="../Flat-UI-master/images/icons/svg/retina.svg" alt="">&nbsp;&nbsp;
+	    Course Standards&nbsp;&nbsp;
+	    <a href="#top" class="back">^</a>
+	  </h3>
+	  <br>
+	  <p>For General Class Standards please refer also to the appropriate section on my home page from the link of <a href="https://scs.senecac.on.ca/~wei.song/index.html#standards">https://scs.senecac.on.ca/~wei.song/index.html#standards</a>.</p>
+	  <p>For Seneca College Information Technology Acceptable Use Policy please go to the link at
+	    <a href="https://scs.senecac.on.ca/page/computer-studies-academic-procedure">
+	      https://scs.senecac.on.ca/page/computer-studies-academic-procedure</a> </p>
+	  <br>
+	</div><!-- /demo-content -->
+      </div><!-- /demo-row -->
+      
+      <div class="row">
+	
+	<div class="col-sm-4">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Course Structure</h3>
+            </div>
+            <div class="panel-body">
+	      <ul>
+		<li>1 Weekly Lecture</li>
+		<li>1 Weekly Workshop</li>
+	      </ul>
+	      <p>&nbsp;</p>
+	      <p>&nbsp;</p>
+	      <p>&nbsp;</p>
+            </div>
+          </div>
+	</div><!-- /.col-sm-4 -->
+	
+	<div class="col-sm-4">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Course Evaluation</h3>
+            </div>
+            <div class="panel-body">
+	      <ul>
+		<li>Assignments (3) - 30%</li>
+		<li>Tests (2) - 30%</li>
+		<li>Final Exam - 30%</li>
+	      </ul>
+	      <p>&nbsp;</p>
+            </div>
+          </div>
+	</div><!-- /.col-sm-4 -->
+	
+	<div class="col-sm-4">  
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Promotion Policy</h3>
+            </div>
+            <div class="panel-body">
+              <p>To obtain a credit in this subject you must achieve the following:</p>
+	      <ul>
+		<li>50% on the final exam</li>
+		<li>50% weighted average on tests and exam</li>
+		<li>50% on the overall course</li>
+	      </ul>
+            </div>
+          </div>
+	  
+        </div><!-- /.col-sm-4 -->
+
+      </div><!-- / row -->
+      
+      
+      
+      <div class="row">
+	
+	<div class="col-xs-12">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Tests and Exam</h3>
+            </div>
+            <div class="panel-body">
+	      <ul>
+                <li>Open Book Policy: You are allowed to use one reference sheet (2-sided, typed and named) and one book on Java programming when you take a test and the final examination.</li>
+		<li>If you miss a test due to an emergency you must email me immediately in order to receive consideration for your absence. You must provide documented evidence (e.g. a doctor's note) of the emergency. No makeup test will be given. There is no make-up test.</li>
+	      </ul>
+            </div>
+          </div>
+	  
+	  <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Lectures</h3>
+            </div>
+            <div class="panel-body">
+	      <ul>
+		<li>Assignments will not be accepted after the last day of class.</li>
+                <li>Late assignments will be penalized by -10% perday. The maximum late penalty is -100%.</li>
+                <li>Incorrect assignments that need to be resubmitted will receive a maximum grade of 50%.</li>
+                <li>It must be resubmitted within a week upon notification. Afterwards it will receive a ZERO.</li>
+	      </ul>
+            </div>
+          </div>
+	  
+        </div><!-- /.col-sm-4 -->
+	
+      </div><!-- / row -->
+	    
+        
+    </div> <!-- /container -->
+    
+    <footer>
+      <div class="container">
+        <div class="row">
+	  <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <li><a href="../index.html">Home</a></li>
+	      <li><a href="https://scs.senecac.on.ca/">School of ICT</a></li>
+	      <li><a href="https://my.senecacollege.ca/webapps/portal/frameset.jsp">MySeneca</a></li>
+	      <li><a href="http://www.senecacollege.ca/">Seneca College</a></li>
+	      <li><a href="https://inside.senecacollege.ca/its/index.html">Help Desk</a></li>
+	      <li><a href="http://seneca.libguides.com/content.php?pid=53490&amp;hs=a">Library</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+ 
+          <div class="col-xs-7"> </div> <!-- /col-xs-7 -->
+        </div>
+      </div>
+    </footer>
+    
+    
+    <!-- Load JS here for greater good =============================-->
+    <!--<script src="../Flat-UI-master/js/jquery-1.8.3.min.js"></script>
+    <script src="../Flat-UI-master/js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="../Flat-UI-master/js/jquery.ui.touch-punch.min.js"></script>
+    <script src="../Flat-UI-master/js/bootstrap.min.js"></script>
+    <script src="../Flat-UI-master/js/bootstrap-select.js"></script>
+    <script src="../Flat-UI-master/js/bootstrap-switch.js"></script>
+    <script src="../Flat-UI-master/js/flatui-checkbox.js"></script>
+    <script src="../Flat-UI-master/js/flatui-radio.js"></script>
+    <script src="../Flat-UI-master/js/jquery.tagsinput.js"></script>
+    <script src="../Flat-UI-master/js/jquery.placeholder.js"></script>
+    <script src="../Flat-UI-master/js/jquery.stacktable.js"></script>
+    <script src="../Flat-UI-master/js/application.js"></script>-->
+    <script src="../Flat-UI-master/js/myscript.js"></script>
+    <!--script>
+      alert("This page is not available!");
+      window.location = "../index.html";
+    </script-->
+  </body>
+</html>

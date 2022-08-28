@@ -1,0 +1,1584 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<title>Lec 4</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Segoe UI Symbol";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:"Lucida Console";
+	panose-1:2 11 6 9 4 5 4 2 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+h4
+	{mso-style-link:"Heading 4 Char";
+	margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-link:"Header Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-link:"Footer Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:#954F72;
+	text-decoration:underline;}
+p
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+code
+	{font-family:"Courier New";}
+span.Heading4Char
+	{mso-style-name:"Heading 4 Char";
+	mso-style-link:"Heading 4";
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+span.HeaderChar
+	{mso-style-name:"Header Char";
+	mso-style-link:Header;}
+span.FooterChar
+	{mso-style-name:"Footer Char";
+	mso-style-link:Footer;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink="#954F72" background=bgw.gif>
+
+<div class=WordSection1 
+     style="margin: 0.5in auto; max-width: 50em; min-width: 30em;">
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:18.0pt;
+font-family:"Arial",sans-serif'>INT422 – Lecture 4</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Associations - Working with
+associated (related) entity objects.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Test today</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Test 3&nbsp;is today.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>We will have the test at the
+beginning of the timeslot, and will run approximately 18 minutes.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>As you have learned, all tests
+in this course are hand-written. Pen or pencil. Answer styles will vary, but
+we’re mostly looking for short- to medium-length answers, and/or diagrams, and
+so on.&nbsp;No references or resources are permitted – “closed book, open
+brain”.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The tested topics are <span
+style='background:yellow'>mostly forward-looking</span>. You will
+be&nbsp;tested on comprehension, understanding, and the application of the
+current week’s topics. It is possible that you may be tested on <span
+style='background:yellow'>a recently-covered topic</span>, which enables you to
+show that you have the foundational knowledge needed for current and future
+tasks.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Textbook coverage</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>As announced last week, the
+textbook will have a supporting role as you learn new topics from these notes
+and your classroom sessions. Use the table-of-contents and the index to locate
+the topic, and then read about it there. A reminder: The textbook does not use
+view model classes in its discussions and code examples. We do.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Homework reminder</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In the last class, your teacher
+may have assigned homework, to complete the “pattern summary” quick reference
+document. Please complete that task, and submit it to Blackboard before the end
+of Saturday of week 4.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Advice about success in this
+course</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>We have completed about
+one-quarter of the course. We hope that you’ve enjoyed it so far.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>While checking and marking your
+work, your professor has noticed some good work, but also some indicators of
+poor scholarship among the work that has earned low grades. This section of the
+notes has advice on how to improve.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The following advice is for <em><span
+style='font-family:"Arial",sans-serif'>every</span></em> student in the course.
+It will also work for <em><span style='font-family:"Arial",sans-serif'>other
+courses</span></em> in our software development programs. Here’s the advice:</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>Prepare</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Prepare before every class.
+Your professor <em><span style='font-family:"Arial",sans-serif'>expects</span></em>
+you to have <u>read and studied the notes</u>, <em><span style='font-family:
+"Arial",sans-serif'>including</span></em> the linked and recommended readings.
+You must <u>perform some learning activities</u> before class. You don’t need
+your professor to verbally dictate content that you can consume better and more
+efficiently on your own. Therefore, make it a habit to prepare before class.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Readings are important. It is
+impossible to learn what you need to learn in this course, by simply listening
+to your professor talk for ninety&nbsp;minutes each week. It is also impossible
+to learn what you need to learn simply by writing code, and ignoring all of the
+good advice and best practices that are communicated to you through the
+readings.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The way you work through the
+content is important. Don’t just move your eyes over the content, with the
+support of a partially-engaged and distracted brain. Instead, read critically,
+concentrate, and think as you read. Read the difficult or challenging topics <em><span
+style='font-family:"Arial",sans-serif'>out loud</span></em> (with your speaking
+voice!). Look up words or terms that are unfamiliar. <u>Open and study the code
+examples (using Visual Studio),</u> while you are working through the content.
+Follow the links to the linked material, and work through that too. Write down
+questions that you need answers to (and follow up by asking your professor or
+someone else in your support-and-learning network).</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>Review</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Review the </span><a
+href="https://scs.senecac.on.ca/~wei.song/int422/int422.html#schedule"
+target="_blank"><span style='font-family:"Arial",sans-serif'>course content</span></a><span
+style='font-family:"Arial",sans-serif'>. Every week. How?</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Schedule a regular time to do
+this work. You have an appointment calendar on your computer or phone – use it.
+When? Whatever works for your schedule, but it may be useful to do this
+activity on Monday or Tuesday, because you will recall techniques and best
+practices that will be useful as you work on that week’s assignment. Also, it
+will help you “study” for the regular Tuesday/Wednesday test.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Review the material in
+sequence. Two sequences could&nbsp;work: New-to-old, or old-to-new. In other
+words, you could start with the most recent material, and work backwards, day
+by day, to the oldest material. Alternatively, you could start with the oldest
+material, and work forwards to the current material.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Is there a benefit to a regular
+review? Yes. Ask yourself a question, and answer it honestly: Have you ever
+read something technical for a second (or third) time, and “discovered” the
+real meaning of something that you know you have read before? The answer will
+always be “yes”. It’s natural, and it’s part of being human.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Some students establish a
+“study group” with a few classmates. That’s a good practice. Quiz each other.
+Have each member be responsible for digging deep into a specific topic, and
+reporting the results to the others.</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>Resources</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Use the </span><a
+href="https://scs.senecac.on.ca/~wei.song/int422/int422.html#resources"
+target="_blank"><span style='font-family:"Arial",sans-serif'>recommended
+resources</span></a><span style='font-family:"Arial",sans-serif'>. There’s
+“gold” in the resources. Don’t ignore the resources that you think are too
+dense, or technical, or boring. Read them. Re-read them. If you begin to read
+content that’s unfamiliar, or beyond your current level of knowledge or
+understanding, you should still skim/read it. That way, when you later raise
+your level of knowledge and understanding, you will remember the material, and
+can handle it.</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>Assignments</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>When working on the programming
+assignments…</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Follow instructions.</span></p>
+
+<p><u><span style='font-family:"Arial",sans-serif'>Make a “coding plan”</span></u><span
+style='font-family:"Arial",sans-serif'> before you begin writing code. Whatever
+form works for you, use it. (Flowchart, pseudocode, comments inside empty
+methods/classes, English-like statements, boxes-and-arrows – whatever works for
+you.)</span></p>
+
+<p><u><span style='font-family:"Arial",sans-serif'>Do not copy-paste code</span></u><span
+style='font-family:"Arial",sans-serif'>, hoping that it will work. Write your
+code <em><span style='font-family:"Arial",sans-serif'>without</span></em> using
+copy-paste. Later, when you realize that you are writing and repeating the same
+code as before, then you can consider using copy-paste. And, you should look
+for opportunities to refactor your code.</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>Tests</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>When working on the weekly
+tests…</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Understanding a test question
+is important. Make sure you are answering the question, and not some other
+question. Ask your professor – during the test – if you’re unsure. (For best
+results, come up to the front of the room, to the professor, to ask your
+question. That way, you’ll have some privacy.)</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Understanding the question
+format is important too. Our questions are conversational in nature. They skew
+towards applying the knowledge you’re learning. They’re never trivial. The
+overall goal is to help you become a better explainer, in writing, and
+verbally. That will pay off in future work/career opportunities.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Code examples</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Associations – One to many</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Theme for today</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In past weeks, we have been
+working with single standalone entities.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Today, we begin to work with
+associated entities, and learn the design and coding patterns.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Associated (related) data
+introduction</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>As you begin learning this
+topic and concept, please remember that we are working with data <em><span
+style='font-family:"Arial",sans-serif'>in memory</span></em>. While the source
+of the data is often a database, and the destination is an HTML document, we do
+not care about those factors. Instead, we focus on working with data <em><span
+style='font-family:"Arial",sans-serif'>in memory</span></em>.</span></p>
+
+<p style='margin-left:.5in'><span style='font-size:18.0pt;font-family:"Segoe UI Symbol",sans-serif;
+color:#0070C0'>&#10077;</span><span style='font-family:"Arial",sans-serif'>This
+is important. We do not care about foreign keys, joins, and so on.</span></p>
+
+<p style='margin-left:.5in'><span style='font-family:"Arial",sans-serif'>When
+working with data in memory, we are working with objects and collections of
+objects, and LINQ.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Real-life and software objects
+can have associations (or relationships) between them.&nbsp;There are several
+kinds of associations that we will work with:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>one to many</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>many to many</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>one to one</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>to one, self-associated</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>to many, self-associated</span></li>
+</ul>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>One to
+many</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>You will often model real-life
+objects that have associations with other objects, in a one-to-many relationship.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>For example:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>“Program” has a collection of “Course”
+     objects,</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>“Supplier” has a collection of “Product”
+     objects, and</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>“Manufacturer” has a collection of
+     “Vehicle” objects.</span></li>
+</ul>
+
+<p><span style='font-family:"Arial",sans-serif'>Looking at the other side of
+the association:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>“Course” object belongs to a “Program”,
+     and similarly,</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>“Product” is made by a “Supplier”, and</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>“Vehicle” is made by a “Manufacturer”.</span></li>
+</ul>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>Many
+to many</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In real life, there are many
+situations that have a many-to-many association.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Consider your role as a student
+here at Seneca:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>A “Class” (like INT422) has a collection
+     of “Student” objects, and</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>A “Student” has a collection of “Class”
+     objects.</span></li>
+</ul>
+
+<p><span style='font-family:"Arial",sans-serif'>Now, think about the faculty
+employees here in the School of ICT:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>An “Employee” (e.g. Peter McIntyre, Ian
+     Tipson) can have many (a collection) of “Job Duty” objects, and</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>A “Job Duty” (e.g. teacher, coordinator,
+     researcher) can be done by many (a collection) of “Employee” objects.</span></li>
+</ul>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>The
+others – one to one, self-referencing to-one and to-many</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>We will cover these kinds of
+associations in the near future, likely next week.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>Are
+associations </span></strong><strong><i><span style='font-size:14.0pt;
+font-weight:normal'>always</span></i></strong><strong><span style='font-size:
+14.0pt;font-family:"Arial",sans-serif'> required?</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>When you are writing entity
+classes, are associations <em><span style='font-family:"Arial",sans-serif'>required</span></em>&nbsp;between
+or among <u>all</u> classes?</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>No.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>It is <em><span
+style='font-family:"Arial",sans-serif'>not necessary</span></em> to
+associate&nbsp;every class to another. This technique is often used for data
+that is used for lookup or validation purposes.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>Declaring
+a navigation property</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>When writing data classes, the
+associations are simply coded as properties. However, they’re called “</span><a
+href="http://msdn.microsoft.com/en-us/library/ee382841%28v=vs.110%29.aspx"
+target="_blank"><span style='font-family:"Arial",sans-serif'>navigation
+properties</span></a><span style='font-family:"Arial",sans-serif'>“.</span></p>
+
+<p style='margin-left:.5in'><span style='font-size:18.0pt;font-family:"Segoe UI Symbol",sans-serif;
+color:#0070C0'>&#10077;</span><span style='font-family:"Arial",sans-serif'>Definition
+reminder…</span></p>
+
+<p style='margin-left:.5in'><i><span style='font-family:"Arial",sans-serif'>A <b>navigation
+property</b> has a data type of another class in the model.</span></i></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>ALWAYS add a navigation
+property <u>to both associated classes</u>.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Declare a <u>to-one</u>&nbsp;navigation
+property with the data type of the associated class. For example if a <em><span
+style='font-family:"Arial",sans-serif'>Product</span></em> is sold by a single <em><span
+style='font-family:"Arial",sans-serif'>Supplier</span></em>:</span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console"'>[Required]</span></code></p>
+
+<p style='margin-left:.5in'><code><b><span style='font-size:11.0pt;font-family:
+"Lucida Console";color:#002060'>public</span></b></code><span style='font-size:
+14.0pt;font-family:"Lucida Console";color:#002060'> </span><code><span
+style='font-size:11.0pt;font-family:"Lucida Console"'>Supplier Supplier { <b><span
+style='color:#002060'>get</span></b>; <b><span style='color:#002060'>set</span></b>;
+}</span></code></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Declare a <u>to-many</u>&nbsp;navigation
+property with a <em><span style='font-family:"Arial",sans-serif'>collection</span></em>
+type of the associated class. For example, a <em><span style='font-family:"Arial",sans-serif'>Supplier</span></em>
+sells a number of <em><span style='font-family:"Arial",sans-serif'>Product</span></em>
+items:</span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console";color:#538034'>//</span></code><code><span
+style='line-height:107%;font-family:"Lucida Console";color:#00C057'> In a
+design model class...</span></code></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><b><span style='line-height:
+107%;font-family:"Lucida Console";color:#002060'>public</span></b></code><code><span
+style='line-height:107%;font-family:"Lucida Console";color:#002060'> </span></code><code><span
+style='line-height:107%;font-family:"Lucida Console"'>ICollection&lt;Product&gt;
+Products { <b><span style='color:#002060'>get</span></b>; <b><span
+style='color:#002060'>set</span></b>; }</span></code></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console"'>&nbsp;</span></code></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console";color:#00B050'>// In a view model class...</span></code></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><b><span style='line-height:
+107%;font-family:"Lucida Console";color:#002060'>public</span></b></code><code><span
+style='line-height:107%;font-family:"Lucida Console"'>
+IEnumerable&lt;Product&gt; Products { <b><span style='color:#002060'>get</span></b>;
+<b><span style='color:#002060'>set</span></b>; }</span></code></p>
+
+<p><span style='font-family:"Arial",sans-serif'>(Remember, whenever you declare
+a collection property, you <u>MUST initialize it in a default constructor</u>,
+most often as a List&lt;TEntity&gt;.)</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>Setting
+the value of a navigation property</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Before setting the value of a
+navigation property, you must have a reference to an object (of that data
+type). Although you can create a new object in the statement, you will often
+have another existing variable for (or is a reference to) the object.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Set a to-one property as
+follows. Assume that “walmart” is a <em><span style='font-family:"Arial",sans-serif'>Supplier</span></em>
+object, and “shirt” is a <em><span style='font-family:"Arial",sans-serif'>Product</span></em>
+object:</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:3.0pt;
+margin-left:.5in'><code><span style='line-height:107%;font-family:"Lucida Console";
+color:#00B050'>// shirt is a Product object</span></code></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:3.0pt;
+margin-left:.5in'><code><span style='line-height:107%;font-family:"Lucida Console";
+color:#00B050'>// walmart is a Supplier object</span></code></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console"'>shirt.Supplier = walmart;</span></code></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Setting a to-many property
+requires some thought. Do you want to add a new object to the collection? Do
+you want to replace the existing collection with a new collection? Here are
+some examples, using the same “walmart” and “shirt” objects, but we also have a
+collection of toaster objects named “toasters”:</span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console";color:#00B050'>// add <span style='background:
+yellow'>a new object</span> to the collection</span></code></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console"'>walmart.Products.Add(shirt); </span></code></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:12.0pt;
+line-height:107%;font-family:"Lucida Console"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console";color:#00B050'>// replace the existing
+collection with <span style='background:yellow'>a new collection</span></span></code></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console"'>walmart.Products = toasters;</span></code></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console"'>&nbsp;</span></code></p>
+
+<p><b><span style='font-family:"Arial",sans-serif'>Important</span></b><span
+style='font-family:"Arial",sans-serif'>: When you write a statement in code to
+set one end of the association, do you need to <u>write another statement to
+set the other end</u>?</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>When we use a persistent store (SQL
+Server via the Entity Framework), NO, when we use a persistent store (SQL
+Server via the Entity Framework), we don’t have to. In this scenario, when you
+set one end of the association, the persistence framework sets both ends of the
+association.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>Getting
+(reading) the value of a navigation property</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Getting the value of a
+navigation property is natural and simple. Just pay attention to data types (an
+object, or a collection of objects).</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Also, when you have a to-one
+association, it’s easy to “walk” the object graph to get access to properties
+in the associated object. For example, using the “shirt” object from above, you
+could get the “Name” or “Address” of the supplier:</span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><b><span style='line-height:
+107%;font-family:"Lucida Console";color:#002060'>string</span></b></code><code><span
+style='line-height:107%;font-family:"Lucida Console";color:#002060'> </span></code><code><span
+style='line-height:107%;font-family:"Lucida Console"'>supplierName =
+shirt.Supplier.Name;</span></code></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>How to design your view model
+classes<br>
+so that they include an associated object or collection</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>At this point in time, you have
+learned how classes can be associated with one another, by using navigation
+properties.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>What about view model classes?</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Well, we use navigation
+properties in any class that describes a real-world object – design model
+class, or view model class.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Do we <u>add navigation
+properties to ALL view model classes</u>?</span></p>
+
+<p><span style='font-family:"Arial",sans-serif;background:yellow'>No</span><span
+style='font-family:"Arial",sans-serif'>.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Add them only when it makes
+sense. Often, the “Base” view model class is intended to hold all, or almost
+all, of the properties defined in the design model class. You may be tempted to
+add a navigation property to the “Base” class. Resist that temptation.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Instead, create another view
+model class, with the desired navigation property. It’s OK to use inheritance
+to simplify coding.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Let’s look at three scenarios
+from the code example. The problem domain is <b>a one-to-many association</b>,
+of recent National Football League playoff teams, and players. A Team has a
+collection of Players. Conversely, a Player belongs to a Team.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>This view model class uses the
+familiar “Base” style, for the Team entity. For clarity, the data annotations
+were removed.</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in;line-height:normal'><b><span style='font-family:"Lucida Console";
+color:#002060'>public</span></b><span style='font-size:14.0pt;font-family:"Lucida Console";
+color:#002060'> </span><span style='font-family:"Lucida Console"'>class</span><span
+style='font-size:14.0pt;font-family:"Lucida Console"'> </span><span
+style='font-family:"Lucida Console";background:yellow'>TeamBase</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in;line-height:normal'><span style='font-family:"Lucida Console"'>{</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in;line-height:normal'><span style='font-family:"Lucida Console"'>&nbsp;&nbsp;<b><span
+style='color:#002060'>public</span></b></span><span style='font-size:14.0pt;
+font-family:"Lucida Console"'> </span><span style='font-family:"Lucida Console"'>TeamBase()
+{ }</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in;line-height:normal'><span style='font-size:14.0pt;font-family:
+"Lucida Console"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in;line-height:normal'><span style='font-family:"Lucida Console"'>&nbsp;&nbsp;<b><span
+style='color:#002060'>public</span></b></span><span style='font-size:14.0pt;
+font-family:"Lucida Console"'> </span><b><span style='font-family:"Lucida Console";
+color:#002060'>int</span></b><span style='font-size:14.0pt;font-family:"Lucida Console"'>
+</span><span style='font-family:"Lucida Console"'>Id { <b><span
+style='color:#002060'>get</span></b>; <b><span style='color:#002060'>set</span></b>;
+}</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in;line-height:normal'><span style='font-family:"Lucida Console"'>&nbsp;&nbsp;<b><span
+style='color:#002060'>public</span></b></span><span style='font-size:14.0pt;
+font-family:"Lucida Console"'> </span><b><span style='font-family:"Lucida Console";
+color:#002060'>string</span></b><span style='font-size:14.0pt;font-family:"Lucida Console"'>
+</span><span style='font-family:"Lucida Console"'>CodeName { <b><span
+style='color:#002060'>get</span></b>; <b><span style='color:#002060'>set</span></b>;
+}</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in;line-height:normal'><span style='font-family:"Lucida Console"'>&nbsp;&nbsp;<b><span
+style='color:#002060'>public</span></b></span><span style='font-size:14.0pt;
+font-family:"Lucida Console"'> </span><b><span style='font-family:"Lucida Console";
+color:#002060'>string</span></b><span style='font-size:14.0pt;font-family:"Lucida Console"'>
+</span><span style='font-family:"Lucida Console"'>Name { <b><span
+style='color:#002060'>get</span></b>; <b><span style='color:#002060'>set</span></b>;
+}</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in;line-height:normal'><span style='font-family:"Lucida Console"'>&nbsp;&nbsp;<b><span
+style='color:#002060'>public</span></b></span><span style='font-size:14.0pt;
+font-family:"Lucida Console"'> </span><b><span style='font-family:"Lucida Console";
+color:#002060'>string</span></b><span style='font-size:14.0pt;font-family:"Lucida Console"'>
+</span><span style='font-family:"Lucida Console"'>City { <b><span
+style='color:#002060'>get</span></b>; <b><span style='color:#002060'>set</span></b>;
+}</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in;line-height:normal'><span style='font-family:"Lucida Console"'>&nbsp;&nbsp;<b><span
+style='color:#002060'>public</span></b></span><span style='font-size:14.0pt;
+font-family:"Lucida Console"'> </span><b><span style='font-family:"Lucida Console";
+color:#002060'>int</span></b><span style='font-size:14.0pt;font-family:"Lucida Console"'>
+</span><span style='font-family:"Lucida Console"'>YearFounded { <b><span
+style='color:#002060'>get</span></b>; <b><span style='color:#002060'>set</span></b>;
+}</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in;line-height:normal'><span style='font-family:"Lucida Console"'>&nbsp;&nbsp;<b><span
+style='color:#002060'>public</span></b></span><span style='font-size:14.0pt;
+font-family:"Lucida Console"'> </span><b><span style='font-family:"Lucida Console";
+color:#002060'>string</span></b><span style='font-size:14.0pt;font-family:"Lucida Console"'>
+</span><span style='font-family:"Lucida Console"'>Conference { <b><span
+style='color:#002060'>get</span></b>; s<b><span style='color:#002060'>e</span></b>t;
+}</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in;line-height:normal'><span style='font-family:"Lucida Console"'>&nbsp;&nbsp;<b><span
+style='color:#002060'>public</span></b></span><span style='font-size:14.0pt;
+font-family:"Lucida Console"'> </span><b><span style='font-family:"Lucida Console";
+color:#002060'>string</span></b><span style='font-size:14.0pt;font-family:"Lucida Console"'>
+</span><span style='font-family:"Lucida Console"'>Division { <b><span
+style='color:#002060'>get</span></b>; <b><span style='color:#002060'>set</span></b>;
+}</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in;line-height:normal'><span style='font-family:"Lucida Console"'>&nbsp;&nbsp;<b><span
+style='color:#002060'>public</span></b></span><span style='font-size:14.0pt;
+font-family:"Lucida Console"'> </span><b><span style='font-family:"Lucida Console";
+color:#002060'>string</span></b><span style='font-size:14.0pt;font-family:"Lucida Console"'>
+</span><span style='font-family:"Lucida Console"'>Stadium { <b><span
+style='color:#002060'>get</span></b>; <b><span style='color:#002060'>set</span></b>;
+}</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in;line-height:normal'><span style='font-family:"Lucida Console"'>}</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The following is the
+recommended way to <span style='background:yellow'>add the navigation property
+for the collection</span> of <b>Player objects</b>. Notice the name of the view
+model class, and that it inherits from “Base”. Notice also that <u>the
+collection type, in a view model class, is <span style='color:#002060'>IEnumerable</span>&lt;TEntity&gt;</u>.
+Two more items to notice:</span></p>
+
+<ol start=1 type=1>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>The <b>data type</b> (of the navigation
+     property) is a collection of a view model class type</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>The <b>name</b> (of the navigation
+     property) exactly matches the name in the design model class</span></li>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in;line-height:normal'><b><span style='font-family:"Lucida Console";
+color:#002060'>public</span></b><span style='font-family:"Lucida Console"'>
+class TeamWithPlayers : TeamBase</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in;line-height:normal'><span style='font-family:"Lucida Console"'>{</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in;line-height:normal'><span style='font-family:"Lucida Console"'>&nbsp;&nbsp;<b><span
+style='color:#002060'>public</span></b> TeamWithPlayers()</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in;line-height:normal'><span style='font-family:"Lucida Console"'>&nbsp;&nbsp;{</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in;line-height:normal'><span style='font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;Players
+= <b><span style='color:#002060'>new</span></b> List&lt;PlayerBase&gt;();</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in;line-height:normal'><span style='font-family:"Lucida Console"'>&nbsp;&nbsp;}</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in;line-height:normal'><span style='font-family:"Lucida Console"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in;line-height:normal'><span style='font-family:"Lucida Console"'>&nbsp;&nbsp;<b><span
+style='color:#002060'>public</span></b> IEnumerable&lt;Player<span
+style='background:yellow'>Base</span>&gt; Players { <b><span style='color:#002060'>get</span></b>;
+<b><span style='color:#002060'>set</span></b>; }</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in;line-height:normal'><span style='font-family:"Lucida Console"'>}</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The next view model class uses
+the familiar “Base” style, for the Player&nbsp;entity. For clarity, the data
+annotations were removed.</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in;line-height:normal'><b><span style='font-family:"Lucida Console";
+color:#002060'>public</span></b><span style='font-family:"Lucida Console"'> <b><span
+style='color:#002060'>class</span></b> PlayerBase</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in;line-height:normal'><span style='font-family:"Lucida Console"'>{</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in;line-height:normal'><span style='font-family:"Lucida Console"'>&nbsp;&nbsp;<b><span
+style='color:#002060'>public</span></b> PlayerBase()</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in;line-height:normal'><span style='font-family:"Lucida Console"'>&nbsp;&nbsp;{</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in;line-height:normal'><span style='font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;BirthDate
+= DateTime.Now.AddYears(-25);</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in;line-height:normal'><span style='font-family:"Lucida Console"'>&nbsp;&nbsp;}</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in;line-height:normal'><span style='font-family:"Lucida Console"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in;line-height:normal'><span style='font-family:"Lucida Console"'>&nbsp;&nbsp;<b><span
+style='color:#002060'>public</span></b> <b><span style='color:#002060'>int</span></b>
+Id { <b><span style='color:#002060'>get</span></b>; <b><span style='color:#002060'>set</span></b>;
+}</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in;line-height:normal'><span style='font-family:"Lucida Console"'>&nbsp;&nbsp;<b><span
+style='color:#002060'>public</span></b> <b><span style='color:#002060'>int</span></b>
+UniformNumber { <b><span style='color:#002060'>get</span></b>; <b><span
+style='color:#002060'>set</span></b>; }</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in;line-height:normal'><span style='font-family:"Lucida Console"'>&nbsp;&nbsp;<b><span
+style='color:#002060'>public</span></b> <b><span style='color:#002060'>string</span></b>
+PlayerName { <b><span style='color:#002060'>get</span></b>; <b><span
+style='color:#002060'>set</span></b>; }</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in;line-height:normal'><span style='font-family:"Lucida Console"'>&nbsp;&nbsp;<b><span
+style='color:#002060'>public</span></b> <b><span style='color:#002060'>string</span></b>
+Position { <b><span style='color:#002060'>get</span></b>; <b><span
+style='color:#002060'>set</span></b>; }</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in;line-height:normal'><span style='font-family:"Lucida Console"'>&nbsp;&nbsp;<b><span
+style='color:#002060'>public</span></b> <b><span style='color:#002060'>string</span></b>
+Height { <b><span style='color:#002060'>get</span></b>; <b><span
+style='color:#002060'>set</span></b>; }</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in;line-height:normal'><span style='font-family:"Lucida Console"'>&nbsp;&nbsp;<b><span
+style='color:#002060'>public</span></b> <b><span style='color:#002060'>int</span></b>
+Weight { <b><span style='color:#002060'>get</span></b>; <b><span
+style='color:#002060'>set</span></b>; }</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in;line-height:normal'><span style='font-family:"Lucida Console"'>&nbsp;&nbsp;<b><span
+style='color:#002060'>public</span></b> <span style='color:#0070C0'>DateTime </span>BirthDate
+{ <b><span style='color:#002060'>get</span></b>; <b><span style='color:#002060'>set</span></b>;
+}</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in;line-height:normal'><span style='font-family:"Lucida Console"'>&nbsp;&nbsp;<b><span
+style='color:#002060'>public</span></b> <b><span style='color:#002060'>int </span></b>YearsExperience
+{ <b><span style='color:#002060'>get</span></b>; <b><span style='color:#002060'>set</span></b>;
+}</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in;line-height:normal'><span style='font-family:"Lucida Console"'>&nbsp;&nbsp;<b><span
+style='color:#002060'>public</span></b> <b><span style='color:#002060'>string</span></b>
+College { <b><span style='color:#002060'>get</span></b>; <b><span
+style='color:#002060'>set</span></b>; }</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in;line-height:normal'><span style='font-family:"Lucida Console"'>}</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The following is the
+recommended way to <span style='background:yellow'>add the navigation property
+for a single object</span> - the <b>Team&nbsp;object</b>. Notice the name of
+the view model class, and that it inherits from “Base”. Three more items to
+notice:</span></p>
+
+<ol start=1 type=1>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>The <u>data type</u> (of the navigation
+     property) is a view model class type</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>The <u>name</u> (of the navigation
+     property) exactly matches the name in the design model class</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>The to-one navigation property almost
+     always needs a “<u>Required</u>” data annotation</span></li>
+</ol>
+
+<p class=MsoNormal><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in;line-height:normal'><a name="_Hlk483972716"><b><span
+style='font-family:"Lucida Console";color:#002060'>public</span></b></a><span
+style='font-family:"Lucida Console"'> class PlayerWithTeamInfo : PlayerBase</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in;line-height:normal'><span style='font-family:"Lucida Console"'>{</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in;line-height:normal'><span style='font-family:"Lucida Console"'>&nbsp;&nbsp;[Required]</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in;line-height:normal'><span style='font-family:"Lucida Console"'>&nbsp;&nbsp;<b><span
+style='color:#002060'>public</span></b> Team<span style='background:yellow'>Base</span>
+Team { <b><span style='color:#002060'>get</span></b>; <b><span
+style='color:#002060'>set</span></b>; }</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in;line-height:normal'><span style='font-family:"Lucida Console"'>}</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>AutoMapper and associated data</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>This is a good-news story.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>If you define (create) maps
+from design model classes to view model classes that have navigation
+properties, AutoMapper will work the same way that it does for other data
+types.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In other words, <u>AutoMapper
+works nicely with associated entities</u>. The notes below discuss three
+scenarios:</span></p>
+
+<ol start=1 type=1>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>For an object, mapping an associated
+     collection</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>For an object, mapping an associated
+     object</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Mapping the individual properties of a
+     related object (in a ‘to-one’ association)</span></li>
+</ol>
+
+<p><span style='font-family:"Arial",sans-serif'>The scenarios below echo the
+guidance in the previous section (above).</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>For an
+object, mapping an associated collection</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>If you have an entity that has
+an associated (related) collection –&nbsp;for example, a Program has a
+collection of Subjects, or a Supplier has a collection of Products, or a Team
+has a collection of Players – you may want to return an object&nbsp;<em><span
+style='font-family:"Arial",sans-serif'>with its associated collection</span></em>.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>To do this, you need to do
+four&nbsp;tasks:</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>1. In a&nbsp;<em><span
+style='font-family:"Arial",sans-serif'>new</span></em>&nbsp;view model class,
+add a navigation property for the collection. The type is a&nbsp;<em><span
+style='font-family:"Arial",sans-serif'>view model class</span></em>&nbsp;type.
+&nbsp;The property name must&nbsp;<em><span style='font-family:"Arial",sans-serif'>match</span></em>&nbsp;the
+property name in the&nbsp;<em><span style='font-family:"Arial",sans-serif'>design
+model class</span></em>.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>2. Define a map, from the
+design model class to the new view&nbsp;model class that you created in step 1
+above.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>3. In the manager, when the
+code fetches the object, add the <b>Include()</b> extension method to fetch its
+associated collection.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>4. In the controller, add a
+method that will call the manager method.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Here’s how these code changes
+work together. Click to open it in a new tab/window:</span></p>
+
+<p><img border=0 width=720 height=901 id="Picture 1"
+src="INT422-Lecture4_files/image001.jpg"></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>For an
+object, mapping an associated object&nbsp;</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>If you have an entity that has
+an associated entity – for example, a Subject is associated with a single
+Program – you may want to return an object&nbsp;<em><span style='font-family:
+"Arial",sans-serif'>with its associated object</span></em>.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>To do this, you need to do four
+tasks:</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>1. In a&nbsp;<em><span
+style='font-family:"Arial",sans-serif'>new</span></em>&nbsp;view model class,
+add a navigation property for the object. The type is a&nbsp;<em><span
+style='font-family:"Arial",sans-serif'>view model class</span></em>&nbsp;type.
+The property name must&nbsp;<em><span style='font-family:"Arial",sans-serif'>match</span></em>&nbsp;the
+property name in the&nbsp;<em><span style='font-family:"Arial",sans-serif'>design
+model class</span></em>.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>2.&nbsp;Define a map, from the
+design model class to the new view&nbsp;model class that you created in step 1
+above.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>3. In the manager, when the
+code fetches the object, add the Include() extension method to fetch its
+associated object.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>4. In the controller, add a
+method that will call the manager method.</span></p>
+
+<p><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>AutoMapper
+“flattening” feature&nbsp; </span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>It is a common scenario</span><b>
+</b><span style='font-family:"Arial",sans-serif'>to add a navigation property
+for <b><span style='background:yellow'>a single object</span></b>, e.g. add the
+<b>Team&nbsp;</b>object to the <b>PlayerWithTeamInfo</b> view model class:</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in;line-height:normal'><b><span style='font-family:"Lucida Console";
+color:#002060'>public</span></b><span style='font-family:"Lucida Console"'>
+class PlayerWithTeamInfo : PlayerBase</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in;line-height:normal'><span style='font-family:"Lucida Console"'>{</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in;line-height:normal'><span style='font-family:"Lucida Console"'>&nbsp;&nbsp;[Required]</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in;line-height:normal'><span style='font-family:"Lucida Console"'>&nbsp;&nbsp;<b><span
+style='color:#002060'>public</span></b> Team<span style='background:yellow'>Base</span>
+Team { <b><span style='color:#002060'>get</span></b>; <b><span
+style='color:#002060'>set</span></b>; }</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in;line-height:normal'><span style='font-family:"Lucida Console"'>}</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>However, sometimes you do not
+want, or need, all properties from the associated object. Instead, you need only
+one or two properties from the associated object.</span></p>
+
+<p><b><span style='font-family:"Arial",sans-serif'>AutoMapper</span></b><span
+style='font-family:"Arial",sans-serif'> has a feature called “<b>flattening</b>”
+which helps with this scenario. For example, assume that we want only the
+Team’s “Name” and “CodeName” properties. Create <u>new properties, with a
+composite name, Class + Property Name</u>. The data type must match the data
+type of the property in the design model class. </span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Here’s what it looks like:</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in;line-height:normal'><b><span style='font-family:"Lucida Console";
+color:#002060'>public</span></b><span style='font-family:"Lucida Console"'> <b><span
+style='color:#002060'>class</span></b> PlayerWithTeamNames : PlayerBase</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in;line-height:normal'><span style='font-family:"Lucida Console"'>{</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in;line-height:normal'><span style='font-family:"Lucida Console";
+color:#00B050'>&nbsp;&nbsp;// <span style='background:yellow'>Design model
+class name is &quot;Team&quot;</span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in;line-height:normal'><span style='font-family:"Lucida Console";
+color:#00B050'>&nbsp;&nbsp;// Property names are &quot;CodeName&quot; and
+&quot;Name&quot;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in;line-height:normal'><span style='font-family:"Lucida Console"'>&nbsp;&nbsp;<b><span
+style='color:#002060'>public</span></b> <b><span style='color:#002060'>string</span></b>
+<span style='background:yellow'>Team</span>CodeName { <b><span
+style='color:#002060'>get</span></b>; <b><span style='color:#002060'>set</span></b>;
+}</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in;line-height:normal'><span style='font-family:"Lucida Console"'>&nbsp;&nbsp;<b><span
+style='color:#002060'>public</span></b> <b><span style='color:#002060'>string</span></b>
+<span style='background:yellow'>Team</span>Name { <b><span style='color:#002060'>get</span></b>;
+<b><span style='color:#002060'>set</span></b>; }</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in;line-height:normal'><span style='font-family:"Lucida Console"'>}</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></strong></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>Mapping
+some&nbsp;<span style='background:yellow'>individual properties</span> of a
+related object (in a ‘to-one’ association)</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>If you have an entity that has
+an associated object – for example, a Subject belongs to a Program, or a
+Product belongs to a Supplier – you may want to return&nbsp;<em><span
+style='font-family:"Arial",sans-serif'>individual properties</span></em>&nbsp;from&nbsp;<em><span
+style='font-family:"Arial",sans-serif'>its associated object</span></em>.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>To do this, you need to do four
+tasks:</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>1. In a <em><span
+style='font-family:"Arial",sans-serif'>new</span></em> view&nbsp;model class,
+add a property with a type that matches the property in the associated type. <u>The
+property name must be a&nbsp;<em><span style='font-family:"Arial",sans-serif'>composite</span></em>&nbsp;of
+the design model&nbsp;<strong><span style='font-family:"Arial",sans-serif'>class
+name</span></strong>&nbsp;and the&nbsp;<strong><span style='font-family:"Arial",sans-serif'>property
+name</span></strong></u>.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>2. Define a map, from the
+design model class to the new view&nbsp;model class that you created in step 1
+above.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>3. In the manager, when the
+code fetches the object, add the Include() extension method to fetch its
+associated object.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>4. In the controller, add a
+method that will call the manager method.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Here’s how these code changes work
+together. Click to open it in a new tab/window:</span></p>
+
+<p><img border=0 width=552 height=818 id="Picture 6"
+src="INT422-Lecture4_files/image002.jpg"></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Displaying associated data in a
+view</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Study the code example (<b>AssocOneToMany</b>),
+as you review this section.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<h4><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>Displaying
+the objects in a collection property</span></h4>
+
+<p><span style='font-family:"Arial",sans-serif'>In a controller method (get
+all, get one), the code will call a manager method, which will return a package
+of data that’s described by a view model. For example, the “get one” will
+return a Team object, that includes a (nested) collection of Player objects.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Study the DetailsWithPlayers()
+method. It passes the fetched object to the view. The view was scaffolded by
+using the normal/standard Details template. Then, it was edited.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The Visual Studio scaffolder
+will handle simple properties correctly.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>However, <span
+style='background:yellow'>the scaffolder will not render HTML for other data
+types</span>. Therefore, we must usually add code to the views. That’s OK, and
+normal.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Study the DetailsWithPlayers
+view. Notice that more code was added, near the bottom:</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&lt;<b><span style='color:#002060'>dt</span></b>&gt;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;@Html.DisplayNameFor(model
+=&gt; model.Players)</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&lt;/<b><span style='color:#002060'>dt</span></b>&gt;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:14.0pt;font-family:"Lucida Console"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&lt;<b><span style='color:#002060'>dd</span></b>&gt;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;@foreach (var p in
+Model.Players)</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;{</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;var player =
+string.Format(<b><span style='color:#7030A0'>&quot;{0} ({1}), # {2}&quot;, </span></b>p.PlayerName,
+p.Position, p.UniformNumber);</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;&lt;<b><span
+style='color:#002060'>span</span></b>&gt;@player&lt;/<b><span style='color:
+#002060'>span</span></b>&gt;&lt;br</span><span style='font-size:14.0pt;
+font-family:"Lucida Console"'> </span><span style='font-family:"Lucida Console"'>/&gt;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;}</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&lt;/<b><span style='color:#002060'>dd</span></b>&gt;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Cool, yes? For each object in
+the Players collection, render some HTML.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>Displaying
+an associated individual/single object</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Now, consider the other end of
+the to-one association.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>A Player object has a <u>to-one
+association</u> with a Team object. In other words, a player is on only one
+team at a time. In the players controller, there are two “get all” players
+methods that fetch team data. One fetches the Team object itself (…WithTeam<u>Info</u>),
+while the other fetches some data, using AutoMapper flattening (…WithTeam<u>Name</u>).
+Each method has its own view.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Study the …WithTeamInfo view
+first. Yes, there’s an HTML table header element, but look in the “foreach”
+code block. There’s a new element, which dereferences the player’s Team object,
+to get its CodeName (i.e. the abbreviated team name/characters):</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&lt;<b><span style='color:#002060'>td</span></b>&gt;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;@Html.DisplayFor(modelItem
+=&gt; item.Team.CodeName)</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&lt;/<b><span style='color:#002060'>td</span></b>&gt;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Now, study the …WithTeamName
+view. The view model class is different from the previous example, in that it
+has a flattened string property for the team name, instead of the object
+itself.</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&lt;<b><span style='color:#002060'>td</span></b>&gt;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;@Html.DisplayFor(modelItem
+=&gt; item.TeamCodeName)</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&lt;/<b><span style='color:#002060'>td</span></b>&gt;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Note: this HTML code is
+rendered by the Visual Studio scaffolder. But the similar code above in the
+…WithTeamInfo view is not supported by the scaffolder.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Query&nbsp;techniques</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>This section will introduce
+query techniques, when working with associated data. In this introduction, we
+will assume that we are working with a <em><span style='font-family:"Arial",sans-serif'>one-to-many</span></em>
+association.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Do you need an object, <em><span
+style='font-family:"Arial",sans-serif'>and</span></em> its associated object or
+collection?</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>This work must be done in the
+Manager class.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Use the </span><a
+href="https://msdn.microsoft.com/en-us/library/gg696785%28v=vs.113%29.aspx"
+target="_blank"><span style='font-family:"Arial",sans-serif'>Include() method</span></a><span
+style='font-family:"Arial",sans-serif'>, on the DbSet&lt;TEntity&gt;
+collection. As you will read in the MSDN Reference, <u>the Include() method
+accepts a string, which is the name of the navigation property for the
+associated object/collection</u>. (Also as you will read, Include() is actually
+defined in the DbQuery&lt;TEntity&gt; class. DbSet&lt;TEntity&gt; inherits from
+DbQuery&lt;TEntity&gt;.)</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>For example, let’s continue
+with the objects and collections defined above.</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console";color:#00B050'>// The following code is in
+a method in the Manager class</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console";color:#00B050'>// Get all, each with its
+associated object</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-family:"Lucida Console";color:#002060'>var</span></b><span
+style='font-family:"Lucida Console"'> c = ds.Products.Include(<b><span
+style='color:#7030A0'>&quot;Supplier&quot;</span></b>).OrderBy(p =&gt;p.ProductCode);</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console";color:#00B050'>// Get one, with its
+associated collection</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-family:"Lucida Console";color:#002060'>var</span></b><span
+style='font-family:"Lucida Console"'> o = ds.Suppliers.Include(<b><span
+style='color:#7030A0'>&quot;Products&quot;</span></b>).SingleOrDefault(s =&gt;
+s.Id == id);</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>What if you need to include
+data from more than one associated entity? Simply add another Include() method
+to the query expression. When you do so, there are some considerations,
+described next.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><u><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Include multiple associations, branch pattern:</span></u></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Study the entity class that you’re starting the
+query with. Assume that you want to include two (or more) associated entities,
+and each associated entity has a navigation property. In other words, you’re
+branching out to include the associated entities.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In that situation, specify&nbsp;multiple
+Include() methods. For example:</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console";color:#2F5496'>var</span><span
+style='font-size:16.0pt;font-family:"Lucida Console";color:#002060'> </span><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>c =
+ds.Products.Include(&quot;<span style='color:#7030A0'>Supplier</span>&quot;).Include(&quot;<span
+style='color:#7030A0'>Category</span>&quot;);</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><u><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Include multiple associations, chain (linked)
+pattern:</span></u></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Again, study the entity class that you’re
+starting the query with. Assume that you want to include two (or more)
+associated entities (e.g. Foo, Bar), and one has a navigation property (e.g.
+Foo), but the other (e.g. Bar) is not directly associated with the entity class
+you’re starting with (but is associated with the direct association). In other
+words, you’re following a linked path, or a chain of associated entities.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In that situation, in the Include() method
+parameter, specify a dot-separated path to the final destination, using the
+design model class property names. For example:</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console";color:#2F5496'>var</span><span
+style='font-size:16.0pt;font-family:"Lucida Console";color:#2F5496'> </span><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>c = ds.Tracks.Include(&quot;<span
+style='color:#7030A0'>Album.Artist</span>&quot;);</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>Filtering,
+and associated objects</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In the following example,
+assume that we wish to select only those&nbsp;<em><span style='font-family:
+"Arial",sans-serif'>Program</span></em>&nbsp;objects that include a&nbsp;<em><span
+style='font-family:"Arial",sans-serif'>Subject</span></em>&nbsp;object with a
+specific identifier.&nbsp;Let’s build the statement in two steps.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>By default, when we fetch an
+object that is related/associated with another object and/or collection, the
+object that is fetched&nbsp;<em><span style='font-family:"Arial",sans-serif'>does
+not</span></em>&nbsp;include the related/associated objects. That is the
+default behaviour of the way we have configured the DbContext object.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Therefore, to build the
+statement, we first must use the&nbsp;</span><a
+href="https://msdn.microsoft.com/en-us/library/gg696785%28v=vs.113%29.aspx"
+target="_blank"><span style='font-family:"Arial",sans-serif'>Include()</span></a><span
+style='font-family:"Arial",sans-serif'>&nbsp;method, as shown next:</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-family:"Lucida Console";color:#002060'>var</span></b><span
+style='font-family:"Lucida Console"'> c = ds.Programs.Include(<b><span
+style='color:#7030A0'>&quot;Subjects&quot;</span></b>);</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Its return type is&nbsp;</span><a
+href="http://msdn.microsoft.com/en-us/library/gg696530%28v=vs.103%29.aspx"
+target="_blank"><span style='font-family:"Arial",sans-serif'>DbQuery&lt;TEntity&gt;</span></a><span
+style='font-family:"Arial",sans-serif'>. (It’s a collection.)</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The second task is to add the
+filtering to the statement, as shown next:</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-family:"Lucida Console";color:#002060'>var</span></b><span
+style='font-family:"Lucida Console"'> c = <span style='background:yellow'>ds.Programs</span>.Include(<b><span
+style='color:#7030A0'>&quot;Subjects&quot;</span></b>).Where(<span
+style='background:yellow'>p =&gt; p.Credential == <b><span style='color:#7030A0'>&quot;Degree&quot;</span></b></span>);</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The range variable – p –
+represents&nbsp;<em><span style='font-family:"Arial",sans-serif'>an&nbsp;object</span></em>&nbsp;in
+the&nbsp;<em><span style='font-family:"Arial",sans-serif'>Programs</span></em>&nbsp;collection.
+Its type is&nbsp;<em><b><span style='font-family:"Arial",sans-serif'>Program</span></b></em><em><span
+style='font-family:"Arial",sans-serif'> (rather than Subject)</span></em>.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The return type of this statement
+is&nbsp;</span><a href="http://msdn.microsoft.com/en-us/library/bb351562.aspx"
+target="_blank"><span style='font-family:"Arial",sans-serif'>IQueryable&lt;TEntity&gt;</span></a><span
+style='font-family:"Arial",sans-serif'>.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>.</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>Filtering
+and sorting, and associated objects</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>You can combine tasks by&nbsp;<em><span
+style='font-family:"Arial",sans-serif'>chaining</span></em>&nbsp;the filtering
+and sorting tasks above (using the “fluent” syntax). The statement below has
+been wrapped for clarity:</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-family:"Lucida Console";color:#002060'>var</span></b><span
+style='font-family:"Lucida Console"'> c = ds.Programs</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;.Include(<b><span
+style='color:#7030A0'>&quot;Subjects&quot;</span></b>)</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;.Where(p =&gt;
+p.Credential == <b><span style='color:#7030A0'>&quot;Degree&quot;</span></b>)</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;.OrderBy(p =&gt;
+p.Code);</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Here’s how to read, in English,
+this statement:</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Fetch the Program collection…<br>
+and for each Program object…<br>
+include the related Subject object(s)…<br>
+but only where a Program object’s Credential property value…<br>
+matches the string “Degree” …<br>
+then sort the result by the Program object’s Code property value.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>Suggested
+query strategies for web apps</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The following are suggested
+query strategies for web apps. These are not rules, they’re just suggestions.
+(And not quite as important as a best practice.) Please be flexible, and
+balance the needs of the use case with the cost of fulfilling the query.</span></p>
+
+<p><u><span style='font-family:"Arial",sans-serif'>Get all</span></u><span
+style='font-family:"Arial",sans-serif'> – We do not typically use the Include()
+method in a “get all” method. The main reason is data volume – it’s possible
+that the included data will be sizeable in relation to the size of the fetched
+collection. However, if you really need some or all of an included object, for
+example, then that may be acceptable. FYI, you can limit the size of the
+fetched collection by using the Take() method. In addition, there are advanced
+LINQ query expression components that will result in the generation of an efficient
+query at the database.</span></p>
+
+<p><u><span style='font-family:"Arial",sans-serif'>Get one</span></u><span
+style='font-family:"Arial",sans-serif'> – We often use the Include() method in
+a “get one” method. The included object/collection typically adds good value to
+the fetched object. Richer strings can be composed, and collection items can be
+rendered. Again, be flexible.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Additional background
+information:</span></p>
+
+<p style='margin-left:.5in'><span style='font-size:18.0pt;font-family:"Segoe UI Symbol",sans-serif;
+color:#0070C0'>&#10077;</span><span style='font-family:"Arial",sans-serif;
+color:#0D0D0D'>Lazy loading, eager loading – what are these terms?</span></p>
+
+<p style='margin-left:.5in'><span style='font-family:"Arial",sans-serif;
+color:#0D0D0D'>When working with associated data, it is possible to configure
+the querying settings to use lazy or eager loading, when working with a
+persistent store (like a database or web service).</span></p>
+
+<p style='margin-left:.5in'><span style='font-family:"Arial",sans-serif;
+color:#0D0D0D'>A query that includes associated data, when using <strong><span
+style='font-family:"Arial",sans-serif'>lazy loading</span></strong>, will fetch
+the desired object or collection. Interestingly, the syntax does NOT require
+you to use the Include() method in the query expression. In the fetch action,
+the query will not immediately fetch the associated data. Instead, it will wait
+for an attempt to access (or dereference) the associated object/collection.
+When that is detected, a second fetch will execute, and return the associated
+data automatically.</span></p>
+
+<p style='margin-left:.5in'><span style='font-family:"Arial",sans-serif;
+color:#0D0D0D'>A query that includes associated data, when using <strong><span
+style='font-family:"Arial",sans-serif'>eager loading</span></strong> will fetch
+the desired object or collection, and the associated data. The syntax of the
+query&nbsp;expression MUST use the Include() method.</span></p>
+
+<p style='margin-left:.5in'><span style='font-family:"Arial",sans-serif;
+color:#0D0D0D'>Sounds like lazy loading offers a pretty good deal, right?
+Simpler syntax etc.</span></p>
+
+<p style='margin-left:.5in'><span style='font-family:"Arial",sans-serif;
+color:#0D0D0D'>Nope. Not for web apps. Do NOT be tempted to use it, as is
+suggested sometimes by books and web documents.</span></p>
+
+<p style='margin-left:.5in'><span style='font-family:"Arial",sans-serif;
+color:#0D0D0D'>Why? Interactions with web apps (from a client) follow the HTTP
+protocol. A request-response cycle is an atomic task, which completes when the
+response is delivered. The&nbsp;server does not persist request state, in
+memory, or anywhere else. Therefore, there’s no opportunity for lazy loading to
+work.</span></p>
+
+<p style='margin-left:.5in'><span style='font-family:"Arial",sans-serif;
+color:#0D0D0D'>Unfortunately, most of the books and web documents “out there”
+that include coverage of Entity Framework tends to use lazy loading code. For
+example, the design model classes use the </span><a
+href="https://msdn.microsoft.com/en-us/library/9fkccyh4.aspx" target="_blank"><span
+style='font-family:"Arial",sans-serif;color:#0D0D0D;text-decoration:none'>virtual</span></a><span
+style='font-family:"Arial",sans-serif;color:#0D0D0D'>&nbsp;keyword on
+navigation properties, which is supposed to trigger the lazy loading
+functionality. However, it’s ineffective and useless for web apps. Don’t use
+“virtual”.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>

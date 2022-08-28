@@ -1,0 +1,694 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<title>Lec 5-2</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Segoe UI Symbol";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:"Lucida Console";
+	panose-1:2 11 6 9 4 5 4 2 2 4;}
+@font-face
+	{font-family:Consolas;
+	panose-1:2 11 6 9 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+h4
+	{mso-style-link:"Heading 4 Char";
+	margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:#954F72;
+	text-decoration:underline;}
+p
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+code
+	{font-family:"Courier New";}
+span.Heading4Char
+	{mso-style-name:"Heading 4 Char";
+	mso-style-link:"Heading 4";
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink="#954F72" background=bgw.gif>
+
+<div class=WordSection1 
+     style="margin: 0.5in auto; max-width: 50em; min-width: 30em;">
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:18.0pt;
+font-family:"Arial",sans-serif'>INT422 – Lecture 5-2</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Working with associated
+(related) data in add or edit scenarios. Work on Assignment 5.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Code example</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Associations Add and Edit</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-family:"Arial",sans-serif'>View model classes for
+this </span></strong><em><b><span style='font-family:"Arial",sans-serif'>AssocAddEdit</span></b></em><strong><span
+style='font-family:"Arial",sans-serif'> code example</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In the code example, a class
+diagram was created (in the Controllers folder) to show the design of the view
+model classes. Open it and study it. Also, open and read its </span><a
+href="https://scs.senecac.on.ca/~wei.song/int422/lectures/images/L5-all_vm_readme.txt"><span
+style='font-family:"Arial",sans-serif'>“readme” text file</span></a><span
+style='font-family:"Arial",sans-serif'> for a summary explanation of the
+design.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Here’s an image of the class
+diagram. Click to open it full size in a new tab/window</span></p>
+
+<p><a
+href="https://scs.senecac.on.ca/~wei.song/int422/lectures/images/L5-all_vm.png"><span
+style='color:windowtext;text-decoration:none'><img border=0 width=719
+height=481 id="Picture 4" src="INT422-Lecture5-2_files/image001.jpg"></span></a></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Progress checkpoint</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In the previous class/session,
+you learned about some design and coding features that will enable you to work
+with associated data. A brief list includes:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Using a dedicated “…Form” view model class
+     to package data for an HTML Form</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>If the HTML Form needs an item-selection
+     element, we use a SelectList object to package the items</span></li>
+</ul>
+
+<p><span style='font-family:"Arial",sans-serif'>Today, we will look at the “add
+new” and “edit existing” use cases, and learn how to design and code your web
+app to implement them. As you would expect, there are patterns to follow, and
+best practices to implement.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>While you are reading the
+following sections, open and study the <em><span style='font-family:"Arial",sans-serif'>AssocAddEdit</span></em>
+code example.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>“Add new” for an object that has
+a required association</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>If you are implementing “add
+new” for an object that has a required association, you MUST have information
+about, or a reference to, the associated object.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>This scenario is most common
+when you are adding an object that is <em><span style='font-family:"Arial",sans-serif'>dependent</span></em>
+on another object for part of its existence. For example:</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In the code example, a Vehicle
+MUST be associated with a Manufacturer (in other words, a Vehicle is <em><span
+style='font-family:"Arial",sans-serif'>dependent</span></em> on a
+Manufacturer).</span></p>
+
+<p style='margin-left:.5in'><span style='font-family:"Arial",sans-serif'>Therefore,
+when adding a new Vehicle, we must know, or have, information about the
+associated Manufacturer.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In the retail business,
+a&nbsp;Product MUST be associated with a Supplier.</span></p>
+
+<p style='margin-left:.5in'><span style='font-family:"Arial",sans-serif'>Therefore,
+when adding a new Product, we must know, or have, information about the
+associated Supplier.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>At the College, an Academic
+Program MUST be associated with a School (Faculty).</span></p>
+
+<p style='margin-left:.5in'><span style='font-family:"Arial",sans-serif'>Therefore,
+when adding a new Academic Program, we must know, or have, information about
+the associated School (Faculty).</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-family:"Arial",sans-serif'>The implication –
+ALWAYS add the to-one property for the </span></strong><span style='font-family:
+"Arial",sans-serif'><br>
+<strong><span style='font-family:"Arial",sans-serif'>required association to
+the “add new” view model class</span></strong></span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>When you have a to-one required
+association, ALWAYS add the property to the “add new” view model class.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The property type is int (which
+is the data type of the unique identifier).</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The property name is
+&lt;entity&gt;Id (for example, ManufacturerId).</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In other words, the <em><span
+style='font-family:"Arial",sans-serif'>VehicleAdd</span></em> view model class
+will have this property:</span></p>
+
+<p style='margin-left:.5in'><code><span style='font-family:"Arial",sans-serif;
+background:yellow'>[Range(1, Int32.MaxValue)]</span></code></p>
+
+<p style='margin-left:.5in'><code><b><span style='font-family:"Arial",sans-serif;
+color:#002060'>public</span></b></code><code><span style='font-family:"Arial",sans-serif'>
+<b><span style='color:#002060'>int</span></b> ManufacturerId { <b><span
+style='color:#002060'>get</span></b>; set; }</span></code></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Citing another example,
+Manufacturer has a to-one required association with Country. A <em><span
+style='font-family:"Arial",sans-serif'>ManufacturerAdd</span></em> view model
+class will have this property:</span></p>
+
+<p style='margin-left:.5in'><code><span style='font-family:"Arial",sans-serif'>[Range(1,
+Int32.MaxValue)]</span></code></p>
+
+<p style='margin-left:.5in'><code><b><span style='font-family:"Arial",sans-serif;
+color:#002060'>public</span></b></code><code><span style='font-family:"Arial",sans-serif'>
+<b><span style='color:#002060'>int</span></b> CountryId { <b><span
+style='color:#002060'>get</span></b>; <b><span style='color:#002060'>set</span></b>;
+}</span></code></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p style='margin-left:.5in'><span style='font-size:18.0pt;font-family:"Segoe UI Symbol",sans-serif;
+color:#0070C0'>&#10077;</span><span style='font-family:"Arial",sans-serif'>This
+is <span style='color:red'>super important</span>. Doing this will help you
+avoid design and coding errors.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>Knowing
+or having information about the associated object</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>During the flow of the
+application, it is possible that&nbsp;the app will allow/enable the browser
+user to start with an empty context, and begin the process of adding a Vehicle.
+In that situation, the browser user must choose the Manufacturer from an
+item-selection element.</span></p>
+
+<p style='margin-left:.5in'><span style='font-size:18.0pt;font-family:"Segoe UI Symbol",sans-serif;
+color:#0070C0'>&#10077;</span><span style='font-family:"Arial",sans-serif'>See
+the “Create New” feature on the list-of-vehicles page.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>However, it is also possible
+that&nbsp;the context of the flow knows or has information about the associated
+object. In the code example, when working with the Manufacturer object, we know
+and have information about that Manufacturer. Therefore, when adding a new
+Vehicle for that Manufacturer, we do not have to ask the browser user for
+Manufacturer info.</span></p>
+
+<p style='margin-left:.5in'><span style='font-size:18.0pt;font-family:"Segoe UI Symbol",sans-serif;
+color:#0070C0'>&#10077;</span><span style='font-family:"Arial",sans-serif'>See
+the “Add vehicle for this manufacturer” feature on the <u>manufacturer</u>
+details page.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>How
+the nature of the association affects your interaction design</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>This section continues with the
+topic that was discussed in the previous section. It is a&nbsp;topic that
+requires some thought and reasoning.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>When designing for the “add
+new” use case, the nature of the association affects the interaction
+design.&nbsp;Which of the following is better, and more correct?</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>1. Begin adding a new Vehicle.
+During this process, choose the Manufacturer for that Vehicle.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>2. Choose a specific
+Manufacturer. Then, add a new Vehicle for that Manufacturer.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Well, there is no single right
+answer. Some designs will be be good, and some bad, but the right answer for a
+situation will depend upon the actual situation.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Handle “add new”, if you must
+choose the associated object</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>As noted earlier, this
+situation is seen in the “Create New” feature on the list-of-vehicles page.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Here’s the design and coding
+approach:</span></p>
+
+<ol start=1 type=1>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Write a “VehicleAdd” view model class.
+     Include an int property for the identifier of the associated Manufacturer.</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Write a “VehicleAddForm” view model class.
+     Include SelectList and descriptive properties for the associated
+     Manufacturer.</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>In the Manager class, write a “VehicleAdd”
+     method. Validate the associated Manufacturer object before attempting to
+     add the new Vehicle object.</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>In the Controller class, write the
+     “Create” method pair, using the well-known technique.</span></li>
+</ol>
+
+<p><span style='font-family:"Arial",sans-serif'>More details are next.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>Write
+a “VehicleAdd” view model class…</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>As you have done before, write
+a “VehicleAdd” view model class.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The new task is to include an
+int property for the identifier of the associated Manufacturer.</span></p>
+
+<p style='margin-left:.5in'><code><span style='font-size:11.0pt;font-family:
+"Lucida Console"'>[Range(1, Int32.MaxValue)]</span></code></p>
+
+<p style='margin-left:.5in'><code><b><span style='font-size:11.0pt;font-family:
+"Lucida Console";color:#002060'>public</span></b></code><code><span
+style='font-size:11.0pt;font-family:"Lucida Console"'> <b><span
+style='color:#002060'>int</span></b> Manufacturer<span style='background:yellow'>Id</span>
+{ <b><span style='color:#002060'>get</span></b>; <b><span style='color:#002060'>set</span></b>;
+}</span></code></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>Write
+a “VehicleAddForm” view model class…</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>As you have recently learned,
+write a “VehicleAddForm” view model class. It can probably inherit from the
+“VehicleAdd” class. This single “…Form” view model class will for both
+scenarios (choose, or know/have).</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Include a SelectList property
+that will eventually hold the collection of Manufacturer items, which will be
+used as the items in an HTML Forms item-selection element.</span></p>
+
+<p style='margin-left:.5in'><code><b><span style='font-size:11.0pt;font-family:
+"Lucida Console";color:#002060'>public</span></b></code><code><span
+style='font-size:11.0pt;font-family:"Lucida Console"'> SelectList Manufacturer<span
+style='background:yellow'>List</span> { <b><span style='color:#002060'>get</span></b>;
+<b><span style='color:#002060'>set</span></b>; }</span></code></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Also, include one or more
+name/descriptive properties for the associated Manufacturer. This will enable
+you to display information in the view that will help the browser user identify
+the Manufacturer.</span></p>
+
+<p style='margin-left:.5in'><code><b><span style='font-size:11.0pt;font-family:
+"Lucida Console";color:#002060'>public</span></b></code><code><span
+style='font-size:11.0pt;font-family:"Lucida Console"'> <b><span
+style='color:#002060'>string</span></b> Manufacturer<span style='background:
+yellow'>Name</span> { <b><span style='color:#002060'>get</span></b>; <b><span
+style='color:#002060'>set</span></b>; }</span></code></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>In the
+Manager class, write a “VehicleAdd” method…</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>As you have done before, write a
+“VehicleAdd” method in the Manager class.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif;background:yellow'>The new task</span><span
+style='font-family:"Arial",sans-serif'> is to <em><span style='font-family:
+"Arial",sans-serif'>locate and validate</span></em> the associated Manufacturer
+object before attempting to add the new Vehicle object.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The incoming “newItem” object
+will have a ManufacturerId. Use that value to look for the associated
+Manufacturer object:</span></p>
+
+<p style='margin-left:.5in'><code><b><span style='font-size:11.0pt;font-family:
+"Lucida Console";color:#002060'>var</span></b></code><code><span
+style='font-size:11.0pt;font-family:"Lucida Console"'> a =
+ds.Manufacturers.Find(newItem.ManufacturerId);</span></code></p>
+
+<p><span style='font-family:"Arial",sans-serif'>If found, then make sure that
+you use it when adding the new Vehicle object:</span></p>
+
+<p style='margin-left:.5in'><code><span style='font-size:11.0pt;font-family:
+"Lucida Console";color:#00B050'>// Attempt to add the new item</span></code></p>
+
+<p style='margin-left:.5in'><code><b><span style='font-size:11.0pt;font-family:
+"Lucida Console";color:#002060'>var</span></b></code><code><span
+style='font-size:11.0pt;font-family:"Lucida Console"'> addedItem =
+ds.Vehicles.Add(</span></code><span style='font-family:Consolas;color:#2B91AF'>Mapper</span><code><span
+style='font-size:11.0pt;font-family:"Lucida Console"'>.Map&lt;</span></code><span
+style='font-size:11.0pt;font-family:Consolas;color:#2B91AF'>VehicleAdd</span><span
+style='font-size:9.5pt;font-family:Consolas;color:black'>, </span><span
+style='font-family:Consolas;color:#2B91AF'>Vehicle</span><code><span
+style='font-size:11.0pt;font-family:"Lucida Console"'>&gt;(newItem));</span></code></p>
+
+<p style='margin-left:.5in'><code><span style='font-size:11.0pt;font-family:
+"Lucida Console"'>&nbsp;</span></code></p>
+
+<p style='margin-left:.5in'><code><span style='font-size:11.0pt;font-family:
+"Lucida Console";color:#00B050'>// Set the associated item property</span></code></p>
+
+<p style='margin-left:.5in'><code><span style='font-size:11.0pt;font-family:
+"Lucida Console"'>addedItem.Manufacturer = a;</span></code></p>
+
+<p style='margin-left:.5in'><code><span style='font-size:11.0pt;font-family:
+"Lucida Console"'>ds.SaveChanges();</span></code></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>In the
+Controller class, write the “Create” method pair…</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>As you have done before, write
+the “Create” method pair in the VehiclesController class, using the well-known
+technique.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The “GET” method – which
+delivers the HTML Form to the browser user – MUST initialize and configure a
+“VehicleAddForm” object, before sending it to the view.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The “POST” method – which
+handles the data submitted by the browser user – works the same as in other
+“add new” use cases.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Handle “add new”, if you know or
+have info about the associated object</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>As noted earlier, this
+situation is seen in&nbsp;the “Add vehicle for this manufacturer” feature on
+the manufacturer details page.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Here’s the design and coding
+approach:</span></p>
+
+<ol start=1 type=1>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>If needed, write a “VehicleAdd” view model
+     class.</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>If needed, write a “VehicleAddForm” view
+     model class.</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>If needed, in the Manager class, write a
+     “VehicleAdd” method.</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>In the Controller class, write the
+     “Create” method pair, using the well-known technique.</span></li>
+</ol>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>If
+needed, write a “VehicleAdd” view model class…</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>It is possible that you have
+already done this work, based on the previous scenario.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>If
+needed, write a “VehicleAddForm” view model class…</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>It is possible that you have
+already done this work, based on the previous scenario.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>If
+needed, in the Manager class, write a “VehicleAdd” method…</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>It is possible that you have
+already done this work, based on the previous scenario.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>In the
+ManufacturersController class, write the “Create” method pair…</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>This task will be familiar, but
+parts of it are different.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>First, it is possible that you
+will want the ManufacturersController class to have a method pair that will
+enable “add new” for a Manufacturer. Therefore, plan to use the suggested
+default “Create” method name for this purpose.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Therefore, we must use a
+different method name, in the ManufacturersController class, to enable “add
+new” for a Vehicle. We suggest that you use “AddVehicle” for the method name.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The method MUST have an int
+parameter, for the manufacturer identifier. The idea is that this value will be
+known in the current context or flow of the app. Therefore, its presence
+enables us to handle a use case that would be stated like this: “Add a new
+vehicle for the manufacturer with identifer 123.”</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In the “GET” method – which
+delivers the HTML Form to the browser user – has more work to do than before.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif;background:yellow'>The new task</span><span
+style='font-family:"Arial",sans-serif'> is to locate and validate the
+associated Manufacturer object before attempting to add the new Vehicle object.</span></p>
+
+<p style='margin-left:.5in'><code><span style='font-family:"Lucida Console";
+color:#00B050'>// Attempt to get the associated object</span></code></p>
+
+<p style='margin-left:.5in'><code><b><span style='font-family:"Lucida Console";
+color:#002060'>var</span></b></code><code><span style='font-family:"Lucida Console"'>
+a = m.ManufacturerGetById(id.GetValueOrDefault());</span></code></p>
+
+<p><span style='font-family:"Arial",sans-serif'>If found (successful), then we
+can continue. We MUST initialize and configure a “VehicleAddForm” object,
+before sending it to the view.</span></p>
+
+<p style='margin-left:.5in'><code><span style='font-family:"Lucida Console";
+color:#00B050'>// Create and configure a form object</span></code></p>
+
+<p style='margin-left:.5in'><code><b><span style='font-family:"Lucida Console";
+color:#002060'>var</span></b></code><code><span style='font-family:"Lucida Console"'>
+o = <b><span style='color:#002060'>new</span></b> VehicleAddForm();</span></code></p>
+
+<p style='margin-left:.5in'><code><span style='font-family:"Lucida Console"'>o.ManufacturerId
+= a.Id;</span></code></p>
+
+<p style='margin-left:.5in'><code><span style='font-family:"Lucida Console"'>o.ManufacturerName
+= a.Name;</span></code></p>
+
+<p><span style='font-family:"Arial",sans-serif'>At this point, you can generate
+a view, based on the VehicleAddForm view model class. It will generate a view
+that will look something like the following. </span></p>
+
+<p><img border=0 width=726 height=490 id="Picture 2"
+src="INT422-Lecture5-2_files/image002.png"></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The generated view has a few
+problems, mostly because we already know or have some information about the
+manufacturer. Therefore, we must NOT allow the browser user to edit the data.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>As stated on the image, the two
+manufacturer-related properties should not appear in editable elements on the
+HTML Form. Instead, we will edit the form:</span></p>
+
+<ol start=1 type=1>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Convert the ManufacturerId to an &lt;input
+     <span style='background:yellow'>type=hidden</span>… element</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Use the value of ManufacturerName in the
+     page’s visible title</span></li>
+</ol>
+
+<p><span style='font-family:"Arial",sans-serif'>For example, you could do
+something like the following.&nbsp;</span></p>
+
+<p><img border=0 width=723 height=432 id="Picture 3"
+src="INT422-Lecture5-2_files/image003.png"></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Alternatively, you could make
+the manufacturer info even more prominent.&nbsp;Click the image to open it
+full-size in a new tab/window.</span></p>
+
+<p><img border=0 width=725 height=228 id="Picture 1"
+src="INT422-Lecture5-2_files/image004.png"></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The “POST” method – which
+handles the data submitted by the browser user – works almost the same as in
+other “add new” use cases. The difference is that the PRG pattern destination
+will be the Details view of the VehiclesController (because that already
+exists, so we can re-use it).</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>A brief introduction to Attribute
+Routing</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In the scenario above, the
+resource URL to the “add new” task in the ManufacturersController class was:</span></p>
+
+<p style='margin-left:.5in'><a
+href="https://host.example.com/manufacturers/addvehicle/56"><code><span
+style='font-family:"Lucida Console";color:windowtext;text-decoration:none'>https://host.example.com/manufacturers/addvehicle/56</span></code></a></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>HTTP purists – and your
+professor is one of those – are uncomfortable with the resource URL. The order
+or sequence of the segments suggests a different task or operation. In other
+words, someone could argue that we are attempting &nbsp;add a vehicle with
+identifier “56” to the manufacturers collection.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>A more natural way of
+expressing that would be to say “add a vehicle to manufacturer number 56”. As a
+resource URL, that would be:</span></p>
+
+<p style='margin-left:.5in'><a
+href="https://host.example.com/manufacturers/56/addvehicle"><code><span
+style='font-family:"Lucida Console";color:windowtext;text-decoration:none'>https://host.example.com/manufacturers<span
+style='background:yellow'>/56/</span>addvehicle</span></code></a></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>A feature named “Attribute
+Routing” enables us to do that.&nbsp;</span><a
+href="http://www.asp.net/web-api/overview/web-api-routing-and-actions/attribute-routing-in-web-api-2"
+target="_blank"><span style='font-family:"Arial",sans-serif'>This article</span></a><span
+style='font-family:"Arial",sans-serif'> by Mike Wasson (on the official ASP.NET
+Web API web site) fully explains attribute routing. In summary:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>It is an easy way to define and use custom
+     resource URIs that go beyond the default format.</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>And optionally, can be used alongside
+     convention-based routing (the default).</span></li>
+</ul>
+
+<p><span style='font-family:"Arial",sans-serif'>When you use Attribute Routing,
+you must enable that feature in the app.&nbsp;In the RouteConfig class (in the
+App_Start folder), add this to the RegisterRoutes method:</span></p>
+
+<p style='margin-left:.5in'><code><span style='font-family:"Lucida Console"'>routes.MapMvcAttributeRoutes();</span></code></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In essense, it enables us to
+add an attribute to the method, and specify the route that it will serve. We
+can add this attribute to both “AddVehicle” methods in the
+ManufacturersController class:</span></p>
+
+<p style='margin-left:.5in'><code><span style='font-family:"Lucida Console"'>[Route(&quot;</span></code><code><span
+style='font-family:"Lucida Console";color:#990033'>manufacturers/{id}/addvehicle</span></code><code><span
+style='font-family:"Lucida Console"'>&quot;)]</span></code></p>
+
+<p style='margin-left:.5in'><code><b><span style='font-family:"Lucida Console";
+color:#002060'>public</span></b></code><code><span style='font-family:"Lucida Console"'>
+ActionResult AddVehicle(<b><span style='color:#002060'>int</span></b>? id</span></code><code><span
+style='font-size:11.0pt;font-family:"Lucida Console"'>)</span></code></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In summary, if you want to add
+that feature to your apps, go ahead. In the near future, we will use it
+periodically.</span></p>
+
+<p><a
+href="https://scs.senecac.on.ca/~wei.song/int422/common/form-with-selectlist-flow-v3.png"><span
+style='color:windowtext;text-decoration:none'><img border=0 width=732
+height=1094 id="Picture 10" src="INT422-Lecture5_files/image009.png"></span></a></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Work on Assignment 5</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Get started on Assignment 5 on
+your own.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Its specifications will guide
+you through the work to be done. The notes from today, and from the previous
+class/session, have all the topic coverage and supporting information that
+you’ll need.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>

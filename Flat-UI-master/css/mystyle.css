@@ -1,0 +1,59 @@
+p img {
+  height: 1.0em;
+  vertical-align: baseline;
+}
+
+body { background-image: url("../images/bgw.gif"); }
+
+/*table.schedule {
+  border: double 2px;
+}*/
+
+table.schedule td {
+  border: double 2px;
+}
+
+/*h3 a {
+  height: 0.3px;
+  vertical-align: baseline;
+}*/
+
+h3 img, h3 canvas {
+  vertical-align: text-top;
+}
+
+.legend {
+  float: right;
+}
+
+th.center {
+  text-align: center;
+}
+
+.row-highlight {
+  background-color: #B7D1EC; /*#F0FFF0;*/
+}
+
+p sup {
+  font-size: 50%;
+  vertical-align: super;
+}
+
+.lightgrey { color: lightgrey; }
+
+/*#.red:hover {
+    position: relative;
+}*/
+.red:hover:after {
+    content: url("../images/s.png"); /* no need for qoutes */
+    display: inline;
+    position: fixed;
+    right: 10px; /* change this value to one that suits you */
+    top: 10px; /* change this value to one that suits you */
+}
+
+.ws-red { color:darkred; text-shadow:  1px 1px 2px grey; }
+.ws-green { color:darkgreen; text-shadow:  1px 1px 2px grey; }
+.ws-blue { color:darkblue; text-shadow:  1px 1px 2px grey; }
+.ws-darkgrey { color:#333333; text-shadow:  1px 1px 2px #aaaaaa;}
+.ws-grey { color:grey; text-shadow:  1px 1px 2px #aaaaaa;}

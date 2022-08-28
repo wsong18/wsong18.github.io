@@ -1,0 +1,23 @@
+# rmiregistry is the shell command to launch the rmi registry daemon, which 
+# implements the Naming interface.
+#
+# The server program in an RMI application creates the remote object and
+# registers it under the "service name" in the registry
+#
+# The client program in an RMI application looks up the "service name" in the
+# registry and obtains a remote reference to the object implementing the service
+# which it then uses to call the remote methods.
+#
+# the port number used for the service is provided as the only argument
+# (if omitted the standard RMI registry port 1099 is assumed
+#
+
+# for Unix
+
+  rmiregistry 54444 &     # starts the registry deamon on port 54444
+                          # & causes the registry to run in the background
+#
+# for Windows
+
+  start rmiregistry 5566 # starts the registry deamon on port 5566
+                          # start is the MS-DOS command for a background process

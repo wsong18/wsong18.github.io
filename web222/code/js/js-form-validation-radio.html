@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+ <head>
+   <meta charset="UTF-8" />
+   <title>HTML Form</title>
+   <style> 
+      body { margin: 0 10%; }	  
+	  form { border: 10px solid #00ff00; padding: 5px; }	  	  
+      .inputbox { 
+            background-color: #ffffff; 
+            border-top:    7px dashed #0000ff; 
+            border-bottom: 7px dashed #0000ff; 
+            border-left:   7px solid  #ff0000; 
+            border-right:  7px solid  #ff0000; 
+      }
+      .inputtext{
+            font-size: 14px; 
+            font-style:italic;
+            font-weight:bold;
+      }
+	  #errors { color: red; }
+   </style>
+   <script>
+	  function checkForm() {
+		 var radio_num = document.example.system_type.length;
+		 var onechecked = false;  
+
+		 for (var i = 0; i < radio_num; i++) {
+			 if (document.example.system_type[i].checked == true) { // true  = checked 
+				onechecked = true;
+			 } 
+		 } 
+
+		 if (!onechecked) {                                        
+			  messages = "<p>None checked</p>"; 
+			  showErrors(messages); 
+			  return false;
+		 }
+		 
+		 return true;  		
+    } 
+
+	function showErrors(messages) {   
+		document.getElementById('errors').innerHTML = messages;
+	} 
+
+	function  clearErrors() {
+	   document.getElementById('errors').innerHTML = " ";        
+	}  	
+   </script>
+ </head>
+ <body>
+    <header></header>
+    <nav></nav>
+    <div id="content" style="font-family:monospace;font-size:14px;">
+	   <h1>Example - JavaScript Form Validation</h1>
+	   <h4><mark>input type="radio" </mark></h4>
+	   <h4><mark>Rule: must select one</mark></h4>
+   
+	   <form method="post" name="example"
+		   action='https://formpost.azurewebsites.net/home/test'
+		   onsubmit="return checkForm();">
+		   <p>Operating system you use? </p>
+		   <p>
+			  <input type="radio" name="system_type" value="Windows Vista" />Windows Vista<br>
+			  <input type="radio" name="system_type" value="Windows 7" />Windows 7<br>      
+			  <input type="radio" name="system_type" value="Windows 8" />Windows 8<br>      
+			  <input type="radio" name="system_type" value="Unix" />Unix<br>
+			  <input type="radio" name="system_type" value="Linux" />Linux
+		   </p>
+		   <div id="errors"></div>
+		   <hr>
+		   <p>
+			  <input type="submit" value="Submit Information" />&nbsp;&nbsp;
+			  <input type="reset"  value="    Clear   " onclick="clearErrors();" />  
+		   </p> 
+	   </form>
+    </div>
+
+    <footer>   
+       <!-- for downloading source files -->
+       <br><p><a href="" Download>Download</a></p>
+    </footer>
+ </body>
+</html>

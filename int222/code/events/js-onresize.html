@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <title>INT222</title>
+   <style> 
+      body { margin: 0 18%; }
+   </style>
+   <script type='text/javascript'>
+     var countDown=0;
+     var countPress=0;
+     var countUp=0;
+	 function init() { document.body.style.background = "yellow";}
+     window.onload = init();
+   </script>
+</head>
+<body onresize='alert("You have resized the window");'>
+  <h3><mark>onresize event handler</mark></h3>
+<!-- Start of example -->
+ <form method='post' name='form1' action='#'>
+   <p>Name (First &amp; Last) <input type='text' name='flname' size='40' /></p>
+   <br />
+   <br />
+   To submit, press <input type='submit' value='Submit Information' />
+   &nbsp;&nbsp;
+   To clear, press  <input type='reset'  value='    Clear   '  />  
+   <br />
+   <ul>
+	<li>Click on the minimize or maximize (upper right) and see what happens. </li>
+   </ul>
+ </form>
+<!-- End of example -->
+  <br>
+  <!-- for downloading source files -->
+  <p><a href="" Download>Download</a></p>
+</body>
+</html>

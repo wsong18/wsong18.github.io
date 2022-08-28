@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Class & ID</title>
+  <style>
+	/* HTML tag/type Selector */
+	p       { background-color:yellow; color:red; }
+	
+	/* Class Selector that apply to a tag (p: paragraph) */
+	p.type1 { text-decoration:underline; }
+	
+	/* Class Selectors */
+	.note   { font-style: italic; text-decoration:underline; }
+	
+	/* Id Selectors */
+	#special { letter-spacing: 0.2em; }
+   
+	/* Grouping Selectors */
+	h1, h2, h3 { font-family: Serif; color: blue;}
+ 
+	/* Contextual Selectors */
+	div h5 { border: 15px inset blue; }
+  </style>
+</head>
+<body>
+  <h1>Heading - the h1 tag</h1>
+  <h2>Heading - the h2 tag</h2>
+  <h3>Heading - the h3 tag</h3>
+  <h4>Heading - the h4 tag</h4>
+  <h5>Heading - the h5 tag</h5>
+  <h6>Heading - the h6 tag</h6>
+  
+  <div style="text-align: center;">
+	<p>1- This one is using an html selector</p>
+	<p class="type1">2- This one is using an html class selector p.type1</p>
+	<h5 class="type1">3- This one is using p.type1 class - no effect</h5>
+  </div>
+ 
+  <div style="text-align: right;">
+	<p>4- This one is using <span class="note">a class called .note</span></p>
+	<p class="note">5- This one is also using the class called .note</p>
+	<h5 class="note">6- This one is using .note class, working </h5>
+	<p>7- This one is using <span id="special">an id called #special</span></p>
+  </div>
+ 
+  <!-- for view-source and download -->
+  <br><p><a href="view-source:">View-source</a> <a href='' download>Download</a></p>
+</body>
+</html>
+

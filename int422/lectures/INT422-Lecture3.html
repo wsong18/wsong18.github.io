@@ -1,0 +1,1931 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<title>Lec 3</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Segoe UI Symbol";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:"Lucida Console";
+	panose-1:2 11 6 9 4 5 4 2 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+h2
+	{mso-style-link:"Heading 2 Char";
+	margin-top:2.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:107%;
+	page-break-after:avoid;
+	font-size:13.0pt;
+	font-family:"Calibri Light",sans-serif;
+	color:#2E74B5;
+	font-weight:normal;}
+h4
+	{mso-style-link:"Heading 4 Char";
+	margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+p
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+code
+	{font-family:"Courier New";}
+span.Heading4Char
+	{mso-style-name:"Heading 4 Char";
+	mso-style-link:"Heading 4";
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-link:"Heading 2";
+	font-family:"Calibri Light",sans-serif;
+	color:#2E74B5;}
+p.msonormal0, li.msonormal0, div.msonormal0
+	{mso-style-name:msonormal;
+	margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink=purple background=bgw.gif>
+
+<div class=WordSection1 
+     style="margin: 0.5in auto; max-width: 50em; min-width: 30em;">
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:18.0pt;
+font-family:"Arial",sans-serif'>INT422 – Lecture 3</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Learn the Edit and Delete
+patterns.&nbsp;Introductions to data annotations, and to LINQ (language-integrated
+query).</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Test today</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Test 2&nbsp;is today.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>We will have the test at the
+beginning of the timeslot, and will run approximately 18 minutes.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>As you have learned, all tests
+in this course are hand-written. Pen or pencil. Answer styles will vary, but
+we’re mostly looking for short- to medium-length answers, and/or diagrams, and
+so on.&nbsp;No references or resources are permitted – “closed book, open
+brain”. </span></p>
+
+<p><span style='font-family:"Arial",sans-serif;background:yellow'>The tested
+topics are mostly forward-looking.</span><span style='font-family:"Arial",sans-serif'>
+You will be&nbsp;tested on comprehension, understanding, and the application of
+the current week’s topics. It is possible that you <span style='background:
+yellow'>may be tested on a recently-covered topic</span>, which enables you to
+show that you have the foundational knowledge needed for current and future
+tasks.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Textbook coverage</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>As announced last week, the
+textbook will have a supporting role as you learn new topics from these notes
+and your classroom sessions. Use the table-of-contents and the index to locate
+the topic, and then read about it there. A reminder: The textbook does not use
+view model classes in its discussions and code examples. We do.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Code examples</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Using a persistent store
+–&nbsp;edit existing, delete item</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Introduction to data annotations</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Introduction to LINQ</span></p>
+
+<p style='margin-left:.5in'><span style='font-size:18.0pt;font-family:"Segoe UI Symbol",sans-serif;
+color:#0070C0'>&#10077;</span><span style='font-family:"Arial",sans-serif'>Reminder
+about the code examples:</span></p>
+
+<p style='margin-left:.5in'><span style='font-family:"Arial",sans-serif'>All
+code examples are designed to be usable immediately and error-free. Each should
+compile and execute correctly.&nbsp;</span></p>
+
+<p style='margin-left:.5in'><span style='font-family:"Arial",sans-serif'>If you
+have any problems with a code example, please contact your professor.&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Look for and use this feature in
+the code examples</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Your teacher team&nbsp;has
+added “</span><a
+href="https://msdn.microsoft.com/en-us/library/txtwdysk.aspx#tokensComments"
+target="_blank"><span style='font-family:"Arial",sans-serif'>comment tokens</span></a><span
+style='font-family:"Arial",sans-serif'>” to the code examples. We do this to
+highlight areas of the code that need <em><span style='font-family:"Arial",sans-serif'>your
+attention</span></em> (and review and thought).</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>As you will learn in the linked
+article, Visual Studio has a built-in token named “TODO”. In your Visual
+Studio, you will add a custom token named “ATTENTION”. This is a one-time
+operation on your own computer.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Open Tools &gt; Options.
+Navigate to the Environment &gt; Task List panel. Enter “ATTENTION” into the
+“Name:” textbox, and click the “Add” button. It will add it to the “Token
+list:”.</span></p>
+
+<p><img border=0 width=722 height=419 id="Picture 13"
+src="INT422-Lecture3_files/image001.jpg" alt=attention-token-tools-options></p>
+
+<p>&nbsp;</p>
+
+<p><span style='font-family:"Arial",sans-serif'>Then, when you show your </span><strong><span
+style='font-family:"Arial",sans-serif'>Task List</span></strong><span
+style='font-family:"Arial",sans-serif'> (from the View menu), it will show you
+a nice list of tokenized comments.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Tip: Sort by “Description”, and
+you can go through the list in the sequence that the author intended.</span></p>
+
+<p><img border=0 width=719 height=362 id="Picture 9"
+src="INT422-Lecture3_files/image002.png" alt=attention-comments-on-task-list></p>
+
+<p>&nbsp;</p>
+
+<p><span style='font-family:"Arial",sans-serif'>Each item on the list can be
+double-clicked. When you do that, the source code file will open, and it will
+scroll to the position of the comment.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Enjoy.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Theme for today</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Last week, you learned these
+patterns, when working on a single entity:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Get all</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Get one</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Add new</span></li>
+</ul>
+
+<p><span style='font-family:"Arial",sans-serif'>Today, we’ll finish off by covering
+these patterns:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Edit existing</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Delete item</span></li>
+</ul>
+
+<p><span style='font-family:"Arial",sans-serif'>Then, we’ll cover some
+new&nbsp;foundational topics, data annotations, and LINQ.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Adding more functionality – “edit
+existing”</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Like “add new”, this pattern is
+implemented with two controller methods, and one manager method.</span></p>
+
+<p style='margin-left:.5in'><span style='font-size:18.0pt;font-family:"Segoe UI Symbol",sans-serif;
+color:#0070C0'>&#10077;</span><b><span style='font-family:"Arial",sans-serif'>Notice:</span></b></p>
+
+<p style='margin-left:.5in'><span style='font-family:"Arial",sans-serif'>ALL
+use cases that involve data add, change, or delete, will be implemented with
+TWO controller methods.</span></p>
+
+<p style='margin-left:.5in'><span style='font-family:"Arial",sans-serif'>The
+GET&nbsp;method will handle the “show me the HTML Form to do add/change/delete”
+task.</span></p>
+
+<p style='margin-left:.5in'><span style='font-family:"Arial",sans-serif'>The
+POST method will handle the data that the user sends/submits for
+add/change/delete.</span></p>
+
+<p style='margin-left:.5in'><span style='font-family:"Arial",sans-serif'>A
+successful result will ALWAYS use the PRG pattern (post-redirect-get).</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The code example continues to
+use the <em><b><span style='font-family:"Arial",sans-serif'>customer</span></b></em>
+entity, as we did in last week’s code examples.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>For this use case, we must
+deliver an HTML Form to the browser user.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Then, we must accept the posted
+data, and process it (by editing the&nbsp;customer object’s data).</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>To preview our work, the
+controller method will call a manager method, which does the edit-and-save
+work. The updated&nbsp;object is then returned to the controller, for final
+processing.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>There are several tasks in the
+work plan. Here’s a list. Details follow.</span></p>
+
+<ol start=1 type=1>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Create a view model</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Create a mapper</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>In the Manager, create an “edit existing”
+     method</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>In the controller, modify the first Edit()
+     method</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Create an “edit existing” view, using the
+     scaffolder</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>In the controller, modify the other Edit()
+     method, to call the manager “edit existing” method, and handle the result</span></li>
+</ol>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Create a view model</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>We already have some view
+models, CustomerBase, and CustomerAdd.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Can we use these for the “edit
+existing” use case?</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>NO.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>CustomerAdd simply will not
+work, because it does not have an identifier property.</span></p>
+
+<p style='margin-left:.5in'><span style='font-size:18.0pt;font-family:"Segoe UI Symbol",sans-serif;
+color:#0070C0'>&#10077;</span><span style='font-family:"Arial",sans-serif'>Note:
+<u>For “edit existing” and “delete item” use cases, we MUST have and use the
+identifier property</u>.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>CustomerBase could work, for
+very simple objects, but it would be unusual to do so. Why?</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>From a common sense
+perspective, we do not usually permit someone to edit all the properties of an
+existing object in one task. Instead, <u>we focus on the editing (some properties)
+task that makes sense for the use case.</u> That means that we need another
+view model class, to exactly match the shape of the editable object.</span></p>
+
+<p style='margin-left:.5in'><span style='font-size:18.0pt;font-family:"Segoe UI Symbol",sans-serif;
+color:#0070C0'>&#10077;</span><span style='font-family:"Arial",sans-serif'>Pause
+for a moment, and make sure that you understand this concept.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In the code example, we have
+decided that we will permit the editing of contact info – <i>phone, fax, and
+email</i> – for a specific customer. The view model class will need these
+properties.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>What else? From above, you know
+that we MUST include the identifier property.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Is that enough? If we show an
+HTML Form with the phone, fax, and email properties, will the browser user see
+enough to know which customer is being edited?</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>No.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In the view model class, we
+must <u>also include human-readable and contextually-logical information</u>.
+For the customer, it seems obvious that we need the customer’s name. However,
+we do NOT want to allow editing of the customer’s name.</span></p>
+
+<p><a
+href="https://scs.senecac.on.ca/~wei.song/int422/lectures/images/L3-edit-form-1.png"><span
+style='color:windowtext;text-decoration:none'><img border=0 width=721
+height=369 id="Picture 15" src="INT422-Lecture3_files/image003.png"></span></a></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Don’t worry about this
+conflict, because we have a strategy. After Visual Studio has scaffolded the
+view, we will simply edit the view, and </span><em><span style='font-family:
+"Arial",sans-serif'>remove</span></em><span style='font-family:"Arial",sans-serif'>
+the ability to edit the customer name.</span></p>
+
+<p><a
+href="https://scs.senecac.on.ca/~wei.song/int422/lectures/images/L3-edit-form-2.png"><span
+style='color:windowtext;text-decoration:none'><img border=0 width=730
+height=285 id="Picture 16" src="INT422-Lecture3_files/image004.png"></span></a></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Let’s create the view model
+class. What name should we use? Well, it will enable the browser user to <u>edit</u>
+the <u>contact info</u> for a <u>customer</u>, in an HTML <u>Form</u>. Its name
+will be <b>CustomerEditContactInfoForm</b>. Here are its properties (we have
+removed the data annotations to focus only on the properties):</span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console";color:#002060'>public</span></code><code><span
+style='line-height:107%;font-family:"Lucida Console"'> <span style='color:#002060'>class
+</span><span style='background:yellow'>CustomerEditContactInfoForm</span></span></code></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console"'>{</span></code></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console"'>&nbsp;&nbsp;<span style='color:#002060'>public</span>
+CustomerEditContactInfoForm() { }</span></code></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console"'>&nbsp;</span></code></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console"'>&nbsp;&nbsp;[Key]</span></code></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console"'>&nbsp;&nbsp;<span style='color:#002060'>public</span>
+<span style='color:#002060'>int</span> CustomerId { <span style='color:#002060'>get</span>;
+<span style='color:#002060'>set</span>; }</span></code></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console"'>&nbsp;</span></code></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console"'>&nbsp;&nbsp;<span style='color:#002060'>public</span>
+<span style='color:#002060'>string</span> FirstName { <span style='color:#002060'>get</span>;
+<span style='color:#002060'>set</span>; }</span></code></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console"'>&nbsp;&nbsp;<span style='color:#002060'>public</span>
+<span style='color:#002060'>string</span> LastName { <span style='color:#002060'>get</span>;
+<span style='color:#002060'>set</span>; }</span></code></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console"'>&nbsp;&nbsp;<span style='color:#002060'>public</span>
+<span style='color:#002060'>string</span> Company { <span style='color:#002060'>get</span>;
+<span style='color:#002060'>set</span>; }</span></code></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console"'>&nbsp;&nbsp;<span style='color:#002060'>public</span>
+<span style='color:#002060'>string</span> Phone { <span style='color:#002060'>get</span>;
+<span style='color:#002060'>set</span>; }</span></code></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console"'>&nbsp;&nbsp;<span style='color:#002060'>public</span>
+<span style='color:#002060'>string</span> Fax { <span style='color:#002060'>get</span>;
+<span style='color:#002060'>set</span>; }</span></code></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console"'>&nbsp;&nbsp;<span style='color:#002060'>public</span>
+<span style='color:#002060'>string</span> Email { <span style='color:#002060'>get</span>;
+<span style='color:#002060'>set</span>; }</span></code></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console"'>}</span></code></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>This approach does introduce
+another problem: The shape of the object that is sent to the view will be </span><em><b><span
+style='font-family:"Arial",sans-serif'>different</span></b></em><span
+style='font-family:"Arial",sans-serif'>&nbsp;than the shape of the object that
+is posted by the browser user from the HTML Form. In other words:</span></p>
+
+<p><u><span style='font-family:"Arial",sans-serif'>To</span></u><span
+style='font-family:"Arial",sans-serif'> the browser: 7 properties (CustomerId,
+FirstName, LastName, Company, Phone, Fax, Email)</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Posted <u>from</u> the HTML
+Form: 4 properties (CustomerId, Phone, Fax, Email)</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The solution? Simply create
+another view model class, with the four properties, to describe the shape of
+the object that is posted by the browser user from the HTML Form. For example:</span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console";color:#002060'>public</span></code><span
+style='font-size:12.0pt;line-height:107%;font-family:"Lucida Console"'> </span><code><span
+style='line-height:107%;font-family:"Lucida Console";color:#002060'>class</span></code><span
+style='font-size:12.0pt;line-height:107%;font-family:"Lucida Console"'> </span><code><span
+style='line-height:107%;font-family:"Lucida Console";background:yellow'>CustomerEditContactInfo</span></code></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console"'>{</span></code></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console"'>&nbsp;&nbsp;<span style='color:#002060'>public</span></span></code><span
+style='font-size:12.0pt;line-height:107%;font-family:"Lucida Console"'> </span><code><span
+style='line-height:107%;font-family:"Lucida Console"'>CustomerEditContactInfo()
+{ }</span></code></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:12.0pt;
+line-height:107%;font-family:"Lucida Console"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console"'>&nbsp;&nbsp;[Key]</span></code></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console"'>&nbsp;&nbsp;<span style='color:#002060'>public</span></span></code><span
+style='font-size:12.0pt;line-height:107%;font-family:"Lucida Console"'> </span><code><span
+style='line-height:107%;font-family:"Lucida Console";color:#002060'>int</span></code><span
+style='font-size:12.0pt;line-height:107%;font-family:"Lucida Console"'> </span><code><span
+style='line-height:107%;font-family:"Lucida Console"'>CustomerId { <span
+style='color:#002060'>get</span>; <span style='color:#002060'>set</span>; }</span></code></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:12.0pt;
+line-height:107%;font-family:"Lucida Console"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console"'>&nbsp;&nbsp;<span style='color:#002060'>public</span></span></code><span
+style='font-size:12.0pt;line-height:107%;font-family:"Lucida Console"'> </span><code><span
+style='line-height:107%;font-family:"Lucida Console";color:#002060'>string</span></code><span
+style='font-size:12.0pt;line-height:107%;font-family:"Lucida Console"'> </span><code><span
+style='line-height:107%;font-family:"Lucida Console"'>Phone { <span
+style='color:#002060'>get</span>; <span style='color:#002060'>set</span>; }</span></code></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console"'>&nbsp;&nbsp;<span style='color:#002060'>public</span></span></code><span
+style='font-size:12.0pt;line-height:107%;font-family:"Lucida Console"'> </span><code><span
+style='line-height:107%;font-family:"Lucida Console";color:#002060'>string</span></code><span
+style='font-size:12.0pt;line-height:107%;font-family:"Lucida Console"'> </span><code><span
+style='line-height:107%;font-family:"Lucida Console"'>Fax { <span
+style='color:#002060'>get</span>; <span style='color:#002060'>set</span>; }</span></code></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console"'>&nbsp;&nbsp;<span style='color:#002060'>public</span></span></code><span
+style='font-size:12.0pt;line-height:107%;font-family:"Lucida Console"'> </span><code><span
+style='line-height:107%;font-family:"Lucida Console";color:#002060'>string</span></code><span
+style='font-size:12.0pt;line-height:107%;font-family:"Lucida Console"'> </span><code><span
+style='line-height:107%;font-family:"Lucida Console"'>Email { <span
+style='color:#002060'>get</span>; <span style='color:#002060'>set</span>; }</span></code></p>
+
+<p style='margin-left:.5in'><code><span style='font-size:11.0pt;font-family:
+"Lucida Console"'>}</span></code></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p style='margin-left:.5in'><span style='font-size:18.0pt;font-family:"Segoe UI Symbol",sans-serif;
+color:#0070C0'>&#10077;</span><span style='font-family:"Arial",sans-serif'>Could
+we use inheritance here? Make CustomerEditContactInfoForm inherit from
+CustomerEditContactInfo? Yes, you could. Should you always try to do this? No,
+only when it’s easy to do, and appropriate.&nbsp;</span></p>
+
+<p style='margin-left:.5in'><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Create a mapper</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In the controller method
+(below), we will <u>fetch the object-to-be-edited from the data store</u>. The
+fetch task will <u>re-use the “get one” method in the manager object</u>. The
+returned object will be a CustomerBase data type.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>We will need <b>a new mapping</b>,
+<u>from a view model CustomerBase class, to a view model CustomerEditContactInfoForm
+class</u>. Add&nbsp;it now.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Do we need another mapping,
+from CustomerEditContactInfo to Customer ? </span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Interestingly, the answer is
+“no”. Instead, we will use a different mapping technique to do this, explained
+next.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>In the Manager, create an “edit
+existing” method</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>This method will update an
+existing object, and save the changes to the data store. The method signature
+needs:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>An argument, of type
+     CustomerEditContactInfo, that can be passed in from the controller</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>A return type, of type CustomerBase, that
+     can be passed back to the controller</span></li>
+</ul>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Here’s the method’s algorithm:</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In the method body, our first
+task is to attempt to locate the object that is being edited.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>If not found, return null (to
+the controller).</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Otherwise, make the changes,
+and then save the changes.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Finally, return the
+freshly-edited object back to the controller.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Here’s a typical “edit
+existing” method.&nbsp;Click to open the image full-size in a new tab/window.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'><img border=0 width=730
+height=381 id="Picture 12" src="INT422-Lecture3_files/image005.png"></span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-size:11.0pt;font-family:"Arial",sans-serif;background:
+yellow'>ds.Entry(o).CurrentValues.SetValues(newItem);</span><span
+style='font-family:"Arial",sans-serif'><br>
+<strong><span style='font-family:"Arial",sans-serif'>How does this statement work?</span></strong></span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>This is an amazing piece of
+work. Let’s start at the beginning. That way, you will begin to learn how to
+read the MSDN documentation.</span></p>
+
+<p style='margin-left:.5in'><span style='font-size:11.0pt;font-family:"Arial",sans-serif;
+background:yellow'>ds.Entry(o)</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>This returns an object which
+provides access to information about, and control of, an entity (o in this situation)
+that is in the data context in-memory temporary workspace. Here’s the </span><a
+href="https://msdn.microsoft.com/en-us/library/gg696410%28v=vs.113%29.aspx"
+target="_blank"><span style='font-family:"Arial",sans-serif'>MSDN document</span></a><span
+style='font-family:"Arial",sans-serif'>.</span></p>
+
+<p style='margin-left:.5in'><span style='font-size:11.0pt;font-family:"Arial",sans-serif;
+background:yellow'>CurrentValues</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The ds.Entry object has a
+CurrentValues property, which gets the current values for the entity’s
+properties, as a collection of DbPropertyValues. Here’s its </span><a
+href="https://msdn.microsoft.com/en-us/library/mt154982%28v=vs.113%29.aspx#P:System.Data.Entity.Infrastructure.DbEntityEntry%601.CurrentValues"
+target="_blank"><span style='font-family:"Arial",sans-serif'>MSDN document</span></a><span
+style='font-family:"Arial",sans-serif'>.</span></p>
+
+<p style='margin-left:.5in'><span style='font-size:11.0pt;font-family:"Arial",sans-serif;
+background:yellow'>SetValues(newItem);</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The CurrentValues property has
+a SetValues() method. This sets (changes) the CurrentValues items to those in a
+passed-in object (newItem). From its </span><a
+href="https://msdn.microsoft.com/en-us/library/system.data.entity.infrastructure.dbpropertyvalues.setvalues%28v=vs.113%29.aspx#M:System.Data.Entity.Infrastructure.DbPropertyValues.SetValues%28System.Object%29"
+target="_blank"><span style='font-family:"Arial",sans-serif'>MSDN document</span></a><span
+style='font-family:"Arial",sans-serif'>:</span></p>
+
+<p style='margin-left:.5in'><span style='font-family:"Arial",sans-serif'>The
+[passed-in]&nbsp;object can be of any type.<br>
+Any property on the [passed-in] object with a name that matches a property name
+in the [data store object]&nbsp;and can be read will be read.<br>
+Other properties will be ignored.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Also, it ignores navigation
+properties. All in all, it is a very safe way to make changes to objects. We
+will use this for “edit existing” tasks, and maybe other kinds of tasks.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>In the controller, modify the
+first Edit() method</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>As you have learned, we <u>ALWAYS
+use two methods for “add new”, “edit existing”, and “delete item”</u>&nbsp;in
+ASP.NET MVC web apps.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The first method responds to
+HTTP <b>GET</b>. Its job is <u>to prepare the data that’s needed for an HTML
+Form</u>, and pass the data to the view, which appears in the user’s browser.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The other method responds to
+HTTP <b>POST</b>, when the user <u>submits the HTML Form</u>. Its job is <u>to
+validate the incoming data, process it, and handle the result</u>.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-family:"Arial",sans-serif'>First Edit() method,
+for HTTP GET</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Its job is to prepare the data
+that’s needed for an HTML Form, and pass the data to the view, which appears in
+the user’s browser.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>What data do we need for the
+form? Enough to enable the browser user to know the context or environment for
+the work to be done, and the editable properties.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Notice the signature of the
+scaffolded Edit() method. It has an int argument, for the object identifier.
+Similar to the scaffolded Details() method.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>This is a best practice – we
+must get a reference to the object-to-be-edited, and the most reliable
+reference is its unique identifier. You may have noticed that the scaffolder
+for the “List” and “Details” views automatically creates an “Edit” link that
+includes the unique identifier in the URL.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>To continue, we will use the
+passed-in object identifier, and fetch the desired object.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>If not found, return “not
+found”.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Otherwise, create a view model
+object that will be used in the view to create the HTML Form. Above, we created
+the <b>CustomerEditContactInfoForm</b> view model class. We will map the source
+<b>CustomerBase </b>object to this new “form” object.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Then, pass it to the view.</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'><code><span style='line-height:107%;
+font-family:"Lucida Console";color:#00B050'>// GET: Customers/Edit/5</span></code></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'><code><span style='line-height:107%;
+font-family:"Lucida Console";color:#002060'>public</span></code><span
+style='font-size:12.0pt;line-height:107%;font-family:"Lucida Console";
+color:#002060'> </span><code><span style='line-height:107%;font-family:"Lucida Console"'>ActionResult
+Edit(<span style='color:#002060'>int?</span> id)</span></code></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'><code><span style='line-height:107%;
+font-family:"Lucida Console"'>{</span></code></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'><code><span style='line-height:107%;
+font-family:"Lucida Console"'>&nbsp;&nbsp;<span style='color:#00B050'>//
+Attempt to fetch the matching object</span></span></code></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'><code><span style='line-height:107%;
+font-family:"Lucida Console"'>&nbsp;&nbsp;<span style='color:#002060'>var</span></span></code><span
+style='font-size:12.0pt;line-height:107%;font-family:"Lucida Console"'> </span><code><span
+style='line-height:107%;font-family:"Lucida Console"'>o =
+m.CustomerGetById(id.GetValueOrDefault());</span></code></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'><span style='font-size:12.0pt;
+line-height:107%;font-family:"Lucida Console"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'><code><span style='line-height:107%;
+font-family:"Lucida Console"'>&nbsp;&nbsp;<span style='color:#002060'>if</span></span></code><span
+style='font-size:12.0pt;line-height:107%;font-family:"Lucida Console"'> </span><code><span
+style='line-height:107%;font-family:"Lucida Console"'>(o == <span
+style='color:#002060'>null</span>)</span></code></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'><code><span style='line-height:107%;
+font-family:"Lucida Console"'>&nbsp;&nbsp;{</span></code></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'><code><span style='line-height:107%;
+font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;<span style='color:#002060'>return</span></span></code><span
+style='font-size:12.0pt;line-height:107%;font-family:"Lucida Console"'> </span><code><span
+style='line-height:107%;font-family:"Lucida Console"'>HttpNotFound();</span></code></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'><code><span style='line-height:107%;
+font-family:"Lucida Console"'>&nbsp;&nbsp;}</span></code></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'><code><span style='line-height:107%;
+font-family:"Lucida Console"'>&nbsp;&nbsp;<span style='color:#002060'>else</span></span></code></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'><code><span style='line-height:107%;
+font-family:"Lucida Console"'>&nbsp;&nbsp;{</span></code></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'><code><span style='line-height:107%;
+font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;<span style='color:#00B050'>//
+Create and configure an &quot;edit form&quot;</span></span></code></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'><code><span style='line-height:107%;
+font-family:"Lucida Console";color:#00B050'>&nbsp;</span></code></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'><code><span style='line-height:107%;
+font-family:"Lucida Console";color:#00B050'>&nbsp;&nbsp;&nbsp;&nbsp;// Notice
+that o is a CustomerBase object</span></code></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'><code><span style='line-height:107%;
+font-family:"Lucida Console";color:#00B050'>&nbsp;&nbsp;&nbsp;&nbsp;// We must
+map it to a CustomerEditContactInfoForm object</span></code></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'><code><span style='line-height:107%;
+font-family:"Lucida Console";color:#00B050'>&nbsp;&nbsp;&nbsp;&nbsp;// Notice
+that we can use AutoMapper anywhere,</span></code></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'><code><span style='line-height:107%;
+font-family:"Lucida Console";color:#00B050'>&nbsp;&nbsp;&nbsp;&nbsp;// and not
+just in the Manager class!</span></code></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'><code><span style='line-height:107%;
+font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;<span style='color:#002060'>var</span></span></code><span
+style='font-size:12.0pt;line-height:107%;font-family:"Lucida Console"'> </span><code><span
+style='line-height:107%;font-family:"Lucida Console"'>editForm = m.mapper.Map&lt;<span
+style='color:#0070C0'>CustomerBase</span>, <span style='color:#0070C0'>CustomerEditContactInfoForm</span>&gt;(o);</span></code></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'><span style='font-size:12.0pt;
+line-height:107%;font-family:"Lucida Console"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'><code><span style='line-height:107%;
+font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;<span style='color:#002060'>return</span></span></code><span
+style='font-size:12.0pt;line-height:107%;font-family:"Lucida Console"'> </span><code><span
+style='line-height:107%;font-family:"Lucida Console"'>View(editForm);</span></code></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'><code><span style='line-height:107%;
+font-family:"Lucida Console"'>&nbsp;&nbsp;}</span></code></p>
+
+<p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;
+margin-bottom:.0001pt'><code><span style='font-size:11.0pt;font-family:"Lucida Console"'>}</span></code></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Create an “edit existing” view,
+using the scaffolder</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Create the “edit existing”
+view. Complete the dialog as shown below:</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'><img border=0 width=720
+height=439 id="Picture 8" src="INT422-Lecture3_files/image006.jpg"
+alt=view-edit-contact-info-form></span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Before testing, you may have to
+fix the two existing customer views – list and details. Why? We may have removed
+(or commented out) the “Edit” links on those views. The code example commented
+out the list view’s “Edit” and “Delete” links:</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'><img border=0 width=594
+height=82 id="Picture 7" src="INT422-Lecture3_files/image007.png"
+alt=list-view-link-to-edit-1></span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Un-comment (or re-enter if you
+deleted) the “Edit link:</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'><img border=0 width=594
+height=82 id="Picture 6" src="INT422-Lecture3_files/image008.png"
+alt=list-view-link-to-edit-2></span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>In the controller, modify the
+other Edit() method, to call<br>
+the manager “edit existing” method, and handle the result</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The&nbsp;job of this method is
+to validate the incoming data, process it, and handle the result.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>As we did for the Create()
+method that handled HTTP POST, we will change the FormCollection argument, so
+that we can take advantage of strong typing, and therefore model binding and
+validation.</span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console";color:#002060'>public</span></code><span
+style='font-size:12.0pt;line-height:107%;font-family:"Lucida Console";
+color:#002060'> </span><code><span style='line-height:107%;font-family:"Lucida Console"'>ActionResult
+Edit(<span style='color:#002060'>int?</span> id, <span style='color:#0070C0'>CustomerEditContactInfo
+</span>newItem)</span></code></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Next,&nbsp;we must do two data
+integrity checks, in sequence:</span></p>
+
+<ol start=1 type=1>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Model binding and validation</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Data tampering</span></li>
+</ol>
+
+<p><span style='font-family:"Arial",sans-serif'>The first check is done with
+the same kind of logic that was used in the “add new” situation. Simply check
+whether model state is valid.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>If this test fails, then we
+must display the HTML Form again. To keep the code simple, and the concept
+clear, we will simply re-display the HTML Form. Later, we will learn a better
+and more complete way of handling this situation.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The second check compares the
+identifier in the URL, and checks whether it matches the identifier that’s
+inside the package of data that was sent&nbsp;by the browser user.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>If this test fails, then the
+data (sent by the browser user) was tampered with, so we should redirect, to
+the list-of-customers view.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>When
+both tests pass</span></strong><strong><span style='font-family:"Arial",sans-serif'>…</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>If both tests pass, then we can
+attempt to do the update. Call the method in the manager object.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>If that returns null, then
+there was a problem with the data, so our initial approach (like above) will be
+to simply re-display the HTML Form. Later, we will learn a better and more
+comlete way of handling this situation.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Alternatively, if the update
+succeeds, then we should redirect to the “Details” view, so that the user can
+see and visually confirm that the edit was done correctly.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Here’s the code for the method:</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console";color:#00B050'>// POST: Customers/Edit/5</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>[HttpPost]</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console";color:#002060'>public</span><span
+style='font-size:14.0pt;font-family:"Lucida Console";color:#002060'> </span><span
+style='font-family:"Lucida Console"'>ActionResult Edit(<span style='color:#002060'>int?</span>
+id, CustomerEditContactInfo newItem)</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>{</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;<span style='color:#00B050'>//
+Validate the input</span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;<span style='color:#002060'>if</span></span><span
+style='font-size:14.0pt;font-family:"Lucida Console"'> </span><span
+style='font-family:"Lucida Console"'>(!ModelState.IsValid)</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;{</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;<span
+style='color:#00B050'>// Our &quot;version 1&quot; approach is to display the
+&quot;edit form&quot; again</span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;<span
+style='color:#002060'>return</span></span><span style='font-size:14.0pt;
+font-family:"Lucida Console"'> </span><span style='font-family:"Lucida Console"'>RedirectToAction(&quot;edit&quot;,
+<span style='color:#002060'>new</span></span><span style='font-size:14.0pt;
+font-family:"Lucida Console"'> </span><span style='font-family:"Lucida Console"'>{
+id = newItem.CustomerId });</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;}</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:14.0pt;font-family:"Lucida Console"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;<span style='color:#002060'>if</span></span><span
+style='font-size:14.0pt;font-family:"Lucida Console"'> </span><span
+style='font-family:"Lucida Console"'>(id.GetValueOrDefault() !=
+newItem.CustomerId)</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;{</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;<span
+style='color:#00B050'>// This appears to be data tampering, so redirect the
+user away</span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;<span
+style='color:#002060'>return</span></span><span style='font-size:14.0pt;
+font-family:"Lucida Console"'> </span><span style='font-family:"Lucida Console"'>RedirectToAction(&quot;index&quot;);</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;}</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:14.0pt;font-family:"Lucida Console"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;<span style='color:#00B050'>//
+Attempt to do the update</span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;<span style='color:#002060'>var</span></span><span
+style='font-size:14.0pt;font-family:"Lucida Console"'> </span><span
+style='font-family:"Lucida Console"'>editedItem =
+m.CustomerEditContactInfo(newItem);</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:14.0pt;font-family:"Lucida Console"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;<span style='color:#002060'>if</span></span><span
+style='font-size:14.0pt;font-family:"Lucida Console"'> </span><span
+style='font-family:"Lucida Console"'>(editedItem == <span style='color:#002060'>null</span>)</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;{</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;<span
+style='color:#00B050'>// There was a problem updating the object</span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console";color:#00B050'>&nbsp;&nbsp;&nbsp;&nbsp;//
+Our &quot;version 1&quot; approach is to display the &quot;edit form&quot;
+again</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;<span
+style='color:#002060'>return</span></span><span style='font-size:14.0pt;
+font-family:"Lucida Console"'> </span><span style='font-family:"Lucida Console"'>RedirectToAction(&quot;edit&quot;,
+<span style='color:#002060'>new</span></span><span style='font-size:14.0pt;
+font-family:"Lucida Console"'> </span><span style='font-family:"Lucida Console"'>{
+<span style='color:#002060'>id</span> = newItem.CustomerId });</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;}</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;else</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;{</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;<span
+style='color:#00B050'>// Show the details view, which will show the updated
+data</span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;<span
+style='color:#002060'>return</span></span><span style='font-size:14.0pt;
+font-family:"Lucida Console"'> </span><span style='font-family:"Lucida Console"'>RedirectToAction(&quot;details&quot;,
+<span style='color:#002060'>new</span></span><span style='font-size:14.0pt;
+font-family:"Lucida Console"'> </span><span style='font-family:"Lucida Console"'>{
+id = newItem.CustomerId });</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;}</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>}</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Adding more functionality –
+“delete existing”</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Like “add new” and “edit
+existing”, this pattern is implemented with two controller methods, and one
+manager method. The code example continues to use the </span><em><span
+style='font-family:"Arial",sans-serif'>customer</span></em><span
+style='font-family:"Arial",sans-serif'> entity.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>For this use case, we must
+deliver an HTML Form to the browser user.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The HTML Form will show the
+browser user some information about the item-to-be-deleted, and give them an
+opportunity to confirm the delete request (or navigate away).</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>If the user confirms the delete
+intention, then we must accept the posted data, and process it.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>To preview our work, the
+controller method will call a manager method, which does the
+delete-item&nbsp;work.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>There are several tasks in the
+work plan. Here’s a list. Details follow.</span></p>
+
+<ol start=1 type=1>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>In the Manager, create an “delete item”
+     method</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>In the controller, modify the first Delete()
+     method</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Create an “delete item” view, using the
+     scaffolder</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>In the controller, modify the other
+     Delete() method, to call the manager “delete item” method, and handle the
+     result</span></li>
+</ol>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>In the Manager, create an “delete
+item” method</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>This will be a simple method.
+It needs an argument – the object identifier.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Should it return a result?
+That’s debateable. In this course, we will use a bool return result. The value
+“true” will mean that yes, the item was deleted.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The method’s logic is
+straightforward. First, attempt to fetch the item to be deleted.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>If not found, return false.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Otherwise, call the Remove()
+method on the collection, and then SaveChanges(). Return “true” from the
+method. Here’s the method’s code:</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console";color:#002060'>public</span><span
+style='font-size:14.0pt;font-family:"Lucida Console";color:#002060'> </span><span
+style='font-family:"Lucida Console";color:#002060'>bool</span><span
+style='font-size:14.0pt;font-family:"Lucida Console"'> </span><span
+style='font-family:"Lucida Console"'>CustomerDelete(<span style='color:#002060'>int</span></span><span
+style='font-size:14.0pt;font-family:"Lucida Console"'> </span><span
+style='font-family:"Lucida Console"'>id)</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>{</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;<span style='color:#00B050'>//
+Attempt to fetch the object to be deleted</span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;<span style='color:#002060'>var</span></span><span
+style='font-size:14.0pt;font-family:"Lucida Console"'> </span><span
+style='font-family:"Lucida Console"'>itemToDelete = ds.Customers.Find(id);</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:14.0pt;font-family:"Lucida Console"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;<span style='color:#002060'>if</span></span><span
+style='font-size:14.0pt;font-family:"Lucida Console"'> </span><span
+style='font-family:"Lucida Console"'>(itemToDelete == <span style='color:#002060'>null</span>)</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;{</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;<span
+style='color:#002060'>return</span></span><span style='font-size:14.0pt;
+font-family:"Lucida Console"'> </span><span style='font-family:"Lucida Console";
+color:#002060'>false</span><span style='font-family:"Lucida Console"'>;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;}</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;<span style='color:#002060'>else</span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;{</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;<span
+style='color:#00B050'>// Remove the object</span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;ds.Customers.Remove(itemToDelete);</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;ds.SaveChanges();</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:14.0pt;font-family:"Lucida Console"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;<span
+style='color:#002060'>return</span></span><span style='font-size:14.0pt;
+font-family:"Lucida Console"'> </span><span style='font-family:"Lucida Console";
+color:#002060'>true</span><span style='font-family:"Lucida Console"'>;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;}</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>}</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>In the controller, modify the
+first Delete() method</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>As you have learned, we ALWAYS
+use two methods for “add new”, “edit existing”, and “delete item”&nbsp;in
+ASP.NET MVC web apps.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The first method responds to
+HTTP GET. Its job is to prepare the data that’s needed for an HTML Form, and
+pass the data to the view, which appears in the user’s browser.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The other method responds to
+HTTP POST, when the user submits the HTML Form. Its job is to validate the
+incoming data, process it, and handle the result.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>First
+Delete() method, for HTTP GET</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Its job is to prepare the data
+that’s needed for an HTML Form, and pass the data to the view, which appears in
+the user’s browser.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>What data do we need for the
+form? Enough to enable the browser user to know the context or environment for
+the work to be done.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Notice the signature of the
+scaffolded Delete() method. It has an int argument, for the object identifier.
+Similar to the scaffolded Details() method.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>This is a best practice – we
+must get a reference to the object-to-be-deleted, and the most reliable
+reference is its unique identifier. You may have noticed that the scaffolder
+for the “List” view automatically creates an “Delete” link that includes the
+unique identifier in the URL.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>To continue, we will use the
+passed-in object identifier, and fetch the desired object.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>If not found, redirect back to
+the list. Why? We don’t want to give the browser user information&nbsp;that
+would enable them to “guess” which objects exist, and which do not.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Otherwise, we can pass the
+fetched CustomerBase object to the view.</span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='line-height:107%;
+font-family:"Lucida Console";color:#00B050'>// GET: Customers/Delete/5</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console";color:#002060'>public</span><span
+style='font-size:14.0pt;font-family:"Lucida Console"'> </span><span
+style='font-family:"Lucida Console"'>ActionResult Delete(<span
+style='color:#002060'>int? </span>id)</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>{</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;<span style='color:#002060'>var</span></span><span
+style='font-size:14.0pt;font-family:"Lucida Console"'> </span><span
+style='font-family:"Lucida Console"'>itemToDelete =
+m.CustomerGetById(id.GetValueOrDefault());</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:14.0pt;font-family:"Lucida Console"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;<span style='color:#002060'>if</span></span><span
+style='font-size:14.0pt;font-family:"Lucida Console"'> </span><span
+style='font-family:"Lucida Console"'>(itemToDelete == <span style='color:#002060'>null</span>)</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;{</span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='line-height:107%;
+font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;<span style='color:#00B050'>//
+Don't leak info about the delete attempt</span></span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='line-height:107%;
+font-family:"Lucida Console";color:#00B050'>&nbsp;&nbsp;&nbsp;&nbsp;// Simply
+redirect</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;<span
+style='color:#002060'>return</span></span><span style='font-size:14.0pt;
+font-family:"Lucida Console"'> </span><span style='font-family:"Lucida Console"'>RedirectToAction(&quot;index&quot;);</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;}</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;<span style='color:#002060'>else</span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;{</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;<span
+style='color:#002060'>return</span></span><span style='font-size:14.0pt;
+font-family:"Lucida Console"'> </span><span style='font-family:"Lucida Console"'>View(itemToDelete);</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;}</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>}</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Create an “delete item” view,
+using the scaffolder</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Create the “delete item” view.
+Complete the dialog as shown below:</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'><img border=0 width=720
+height=439 id="Picture 5" src="INT422-Lecture3_files/image009.jpg"
+alt=view-delete></span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Before testing, you may have to
+fix the existing list-of-customers&nbsp;view.&nbsp;Why? We may have removed (or
+commented out) the “Delete” links on that view.</span></p>
+
+<p><a
+href="https://scs.senecac.on.ca/~wei.song/int422/lectures/images/L3-delete-form.png"><span
+style='color:windowtext;text-decoration:none'><img border=0 width=720
+height=331 id="Picture 17" src="INT422-Lecture3_files/image010.png"></span></a></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<h4><span style='font-size:16.0pt;font-family:"Arial",sans-serif;color:#002060'>In
+the controller, modify the other Delete() method,<br>
+to call the manager “delete item” method, and handle the result</span></h4>
+
+<p><span style='font-family:"Arial",sans-serif'>The&nbsp;job of this method is
+to validate the incoming data, process it, and handle the result.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The incoming data package is
+effectively empty. We don’t need any data from the user to handle a delete
+request. The object identifier is in the URL. Confirm this by studying the view
+and the rendered HTML Form.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The controller method will call
+the manager method, and pass the object identifier as the argument.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Effectively, we don’t care what
+the return result is – true or false – because the result will not trigger any
+further processing. At the end, we will just redirect to the list-of-customers.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The method code:</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console";color:#00B050'>// POST: Customers/Delete/5</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>[<span style='color:#002060'>HttpPost</span>]</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console";color:#002060'>public</span><span
+style='font-size:14.0pt;font-family:"Lucida Console"'> </span><span
+style='font-family:"Lucida Console"'>ActionResult Delete(<span
+style='color:#002060'>int?</span> id, <span style='color:#0070C0'>FormCollection
+</span>collection)</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>{</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;<span style='color:#002060'>var</span></span><span
+style='font-size:14.0pt;font-family:"Lucida Console";color:#002060'> </span><span
+style='font-family:"Lucida Console"'>result =
+m.CustomerDelete(id.GetValueOrDefault());</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:14.0pt;font-family:"Lucida Console"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console";color:#00B050'>&nbsp;&nbsp;//
+&quot;result&quot; will be true or false</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console";color:#00B050'>&nbsp;&nbsp;// We probably
+won't do much with the result, because</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console";color:#00B050'>&nbsp;&nbsp;// we don't want
+to leak info about the delete attempt</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console";color:#00B050'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console";color:#00B050'>&nbsp;&nbsp;// In the end,
+we should just redirect to the list view</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;<span style='color:#002060'>return</span></span><span
+style='font-size:14.0pt;font-family:"Lucida Console"'> </span><span
+style='font-family:"Lucida Console"'>RedirectToAction(&quot;index&quot;);</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>}</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<h4><span style='font-size:16.0pt;font-family:"Arial",sans-serif;color:#002060'>Data
+annotations overview</span></h4>
+
+<p><em><span style='font-family:"Arial",sans-serif'>Data annotations</span></em><span
+style='font-family:"Arial",sans-serif'> are descriptive text attributes that we
+add to properties in a class.&nbsp;A data annotation is located just
+before/above the property declaration.</span></p>
+
+<p style='margin-top:5.0pt;margin-right:0in;margin-bottom:0in;margin-left:.5in;
+margin-bottom:.0001pt'><span style='font-size:18.0pt;font-family:"Segoe UI Symbol",sans-serif;
+color:#0070C0'>&#10077;</span><span style='font-family:"Arial",sans-serif'>Textbook
+coverage:&nbsp;Chapter 6.</span></p>
+
+<p style='margin-top:0in;margin-right:0in;margin-bottom:5.0pt;margin-left:.5in'><span
+style='font-family:"Arial",sans-serif'>You can skim the section titled “CUSTOM
+VALIDATION LOGIC”.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Data annotations can help with:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>property constraint and limits</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>input data validation</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>property display and formatting in views</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>communicating error messages to users</span></li>
+</ul>
+
+<p><span style='font-family:"Arial",sans-serif'>Some data annotations are
+intended only for </span><em><span style='font-family:"Arial",sans-serif'>design
+model classes</span></em><span style='font-family:"Arial",sans-serif'>, while
+others are for use with&nbsp;</span><em><span style='font-family:"Arial",sans-serif'>view
+model classes</span></em><span style='font-family:"Arial",sans-serif'>. And,
+some work with both.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Their overall benefit is to
+reduce the amount of code that has to be written to handle typical data
+management scenarios.</span></p>
+
+<p style='margin-left:.5in'><span style='font-size:18.0pt;font-family:"Segoe UI Symbol",sans-serif;
+color:#0070C0'>&#10077;</span><span style='font-family:"Arial",sans-serif'>Please
+note that data annotations DO NOT replace the need to validate data against
+business rules and/or application logic. You still need to do that. Data
+annotations help most by improving the quality of input data, so that it can
+then be inspected for its integrity and appropriateness.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Open the “DataAnnotations” code
+example, and study it as you go through this topic. We will also build some
+examples in class.</span></p>
+
+<p style='margin-left:.5in'><span style='font-size:18.0pt;font-family:"Segoe UI Symbol",sans-serif;
+color:#0070C0'>&#10077;</span><span style='font-family:"Arial",sans-serif'>Note:
+The Google&nbsp;Chrome browser does a good job of rendering the &lt;input&gt;
+fields. Some IE and Firefox versions do not offer the same support, unless you
+use a </span><a href="http://en.wikipedia.org/wiki/Polyfill" target="_blank"><span
+style='font-family:"Arial",sans-serif'>polyfill</span></a><span
+style='font-family:"Arial",sans-serif'>.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>.</span></p>
+
+<h4><span style='font-size:16.0pt;font-family:"Arial",sans-serif;color:#002060'>Data
+annotations for <span style='background:yellow'>design model</span> classes</span></h4>
+
+<p><span style='font-family:"Arial",sans-serif'>In your </span><em><span
+style='font-family:"Arial",sans-serif'>design model classes</span></em><span
+style='font-family:"Arial",sans-serif'> source code file, add a </span><em><span
+style='font-family:"Arial",sans-serif'>using</span></em><span style='font-family:
+"Arial",sans-serif'> directive for this namespace:</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console";color:#002060'>using</span><span
+style='font-size:14.0pt;font-family:"Lucida Console";color:#002060'> </span><span
+style='font-family:"Lucida Console"'>System.ComponentModel.DataAnnotations;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Useful data annotations for
+design model classes include:</span></p>
+
+<p><strong><span style='font-family:"Arial",sans-serif'>[Required]</span></strong><span
+style='font-family:"Arial",sans-serif'>&nbsp;</span><em><span style='font-family:
+"Arial",sans-serif'>(implemented as NOT NULL in the database, for data and for
+relations)</span></em></p>
+
+<p><strong><span style='font-family:"Arial",sans-serif'>[StringLength(n)]</span></strong><span
+style='font-family:"Arial",sans-serif'>&nbsp;</span><em><span style='font-family:
+"Arial",sans-serif'>(implemented as a specific varchar/nvarchar value in the
+database)</span></em></p>
+
+<p><span style='font-family:"Arial",sans-serif'>There are few others that you
+may use occasionally. One of them:</span></p>
+
+<p><strong><span style='font-family:"Arial",sans-serif'>[Key]</span></strong><span
+style='font-family:"Arial",sans-serif'> </span><em><span style='font-family:
+"Arial",sans-serif'>(use this if the primary key is something other than Id or
+&lt;entity-name&gt;Id)&nbsp;</span></em></p>
+
+<p><span style='font-family:"Arial",sans-serif'>You can comma-separate multiple
+data annotations.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In design model classes, </span><em><span
+style='font-family:"Arial",sans-serif'>value types</span></em><span
+style='font-family:"Arial",sans-serif'> (e.g. int, double)&nbsp;</span><em><span
+style='font-family:"Arial",sans-serif'>CANNOT</span></em><span
+style='font-family:"Arial",sans-serif'>&nbsp;use the [Required] attribute.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Do you need a </span><em><span
+style='font-family:"Arial",sans-serif'>default value</span></em><span
+style='font-family:"Arial",sans-serif'> for a property?&nbsp;A data annotation
+will not help.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Instead, as you have learned,
+simply create a class constructor, and set the property’s default value there.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>.</span></p>
+
+<h4><span style='font-size:16.0pt;font-family:"Arial",sans-serif;color:#002060'>Data
+annotations for <span style='background:yellow'>view model</span> classes</span></h4>
+
+<p><span style='font-family:"Arial",sans-serif'>In your </span><em><span
+style='font-family:"Arial",sans-serif'>view model classes</span></em><span
+style='font-family:"Arial",sans-serif'> source code files, add a </span><em><span
+style='font-family:"Arial",sans-serif'>using</span></em><span style='font-family:
+"Arial",sans-serif'> directive for this namespace:</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console";color:#002060'>using</span><span
+style='font-size:14.0pt;font-family:"Lucida Console";color:#002060'> </span><span
+style='font-family:"Lucida Console"'>System.ComponentModel.DataAnnotations;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Useful data annotations for
+view&nbsp;model classes include:</span></p>
+
+<p><strong><span style='font-family:"Arial",sans-serif'>[Required]</span></strong><em><span
+style='font-family:"Arial",sans-serif'> (same reason as above)&nbsp;</span></em></p>
+
+<p><strong><span style='font-family:"Arial",sans-serif'>[StringLength(n)]</span></strong><span
+style='font-family:"Arial",sans-serif'>&nbsp;or&nbsp;<strong><span
+style='font-family:"Arial",sans-serif'>[StringLength(n, MinimumLength = m)]</span></strong>
+</span><em><span style='font-family:"Arial",sans-serif'>(ditto above)</span></em></p>
+
+<p><strong><span style='font-family:"Arial",sans-serif'>[Key]</span></strong><span
+style='font-family:"Arial",sans-serif'> </span><em><span style='font-family:
+"Arial",sans-serif'>(ditto above)</span></em></p>
+
+<p><strong><span style='font-family:"Arial",sans-serif'>[Range(min, max)]</span></strong><span
+style='font-family:"Arial",sans-serif'>&nbsp;</span><em><span style='font-family:
+"Arial",sans-serif'>(int or double types)&nbsp;</span></em></p>
+
+<p><strong><span style='font-family:"Arial",sans-serif'>[Display(Name=”Improved
+property display name”)]</span></strong><span style='font-family:"Arial",sans-serif'>&nbsp;</span><em><span
+style='font-family:"Arial",sans-serif'>&nbsp;</span></em></p>
+
+<p><strong><span style='font-family:"Arial",sans-serif'>[DataType(DataType.Password)]</span></strong><span
+style='font-family:"Arial",sans-serif'> </span><em><span style='font-family:
+"Arial",sans-serif'>(others include EmailAddress, Url, Currency, Date, Time,
+and MultilineText)</span></em></p>
+
+<p><strong><span style='font-family:"Arial",sans-serif'>[RegularExpression(“</span></strong><em><b><span
+style='font-family:"Arial",sans-serif'>regex”</span></b></em><strong><span
+style='font-family:"Arial",sans-serif'>)]</span></strong><span
+style='font-family:"Arial",sans-serif'>&nbsp;</span><em><span style='font-family:
+"Arial",sans-serif'>(a regular expression; omit the ^ and $ delimiters, because
+they’re assumed)</span></em></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In a regular expression,
+sometimes you need the backslash character (e.g. \d). In a .NET Framework
+string, the backslash is a quote character. So, you either precede the entire
+string with an at sign (@), or use a double backslash (\\d).</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Common situations:</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>[0-9]+ – digits only<br>
+[a-zA-Z]+ – letters only<br>
+[0-9a-zA-Z]+ – digits and letters only</span></p>
+
+<p><strong><span style='font-family:"Arial",sans-serif'>[Compare(“PropertyName”)]</span></strong><span
+style='font-family:"Arial",sans-serif'> </span><em><span style='font-family:
+"Arial",sans-serif'>(often used for password entry; compares this field’s value
+with the value in PropertyName)</span></em></p>
+
+<p><strong><span style='font-family:"Arial",sans-serif'>[HiddenInput]</span></strong><span
+style='font-family:"Arial",sans-serif'> </span><em><span style='font-family:
+"Arial",sans-serif'>(rendered as &lt;input type=hidden…, often used for an
+object’s identifier that will not be shown to the browser user)</span></em></p>
+
+<p><strong><span style='font-family:"Arial",sans-serif'>[Editable(false)]</span></strong><span
+style='font-family:"Arial",sans-serif'> </span><em><span style='font-family:
+"Arial",sans-serif'>(not rendered)</span></em></p>
+
+<p><strong><span style='font-family:"Arial",sans-serif'>[ReadOnly(true)]</span></strong><span
+style='font-family:"Arial",sans-serif'> </span><em><span style='font-family:
+"Arial",sans-serif'>(not rendered)&nbsp;(in System.ComponentModel namespace)</span></em></p>
+
+<p><strong><span style='font-family:"Arial",sans-serif'>[ScaffoldColumn(false)]</span></strong><span
+style='font-family:"Arial",sans-serif'> </span><em><span style='font-family:
+"Arial",sans-serif'>(not rendered)</span></em></p>
+
+<p><span style='font-family:"Arial",sans-serif'>As before, you can
+comma-separate multiple data annotations.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In view model classes, </span><em><span
+style='font-family:"Arial",sans-serif'>value types</span></em><span
+style='font-family:"Arial",sans-serif'> (e.g. int, double)&nbsp;</span><em><span
+style='font-family:"Arial",sans-serif'>CANNOT</span></em><span
+style='font-family:"Arial",sans-serif'>&nbsp;use the [Required] attribute, but
+the [Range(min, max)] attribute effectively solves that problem.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>.</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>Custom
+error messages</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>All attributes accept a
+parameter named “ErrorMessage”. The value is a custom error message for the
+user. For example:</span></p>
+
+<p><strong><span style='font-family:"Arial",sans-serif'>[Range(2, 6,
+ErrorMessage=”Selected gizmos must range from 2 to 6&#8243;)]</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<h4><span style='font-size:16.0pt;font-family:"Arial",sans-serif;color:#002060'>LINQ
+(language-integrated query)</span></h4>
+
+<p><span style='font-family:"Arial",sans-serif'>LINQ – <u>L</u>anguage <u>IN</u>tegrated
+<u>Q</u>uery – is a C# language feature that supports in-language operations
+on&nbsp;data collections which are located in memory.&nbsp;The operations
+include the full range of query, add, change, and remove.</span></p>
+
+<p style='margin-left:.5in'><span style='font-size:18.0pt;font-family:"Segoe UI Symbol",sans-serif;
+color:#0070C0'>&#10077;</span><span style='font-family:"Arial",sans-serif'>This
+is super important:</span></p>
+
+<p style='margin-left:.5in'><span style='font-family:"Arial",sans-serif'>LINQ
+works with data <strong><span style='font-family:"Arial",sans-serif;color:red'>collections</span></strong>
+which are located <strong><span style='font-family:"Arial",sans-serif;
+color:blue'>in memory</span></strong>.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In our web apps, we most often
+use the </span><em><span style='font-family:"Arial",sans-serif'>query</span></em><span
+style='font-family:"Arial",sans-serif'> operation. We use LINQ for:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>locating/selecting <u>one item</u> (e.g.
+     “find”, “single or default”)</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>filtering a collection to select <u>items which
+     match a condition</u> (e.g. “where”)</span></li>
+ <li class=MsoNormal style='line-height:normal'><u><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>sorting</span></u><span style='font-size:
+     12.0pt;font-family:"Arial",sans-serif'> (ordering) a collection (e.g.
+     “order by”)</span></li>
+</ul>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Open the “LINQIntroduction”
+code example, and study it as you go through this topic. We will also build
+some examples in class.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>Querying</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>When querying, we use a </span><em><span
+style='font-family:"Arial",sans-serif'>query expression</span></em><span
+style='font-family:"Arial",sans-serif'>. We can use&nbsp;either one of two
+syntax forms:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>standard</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>method-based (fluent) <span
+     style='color:red'>– preferred – all our code examples will use this syntax
+     form</span></span></li>
+</ul>
+
+<p><span style='font-family:"Arial",sans-serif'>.</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>“Standard”
+query expression syntax</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>For those familiar with
+relational database querying, the LINQ </span><em><span style='font-family:
+"Arial",sans-serif'>query expression</span></em><span style='font-family:"Arial",sans-serif'>
+syntax will appear familiar.&nbsp;A typical&nbsp;</span><em><span
+style='font-family:"Arial",sans-serif'>standard</span></em><span
+style='font-family:"Arial",sans-serif'>&nbsp;query expression consists of these
+parts:</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>from …<br>
+where …<br>
+orderby …<br>
+select …</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>So, a typical </span><em><span
+style='font-family:"Arial",sans-serif'>standard</span></em><span
+style='font-family:"Arial",sans-serif'>&nbsp;query expression looks like this:</span></p>
+
+<p><span style='font-family:"Arial",sans-serif;color:blue'><img border=0
+width=879 height=82 id="Picture 3" src="INT422-Lecture3_files/image011.png"
+alt="linq_query_expression"></span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In the “from” clause, “m” is
+known as a </span><em><span style='font-family:"Arial",sans-serif'>local range variable</span></em><span
+style='font-family:"Arial",sans-serif'>, which represents the items in the data
+source during the query. A local range variable can be one character, or it can
+be two or more characters.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>.</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>“Method-based”
+(fluent) query expression syntax</span></strong></p>
+
+<p><i><span style='font-family:"Arial",sans-serif'>Method-based</span></i><span
+style='font-family:"Arial",sans-serif'>&nbsp;(fluent) syntax uses methods, and
+method chains, to do the work. The example from above would look like this:</span></p>
+
+<p><span style='font-family:"Arial",sans-serif;color:blue'><img border=0
+width=948 height=28 id="Picture 2" src="INT422-Lecture3_files/image012.jpg"
+alt="linq_fluent"></span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>For readability, we can also
+use multiple lines, if you split your lines before the dot:</span></p>
+
+<p><span style='font-family:"Arial",sans-serif;color:blue'><img border=0
+width=889 height=61 id="Picture 1" src="INT422-Lecture3_files/image013.png"
+alt="linq_fluent_split"></span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Note that many of the methods
+require a code expression; which is a </span><em><span style='font-family:"Arial",sans-serif'>function</span></em><span
+style='font-family:"Arial",sans-serif'>. The function could extract, filter, or
+project – the developer decides its behaviour.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The function syntax is known as
+a&nbsp;</span><em><span style='font-family:"Arial",sans-serif'>lambda
+expression</span></em><span style='font-family:"Arial",sans-serif'>&nbsp;in C#.
+(It is often referred to as an&nbsp;</span><em><span style='font-family:"Arial",sans-serif'>inline
+method</span></em><span style='font-family:"Arial",sans-serif'>. More
+generically, it is known as an&nbsp;</span><em><span style='font-family:"Arial",sans-serif'>anonymous
+function</span></em><span style='font-family:"Arial",sans-serif'>.) The syntax
+below shows a lambda expression that returns an entity object that matches a
+specific condition:</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>c =&gt; c.CustomerID == 23</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The return type is inferred
+from the context in which it is used. In other words, if the lambda expression
+is used as an argument to a LINQ statement that is supposed to return an entity
+object, then the return type of the lambda expression above is the entity
+object type.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Anonymous functions can “see”
+the local variables in the surrounding methods. Repeating the example syntax
+above, assume that the method that surrounds the lambda expression includes a
+local variable named “custID”, and the variable held the value “23”. The new
+syntax would be:</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>c =&gt; c.CustomerID == custID</span></p>
+
+<p style='margin-left:.5in'><span style='font-size:18.0pt;font-family:"Segoe UI Symbol",sans-serif;
+color:#0070C0'>&#10077;</span><span style='font-family:"Arial",sans-serif'>Note
+that if there is already a local variable named “c” in the surrounding methods,
+you must use a different </span><em><span style='font-family:"Arial",sans-serif'>local
+range variable</span></em><span style='font-family:"Arial",sans-serif'>.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>How do you read or pronounce
+this syntax? As suggested by Hejlsberg and others (see&nbsp;</span><a
+href="http://stackoverflow.com/questions/274022/how-do-i-pronounce-as-used-in-lambda-expressions-in-net"
+target="_blank"><span style='font-family:"Arial",sans-serif'>this StackOverflow
+article</span></a><span style='font-family:"Arial",sans-serif'>), it can be
+read as any one of the following:</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>c&nbsp;<span style='color:red'>such
+that</span>&nbsp;c.CustomerID is equal to custID</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>c&nbsp;<span style='color:red'>becomes</span>&nbsp;(the
+result of) c.CustomerID equals custID</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>c&nbsp;<span style='color:red'>for
+which</span>&nbsp;c.CustomerID is equal to custID</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>c&nbsp;<span style='color:red'>maps
+to</span>&nbsp;c.CustomerID equals custID</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>c&nbsp;<span style='color:red'>lambda
+of</span>&nbsp;c.CustomerID is equal to custID</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>For more examples, study the
+“Getting started…” section of the LINQ article by Hejlsberg and Box (linked
+below).</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>To learn a bit more about LINQ,
+study this document:&nbsp;</span><a
+href="http://msdn.microsoft.com/en-us/library/bb308959.aspx" target="_blank"><span
+style='font-family:"Arial",sans-serif'>LINQ: .NET Language Integrated Query</span></a><span
+style='font-family:"Arial",sans-serif'>, by Anders Hejlsberg and Don Box</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Be sure to read at least these
+sections:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>.NET Language-Integrated Query</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Getting Started with Standard Query
+     Operators</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Lambda Expressions and Expression Trees</span></li>
+</ul>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>

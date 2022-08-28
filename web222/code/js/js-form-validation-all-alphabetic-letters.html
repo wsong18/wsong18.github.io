@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en"> 
+ <head>
+   <meta charset="UTF-8" />
+   <title>JS Validation</title>
+   <style> 
+      body { margin: 0 10%; }  
+	  form { border: 10px solid #00ff00; padding: 5px; } 
+	  #errors { color: red; }
+      .inputbox { 
+            background-color: #ffffff; 
+            border-top:    7px dashed #0000ff; 
+            border-bottom: 7px dashed #0000ff; 
+            border-left:   7px solid  #ff0000; 
+            border-right:  7px solid  #ff0000; 
+      }
+      .inputtext{
+            font-size: 14px; 
+            font-style:italic;
+            font-weight:bold;
+      }
+   </style>
+   <script>
+	  function formValidation() {
+	     clearerrors();
+         return validateSurname();
+      }
+	  
+      function validateSurname() {
+         var errors = document.querySelector("#errors");
+		 var allAlpha = true;
+         var elem = document.getElementById("client");
+		 var inputValue = elem.value.trim();
+		 if (inputValue.length == 0) {      /* check the length */
+			errors.innerHTML += "<p>* Name: No input or white space(s) only! Please enter a meaningful name with all Alphabet letter.</p>";
+			return false;
+		 }  
+		 inputValue = inputValue.toUpperCase();  
+		 for (var i = 0; i < inputValue.length; i++) {
+			  // check all character are letters
+			  if (inputValue.charAt(i) < "A" || inputValue.charAt(i) > "Z" )  { allAlpha = false; }
+		 }  // for
+		 if (!allAlpha){
+			errors.innerHTML += "<p>* Name: Please enter a meaningful name with all alphabet letters.</p>";
+			elem.focus();
+			return false;
+		 } /* else */
+		 return true; // passed for validation
+
+      }  //  End of function
+	  
+	  function clearerrors() {
+         document.querySelector("#errors").innerHTML = "";
+      }
+   </script>
+ </head>
+ <body>
+    <header></header>
+    <nav></nav>
+    <div id="content" style="font-family:monospace;font-size:14px;">
+	   <h1>JavaScript - Form Validation</h1>
+	   <h4><mark> - Validating Text Field</mark></h4>
+	   <h4><mark> - Rules:  </mark></h4>
+	   <ul>
+		 <li><mark> must present (not be blank or white space(s) only);</mark></li>
+		 <li><mark> all alphabetic letters </mark></li>
+	   </ul>
+	   <!-- Start of example -->
+	   <form id='example' name='form1' 
+			   method='post' 
+			   action='https://formpost.azurewebsites.net/home/test' 
+			   onsubmit='return formValidation();'><br>
+		  <p>
+			   <label title="Surname must contain at least one alphabetic letter ."
+					  for="client">Client Name</label> 
+			   <span class='inputbox'>
+				 <input class='inputtext' type='text' id='client' name='surname' required
+						size='20' value='' maxlength='15'/>
+			   </span>
+		  </p><br>
+		  <div id='errors'></div>
+		  <br>
+		  <p>
+			 <input type="submit" value="Submit Information" /> &nbsp;&nbsp;  
+			 <input type="reset"  value="    Clear   " onclick="clearerrors()"/>  
+		  </p> 
+	   </form>
+	   <!-- End of example -->
+    </div>
+ </body>
+</html>

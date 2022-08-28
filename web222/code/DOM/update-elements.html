@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+   <meta charset="UTF-8" />
+   <title>DOM - Update Element</title>
+   <style> 
+      body { margin: 0 18%; }
+   </style>
+   <script>
+		function byId() {
+			document.getElementById("demo").innerHTML = "Hello World";
+		}
+		
+		function byName()
+		{
+			var i, elems =document.getElementsByName("x");
+			for (i = 0; i < elems.length; i += 1) {
+			   // elems[i].type = "checkbox";
+			   elems[i].setAttribute('type', 'checkbox');
+			}
+		}
+		
+		function byQuerySelector() {
+			document.querySelector(".example").style.backgroundColor = "red";
+		}
+	</script>
+</head>
+<body>
+   <h1>HTML DOM - Updating Element</h1>
+   
+   <h3>using <mark>document.getElementById()</mark> function</h3>
+   <p id="demo">Click the button to change the text in this paragraph.</p>
+ 
+   <button onclick="byId()">Change Text!</button> 
+   <br><hr>
+   
+   <h3>using <mark>document.getElementsByName()</mark> function</h3>
+   Cats: <input name="x" type="radio" value="Cats">
+   Dogs: <input name="x" type="radio" value="Dogs">
+ 
+   <br><br>
+   <input type="button" onclick="byName()" value="Change Input Type!">
+   <br><hr>
+   
+   <h3>using <mark>document.querySelector()</mark> function</h3>
+	 <h4 class="example">A heading with class="example"</h4>
+	 <p class="example">A paragraph with class="example".</p> 
+ 
+	 <p>Click the button to add a background color to the first element in the document with class="example".</p>
+ 
+	 <button onclick="byQuerySelector()">Change Style (CSS)!</button>
+   <br><hr>
+   
+   <!-- for view-source and download -->
+   <br><p><a href='' download>Download</a></p>
+</body>
+
+</html>

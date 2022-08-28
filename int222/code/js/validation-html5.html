@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+   <meta charset="UTF-8" />
+   <title>HTML5</title>
+   <style> 
+      body { margin: 0 20%; }
+   </style>
+</head>
+<body>
+  <h1>Example - HTML5 Form Validation</h1>
+  <p><mark>Please move over and pause on labels and fields</mark></p>
+  <form id=form1 method=post 
+        action=https://formpost.azurewebsites.net/home/test>
+    <p>
+	  <label title="Characters only and minimum 4 characters."
+	         for=name >User Name:</label><br>
+	  <input type=text id=name name=username required pattern="^[a-zA-Z]{4,}$">
+	</p>
+	<p>
+	  <label title="Please follow the format showed."
+	         for=phone >Phone Number:</label><br>
+	  <input type=text id=phone name=phonenumber placeholder="###-###-####" 
+	         required pattern="^([0-9]{3}[-]){2}[0-9]{4}$" >
+	</p>
+	
+	
+	<div>		 
+      <label title="Please enter a date before 2000-01-01."
+	         for=birthday >Birthday:<br>
+	    <input type=date id=birthday name=birthday required max="2000-01-01" >
+	  </label>
+	</div>
+	<div>		 
+      <label title="Please enter the years(not more than 18) of education."
+	         for=edyears >Years of Education:<br>
+    	 <input type=number id=edyears name=edyears required min=0 max=18 value=10 >
+	  </label>
+	</div>
+			 
+    <p><input type="submit" value="Submit"/> &nbsp; &nbsp;
+	  <input type ="reset" value = " Clear "/> </p>
+  </form>
+  
+  <br>
+  <!-- for downloading source files -->
+  <p><a href="" Download>Download</a></p>
+</body>
+
+</html>

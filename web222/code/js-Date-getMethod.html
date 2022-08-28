@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>INT222</title>
+  </head>
+  <body>
+<blockquote>
+	 <h4>The JavaScript Date methods: getters</h4>
+	 <blockquote>
+<!-- Start of example -->
+             <script>
+               var myDate         = new Date();               // returns the date object
+               var myMonth        = myDate.getMonth();        // 0 through 11
+               var myDay          = myDate.getDate();         // 1 through 31
+               var myDayOfWeek    = myDate.getDay();          // 0 through 6 -  0 = Sunday
+               var myYear         = myDate.getFullYear();     // 4 digit year
+               var myHour         = myDate.getHours();        // 0 through 23
+               var myMinutes      = myDate.getMinutes();      // 0 through 59
+               var mySeconds      = myDate.getSeconds();      // 0 through 59
+               var myMillSec      = myDate.getMilliseconds(); // 0 through 999
+               var months = ["January",   "February", "March",    "April",
+                             "May",       "June",     "July",     "August",
+                             "September", "October",  "November", "December"];
+               var days   = ["Sunday",   "Monday", "Tuesday","Wednesday",
+                             "Thursday", "Friday", "Saturday"];
+             </script>
+             <p><mark> var myDate = new Date();</mark></p>
+             <p><mark> var myDay = myDate.getDate();</mark></p>
+             <script>
+               document.write("<p>The date is <mark> ", myDate, " </mark></p>");
+               document.write("<p>The Day is <mark> ", myDay, "</mark> </p>");
+             </script>
+             <p><mark>The getMonth() method returns 0 through 11</mark></p>
+			 <p><mark>The getDate() method returns 1 .... 31</mark></p>
+			 <p><mark>The getDay() method returns 0 through 6 -  0 = Sunday</mark></p>
+  
+<!-- End of example -->
+	  </blockquote>
+	  <hr />
+  </body>
+</html>

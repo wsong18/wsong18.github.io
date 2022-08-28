@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta charset="UTF-8" />
+  <title>INT222 - Canvas Test</title>
+  <script type="application/javascript">
+    window.onload = draw;
+    function draw() {
+      var canvas = document.getElementById("my-canvas");
+      if (canvas.getContext) {
+        var ctx = canvas.getContext("2d");
+
+        ctx.beginPath();
+		ctx.arc(75,75,50,0,Math.PI*2,true); // Outer circle
+		ctx.moveTo(110,75);
+		ctx.arc(75,75,35,0,Math.PI,false);   // Mouth (clockwise)
+		ctx.moveTo(65,65);
+		ctx.arc(60,65,5,0,Math.PI*2,true);  // Left eye
+		ctx.moveTo(95,65);
+		ctx.arc(90,65,5,0,Math.PI*2,true);  // Right eye
+		ctx.stroke();
+      }
+    }
+  </script>
+  <style> 
+      body { margin: 0 18%; }
+	  canvas { 
+	    border: 7px ridge #369; 
+	  } 
+  </style>
+</head>
+  <body>
+    <h1>INT222 - Canvas Test: arcs</h1>
+
+    <canvas id="my-canvas" width="150" height="150">[Canvas Area]</canvas>
+    <br>
+    <p><a href="view-source:">View-source</a>&nbsp;&nbsp;&nbsp;&nbsp;
+       <a href="" onclick="download=document.referrer">Download</a></p>
+  </body>
+</html>

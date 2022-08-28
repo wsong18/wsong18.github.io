@@ -1,0 +1,7 @@
+/* External Embedded CSS examples */
+h2 { color: red; text-align: center; text-decoration: underline; }
+p {
+   background-color: yellow; 
+   font-size: small;  
+   font-weight: bold;
+} 

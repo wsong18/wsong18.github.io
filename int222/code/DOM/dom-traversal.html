@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+   <meta charset="UTF-8" />
+   <title>INT222</title>
+   <style> 
+      body { margin: 0 18%; }
+   </style>
+   <script>
+    function sibling(){
+	  document.querySelector('h3').nextSibling.innerHTML="Welcome!!";
+	}
+	function parent(){
+	  document.querySelector('#inside').parentNode.innerHTML="HOHOHO!!";
+	}
+   </script>   
+</head>
+<body>
+  <!-- Whitespace inside elements is considered as text, and text is considered as nodes. -->
+  <h3>
+     Welcome!
+     <mark onclick="sibling()">Click here to change the nextSibling's text</mark>
+  </h3><p>This is the first paragraph.</p>
+  
+  <p>This is the second paragraph - 
+	<mark id="inside" onclick="parent()">Click here to change the text of the parent</mark> .
+  </p>
+  
+  
+  <!-- for view-source and download -->
+  <br><p><a href="view-source:">View-source</a>&nbsp;&nbsp;&nbsp;<a href='' download>Download</a></p>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+   <meta charset="UTF-8" />
+   <title>Internal JS</title>
+   <style> 
+      body { margin: 0 20%; }
+   </style>
+   
+   <script>
+       <!-- Using JavaScript in head -->
+	   function message()
+	   {
+		   alert("Hello!");
+	   }
+	</script>
+</head>
+<body>
+  <h1>INT222 - Internal JavaScript code</h1>
+
+  <p>Today's date is 
+    <span style='color:red; background: rgb(204,255,204)'>
+	   <!-- Using JavaScript in body --> 
+	   <script type='text/javascript'>
+		   today = new Date();
+		   document.write( today.toLocaleString() );
+	   </script>
+    </span>
+  </p>
+  
+  <br />
+  
+  <h3>Say Hello</h3>
+  <input type="button" id="hello" value="Say" onClick = "message();">
+  <hr>
+
+  <br>
+  <!-- for downloading source files -->
+  <p><a href="" Download>Download</a></p>
+</body>
+
+</html>

@@ -1,0 +1,509 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<title>Lec3-2</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Lucida Console";
+	panose-1:2 11 6 9 4 5 4 2 2 4;}
+@font-face
+	{font-family:"Segoe UI Symbol";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+h4
+	{mso-style-link:"Heading 4 Char";
+	margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:#954F72;
+	text-decoration:underline;}
+p
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+code
+	{font-family:"Courier New";}
+span.Heading4Char
+	{mso-style-name:"Heading 4 Char";
+	mso-style-link:"Heading 4";
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink="#954F72" background=bgw.gif>
+
+<div class=WordSection1 
+     style="margin: 0.5in auto; max-width: 50em; min-width: 30em;">
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:18.0pt;
+font-family:"Arial",sans-serif'>INT422 – Lecture 3-2</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Pattern wrap-up, get all, get
+one, add new, edit existing, delete item. Work with data annotations, and LINQ.
+Begin work on Assignment 3.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Code examples reminder</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>This week, we have three code
+examples:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>EditDelete</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>DataAnnotations</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>LINQIntroduction</span></li>
+</ul>
+
+<p><span style='font-family:"Arial",sans-serif'>Please remember to include them
+in your studying process. Open them in Visual Studio, and run them. Where
+appropriate, re-create them, or parts of them, on your own.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Pattern wrap-up and summary</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In the past two weeks, you have
+learned how to handle common interaction patterns – with a single data entity
+(object or collection) – by using best practice design and coding techniques.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The short-term&nbsp;goal was to
+introduce work habits that are repeatable, reliable, and efficient.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The medium-term goal is to
+prepare you to work with associated entities, which is a more real-world
+scenario.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The longer-term goal is to
+enable you to design and develop a great web app, which has some complexity,
+and can scale. Or a mobile app, because the patterns are similar.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Your teachers have prepared a
+fill-in worksheet that you can use to record these patterns, and then revise
+and use as a quick reference in the future. (It’s a Word document.) In class,
+we’ll get started on the exercise. </span></p>
+
+<p><span style='font-family:"Arial",sans-serif'><a
+href="https://scs.senecac.on.ca/~wei.song/int422/common/patterns-summary-single-entity.docx"
+target="_blank">Patterns summary – single entity</a></span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>You’re required <span
+style='background:yellow'>complete worksheet as a homework (2%)</span> and
+submit it to the blackboard <span style='background:yellow'>before the end of Saturday
+of week 4</span>. Print out a hard copy for your own use as a quick reference
+in the future.&quot;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Popular LINQ features</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>As you have learned,&nbsp;we
+will most often use LINQ for <em><span style='font-family:"Arial",sans-serif'>query</span></em>&nbsp;tasks:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>locating/selecting <u>one item</u> (e.g.
+     “find”, “single or default”)</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>filtering a collection to select <u>items which
+     match a condition</u> (e.g. “where”)</span></li>
+ <li class=MsoNormal style='line-height:normal'><u><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>sorting</span></u><span style='font-size:
+     12.0pt;font-family:"Arial",sans-serif'> (ordering) a collection (e.g.
+     “order by”)</span></li>
+</ul>
+
+<p><span style='font-family:"Arial",sans-serif'>Let’s look at all of these, in
+a bit more detail.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>Fetching
+one single matching object</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In the past, you have
+used&nbsp;the </span><a
+href="https://msdn.microsoft.com/en-us/library/gg696418%28v=vs.113%29.aspx"
+target="_blank"><span style='font-family:"Arial",sans-serif'>Find()</span></a><span
+style='font-family:"Arial",sans-serif'> method.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>This method works <u>only</u>
+when&nbsp;the following <em><span style='font-family:"Arial",sans-serif'>two
+conditions</span></em> are true:</span></p>
+
+<ol start=1 type=1>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>You are working with a <b>DbSet&lt;TEntity&gt;</b></span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>You are working with the <b>primary key</b>
+     property (the one named “Id” or “&lt;entity-name&gt;Id”)</span></li>
+</ol>
+
+<p><span style='font-family:"Arial",sans-serif'>Now, consider a situation where
+we have a Seneca Student entity. Each student has (at least) two properties
+which will have unique values: Seneca Student Identification Number (Student
+ID), and Canada Social Insurance Number (SIN). Neither property is
+the&nbsp;primary key.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Can you use Find() to locate an
+object by Student ID or SIN?</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>No.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Why? Neither property is the
+primary key.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>How can we locate the object?
+With the&nbsp;</span><a
+href="https://msdn.microsoft.com/en-us/library/bb549274%28v=vs.110%29.aspx"
+target="_blank"><span style='font-family:"Arial",sans-serif'>SingleOrDefault()</span></a><span
+style='font-family:"Arial",sans-serif'> method. It requires a <b>lambda
+expression</b> as an argument. Here’s how we can use this method:</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console";color:#00B050'>// The Find() method, when
+we can use the primary key to locate the object</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console";color:#002060'>var</span><span
+style='font-size:14.0pt;font-family:"Lucida Console";color:#002060'> </span><span
+style='font-family:"Lucida Console"'>supplier =
+ds.Suppliers.Find(newItem.SupplierId); </span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:14.0pt;font-family:"Lucida Console"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console";color:#00B050'>// The SingleOrDefault()
+method, when we need to use a lambda expression</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console";color:#002060'>var</span><span
+style='font-size:14.0pt;font-family:"Lucida Console"'> </span><span
+style='font-family:"Lucida Console"'>student = ds.Students.SingleOrDefault(s
+=&gt; s.SIN == newItem.SIN);</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-size:18.0pt;font-family:"Segoe UI Symbol",sans-serif;
+color:#0070C0'>&#10077;</span><strong><span style='font-size:14.0pt;font-family:
+"Arial",sans-serif'>More about SingleOrDefault() and Find()</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>There are several extension
+methods that a beginner may view as similar:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Find</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>First</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>FirstOrDefault</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Single</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>SingleOrDefault</span></li>
+</ul>
+
+<p><span style='font-family:"Arial",sans-serif'>We will use only two:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-family:"Arial",sans-serif'>As
+     noted above, if we are working with <u>the primary key of a
+     DbSet&lt;TEntity&gt;</u>, we can use <em><b><span style='font-family:"Arial",sans-serif'>Find</span></b></em></span></li>
+ <li class=MsoNormal style='line-height:normal'><u><span style='font-family:
+     "Arial",sans-serif'>Otherwise</span></u><span style='font-family:"Arial",sans-serif'>,
+     we must use <em><b><span style='font-family:"Arial",sans-serif'>SingleOrDefault</span></b></em></span></li>
+</ul>
+
+<p><span style='font-family:"Arial",sans-serif'>Why?</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>A <span style='color:green'>successful</span>
+<em><span style='font-family:"Arial",sans-serif'>SingleOrDefault</span></em>
+expects to return exactly one object.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>An <span style='color:red'>unsuccessful</span>
+<em><span style='font-family:"Arial",sans-serif'>SingleOrDefault</span></em>
+will return <b>null</b>.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>This is the behaviour we want,
+when we are working with a (primary key) identifier. In our code, we simply
+need to do one check/test – “if null” – to determine how to use the result.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In contrast, <em><span
+style='font-family:"Arial",sans-serif'>FirstOrDefault</span></em> is used when
+the data source contains zero or more matching objects (that meet the fetch
+condition). If successful, it returns the first object found. If unsuccessful, <em><span
+style='font-family:"Arial",sans-serif'>null</span></em> is returned. As a
+result, you would have to perform two checks/tests – number of objects, and
+null state.</span></p>
+
+<p><em><span style='font-family:"Arial",sans-serif'>First</span></em><span
+style='font-family:"Arial",sans-serif'> or <em><span style='font-family:"Arial",sans-serif'>Single</span></em>
+should not be used, when following our coding standards. If First or Single is
+unsuccessful, the statement it appears in will raise an exception. In other
+words, it will not assign null as the return value, as with the related methods
+FirstOrDefault or SingleOrDefault.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>.</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>Filtering</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Within a manager method (and
+before returning the results), we often need to perform other tasks on a
+collection, such as filtering or sorting.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>For example, assume that we
+wish to select only those Program objects that have a Credential property value
+of “Diploma”:</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console";color:#002060'>var</span><span
+style='font-size:14.0pt;font-family:"Lucida Console";color:#002060'> </span><span
+style='font-family:"Lucida Console"'>diplomaPrograms = ds.Programs.Where(<span
+style='background:yellow'>p</span> =&gt; <span style='background:yellow'>p</span>.Credential
+== &quot;Diploma&quot;);</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p style='margin-left:.5in'><span style='font-size:18.0pt;font-family:"Segoe UI Symbol",sans-serif;
+color:#0070C0'>&#10077;</span><span style='font-family:"Arial",sans-serif'>Reminder:
+“<span style='background:yellow'>p</span>” is the <u>range <em><span
+style='font-family:"Arial",sans-serif'>variable</span></em></u>.</span></p>
+
+<p style='margin-left:.5in'><span style='font-family:"Arial",sans-serif'>It
+represents <em><u><span style='font-family:"Arial",sans-serif'>an object</span></u></em><u>
+in the </u><em><span style='font-family:"Arial",sans-serif'>Programs</span></em><u>
+collection</u>. Its type is <em><span style='font-family:"Arial",sans-serif'>Program</span></em>.</span></p>
+
+<p style='margin-left:.5in'><span style='font-family:"Arial",sans-serif'>The
+letter “p” does not have any other special significance.</span></p>
+
+<p style='margin-left:.5in'><span style='font-family:"Arial",sans-serif'>Like
+other variables, its name is meaningful to you only. Choose your own name. It
+can be one or more characters in length. Maybe use the first character or two
+of the type in the collection.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>.</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>Sorting&nbsp;</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In this example, assume that we
+wish to sort the <em><span style='font-family:"Arial",sans-serif'>Program</span></em>
+collection by a property named <em><span style='font-family:"Arial",sans-serif'>Code</span></em>:</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console";color:#002060'>var</span><span
+style='font-size:14.0pt;font-family:"Lucida Console";color:#002060'> </span><span
+style='font-family:"Lucida Console"'>sortedPrograms = ds.Programs.OrderBy(<span
+style='background:yellow'>p</span> =&gt; <span style='background:yellow'>p</span>.Code);</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The&nbsp;</span><a
+href="http://msdn.microsoft.com/en-us/library/bb534863.aspx" target="_blank"><span
+style='font-family:"Arial",sans-serif'>OrderBy</span></a><span
+style='font-family:"Arial",sans-serif'>&nbsp;extension method is defined in the
+Queryable class. This method can be used on any object of type
+IQueryable&lt;TEntity&gt;.&nbsp;Its return type is&nbsp;</span><a
+href="http://msdn.microsoft.com/en-us/library/bb340178.aspx" target="_blank"><span
+style='font-family:"Arial",sans-serif'>IOrderedQueryable&lt;T&gt;</span></a><span
+style='font-family:"Arial",sans-serif'>.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>If you need to sort on a second
+(or third) property, use additional ThenBy() methods, which use the same style
+of lambda expression.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Also, each has a variant which
+will sort in descending order: OrderByDescending() and ThenByDescending().</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>.</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>Filtering
+and sorting</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>You can combine tasks by <em><span
+style='font-family:"Arial",sans-serif'>chaining</span></em> the filtering and
+sorting tasks above (using the “fluent” syntax). Do the filter task first, and
+then do the sort task. The statement below has been wrapped for clarity:</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console";color:#002060'>var</span><span
+style='font-size:14.0pt;font-family:"Lucida Console";color:#002060'> </span><span
+style='font-family:"Lucida Console"'>c = ds.Programs</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;.Where(p =&gt;
+p.Credential == &quot;Degree&quot;))</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;.OrderBy(p =&gt;
+p.Code);</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Here’s how to read this
+statement, in English:</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Fetch the Program collection…<br>
+but only where a Program object’s Credential property value…<br>
+matches the string “Degree”…<br>
+then sort the result by the Program object’s Code property value.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>Return
+types</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>This is a very important topic.</span></p>
+
+<p><u><span style='font-family:"Arial",sans-serif'>In many Manager class
+methods</span></u><span style='font-family:"Arial",sans-serif'>, you will want
+to return the result of a query.&nbsp;What return type must be used?</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Answer: Usually, <span
+style='background:yellow'>a type that’s based on a view model class</span>.</span></p>
+
+<p style='margin-left:.5in'><span style='font-size:18.0pt;font-family:"Segoe UI Symbol",sans-serif;
+color:#0070C0'>&#10077;</span><span style='font-family:"Arial",sans-serif'>Again,
+this is very important.</span></p>
+
+<p style='margin-left:.5in'><span style='font-family:"Arial",sans-serif'>Earlier,
+you learned that the Manager class must accept and deliver types that are
+either 1) based on the .NET Framework types, or 2) your own custom types,
+including those defined in view model classes.</span></p>
+
+<p style='margin-left:.5in'><span style='font-family:"Arial",sans-serif'>Do NOT
+return results directly from the data context. Never.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>What can we return?</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>For a&nbsp;<u>single&nbsp;object</u>,
+return an object based on a view model class. For best results, use AutoMapper
+to help with this. For example, using the <em><span style='font-family:"Arial",sans-serif'>supplier</span></em>
+fetched above:</span></p>
+
+<p style='margin-left:.5in'><b><span style='font-size:11.0pt;font-family:"Lucida Console";
+color:#002060'>return</span></b><span style='font-size:11.0pt;font-family:"Lucida Console";
+color:#002060'> </span><span style='font-size:11.0pt;font-family:"Lucida Console"'>mapper.Map&lt;<span
+style='color:#00B0F0'>Supplier</span>, <span style='color:#00B0F0'>SupplierBase</span>&gt;(supplier);</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>When returning <u>a collection</u>,
+return an enumerable collection that’s based on a view model class. Use
+AutoMapper. For example, using the <em><span style='font-family:"Arial",sans-serif'>diplomaPrograms</span></em>
+fetched above:</span></p>
+
+<p style='margin-left:.5in'><b><span style='font-size:11.0pt;font-family:"Lucida Console";
+color:#002060'>return</span></b><span style='font-size:11.0pt;font-family:"Lucida Console"'>
+mapper.Map&lt;<span style='color:#00B0F0'>IEnumerable</span>&lt;<span
+style='color:#00B0F0'>Program</span>&gt;, <span style='color:#00B0F0'>IEnumerable</span>&lt;<span
+style='color:#00B0F0'>ProgramBase</span>&gt;&gt;(diplomaPrograms);</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>The
+“deferred execution” idea</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>You should be aware that your
+fetch/query is executed when the results are used. In other words, the statement
+that uses the data context’s entity set does not necessarily cause a
+fetch/query at the data store.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Often, the query gets executed
+only when the fetch/query result is used. In the examples above, when the
+result is converted (by the AutoMapper statement) into a view-model class based
+object or collection, that’s when the query gets executed.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>This idea is known as “deferred
+execution”.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>This is a subtle point, but it
+may help explain odd behaviour for programmers who are new to LINQ and data
+stores, as they practice using LINQ.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Work on Assignment&nbsp;3</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Your professor will guide
+students as we get started on Assignment 3.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Before you leave the room at
+the end of the time slot, ensure that your professor has checked your work, for
+the&nbsp;<em><span style='font-family:"Arial",sans-serif;background:yellow'>in-class
+grading</span></em>&nbsp;part of the assignment.</span></p>
+
+<p class=MsoNormal><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>

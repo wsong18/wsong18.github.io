@@ -1,0 +1,621 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<title>Lec 8-2</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Lucida Console";
+	panose-1:2 11 6 9 4 5 4 2 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+h4
+	{mso-style-link:"Heading 4 Char";
+	margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:#954F72;
+	text-decoration:underline;}
+p
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+code
+	{font-family:"Courier New";}
+span.Heading4Char
+	{mso-style-name:"Heading 4 Char";
+	mso-style-link:"Heading 4";
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink="#954F72" background=bgw.gif>
+
+<div class=WordSection1 
+     style="margin: 0.5in auto; max-width: 50em; min-width: 30em;">
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:18.0pt;
+font-family:"Arial",sans-serif'>INT422 - Lecture 8 : Part 2</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Work with your custom data model. Start working
+on Assignment 8.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Are you interested in looking at
+the database?</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>If you’re careful, you can open the database
+that’s used in a web app. How?</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>First, in Solution Explorer, select/highlight
+the&nbsp;project name (e.g. “Assignment7”).</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>On the toolbar, choose Show All Files.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Open (reveal) the contents of the App_Data
+folder. It will show “&lt;something&gt;.mdf”. This “mdf” file is&nbsp;used to
+hold the contents of the database.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'><img width=486 height=373 id="Picture 10"
+src="INT422-Lecture8-2_files/image001.png" alt=vs-db-1></span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Double-click it, and it will open on the
+left-side “Server Explorer” panel.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Look for the item named “DefaultConnection
+(project-name)”. Open (reveal) the contents of the Tables folder.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'><img width=483 height=605 id="Picture 11"
+src="INT422-Lecture8-2_files/image002.png" alt=vs-db-2></span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Notice several things:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>There are several tables that begin with
+     “AspNet…” – those hold the ASP.NET Identity security-related data</span></li>
+</ul>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>You can right-click any of these tables, and
+choose “Show Table Data”, to show the data in a grid in the Visual Studio
+editor area.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'><img width=721 height=166 id="Picture 12"
+src="INT422-Lecture8-2_files/image003.png" alt=vs-db-3></span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif;color:red'>Very important:</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> When you’re <i>finished&nbsp;looking</i>,
+right-click “DefaultConnection (project-name)”, and choose “Close connection”.
+If you do not do this, then some of your future coding and testing tasks will
+fail.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Uh oh – data loading problems</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>If your data did not load correctly, then you
+should remove the data, fix the coding problem, and attempt to load the data
+again.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>How to remove the data?</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Create another method in the Manager class for
+this purpose. (Later, you will call this method from a controller
+action/method.)</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Remove ALL the objects in each entity collection.
+Here’s an example of how you would do this for the track entity collection; you
+would repeat this code for the other entity collections:</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:10.0pt;font-family:"Courier New";color:#0070C0'>foreach</span></b><b><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif'> </span></b><b><span
+style='font-size:10.0pt;font-family:"Courier New"'>(<span style='color:#0070C0'>var</span></span></b><b><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif'> </span></b><b><span
+style='font-size:10.0pt;font-family:"Courier New"'>e <span style='color:#0070C0'>in</span></span></b><b><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif'> </span></b><b><span
+style='font-size:10.0pt;font-family:"Courier New"'>ds.Tracks)</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:10.0pt;font-family:"Courier New"'>{</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;ds.Entry(e).State
+= System.Data.Entity.EntityState.Deleted;</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:10.0pt;font-family:"Courier New"'>}</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:10.0pt;font-family:"Courier New"'>ds.SaveChanges();</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Note: There are other ways to remove objects.
+This is the way that your teacher team recommends at this time.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Arg – the database is really messed up – I want
+to delete it and start again</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Maybe your data items are messed up. Maybe the
+design model classes are wrong. Maybe there are just too many little problems,
+and they’re preventing progress.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>You’re thinking “I want to delete the database
+and start fresh”. Here’s how:</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The data context has a database Delete()
+method. Be careful. With great power, there is great responsibility.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><a
+href="https://msdn.microsoft.com/en-us/library/system.data.entity.database.delete%28v=vs.113%29.aspx"
+target="_blank"><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>From
+MSDN</span></a><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>:</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>Deletes the database on
+the database server if it exists, otherwise does nothing.</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>Calling this method
+from outside of an initializer will mark the database as having not been
+initialized. This means that if an attempt is made to use the database again
+after it has been deleted, then any initializer set will run again and,
+usually, will try to create the database again automatically.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>We suggest that you add another method to the
+Manager class (which can then be called from a controller action/method). Its
+code:</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:10.0pt;font-family:"Courier New";color:#0070C0'>public</span></b><b><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'> </span></b><b><span
+style='font-size:10.0pt;font-family:"Courier New";color:#0070C0'>bool</span></b><b><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif'> </span></b><b><span
+style='font-size:10.0pt;font-family:"Courier New"'>RemoveDatabase()</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:10.0pt;font-family:"Courier New"'>{</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;<span
+style='color:#0070C0'>try</span></span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;{</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;//
+Delete database</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;return</span></b><b><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif'> </span></b><b><span
+style='font-size:10.0pt;font-family:"Courier New"'>ds.Database.Delete();</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;}</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;<span
+style='color:#0070C0'>catch</span></span></b><b><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif'> </span></b><b><span style='font-size:
+10.0pt;font-family:"Courier New"'>(Exception)</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;{</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;<span
+style='color:#0070C0'>return</span></span></b><b><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif'> </span></b><b><span style='font-size:
+10.0pt;font-family:"Courier New";color:#0070C0'>false</span></b><b><span
+style='font-size:10.0pt;font-family:"Courier New"'>;</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;&nbsp;}</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:10.0pt;font-family:"Courier New"'>}</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>After the database delete task, run the data
+load task again.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<a id=dbinstance></a>
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>How to delete local database instance</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>If the operations of removing data or deleting
+database do not work, or cannot attach a *.mdf file as database, you may try
+the following command in the Package Manage Console of your VS:</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New"'>PM&gt; <b>sqllocaldb.exe</b>
+</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New"'>Microsoft (R) SQL Server
+Express LocalDB Command Line Tool</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New"'>Version 12.0.2000.8</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New"'>… …</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New"'>instance
+&quot;MSSQLLocalDB&quot;.</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New"'>PM&gt; <b>sqllocaldb.exe
+stop MSSQLLocalDB</b></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New"'>LocalDB instance
+&quot;MSSQLLocalDB&quot; stopped.</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New"'>PM&gt; <b>sqllocaldb.exe
+delete MSSQLLocalDB</b></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New"'>LocalDB instance
+&quot;MSSQLLocalDB&quot; deleted.</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Courier New"'>PM&gt; <b>update-database</b></span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Security and how it influences
+class design and code workflows</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>This section discusses some security issues, and
+how they influence class design and code workflows.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>[Authorize] attribute in a controller</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Recently, you learned how to protect controller
+actions/methods with the [Authorize] attribute. A&nbsp;request must be
+authenticated before it can execute&nbsp;an action/method.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>If you add the attribute before the controller
+declaration, all methods are protected.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>If you add the attribute before an
+action/method, only that method is protected.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>There are various combinations (overrides, AND
+and OR, specifying roles or users, etc.) that can influence whether an
+action/method can be executed. You will learn and use these now and in the
+future.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Protecting methods in the&nbsp;Manager class</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In the Manager class, we cannot (and should not
+attempt to) use the [Authorize] attribute.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Therefore, we must use “if” statements to
+implement method protection.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Study the Manager.cs source code file. Near the
+bottom, there is a <i>RequestUser</i> class, which has a number of members that
+are very useful. The Manager class has a User property, which becomes an
+instance of RequestUser the first time it is accessed. This “User” property can
+be used in the Manager, and also in any controller.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The manager object has access to <i>HttpContext.Current</i>,
+which has access to the security principal data you need for your “if”
+statement conditions. Here’s some scenarios:</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><u><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The request must be authenticated</span></u></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>For example, use this:</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:10.0pt;font-family:"Lucida Console";color:#0070C0'>if</span></b><span
+style='font-size:12.0pt;font-family:"Lucida Console";color:#0070C0'> </span><span
+style='font-size:10.0pt;font-family:"Lucida Console"'>(HttpContext.Current.Request.IsAuthenticated)</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:10.0pt;font-family:"Lucida Console";color:green'>// etc.</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:10.0pt;font-family:"Lucida Console";color:green'>// or...</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:10.0pt;font-family:"Lucida Console";color:#0070C0'>if</span></b><span
+style='font-size:12.0pt;font-family:"Lucida Console"'> </span><span
+style='font-size:10.0pt;font-family:"Lucida Console"'>(User.IsAuthenticated)</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:10.0pt;font-family:"Lucida Console";color:green'>// etc.</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><u><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The request’s security principal must have the
+“Manager” role claim</span></u></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>For example, use this:</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:10.0pt;font-family:"Lucida Console";color:#0070C0'>if</span></b><span
+style='font-size:10.0pt;font-family:"Lucida Console"'> (User.HasRoleClaim(&quot;Manager&quot;))</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:10.0pt;font-family:"Lucida Console";color:green'>// etc.</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><u><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>You want to read/display the friendlier given
+name and surname, instead of the email address</span></u></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In this scenario, assume that your web app
+gathers given name and surname data during the “register” for a new user
+account task. As you know (from studying the Account controller’s Register()
+method), these data items are saved as claims.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Therefore, you want to get and use the
+friendlier and nicer-looking given name and surname strings, instead of the
+ugly and unfriendly email address string. You can do this in a controller, or
+in a manager.</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:10.0pt;font-family:"Lucida Console";color:green'>// Get the
+name claims in &quot;Peter McIntyre&quot; format...</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:10.0pt;font-family:"Lucida Console";color:#0070C0'>var</span></b><span
+style='font-size:10.0pt;font-family:"Lucida Console"'> name1 =
+User.NamesFirstLast;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:10.0pt;font-family:"Lucida Console"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:10.0pt;font-family:"Lucida Console";color:green'>// Get the
+name claims in &quot;Burton, Eden&quot; format...</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:10.0pt;font-family:"Lucida Console";color:#0070C0'>var</span></b><span
+style='font-size:10.0pt;font-family:"Lucida Console"'> name2 =
+User.NamesLastFirst;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Saving authenticated user information in your
+own entity objects</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The techniques above enable you to read
+information about the authenticated user.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>What about writing user information? For
+example, assume that you need to save the user name (i.e. the email address) of
+the current user, with the entity object that you’re creating/editing.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Well, here are a few tips or hints:</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>If possible, do the work in the manager method.
+Why? The manager is nearest the data store.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Do NOT enable the browser user to enter/provide
+this data (and you should not show it as editable in an HTML Form in the user
+interface).</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Do not get/fetch the data in the controller,
+and pass it to the manager. Why? The manager already has access to user information.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>This has a design implication for your view
+model classes:</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>If you want to display user information in the
+user interface, then you must add one or more properties (whatever fits your
+needs) to a display-only view model class (e.g. “…Base”, or “…WithDetails”).</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Do NOT add user information properties to
+“…AddForm” or “…Add” view model classes.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Work on Assignment 8</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Your professor will guide students as we
+continue working&nbsp;on&nbsp;Assignment 8.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Before you leave the room at the end of the
+time slot, ensure that you give the Work Report to your professor, for
+the&nbsp;<i>in-class grading</i>&nbsp;part of the assignment.</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>

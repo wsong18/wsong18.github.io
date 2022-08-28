@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <title>WEB222</title>
+   <style> 
+      body { margin: 0 18%; }
+   </style>
+   <script>
+	 function setValue() {
+	   document.form1.fname.value = "John";
+	   document.form1.lname.value = "Smith";
+	 }
+	 window.onload = setValue;
+	 //window.onload="setValue()"; //not work
+   </script>
+</head>
+<!-- <body onload="setValue()"> -->
+<body >
+
+    <h3><mark>onload event handler</mark></h3>
+    <form name="form1" method="post" action='#' />
+
+	   <p>First Name: <input type='text' name='fname'/></p>
+	   <br />
+	   <p>Last Name: <input type='text' name='lname'/></p>
+	   <br />
+	   <input type="submit" onclick="alert('submitting...')"/>
+	   <input type="reset" onclick="alert('resetting...')" />
+    </form>
+	<hr>
+  <br>
+  <!-- for downloading source files -->
+  <p><a href="" Download>Download</a></p>
+</body>
+</html>

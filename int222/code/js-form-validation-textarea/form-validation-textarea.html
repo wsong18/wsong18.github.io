@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+   <meta charset="UTF-8" />
+   <title>HTML Form</title>
+   <style> 
+      body { margin: 0 10%; }
+	  form {  
+              border: 10px solid #00ff00; 
+              padding: 5px; 
+      }
+
+     .inputbox { 
+            color:#000000;
+            background-color: #ffffff; 
+            border-top:    7px dashed #0000ff; 
+            border-bottom: 7px dashed #0000ff; 
+            border-left:   7px solid  #ff0000; 
+            border-right:  7px solid  #ff0000; 
+     }
+    .inputtext {
+            font-size: 14px; 
+            font-style:italic;
+            font-weight:bold;
+     }
+
+   </style>
+   <script>
+	  function formValidation(frm) {
+         return validateTextarea(frm);
+      }
+	  
+      function validateTextarea(form1)   {
+		 /* Validate that the textarea named "comments" in the form passed-in
+		    using this keyword*/
+		if (form1.comments.value.trim().length == 0) {// check length of textarea
+				 alert("No input! Please enter your comments.\n");
+				 form1.comments.value = "";
+				 form1.comments.focus();
+				 return false;
+		 }
+		 return true;
+	  } // function
+   </script>
+</head>
+<body>
+  <h1>Example - JavaScript Form Validation:<mark> textarea </mark></h1>
+
+  <form method="post" name="example"
+		action="https://zenit.senecac.on.ca/~emile.ohan/cgi-bin/echo-p.pl"
+		onsubmit="return formValidation(this);">
+   
+      <p>Your Comments</p> 
+	  <textarea name="comments" cols="80" rows="6"></textarea>
+	  <p>
+		 <input type="submit" value="Submit Information" />
+		  &nbsp;&nbsp;
+		 <input type="reset"  value="    Clear   " onclick="clearShowErrors();" />  
+	  </p>
+  </form>
+  <hr />
+
+  <br>
+  <!-- for downloading source files -->
+  <p><a href="" Download>Download</a></p>
+</body>
+
+</html>

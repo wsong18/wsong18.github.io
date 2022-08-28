@@ -1,0 +1,916 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<title>Lec 9</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Lucida Console";
+	panose-1:2 11 6 9 4 5 4 2 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+h2
+	{mso-style-link:"Heading 2 Char";
+	margin-right:0in;
+	margin-left:0in;
+	font-size:18.0pt;
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+h4
+	{mso-style-link:"Heading 4 Char";
+	margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-link:"Header Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-link:"Footer Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:#954F72;
+	text-decoration:underline;}
+p
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+code
+	{font-family:"Courier New";}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-link:"Heading 2";
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+span.Heading4Char
+	{mso-style-name:"Heading 4 Char";
+	mso-style-link:"Heading 4";
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+span.HeaderChar
+	{mso-style-name:"Header Char";
+	mso-style-link:Header;}
+span.FooterChar
+	{mso-style-name:"Footer Char";
+	mso-style-link:Footer;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink="#954F72">
+
+<div class=WordSection1>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:18.0pt;
+font-family:"Arial",sans-serif'>INT422 – Week 9 Lecture Notes </span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Some useful security-related topics. Rich text
+editing.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Test today</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Test 8&nbsp;is today, at&nbsp;the beginning of
+the timeslot, and will run approximately 12 minutes. (It is a smaller 4-mark
+test.)</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Textbook coverage</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>As previously announced, the textbook will have
+a supporting role as you learn new topics from these notes and your classroom
+sessions. Use the table-of-contents and the index to locate the topic, and then
+read about it there. A reminder: The textbook does not use view model classes
+in its discussions and code examples. We do.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Assignment 8 progress</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Be prepared to ask questions about Assignment 8,
+if you have any.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Code examples</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Conditional Menus<br>
+Manage User Accounts<br>
+Personal Notes</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Theme for this week</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>We will cover some useful security-related
+topics that will help you build better web apps.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>We start with a general user interface topic –
+menu-building – and then move on to security&nbsp;topics.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Dropdown menu overview</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>We start with this topic, because we use it
+again soon, when we discuss security topics.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The Bootstrap framework enables you to
+predictably and easily create a dropdown menu. The technique is fully
+described&nbsp;in the Bootstrap documentation on “</span><a
+href="http://getbootstrap.com/components/#dropdowns" target="_blank"><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>Dropdowns</span></a><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>“.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Here’s a summary:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>The menu choices in the dropdown are
+     implemented as a <i>nested</i> unordered list</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>The top-level &lt;li&gt; uses a specific
+     CSS class, and its content is an &lt;a&gt; that has specific attributes</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>The nested &lt;ul&gt; uses a specific CSS class</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Its links can be generated by the
+     ActionLink HTML Helper, or by normal &lt;a&gt; elements</span></li>
+</ul>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Here’s the code for a typical implementation:</span></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=630
+ style='width:472.5pt;margin-left:.5in'>
+ <tr>
+  <td width=6 style='width:4.5pt;padding:0in 0in 0in 0in'></td>
+  <td width=624 style='width:6.5in;padding:0in 0in 0in 0in'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><b><span style='font-family:"Courier New"'>&lt;<span
+  style='color:#0070C0'>div</span></span></b><b><span style='font-size:14.0pt;
+  font-family:"Times New Roman",serif;color:#0070C0'> </span></b><b><span
+  style='font-family:"Courier New"'>class=&quot;<span style='color:#7030A0'>navbar-collapse
+  collapse</span>&quot;&gt;</span></b></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><b><span style='font-family:"Courier New"'>&nbsp;&nbsp;&lt;<span
+  style='color:#0070C0'>ul</span></span></b><b><span style='font-size:14.0pt;
+  font-family:"Times New Roman",serif'> </span></b><b><span style='font-family:
+  "Courier New"'>class=&quot;<span style='color:#7030A0'>nav navbar-nav</span>&quot;&gt;</span></b></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><b><span style='font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span
+  style='color:#0070C0'>li</span>&gt;@Html.ActionLink(&quot;Home&quot;,
+  &quot;Index&quot;, &quot;Home&quot;)&lt;/<span style='color:#0070C0'>li</span>&gt;</span></b></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><b><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>&nbsp;</span></b></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><b><span style='font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span
+  style='color:#0070C0'>li</span></span></b><b><span style='font-size:14.0pt;
+  font-family:"Times New Roman",serif'> </span></b><b><span style='font-family:
+  "Courier New"'>class=&quot;<span style='color:#7030A0'>dropdown</span>&quot;&gt;</span></b></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><b><span style='font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span
+  style='color:#0070C0'>a</span></span></b><b><span style='font-size:14.0pt;
+  font-family:"Times New Roman",serif'> </span></b><b><span style='font-family:
+  "Courier New"'>href=&quot;<span style='color:#7030A0'>#</span>&quot;</span></b><b><span
+  style='font-size:14.0pt;font-family:"Times New Roman",serif'> </span></b><b><span
+  style='font-family:"Courier New"'>class=&quot;<span style='color:#7030A0'>dropdown-toggle</span>&quot;</span></b><b><span
+  style='font-size:14.0pt;font-family:"Times New Roman",serif'> </span></b><b><span
+  style='font-family:"Courier New"'>data-toggle=&quot;<span style='color:#7030A0'>dropdown</span>&quot;&gt;Dropdown
+  for all users &lt;b</span></b><b><span style='font-size:14.0pt;font-family:
+  "Times New Roman",serif'> </span></b><b><span style='font-family:"Courier New"'>class=&quot;caret&quot;&gt;&lt;/<span
+  style='color:#0070C0'>b</span>&gt;&lt;/<span style='color:#0070C0'>a</span>&gt;</span></b></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><b><span style='font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span
+  style='color:#0070C0'>ul</span></span></b><b><span style='font-size:14.0pt;
+  font-family:"Times New Roman",serif'> </span></b><b><span style='font-family:
+  "Courier New"'>class=&quot;<span style='color:#7030A0'>dropdown-menu</span>&quot;&gt;</span></b></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><b><span style='font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span
+  style='color:#0070C0'>li</span>&gt;&lt;<span style='color:#0070C0'>a</span></span></b><b><span
+  style='font-size:14.0pt;font-family:"Times New Roman",serif'> </span></b><b><span
+  style='font-family:"Courier New"'>href=&quot;<span style='color:#7030A0'>#</span>&quot;&gt;Achieve
+  world peace&lt;/<span style='color:#002060'>a</span>&gt;&lt;/<span
+  style='color:#0070C0'>li</span>&gt;</span></b></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><b><span style='font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span
+  style='color:#0070C0'>li</span>&gt;&lt;<span style='color:#0070C0'>a</span></span></b><b><span
+  style='font-size:14.0pt;font-family:"Times New Roman",serif'> </span></b><b><span
+  style='font-family:"Courier New"'>href=&quot;<span style='color:#7030A0'>#</span>&quot;&gt;Cure
+  cancer&lt;/<span style='color:#0070C0'>a</span>&gt;&lt;/<span
+  style='color:#0070C0'>li</span>&gt;</span></b></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><b><span style='font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span
+  style='color:#0070C0'>li</span>&gt;&lt;<span style='color:#0070C0'>a</span></span></b><b><span
+  style='font-size:14.0pt;font-family:"Times New Roman",serif'> </span></b><b><span
+  style='font-family:"Courier New"'>href=&quot;<span style='color:#7030A0'>#</span>&quot;&gt;Solve
+  the hunger problem&lt;/<span style='color:#0070C0'>a</span>&gt;&lt;/<span
+  style='color:#0070C0'>li</span>&gt;</span></b></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><b><span style='font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/<span
+  style='color:#0070C0'>ul</span>&gt;</span></b></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><b><span style='font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/<span
+  style='color:#0070C0'>li</span>&gt;</span></b></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:14.0pt;
+font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Here’s what it looks like as an image from the
+code editor.&nbsp;Click the image to open it full-size in a new tab/window.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><a
+href="https://petermcintyre.files.wordpress.com/2016/03/menu-dropdown.png"
+target="_blank"><span style='font-size:12.0pt;font-family:"Arial",sans-serif;
+text-decoration:none'><img border=0 width=771 height=157 id="Picture 6"
+src="INT422-Lecture9_files/image001.jpg" alt=menu-dropdown></span></a></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Here’s how the menu is rendered, showing the
+new “Dropdown…”&nbsp;menu:</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'><img border=0 width=722 height=251
+id="Picture 5" src="INT422-Lecture9_files/image002.png"
+alt=menu-conditional-closed></span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Here’s what it looks like when the
+“Dropdown…”&nbsp;menu item is clicked:</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'><img border=0 width=732 height=254
+id="Picture 4" src="INT422-Lecture9_files/image003.png"
+alt=menu-conditional-open></span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Security topics that will get
+some love today</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>There’s a range of security topics that we’ll
+touch on today.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Some you can use immediately, including:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>A way to easily expose information about
+     the current authenticated user</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Conditional menus</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>User account management</span></li>
+</ul>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Some topics you can use soon, including:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Admin approval of a “register” request
+     (the workflow)</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Custom claim, and custom authorize
+     attribute</span></li>
+</ul>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>And some advanced topics can be used in the
+near future, in another assignment, including:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Mixing user account concepts with real
+     people (e.g. employees, customers)</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Register new account works only for
+     specific people</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Restrict editing tasks to the owner of an
+     object (in the data store)</span></li>
+</ul>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Expose information about the
+current authenticated user –</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>RequestUser class, and usage in
+the Manager class and elsewhere</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><img border=0 width=373
+height=508 id="Picture 8" src="INT422-Lecture9_files/image004.jpg"
+alt="https://petermcintyre.files.wordpress.com/2017/03/request-user-class.png?w=595"></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>While studying this section, open the <i>ConditionalMenus</i>
+code example.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Open the Manager.cs source code file. Near the
+bottom, it has a new class named RequestUser.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>This class will make it far easier to expose
+often-used data in a user account. Sometimes you need the data to make a
+decision (e.g. does the user have the “Admin” role claim?), and sometimes you
+need the data for the user interface (e.g. the given name(s) and surname).</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Again, this class just makes it easier to get
+to often-used data. It is a <i>convenience</i> class.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In the Manager constructor, it creates one of
+these RequestUser objects, and exposes it as a public property.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>As the code comments state, you can use this
+property <u>in the Manager</u> class methods to control logic and flow, and to
+use its data/string content.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>You can also use this property <u>in a
+controller</u>. For example:</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New";color:#0070C0'>var</span></b><b><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'> </span></b><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>userName = m.User.Name;</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>You can also use this property in a view. For
+best results, near the top of the view (inside the typically existing @ { }
+code block), add this statement:</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New";color:#0070C0'>var</span></b><b><span
+style='font-size:16.0pt;font-family:"Times New Roman",serif;color:#0070C0'> </span></b><b><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>userAccount</span></b><b><span
+style='font-size:12.0pt;font-family:"Courier New"'> = <span style='color:#0070C0'>new</span></span></b><b><span
+style='font-size:16.0pt;font-family:"Times New Roman",serif'> </span></b><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&lt;your-project-name&gt;.Controllers.</span></b><b><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>RequestUser</span></b></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;(User <span
+style='color:#0070C0'>as</span></span></b><b><span style='font-size:16.0pt;
+font-family:"Times New Roman",serif'> </span></b><b><span style='font-size:
+12.0pt;font-family:"Courier New"'>System.Security.Claims.ClaimsPrincipal);</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Conditional menu items (and
+dropdowns)</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>As you know, the <b>_Layout.cshtml</b> asset is
+used to render the default layout for views in your app.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>It includes a menu. The Bootstrap framework
+defines its appearance and behaviour.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>We can add <i>conditional</i> menu choices to
+this menu. What condition? Anything you can imagine.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>A popular condition is “security”. In other
+words, if a user is authenticated, or authenticated <i>and</i> has a specific
+role claim, you may want to show one or more menu items.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Above, you just learned about the new RequestUser
+object that you can configure in a view.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Its properties (and methods) can be used to
+make decisions about what to render, and its appearance.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>For example, you can render a menu item if the
+request is authenticated. You can use Request.IsAuthenticated, or
+userAccount.IsAuthenticated. Either one is acceptable.</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>@if
+(Request.IsAuthenticated)</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>{</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&lt;<span
+style='color:#0070C0'>li</span>&gt;@Html.ActionLink(&quot;Account info&quot;,
+&quot;Home&quot;, &quot;Index&quot;)&lt;/<span style='color:#0070C0'>li</span>&gt;</span></b></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>}</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>You can also &nbsp;render a menu item (or a
+full dropdown menu) if the authenticated user has the “Admin” role claim.</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>@if (userAccount.IsAdmin)</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>{</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&lt;<span
+style='color:#0070C0'>li</span></span></b><b><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif;color:#0070C0'> </span></b><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>class=&quot;<span
+style='color:#7030A0'>dropdown</span>&quot;&gt;</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span
+style='color:#0070C0'>a</span></span></b><b><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif'> </span></b><b><span style='font-size:
+12.0pt;font-family:"Courier New"'>href=&quot;#&quot;</span></b><b><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif'> </span></b><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>class=&quot;<span
+style='color:#7030A0'>dropdown-toggle</span>&quot;</span></b><b><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif'> </span></b><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>data-toggle=&quot;<span
+style='color:#7030A0'>dropdown</span>&quot;&gt;Admin tasks &lt;<span
+style='color:#0070C0'>b </span>class=&quot;caret&quot;&gt;&lt;/<span
+style='color:#0070C0'>b</span>&gt;&lt;/<span style='color:#0070C0'>a</span>&gt;</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span
+style='color:#0070C0'>ul</span></span></b><b><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif'> </span></b><b><span style='font-size:
+12.0pt;font-family:"Courier New"'>class=&quot;<span style='color:#7030A0'>dropdown-menu</span>&quot;&gt;</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span
+style='color:#0070C0'>li</span>&gt;&lt;a</span></b><b><span style='font-size:
+12.0pt;font-family:"Times New Roman",serif'> </span></b><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>href=&quot;<span
+style='color:#7030A0'>#</span>&quot;&gt;List of all users&lt;/<span
+style='color:#0070C0'>a</span>&gt;&lt;/<span style='color:#0070C0'>li</span>&gt;</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span
+style='color:#0070C0'>li</span>&gt;&lt;a</span></b><b><span style='font-size:
+12.0pt;font-family:"Times New Roman",serif'> </span></b><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>href=&quot;<span
+style='color:#7030A0'>#</span>&quot;&gt;Find user by name&lt;/<span
+style='color:#0070C0'>a</span>&gt;&lt;/<span style='color:#0070C0'>li</span>&gt;</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span
+style='color:#0070C0'>li</span>&gt;&lt;a</span></b><b><span style='font-size:
+12.0pt;font-family:"Times New Roman",serif'> </span></b><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>href=&quot;<span
+style='color:#7030A0'>#</span>&quot;&gt;Edit user info and claims&lt;/<span
+style='color:#0070C0'>a</span>&gt;&lt;/<span style='color:#0070C0'>li</span>&gt;</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/<span
+style='color:#0070C0'>ul</span>&gt;</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&lt;/<span
+style='color:#0070C0'>li</span>&gt; }</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>}</span></b></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0>
+ <tr>
+  <td style='padding:0in 0in 0in 0in'></td>
+  <td style='padding:0in 0in 0in 0in'></td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Finally, you can render a menu item based on
+any other logic or condition. You can even render strings from the <i>RequestUser</i>
+object in the menu itself.</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>@if
+(userAccount.HasRoleClaim(&quot;RoleOne&quot;))</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>{</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&lt;<span
+style='color:#0070C0'>li</span>&gt;@Html.ActionLink(userAccount.GivenName +
+&quot; <span style='color:#7030A0'>task</span>&quot;, &quot;<span
+style='color:#7030A0'>Home</span>&quot;, &quot;<span style='color:#7030A0'>Index</span>&quot;)&lt;/<span
+style='color:#0070C0'>li</span>&gt;</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>}</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Here’s&nbsp;an image from the code editor that
+combines all these ideas.&nbsp;Click the image to open it full-size in a new
+tab/window.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><a
+href="https://petermcintyre.files.wordpress.com/2016/03/menu-conditional1.png"
+target="_blank"><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+text-decoration:none'><img border=0 width=722 height=497 id="Picture 2"
+src="INT422-Lecture9_files/image005.jpg" alt=menu-conditional></span></a></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>User account management</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>When your teacher team introduced the <i>ASP.NET
+Identity</i> system, we explained that it did not include a ready-to-use tool
+to, for example, manage user accounts.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Open the <b><i>ManageUserAccounts</i></b> code
+example, and study it as you read this section.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In the past, while you studied the Account and
+Manage controllers, you probably noticed the </span><a
+href="https://msdn.microsoft.com/en-us/library/dn468199%28v=vs.108%29.aspx"
+target="_blank"><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>UserManager</span></a><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> object. It is part of
+the in-memory security components, while your app is running.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Among other features, it enables:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>a Users property, of all users</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Find… methods, to locate a user by name or
+     other search term</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>an AddClaim… method (which you have seen
+     and used), to add a claim of any type</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>the ability to Delete a user</span></li>
+</ul>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>…and many other members to help you work with
+your app’s users.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The code example includes an AccountManager
+controller, and some views. (FYI – These will appear in a future version of the
+project template.) Run the app, create some users, and use the account
+management features. Study the code.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Restrict viewing and editing to
+the owner of an object</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>This is a common scenario, in all web apps (and
+web services): Restrict viewing and editing to the owner of an object.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Study the <b><i>NotesApp</i></b> code example
+while you read this section.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Almost all web apps enable users to work with
+public data, and data that is private to that user. This extends to any app
+that uses the web as a way to deliver data, for example, all the mobile apps
+that you use (Messages, Mail, Instagram, Facebook, etc.).</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The methods in the Manager class are the key to
+implementing this behaviour.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>They rely on entities that include user account
+identity/information in their schema. In the code example, there is a Note
+class, with an Owner property:</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'><img border=0 width=329 height=405
+id="Picture 1" src="INT422-Lecture9_files/image006.jpg" alt=note-class></span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The value of the Owner property is set when the
+object is created.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Then, whenever we need to access the object, we
+must provide user account identity/information. For example, in the “get one”
+note method. Yes, look for the matching item by its identifier, but ALSO
+include the security check:</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New";color:#0070C0'>var</span></b><b><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#0070C0'> </span></b><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>o = ds.Notes.SingleOrDefault</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;(n =&gt; n.Id ==
+id &amp;&amp; n.Owner == UserAccount.Name);</span></b><span style='font-size:
+14.0pt;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Controller code is unchanged from previous web
+apps. This new functionality is implemented in the Manager class only.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Rich text editing</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><a href="http://ckeditor.com/"
+target="_blank"><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>CKEditor</span></a><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> is a JavaScript app
+that replaces an HTML &lt;textarea&gt; element with a nice-looking and
+highly-functional rich text editor.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>As you read this section, open and study the <i>RichTextNotesApp</i>
+code example.</span></p>
+
+<p class=MsoNormal style='line-height:normal'>
+
+<table cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=280 height=0></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td><img width=744 height=311 src="INT422-Lecture9_files/image007.png"
+  alt=rich-text-editor></td>
+ </tr>
+</table>
+
+<br clear=ALL>
+<span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Here’s what you
+need to know to use CKEditor:</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The editor works with string properties in a
+view model class.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>For best results, add the&nbsp;<b>[DataType(DataType.MultiLineText)]</b>
+to a string property (in a “…Form” view model class), and at runtime, the Razor
+view engine&nbsp;will render it as an HTML &lt;textarea&gt; element in a Create
+or Edit view.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Near the top of the view – maybe below the @ {
+} code block – add a reference to CKEditor. For best results, get it
+from&nbsp;its </span><a
+href="https://en.wikipedia.org/wiki/Content_delivery_network" target="_blank"><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>content delivery
+network</span></a><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>:</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&lt;<b><span style='color:#002060'>script</span></b></span><span
+style='font-size:14.0pt;font-family:"Lucida Console";color:#002060'> </span><span
+style='font-family:"Lucida Console"'>src=<b><span style='color:#7030A0'>&quot;//cdn.ckeditor.com/4.5.7/standard/ckeditor.js&quot;</span></b>&gt;&lt;/<b><span
+style='color:#002060'>script</span></b>&gt;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Then, just below the code that renders the text
+area, convert the HTML &lt;textarea&gt; element into an editor:</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&lt;<b><span style='color:#002060'>script</span></b>&gt;CKEDITOR.replace(<b><span
+style='color:#7030A0'>'Content'</span></b>, { startupFocus: true });&lt;/<b><span
+style='color:#002060'>script</span></b>&gt;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The code above<u> assumes that the HTML
+&lt;textarea&gt; element has a <i>name</i> attribute with a <i>value</i> of
+“Content”.</u> &nbsp;If you do not need the startupFocus attribute, then remove
+it.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Controller method to handle the HTML Form post</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Normally, the ASP.NET runtime prevents HTML
+markup or script code from being posted to a controller method, for obvious
+security reasons.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In this situation, we know that the rich text
+editor will include HTML code, and yes, we do want it. Therefore, we have to <b>add
+this attribute to the controller method that handles the HTML Form post</b>:</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>[ValidateInput(<b><span
+style='color:#002060'>false</span></b>)]</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Render rich text string properties in the user
+interface</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Normally, string content is HTML encoded when
+it is displayed in a view (e.g. List, Details, Delete).</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In this situation, we want rich text string
+content to be displayed as-is. Therefore, we must render it with a different
+HTML Helper. Assuming that the “Content” property is a rich text string, write
+this code:</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>@Html.Raw(item.Content)</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>

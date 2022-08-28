@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+   <meta charset="UTF-8" />
+   <title>BOM</title>
+   <style> 
+      body { margin: 0 16%; }
+   </style>
+   <script>
+	  var loc_msg;
+	  
+	  window.onload = function () {
+	    loc_msg = document.getElementById("loc_msg");
+	  }
+	  
+	  function getLocation() {
+		 if (navigator.geolocation) {
+			 navigator.geolocation.getCurrentPosition(showLocation);
+		 } else {
+			 loc_msg.innerHTML = "Geolocation is not supported by this browser.";
+		 }
+	  }
+	  
+	  function showLocation(position) { // "showLocation" is a callback function which is called asynchronously with an object Position which stores the complete location information. 
+		 loc_msg.innerHTML = "Latitude: " + position.coords.latitude +
+		 "<br>Longitude: " + position.coords.longitude;
+	  }
+   </script>
+</head>
+<body>
+   <h3>BOM - Navigator object's properties and methods</h3>
+   <br>  
+   <p>
+      <script type="text/javascript">
+		 document.writeln("navigator.appCodeName = <b>" + navigator.appCodeName + "</b><br />");
+		 document.writeln("navigator.appName = <b>" + navigator.appName + "</b><br />");
+		 document.writeln("navigator.appVersion = <b>" + navigator.appVersion + "</b><br />");
+		 document.writeln("navigator.language = <b>" + navigator.language + "</b><br />");
+		 document.writeln("navigator.platform = <b>" + navigator.platform + "</b><br />");
+		 document.writeln("navigator.userAgent[] = <b>" + navigator.userAgent + "</b><br />");
+		 document.writeln("navigator.javaEnabled = <b>" + ((navigator.javaEnabled() == 1) ? 'Yes' : 'No') + "</b><br /><br />");
+ 
+		 document.write("Java enabled: " + navigator.javaEnabled() + "<br /><br />");
+	  </script>
+   </p>
+  
+   <br>
+   <h4>HTML5 - Geolocation (API)</h4>
+   <div id="loc_msg"></div>
+   <p>
+	  <button onclick="getLocation()">Show Your Position</button>
+   </p>
+
+
+  <br><hr>
+  <p><a href="view-source:">View-source</a>&nbsp;&nbsp;&nbsp;&nbsp;
+     <a href="" onclick="download=document.referrer">Download</a>
+  </p>
+</body>
+
+</html>

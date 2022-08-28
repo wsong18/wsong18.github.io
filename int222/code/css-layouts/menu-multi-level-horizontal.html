@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+   <meta charset="UTF-8" />
+   <title>Menu</title>
+   <style>
+		.container {
+		  width: 1000px;
+		  margin: auto;
+		}
+		nav {
+			background-color: navy;
+		}
+		
+		nav ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+		}
+		
+		nav ul li {
+			float: left;
+		}
+		
+		nav a:link, nav a:visited {
+			display: block;
+			color: #ffffff;
+			background-color: navy;
+			text-align: center;
+			padding: 8px 12px;
+			text-decoration: none;
+			border-left: 1px inset #ecefec;
+			border-right: 1px inset #ecefec;
+		}
+		
+		nav ul li ul {
+			padding: 8px 12px;
+			position: absolute;
+			display: none;
+			opacity: 0;
+			visibility: hidden;
+			transition: opacity 0.2s;
+		}
+		
+		nav ul li:hover ul {
+			display: block;
+			padding: 0;
+			width: 150px;
+			opacity: 1;
+			visibility: visible;
+		}
+		
+		nav ul li ul li {
+			display: block;
+			text-align: left;
+			width: 150px;
+		}
+		
+		nav a:hover {
+			background-color: indigo;
+			color: #ffffff;
+		}
+		.clear {
+		  clear:both;
+		}
+	   footer section p {
+		   text-align:center;
+		}
+    </style>
+</head>
+<body>
+    <div class="container">
+      <header>
+        <h1>INT222 - ICT - Seneca @ York Campus </h1>
+        <nav>
+          <ul>
+			<li><a href="#top">Home</a></li>
+			<li><a href="#timetable">Timetable</a></li>
+			<li><a href="#standards">Standards</a></li>
+			<li><a href="#">courses</a>
+              <ul>
+                <li><a href="ibc233/ibc233.html">IBC233</a></li>
+				<li><a href="int222/int222.html">INT222</a></li>
+				<li><a href="bti220/bti220.html">BTI220</a></li>
+              </ul>
+            </li>
+            <li><a href="https://scs.senecac.on.ca/">Seneca ICT</a></li>
+          </ul>
+        </nav>
+      </header>
+     <div class="clear"></div>
+      <article>
+        <h1>Main Page - Multi Level Menu Options - Horizontal</h1>
+        <p>Blah, blah, blah, blah, blah, blah, blah, blah, blah, blah . . . . . . . </p>
+      </article>
+      <article>
+      </article>    
+      <footer>
+        <section>
+          <!-- for view-source and download -->
+		  <br><p><a href="view-source:">View-source</a>&nbsp;&nbsp;&nbsp;<a href='' download>Download</a></p>
+        </section>
+      </footer>
+    </div>
+
+  <br>
+  
+</body>
+
+</html>

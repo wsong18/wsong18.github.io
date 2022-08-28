@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+  <meta charset="UTF-8" />
+  <title>INT222</title>
+  <style> 
+    body { margin: 0 18%; } 
+	#demo { background-color: lightblue; } 
+  </style>
+  <script type="text/javascript">	
+	function appendChildNode(){
+	  // create a new paragraph element and give it some content 
+	  var newNode = document.createElement("p"); 
+	  
+	  //add the text to the paragraph using the innerHTML property
+	  newNode.innerHTML = "This a new paragraph"; 
+	  
+	  // add the newly created element and its content at the end 
+	  // of the "demo" div element. 
+	  var demo_div = document.getElementById("demo"); 
+	  demo_div.appendChild(newNode, demo_div); 
+	}
+  </script>
+</head>
+<body>
+  <h1>INT222 - DOM node: Add node to node</h1>
+
+  <div id='demo'> This text is within the "demo" div element.</div>
+  <p> This paragraph is after the "demo" div element.</div>
+  
+  <p><button onclick="appendChildNode()">Append Child Node</button></p>
+    <br>
+  <!-- for downloading source files -->
+  <p><a href="" Download>Download</a></p>
+
+</body>
+</html>

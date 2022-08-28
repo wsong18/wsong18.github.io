@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en"> 
+ <head>
+   <meta charset="UTF-8" />
+   <title>Phone &amp; Name Validation</title>
+   <style> 
+      body { margin: 0 10%; }	  
+	  form { border: 10px solid #00ff00; padding: 5px; }	  
+	  #errors { color: red; }
+      .inputbox { 
+            background-color: #ffffff; 
+            border-top:    7px dashed #0000ff; 
+            border-bottom: 7px dashed #0000ff; 
+            border-left:   7px solid  #ff0000; 
+            border-right:  7px solid  #ff0000; 
+      }
+      .inputtext{
+            font-size: 14px; 
+            font-style:italic;
+            font-weight:bold;
+      }
+   </style>
+   <script>
+	  function formValidation() {
+	     clearerrors();
+		 var v1 = validateSurname();
+		 var v2 = validatePhoneNumber();
+         return v1 && v2;
+      }
+	  
+      function validateSurname() {
+         var errors = document.querySelector("#errors");	 
+		 var passAlpha = false;
+		 var alphString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+		 
+		 var inputValue = document.form1.surname.value.trim();
+		 
+		 if (inputValue.length == 0) {      /* check the length */
+			errors.innerHTML += "<p>* Name: No input! Please enter a meaningful name with at least one Alphabet letter.</p>";
+			return false;
+		 }
+		 for (var i = 0; i < inputValue.length; i++) {
+			// check at least one character is a letter
+			if (alphString.indexOf(inputValue.substr(i,1))>= 0) {
+			   passAlpha = true;
+			}
+		 }  // for
+		 if (!passAlpha){
+			errors.innerHTML += "<p>* Name: Please enter a meaningful name with at least one Alphabet letter.</p>";
+			return false; // failed for validation
+		 } 
+		 return true; // passed for validation
+      } //  End of function
+	  
+	  function validatePhoneNumber() {
+         var errors = document.querySelector("#errors");
+         var input = document.form1.phone.value.trim();
+
+		 if (input.length != 10) { // check 10 characters
+            errors.innerHTML += "<p>* Phone: Please enter 10 digits.</p>";
+			document.form1.phone.focus();
+			return false; // failed for validation
+         }
+		 
+         if (parseInt(input) != input) { // check all digits
+            errors.innerHTML += "<p>* Phone: Please enter a phone number, numbers only.</p>";
+            document.form1.phone.focus();
+	        return false; // failed for validation
+         }
+       
+         return true; // passed for validation
+      }
+	  
+	  function clearerrors() {
+         document.querySelector("#errors").innerHTML = "";
+      }
+   </script>
+ </head>
+ <body>
+   <header></header>
+   <nav></nav>
+   <div id="content" style="font-family:monospace;font-size:14px;">
+	  <h1>JavaScript - Form Validation - Phone &amp; Name</h1>
+	  <h4><mark> - Validating Text Field</mark></h4>
+	  <h4><mark> - Rule for client name: Check for no input, at least one alphabetic letter </mark></h4>
+	  <h4><mark> - Rule for phone number: 10 characters, all digits</mark></h4>
+	  <!-- Start of example -->
+	  <form id='example' name='form1' method='post' 
+			action='https://formpost.azurewebsites.net/home/test' 
+			onsubmit='return formValidation();'><br>
+		  <p>
+			  <label title="Name must have a minimum of 4 alphabetic characters."for="client">Client Name&nbsp;</label> 
+			  <span class='inputbox'>
+				<input class='inputtext' id='client' name='surname' autofocus required size='20' value='' maxlength='15'/>
+			  </span>
+		  </p>
+		  </p>		  
+			  <label title="Phone number must have the format of ###-###-####."for="pnumber"> Phone Number </label> 
+			  <span class='inputbox'>
+				<input class='inputtext' id='pnumber' name='phone'required size='20' value='' maxlength='15'>
+			  </span>
+		  </p>
+		  <div id='errors'></div>
+		  <br>
+		  <p>
+			 <input type="submit" value="Submit Information" /> &nbsp;&nbsp;  
+			 <input type="reset"  value="    Clear   " onclick="clearerrors()"/>  
+		  </p> 
+	   </form>
+	   <!-- End of example -->
+    </div>
+ </body>
+</html>

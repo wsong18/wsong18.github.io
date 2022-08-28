@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <title>INT222</title>
+   <style> body { margin: 0 20%; } </style>
+   <script>
+      function createParagraph() 
+      {
+	     var elem = document.getElementById("demo");
+		 elem.innerHTML = "<p>Hello World! </p>";
+		 // innerHTML can inject arbitrary HTML content into the page;
+		 // however, this is prone to bugs and errors and is considered poor style;
+		 // inject plain text only.
+	  }	  
+	  
+	  function updateParagraph(id) 
+      {
+	     document.getElementById("demo").innerHTML = "<p>Hi, there.</p>";
+	  }
+      
+      var appendParagraph = function() 
+      {
+	     document.getElementById("demo").innerHTML += "<p>Hello World! </p>";
+	  };
+	    
+	  var clr = function (id) 
+      {
+		 document.getElementById(id).innerHTML = "";
+	  };
+   </script>
+</head>
+<body>
+  <h1>INT222 - innerHTML - 2</h1>
+  
+  <br><hr><br>
+  
+  <div id="demo"></div>
+  <br>
+  
+  <input type="button" value="Create Paragraph" onclick="createParagraph()"> &nbsp;&nbsp;
+  <input type="button" value="Update Paragraph" onclick="updateParagraph('demo')"> &nbsp;&nbsp;
+  <input type="button" value="Append Paragraph" onclick="appendParagraph()"> &nbsp;&nbsp; 
+  <input type="button" value="Clear" onclick="clr('demo')"> &nbsp;&nbsp;
+
+  <br><br><hr><br>
+  <!-- for downloading source files -->
+  <p><a href="" Download>Download</a></p></body>
+
+</html>

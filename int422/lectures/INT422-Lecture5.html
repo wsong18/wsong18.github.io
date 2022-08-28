@@ -1,0 +1,1395 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<title>Lect 5</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Segoe UI Symbol";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:"Lucida Console";
+	panose-1:2 11 6 9 4 5 4 2 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+h4
+	{mso-style-link:"Heading 4 Char";
+	margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:#954F72;
+	text-decoration:underline;}
+p
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+code
+	{font-family:"Courier New";}
+span.Heading4Char
+	{mso-style-name:"Heading 4 Char";
+	mso-style-link:"Heading 4";
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink="#954F72" background=bgw.gif>
+
+<div class=WordSection1 
+     style="margin: 0.5in auto; max-width: 50em; min-width: 30em;">
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:18.0pt;
+font-family:"Arial",sans-serif'>INT422 – Lecture 5</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>HTML Forms with associated
+data.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Test today</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Test 4 is today, at&nbsp;the
+beginning of the timeslot, and will run approximately 12 minutes.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Textbook coverage</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>As announced last week, the
+textbook will have a supporting role as you learn new topics from these notes
+and your classroom sessions. Use the table-of-contents and the index to locate
+the topic, and then read about it there. A reminder: The textbook does not use
+view model classes in its discussions and code examples. We do.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Code examples</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>HTML Form Foundations</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>SelectList Introduction</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Theme for today</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Last week, we learned to
+display data from associated entities.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Today, we will begin to learn
+how to implement add and edit patterns for associated entities. Here’s a list
+of topics, in sequence:</span></p>
+
+<ol start=1 type=1>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Review</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Item-selection elements for HTML Forms</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Bootstrap introduction</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>SelectList object</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>HTML Helpers for dropdown and listbox</span></li>
+</ol>
+
+<p><span style='font-family:"Arial",sans-serif'>Remember that the key objective
+for this course is: <em><span style='font-family:"Arial",sans-serif'>Create
+interactive web apps, which have some complexity, and can scale.</span></em>
+This week’s topics help us make progress.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Before we begin…</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>At this point in time,&nbsp;you
+know something about these topics:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Scaffolding a view</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Hand-editing the view code</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Awareness of a large amount of generated
+     code in a view</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Awareness of HTML Helpers</span></li>
+</ul>
+
+<p><span style='font-family:"Arial",sans-serif'>Several times, you have used
+the Visual Studio <u>scaffolders to create a view</u>. The scaffolder provides
+an easy way to generate view source code for common scenarios (list, details,
+create, edit, and delete).</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Then, you have <u>hand-edited
+the view source code</u>, to change titles and other text. More recently, and
+in Assignment 4, you have added more HTML markup and code expressions, to
+render (for example) an HTML Table for invoice line items.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>When scaffolding a view to
+handle “add new” or “edit existing”, you have noticed that the scaffolder
+generates a <u>large amount of view source code</u>. The HTML Form elements are
+enclosed in nested &lt;div&gt; containers, and most include one or more “class”
+attributes.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Finally, these views have <u>several
+HTML Helper</u> code expressions. Your introductory knowledge of HTML
+Helpers&nbsp;(from in-class discussion, and from the textbook and other
+resources) is that they enable the Razor view engine to render an HTML element
+for the browser.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In summary, you have some
+knowledge of, and experience with, several topics that are needed for you to
+make progress today with the new topics.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Foundation topics overview</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>We have a BIG set of topics today. Take your
+time as you learn them.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>As indicated in the “theme for today” above, <i>implementing
+add and edit patterns for associated data</i> requires you to be comfortable
+with HTML Form concepts and coding techniques.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>We have taken advantage of the Visual Studio
+scaffolder, to generate source code for views. We have done this for <u>display-only
+views</u> (using the List or Details template), and also for <u>data
+modification views</u> (using the Create or Edit template).</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Display-only views</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The scaffolder does a reasonably good job at
+rendering display-only views.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>As you have noticed, it renders a collection in
+an HTML Table, and an object in an HTML Description List. The data items are
+rendered in these elements, and/or often in &lt;div&gt; or &lt;span&gt;
+elements.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In the first number of code examples (and topic
+coverage), we deliberately constrained the scaffolder’s activities, by working
+with a non-associated data entity (object or collection) on each view.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>If you have re-created last week’s <i>AssocOneToMany</i>
+code example, or worked on Assignment 4, you have probably noticed that the
+scaffolder does NOT render associated objects or collections.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>How does the scaffolder work with associated
+data? When working with associated data, we often need to use an item-selection
+element (control).</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Data modification views</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The scaffolder does a reasonably good job at
+rendering views for add-new, edit-existing, and delete-item.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>As you have noticed, it renders input fields
+(for many kinds of data) and buttons. But that’s it – the scaffolder is limited
+in what it can render. For example, the scaffolder – in its default usage –
+will NOT render an item-selection element (e.g. a dropdown list, or a checkbox
+group).</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Here’s a table that summarizes the HTML Form
+elements that are scaffolded:</span></p>
+
+<table class=MsoNormalTable border=0 cellpadding=0 width="80%"
+ style='width:80.14%'>
+ <tr style='height:24.35pt'>
+  <td style='background:#9CC2E5;padding:.75pt .75pt .75pt .75pt;height:24.35pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  style='font-size:12.0pt;line-height:107%;font-family:"Arial",sans-serif'>HTML
+  Form element</span></b></p>
+  </td>
+  <td style='background:#9CC2E5;padding:.75pt .75pt .75pt .75pt;height:24.35pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  style='font-size:12.0pt;line-height:107%;font-family:"Arial",sans-serif'>Scaffolded?</span></b></p>
+  </td>
+ </tr>
+ <tr style='height:24.35pt'>
+  <td style='background:#E5E5E5;padding:.75pt .75pt .75pt .75pt;height:24.35pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+  "Arial",sans-serif'>Label</span></p>
+  </td>
+  <td style='background:#E5E5E5;padding:.75pt .75pt .75pt .75pt;height:24.35pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+  "Arial",sans-serif'>Yes</span></p>
+  </td>
+ </tr>
+ <tr style='height:24.35pt'>
+  <td style='background:#E5E5E5;padding:.75pt .75pt .75pt .75pt;height:24.35pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+  "Arial",sans-serif'>Text box</span></p>
+  </td>
+  <td style='background:#E5E5E5;padding:.75pt .75pt .75pt .75pt;height:24.35pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+  "Arial",sans-serif'>Yes</span></p>
+  </td>
+ </tr>
+ <tr style='height:24.35pt'>
+  <td style='background:#E5E5E5;padding:.75pt .75pt .75pt .75pt;height:24.35pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+  "Arial",sans-serif'>Multiline text area</span></p>
+  </td>
+  <td style='background:#E5E5E5;padding:.75pt .75pt .75pt .75pt;height:24.35pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+  "Arial",sans-serif'>Yes</span></p>
+  </td>
+ </tr>
+ <tr style='height:24.35pt'>
+  <td style='background:#E5E5E5;padding:.75pt .75pt .75pt .75pt;height:24.35pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+  "Arial",sans-serif'>Button</span></p>
+  </td>
+  <td style='background:#E5E5E5;padding:.75pt .75pt .75pt .75pt;height:24.35pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+  "Arial",sans-serif'>Yes</span></p>
+  </td>
+ </tr>
+ <tr style='height:24.35pt'>
+  <td style='background:#E5E5E5;padding:.75pt .75pt .75pt .75pt;height:24.35pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+  "Arial",sans-serif'>Hidden</span></p>
+  </td>
+  <td style='background:#E5E5E5;padding:.75pt .75pt .75pt .75pt;height:24.35pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+  "Arial",sans-serif'>Yes</span></p>
+  </td>
+ </tr>
+ <tr style='height:24.35pt'>
+  <td style='background:#E5E5E5;padding:.75pt .75pt .75pt .75pt;height:24.35pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+  "Arial",sans-serif'>Dropdown list (select)</span></p>
+  </td>
+  <td style='background:#E5E5E5;padding:.75pt .75pt .75pt .75pt;height:24.35pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+  "Arial",sans-serif;color:red'>No</span></p>
+  </td>
+ </tr>
+ <tr style='height:24.35pt'>
+  <td style='background:#E5E5E5;padding:.75pt .75pt .75pt .75pt;height:24.35pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+  "Arial",sans-serif'>Listbox (select, multiple)</span></p>
+  </td>
+  <td style='background:#E5E5E5;padding:.75pt .75pt .75pt .75pt;height:24.35pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+  "Arial",sans-serif;color:red'>No</span></p>
+  </td>
+ </tr>
+ <tr style='height:24.35pt'>
+  <td style='background:#E5E5E5;padding:.75pt .75pt .75pt .75pt;height:24.35pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+  "Arial",sans-serif'>Radio button group</span></p>
+  </td>
+  <td style='background:#E5E5E5;padding:.75pt .75pt .75pt .75pt;height:24.35pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+  "Arial",sans-serif;color:red'>No</span></p>
+  </td>
+ </tr>
+ <tr style='height:24.35pt'>
+  <td style='background:#E5E5E5;padding:.75pt .75pt .75pt .75pt;height:24.35pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+  "Arial",sans-serif'>Checkbox group</span></p>
+  </td>
+  <td style='background:#E5E5E5;padding:.75pt .75pt .75pt .75pt;height:24.35pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+  "Arial",sans-serif;color:red'>No</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Well, that’s a problem. Often, we need to add
+an item-selection element to an HTML Form, especially in situations where we do
+data modification on associated entities.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Is there a solution? Yes – hand-coding.
+However, we can get some help by using good design and coding techniques, and
+by using some custom HTML Helpers and/or and-coded HTML.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Item-selection elements for HTML
+Forms</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In the sections below, you will
+learn design and coding techniques for working with item-selection
+elements&nbsp;in ASP.NET MVC web apps.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'><img width=752 height=524
+id="Picture 9" src="INT422-Lecture5_files/image001.jpg"
+alt=view-selectlist-styling-all-controls-annotated></span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Hand-editing item-selection elements</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The strategy we will use
+combines the scaffolder with hand-coding:</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Continue to use the scaffolder
+to generate source code for views that will work with associated data.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Then, plan on hand-editing the
+code, to add and configure the item-selection elements&nbsp;that you need.</span></p>
+
+<p>&nbsp;</p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Generating data for the item-selection element</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>All item-selection elements
+need data for its items. Where does the data come from?</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>For very (very) simple scenarios, it can
+     be hand-coded and therefore static in the view</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Most often the data is passed into the
+     view (from the controller)</span></li>
+</ul>
+
+<p><span style='font-family:"Arial",sans-serif'>The passed-in data will be, or
+have, a collection that can be used to render the items. In the controller, we
+can create a simple collection of strings for example, as a List&lt;string&gt;.
+Then, pass it to the view. Then, use the collection to render the items (in
+some kind of <em><span style='font-family:"Arial",sans-serif'>for</span></em>
+or <em><span style='font-family:"Arial",sans-serif'>foreach</span></em> loop).
+Later, you will learn about and then use a special-purpose object (a
+SelectList) to hold the items.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Passing data to the view</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>How do we pass the data to the
+view?</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The best practice is to create
+another view model class, which has a property for the collection. Recently (in
+Assignment 3), you learned how to create a view model class named
+“EmployeeContactInfoForm”, which had the data needed on the HTML Form. </span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>We continue to use this
+concept, for ALL scenarios in which we need to send data to the HTML Form.</span></p>
+
+<p style='margin-left:.5in'><span style='font-size:18.0pt;font-family:"Segoe UI Symbol",sans-serif;
+color:#0070C0'>&#10077;</span><span style='font-family:"Arial",sans-serif'>In
+summary, </span></p>
+
+<p style='margin-left:.5in'><span style='font-family:"Arial",sans-serif'>we
+create and use two view model classes for “add new” and “edit existing” use
+cases. For example, assume that we are coding the “add new” use case:</span></p>
+
+<p style='margin-left:.5in'><span style='font-family:"Arial",sans-serif'>A view
+model class named <span style='color:red'>Employee</span><span
+style='color:blue'>Add</span><span style='color:green'>Form</span> is used to
+package and send data to the HTML Form in the browser.</span></p>
+
+<p style='margin-left:.5in'><span style='font-family:"Arial",sans-serif'>Another
+view model class named <span style='color:red'>Employee</span><span
+style='color:blue'>Add</span> is used to describe the shape of the data
+submitted by the browser user.</span></p>
+
+<p style='margin-left:.5in'><i><span style='font-family:"Arial",sans-serif'>&nbsp;</span></i></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>HTML Form elements and the “name” attribute</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Next, a&nbsp;fundamental idea
+is that the value of the “name” attribute of an HTML Forms element is used to
+identify or “name” the data that is submitted (posted) by the browser user. For
+example, an &lt;input name=Username /&gt; element will render a textbox. When
+the form is submitted, your controller code has access to the data by using the
+“Username” property/variable. The same idea applies to item-selection elements.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Here’s an overview – and
+reminder about – coding techniques for item-selection elements.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>While you are
+reading&nbsp;these scenarios, open the <em><span style='font-family:"Arial",sans-serif'>HTMLFormFoundations</span></em>
+code example, and study the appropriate view source code objects.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>Dropdown
+list</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>This is rendered by a
+&lt;select&gt; element, with &lt;option&gt; descendants. It permits the
+selection of one item.</span></p>
+
+<p style='margin-left:.5in'><span style='font-size:18.0pt;font-family:"Segoe UI Symbol",sans-serif;
+color:#0070C0'>&#10077;</span><span style='font-family:"Arial",sans-serif'>Alternatively,
+<i>it can be rendered with a DropDownList HTML Helper, explained later.</i></span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>As noted above, each
+&lt;option&gt; item is configured with a “name” attribute and value. When the
+HTML Form is submitted, the controller code can access the data (described
+next) by using the variable name in the attribute’s value.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Each &lt;option&gt; item is
+configured with a non-visible “value” attribute and value, which is intended to
+be the item’s unique identifier. When the HTML Form is submitted, the
+controller code can use the data in the attribute’s value.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>Listbox</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>This is also rendered by a
+&lt;select&gt; element, with &lt;option&gt; descendants. Add a “size” attribute
+and (an integer) value to the &nbsp;&lt;select&gt; element, and the vertical
+height will allow that number of items to be visible.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In this configuration, it is
+not necessary for the user to select an item. However, if desired, it does
+permit the selection of one item.</span></p>
+
+<p style='margin-left:.5in'><span style='font-size:18.0pt;font-family:"Segoe UI Symbol",sans-serif;
+color:#0070C0'>&#10077;</span><span style='font-family:"Arial",sans-serif'>Alternatively,
+<i>it also can be rendered with a DropDownList HTML Helper.</i></span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>If you wish to permit the
+selection of <em><span style='font-family:"Arial",sans-serif'>multiple</span></em>
+items on the list (using the Ctrl or Command keys), then add a “multiple”
+attribute to the &lt;select&gt; element.</span></p>
+
+<p style='margin-left:.5in'><span style='font-size:18.0pt;font-family:"Segoe UI Symbol",sans-serif;
+color:#0070C0'>&#10077;</span><span style='font-family:"Arial",sans-serif'>Alternatively,
+<i>it can also be rendered with a ListBox HTML Helper, explained later.</i></span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The “name” and “value”
+attributes (and values) are configured in a manner similar to the dropdown
+list.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>Radio
+button group (aka “radios”)</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>This is rendered by multiple
+&lt;input type=radio&gt; elements. It permits the selection of one item in the
+group.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The “name” and “value”
+attributes (and values) are configured in a manner similar to the elements
+above. A best practice is to wrap each in a &lt;label&gt; element.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>Checkbox
+group (aka “checkboxes”)</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>This is rendered by multiple
+&lt;input type=checkbox&gt; elements. It permits the selection of multiple items
+in the group.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The “name” and “value”
+attributes (and values) are configured in a manner similar to the elements
+above.&nbsp;A best practice is to wrap each in a &lt;label&gt; element.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>Submitting
+data (posting) from the browser user</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>As you know from the past, and
+reinforced above, data entered on an HTML Form will enter a controller method
+when submitted (or posted back) by the browser user.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In PHP, you know that the data
+was available in the <em><span style='font-family:"Arial",sans-serif'>$_POST</span></em>
+global predefined variable.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In ASP.NET MVC, although the
+data was available in a <em><span style='font-family:"Arial",sans-serif'>FormCollection</span></em>
+object (and therefore in a format similar to the PHP associative array), we <em><span
+style='font-family:"Arial",sans-serif'>almost always</span></em> use strong
+typing, by specifying a view model class as the parameter in the controller
+method.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>For an HTML Forms element, the
+value of the “name” attribute MUST match a property name in the view model
+class. When submitted, the body of the POST request will include the data as an
+encoded name-value pair. For example, an &lt;input name=Email /&gt; textbox, in
+which the user enters “peter@example.com”, will submit “Email=peter@example.com”.
+The ASP.NET MVC runtime will attempt to convert non-string data into usable
+values (e.g. int, double, DateTime).</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>What happens with an
+item-selection element, for a single-select scenario? As you would expect, the
+“name” attribute MUST match a property name in the view model class. The
+property type type could be string, or int, but usually int.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>How about a multiple-select
+scenario? Well, same approach as above, but the view model class property type
+MUST be a collection of int (usually IEnumerable&lt;int&gt;, initialized as
+List&lt;int&gt; in the constructor).</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-size:16.0pt;font-family:"Arial",sans-serif'>Learning
+from the code example</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>When you studied and ran the <em><span
+style='font-family:"Arial",sans-serif'>HTMLFormFoundations</span></em> code
+example, you should have noticed that the item-selection elements were coded
+with…</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>hand-coded statically-defined data</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>data in a simple collection of (for
+     example) strings</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>data in a collection of objects that had
+     more complexity than strings</span></li>
+</ul>
+
+<p><span style='font-family:"Arial",sans-serif'>Then, you should have noticed
+how the item-selection elements were rendered in the browser.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Ugly.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Yes, the views are not pretty.
+These HTML Forms do not use the same styling that we have seen on other
+scaffolded forms. The spacing is wrong. Alignment is terrible. </span></p>
+
+<p><img width=721 height=455 id="Picture 3"
+src="INT422-Lecture5_files/image002.png"></p>
+
+<p><img width=721 height=455 id="Picture 4"
+src="INT422-Lecture5_files/image003.png"></p>
+
+<p><img width=723 height=457 id="Picture 5"
+src="INT422-Lecture5_files/image004.png"></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Why is it the way it is? The
+elements have not yet been styled.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Can we fix? Yes.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Introduction to Bootstrap for new
+ASP.NET MVC programmers</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Bootstrap is a framework that
+helps us develop responsive and mobile-compatible web apps.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The awesomeness was created by
+Mark Otto and Jacob Thornton, then with Twitter. It is an open source project.
+You can read more about Bootstrap in </span><a
+href="https://en.wikipedia.org/wiki/Bootstrap_%28front-end_framework%29"
+target="_blank"><span style='font-family:"Arial",sans-serif'>this Wikipedia
+article</span></a><span style='font-family:"Arial",sans-serif'>.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>All ASP.NET MVC web apps
+include the Bootstrap framework.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>OK,
+it’s a framework, but really what is Bootstrap?</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>At its core, it is a set of CSS
+rules. Most are implemented as element and class selectors.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>It enables us to have visual
+consistency on web pages. It’s Bootstrap that affects the appearance of our web
+app. The black-background navigation menu, layout characteristics, comfortable
+spacing, nice clear buttons, rounded-corner text input fields on HTML Forms,
+responsiveness for different screen (viewport) sizes – all that comes from
+Bootstrap.</span></p>
+
+<p><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>How do
+I use Bootstrap?</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>After learning the small set of
+need-to-know-now topics (discussed below), use Bootstrap by setting and/or
+adding names/values to the “class” attribute of HTML elements.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>And, organize the content by
+using &lt;div&gt; elements.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Sounds too simple? Yes. But it
+IS that simple (again, after learning more, below).</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>What
+do I need to know NOW?</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>There’s a&nbsp;small number of
+topics that you need to know something about now:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Grid system</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>HTML Forms</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Tables</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Buttons</span></li>
+</ul>
+
+<p><span style='font-family:"Arial",sans-serif'>Let’s look at each one, in more
+detail.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>Grid
+system</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>From the documentation,
+“Bootstrap includes a responsive, mobile first fluid grid system that
+appropriately scales up to 12 columns as the device or viewport size increases.
+It includes predefined classes for easy layout option”.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Open the </span><a
+href="http://getbootstrap.com/css/#grid" target="_blank"><span
+style='font-family:"Arial",sans-serif'>“Grid system” documentation</span></a><span
+style='font-family:"Arial",sans-serif'>, and read/skim these sub-sections:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Introduction</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Grid options</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Example: Mobile and desktop</span></li>
+</ul>
+
+<p><span style='font-family:"Arial",sans-serif'>The _Layout.cshtml source code
+file includes a &lt;div class=”container”&gt; element, which encloses the grid
+system. Then, we can use classes to size and position content and HTML Forms.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>HTML
+Forms</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>From the documentation,
+“Individual form controls automatically receive some global styling. Wrap
+labels and controls in .form-group for optimum spacing.”</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Open the </span><a
+href="http://getbootstrap.com/css/#forms" target="_blank"><span
+style='font-family:"Arial",sans-serif'>“Forms” documentation</span></a><span
+style='font-family:"Arial",sans-serif'>, and read/skim these sub-sections:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Basic example</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Horizontal form</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Supported controls</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Control sizing</span></li>
+</ul>
+
+<p><span style='font-family:"Arial",sans-serif'>We use horizontal forms
+frequently in this course. The important take-aways from the documentation, and
+for our new work (later today), are:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Always use a &lt;label&gt; with an HTML
+     Form element/control</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Package the label + control inside a
+     &lt;div class=”form-group”&gt; element</span></li>
+</ul>
+
+<p><span style='font-family:"Arial",sans-serif'>By following this rule, we get
+visual consistency, and nice spacing and appearance. Look at the result in the
+next two images, from another code example, <em><span style='font-family:"Arial",sans-serif'>SelectListIntro</span></em>.</span></p>
+
+<p><img border=0 width=721 height=539 id="Picture 6"
+src="INT422-Lecture5_files/image005.png"></p>
+
+<p><img border=0 width=721 height=650 id="Picture 7"
+src="INT422-Lecture5_files/image006.png"></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Above, it was noted that
+Bootstrap makes your web app mobile-friendly. The image below shows the “Add
+Vehicle” page in a narrow viewport that’s typical of a hand-held smartphone.
+Notice that the navigation menu is collapsed to the widely-used menu/”hamburger”
+icon. Notice also that the HTML Form element labels are <em><span
+style='font-family:"Arial",sans-serif'>above</span></em> the element, and the
+HTML Form elements themselves are left-aligned. </span></p>
+
+<p><img border=0 width=285 height=602 id="Picture 8"
+src="INT422-Lecture5_files/image007.png"></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>Tables</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>As you saw last week, it is
+easy to style a table with Bootstrap classes.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Open the </span><a
+href="http://getbootstrap.com/css/#tables" target="_blank"><span
+style='font-family:"Arial",sans-serif'>“Tables” documentation</span></a><span
+style='font-family:"Arial",sans-serif'>, and read/skim these sub-sections:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Basic example</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Striped rows</span></li>
+</ul>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>Buttons</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>We can “Use the button classes
+on an &lt;a&gt;, &lt;button&gt;, or &lt;input&gt; element.” Sweet.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Open the </span><a
+href="http://getbootstrap.com/css/#buttons" target="_blank"><span
+style='font-family:"Arial",sans-serif'>“Buttons” documentation</span></a><span
+style='font-family:"Arial",sans-serif'>, and read/skim these sub-sections:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Button tags</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Options</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Sizes</span></li>
+</ul>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>How do
+I learn more?</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Your teacher team cautions you
+from getting lost in the Bootstrap framework documentation. Start simple, then
+in the future, dig deeper when you need to.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>It is safe to read/skim the
+Bootstrap&nbsp;</span><a href="http://getbootstrap.com/css/" target="_blank"><span
+style='font-family:"Arial",sans-serif'>CSS documentation</span></a><span
+style='font-family:"Arial",sans-serif'>, because you will get the most value
+from it during the middle part of the course.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>It is probably safe to
+read/skim the </span><a href="http://getbootstrap.com/getting-started/"
+target="_blank"><span style='font-family:"Arial",sans-serif'>Getting started
+documentation</span></a><span style='font-family:"Arial",sans-serif'>. However,
+Bootstrap is already installed in all ASP.NET MVC projects, so you will NOT
+have to do any of the install/configure tasks that are described there.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Later in the course, we’ll
+touch on some of the Bootstrap components, and some of its JavaScript helpers
+and add-ins. We will also look at themes, to change the overall look of your
+web app.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In summary, don’t stray too far
+from the guidance provided here.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Progress checkpoint</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>At this point, you have
+learned, or been reminded of, some design and coding techniques for working
+with item-selection elements in ASP.NET MVC web apps:</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>1. We use a “…Form” view model
+class to package the data that will be needed in the item-selection element.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>2. We must hand-edit views, to
+add item-selection elements.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>3. Each item-selection element
+must have a &lt;label&gt; element. Both are packaged inside a &lt;div
+class=form-group&gt; element. (Radio and checkbox elements also need their own
+&lt;label&gt; element.)</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>4. A separate class is then
+used to describe the shape of the data submitted by the browser user. A
+single-select value will be in an int property. Multiple-select values will be
+in an int collection property (e.g. List&lt;int&gt;).</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>We need to learn something
+about SelectList objects, so that we can make progress on 1, 2, and 3. We do
+that next.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>SelectList introduction</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>As you are studying this
+section (and those below), open the <em><span style='font-family:"Arial",sans-serif'>SelectListIntro</span></em>
+code example.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>SelectList is a class for
+packaging the data needed by an HTML Forms item-selection element. It works
+with all of those elements (dropdown, listbox, radios, checkboxes).</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>We create a SelectList object
+in a controller method.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>It then becomes the value for a
+SelectList property in&nbsp;a <em><span style='font-family:"Arial",sans-serif'>view
+model object</span></em>&nbsp;that gets passed to a view. The naming convention
+for this SelectList property in the view model class should (must) include the
+suffix “List”. For example, “ManufacturerList”:</span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console";color:#00B050'>// SelectList for Manufacturer</span></code></p>
+
+<p style='margin-left:.5in'><code><b><span style='font-size:11.0pt;font-family:
+"Lucida Console";color:#002060'>public</span></b></code><span style='font-size:
+14.0pt;font-family:"Lucida Console";color:#002060'> </span><code><span
+style='font-size:11.0pt;font-family:"Lucida Console"'>SelectList
+ManufacturerList { <b><span style='color:#002060'>get</span></b>; <b><span
+style='color:#002060'>set</span></b>; }</span></code></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>What data does an
+item-selection element need? Let’s look at the HTML for a dropdown list:</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'><img border=0 width=681
+height=270 id="Picture 2" src="INT422-Lecture5_files/image008.png"
+alt=dropdown-bare></span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Therefore, it needs:</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>A value for the “name”
+attribute, which will be used as the <u>name</u> in the name-value pair that is
+submitted (posted back) by the browser user. (For example, “ManufacturerId”.)</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Values for each item’s “value”
+attribute, which will be used as the <u>value</u> in the name-value pair that
+is submitted by the browser user. (For example, “2”.)</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Visible text, which will be
+displayed to the browser user. (For example, “Volkswagen AG”.)</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>SelectList
+structure</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>A SelectList is available in
+two forms:</span></p>
+
+<ol start=1 type=1>
+ <li class=MsoNormal style='line-height:normal'><a
+     href="https://msdn.microsoft.com/en-us/library/system.web.mvc.selectlist%28v=vs.118%29.aspx"
+     target="_blank"><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>SelectList</span></a><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif'>, intended for
+     single-select use cases</span></li>
+ <li class=MsoNormal style='line-height:normal'><a
+     href="https://msdn.microsoft.com/en-us/library/system.web.mvc.multiselectlist%28v=vs.118%29.aspx"
+     target="_blank"><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>MultiSelectList</span></a><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif'>, intended for
+     multiple-select use cases</span></li>
+</ol>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>When you create a SelectList
+object, its variable or property name becomes the “name” attribute in the HTML
+Form item-selection element.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The <u>most-commonly-used
+constructor</u>&nbsp;is used with a collection of objects. For example, a
+collection of Products. Or, a collection of Employees. The constructor has
+these three parameters:</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>1. <b>IEnumerable items</b> – A
+<em><span style='font-family:"Arial",sans-serif'>collection</span></em>, which
+will be used for the items in the item-selection element. Most often, the
+collection will be fetched by a call to a manager method (which returns a collection).</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>2. string <b>dataValueField</b>
+– The name of the property of an object&nbsp;<em><span style='font-family:"Arial",sans-serif'>in
+the collection</span></em> that has the data which will be used for the value
+of the “value” attribute in the item-selection element. Most often, this will
+be the object’s unique identifier (e.g. “Id”, or “CustomerId”, etc.), and
+therefore, will be an int.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>3. string <b>dataTextField</b>
+– The name of the property of an object&nbsp;<em><span style='font-family:"Arial",sans-serif'>in
+the collection</span></em> that has the data which will be used for the visible
+text in the item-selection element. Most often, this will be a name or other
+string concatenation that has naming or descriptive information.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The SelectList object is passed
+along with the other properties in the view model class, to the view.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>A <u>less-commonly-used
+constructor</u> is used with a collection of simple strings or ints. For
+example, a string collection of sizes (“Small”, “Medium”, “Large”).</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In this situation, the
+constructor has only one parameter, IEnumerable items, which is the collection.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In this scenario, the Razor
+view engine will not render a “value” attribute in the HTML document. It
+renders each item in the collection as visible text. HTML Form standards will
+then cause the selected item’s visible text to be submitted by the browser
+user.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>See both of these strategies in
+action, by studying the <em><span style='font-family:"Arial",sans-serif'>HTMLFormFoundations</span></em>
+code example.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-size:16.0pt;font-family:"Arial",sans-serif'>Using
+a SelectList object in a view</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>We can loop through the
+collection of items in the SelectList object (for, or foreach), and render the
+items for any kind of item-selection element.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>For example, here’s how to
+render a <u>dropdown list</u> (which is a single-selection element):</span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console"'>&lt;<b><span style='color:#002060'>div</span></b></span></code><span
+style='font-size:12.0pt;line-height:107%;font-family:"Lucida Console";
+color:#002060'> </span><code><span style='line-height:107%;font-family:"Lucida Console"'>class=&quot;<span
+style='color:#990033'>form</span><span style='color:#CC0099'>-</span><span
+style='color:#990033'>group</span>&quot;&gt;</span></code></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console"'>&nbsp;&nbsp;&lt;<b><span style='color:#002060'>label</span></b></span></code><span
+style='font-size:12.0pt;line-height:107%;font-family:"Lucida Console"'> </span><code><span
+style='line-height:107%;font-family:"Lucida Console"'>for=&quot;<span
+style='color:#990033'>ManufacturerList</span>&quot;</span></code><span
+style='font-size:12.0pt;line-height:107%;font-family:"Lucida Console"'> </span><code><span
+style='line-height:107%;font-family:"Lucida Console"'>class=&quot;<span
+style='color:#990033'>control</span><span style='color:#CC0099'>-</span><span
+style='color:#990033'>label</span><span style='color:#CC0099'> </span><span
+style='color:#990033'>col</span><span style='color:#CC0099'>-</span><span
+style='color:#990033'>md</span><span style='color:#CC0099'>-</span><span
+style='color:#990033'>2</span>&quot;&gt;Manufacturer List&lt;/label&gt;</span></code></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console"'>&nbsp;&nbsp;&lt;<b><span style='color:#002060'>div</span></b></span></code><span
+style='font-size:12.0pt;line-height:107%;font-family:"Lucida Console"'> </span><code><span
+style='line-height:107%;font-family:"Lucida Console"'>class=&quot;<span
+style='color:#990033'>col-md-10</span>&quot;&gt;</span></code></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;&lt;<b><span
+style='color:#002060'>select</span></b></span></code><span style='font-size:
+12.0pt;line-height:107%;font-family:"Lucida Console"'> </span><code><span
+style='line-height:107%;font-family:"Lucida Console"'>name=&quot;<span
+style='color:#990033;background:yellow'>ManufacturerId</span>&quot;</span></code><span
+style='font-size:12.0pt;line-height:107%;font-family:"Lucida Console"'> </span><code><span
+style='line-height:107%;font-family:"Lucida Console"'>class=&quot;<span
+style='color:#990033'>form-control</span>&quot;&gt;</span></code></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@foreach
+(var item in Model.ManufacturerList)</span></code></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</span></code></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<b><span
+style='color:#002060'>option</span></b></span></code><span style='font-size:
+12.0pt;line-height:107%;font-family:"Lucida Console"'> </span><code><span
+style='line-height:107%;font-family:"Lucida Console"'>value=&quot;<span
+style='color:#990033'>@item.Value</span>&quot;&gt;@item.Text&lt;/<b><span
+style='color:#002060'>option</span></b>&gt;</span></code></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span></code></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/<b><span
+style='color:#002060'>select</span></b>&gt;</span></code></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;@Html.ValidationMessageFor(model
+=&gt; model.ManufacturerList, &quot;&quot;, new { @class = &quot;<span
+style='color:#990033'>text-danger</span>&quot; })</span></code></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console"'>&nbsp;&nbsp;&lt;/<b><span style='color:#002060'>div</span></b>&gt;</span></code></p>
+
+<p style='margin-left:.5in'><code><span style='font-size:11.0pt;font-family:
+"Lucida Console"'>&lt;/</span></code><code><b><span style='font-size:11.0pt;
+font-family:"Lucida Console";color:#002060'>div</span></b></code><code><span
+style='font-size:11.0pt;font-family:"Lucida Console"'>&gt;</span></code></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>For example, here’s how to
+render a <u>radio button group</u> (which is also a single-selection element):</span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console"'>&lt;<b><span style='color:#002060'>div</span></b>
+class=&quot;<span style='color:#990033'>form-group</span>&quot;&gt;</span></code></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console"'>&nbsp;&nbsp;&lt;<b><span style='color:#002060'>label</span></b>
+for=&quot;<span style='color:#990033'>ManufacturerList</span>&quot;
+class=&quot;c<span style='color:#990033'>ontrol-label col-md-2</span>&quot;&gt;Manufacturer
+List&lt;/<b><span style='color:#002060'>label</span></b>&gt;</span></code></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console"'>&nbsp;&nbsp;&lt;<b><span style='color:#002060'>div</span></b>
+class=&quot;<span style='color:#990033'>col-md-10</span>&quot;&gt;</span></code></p>
+
+<p style='margin-left:.5in'><code><span style='font-size:11.0pt;font-family:
+"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;@foreach (</span></code><code><b><span
+style='font-size:11.0pt;font-family:"Lucida Console";color:#002060'>var</span></b></code><code><span
+style='font-size:11.0pt;font-family:"Lucida Console"'> item </span></code><code><b><span
+style='font-size:11.0pt;font-family:"Lucida Console";color:#002060'>in</span></b></code><code><span
+style='font-size:11.0pt;font-family:"Lucida Console"'> Model.ManufacturerList)</span></code></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;{</span></code></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<b><span
+style='color:#002060'>div</span></b> class=&quot;<span style='color:#990033'>radio</span>&quot;&gt;</span></code></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<b><span
+style='color:#002060'>label</span></b>&gt;&lt;input type=&quot;<span
+style='color:#990033'>radio</span>&quot; name=&quot;<span style='color:#990033;
+background:yellow'>ManufacturerId</span>&quot; value=&quot;@item.Value&quot;
+/&gt;@item.Text&lt;/<b><span style='color:#002060'>label</span></b>&gt;</span></code></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/<b><span
+style='color:#002060'>div</span></b>&gt;</span></code></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;}</span></code></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;@Html.ValidationMessageFor(model
+=&gt; model.ManufacturerList, &quot;&quot;, new { @class =
+&quot;text-danger&quot; })</span></code></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console"'>&nbsp;&nbsp;&lt;/<b><span style='color:#002060'>div</span></b>&gt;</span></code></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console"'>&lt;/<b><span style='color:#002060'>div</span></b>&gt;</span></code></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>Naming
+convention for the “name” attribute of the item-selection element</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In the HTML Form in the view,
+the value of the “name” attribute in the item-selection element MUST match the
+name of a property in the view model class that describes the data submitted by
+the user.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>For example, in a VehicleAdd
+view model class, assume that there is an int property named “ManufacturerId”.
+This MUST match the value used for the “name” attribute.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>For single items, use the
+singular word form. For example, “ManufacturerId”.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>For multiple items (multiple
+select listbox, or checkbox group), use the plural word form. For example,
+“CourseIds”.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>HTML Helpers for item-selection
+elements</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The textbook has good coverage
+of this topic in chapter 5, “Forms and HTML Helpers”.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>You have seen how easy it is to
+write code for views. Also, you recently learned about the “scaffolding” topic,
+and noticed that scaffolded views included code expressions that began with
+“Html”. These are&nbsp;<em><span style='font-family:"Arial",sans-serif'>HTML
+Helpers</span></em>, which are intended to make some of the HTML easier&nbsp;to
+write.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>HTML Helpers offer these
+benefits:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Link (URI) resolution at runtime</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Less code required to render some HTML
+     Forms elements</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Model binding</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>User interface support for interaction and
+     error message display</span></li>
+</ul>
+
+<p><span style='font-family:"Arial",sans-serif'>.</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>Simple
+helpers</span></strong></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-family:"Arial",sans-serif'>ActionLink
+     – i.e. HTML.ActionLink()</span></li>
+</ul>
+
+<p><span style='font-family:"Arial",sans-serif'>As you will see on the “Login”
+page, you can also use the Textbox and Password helpers. However, they get more
+useful when there’s a model object involved.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>.</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>Helpers
+used with view model data</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Helpers offer more benefits
+when used with view model data (specifically model binding, and user interface
+support). You can use these helpers:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Textbox</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Password</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Label</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>TextArea</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>DropDownList</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Listbox</span></li>
+</ul>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>Helpers
+for item-selection elements</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>If you want to render a <u>dropdown
+list</u> or a <u>listbox</u> (single or multiple selection), you can use an
+HTML Helper.</span></p>
+
+<p style='margin-left:.5in'><span style='font-size:18.0pt;font-family:"Segoe UI Symbol",sans-serif;
+color:#0070C0'>&#10077;</span><span style='font-family:"Arial",sans-serif'>Note:</span></p>
+
+<p style='margin-left:.5in'><i><span style='font-family:"Arial",sans-serif'>The
+ASP.NET MVC class library does NOT&nbsp;(yet) have HTML Helpers for a radio
+button group or a checkbox group.</span></i></p>
+
+<p style='margin-left:.5in'><i><span style='font-family:"Arial",sans-serif'>However,
+as an advanced topic – maybe beyond the scope of this course – we can create
+our own custom HTML Helper. Or use a NuGet package that someone “out there” has
+created.</span></i></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The DropDownList HTML Helper
+replaces the loop code in the example above to a one-line statement:</span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console"'>&lt;<b><span style='color:#002060'>div</span></b>
+class=&quot;<span style='color:#990033'>form-group</span>&quot;&gt;</span></code></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console"'>&nbsp;&nbsp;@Html.LabelFor(model =&gt;
+model.ManufacturerList, htmlAttributes: new { @class = &quot;<span
+style='color:#990033'>control-label col-md-2</span>&quot; })</span></code></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console"'>&nbsp;&nbsp;&lt;<b><span style='color:#002060'>div</span></b>
+class=&quot;<span style='color:#990033'>col-md-10</span>&quot;&gt;</span></code></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;@Html.DropDownList(&quot;<span
+style='color:#990033;background:yellow'>ManufacturerId</span>&quot;,
+Model.ManufacturerList, htmlAttributes: new { @class = &quot;<span
+style='color:#990033'>form-control</span>&quot; })</span></code></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;@Html.ValidationMessageFor(model
+=&gt; model.ManufacturerList, &quot;&quot;, new { @class =
+&quot;text-danger&quot; })</span></code></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console"'>&nbsp;&nbsp;&lt;/<b><span style='color:#002060'>div</span></b>&gt;</span></code></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console"'>&lt;/<b><span style='color:#002060'>div</span></b>&gt;</span></code></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>If you want to display a
+multi-line single-selection listbox, the DropDownList HTML Helper does that
+job. Yes, it does. Simply add a “size” attribute to the method call.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>If you want to display a
+multi-line <u>multiple</u>-selection listbox, the ListBox HTML Helper does that
+job. It is a best practice to include a “size” attribute. For example:</span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console"'>&lt;<b><span style='color:#002060'>div</span></b>
+class=&quot;<span style='color:#990033'>form-group</span>&quot;&gt;</span></code></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console"'>&nbsp;&nbsp;@Html.LabelFor(model =&gt;
+model.CourseList, htmlAttrtes: new { @class = &quot;<span style='color:#990033'>control-label
+col-md-2</span>&quot; })</span></code></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console"'>&nbsp;&nbsp;&lt;<b><span style='color:#002060'>div</span></b>
+class=&quot;col-md-10&quot;&gt;</span></code></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;@Html.ListBox(&quot;<span
+style='color:#990033;background:yellow'>CourseIds</span>&quot;,
+Model.CourseList, htmlAttributes: new { @class = &quot;<span style='color:#990033'>form-control
+col-md-2</span>&quot;, @size = 10 })</span></code></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;@Html.ValidationMessageFor(model
+=&gt; model.CourseList, &quot;&quot;, new { @class = &quot;<span
+style='color:#990033'>text-danger</span>&quot; })</span></code></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console"'>&nbsp;&nbsp;&lt;/<b><span style='color:#002060'>div</span></b>&gt;</span></code></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='line-height:
+107%;font-family:"Lucida Console"'>&lt;/<b><span style='color:#002060'>div</span></b>&gt;</span></code></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>The big picture and workflow</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The following image attempts to
+capture the topic coverage above, by showing the assets involved in rendering
+an item-selection element on an HTML Form in the browser. Click to open the
+image full-size in a new tab/window.</span></p>
+
+<p><a
+href="https://scs.senecac.on.ca/~wei.song/int422/common/form-with-selectlist-flow-v3.png"><span
+style='color:windowtext;text-decoration:none'><img border=0 width=732
+height=1094 id="Picture 10" src="INT422-Lecture5_files/image009.png"></span></a></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>

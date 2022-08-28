@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html lang=en>
+<head>
+    <meta charset=utf-8>
+    <title>Images 1</title>
+    <style>
+        body
+        {
+            width: 90%;
+            margin: auto;
+        }
+
+        /* image boxes */
+
+        .imageRow
+        {
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid black;
+        }
+
+            .imageRow img
+            {
+                float: left;
+                cursor: pointer;
+            }
+
+            .imageRow p
+            {
+                margin-left: 350px;
+            }
+
+            .imageRow:after
+            {
+                content: '';
+                display: block;
+                clear: both;
+            }
+
+        /* modal popup */
+
+        #popup
+        {
+            display: none;
+            position: fixed; /* absolute? fixed? they have different results... */
+            top: 50px;
+            left: 50px;
+            background-color: white;
+            padding: 20px;
+            border: 1px solid black;
+            cursor: default;
+            z-index: 1000;
+        }
+
+            #popup .image
+            {
+                max-width: 1000px;
+            }
+
+            #popup .close
+            {
+                position: absolute;
+                top: 0;
+                right: 0;
+                z-index: 1001;
+                font: bold 24px arial, sans-serif;
+                color: white;
+                background-color: darkred;
+                padding: 2px;
+                border: 2px solid white;
+                border-radius: 10px;
+                margin: 2px;
+                cursor: pointer;
+            }
+
+        #popupbg
+        {
+            visibility: hidden;
+            background: rgba(0,0,0,0.5);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 999;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3>Image Gallery 1</h3>
+
+    <p>Horizontal presentation; click an image to view a larger version:</p>
+    <p>
+        Photos are from the National Geographic Photo Contest 2012, published on TheAtlantic.com; <a href='http://www.theatlantic.com/infocus/2012/09/national-geographic-photo-contest-2012/100373/'
+            target=_blank>part 1</a>, and <a href='http://www.theatlantic.com/infocus/2012/11/national-geographic-photo-contest-2012-part-ii/100414/'
+                target=_blank>part 2</a>.
+    </p>
+
+    <div id=container>
+
+        <div class=imageRow>
+            <img src='images/mednatgeo201201.jpg' alt='' onclick='imageView("images/natgeo201201.jpg");'>
+            <p>
+                The Matterhorn: Night Clouds #2 -- The Matterhorn, 4478 m, at full moon. (&copy; Nenad Saljic/National Geographic
+                    Photo Contest)
+            </p>
+        </div>
+
+        <div class=imageRow>
+            <img src='images/mednatgeo201202.jpg' alt='' onclick='imageView("images/natgeo201202.jpg");'>
+            <p>
+                Swimming with a Turtle: After observing this turtle, I swam with him for a few minutes. (&copy; John Peterson/National
+                    Geographic Photo Contest)
+            </p>
+        </div>
+
+        <div class=imageRow>
+            <img src='images/mednatgeo201203.jpg' alt='' onclick='imageView("images/natgeo201203.jpg");'>
+            <p>
+                Red Land: Sunset Cloud Village is one of the most picturesque places in Red Land, China. As its name indicates,
+                    it's best to see before sunset. The reddish brown soil turns redder after rainfall and after farmers plow the land.
+                (&copy;
+                    Peng Jiang/National Geographic Photo Contest)
+            </p>
+        </div>
+
+        <div class=imageRow>
+            <img src='images/mednatgeo201204.jpg' alt='' onclick='imageView("images/natgeo201204.jpg");'>
+            <p>
+                The Location: The iron and steel bars are located in their correct position. Perhaps it is not deliberately made
+                    by somebody, but naturally positioned unknowingly by the shop owner over time. (&copy; Noh Keun Park/National Geographic
+                Photo Contest)
+            </p>
+        </div>
+
+        <div class=imageRow>
+            <img src='images/mednatgeo201205.jpg' alt='' onclick='imageView("images/natgeo201205.jpg");'>
+            <p>
+                Piece of Heaven: Jamnik, small village in Slovenia. One morning in in autumn, fog was just at the right height at
+                    the right time. The atmosphere was heavenly, unforgettable. (&copy; Janez Tolar/National Geographic Photo Contest)
+            </p>
+        </div>
+
+        <div class=imageRow>
+            <img src='images/mednatgeo201206.jpg' alt='' onclick='imageView("images/natgeo201206.jpg");'>
+            <p>
+                Golden Road: A glorious road of gold through the aspen woods of Snowmass, Colorado. (&copy; Ron Azevedo/National
+                    Geographic Photo Contest)
+            </p>
+        </div>
+
+    </div>
+
+    <div id=popup>
+        <!-- large version of the image -->
+        <img id=popupImage src='nothing.jpg' alt='Loading...' class=image>
+        <div class=close onclick='imageClose();'>&nbsp;X&nbsp;</div>
+    </div>
+
+    <div id=popupbg></div>
+
+    <script>
+
+        function imageView(bigImage) {
+            document.querySelector('#popupImage').setAttribute('src', bigImage);
+            document.querySelector('#popup').style.display = 'block';
+            document.querySelector('#popupbg').style.visibility = 'visible';
+        }
+
+        function imageClose() {
+            document.querySelector('#popup').style.display = 'none';
+            document.querySelector('#popupbg').style.visibility = 'hidden';
+        }
+
+    </script>
+
+</body>
+</html>

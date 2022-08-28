@@ -1,0 +1,652 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<title>Lec 11-2</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Consolas;
+	panose-1:2 11 6 9 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Segoe UI";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+h4
+	{mso-style-link:"Heading 4 Char";
+	margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:#954F72;
+	text-decoration:underline;}
+p
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+code
+	{font-family:"Courier New";}
+span.Heading4Char
+	{mso-style-name:"Heading 4 Char";
+	mso-style-link:"Heading 4";
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+span.skimlinks-unlinked
+	{mso-style-name:skimlinks-unlinked;}
+span.keyword2
+	{mso-style-name:keyword2;
+	color:#006699;
+	border:none windowtext 1.0pt;
+	padding:0in;
+	font-weight:bold;}
+span.string2
+	{mso-style-name:string2;
+	color:blue;
+	border:none windowtext 1.0pt;
+	padding:0in;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink="#954F72" background=bgw.gif>
+
+<div class=WordSection1 
+     style="margin: 0.5in auto; max-width: 50em; min-width: 30em;">
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:18.0pt;
+font-family:"Arial",sans-serif'>INT422 – Lecture 11 Part 2</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>More work with Ajax. </span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Code examples</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Ajax Item
+Select</span></p>
+
+<p class=MsoNormal style='margin-top:3.0pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>Ajax With Web Service</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Ajax – cascading (dependent)
+item-selection element</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>All of us have had the experience with a web –
+or other – app displays a sequential series of hierarchical item-selection
+elements.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>For example, using the familiar&nbsp;<i>music
+business</i> problem domain, we can </span><a
+href="https://en.wikipedia.org/wiki/Drill_down" target="_blank"><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>drill down</span></a><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;from Artist, to
+Album, to Track.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>This is an ideal use case for Ajax. The reason
+is that the technique 1) preserves the view/page state for the user, with no
+flicker or reloading, and 2) it offers good performance. Yes, we could do this
+by using the typical full-page GET/POST cycle, but let’s use Ajax.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Open and study the <i>AjaxItemSelect</i> code
+example as you read this section.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>What code assets are needed?</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>As you have seen in the first Ajax example (<i>SearchMusic</i>),
+we need:</span></p>
+
+<ol start=1 type=1>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Controller actions/methods to handle
+     interaction, and Manager methods to work with data</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>A correctly-configured initial view/page,
+     with placeholder elements</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>JavaScript functions that create and send
+     requests to a resource URL</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Partial views to prepare the content that
+     will be included in the view</span></li>
+</ol>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>What makes it work?</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The key feature that makes this work is that
+the HTML &lt;select&gt; element includes the <i>onchange</i> event handler
+declaration. It passes the element to the JavaScript function, which fetches
+the new content, and places it in the appropriate element.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Using the Attention comment tokens in Visual
+Studio, study the code to learn its flow, as you run the app.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Run the app. Click the image to open it
+full-size in a new tab/window.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><a
+href="https://scs.senecac.on.ca/~wei.song/int422/lectures/images/lec11.2-cascade-initial-view.png"><span
+style='color:windowtext;text-decoration:none'><img border=0 width=719
+height=306 id="Picture 7" src="INT422-Lecture11-2_files/image001.png"></span></a></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Select an artist from the list. Notice that the
+artist’s list-of-albums appears.&nbsp;Click the image to open it full-size in a
+new tab/window.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><a
+href="https://scs.senecac.on.ca/~wei.song/int422/lectures/images/lec11.2-cascade-artist-selected.png"><span
+style='color:windowtext;text-decoration:none'><img border=0 width=718
+height=377 id="Picture 8" src="INT422-Lecture11-2_files/image002.png"></span></a></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Select an album from the list. Notice that the
+album’s list-of-tracks appears. (Notice also that you can go back up to the
+list of artists, make a new selection, and it will refresh the list of albums.)&nbsp;Click
+the image to open it full-size in a new tab/window.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><a
+href="https://scs.senecac.on.ca/~wei.song/int422/lectures/images/lec11.2-cascade-album-selected.png"><span
+style='color:windowtext;text-decoration:none'><img border=0 width=719
+height=509 id="Picture 9" src="INT422-Lecture11-2_files/image003.png"></span></a></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>When you click the Send button, ALL your
+selections are packaged and posted to the <i>DoSomething()</i> method in the
+controller.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>An introduction to web services</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>A web service is an application that runs on a
+web server, and is <b>accessed programmatically</b>.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Compare this to a web app: A web app is an
+application that runs on a web server, and is <b>accessed by using a web
+browser</b>.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Web services are designed to deliver data, not
+HTML.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Web services are a vital part of today’s modern
+software architecture. They provide the power and data behind mobile
+applications. They enable standards-based enterprise and public applications
+that can be deployed at web scale.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Web services in the ASP.NET MVC framework</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In the framework, there is a special kind of
+controller for web service purposes, ApiController. You may have noticed during
+the “Add &gt; Controller” workflow that the dialog shows a lengthy list of “Web
+API 2…” controllers. They are all based on the ApiController superclass.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The ApiController class has similarities to,
+and differences with, the base ASP.NET MVC Controller class.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Similar characteristics:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>The design and coding strategy for methods
+     is the same</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>We continue to use the Manager class, view
+     model classes, etc.</span></li>
+</ul>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Different characteristics:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Return type is IHttpActionResult</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Built-in content negotiation</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Uses token based authorization (not cookie
+     based authorization)</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Auto serialization to-and-from JSON and
+     XML</span></li>
+</ul>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Adding the web service capability to an
+existing project</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>It is easy to add web service capability to an
+existing project. It’s a three-step process to get started:</span></p>
+
+<ol start=1 type=1>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Install a package using the NuGet Package
+     Manager</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Add a class (in a source code file) that
+     configures web service capability</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Make a minor but important edit to the
+     MvcApplication class code in the Global.asax.cs source code file</span></li>
+</ol>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><u><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Install a package…</span></u></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Open the NuGet Package Manager (in Solution
+Explorer, right-click the project item, then Manage NuGet Packages).</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In the “Browse” tab textbox, search for “web
+api”.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Choose/select the item named
+“Microsoft.AspNet.WebApi”. It’s probably the top choice. Then install.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><u><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Add a configuration class…</span></u></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In the App_Start folder, create a new source
+code file for a C# class. The name of the source code file and class is, by
+convention, “WebApiConfig.cs”. Add code to make it look like the following.
+(Most simple web service apps can use the same configuration code.)</span></p>
+
+<div style='border:none;border-left:solid #6CE26C 2.25pt;padding:0in 0in 0in 0in;
+background:white;margin-left:15.75pt;margin-right:0in'>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:white;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>using&nbsp;System;&nbsp;&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:#F8F8F8;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>using&nbsp;System.Collections.Generic;&nbsp;&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:white;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>using&nbsp;System.Linq;&nbsp;&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:#F8F8F8;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>using&nbsp;System.Web.Http;&nbsp;&nbsp;&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:white;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>5.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>namespace&nbsp;AjaxWithWebService&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:#F8F8F8;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>6.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>{&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:white;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>7.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>&nbsp;&nbsp;&nbsp;</span><span style='font-size:12.0pt;font-family:
+Consolas;color:#006699;border:none windowtext 1.0pt;padding:0in'>public</span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>&nbsp;</span><span style='font-size:12.0pt;font-family:Consolas;
+color:#006699;border:none windowtext 1.0pt;padding:0in'>static</span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>&nbsp;</span><span style='font-size:12.0pt;font-family:Consolas;
+color:#006699;border:none windowtext 1.0pt;padding:0in'>class</span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>&nbsp;WebApiConfig</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:#F8F8F8;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>8.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:white;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>9.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style='font-size:
+12.0pt;font-family:Consolas;color:#006699;border:none windowtext 1.0pt;
+padding:0in'>public</span><span style='font-size:12.0pt;font-family:Consolas;
+color:black;border:none windowtext 1.0pt;padding:0in'>&nbsp;</span><span
+style='font-size:12.0pt;font-family:Consolas;color:#006699;border:none windowtext 1.0pt;
+padding:0in'>static</span><span style='font-size:12.0pt;font-family:Consolas;
+color:black;border:none windowtext 1.0pt;padding:0in'>&nbsp;</span><span
+style='font-size:12.0pt;font-family:Consolas;color:#006699;border:none windowtext 1.0pt;
+padding:0in'>void</span><span style='font-size:12.0pt;font-family:Consolas;
+color:black;border:none windowtext 1.0pt;padding:0in'>&nbsp;Register(HttpConfiguration&nbsp;config)</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:#F8F8F8;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>10.<span style='font:7.0pt "Times New Roman"'> </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:white;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>11.<span style='font:7.0pt "Times New Roman"'> </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;config.MapHttpAttributeRoutes();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:#F8F8F8;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>12.<span style='font:7.0pt "Times New Roman"'> </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;config.Routes.MapHttpRoute(</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:white;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>13.<span style='font:7.0pt "Times New Roman"'> </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name:&nbsp;</span><span
+style='font-size:12.0pt;font-family:Consolas;color:blue;border:none windowtext 1.0pt;
+padding:0in'>&quot;DefaultApi&quot;</span><span style='font-size:12.0pt;
+font-family:Consolas;color:black;border:none windowtext 1.0pt;padding:0in'>,&nbsp;&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:#F8F8F8;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>14.<span style='font:7.0pt "Times New Roman"'> </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;routeTemplate:&nbsp;</span><span
+style='font-size:12.0pt;font-family:Consolas;color:blue;border:none windowtext 1.0pt;
+padding:0in'>&quot;api/{controller}/{id}&quot;</span><span style='font-size:
+12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>,&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:white;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>15.<span style='font:7.0pt "Times New Roman"'> </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;defaults:&nbsp;</span><span
+style='font-size:12.0pt;font-family:Consolas;color:#006699;border:none windowtext 1.0pt;
+padding:0in'>new</span><span style='font-size:12.0pt;font-family:Consolas;
+color:black;border:none windowtext 1.0pt;padding:0in'>&nbsp;{id&nbsp;=&nbsp;RouteParameter.Optional
+}</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:#F8F8F8;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>16.<span style='font:7.0pt "Times New Roman"'> </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   );&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:white;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>17.<span style='font:7.0pt "Times New Roman"'> </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:#F8F8F8;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>18.<span style='font:7.0pt "Times New Roman"'> </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:white;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>19.<span style='font:7.0pt "Times New Roman"'> </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>}&nbsp;&nbsp;</span></p>
+
+</div>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:10.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><u><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Edit app startup…</span></u></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Edit the Global.asax.cs source code file, which
+holds the MvcApplication class code.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>After the “AreaRegistration…” statement, add
+this new statement:</span></p>
+
+<div style='border:none;border-left:solid #6CE26C 2.25pt;padding:0in 0in 0in 0in;
+background:white;margin-left:15.75pt;margin-right:0in'>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;background:white;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>GlobalConfiguration.Configure(WebApiConfig.Register);&nbsp;&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;background:white;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:#5C5C5C'>&nbsp;</span></p>
+
+</div>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>At this point in time, you can add a web
+service controller (“…Web API 2…”) to your project.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Deliver and render data</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Open and study the <b><i>AjaxWithWebService</i></b>
+code example as you read this section.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>As it shows, you can click a button, to fetch
+and display data.&nbsp;Click the image to open it full-size in a new tab/window.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><a
+href="https://scs.senecac.on.ca/~wei.song/int422/lectures/images/lec11.2-web-service-initial-view.png"><span
+style='color:windowtext;text-decoration:none'><img border=0 width=719
+height=180 id="Picture 10" src="INT422-Lecture11-2_files/image004.png"></span></a></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>For example, after the “Albums” button is
+clicked, a list of albums appears. Click the image to open it full-size in a
+new tab/window.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><img border=0 width=720
+height=300 id="Picture 12" src="INT422-Lecture11-2_files/image005.png"></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>How does this work?</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>As noted earlier, we use the same approach to
+Manager class and view model class design.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In the Manager class, there are methods which
+simply fetch and return collections. Also, there are familiar-looking view
+model classes.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>There is a new web service controller. It has
+methods which call manager methods, and return collections. The built-in
+request handling pipeline in ASP.NET MVC (and Web API) will deliver the results
+as JSON.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The “Data” view has buttons. Each calls the
+JavaScript&nbsp;<i>fetchData()</i>&nbsp;function.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>That function calls into a resource URL (e.g.
+/api/deliverdata/albums), which is handled by the web service controller. As
+noted above, plain-text JSON is returned to the JavaScript function. You can
+see the plain-text JSON in the developer tools JavaScript console.&nbsp;Click
+the image to open it full-size in a new tab/window.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><a
+href="https://scs.senecac.on.ca/~wei.song/int422/lectures/images/lec11.2-web-service-album-json.png"
+target="_blank"><span style='font-size:12.0pt;font-family:"Arial",sans-serif;
+text-decoration:none'><img border=0 width=719 height=175 id="Picture 1"
+src="INT422-Lecture11-2_files/image006.png" alt=web-service-album-json></span></a></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>After receiving the JSON, the JavaScript
+function calls entity-specific functions to write/create the HTML table, and
+the “Data” view is updated.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Want to learn more about web services?</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Prof. McIntyre typically teaches a Web Services
+course, as a pro option, in the fall term.</span></p>
+
+<p class=MsoNormal><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+   <meta charset="UTF-8" />
+   <title>HTML FORM</title>
+   <style> 
+      body { margin: 0 20%; }
+   </style>
+</head>
+<body>
+  <h1>Example - Grouping Fields: &lt;fieldset&gt; and &lt;legend&gt; tags</h1>
+
+   <form id=form1 action="https://httpbin.org/post" method="post">
+    <fieldset>
+	 <legend>Personal Information</legend>
+	    Frist Name: <input type="text" name="fname" id="fanme" /><br>  
+	    Last Name: <input type="text" name="lname" id="lname" />  <br>  
+	    Email: <input type="email" name="name3" id="email" /> <br />  
+	    Telephone: <input type="tel" name="phone" id="phone" value="416-"/>
+	</fieldset> 
+    <br>
+    <input type='submit' value='Submit'>&nbsp;&nbsp;&nbsp;&nbsp;<input type='reset'  value='    Clear   '>
+  </form>
+  <hr>
+  
+  <h1>Example - Using &lt;label&gt; and &lt;button&gt; tags</h1>
+
+  <form id=form2 action="https://formpost.azurewebsites.net/home/test" method="post">
+  <h4>Label example 1</h4>
+  <div>
+     <label for="entry1" title="Free format">Text field 1</label>
+     <input type="text" name="entry1" id="entry1" />
+  </div>
+  <div>
+     <label for="entry2" title="Free format">Text field 2</label> 
+     <input name="entry2" id="entry2" />  <br />
+  </div>
+  
+  <h4>Label example 2</h4>
+  <p>
+     <label for="entry3" title="Label for entry3">
+	   <span>Text field 3 </span>
+       <input name="entry3" id="entry3" /> <br />
+	 </label>
+  </p> 
+  <p> 
+     <label for="entry4" title="Label for entry4">
+	   <span>Text field 4 </span>
+       <input  name="entry4" id="entry4" />
+	 </label> 
+  </p>
+  <h4>Label example 3 - Click on text/label to taggle the radio button</h4>
+  <p>
+     <input type="radio" name="gender" id="entry5" />
+	 <label for="entry5" title="Label for entry5">Male</label>  
+
+     <label for="entry6" title="Label for entry6">
+       <input type="radio" name="gender" id="entry6" /><span>Female </span>
+	 </label> 
+  </p>
+
+   <h4>&lt;button&gt; tag example</h4>
+   <button type="submit"> Submit </button>&nbsp;&nbsp;&nbsp;&nbsp;
+   <button type="reset" value = "reset"> Reset </button>
+
+  </form>
+  
+  <br>
+  <p><a href="" >Download</a></p>
+</body>
+
+</html>

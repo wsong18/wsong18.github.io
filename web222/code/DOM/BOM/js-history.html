@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+   <meta charset="UTF-8" />
+   <title>BOM</title>
+   <style> 
+      body { margin: 0 20%; }
+   </style>
+
+</head>
+<body>
+  <h3>BOM - History Object</h3>
+  <br>  
+  <p>
+     <input type="button" value="Back" onclick="history.back()" />
+	 <input type="button" value="Forward" onclick="history.forward()" />
+  </p>
+  <p>
+     <input type="button" value="Go Back 1 page" onclick="window.history.go(-1)" />
+	 <input type="button" value="Go Forward 1 page" onclick="window.history.go(1)" />
+  </p>
+  <p>
+     <input type="button" value="Go Back 2 page" onclick="window.history.go(-2)" />
+	 <input type="button" value="Go Forward 2 page" onclick="window.history.go(2)" />
+  </p>
+  <p>
+     <input type="button" value="Go Google in history" onclick="history.go('https://www.google.ca/')" />
+  </p>
+  <hr>
+ 
+  &nbsp;&nbsp;&nbsp;&nbsp;
+     <a href="" onclick="download=document.referrer">Download</a>
+  </p>
+</body>
+
+</html>

@@ -1,0 +1,1666 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<title>Lec 12</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Segoe UI Symbol";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:"Lucida Console";
+	panose-1:2 11 6 9 4 5 4 2 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+h4
+	{mso-style-link:"Heading 4 Char";
+	margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:#954F72;
+	text-decoration:underline;}
+p
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+code
+	{font-family:"Courier New";}
+span.Heading4Char
+	{mso-style-name:"Heading 4 Char";
+	mso-style-link:"Heading 4";
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink="#954F72" background=bgw.gif>
+
+<div class=WordSection1 
+     style="margin: 0.5in auto; max-width: 50em; min-width: 30em;">
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:18.0pt;
+font-family:"Arial",sans-serif'>INT422 – Lecture 12</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Initial or bulk load of data from CSV&nbsp;and
+XLSX. Discussion of other scenarios.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Test today</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Test 11&nbsp;is today, at&nbsp;the beginning of
+the timeslot, and will run approximately 18 minutes.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>This is the final INT422 test of the academic
+term. It will ask questions about today’s topics, and those from this week 12
+class notes.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Code examples</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Load Data From CSV</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Load Data From XLSX</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Theme for this week</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>New web apps often need vast amounts of data
+before they’re deployed. Existing web apps sometimes need additional data to
+support a new feature.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Today, you’ll learn how to think about this
+data loading task. We’ll cover some techniques for common data-loading
+scenarios.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>What is the problem?</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Assume that we’re designing and creating a web
+app. It needs data – vast amounts of data – before it’s publicly deployed to
+the user community.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In the past, you have used project templates
+that included an existing data store, with thousands of objects. Then, you have
+used other project templates that enabled you to define your own data model. In
+that situation, you probably created – programmatically – a few data items for
+the app, and enabled others to be created as part of the app’s workflow (using
+HTML Forms for example).</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Yes, programmatically creating new objects is
+easy, and easy to understand. Not well suited however, for creating hundreds or
+thousands of objects.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>How do we design a data loading
+solution?</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>To design a data loading solution, we must
+answer these fundamental questions (and maybe others):</span></p>
+
+<ol start=1 type=1>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Where is the source data?</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>What is the format of the source data?</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Do we want the source data to be located
+     within the project’s file system?</span></li>
+</ol>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Where is the source data?</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Where is the source data? In a file in the file
+system? On the web? In a database?</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Answering this question, and understanding its
+implications, is the most important idea.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>For example, maybe you have a </span><a
+href="https://en.wikipedia.org/wiki/Comma-separated_values" target="_blank"><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>comma-separated values</span></a><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> file (CSV).</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'><img border=0 width=718 height=241
+id="Picture 13" src="INT422-Lecture12_files/image001.png" alt=csv-sample></span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Or an </span><a
+href="https://en.wikipedia.org/wiki/Office_Open_XML" target="_blank"><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>Excel workbook</span></a><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> file (XLSX).</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'><img border=0 width=720 height=362
+id="Picture 12" src="INT422-Lecture12_files/image002.png" alt=excel-sample></span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>These kinds of files will be studied and used
+in today’s notes and code examples.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Alternatively, maybe the data is on the web.
+Maybe it’s on web pages, displayed in an HTML table. If that’s the situation,
+it can often by manually extracted with a drag-and-drop “select” action,
+copied, and pasted to a destination. Microsoft Excel can be a useful tool for
+this purpose, as it is nicely-equipped to receive pasted HTML table data.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-family:"Arial",sans-serif'><img
+border=0 width=720 height=1833 id="Picture 14"
+src="INT422-Lecture12_files/image003.jpg"></span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-family:"Arial",sans-serif'><img
+border=0 width=720 height=1083 id="Picture 15"
+src="INT422-Lecture12_files/image004.jpg"></span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Or, maybe the data is in a web API (aka a web
+service). This can be a good thing – as long as you know how to programmaticaly
+access a web service – because the data is ready to be requested and used.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Finally, maybe the data is in an existing
+database. We did use this approach for many weeks in the early part of this
+course (by using the Chinook <i>music business</i> database). However, for a
+new app, maybe you have another database.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>What is the format of the source data?</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Is the source data in a form that we can use?</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Depending on its format, source data can be
+used with a small amount of conversion or transformation. Other data formats
+need more work before it can be used and loaded.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In general, your goal should be to get or transform
+the data into a rows-and-columns format that makes it easier to understand, and
+then process on a row-by-row basis.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Do we want the source data to be located within
+the project’s file system?</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Sometimes, it can make sense to copy-paste a
+data source file into the project’s file system (using the Visual Studio
+Solution Explorer panel). When you do this, your program code can reference and
+use the file system, because you know exactly where it is.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>At other times, you will need to allow the user
+(admin or developer) to select and use the data source at runtime. When you do
+this, you will need some UI that has a file upload element, and logic that
+saves the file in the web app’s file system, so that it can be processed.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Too many answers – how to
+organize them</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>We have created a table that attempts to
+organize the many different ways to approach this problem.</span></p>
+
+<table class=MsoNormalTable border=1 cellpadding=0 width="96%"
+ style='width:96.4%;border:solid windowtext 1.0pt'>
+ <tr style='height:27.95pt'>
+  <td style='border:solid windowtext 1.0pt;background:#DFDFDF;padding:.75pt .75pt .75pt .75pt;
+  height:27.95pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><b><span style='font-size:12.0pt;
+  font-family:"Arial",sans-serif'>Source data location</span></b></p>
+  </td>
+  <td style='border:solid windowtext 1.0pt;background:#DFDFDF;padding:.75pt .75pt .75pt .75pt;
+  height:27.95pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><b><span style='font-size:12.0pt;
+  font-family:"Arial",sans-serif'>Source data format</span></b></p>
+  </td>
+  <td style='border:solid windowtext 1.0pt;background:#DFDFDF;padding:.75pt .75pt .75pt .75pt;
+  height:27.95pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><b><span style='font-size:12.0pt;
+  font-family:"Arial",sans-serif'>Solution or problem-solving approach</span></b></p>
+  </td>
+ </tr>
+ <tr style='height:27.3pt'>
+  <td style='border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt;
+  height:27.3pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Database
+  server</span></p>
+  </td>
+  <td style='border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt;
+  height:27.3pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>SQL
+  database</span></p>
+  </td>
+  <td style='border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt;
+  height:27.3pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Code
+  First from database task in Visual Studio</span></p>
+  </td>
+ </tr>
+ <tr style='height:27.95pt'>
+  <td style='border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt;
+  height:27.95pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>(none/new)</span></p>
+  </td>
+  <td style='border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt;
+  height:27.95pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>In-memory
+  objects</span></p>
+  </td>
+  <td style='border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt;
+  height:27.95pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Programmatically
+  create and add new objects</span></p>
+  </td>
+ </tr>
+ <tr style='height:27.3pt'>
+  <td style='border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt;
+  height:27.3pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>(none/new)</span></p>
+  </td>
+  <td style='border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt;
+  height:27.3pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HTML
+  Form</span></p>
+  </td>
+  <td style='border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt;
+  height:27.3pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Part of
+  the web app, then programmatically create and add new objects</span></p>
+  </td>
+ </tr>
+ <tr style='height:27.95pt'>
+  <td style='border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt;
+  height:27.95pt'></td>
+  <td style='border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt;
+  height:27.95pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>CSV</span></p>
+  </td>
+  <td style='border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt;
+  height:27.95pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>CSV
+  handler: TextFieldParser (in the framework) or CsvHelper (add-on)</span></p>
+  </td>
+ </tr>
+ <tr style='height:27.3pt'>
+  <td style='border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt;
+  height:27.3pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Project’s
+  file system</span></p>
+  </td>
+  <td style='border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt;
+  height:27.3pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>CSV</span></p>
+  </td>
+  <td style='border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt;
+  height:27.3pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>CSV
+  handler <span style='color:red'>(covered today)</span></span></p>
+  </td>
+ </tr>
+ <tr style='height:27.95pt'>
+  <td style='border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt;
+  height:27.95pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Computer’s
+  file system</span></p>
+  </td>
+  <td style='border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt;
+  height:27.95pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>CSV</span></p>
+  </td>
+  <td style='border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt;
+  height:27.95pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HTML
+  Form to upload the file, then CSV handler</span></p>
+  </td>
+ </tr>
+ <tr style='height:41.3pt'>
+  <td style='border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt;
+  height:41.3pt'></td>
+  <td style='border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt;
+  height:41.3pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>XLSX</span></p>
+  </td>
+  <td style='border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt;
+  height:41.3pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Excel
+  handler: Microsoft Office interop, or Microsoft OLE DB reader, or
+  ExcelDataReader (add-on)</span></p>
+  </td>
+ </tr>
+ <tr style='height:27.95pt'>
+  <td style='border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt;
+  height:27.95pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Project’s
+  file system</span></p>
+  </td>
+  <td style='border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt;
+  height:27.95pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>XLSX</span></p>
+  </td>
+  <td style='border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt;
+  height:27.95pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Excel
+  handler <span style='color:red'>(covered today)</span></span></p>
+  </td>
+ </tr>
+ <tr style='height:27.3pt'>
+  <td style='border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt;
+  height:27.3pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Computer’s
+  file system</span></p>
+  </td>
+  <td style='border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt;
+  height:27.3pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>XLSX</span></p>
+  </td>
+  <td style='border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt;
+  height:27.3pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HTML
+  Form to upload the file, then Excel handler</span></p>
+  </td>
+ </tr>
+ <tr style='height:27.95pt'>
+  <td style='border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt;
+  height:27.95pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Web
+  service</span></p>
+  </td>
+  <td style='border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt;
+  height:27.95pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>JSON
+  (usually)</span></p>
+  </td>
+  <td style='border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt;
+  height:27.95pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HttpClient
+  (in the framework), then programmatically create and add new objects</span></p>
+  </td>
+ </tr>
+ <tr style='height:27.3pt'>
+  <td style='border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt;
+  height:27.3pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Web
+  page</span></p>
+  </td>
+  <td style='border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt;
+  height:27.3pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HTML
+  table (usually)</span></p>
+  </td>
+  <td style='border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt;
+  height:27.3pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Select
+  table content, copy, paste to Excel, then clean up in Excel by removing
+  formatting</span></p>
+  </td>
+ </tr>
+ <tr style='height:41.9pt'>
+  <td style='border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt;
+  height:41.9pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Project’s
+  file system</span></p>
+  </td>
+  <td style='border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt;
+  height:41.9pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Image /
+  photo</span></p>
+  </td>
+  <td style='border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt;
+  height:41.9pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>(Assuming
+  that we’re loading the image/photo into the data store / database…)
+  File.ReadAllBytes() method</span></p>
+  </td>
+ </tr>
+ <tr style='height:27.95pt'>
+  <td style='border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt;
+  height:27.95pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Web
+  page</span></p>
+  </td>
+  <td style='border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt;
+  height:27.95pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>URL to
+  an image / photo</span></p>
+  </td>
+  <td style='border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt;
+  height:27.95pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Get
+  bytes with HttpClient; then, save in the web app’s file system, or in its
+  data store (database)</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In general, when loading data, continue to use
+the approach that we have used for the past several weeks:</span></p>
+
+<ol start=1 type=1>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>In the Manager class, create one-or-more
+     methods that will load data</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>In a controller, create an action/method
+     that will call the method in the manager object</span></li>
+</ol>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In the following sections, we cover a few
+popular and useful ways to load data into your web app.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>CSV handler – CsvHelper add-on by
+Josh Close</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Programmer Josh Close has created a very nice
+tool that enables you to create objects and collections from a CSV file.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The </span><a
+href="https://github.com/JoshClose/CsvHelper" target="_blank"><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>project is here</span></a><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>.&nbsp;Its </span><a
+href="http://joshclose.github.io/CsvHelper/" target="_blank"><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>documentation is here</span></a><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>To use it, we need data in a CSV file. Its
+first-line header field names are important. They should NOT have spaces. They
+will be used to match to property names in a design model class.</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:18.0pt;font-family:"Segoe UI Symbol",sans-serif;color:#0070C0'>&#10077;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>Tip or strategy:</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>If your design model
+class has property names that you like and intend to use, then make sure that
+the CSV file first-line header field names match EXACTLY to the property names
+in the design model class.</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>This enables the data
+reader/importer to do its work on one pass, and avoids the need to do custom
+mapping of names.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Getting started with CsvHelper</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Open and study the <i>LoadDataFromCSV</i> code
+example as you read this section.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>To replicate its functionality, create a new
+project, based on the “Web app project v2” template.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Add CsvHelper&nbsp;to your project by using
+“install-package csvhelper” in the Package Manager Console.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Copy-paste one or more CSV files, probably into
+the App_Data folder in Solution Explorer. Notice the Employees.csv source code
+file in the code example.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>At the top of the Manager class, add a “using”
+declaration for the <i>CsvHelper</i> and <i>System.IO</i> namespaces.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Design strategy, for model classes, and for CSV
+header field names</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>As noted above, the easiest way to enable
+CsvHelper to do its work is to match the model class property names with the
+CSV file header field names.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Therefore, create a design model class, with
+matching property names. Yes, you can open a CSV file in the Visual Studio
+editor.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'><img border=0 width=719 height=182
+id="Picture 10" src="INT422-Lecture12_files/image005.png" alt=csv-headers></span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'><img border=0 width=717 height=467
+id="Picture 9" src="INT422-Lecture12_files/image006.jpg" alt=employee-class></span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Next, create view model classes. You will need
+“…Add” and “…Base”, just like in any other scenario. The “…Add” class will
+EXACTLY match the shape of the data in the CSV file. Remember to create
+AutoMapper maps.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Finally, write the code in the Manager “load
+data” method.</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Lucida Console";color:#002060'>if</span></b><span
+style='font-size:12.0pt;font-family:"Lucida Console";color:#002060'> </span><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>(ds.Employees.Count() ==
+0)</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>{</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console";color:#006600'>&nbsp;&nbsp;//
+Add employees</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console";color:#006600'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console";color:#006600'>&nbsp;&nbsp;//
+Path to the CSV file</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;<b><span
+style='color:#002060'>var</span></b> path = HttpContext.Current.Server.MapPath(<span
+style='color:purple'>&quot;~/App_Data/Employees.csv&quot;</span>);</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;<span
+style='color:#006600'>// Create a stream reader object, to read from the file
+system</span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;StreamReader
+sr = File.OpenText(path);</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;<span
+style='color:#006600'>// Create the CsvHelper object</span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;<b><span
+style='color:#002060'>var</span></b> csv = <b><span style='color:#002060'>new</span></b>
+CsvReader(sr);</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;<span
+style='color:#006600'>// Go through the data file</span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;<b><span
+style='color:#002060'>while</span></b> (csv.Read())</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;{</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;<span
+style='color:#006600'>// Read one line in the source file into a new object</span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;EmployeeAdd
+qb = csv.GetRecord&lt;EmployeeAdd&gt;();</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;<span
+style='color:#006600'>// Add the new object to the data store</span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;ds.Employees.Add(mapper.Map&lt;EmployeeAdd,
+Employee&gt;(qb));</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;}</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;ds.SaveChanges();</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;<span
+style='color:#006600'>// Clean up</span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;sr.Close();</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;sr = <b><span
+style='color:#002060'>null</span></b>;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>}</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Alternatively, you can replace the “while” loop
+code&nbsp;(above)&nbsp;with these two statements:</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console";color:#006600'>// Create a
+collection, based on reading the CSV file contents</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Lucida Console";color:#002060'>var</span></b><span
+style='font-size:16.0pt;font-family:"Lucida Console"'> </span><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>results =
+csv.GetRecords&lt;EmployeeAdd&gt;().ToList();</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:16.0pt;font-family:"Lucida Console"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console";color:#006600'>// Add the
+collection in one statement</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>ds.Employees.AddRange(mapper.Map&lt;IEnumerable&lt;EmployeeAdd&gt;,
+IEnumerable&lt;Employee&gt;&gt;(results));</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>After loading, you can see the
+results.&nbsp;Click the image to open it full-size in a new tab/window.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><a
+href="https://scs.senecac.on.ca/~wei.song/int422/lectures/images/lec12-employee-list.png"><span
+style='color:windowtext;text-decoration:none'><img border=0 width=720
+height=270 id="Picture 4" src="INT422-Lecture12_files/image007.png"></span></a></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Excel handler – ExcelDataReader
+by “Ian1971”</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Programmer “Ian1971” has created a very nice
+tool that enables you to create objects and collections from an XLSX file.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The </span><a
+href="https://github.com/ExcelDataReader/ExcelDataReader" target="_blank"><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>project is here</span></a><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>.&nbsp;Its
+documentation is on the project page (README.md).</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>To use it, we need data in an XLSX file.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Yes, we can use a multi-worksheet workbook.
+Just make sure that each tab has a unique name, with no spaces.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'><img border=0 width=730 height=144
+id="Picture 7" src="INT422-Lecture12_files/image008.png"
+alt=excel-worksheet-names></span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Each column title/header must be a name with no
+spaces, and should (must!) match a design model class property name, for best
+results, just like the CSV example above.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'><img border=0 width=718 height=218
+id="Picture 6" src="INT422-Lecture12_files/image009.png"
+alt=excel-column-titles></span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Getting started with ExcelDataReader</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Open and study the LoadDataFromXLSX code
+example as you read this section.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>To replicate its functionality, create a new
+project, based on the “Web app project v2” template.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Add ExcelDataReader&nbsp;to your project by
+using “install-package exceldatareader”&nbsp;in the Package Manager Console.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Copy-paste one or more XLSX&nbsp;files,
+probably into the App_Data folder in Solution Explorer. Notice the
+NFLPlayoffTeams.xlsx&nbsp;source code file in the code example.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>At the top of the Manager class, add a “using”
+declaration for the <i>Excel</i> and <i>System.IO</i> namespaces.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>We’ll also need “using” declarations for the <i>System.Data</i>
+and <i>System.Reflection</i> namespaces.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Design strategy, for model classes,<br>
+and for XLSX worksheet and column title/header names</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>As noted above, the easiest way to enable
+ExcelDataReader&nbsp;to do its work is to match the model class property names
+with the worksheet names, and the column title/header names.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Therefore, create a design model class, with
+matching property names.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'><img border=0 width=324 height=612
+id="Picture 5" src="INT422-Lecture12_files/image010.jpg" alt=player-class></span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Next, create view model classes. You will need
+“…Add” and “…Base”, just like in any other scenario. The “…Add” class will
+EXACTLY match the shape of the data in the XLSX&nbsp;file. Remember to create
+AutoMapper maps.</span></p>
+
+<p class=MsoNormal style='margin-left:31.5pt;line-height:normal'><span
+style='font-size:18.0pt;font-family:"Segoe UI Symbol",sans-serif;color:#0070C0'>&#10077;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>Brief explanation of the
+“Helper” static class:</span></p>
+
+<p class=MsoNormal style='margin-left:31.5pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>In the “old days” –
+before Entity Framework – ASP.NET web app developers used “ADO.NET”
+technologies for data access. One of its objects was a strongly-typed <i>data
+set</i>. Very useful in tightly-coupled scenarios, where the app running on the
+device had a stateful session with a server-based app and/or a data
+store.&nbsp;Not so useful in web app scenarios however.</span></p>
+
+<p class=MsoNormal style='margin-left:31.5pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>The data set object is
+a super awesome object, and the ExcelDataReader programmer decided to use it to
+get a number of benefits. One of the impacts of this decision is that we need a
+“helper” or “extension” class, to convert one of the data set components (a
+“data table”) into a generic List&lt;T&gt;. At the bottom of the Manager class,
+you’ll see this helper/extension class. It gets used as-is, with no changes. As
+you can see, it defines a very useful <i>DataTableToList&lt;T&gt;()</i> method.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Finally, write the code in the Manager “load
+data” method.</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Lucida Console";color:#002060'>if</span></b><span
+style='font-size:16.0pt;font-family:"Lucida Console";color:#002060'> </span><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>(ds.Players.Count() == 0)</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>{</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;<span
+style='color:#006600'>// Add players</span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:16.0pt;font-family:"Lucida Console"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;<span
+style='color:#006600'>// Path to the XLSX file</span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;<b><span
+style='color:#002060'>var</span></b></span><span style='font-size:16.0pt;
+font-family:"Lucida Console"'> </span><span style='font-size:12.0pt;font-family:
+"Lucida Console"'>path = HttpContext.Current.Server.MapPath(<span
+style='color:purple'>&quot;~/App_Data/NFLPlayoffTeams.xlsx&quot;</span>);</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:16.0pt;font-family:"Lucida Console"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;<span
+style='color:#006600'>// Load the workbook into a System.Data.DataSet
+&quot;sourceData&quot;</span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;<b><span
+style='color:#002060'>var</span></b></span><span style='font-size:16.0pt;
+font-family:"Lucida Console"'> </span><span style='font-size:12.0pt;font-family:
+"Lucida Console"'>stream = File.Open(path, FileMode.Open, FileAccess.Read);</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;IExcelDataReader
+reader = ExcelReaderFactory.CreateOpenXmlReader(stream);</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;reader.IsFirstRowAsColumnNames
+= <b><span style='color:#002060'>true</span></b>;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;DataSet
+sourceData = reader.AsDataSet();</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;reader.Close();</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:16.0pt;font-family:"Lucida Console"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;<span
+style='color:#006600'>// At this point in time, sourceData holds ALL the data
+from the XLSX in memory</span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:16.0pt;font-family:"Lucida Console"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;<span
+style='color:#006600'>// Worksheet name</span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;<b><span
+style='color:#002060'>string</span></b></span><span style='font-size:16.0pt;
+font-family:"Lucida Console"'> </span><span style='font-size:12.0pt;font-family:
+"Lucida Console"'>worksheetName;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:16.0pt;font-family:"Lucida Console"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console";color:#006600'>&nbsp;&nbsp;//
+Load the first worksheet...</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console";color:#006600'>&nbsp;&nbsp;//
+===========================</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:16.0pt;font-family:"Lucida Console"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;<span
+style='color:#006600'>// Get worksheet by its name</span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;worksheetName
+= <span style='color:purple'>&quot;DEN&quot;</span>;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;<b><span
+style='color:#002060'>var</span></b></span><span style='font-size:16.0pt;
+font-family:"Lucida Console"'> </span><span style='font-size:12.0pt;font-family:
+"Lucida Console"'>worksheet = sourceData.Tables[worksheetName];</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:16.0pt;font-family:"Lucida Console"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;<span
+style='color:#006600'>// Convert it to a collection of the desired type</span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;List&lt;PlayerAdd&gt;
+items = worksheet.DataTableToList&lt;PlayerAdd&gt;();</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:16.0pt;font-family:"Lucida Console"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;<span
+style='color:#006600'>// Go through the collection, and add the items to the
+data context</span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;<b><span
+style='color:#002060'>foreach</span></b></span><span style='font-size:16.0pt;
+font-family:"Lucida Console"'> </span><span style='font-size:12.0pt;font-family:
+"Lucida Console"'>(<b><span style='color:#002060'>var</span></b></span><span
+style='font-size:16.0pt;font-family:"Lucida Console"'> </span><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>item <b><span
+style='color:#002060'>in</span></b></span><span style='font-size:16.0pt;
+font-family:"Lucida Console"'> </span><span style='font-size:12.0pt;font-family:
+"Lucida Console"'>items)</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;{</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;<span
+style='color:#006600'>// Fill in the team name</span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;item.Team
+= worksheetName;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;ds.Players.Add(mapper.Map&lt;PlayerAdd,
+Player&gt;(item));</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;}</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:16.0pt;font-family:"Lucida Console"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;<span
+style='color:#006600'>// Save changes</span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;ds.SaveChanges();</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:16.0pt;font-family:"Lucida Console"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;<span
+style='color:#006600'>// Load the next worksheet...</span></span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>After loading, you can see the
+results.&nbsp;Click the image to open it full-size in a new tab/window.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><a
+href="https://scs.senecac.on.ca/~wei.song/int422/lectures/images/lec12-player-list.png"><span
+style='color:windowtext;text-decoration:none'><img border=0 width=719
+height=270 id="Picture 11" src="INT422-Lecture12_files/image011.png"></span></a></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Handling associations during data
+loading</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Can you load data that has associations?</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Yes.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Be careful, and plan your work. Here are some
+suggestions:</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Load all unassociated data first. If you have
+entity collections that are not associated with other objects, but do provide
+some useful function (static data for lookups etc.), then you can load them any
+time. We suggest that you do this first.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Next, carefully study your data model. (The <i>design
+model classes</i> – NOT the database model.) If it helps, use a class diagram.
+Then, locate a “root” in the data model. (It’s possible that there will be more
+than one.) A “root” is a class that has objects that can be added, without
+configuring an association. For example, in a Products-Supplier scenario, we
+CAN add a Supplier object, so it is a “root” class.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Load that data. It can then be used for
+lookups, when adding dependent objects (e.g. products – to add a Product
+object, we MUST have an association to an existing Supplier object).</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Therefore, load dependent objects. Maybe the
+CSV or XLSX source data includes a value that you can use to look up the
+associated object (e.g. a Supplier name). Other times, you may have to organize
+and manage your source data so that all dependent objects for a specific “root”
+object are added in a batch.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Continue this process until all data gets
+loaded.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Bonus coverage – Loading photos
+(non-text media items) programmatically</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Here’s some brief coverage of a procedure that
+enables you to gather and save photos – or any other non-text media items – on
+your local computer, and then programmatically add them to your web app’s data
+store.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Obviously, this procedure assumes that you are
+indeed saving them into your data store (i.e. the database). If you’re not
+doing this, then all you must do is save the items somewhere in your app’s file
+system, and then – if necessary – write the code that enables them to be
+served.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Prepare your assets</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Gather and save your photos (or whatever) on
+your local computer.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Ensure that their size and quality match your
+expectations.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In Solution Explorer, create a new folder,
+maybe named “Assets” or something like that. Copy then paste all your items
+into this folder.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Write the code</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In the Manager class, add “using System.IO;” to
+the declarations at the top.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Then, in the LoadData() method, write code that
+is similar to the following (assuming the image is indeed a PNG):</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console";color:#006600'>// As you
+are creating an object that has &quot;Photo&quot; and PhotoContentType&quot;
+properties...</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;Photo =
+File.ReadAllBytes(HttpContext.Current.Server.MapPath(<span style='color:purple'>&quot;~/Assets/photo123.png&quot;</span>)),</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;PhotoContentType
+= <span style='color:purple'>“image/png”</span>,</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console";color:#006600'>// Save
+etc.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Bonus coverage – Code First from
+existing database</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>As you work on more web apps, you will
+encounter experiences where you must create a web app that works with an <i>existing</i>
+database. How do you handle that situation?</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>You do have some experience with this, although
+your teacher team did some of the work for you. The Chinook <i>music business</i>
+database was an existing database, and we created the program objects that
+enabled us to use it.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In this section, you will learn how to do that
+work.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Getting started</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Create a new project, using the “Web app
+project v4” template.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In Web.config, comment out the existing
+connection string.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Use one of your Azure SQL Databases</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Login to the </span><a
+href="https://portal.azure.com" target="_blank"><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Azure portal</span></a><span style='font-size:
+12.0pt;font-family:"Arial",sans-serif'>. Open the info panel for one of your
+SQL Databases. Show its database connection strings.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Copy the ADO.NET item. You’ll use some of the
+data in the connection string. Paste it to a plain-text editor (or as text
+somewhere in your project).</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Close the SQL Database panels.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Now, you must configure the database <u>server</u>
+to allow connections from the computer that’s running Visual Studio. Open the
+info panel for the database server that is hosting the database that you want
+to use.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Click its Settings icon. In the Settings panel,
+choose Firewall. In the “Firewall settings” panel, click the “Add client IP”
+icon. It will detect your current IP address. Edit the “rule name” if you wish.
+Then, Save.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Generate the code</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In Solution Explorer, right-click the Models
+folder, and Add &gt; New Item. In the upper-right search box, search for “data
+model”. The center panel will show “ADO.NET Entity Data Model”.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>At the bottom, in the “Name” field, enter
+“DataContext”.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The wizard appears. Select “Code First from
+database”, and click Next.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'><img border=0 width=718 height=398
+id="Picture 3" src="INT422-Lecture12_files/image012.png"
+alt=code-first-to-db-1></span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>We want to create a “New Connection”. Here, we
+will need the connection string data from the Azure portal. Items in the
+connection string are separated with a ; semicolon.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>If you are asked, the “Data source” is
+“Microsoft SQL Server”.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'>
+
+<table cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=3 height=0></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td><img width=466 height=681 src="INT422-Lecture12_files/image013.jpg"
+  alt=connection-properties></td>
+ </tr>
+</table>
+
+<br clear=ALL>
+<span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Then, the
+“Connection Properties” dialog appears. Here’s some guidance about the property
+values:</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>“Server name” is the “Server” value from the
+connection string.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Use SQL Server Authentication.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>“User name” is the “User ID” value from the
+connection string.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Enter your password. Check / mark the “Save my
+password” checkbox.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The “…database name” is the “Database” value
+from the connection string.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Click the Test Connection button, and do not
+continue until it returns a successful result.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Back in the wizard:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Yes, include the sensitive data in the
+     connection string</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>The connection settings name in Web.Config
+     will be “DefaultConnection”</span></li>
+</ul>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Which database objects do you want to include
+in your model?</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Be careful here.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Include only the tables that we want. Do not
+include the migration history table, or the security-related tables which begin
+with “AspNet”.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'><img border=0 width=718 height=645
+id="Picture 1" src="INT422-Lecture12_files/image014.jpg"
+alt=code-first-to-db-4></span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The result will generate classes in your Models
+folder, and a connection string in Web.config.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>For more information…</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Rowan Miller (of Microsoft) has a&nbsp;</span><a
+href="https://msdn.microsoft.com/en-us/data/jj200620" target="_blank"><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>document</span></a><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> and </span><a
+href="https://channel9.msdn.com/Blogs/EF/Code-First-to-Existing-Database-EF6-1-Onwards-"
+target="_blank"><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>video</span></a><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;that covers this
+task in a generic manner. Adapt its information and knowledge to your own
+situations.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Awesome resources for data</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Data drives our modern life. As you continue to
+learn about software development, you will realize how important data is to our
+app design and coding process. Tools can help you materialize, transform, and
+modify data. Here are some tools that your teacher team has used in the past.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><a href="http://mockaroo.com/"
+target="_blank"><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Mockaroo</span></a><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> – test data generator</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Text Fixer – HTML Tools and Text Tools, e.g. </span><a
+href="http://www.textfixer.com/html/csv-convert-table.php" target="_blank"><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>convert CSV to an HTML table
+online</span></a></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Pressbin online </span><a
+href="http://pressbin.com/tools/excel_to_html_table/" target="_blank"><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>Excel to HTML table
+converter</span></a></p>
+
+<p class=MsoNormal style='line-height:normal'><a href="http://codebeautify.org/"
+target="_blank"><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Code
+Beautify</span></a><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>
+– dozens of tools, transformers, converters</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Discussed&nbsp;today:</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><a
+href="https://github.com/joshclose/csvhelper" target="_blank"><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>CsvHelper</span></a><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> by Josh Close</span></p>
+
+<p class=MsoNormal style='line-height:normal'><a
+href="https://github.com/ExcelDataReader/ExcelDataReader" target="_blank"><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>ExcelDataReader</span></a><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> by “Ian1971”</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Anders Abel – </span><a
+href="https://coding.abel.nu/2012/06/built-in-net-csv-parser/" target="_blank"><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>Built in .NET CSV
+Parser</span></a></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Rowan Miller (Microsoft):&nbsp;Code First to an
+Existing Database – </span><a
+href="https://msdn.microsoft.com/en-us/data/jj200620" target="_blank"><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>document</span></a><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> and </span><a
+href="https://channel9.msdn.com/Blogs/EF/Code-First-to-Existing-Database-EF6-1-Onwards-"
+target="_blank"><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>video</span></a></p>
+
+<p class=MsoNormal><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>

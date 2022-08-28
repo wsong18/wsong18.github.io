@@ -1,0 +1,617 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<title>Lab05</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+h2
+	{mso-style-link:"Heading 2 Char";
+	margin-right:0in;
+	margin-left:0in;
+	font-size:18.0pt;
+	font-family:"Times New Roman",serif;}
+h4
+	{mso-style-link:"Heading 4 Char";
+	margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-link:"Header Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-link:"Footer Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-link:"Balloon Text Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:8.0pt;
+	font-family:"Tahoma",sans-serif;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:.5in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:.5in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+span.Heading4Char
+	{mso-style-name:"Heading 4 Char";
+	mso-style-link:"Heading 4";
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+span.BalloonTextChar
+	{mso-style-name:"Balloon Text Char";
+	mso-style-link:"Balloon Text";
+	font-family:"Tahoma",sans-serif;}
+span.HeaderChar
+	{mso-style-name:"Header Char";
+	mso-style-link:Header;}
+span.FooterChar
+	{mso-style-name:"Footer Char";
+	mso-style-link:Footer;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-link:"Heading 2";
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+span.tgc
+	{mso-style-name:_tgc;}
+span.x22f
+	{mso-style-name:x22f;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:10.0pt;
+	line-height:115%;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:8.5in 11.0in;
+	margin:56.7pt 56.7pt 56.7pt 56.7pt;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink=purple background=bgw.gif>
+
+<div class=WordSection1 
+     style="margin: 0.5in auto; max-width: 50em; min-width: 30em;">
+
+<h2><span style='font-family:"Arial",sans-serif'>INT222 - Lab 05:  HTML Form
+and validation (Ver 1.1) </span></h2>
+
+<h2><span style='font-size:12.0pt;font-family:"Arial",sans-serif;color:#002060'>&nbsp;</span></h2>
+
+<h2><span style='font-size:16.0pt;font-family:"Arial",sans-serif;color:#002060'>Due
+date</span></h2>
+
+<p class=MsoNormal style='margin-bottom:6.0pt'><span lang=EN-CA
+style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>Section
+D:   Sunday, Nov 27, 2016 - 23:59 </span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt'><span lang=EN-CA
+style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>Grade
+value:   5% of </span><span lang=EN-CA style='font-size:12.0pt;line-height:
+115%;font-family:"Arial",sans-serif'>your final course grade</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt'><span lang=EN-CA
+style='font-size:10.0pt;line-height:115%;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<h2><span style='font-size:16.0pt;font-family:"Arial",sans-serif;color:#002060'>Objective</span></h2>
+
+<p class=MsoListParagraphCxSpFirst style='text-indent:-.25in'><span lang=EN-CA
+style='font-size:12.0pt;line-height:115%;font-family:Wingdings'>§<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=EN-CA
+style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>To work
+with HTML form and CSS styling</span></p>
+
+<p class=MsoListParagraphCxSpLast style='text-indent:-.25in'><span lang=EN-CA
+style='font-size:12.0pt;line-height:115%;font-family:Wingdings'>§<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=EN-CA
+style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>To
+perform client-side validations. </span></p>
+
+<p class=MsoNormal><span lang=EN-CA style='font-size:1.0pt;line-height:115%;
+font-family:"Arial",sans-serif'> </span></p>
+
+<h2><span style='font-size:16.0pt;font-family:"Arial",sans-serif;color:#002060'>Specifications</span></h2>
+
+<p class=MsoNormal><span lang=EN-CA style='font-size:12.0pt;line-height:115%;
+font-family:"Arial",sans-serif'>1. Create an HTML5 document <b>lab05.html</b>),
+a CSS3 file <b>lab05.css</b> and a JavaScript file <b>lab05.js</b> under a
+folder.</span></p>
+
+<p class=MsoNormal><span lang=EN-CA style='font-size:12.0pt;line-height:115%;
+font-family:"Arial",sans-serif'>2. In <b>lab05.html</b>, create a form named <b>signup</b>
+to accept user's input for creating a user account. Set the title of the page
+with &quot;<b>Sign Up</b>&quot;. Your <b>lab05 </b>page appearance should <b>mimic</b>
+the </span><span lang=EN-CA><a
+href="https://scs.senecac.on.ca/~wei.song/int222/labs/lab05-form.jpg"><span
+style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>screenshot
+from this <b>link</b></span></a></span><span lang=EN-CA style='font-size:12.0pt;
+line-height:115%;font-family:"Arial",sans-serif'>.</span></p>
+
+<p class=MsoNormal><span lang=EN-CA style='font-size:12.0pt;line-height:115%;
+font-family:"Arial",sans-serif'>3. In the form <b>signup</b>, the user input
+information will be grouped in to four sections: <b><i>Basic information</i></b>,
+<b><i>Education</i></b>, <b><i>Work Experience</i></b> and <b><i>Attachments</i></b>.
+Add the following elements to each group in the form:</span></p>
+
+<p class=MsoListParagraphCxSpFirst style='text-indent:-.25in'><b><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>a)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span></b><b><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>Basic
+Information</span></b></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.75in;text-indent:-.25in'><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>Field
+&quot;<b>Email</b>&quot;: type of email, autofocus and required. User needs the
+email address for logging in the website.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.75in;text-indent:-.25in'><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>Field
+&quot;<b>Password</b>&quot;: type of password, required. </span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.75in;text-indent:-.25in'><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>Field
+&quot;<b>Retype Password</b>&quot;: type of password, required.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.75in;text-indent:-.25in'><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>Field
+&quot;<b>First</b> <b>Name</b>&quot;: text, user needs to input his/her full
+name, required.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.75in;text-indent:-.25in'><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>Field
+&quot;<b>Last</b> <b>Name</b>&quot;: text, user needs to input his/her full
+name, required.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.75in;text-indent:-.25in'><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>Field
+&quot;<b>Phone</b> <b>Number</b>&quot;: type of tel, user needs to enter
+his/her phone number, required. This field should show the telephone input
+format using placeholder.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.75in;text-indent:-.25in'><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>Field
+&quot;<b>Address</b>&quot;: text, home address, required.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.75in;text-indent:-.25in'><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>Field
+&quot;<b>City</b>&quot;: text, city of the address, required.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.75in;text-indent:-.25in'><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>Field
+&quot;<b>Province</b>&quot;: dropdown list: select element with options - the
+10 provinces and 3 territories of Canada, required. The full names of provinces
+and territories will be showed up on the list and organized in two groups: <b>Provinces</b>
+and <b>Territories</b>. The values for option elements must use standard
+2-letter abbreviations.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.75in'><span lang=EN-CA
+style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>The
+ten provinces are <b><i>Alberta</i></b>, <b><i>British</i></b> <b><i>Columbia</i></b>,
+<b><i>Manitoba</i></b>, <b><i>New</i></b> <b><i>Brunswick</i></b>, <b><i>Newfoundland</i></b>
+and <b><i>Labrador</i></b>, <b><i>Nova</i></b> <b><i>Scotia</i></b>, <b><i>Ontario</i></b>,
+<b><i>Prince</i></b> <b><i>Edward</i></b> <b><i>Island</i></b>, <b><i>Quebec</i></b>,
+and <b><i>Saskatchewan</i></b>. The three territories are <b><i>Northwest</i></b>
+<b><i>Territories</i></b>, <b><i>Nunavut</i></b>, and <b><i>Yukon</i></b>.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.75in;text-indent:-.25in'><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>Field
+&quot;<b>Country</b>&quot;: type of text with an datalist, required. Put five
+countries on the list: Canada, The United States and any other 3 countries in
+the world.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.75in'><span lang=EN-CA
+style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>b)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>Education</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.75in;text-indent:-.25in'><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>Field
+&quot;<b>School</b>&quot;: text, the school that user/student is attending or
+the last attended, required.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.75in;text-indent:-.25in'><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>Field
+&quot;<b>Program</b>&quot;: text, program in above school for the student,
+required.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.75in;text-indent:-.25in'><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>Field
+&quot;<b>Education</b> <b>Level</b>&quot;: dropdown list using select and
+option elements, required. The <b>Education</b> Level should choose from the
+items of<b><i> –select–, Technical</i></b> <b><i>Diploma</i></b>, <b><i>College</i></b>
+<b><i>Diploma</i></b>, <b><i>Bachelor's</i></b> <b><i>Degree</i></b>, <b><i>Master's</i></b>
+<b><i>Degree</i></b> and <b><i>Others</i></b>. The option tag for the <b>“<i>–</i>select<i>–</i></b>
+“ should has the value of “0” or an empty string.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.75in;text-indent:-.25in'><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>Field
+&quot;<b>Education</b> <b>Status</b>&quot;: type of radio. The value should
+choose from the list of <b><i>Graduated</i></b>, <b><i>Current enrolled</i></b>,
+<b><i>Did not graduate</i></b>. </span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.75in;text-indent:-.25in'><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>Field
+&quot;<b>Graduation</b> <b>Date</b>&quot;: type of date, the date of graduation
+or anticipated graduation date, optional.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>c)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>Work
+Experience</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.75in;text-indent:-.25in'><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>Field
+&quot;<b>Employer</b>&quot;:  text, the current or last employer of the
+student, optional.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.75in;text-indent:-.25in'><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>Field
+&quot;<b>Job</b> <b>Title</b>&quot;: text, the job title of the student in the
+above company.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.75in;text-indent:-.25in'><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>Field
+&quot;<b>Job</b> <b>Duty</b>&quot;: textarea, description of job duties or
+responsibilities, optional.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.75in;text-indent:-.25in'><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>Field
+&quot;<b>Worked</b> <b>Year</b>&quot;: type of number, the number of years for
+the student worked for his/her above employer, optional. The number user inputs
+will be in the range of 1 to 20. </span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>d)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>Attachments</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.75in;text-indent:-.25in'><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>Add
+an input with the type of file for attaching files to the application. There is
+no need to check the MINE type, but user can upload multiple files at a time.</span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-left:.75in;text-indent:-.25in'><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>In
+addition, form <b>signup</b> must have both submit and reset buttons with the
+values of <b>Apply</b> and <b>Reset</b>. </span></p>
+
+<p class=MsoNormal><span lang=EN-CA style='font-size:12.0pt;line-height:115%;
+font-family:"Arial",sans-serif'>4. The <b>signup</b> form is required to use <b>post</b>
+method and submit to the post tester: </span><span lang=EN-CA><a
+href="https://formpost.azurewebsites.net/home/test"><span style='font-size:
+12.0pt;line-height:115%;font-family:"Arial",sans-serif'>https://formpost.azurewebsites.net/home/test</span></a></span><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>.
+The autocomplete feature should be turned on.</span></p>
+
+<p class=MsoNormal><b><span lang=EN-CA style='font-size:12.0pt;line-height:
+115%;font-family:"Arial",sans-serif;background:yellow'>Note</span></b><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif;
+background:yellow'>: this form tester in no longer support forms posted from
+PCs. Try to use this: </span><span lang=EN-CA><a
+href="http://www.cs.tut.fi/cgi-bin/run/~jkorpela/echo.cgi"><span
+style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif;
+background:yellow'>http://www.cs.tut.fi/cgi-bin/run/~jkorpela/echo.cgi</span></a></span><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>
+</span></p>
+
+<p class=MsoNormal><span lang=EN-CA style='font-size:12.0pt;line-height:115%;
+font-family:"Arial",sans-serif'>5. All form fields/controls should have the id
+and name attributes; each of the form field/control should have a label tag
+apply to it if possible. Required fields should be lead by<b><span
+style='color:red'> *</span> </b>sign with red color.</span></p>
+
+<p class=MsoNormal><span lang=EN-CA style='font-size:12.0pt;line-height:115%;
+font-family:"Arial",sans-serif'>6. You are required to use CSS to style the
+page and align form fields. HTML tables are not allowed for aligning form
+fields in the assignment.</span></p>
+
+<p class=MsoNormal><span lang=EN-CA style='font-size:12.0pt;line-height:115%;
+font-family:"Arial",sans-serif'>7. Some form fields need validation using
+JavaScript. But Regular Expression is not allowed in the assignment. The
+validation rules are as following:</span></p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-left:42.55pt;text-indent:-.25in'><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>1)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>Field
+“First Name” and “Last Name”</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:64.35pt;text-indent:
+-.25in'><span lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:
+"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>Must
+be present (cannot be empty string after trimmed)</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:64.35pt;text-indent:
+-.25in'><span lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:
+"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>Allowable
+characters  </span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:100.35pt;text-indent:
+-.25in'><span lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:
+Wingdings'>ü<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>alphabetic
+characters lower case (a-z) upper case (A-Z)  </span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:100.35pt;text-indent:
+-.25in'><span lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:
+Wingdings'>ü<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>apostrophe
+(‘) </span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:100.35pt;text-indent:
+-.25in'><span lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:
+Wingdings'>ü<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>hyphen
+(-) </span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:100.35pt;text-indent:
+-.25in'><span lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:
+Wingdings'>ü<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>Must
+have at least 1 alphabetic characters (a-z) (A-Z)</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:100.35pt'><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:42.55pt;text-indent:
+-.25in'><span lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:
+"Arial",sans-serif'>2)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-CA style='font-size:12.0pt;line-height:115%;
+font-family:"Arial",sans-serif'>Fields “Password” and “Retype Password” </span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:64.35pt;text-indent:
+-.25in'><span class=x22f><span lang=EN-CA style='font-size:12.0pt;line-height:
+115%;font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><span class=x22f><span lang=EN-CA style='font-size:12.0pt;
+line-height:115%;font-family:"Arial",sans-serif'>Password must contain both
+upper and lower case characters</span></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:64.35pt;text-indent:
+-.25in'><span class=x22f><span lang=EN-CA style='font-size:12.0pt;line-height:
+115%;font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><span class=x22f><span lang=EN-CA style='font-size:12.0pt;
+line-height:115%;font-family:"Arial",sans-serif'>At least 1 number</span></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:64.35pt;text-indent:
+-.25in'><span class=x22f><span lang=EN-CA style='font-size:12.0pt;line-height:
+115%;font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><span class=x22f><span lang=EN-CA style='font-size:12.0pt;
+line-height:115%;font-family:"Arial",sans-serif'>At least 8 characters long</span></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:64.35pt;text-indent:
+-.25in'><span lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:
+"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span
+class=x22f><span lang=EN-CA style='font-size:12.0pt;line-height:115%;
+font-family:"Arial",sans-serif'>The value of the 2 fields must be identical
+unless one of them is an empty string.</span></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:42.55pt;text-indent:
+-.25in'><span lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:
+"Arial",sans-serif'>3)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-CA style='font-size:12.0pt;line-height:115%;
+font-family:"Arial",sans-serif'>Field “Phone Number”</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:64.35pt;text-indent:
+-.25in'><span lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:
+"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>Must
+be present </span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:64.35pt;text-indent:
+-.25in'><span lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:
+"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>Must
+be in the format of 999-999-9999 (‘9’ here means digit only)</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:64.35pt;text-indent:
+-.25in'><span lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:
+"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>The
+area code <b><u>999</u></b>-999-9999 can't be all zeros </span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:64.35pt;text-indent:
+-.25in'><span lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:
+"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>The
+actual phone number 999-<b><u>999</u></b>-<b><u>9999</u></b> can't be all zeros</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:42.55pt;text-indent:
+-.25in'><span lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:
+"Arial",sans-serif'>4)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-CA style='font-size:12.0pt;line-height:115%;
+font-family:"Arial",sans-serif'>Field “Education Status”</span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-left:64.35pt;text-indent:-.25in'><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Courier New"'>o<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>Must
+select one of these menu options</span></p>
+
+<p class=MsoNormal><span lang=EN-CA style='font-size:12.0pt;line-height:115%;
+font-family:"Arial",sans-serif'>8. For the fields that require validation, your
+code should validate the field upon user make change to the field if applicable
+(hint: use <b>onchange</b> event handler to call JavaScript functions). Show only
+one error for a field at a time. Appropriate message must be showed under the invalid
+field. For example:</span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><img border=0 width=580 height=146
+id="Picture 1" src="INT222-Lab05_files/image001.jpg"><span style='font-size:
+12.0pt;line-height:115%;font-family:"Arial",sans-serif'> </span></p>
+
+<p class=MsoNormal><span lang=EN-CA style='font-size:12.0pt;line-height:115%;
+font-family:"Arial",sans-serif'>9. All field input must be valid when sending
+the form to server. </span></p>
+
+<p class=MsoNormal><span lang=EN-CA style='font-size:12.0pt;line-height:115%;
+font-family:"Arial",sans-serif'>10. Your assignment must pass <b><u>W3C HTML
+validation</u></b>, <b><u>CSS validation</u></b> and <b><u>be free of JS run-time
+errors/exceptions</u></b>.</span></p>
+
+<p class=MsoNormal><span lang=EN-CA style='font-size:12.0pt;line-height:115%;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<h2><span style='font-size:16.0pt;font-family:"Arial",sans-serif;color:#002060'>Lab
+submission</span></h2>
+
+<p class=MsoListParagraph style='text-indent:-.25in'><span lang=EN-CA
+style='font-size:12.0pt;line-height:115%;font-family:Wingdings'>§<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=EN-CA
+style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>Compress
+your lab folder to a zip file <b>lab05.zip</b> and submit it to the Blackboard
+(My.Seneca).</span></p>
+
+<p class=MsoNormal><span lang=EN-CA style='font-size:12.0pt;line-height:115%;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<h2><span style='font-size:16.0pt;font-family:"Arial",sans-serif;color:#002060'>Important
+note</span></h2>
+
+<p class=MsoListParagraphCxSpFirst style='text-indent:-.25in'><span lang=EN-CA
+style='font-size:12.0pt;line-height:115%;font-family:Wingdings'>§<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=EN-CA
+style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>NO
+LATE SUBMISSIONS for labs. Late Lab submissions will not be accepted and will
+receive a grade of zero (0).</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:Wingdings'>§<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=EN-CA
+style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>After
+the end (23:59) of the due date, the lab submission link on the Blackboard will
+no longer available.</span></p>
+
+<p class=MsoListParagraphCxSpLast style='text-indent:-.25in'><span lang=EN-CA
+style='font-size:12.0pt;line-height:115%;font-family:Wingdings'>§<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=EN-CA
+style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>All
+INT222 labs are subject to change after released. It's your responsibility to
+keep your lab assignments up to date before the lab is submitted.</span></p>
+
+</div>
+
+</body>
+
+</html>

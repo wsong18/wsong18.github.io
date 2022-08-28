@@ -1,0 +1,13 @@
+<!DOCTYPE html><html lang="en"><head>   <meta charset="UTF-8" />   <title>HTML DOM</title>   <style> body { margin: 0 18%; } </style>   <script>		function getAndSetText() {			var elem = document.getElementById("demo");            alert("The text in the paragraph: " + elem.innerHTML);            elem.innerHTML = prompt("Please input some text");		}
+		function createParagraph()		{			var elem = document.getElementById("display");			elem.innerHTML = "<p>Paragraph added/changed!</p>";		}
+		function appendList() { // writing HTML code with JS - no-good practice, use DOM create... instead			var elem = document.getElementById("display");            elem.innerHTML += '<ul><li>Coffee</li><li>Tea</li></ul>';		}	</script></head><body>   <h1>HTML DOM - Element innerHTML property</h1>   
+   <h3>Sets or gets the HTML text content of an element</h3>
+   <p id="demo">Welcome to Seneca College!</p> 
+   <br>   <button onclick="getAndSetText()">Change Text!</button>    <br><hr>
+   <h3>using innerHTML property to &lt;div&gt; element</h3>
+   <div id=display></div>
+   <br>   <button onclick="createParagraph()">Create a paragraph</button>   <br>   <button onclick="appendList()">append a list</button>   <br><hr>
+  <br>  <!-- for downloading source files -->  <p><a href="" Download>Download</a></p>
+</body>
+
+</html>

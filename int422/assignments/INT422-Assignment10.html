@@ -1,0 +1,530 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<title>A10</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+h2
+	{mso-style-link:"Heading 2 Char";
+	margin-right:0in;
+	margin-left:0in;
+	font-size:18.0pt;
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+h4
+	{mso-style-link:"Heading 4 Char";
+	margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-link:"Header Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-link:"Footer Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:#954F72;
+	text-decoration:underline;}
+p
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+span.HeaderChar
+	{mso-style-name:"Header Char";
+	mso-style-link:Header;}
+span.FooterChar
+	{mso-style-name:"Footer Char";
+	mso-style-link:Footer;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-link:"Heading 2";
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+span.Heading4Char
+	{mso-style-name:"Heading 4 Char";
+	mso-style-link:"Heading 4";
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+span.skimlinks-unlinked
+	{mso-style-name:skimlinks-unlinked;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:8.5in 11.0in;
+	margin:.75in .75in .75in .75in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink="#954F72" background=bgw.gif>
+
+<div class=WordSection1 
+     style="margin: 0.5in auto; max-width: 50em; min-width: 30em;">
+
+<h2><span style='font-family:"Arial",sans-serif'>INT422 Assignment 10</span></h2>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>JavaScript and Ajax. Web services. Bulk load
+data.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Read/skim <b>all</b> of this document before
+you begin work.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<h2><span style='font-size:16.0pt;font-family:"Arial",sans-serif;color:#002060'>Due
+date</span></h2>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Section A, B &amp; C: not required</span></p>
+
+<p class=MsoNormal style='line-height:normal'><i><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>If you wish to submit the lab before the due
+date and time, you can do that.</span></i></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<h2><span style='font-size:16.0pt;font-family:"Arial",sans-serif;color:#002060'>Objective(s)</span></h2>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>There are several objectives for this
+Assignment 10:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Continue using security principles</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Working with JavaScript in a web app</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Working with Ajax to consume content
+     and/or web service&nbsp;resources</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Bulk load data (initial or ongoing) into
+     the data model of the web app</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Post to a public web server</span></li>
+</ul>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<h2><span style='font-size:16.0pt;font-family:"Arial",sans-serif;color:#002060'>Introduction
+and overview</span></h2>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>You can choose the problem domain and therefore
+the data that you’ll use for this final assignment of INT422.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Too broad? Here’s some guidance:</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Select a problem domain that has <i>easy-to-obtain
+data</i>. There are many areas of human activity that can be used. Maybe we can
+suggest, in the entertainment domain, <b>sports</b> of some kind. Statistics
+are easy to obtain, as well as data about players, teams, and so on. Publicly
+available on the web, with data that’s easy to copy, paste, and use. Non-text
+media types (e.g. photos, video) are also easily available. For example:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>NHL</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>MLB</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>NFL</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>NBA</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>MLS</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>NASCAR</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Olympic-themed sports</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>eSports</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>EPL (English Premier League, football)</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>IPL (Indian Premier League, cricket)</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>etc.</span></li>
+</ul>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>That’s not the only area of human activity that
+would work, however. Other forms of entertainment – for example
+screen-displayed content (i.e. traditionally known as movies and television,
+but now much broader, to include cable/satellite, online, streaming, on-demand,
+and so on) could work.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Almost anything could work. Anything human
+activity that’s competitive or measured/tracked, and generates data. Keep it
+clean and family-friendly&nbsp;however.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>What we’re looking for, in general</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>For this assignment, you must create a data
+model that has about three (3) entities. No less than three, and no more than
+five. Don’t make the data model too complicated. In your data model, at least
+two of the entities must be associated (probably a one-to-many).</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>During the first week of the assignment’s
+lifetime, you will define and build the basic structure of the app. This will
+include design model classes, a <i>small amount</i> of initial data
+(programmatically or by using an HTML Form), view model classes, manager methods
+for “get all” and “get one”, and controllers for each entity that will work
+with “get all” and “get one”.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The first-week work must also include at least
+something that uses JavaScript or Ajax. Think again of their value
+propositions, and come up with something that would work.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Finally, the home page for your first-week work
+will briefly describe what your project is about.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Then, after you learn about bulk data loading,
+you can add that feature to the web app. You’ll use that knowledge to capture,
+prepare, and upload <i>larger amounts</i> of data to your web app, to complete
+its data model coverage. For example, during the first week, you may decide to
+programmatically add data for one “team” and two or three “players”. During the
+second week, you can bulk load all teams, and all players.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<h2><span style='font-size:16.0pt;font-family:"Arial",sans-serif;color:#002060'>Specifications
+overview and work plan</span></h2>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Here’s a brief list of specifications that you
+must implement:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Follows best practices</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Implements the recommended system design
+     guidance</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Customized appearance, with appropriate
+     menu items</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Customized security claims configuration</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Publish the app to the web</span></li>
+</ul>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>During the Friday-or-Monday class/session, your
+professor will help you&nbsp;<i>get started</i>&nbsp;and&nbsp;<i>make progress</i>&nbsp;on
+this assignment.&nbsp;There will be a small&nbsp;<i>in-class grading</i>&nbsp;task
+&nbsp;done during the class/session.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<h2><span style='font-size:16.0pt;font-family:"Arial",sans-serif;color:#002060'>Create
+the project, based on the project template</span></h2>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Create a new web app, named Assignment10.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>It MUST use the “Web app project <b>v4&#8243;</b>&nbsp;project
+template. Before using it, you must install it into your Visual Studio
+configuration.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-family:"Arial",sans-serif'>After
+creating the web app, customize the home page. <span style='background:yellow'>Change
+the large “</span><b><span style='color:white;background:blue'>Learn more
+&gt;&gt;</span></b><span style='background:yellow'>”<span style='color:white'> </span>button
+to <b>“</b></span><b><span style='color:white;background:blue'>Assignment 10 on
+Azure</span></b><span style='background:yellow'>” and set the button link to
+the URL of the assignment 10 on Azure.</span></span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Build/compile the app, to refresh the packages.
+Do NOT run the app yet.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>If you wish, temporarily disable error-handling
+for HTTP errors 500 and higher:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Open the Global.asax.cs source code file.</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>In the Application_EndRequest() method,
+     comment out the “if (code &gt;= 500)…” statement.</span></li>
+</ul>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Warning: Your teachers believe that the best
+way to work through this assignment is to do itincrementally. Get one thing
+working, before moving on to the next. Test each part.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<h2><span style='font-size:16.0pt;font-family:"Arial",sans-serif;color:#002060'>Customize
+the app’s appearance</span></h2>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>You will customize the appearance all of your
+web apps and assignments. Never submit an assignment that has the generic
+auto-generated text content. Make the time to customize the web app’s
+appearance.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>For this assignment, you can defer this
+customization work until later. Come back to it at any time, and complete it
+before you submit your work.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Follow the guidance from </span><a
+href="https://petermcintyre.com/bti420/graded-work/assign1/" target="_blank"><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>Assignment 1</span></a><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> to customize the app’s
+appearance.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif;color:red'>Important:</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif;color:red'>The web app’s “home” page MUST
+include a brief description of the app’s purpose and features.&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif;color:red'>Each student will be implementing
+their own custom idea, so you MUST tell the view (and your professor!) about
+the web app.&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<h2><span style='font-size:16.0pt;font-family:"Arial",sans-serif;color:#002060'>Improve
+the role claims configuration</span></h2>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>As you have done a couple of times now,
+configure your own role claim names in the app.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<h2><span style='font-size:16.0pt;font-family:"Arial",sans-serif;color:#002060'>Design
+your data model, data classes, and make some initial data</span></h2>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>At this point, you can design and code your
+data model. Obviously, you will need design model classes, DbSet&lt;TEntity&gt;
+properties, view model classes, and AutoMapper maps.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Make sure that there is easily-available
+(and/or easily-creatable) data for the entities in your data model. Remember
+from above, a&nbsp;first-week task is to create a small amount of data, and a
+second-week task is to bulk load more data into your model. Make sure that the
+data model design closely matches the source(s) of data.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<h2><span style='font-size:16.0pt;font-family:"Arial",sans-serif;color:#002060'>Add
+more data using a bulk data-loading process</span></h2>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Recently, you learned how to load data into
+your web app’s data store, from external sources that could include CSV, Excel
+workbooks, and web services.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>At this point, implement a data-loading
+process, that will load more data.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>How much data?</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In total, your app should have hundreds or
+thousands of objects in its data store. If your &nbsp;data model includes two
+associated entities in a one-to-many association, it’s possible that the root
+end would have tens or hundreds of objects, and the to-many end would have
+hundreds or thousands. That’s the scale we’re looking for.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<h2><span style='font-size:16.0pt;font-family:"Arial",sans-serif;color:#002060'>JavaScript
+and/or Ajax in your web app</span></h2>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Recently, you learned how to use JavaScript and
+Ajax with ASP.NET MVC web apps.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>At this point, implement some JavaScript and/or
+Ajax. The functionality should be either <i>documented</i> or <i>discoverable</i>.
+Make sure the user (and the professor who marks your work) knows about it and
+can benefit from it.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<h2><span style='font-size:16.0pt;font-family:"Arial",sans-serif;color:#002060'>Publish
+to Azure</span></h2>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Follow the guidance in this document to
+deploy/publish your web app to Azure:</span></p>
+
+<p class=MsoNormal style='line-height:normal'><u><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif;color:blue'><a
+href="https://scs.senecac.on.ca/~wei.song/int422/assignments/INT422-Assignment7.html"
+target="_blank">Web apps – deploy to Microsoft Azure</a></span></u></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Please note that you must NOT create a new
+database server. Instead, create a new SQL Database, inside the existing
+database server that was created for your previous assignment.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Suggested names, assuming that your Microsoft
+Account name uses the recommended format “pmcintyr-wa2016”:</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Web app: <span style='color:red'>wsong18-wa2017a10</span></span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>SQL database: <span style='color:red'>Assign10Store</span>
+(or <span style='color:red'>A10Store</span>)</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<h2><span style='font-size:16.0pt;font-family:"Arial",sans-serif;color:#002060'>Testing
+your work</span></h2>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>While designing and coding your web app, use
+the Visual Studio debugger to test your algorithms, and inspect the data that
+you are working with.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In a browser, test your work, by doing tasks
+that fulfill the use cases in the specifications.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<h2><span style='font-size:16.0pt;font-family:"Arial",sans-serif;color:#002060'>Reminder
+about academic honesty</span></h2>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>You must comply with the College’s academic
+honesty policy. Although you may interact and collaborate with others,&nbsp;<i>you
+must submit your own work</i>.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<h2><span style='font-size:16.0pt;font-family:"Arial",sans-serif;color:#002060'>Submitting
+your work</span></h2>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Here’s how to submit your work, before the due
+date and time:</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>1. Locate the folder that holds your
+solution&nbsp;files. In Solution Explorer, right-click the “Solution” item, and
+choose “Open Folder in File Explorer”.&nbsp;It has three &nbsp;(or more) items:
+a Visual Studio Solution file, a folder that has your project’s source code,
+and a “packages” folder.&nbsp;Go UP one level.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>2. Make a copy of the folder. This is the
+version&nbsp;that you will be uploading.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>3. Remove the “packages” folder from the copied
+folder; also, remove the “bin” and “obj” folders.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>4. Compress/zip the copied folder. The zip file
+SHOULD be about 2MB or less in size. If it isn’t, you haven’t followed the
+instructions properly.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>5. Login to My.Seneca/Blackboard. Open the Web
+Programming on Windows&nbsp;course area. Click the “Assignments” link on the
+left-side navigator. Follow the link for this lab. Submit/upload your zip file.
+The page will accept three submissions, so if you upload, then decide to fix
+something and upload again, you can do so.</span></p>
+
+<p class=MsoNormal><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>

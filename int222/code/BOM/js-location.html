@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+   <meta charset="UTF-8" />
+   <title>BOM</title>
+   <style> 
+      body { margin: 0 15%; }
+   </style>
+
+</head>
+<body>
+   <h3>BOM - Location Object Properties</h3>
+   <br>
+   <p>
+	 <script type="text/javascript">
+		document.writeln("<b>The <mark>location.host</mark> is </b>"          + window.location.host +"<br />")
+		document.writeln("<b>The <mark>location.hostname</mark> is </b>"      + window.location.hostname +"<br />")
+		document.writeln("<b>The <mark>location.href</mark> is </b>"          + window.location.href     +"<br />")
+		document.writeln("<b>The <mark>location.pathname</mark> is </b>"      + window.location.pathname +"<br />")
+		document.writeln("<b>The <mark>location.port</mark> is </b>"          + window.location.port +"<br />")
+		document.writeln("<b>The <mark>location.protocol</mark> is </b>"      + window.location.protocol +"<br />")
+		document.writeln("<b>The <mark>location.search</mark> string is </b>" + window.location.search   +"<br />")
+	  </script>
+   </p>
+ 
+   <br>
+   <h4>Page redirection:</h4>
+   <p>
+	 <input type="button" value="Seneca College" onclick="location.href='http://www.senecacollege.ca/'" />
+	 <input type="button" value="Moodle" onclick="location='https://open.senecac.on.ca/cms/'" />
+   </p>
+ 
+   <br><hr>
+  
+   <!-- for view-source and download -->
+   <br>
+   <p><a href="view-source:">View-source</a> <a href='' download>Download</a></p>
+</body>
+
+</html>

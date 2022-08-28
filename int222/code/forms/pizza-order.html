@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+   <meta charset="UTF-8" />
+   <title>INT222</title>
+   <style> 
+      body { margin: 0 20%; }
+   </style>
+</head>
+<body>
+   <h2>INT222 - Pizza Order form</h2>
+   <form action="http://formpost.azurewebsites.net/home/test" method="post">
+
+	 <p><label>Customer name: <input name=name></label></p>
+	 <p><label>Telephone: <input type=tel name=phone></label></p>
+	 <p><label>E-mail address: <input type=email name=email></label></p>
+	 <fieldset>
+	  <legend> Pizza Size </legend>
+	  <p><label> <input type=radio name=pizzasize value=small> Small </label></p>
+	  <p><label> <input type=radio name=pizzasize value=medium> Medium </label></p>
+	  <p><label> <input type=radio name=pizzasize value=large> Large </label></p>
+	 </fieldset>
+	 <fieldset>
+	  <legend> Pizza Toppings </legend>
+	  <p><label> <input type=checkbox name=topping value=bacon> Bacon </label></p>
+	  <p><label> <input type=checkbox name=topping value="extra cheese"> Extra Cheese </label></p>
+	  <p><label> <input type=checkbox name=topping value=onion> Onion </label></p>
+	  <p><label> <input type=checkbox name=topping value=mushroom> Mushroom </label></p>
+	 </fieldset>
+	 <p><label>Preferred delivery time: <input name=dtime type=time min="11:00" max="21:00" step="900"></label></p>
+	 <p><label>Delivery instructions: <textarea name=instructions></textarea></label></p>
+	 <p><input type='submit' value='Submit' />&nbsp;&nbsp;&nbsp;&nbsp;<input type='reset'  value='    Clear   ' /></p>
+	 
+   </form>
+
+  <br>
+  <p><a href="view-source:">View-source</a>&nbsp;&nbsp;&nbsp;&nbsp;
+     <a href="" onclick="download=document.referrer">Download</a></p>
+</body>
+
+</html>

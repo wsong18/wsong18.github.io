@@ -1,0 +1,11 @@
+roy,bean,056.171.486,rbean@myseneca.ca,int222
+carl,bell,121.126.536,cbell@myseneca.ca,dbs201,int222
+eric,brand,046.123.976,ebrand@myseneca.ca,oop244,dbs201,int222
+henry, clay, 034.146.412, hclay@myseneca.ca , ibc233 , oop244 , dbs201 , int222
+bob,dylan,076.182.443,bdylan@myseneca.ca, ibc233, oop244, dbs201, int222, eac150
+thomas,gray,021.147.566,tgray@myseneca.ca,ios110,ibc233,oop244,dbs201,int222,eac150
+stephen,harper,030.128.746,sharper@myseneca.ca,uli101,ios110,ibc233,oop244,dbs201,int222,eac150
+
+joe,hill,O3O.152.471,jhill@myseneca.ca,int222,ibc233,ibc233,oop244,dbs201
+steve,jobs,010.125.236,sjobs@myseneca.ca,iOS201
+jhon,smith,012.023.165,jsmith@myseneca.ca

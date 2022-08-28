@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <title>WEB222</title>
+   <style> 
+      body { margin: 0 18%; }
+   </style>
+   <script>
+		function doit(){
+		    var addrParas = document.querySelector("#address").querySelectorAll("p"); 
+			//var addrParas = document.getElementById("address").getElementsByTagName("p"); 
+
+			// highlight paragraphs inside of the section with "address" div element: 
+			for (var i = 0; i < addrParas.length; i++) {   
+					addrParas[i].style.backgroundColor = "yellow"; 
+			}
+		}
+		
+		function tryit(){
+		    var allParas = document.querySelectorAll("p");
+
+			// highlight all paragraphs in the web page
+			for (var i = 0; i < allParas.length; i++) {   
+					allParas[i].style.backgroundColor = "lightgreen"; 
+			}
+		}
+	</script>
+</head>
+<body>
+   <h1>WEB222 - Accessing elements within an element (node)</h1>
+
+   <p>Mail to: </p> 
+   <div id="address"> 
+       <p>70 The Pond Road</p> 
+       <p>Toronto, ON</p>
+   </div>
+
+   <p>
+      Highlight paragraphs inside of the section with "address" div element:<br> 
+      <input type="button" onclick="doit()" value="Do it">
+   </p>
+   <hr>
+   
+   <p>
+	  Highlight all paragraphs in the web page:<br>
+      <input type="button" onclick="tryit()" value="Try it">
+   </p>
+   <hr>
+
+
+   <!-- for view-source and download -->
+   <br><p><a href='' download>Download</a></p>
+</body>
+
+</html>

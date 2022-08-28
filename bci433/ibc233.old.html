@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>IBC233-W.S.</title>
+    <meta name="viewport" content="width=1000, initial-scale=1.0, maximum-scale=1.0">
+
+    <!-- Loading Bootstrap -->
+    <link href="../Flat-UI-master/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Loading Flat UI -->
+    <link href="../Flat-UI-master/css/flat-ui.css" rel="stylesheet">
+    <link href="../Flat-UI-master/css/demo.css" rel="stylesheet">
+    <link href="../Flat-UI-master/css/mystyle.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="../Flat-UI-master/js/html5shiv.js"></script>
+      <script src="../Flat-UI-master/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body onload="init();">
+    <div class="container">
+      
+      <a id="top"></a> 	
+      <div class="page-header">
+        <h3>IBC233</h3>
+	<p>
+	  IBC233 - System i Business Computing -
+	  <a href="http://www.senecacollege.ca/"><img src="../Flat-UI-master/images/seneca_logo.png" alt="Seneca"/></a> College
+	</p>
+      </div> <!-- /page-header -->	  
+	  
+      <div class="row demo-row">
+          <nav class="navbar navbar-inverse navbar-embossed" role="navigation">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
+                <span class="sr-only">Toggle navigation</span>
+              </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse-01">
+              <ul class="nav navbar-nav navbar-left">
+		<li><a href="../index.html"><span class="fui-user"></span></a></li>
+                <li><a href="#top">Announcements</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#standards">Standards</a></li>
+                <li><a href="https://scs.senecac.on.ca/course/ibc233">Outline</a></li>
+                <li><a href="https://cs.senecac.on.ca/~ibc233/">Course Site</a></li>
+		<li><a href="#system_i">System i</a></li>
+               </ul>
+            </div><!-- /.navbar-collapse -->
+          </nav><!-- /navbar -->	
+      </div> <!-- /row -->	
+	
+      
+      <div class="demo-row typography-row">
+        <div class="demo-content">
+	  <h3>
+	    <!--img src="../Flat-UI-master/images/announcements.png" alt="">&nbsp;-->
+	    Announcements
+	  </h3>
+	  <br>
+	  <h3 class="demo-panel-title">Welcome</h3>
+	  <p>Welcome to IBC233 class. In this semester, I'll teach the first half semester of this course.</p>
+	  <h3 class="demo-panel-title">About Test #1</h3>
+	  <p>The TEST #1 for IBC233 section A&amp;B will be held on Tuesday, June 10, 2014 - week of six.</p>
+	  <h3 class="demo-panel-title">About Lab 7</h3>
+	  <p>The
+	     <button type="button" class="btn btn-xs btn-info"
+		    title="Labs are available for download in IFS. Its path is: Root File System / Russ / IBC233" 
+		    onclick="window.location='labs/lab7.pdf';"
+		    >Lab 7</button>
+	     ( as well as
+	     <button type="button" class="btn btn-xs btn-success"
+		     onclick="window.location='labs/Lab7TestData.pdf';"
+		     >Lab 7 Test
+	     </button>
+	     ) was released in week 3 and will be due in the week just after the study week.
+	  </p>
+	  <br><br>
+	</div><!-- /demo-content -->
+      </div><!-- /demo-row -->
+  
+  
+      <a id="schedule"></a> 
+      <div class="demo-row typography-row">
+        <div class="demo-content">
+	  <h3>
+<!--	    <img src="../Flat-UI-master/images/icons/svg/calendar.svg" alt="">&nbsp;&nbsp;-->
+	    <canvas id="calendarCanvas" width="100" height="100">
+	      <img src="../Flat-UI-master/images/calendar_background.png" alt="">
+	    </canvas>&nbsp;&nbsp;
+	    IBC233 Weekly Schedule&nbsp;&nbsp;
+	    <a href="#top" class="back">^</a>
+	  </h3>
+	  <br>
+	  <p>IBC233 Section A&amp;B - Summer 2014
+	    <span class="legend">
+	      LEGEND:
+	      <button type="button" class="btn btn-xs btn-default"
+		          title="The task or lecture has not be released yet."
+			  onclick="alert(this.title);">Not Available
+	      </button>
+	      <button type="button" class="btn btn-xs btn-info"
+		          title="For released lectures, tasks or examples."
+			  onclick="alert(this.title);">Released
+	      </button>
+	      <button type="button" class="btn btn-xs btn-danger"
+		          title="Indicates a task is due or a test will be held in this week."
+			  onclick="alert(this.title);">Task Due
+	      </button>
+	      <button type="button" class="btn btn-xs btn-success"
+		          title="For references, solutions or notifications."
+			  onclick="alert(this.title);">References
+	      </button>
+	    </span>
+	  </p>
+	  
+	  <table class="table table-bordered">
+	    <thead>
+	      <tr id=row0>
+		<th class=center>Week</th>
+		<th class=center>Date</th>
+		<th class=center>Topics</th>
+		<th>Lectures, Labs</th>
+		<th>Deliverables</th>
+		<th>References</th>
+	      </tr>
+	    </thead>
+	    <tbody>
+	      <tr id=row1>
+		<th class=center>1</th>
+		<td>May 6</td>
+		<td>
+		  <ul>
+		    <li>Intro to system</li> 
+		    <li>Code a cl program using 'green screen'</li>
+		    <li>Library lists</li>
+		    <li>Subsystems - WRKACTJOB</li>
+		  </ul>
+		</td>
+		<td>
+		  <button type="button" title="The lecture will be available at the beginning of week " class="btn btn-xs btn-info"
+		    onclick="window.location='lectures/IBC233-Lecture1.pptx';">
+		    Lecture 1
+		  </button>
+		  <button type="button" class="btn btn-xs btn-info"
+		          title="The pdf version of the document."
+			  onclick="window.location='lectures/IBC233-Lecture1.pdf';">pdf 
+		  </button>
+		  <br>
+		  <button type="button" class="btn btn-xs btn-info" onclick="alert(this.title);"
+		          title="Labs are available for download in IFS. Its path is: Root File System / Russ / IBC233" 
+			  >Lab 1</button>
+		</td>
+		<td>&nbsp;</td>
+		<td>
+		  <button type="button" class="btn btn-xs btn-success"
+		          title="The pdf version of the document."
+			  onclick="window.location='references/_ibc233_start_up.pdf';">StartUp
+		  </button>
+		  <br>
+		  <button type="button" class="btn btn-xs btn-success"
+			  onclick='window.open("http://www-01.ibm.com/support/knowledgecenter/ssw_ibm_i/welcome?lang=en", "_blank","");'
+		          title="A link to IBM i documentations on IBM Knowledge Center" 
+			  >IBM i Manuals</button>
+		  <br>
+		  <button type="button" class="btn btn-xs btn-success"
+			  onclick="window.location='references/_ibc233_FAQ+other.pdf';"
+		          title="IBC233 Frequently Asked Questions and Other Problems" 
+			  >IBC233 FAQ
+		  </button>
+		  <br>
+		  <button type="button" class="btn btn-xs btn-success"
+			  onclick="window.location='references/Week1-Reading.pdf';"
+		          title="IBC233 Reading materials for Week 1" 
+			  >Week1 Reading
+		  </button>
+		  
+		</td>
+	      </tr>
+	      <tr id="row2">
+		<th class=center>2</th>
+		<td>May 12</td>
+		<td>
+		  <ul>
+		    <li>Library lists </li> 
+		    <li>Intro to RDp </li>
+		    <li>Physical Files </li>
+		  </ul>
+		</td>
+		<td>
+		  <button type="button" title="The lecture will be available at the beginning of week " class="btn btn-xs btn-info"
+		    onclick="window.location='lectures/IBC233-Lecture2.pptx';">
+		    Lecture 2
+		  </button>
+		  <button type="button" class="btn btn-xs btn-info"
+		          title="The pdf version of the document."
+			  onclick="window.location='lectures/IBC233-Lecture2.pdf';">pdf 
+		  </button>
+		  <br>
+		  <button type="button" class="btn btn-xs btn-info" onclick="alert(this.title);"
+		          title="Labs are available for download in IFS. Its path is: Root File System / Russ / IBC233" 
+			  >Lab 2</button> 
+		</td>
+		<td>
+		  <button type="button" class="btn btn-xs btn-danger"
+		          title="Lab 1 is due on Wed. May 14 or Fri. May 16. Please hand in the lab at beginning of the lab period." 
+			  onclick="alert(this.title);">Lab 1 Due
+		  </button>
+		</td>
+		<td>
+		  <button type="button" class="btn btn-xs btn-success"
+		          title="DDS Reference: Physical and Logical Files.
+				&#013;There are 3 links for daya types for physical and logical files in this document." 
+			  onclick="window.location='references/dds_reference.doc';">
+		    DDS Ref
+		  </button>
+		  <button type="button" class="btn btn-xs btn-success"
+		          title="The pdf version of the document."
+			  onclick="window.location='references/dds_reference.pdf';">pdf 
+		  </button>
+		  <br>
+		  <button type="button" class="btn btn-xs btn-success"
+			  onclick="window.location='references/Week2-Reading.pdf';"
+		          title="IBC233 Reading materials for Week 2" 
+			  >Week2 Reading
+		  </button>
+		</td>
+	      </tr>		
+	      <tr id=row3>
+		<th class=center>3</th>
+		<td>May 20</td>
+		<td>
+		  <ul>
+		    <li>RPG with Display files</li> 
+		    <li><a href='references/week3-library_lists-Excercise.pdf'>Playing with Library Lists Exercise</a> </li>
+		  </ul>
+		</td>
+		<td>
+		  <button type="button" title="The lecture will be available at the beginning of week " class="btn btn-xs btn-info"
+		    onclick="window.location='lectures/IBC233-Lecture3.pptx';">
+		    Lecture 3
+		  </button>
+		  <button type="button" class="btn btn-xs btn-info"
+		          title="The pdf version of the document."
+			  onclick="window.location='lectures/IBC233-Lecture3.pdf';">pdf 
+		  </button>
+		  <br>
+		  <button type="button" class="btn btn-xs btn-info" onclick="alert(this.title);"
+		          title="Labs are available for download in IFS. Its path is: Root File System / Russ / IBC233" 
+			  >Lab 3</button>
+		  <button type="button" class="btn btn-xs btn-info"
+		          title="Labs are available for download in IFS. Its path is: Root File System / Russ / IBC233" 
+			  onclick="window.location='labs/lab7.pdf';"
+			  >Lab 7</button>
+		  <br>
+		  <button type="button" class="btn btn-xs btn-success"
+			  onclick="window.location='labs/Lab7TestData.pdf';"
+			  >Lab 7 Test
+		  </button>
+		</td>
+		<td>
+		  <button type="button" class="btn btn-xs btn-danger"
+		          title="Lab 2 is due on Wed. May 21 or Fri. May 23. Please hand in the lab at beginning of the lab period." 
+			  onclick="alert(this.title);">Lab 2 Due
+		  </button>
+		</td>
+		<td>
+		  <button type="button" class="btn btn-xs btn-success"
+		          title="IBC233 Review 1 - preparing for test." 
+			  onclick="window.location='references/ibc233_review1-2.doc';">
+		    Review 1
+		  </button>
+		  <button type="button" class="btn btn-xs btn-success"
+		          title="The pdf version of the document."
+			  onclick="window.location='references/ibc233_review1-2.pdf';">pdf 
+		  </button>
+		  <br>
+		  <button type="button" class="btn btn-xs btn-success"
+			  onclick="window.location='references/ibc233_reference.pdf';">IBC233 Reference 
+		  </button>
+		</td>
+	      </tr>
+	      <tr id=row4>
+		<th class=center>4</th>
+		<td>May 26</td>
+		<td>
+		  <ul>
+		    <li>CL Programming with Display Files</li> 
+		  </ul>
+		</td>
+		<td>
+		  <button type="button" title="The lecture will be available at the beginning of week " class="btn btn-xs btn-info"
+		    onclick="window.location='lectures/IBC233-Lecture4.pptx';">
+		    Lecture 4
+		  </button>
+		  <button type="button" class="btn btn-xs btn-info"
+		          title="The pdf version of the document."
+			  onclick="window.location='lectures/IBC233-Lecture4.pdf';">pdf 
+		  </button>
+		  <br>
+		  <button type="button" class="btn btn-xs btn-info" onclick="alert(this.title);"
+		          title="Labs are available for download in IFS. Its path is: Root File System / Russ / IBC233" 
+			  >Lab 4 - Part 1
+		  </button>
+		  
+		</td>
+		<td>
+		  <button type="button" class="btn btn-xs btn-danger"
+		          title="Lab 3 is due on Wed. May 28 or Fri. Mat 30. Please hand in the lab at beginning of the lab period." 
+			  onclick="alert(this.title);">Lab 3 Due
+		  </button>
+		</td>
+		<td>
+		  <button type="button" class="btn btn-xs btn-success"
+		          title="IBC233 Review 1 - preparing for test." 
+			  onclick="window.location='references/ibc233_review2.doc';">
+		    Review 2
+		  </button>
+		  <button type="button" class="btn btn-xs btn-success"
+		          title="The pdf version of the document."
+			  onclick="window.location='references/ibc233_review2.pdf';">pdf 
+		  </button>
+		  <br>
+		  <button type="button" class="btn btn-xs btn-success"
+			  onclick='window.open("http://publib.boulder.ibm.com/iseries/v5r2/ic2924/index.htm?info/rzakc/rzakcmst02.htm", "_blank","");'
+		          title="A link to Reference Material: IBM DDS manual: Display Files" 
+			  >IBM Display Files</button>
+		  <br>
+		</td>
+	      </tr>
+	      <tr id=row5>
+		<th class=center>5</th>
+		<td>June 2</td>
+		<td>
+		  <ul>
+		    <li>CL Programming with Display Files</li> 
+		    <li>User Profiles</li>
+		    <li>Review for TEST 1</li>
+		  </ul>
+		</td>
+		<td>
+		  <button type="button" title="The lecture will be available at the beginning of week " class="btn btn-xs btn-info"
+		    onclick="window.location='lectures/IBC233-Lecture5.pptx';">
+		    Lecture 5
+		  </button>
+		  <button type="button" class="btn btn-xs btn-info"
+		          title="The pdf version of the document."
+			  onclick="window.location='lectures/IBC233-Lecture5.pdf';">pdf 
+		  </button>
+		  <br>		  
+		  <button type="button" class="btn btn-xs btn-info" onclick="alert(this.title);"
+		          title="Labs are available for download in IFS. Its path is: Root File System / Russ / IBC233" 
+			  >Lab 4 - Part 2
+		  </button> 
+		</td>
+		<td>
+		  <button type="button" class="btn btn-xs btn-danger"
+		          title="Lab 4 part 1 is due on Wed. June 4 or Fri. June 6. Please hand in the lab at beginning of the lab period." 
+			  onclick="alert(this.title);">Lab 4-1 Due
+		  </button>
+		</td>
+		<td>
+		  <button type="button" class="btn btn-xs btn-success"
+		          title="IBC233 Review 1 - preparing for test." 
+			  onclick="window.location='references/ibc233_review3.doc';">
+		    Review 3
+		  </button>
+		  <button type="button" class="btn btn-xs btn-success"
+		          title="The pdf version of the document."
+			  onclick="window.location='references/ibc233_review3.pdf';">pdf 
+		  </button>
+		  <br>
+		</td>
+	      </tr>
+	      <tr id=row6>
+		<th class=center>6</th>
+		<td>June 9</td>
+		<td>
+		  <ul>
+		    <li>Database Design</li>
+		    <li>Data Representatives</li> 
+		  </ul>
+		</td>
+		<td>
+		  <button type="button" title="The lecture will be available at the beginning of week " class="btn btn-xs btn-info"
+		    onclick="window.location='lectures/IBC233-Lecture6.pptx';">
+		    Lecture 6
+		  </button>
+		  <button type="button" class="btn btn-xs btn-info"
+		          title="The pdf version of the document."
+			  onclick="window.location='lectures/IBC233-Lecture6.pdf';">pdf 
+		  </button>
+		  <br>
+		  <button type="button" class="btn btn-xs btn-info" onclick="alert(this.title);"
+		          title="Labs are available for download in IFS. Its path is: Root File System / Russ / IBC233" 
+			  >Lab 5</button>
+		  <br>
+		  <button type="button" class="btn btn-xs btn-danger"
+		          title="Test 1 is scheduled on Tue. June 10."
+			  onclick="alert(this.title);">Test 1
+		  </button>		  
+		</td>
+		<td>
+		  <button type="button" class="btn btn-xs btn-danger"
+		          title="Lab 4 part 2 is due on Wed. June 11 or Fri. June 13. Please hand in the lab at beginning of the lab period." 
+			  onclick="alert(this.title);">Lab 4-2 Due
+		  </button> 
+		</td>
+		<td>&nbsp;</td>
+	      </tr>
+	      <tr id=row7>
+		<th class=center>7</th>
+		<td>June 16</td>
+		<td>
+		  <ul>
+		    <li>System Configuration</li> 
+		  </ul>
+		</td>
+		<td>
+		  <button type="button" title="The lecture will be available at the beginning of week " class="btn btn-xs btn-info"
+		    onclick="window.location='lectures/IBC233-Lecture7.pptx';">
+		    Lecture 7
+		  </button>
+		  <button type="button" class="btn btn-xs btn-info"
+		          title="The pdf version of the document."
+			  onclick="window.location='lectures/IBC233-Lecture7.pdf';">pdf 
+		  </button>
+		  <br>
+		  <button type="button" class="btn btn-xs btn-info" onclick="alert(this.title);"
+		          title="Labs are available for download in IFS. Its path is: Root File System / Russ / IBC233" 
+			  >Lab 6</button> 
+		</td>
+		<td>
+		  <button type="button" class="btn btn-xs btn-danger"
+		          title="Lab 5 is due on Wed. June 18 or Fri. June20. Please hand in the lab at beginning of the lab period." 
+			  onclick="alert(this.title);">Lab 5 Due
+		  </button>
+		</td>
+		<td>
+		  <button type="button" class="btn btn-xs btn-success"
+			  onclick='window.open("http://www-01.ibm.com/support/knowledgecenter/ssw_ibm_i/welcome?lang=en", "_blank","");'
+		          title="A link to IBM i documentations on IBM Knowledge Center" 
+			  >IBM i Manuals</button>  
+		</td>
+	      </tr>
+	      <tr id=row8>
+		<th class=center>Study<br>Week</th>
+		<td>June 23</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	      </tr>
+	      <tr id=row9>
+		<th class=center>8</th>
+		<td>June 30</td>
+		<td>
+		  <ul>
+		    <li>Creating a CLLE command</li> 
+		    <li>RPGLE Programming with database files </li>
+		  </ul>
+		</td>
+		<td>
+		  <button type="button" title="The lecture will be available at the beginning of week " class="btn btn-xs btn-default">Lecture 8</button>
+		  <br>
+		  <button type="button" class="btn btn-xs btn-info" onclick="alert(this.title);"
+		          title="Labs are available for download in IFS. Its path is: Root File System / Russ / IBC233" 
+			  >Lab 8</button>  
+		</td>
+		<td>
+		  <button type="button" class="btn btn-xs btn-danger"
+		          title="Lab 6 is due on Wed. July 2 or Fri. July 4. Please hand in the lab at beginning of the lab period." 
+			  onclick="alert(this.title);">Lab 6 Due
+		  </button>
+		  <br>
+		  <button type="button" class="btn btn-xs btn-danger"
+		          title="Lab 7 is due on Wed. July 2 or Fri. July 4. Please hand in the lab at beginning of the lab period." 
+			  onclick="alert(this.title);">Lab 7 Due
+		  </button>
+		  
+		</td>
+		<td>
+		    <button type="button" class="btn btn-xs btn-success"
+			  onclick="window.location='labs/lab7.pdf';">Lab 7
+		  </button>
+		  <button type="button" class="btn btn-xs btn-success"
+			  onclick="window.location='labs/Lab7TestData.pdf';"
+			  >Lab 7 Test
+		  </button>
+		  <br>
+		  </td>
+	      </tr>
+	      <tr id=row10>
+		<th class=center>9</th>
+		<td>July 7</td>
+		<td>
+		  <ul>
+		    <li>Menus, Security and Report Writer</li> 
+		  </ul>
+		</td>
+		<td>
+		  <button type="button" title="The lecture will be available at the beginning of week " class="btn btn-xs btn-default">Lecture 9</button>
+		  <br>
+		  <button type="button" class="btn btn-xs btn-info" onclick="alert(this.title);"
+		          title="Labs are available for download in IFS. Its path is: Root File System / Russ / IBC233" 
+			  >Lab 9</button> 
+		</td>
+		<td>
+		  <button type="button" class="btn btn-xs btn-danger"
+		          title="Lab 8 is due on Wed. July 9 or Fri. July 11. Please hand in the lab at beginning of the lab period." 
+			  onclick="alert(this.title);">Lab 8 Due
+		  </button>
+		</td>
+		<td>&nbsp;</td>
+	      </tr>
+	      <tr id=row11>
+		<th class=center>10</th>
+		<td>July 15</td>
+		<td>
+		  <ul>
+		    <li>RPGLE Business Application</li> 
+		  </ul>
+		</td>
+		<td>
+		  <button type="button" title="The lecture will be available at the beginning of week " class="btn btn-xs btn-default">Lecture 10</button>
+		  <br>
+		  <button type="button" class="btn btn-xs btn-info" onclick="alert(this.title);"
+		          title="Labs are available for download in IFS. Its path is: Root File System / Russ / IBC233" 
+			  >Lab 10</button>
+		  <br>
+		  <button type="button" class="btn btn-xs btn-danger"
+		          title="Test 2 is scheduled on Tue. July 15."
+			  onclick="alert(this.title);">Test 2
+		  </button>		  
+		</td>
+		<td>
+		  <button type="button" class="btn btn-xs btn-danger"
+		          title="Lab 9 is due on Wed. July 16 or Fri. July 18. Please hand in the lab at beginning of the lab period." 
+			  onclick="alert(this.title);">Lab 9 Due
+		  </button> 
+		</td>
+		<td>&nbsp;</td>
+	      </tr>
+	      <tr id=row12>
+		<th class=center>11</th>
+		<td>July 21</td>
+		<td>
+		  <ul>
+		    <li>Calling Programs and Overriding Files</li> 
+		  </ul>
+		</td>
+		<td>
+		  <button type="button" title="The lecture will be available at the beginning of week " class="btn btn-xs btn-default">Lecture 11</button>
+		  <br>
+		  <button type="button" class="btn btn-xs btn-info" onclick="alert(this.title);"
+		          title="Labs are available for download in IFS. Its path is: Root File System / Russ / IBC233" 
+			  >Lab 11</button> 
+		</td>
+		<td>
+		  <button type="button" class="btn btn-xs btn-danger"
+		          title="Lab 10 is due on Wed. July 23 or Fri. July 25. Please hand in the lab at beginning of the lab period." 
+			  onclick="alert(this.title);">Lab 10 Due
+		  </button> 
+		</td>
+		<td>&nbsp;</td>
+	      </tr>
+	      <tr id=row13>
+		<th class=center>12</th>
+		<td>July 28</td>
+		<td>
+		  <ul>
+		    <li>Query/400 and DFU</li> 
+		  </ul>
+		</td>
+		<td>
+		  <button type="button" title="The lecture will be available at the beginning of week " class="btn btn-xs btn-default">Lecture 12</button>
+		  <br>
+		  <button type="button" class="btn btn-xs btn-info" onclick="alert(this.title);"
+		          title="Labs are available for download in IFS. Its path is: Root File System / Russ / IBC233" 
+			  >Lab 12</button>   
+		</td>
+		<td>
+		  <button type="button" class="btn btn-xs btn-danger"
+		          title="Lab 11 is due on Wed. July 30 or Fri. Aug. 1. Please hand in the lab at beginning of the lab period." 
+			  onclick="alert(this.title);">Lab 11 Due
+		  </button>
+		</td>
+		<td>&nbsp;</td>
+	      </tr>
+	      <tr id=row14>
+		<th class=center>13</th>
+		<td>Aug. 5</td>
+		<td>
+		  <ul>
+		    <li>Review</li> 
+		  </ul>
+		</td>
+		<td>&nbsp;</td>
+		<td>
+		  <button type="button" class="btn btn-xs btn-danger"
+		          title="Lab 12 is due on Wed. Aug. 6 or Fri. Aug. 8. Please hand in the lab at beginning of the lab period." 
+			  onclick="alert(this.title);">Lab 12 Due
+		  </button>
+		</td>
+		<td>&nbsp;</td>
+	      </tr>
+	      <tr id=row15>
+		<th class=center>Exam<br>Week</th>
+		<td>Aug. 11</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	      </tr>
+	    </tbody>
+	  </table>
+	</div><!-- /demo-content -->
+      </div><!-- /demo-row -->
+      
+      <br><br>
+      
+      
+      <a id="standards"></a>
+      <div class="demo-row typography-row">
+        <div class="demo-content">
+	  <h3>
+	    <img src="../Flat-UI-master/images/icons/svg/retina.svg" alt="">&nbsp;&nbsp;
+	    Course Standards&nbsp;&nbsp;
+	    <a href="#top" class="back">^</a>
+	  </h3>
+	  <br>
+	  <p>For General Class Standards please refer also to the appropriate section on my home page from the link of <a href="https://scs.senecac.on.ca/~wei.song/index.html#standards">https://scs.senecac.on.ca/~wei.song/index.html#standards</a>.</p>
+	  <p>For Seneca College Information Technology Acceptable Use Policy please go to the link at
+	    <a href="https://scs.senecac.on.ca/page/computer-studies-academic-procedure">
+	      https://scs.senecac.on.ca/page/computer-studies-academic-procedure</a> </p>
+	  <br>
+	</div><!-- /demo-content -->
+      </div><!-- /demo-row -->
+      
+      <div class="row">
+	
+	<div class="col-sm-4">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Course Structure</h3>
+            </div>
+            <div class="panel-body">
+	      <ul>
+		<li>1 Weekly Lecture</li>
+		<li>1 Weekly Lab</li>
+	      </ul>
+	      <p>&nbsp;</p>
+	      <p>&nbsp;</p>
+	      <p>&nbsp;</p>
+            </div>
+          </div>
+	</div><!-- /.col-sm-4 -->
+	
+	<div class="col-sm-4">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Course Evaluation</h3>
+            </div>
+            <div class="panel-body">
+	      <ul>
+		<li>2 Tests - 35%  of final mark.</li>
+		<li>12 Labs - 30%  of final mark.</li>
+		<li>Final Exam - 35%  of final mark</li>
+	      </ul>
+	      <p>&nbsp;</p>
+            </div>
+          </div>
+	</div><!-- /.col-sm-4 -->
+	
+	<div class="col-sm-4">  
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Promotion Policy</h3>
+            </div>
+            <div class="panel-body">
+              <p>To obtain a credit in this subject you must achieve the following:</p>
+	      <ul>
+		<li>50% on the final exam</li>
+		<li>50% weighted average on tests and exam</li>
+		<li>50% on the overall course</li>
+	      </ul>
+            </div>
+          </div>
+	  
+        </div><!-- /.col-sm-4 -->
+
+      </div><!-- / row -->
+      
+      
+      
+      <div class="row">
+	
+	<div class="col-xs-12">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Tests</h3>
+            </div>
+            <div class="panel-body">
+	      <ul>
+		<li>Tests may be given during the lab or lecture periods. </li>
+		<li>If you cannot attend a test due to an emergency you must EMAIL your professor IMMEDIATELY in order
+		    to receive consideration for your absence. Leave an email message where you can be reached. You
+		    will need to provide documented evidence (e.g. Doctor's note) of the emergency.  Tests missed
+		    without PRIOR notification or proper documentation will receive a grade of zero.</li>
+		<li>Makeup tests will not be given. </li>
+	      </ul>
+            </div>
+          </div>
+	  
+	  <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Lectures</h3>
+            </div>
+            <div class="panel-body">
+	      <ul>
+		<li>be on time for class </li>
+		<li>respect other students</li>
+		<li>Lectures will explain and demonstrate the skills and concepts you need to complete a Lab assignment.</li>
+		<li>Formal attendance may be kept. Frequent absence will be noted. You are responsible on all tests and labs
+		    for any material covered or assigned in class. People who do not come to class generally have significant
+		    problems completing their labs and traditionally do not perform  well on their tests.</li>
+		<li>Classes will start on time and late arrivals must not disturb the class. Enter quietly and take a seat.
+		    Do not disturb the class by asking questions about what took place before your arrival. </li>
+		<li>If you missed a class, please ask a colleague, not the instructor, about what was covered. An email to an
+		    instructor about what was covered in class will get a response along the lines of "that was covered in class".</li>
+		<li>After the lecture, you are expected to work on the lab in preparation for the Interactive Lecture (Lab) Period.</li>
+	      </ul>
+            </div>
+          </div>
+	  
+	  <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Interactive Lectures (Labs)</h3>
+            </div>
+            <div class="panel-body">
+	      <ul>
+		<li>Labs are available for download from ZEUS in IFS. Its path is: Root File System/Russ/IBC233. Since labs
+		    may be updated by instructors, do not download the lab until one week before the scheduled lab date.</li>
+		<li>Each lab will have a component to be marked. All labs will be marked out of 2.5 marks. Some labs require
+		    more work than others. Labs must be handed in or demonstrated according to your instructor's requirements
+		    and a mark will be given.</li>
+		<li>Labs must be handed in or demonstrated at the beginning of the 2nd lab period after it was handed out. In
+		    other words, you have one lab period to work on the lab and it is due at the beginning of the next. If you
+		    are still unclear, ask you professor directly when the lab is due. </li>
+		<li>Some students may have some difficulty completing the entire lab during the allocated time, therefore, it
+		    is strongly recommended that you make a serious attempt to complete the lab beforehand. The time in the
+		    lab is to solve problems and complete (not begin) the lab tasks.</li>
+		<li>Many labs build on previous labs. If you skip one lab, you may have to do it anyway to complete the next
+		    lab. If you have to do it anyway, do it on time and get full marks for it. </li>
+		<li>You are allowed one late lab in the semester. Try not to make it the first one. </li>
+	      </ul>
+            </div>
+          </div>
+	  
+        </div><!-- /.col-sm-4 -->
+	
+      </div><!-- / row -->
+	    
+            
+      <a id="system_i"></a>
+      <div class="demo-row typography-row">
+        <div class="demo-content">
+	  <br>
+	  <h3>
+	    <img src="../Flat-UI-master/images/ibc233-IBM-i.png" alt="">&nbsp;&nbsp;
+	    IMB System i&nbsp;&nbsp;
+	    <a href="#top" class="back">^</a>
+	  </h3>
+	  <p>The following links provide course information for IBM System i.</p>
+	  <ul>
+	    <li>meet our System i, <a href="references/_ibc233_meet_zeus.pdf">ZEUS</a></li>
+	    <li><a href="references/_ibc233_connecting_to_ZEUS.pdf">Connecting</a> to ZEUS</li>
+	    <li>System i <a href="references/_ibc233_keyboard map.pdf">keyboard map</a></li>
+	    <li><a href="references/_ibc233_who_uses_System_i.pdf">who uses</a> System i?</li>
+	    <li>System i <a href="http://www.lansa.com/casestudies/index.htm">e-commerce</a></li>
+	    <li><a href="http://www-03.ibm.com/systems/power/software/i/">consultants' reports</a></li>
+	    <li><a href="http://www-03.ibm.com/systems/power/software/i/">System i home page</a></li>
+	    <li><a href="http://publib-b.boulder.ibm.com/redbooks.nsf/RedbookAbstracts/ga195486.html?Open">System i System Handbook</a></li>
+	  </ul>
+	  <br>
+	</div><!-- /demo-content -->
+      </div><!-- /demo-row -->
+        
+    </div> <!-- /container -->
+    
+    <footer>
+      <div class="container">
+        <div class="row">
+	  <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <li><a href="../index.html">Home&nbsp;&nbsp;<span class="fui-user"></span></a></li>
+	      <li><a href="https://scs.senecac.on.ca/">School of ICT</a></li>
+	      <li><a href="https://my.senecacollege.ca/webapps/portal/frameset.jsp">MySeneca</a></li>
+	      <li><a href="http://www.senecacollege.ca/">Seneca College</a></li>
+	      <li><a href="https://inside.senecacollege.ca/its/index.html">Help Desk</a></li>
+	      <li><a href="http://seneca.libguides.com/content.php?pid=53490&hs=a">Library</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+ 
+          <div class="col-xs-7"> </div> <!-- /col-xs-7 -->
+        </div>
+      </div>
+    </footer>
+    
+    
+    <!-- Load JS here for greater good =============================-->
+    <script src="../Flat-UI-master/js/jquery-1.8.3.min.js"></script>
+    <!--<script src="../Flat-UI-master/js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="../Flat-UI-master/js/jquery.ui.touch-punch.min.js"></script>
+    <script src="../Flat-UI-master/js/bootstrap.min.js"></script>
+    <script src="../Flat-UI-master/js/bootstrap-select.js"></script>
+    <script src="../Flat-UI-master/js/bootstrap-switch.js"></script>
+    <script src="../Flat-UI-master/js/flatui-checkbox.js"></script>
+    <script src="../Flat-UI-master/js/flatui-radio.js"></script>
+    <script src="../Flat-UI-master/js/jquery.tagsinput.js"></script>
+    <script src="../Flat-UI-master/js/jquery.placeholder.js"></script>
+    <script src="../Flat-UI-master/js/jquery.stacktable.js"></script>
+    <script src="../Flat-UI-master/js/application.js"></script>-->
+    <script>
+      alert("This page will be available at the beginning of week 8.");
+      window.location = "../index.html";
+    </script>
+    <script src="../Flat-UI-master/js/myscript.js"></script>
+  </body>
+</html>

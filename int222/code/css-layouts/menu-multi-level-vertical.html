@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+   <meta charset="UTF-8" />
+   <title>Menu</title>
+   <style>
+        header {
+           width:  1000px;
+           margin: auto;
+           text-align:center;
+        }
+		
+        .container {
+            width:  1000px;
+            margin: auto;
+        }   
+		
+        nav {
+          width: 240px;
+          float: left;
+        }
+		
+        .main {
+          width: 740px;
+          float: left;
+        }
+		
+        nav ul {
+           list-style-type: none;
+           margin-right: 2px;
+           padding: 2px;
+        }  
+		
+        nav ul li {
+           color:#000000;
+           background-color: #cccccc;
+           padding: 6px 0px 6px 6px;
+        }
+		
+		nav li > ul {
+		  display: none;
+		}
+		
+        nav li a {
+			text-decoration: none;
+		}
+		
+		nav li:hover > ul {
+		  display: block;
+		  position: absolute;
+		  padding: 0px;
+		  margin-left:90px;
+		}
+		
+		nav li:hover > ul li {
+		  width:130px;
+		  color: #000000;
+		  background-color: #cccccc;
+		  border: 1px solid;  
+		}
+		
+        footer section p {
+           text-align:center;
+        }
+    </style>
+</head>
+<body>
+  <header>
+	<h1>INT222 - ICT - Seneca @ York Campus </h1>
+  </header>
+  <div class="container">
+	<nav>
+	  <ul>
+		<li><a href="#top">Home</a></li>
+		<li><a href="#timetable">Timetable</a></li>
+		<li><a href="#standards">Standards</a></li>
+		<li><a href="#">courses</a>
+		  <ul>
+			<li><a href="ibc233/ibc233.html">IBC233</a></li>
+			<li><a href="int222/int222.html">INT222</a></li>
+			<li><a href="jac444/jac444.html">JAC444</a></li>
+		  </ul>
+		</li>
+		<li><a href="https://scs.senecac.on.ca/">Seneca ICT</a></li>
+	  </ul>
+	</nav>
+	<div class="main">
+	  <article>
+		<h1>Main Page - Mutiple Level Menu Options - Vertical</h1>
+		<p>Blah, blah, blah, blah, blah, blah, blah, blah, blah, blah . . . . . . . </p>
+	  </article>
+	  <article>
+	  </article>      
+	  <footer>
+		<section>
+		    <!-- for download -->
+			<br><p><a href='' download>Download</a></p>
+	    </section>
+	  </footer>
+	</div>
+  </div>
+</body>
+
+</html>

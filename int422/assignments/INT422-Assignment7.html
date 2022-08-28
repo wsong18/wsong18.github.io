@@ -1,0 +1,771 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<title>A7 - INT422</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Segoe UI";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+h2
+	{mso-style-link:"Heading 2 Char";
+	margin-right:0in;
+	margin-left:0in;
+	font-size:18.0pt;
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+h4
+	{mso-style-link:"Heading 4 Char";
+	margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+p.MsoCommentText, li.MsoCommentText, div.MsoCommentText
+	{mso-style-link:"Comment Text Char";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	font-size:10.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-link:"Header Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-link:"Footer Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:#954F72;
+	text-decoration:underline;}
+p
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+code
+	{font-family:"Courier New";}
+p.MsoCommentSubject, li.MsoCommentSubject, div.MsoCommentSubject
+	{mso-style-link:"Comment Subject Char";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	font-size:10.0pt;
+	font-family:"Calibri",sans-serif;
+	font-weight:bold;}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-link:"Balloon Text Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:9.0pt;
+	font-family:"Segoe UI",sans-serif;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:.5in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:.5in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+span.HeaderChar
+	{mso-style-name:"Header Char";
+	mso-style-link:Header;}
+span.FooterChar
+	{mso-style-name:"Footer Char";
+	mso-style-link:Footer;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-link:"Heading 2";
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+span.Heading4Char
+	{mso-style-name:"Heading 4 Char";
+	mso-style-link:"Heading 4";
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+span.skimlinks-unlinked
+	{mso-style-name:skimlinks-unlinked;}
+span.CommentTextChar
+	{mso-style-name:"Comment Text Char";
+	mso-style-link:"Comment Text";}
+span.CommentSubjectChar
+	{mso-style-name:"Comment Subject Char";
+	mso-style-link:"Comment Subject";
+	font-weight:bold;}
+span.BalloonTextChar
+	{mso-style-name:"Balloon Text Char";
+	mso-style-link:"Balloon Text";
+	font-family:"Segoe UI",sans-serif;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:8.5in 11.0in;
+	margin:.75in .75in .75in .75in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink="#954F72" background=bgw.gif>
+
+<div class=WordSection1 
+     style="margin: 0.5in auto; max-width: 50em; min-width: 30em;">
+
+<h2><span style='font-family:"Arial",sans-serif'>INT422 Assignment 7</span></h2>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Deploying web apps to Microsoft Azure.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Due date</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Section A: Tuesday, March 20, 2018, 11:59pm</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Grade value: 3% of your final course grade<i> </i></span></p>
+
+<p class=MsoNormal style='line-height:normal'><i><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>If you wish to submit the lab before the due
+date and time, you can do that.</span></i></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Objective(s)</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Hands-on learning about the fundamental of
+cloud computing using MS Azure platform, including creating web server,
+database server, SQL databases using the Azure Portal and deploying your web
+apps to the Azure platform.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Assumptions and prerequisites</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>You have created a Microsoft Account and you
+have been able to access </span><a
+href="https://azure.microsoft.com/en-us/features/azure-portal/"><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>Microsoft Azure</span></a><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> through ordering and
+setting up “Microsoft Azure for Students” from </span><span style='font-size:
+12.0pt;font-family:"Arial",sans-serif'>the webstore </span><a
+href="http://e5.onthehub.com/d.ashx?s=0mym5g8a10"><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Seneca College - Newnham - Microsoft Imagine</span></a><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> as instructed in </span><a
+href="https://scs.senecac.on.ca/~wei.song/int422/lectures/INT422-Lecture7-2.html"><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>Lecture 7-2</span></a><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>To verify that you are able to
+access </span><a href="https://azure.microsoft.com/en-us/features/azure-portal/"><span
+style='font-family:"Arial",sans-serif'>Microsoft Azure</span></a><span
+style='font-family:"Arial",sans-serif'>, i.e. you successfully get the
+subscription using the “Microsoft Azure for Students” ordered from the
+webstore, login to the Microsoft Azure management portal, using your Microsoft
+Account (Seneca email) credentials:</span></p>
+
+<p><a href="https://portal.azure.com" target="_blank"><span style='font-family:
+"Arial",sans-serif'>https://portal.azure.com</span></a></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Click the “<b>All services &gt;</b>”
+item from the menu at left-bottom area, then click <b>Subscription<i>.</i></b>
+It should show a subscription from<b> Microsoft Imagine </b>with the status
+“Active”, indicating you have successfully obtained a subscription for accessing
+Microsoft Azure.</span></p>
+
+<p><img border=0 width=742 height=301 id="Picture 25"
+src="INT422-Assignment7_files/image001.png"></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif;color:red'>If no “Active” subscription found,
+please complete the steps on </span><a
+href="https://scs.senecac.on.ca/~wei.song/int422/lectures/INT422-Lecture7-2.html"><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>Lecture 7-2</span></a><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;<span
+style='color:red'>(Getting started with Microsoft Azure Services).</span></span></p>
+
+<h4><span style='font-size:18.0pt'>&nbsp;</span></h4>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Microsoft Azure services, and
+planning to use them</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>For this course, we will use
+Microsoft Azure&nbsp;<b>web apps</b> and <b>sql databases</b>.</span></p>
+
+<p><span style='font-size:3.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>Database
+Server</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The database server name should
+be named in a similar way to your Microsoft Account login name. For example:</span></p>
+
+<p><b><span style='font-family:"Arial",sans-serif;color:red'>wsong-ds2017a7</span></b></p>
+
+<p><span style='font-size:11.0pt;font-family:"Arial",sans-serif;color:black'>(Note:
+the first part is you <b>MySeneca</b> Learn ID, and “</span><b><span
+style='font-size:11.0pt;font-family:"Arial",sans-serif;color:red'>ds</span></b><span
+style='font-size:11.0pt;font-family:"Arial",sans-serif;color:black'>” means
+database server)</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>During the creation of the
+database server, you must create or define credentials. This is a normal task,
+and similar to your past experience with database servers. We suggest (and
+recommend) that&nbsp;you use the similar login name&nbsp;and same password as
+your Microsoft Account.</span></p>
+
+<p style='margin-top:24.0pt'><strong><span style='font-size:14.0pt;font-family:
+"Arial",sans-serif'>SQL Databases</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>A database server can hold one
+or more sql databases, and each sql database name will be customized for the
+assignment. For <b>Assignment 7</b>, the<b> sql database name</b> will be:</span></p>
+
+<p><b><span style='font-family:"Arial",sans-serif;color:red'>Assign7Store</span></b></p>
+
+<p style='margin-top:24.0pt'><strong><span style='font-size:14.0pt;font-family:
+"Arial",sans-serif'>Web Apps</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>For this course, you will use 3
+or 4 web apps for your Assignments. The recommended <b>web&nbsp;app names</b>
+will be a composite of part of your </span><b><span style='font-size:11.0pt;
+font-family:"Arial",sans-serif;color:black'>MySeneca</span></b><span
+style='font-size:11.0pt;font-family:"Arial",sans-serif;color:black'> Learn ID</span><span
+style='font-family:"Arial",sans-serif'> name, and the assignment name.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>For example, if your you want
+to create a web app (“<b><span style='color:red'>wa</span></b>”) for Assignment
+7 (“<b><span style='color:red'>a7</span></b>”), then use this <u>web app</u>&nbsp;name:</span></p>
+
+<p><b><span style='font-family:"Arial",sans-serif;color:red'>wsong-wa2017a7</span></b><b><span
+style='font-family:"Arial",sans-serif;color:#323E4F'>.<span
+class=skimlinks-unlinked>azurewebsites.net</span></span></b></p>
+
+<p style='margin-bottom:6.0pt'><span style='font-size:11.0pt;font-family:"Arial",sans-serif;
+color:black'>(Note: the first part must be you MySeneca Learn ID or the first
+part of your Seneca Email)­</span></p>
+
+<p style='margin-top:6.0pt'><span style='font-family:"Arial",sans-serif'>In the
+next section, you will implement these plans.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<a id=createdb></a>
+<h4><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>Create a <u>sql
+database server</u> and a&nbsp;<u>database</u></span></h4>
+
+<p><span style='font-family:"Arial",sans-serif'>Click </span><b><span
+style='font-size:20.0pt;font-family:"Arial",sans-serif;color:#538135'>+</span></b><b><span
+style='font-family:"Arial",sans-serif'> Create a resource</span></b><span
+style='font-family:"Arial",sans-serif'> on your Azure page, then type “SQL” in
+the search box on the <b>Home&gt;New</b> panel. From the datalist of the search
+box, select <b>SQL server (logical server)</b>:</span></p>
+
+<p><img border=0 width=742 height=595 id="Picture 9"
+src="INT422-Assignment7_files/image002.png"></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In the Home &gt; New &gt; SQL
+server (logical server) panel, click the Create button at bottom:</span></p>
+
+<p><img border=0 width=743 height=748 id="Picture 10"
+src="INT422-Assignment7_files/image003.png"></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Click the <b>Create</b> button
+to continue.</span></p>
+
+<p><img border=0 width=742 height=793 id="Picture 11"
+src="INT422-Assignment7_files/image004.png"></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>As noted above, the database
+server name can be the same as what you have planned above. For example: <b><span
+style='color:red'>wsong-ds2017</span></b></span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>You can give your own “<b>Server
+admin login</b>”, e.g. <b><span style='color:red;background:yellow'>wsong</span></b><span
+style='color:red'> </span>and password.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif;color:red'>Note: please write down
+the user name and password for the database server’s admin account. Later on
+you’ll use them for setting up the connection to the database.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>We suggest that you select “<b>Canada
+Central</b>” for the location. In a later step, it appears that the portal creates
+web apps in that location, and you should have the same location for your web
+app and database server. <span style='color:red;background:yellow'>However, due
+to the limitation of free Azure accounts, you may have to choose a different
+location when you create the 2<sup>nd</sup>, 3<sup>rd</sup>, … web app or
+database server. (new)</span></span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>For the “<b>Resource group</b>”
+setting, create a new resource group; we suggest naming it “<b>INT422</b>” (or
+“BTI420” if you are in the BTI420 class).</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Click the <b>Create</b> button,
+then wait for a while the wsong-ds2018 is created:</span></p>
+
+<p><img border=0 width=741 height=677 id="Picture 12"
+src="INT422-Assignment7_files/image005.png"></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The “SQL Database” configuration
+panel appears (below). Enter the database name:</span></p>
+
+<p><b><span style='font-family:"Arial",sans-serif;color:red'>Assign7Store</span></b></p>
+
+<p><img border=0 width=742 height=524 id="Picture 13"
+src="INT422-Assignment7_files/image006.png"></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Database <b><span
+style='color:red'>Assign7Store</span></b> was created:</span></p>
+
+<p><img border=0 width=744 height=456 id="Picture 17"
+src="INT422-Assignment7_files/image007.png"></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Click the “<b>All resource</b>”
+item from the menu at left-side, it shows that a <b>SQL server</b> and <b>database</b>
+have been created. Right click them and pin them to dashboard.</span></p>
+
+<p><img border=0 width=780 height=111 id="Picture 20"
+src="INT422-Assignment7_files/image008.png"></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<h4><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>Create a <u>web
+app</u></span></h4>
+
+<p><span style='font-family:"Arial",sans-serif'>The following procedure will
+enable you to create the <b><u>web app</u></b>&nbsp;for your Assignment 7 work.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In the Azure portal, choose </span><b><span
+style='font-size:20.0pt;font-family:"Arial",sans-serif;color:#538135'>+</span></b><b><span
+style='font-family:"Arial",sans-serif'> Create a resource</span></b><span
+style='font-family:"Arial",sans-serif'> &gt; <b>Web + Mobile</b>, and then “<b>Web
+App</b>”.</span></p>
+
+<p><img border=0 width=742 height=742 id="Picture 21"
+src="INT422-Assignment7_files/image009.png"></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The “<b>Web App</b>”
+configuration panel appears. Enter the app name (which will be the host
+name),&nbsp;suggested earlier:</span></p>
+
+<p><b><span style='font-family:"Arial",sans-serif;color:red'>wsong-wa2017a7</span></b><b><span
+style='font-family:"Arial",sans-serif;background:yellow'>.<span
+class=skimlinks-unlinked>azurewebsites.net</span></span></b></p>
+
+<p><img border=0 width=741 height=770 id="Picture 23"
+src="INT422-Assignment7_files/image010.png"></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>For the “<b>Resource group</b>”
+setting, Select <b>Using existing</b> and them <b>INT422</b>.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>For the “<b>App Service
+plan/Location</b>” setting, Click on it, and then click <b>Create New</b> in
+the <b>App Service plan</b> panel.  </span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In the App Service plan panel,
+give a name for App Service plan, and select <i>Canada Central</i> for the
+Location setting. Click the <b>OK</b> button</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The other settings are good as
+they are. </span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Then click <b>Create</b> button
+when ready.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Click the “<b>All resource</b>”
+item from the menu at left-side, you should have:</span></p>
+
+<p><img border=0 width=743 height=344 id="Picture 24"
+src="INT422-Assignment7_files/image011.png"></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Publish (deploy) your web app and
+sql database to Azure</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Before you leave the Azure
+portal, you will need <span style='background:yellow'>a database “connection string”.</span></span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>On the Azure dashboard
+(desktop), select your <b>sql database</b> item (e.g. <b>Assign7Store</b>). A
+setting panel opens.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'><img border=0 width=755
+height=475 id="Picture 26" src="INT422-Assignment7_files/image012.png"></span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Click on <span
+style='background:yellow'>Show database connection strings</span>, you will see
+the <span class=skimlinks-unlinked><b>ADO.NET</b></span> string. </span></p>
+
+<p><img border=0 width=745 height=266 id="Picture 2"
+src="INT422-Assignment7_files/image013.png"></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Later on, you will paste it
+into the Visual Studio “Publish” dialog, and <span style='background:yellow'>change
+</span></span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>…=False;User ID=<b><span
+style='color:red;background:yellow'>{your_username}</span></b>;Password=<b><span
+style='color:red;background:yellow'>{your_password}</span></b>;MultipleActiveR…</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>i.e. ADO.NET string’s  <b>“<span
+style='color:red'>{your_username}</span>”<span style='color:red'> </span>and “<span
+style='color:red'>{your_password}</span>”<span style='color:red'> </span></b>parts,
+including the curly brackets “<b><span style='color:red'>{}</span></b>”, </span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>to your own database “<b>Server
+admin login”</b> id and its password. (which you set in the steps of page 5) </span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>e.g. …=False;User ID=<b><span
+style='color:red;background:yellow'>wsong@wsong-ds2017</span></b>;Password=<b><span
+style='color:red;background:yellow'>Password123!</span></b>;MultipleActi…</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span style='font-size:14.0pt;line-height:107%;
+font-family:"Arial",sans-serif'>Creating an ASP.NET MVC web app with security</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Open your <b>Visual Studio</b>
+instance, and </span><a
+href="https://scs.senecac.on.ca/~wei.song/int422/lectures/INT422-Lecture7.pdf#page=6"><span
+style='font-family:"Arial",sans-serif'>create a new web app project</span></a><span
+style='font-family:"Arial",sans-serif'> named <b>Assignment 7</b>, with
+security:</span></p>
+
+<p><b><span style='font-family:"Arial",sans-serif'>File</span></b><span
+style='font-family:"Arial",sans-serif'> &gt; <b>New</b> &gt; <b>Project</b>.
+Select the standard “ASP.NET Web Application”.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>On the next dialog, choose the
+“<b>Individual User Accounts</b>” authentication scheme.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>After creating the web app,
+customize the home page. <span style='background:yellow'>Change the “<b>Learn
+more &gt;&gt;</b>” button to “<b>Assignment 7 on Azure</b>” and set the button
+link to the URL of your assignment 7 on Azure</span>, </span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>e.g.  </span><a
+href="http://wsong18-wa2017a7.azurewebsites.net"><span style='font-family:"Arial",sans-serif'>http://wsong-wa2017a7.azurewebsites.net</span></a><span
+class=skimlinks-unlinked><b><span style='font-family:"Arial",sans-serif'> </span></b></span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Run the web app locally, then
+it will generate database, which will be deploy to Azure with the web app.</span></p>
+
+<p><b><span style='font-family:"Arial",sans-serif'>Enable (Code first)
+migrations</span></b><span style='font-family:"Arial",sans-serif'> in you
+project: open the <b>Package Manager Console</b> in Visual Studio, and type the
+following commands:</span></p>
+
+<p><code><b>PM&gt; enable-migrations</b></code></p>
+
+<p><code><b>PM&gt; add-migration initial</b></code></p>
+
+<p><code><b>PM&gt; update-database</b></code></p>
+
+<p><img border=0 width=751 height=462 id="Picture 18"
+src="INT422-Assignment7_files/image014.png"></p>
+
+<p><strong><span style='font-family:"Arial",sans-serif'>&nbsp;</span></strong></p>
+
+<p class=MsoNormal><b><span style='font-size:14.0pt;line-height:107%;
+font-family:"Arial",sans-serif;background:yellow'>Deploy the web app to Azure
+Platform</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Make sure that the web app
+builds/compiles without error.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>And runs locally, successfully.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>And has been configured with
+the Migrations feature.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In Solution Explorer,
+right-click your project item, and choose <b>Publish</b>.</span></p>
+
+<p><img border=0 width=746 height=591 id="Picture 5"
+src="INT422-Assignment7_files/image015.png"></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In the Profile settings, choose
+“<b>Microsoft Azure App Service</b>” as the publish target. A dialog appears.
+You may have to sign in with your Microsoft Account and provide credentials for
+Azure, and select a subscription. </span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><img border=0 width=748 height=564 id="Picture 7"
+src="INT422-Assignment7_files/image016.png"></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>On the next panel – <b>Connection</b>
+– click the <b>Validate Connection</b> button, to ensure that the settings are
+correct.</span></p>
+
+<p><img border=0 width=748 height=593 id="Picture 28"
+src="INT422-Assignment7_files/image017.png"></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Click the Next button. </span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><img border=0 width=748 height=593 id="Picture 29"
+src="INT422-Assignment7_files/image018.png"></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Select (check) the checkbox, “<b><span
+style='background:yellow'>Execute Code First Migrations</span></b><span
+style='background:yellow'>…</span>”.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Also, this panel – <b>Settings</b>
+– needs some work.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Paste the connection string
+that you copied above (from the Azure portal). Then, replace…</span></p>
+
+<p><b><span style='font-family:"Arial",sans-serif'>…=False;User ID=<span
+style='color:red'>{your_username}</span>;Password=<span style='color:red'>{your_password}</span>;MultipleActiveR…</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>i.e. ADO.NET connection
+string’s  <b><span style='background:yellow'>“<span style='color:red'>{your_username}</span>”</span><span
+style='color:red'> </span></b>and<b> <span style='background:yellow'>“<span
+style='color:red'>{your_password}</span>”</span><span style='color:red'> </span></b>parts,
+including the curly brackets <span style='background:yellow'>“<b><span
+style='color:red'>{}</span></b>”</span>, </span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>…with your own database <span
+style='background:yellow'>“<b>Server admin login”</b> <b>id</b></span> and <b><span
+style='background:yellow'>password</span></b>. </span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>e.g. …=False;User ID=<b><span
+style='color:red;background:yellow'>wsong@wsong-ds2017</span></b>;Password=<b><span
+style='color:red;background:yellow'>Password123!</span></b>;MultipleActi…</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>OR, click on the “…” button at
+right to set the login id and password</span></p>
+
+<p><img border=0 width=600 height=670 id="Picture 31"
+src="INT422-Assignment7_files/image019.png"></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>You can click the “test” button
+to test the database connection (you may need to set up database server
+firewall with you PC’s IP address). Please note that this step (“Test
+Connection”) is not necessary, but you must ensure that the entered User name
+(admin) and password are correct.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Click <b>OK</b> then <b>Next</b>.
+</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>On this panel –<b> Preview</b>
+– you get an opportunity to preview the actions that will happen. It is always
+a good idea to do this.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Click “Start Preview” button in
+the center, then:</span></p>
+
+<p><img border=0 width=746 height=592 id="Picture 32"
+src="INT422-Assignment7_files/image020.png"></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>If the list of files to be
+added or updated makes sense, then click the <b>Publish</b> button. <b>Visual
+Studio will copy the web app and sql database definition to Azure.</b></span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Then, it will open the web app
+on Azure in a browser. </span></p>
+
+<p><strong><span style='font-family:"Arial",sans-serif'>Please note</span></strong><span
+style='font-family:"Arial",sans-serif'> that this publish task will NOT copy
+data from your local computer’s database, to the Azure database. Therefore, in
+your future assignments, you need to initial and/or load data to servers after
+the first time that the projects are deployed.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Testing your work</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Test the pages of your assignment 7 on Azure to
+see if the web app is successfully deployed. In addition, you should try to
+register user and/or log in the web app, to check whether the database server
+works.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif;background:yellow'>The “<b><span
+style='color:#0070C0'>Learn more &gt;&gt;</span></b>” button on the project
+home page must customized to link to your “<b>Assignment 7 on Azure</b>”, so
+your assignment 7 on Azure can be tested and marked</span><span
+style='font-family:"Arial",sans-serif'>. </span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Reminder about academic honesty</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>You must comply with the College’s academic
+honesty policy. Although you may interact and collaborate with others,&nbsp;<i>you
+must submit your own work</i>.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Submitting your work</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Here’s how to submit your work, before the due
+date and time:</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>1. Locate the folder that holds your
+solution&nbsp;files. In Solution Explorer, right-click the “Solution” item, and
+choose “Open Folder in File Explorer”.&nbsp;It has three &nbsp;(or more) items:
+a Visual Studio Solution file, a folder that has your project’s source code,
+and a “packages” folder.&nbsp;Go UP one level.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>2. Make a copy of the folder. This is the
+version&nbsp;that you will be uploading.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>3. Remove the “packages” folder from the copied
+folder; also, remove the “bin” and “obj” folders.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>4. Compress/zip the copied folder.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>5. Login to My.Seneca/Blackboard. Open the Web
+Programming on Windows&nbsp;course area. Click the “Assignments” link on the
+left-side navigator. Follow the link for this lab. Submit/upload your zip file.
+The page will accept three submissions, so if you upload, then decide to fix
+something and upload again, you can do so.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>

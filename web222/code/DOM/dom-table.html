@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+   <meta charset="UTF-8" />
+   <title>WEB222</title>
+   <style> 
+      body { margin: 0 18%; }
+   </style>
+   <script type="text/javascript">
+		function createTable(){
+		    var docBody;
+			//create table
+			var t = document.createElement("table");
+			t.style.position = "relative";
+			t.style.right = "100px";
+			t.style.top = "100px";
+			t.style.width = "20px";
+			t.style.border = "1px solid red";
+
+			// create tbody
+			var b = document.createElement("tbody");
+			// create row
+			var r = document.createElement("tr");
+			// create cell
+			var c = document.createElement("td");
+			c.style.height = "200";
+			c.style.border = "1px solid blue";
+			c.style.textAlign = "center";
+			// create image
+			var i = document.createElement("img");
+			i.src = "seneca-logo.png";
+			i.style.border = "1px solid pink";
+
+			// Append elements
+			c.appendChild(i); // add image to cell
+			r.appendChild(c); // add cell to row
+			b.appendChild(r); // add row to tbody
+
+			// create another row
+			var r = document.createElement("tr");
+			// create another cell
+			c = document.createElement("td");
+			c.style.border = "1px solid green";
+			c.style.textAlign = "center";
+			// create text node
+			var txt = document.createTextNode("Seneca College");
+			c.appendChild(txt); // add text to cell
+			r.appendChild(c); // add cell to row
+			b.appendChild(r); // add row to tbody
+
+			// append to doc
+			t.appendChild(b);
+
+			if (document.getElementsByTagName) {
+			  docBody = document.getElementsByTagName("body")[0];
+			} else if (document.all) {
+			  docBody = document.all.tags("body")[0];
+			}
+
+			docBody.appendChild(t);
+		}
+		
+		//window.onload = applyAttributes;
+		//function applyAtt(target,att,attVal){
+		//	document.getElementById(target).setAttribute(att,attVal);
+		//}
+		//function removeAtt(target,att){
+	//		document.getElementById(target).removeAttribute(att);
+	//	}
+	</script>
+</head>
+<body>
+  <h1>WEB222 - DOM table</h1>
+
+  <h2 id="myHeading">click to generate table.</h2>
+  <input type="button" onClick="createTable()" value="click to generate table" />
+	
+  <br>
+  <p><a href="" onclick="download=document.referrer">Download</a></p>
+</body>
+
+</html>

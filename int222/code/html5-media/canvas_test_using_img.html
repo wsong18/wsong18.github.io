@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta charset="UTF-8" />
+  <title>INT222 - Canvas Test</title>
+  <script type="application/javascript">
+    window.onload = draw;
+    function draw() {
+      var canvas = document.getElementById("my-canvas");
+      if (canvas.getContext) {
+        var ctx = canvas.getContext("2d");
+
+        var img = new Image();
+		img.onload = function(){
+		    ctx.drawImage(img,10,10);
+		    ctx.beginPath();
+		    ctx.moveTo(40,106);
+		    ctx.lineTo(80,76);
+		    ctx.lineTo(113,86);
+		    ctx.lineTo(180,25);
+		    ctx.stroke();
+        };
+        img.src = 'backdrop.png';
+      }
+    }
+  </script>
+  <style> 
+      body { margin: 0 18%; }
+	  canvas { 
+	    border: 7px ridge #369; 
+	  } 
+  </style>
+</head>
+  <body>
+    <h1>INT222 - Canvas Test: using image</h1>
+
+    <canvas id="my-canvas" width="300" height="150">[Canvas Area]</canvas>
+    <br>
+    <p><a href="view-source:">View-source</a>&nbsp;&nbsp;&nbsp;&nbsp;
+       <a href="" onclick="download=document.referrer">Download</a></p>
+  </body>
+</html>

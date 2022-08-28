@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   <meta charset="UTF-8" />
+   <title>Link as button</title>
+   <style>
+	 a.menu { 
+		 display:block; 
+		 padding:2px; 
+		 text-decoration:none; 
+		 width:6em;
+		 margin:5px; 
+		 color:black; 
+		 font-style:italic; 
+		 font-weight:200;
+		 font-family: Verdana, "Trebuchet MS",sans-serif;
+		 border-radius:10px; text-align:center; 
+		 border: 3px double black;
+	 } 
+	
+	 a.menu:link, a.menu:visited {background:#A0FFA0;3px double black; } 
+	 a.menu:focus, a.menu:hover {background: #51CD51;3px double black;} 
+	 a.menu:active {background:#27AF27;border:3px double black;} 
+	</style>
+ </head>
+ <body>
+	<a class=menu href="index.html">Home</a>
+	<a class=menu href="about.html">About</a>
+	<a class=menu href="courses.html">Courses</a>
+	<a class=menu href="honesty.html">Honesty</a>
+	<a class=menu href=“#“ onClick=“help();”>Help</a>
+	
+  <!-- for download -->
+  <br><p><a href='' download>Download</a></p> 
+ </body>
+</html>   

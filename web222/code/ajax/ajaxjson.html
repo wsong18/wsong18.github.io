@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8" />
+   <title>JSON - Example</title>
+   <style>
+      body {width: 80%; margin:auto;}
+	  #table-1 td {padding:5px;}
+      #table-1 td:first-child {color: blue; font-weight: bolder;}
+      #table-1 tr:nth-child(2n+1) {background: #c9c9c9;}
+      #table-1 tr:nth-child(2n) {background: #f0f0f0;}
+   </style>
+   
+ </head>
+ <body>
+   <h2>A First Nation</h2>
+   <table id="table-1" border="0">
+   <tr><td>Official Name</td><td><div id="OfficialName"></div></td></tr>
+   <tr><td>Address</td><td><div id="Address"></div></td></tr>
+   <tr><td>Postal Code</td><td><div id="PostalCode"></div></td></tr>
+   <tr><td>Center Lat</td><td><div id="CenterLat"></div></td></tr>
+   <tr><td>Center Long</td><td><div id="CenterLong"></div></td></tr>
+   <tr><td>Community Site</td><td><div id="CommunitySite"></div></td></tr>
+   </table>
+   <br />
+
+   <button type="button" onclick="makeRequest();">Make a request</button>
+   
+   <script type="text/javascript">
+      var httpRequest;
+    
+      function makeRequest() {
+        var url = 'https://scs.senecac.on.ca/~wei.song/web222/code/ajax/firstnation.json'; 
+
+        // make an HTTP request object
+        if (window.XMLHttpRequest) { // Mozilla, Safari, ...
+          httpRequest = new XMLHttpRequest();
+        } else if (window.ActiveXObject) { // IE 8 and older 
+              httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+    
+        //if (!httpRequest) {
+        //  alert('Giving up :( Cannot create an XMLHTTP instance');
+        //  return false;
+        //}
+        
+        // register a request listener
+        httpRequest.onreadystatechange = showContents;
+        // make the HTTP request 
+        httpRequest.open('GET', url, true);
+        httpRequest.send();
+      }
+    
+      // the function that handles the serve response
+      function showContents() {
+        
+        // check for response state
+        if (httpRequest.readyState === 4) {
+          // check the respone code
+          if (httpRequest.status === 200) {
+
+            // Just for debugging
+            console.log(httpRequest.responseText);
+
+            // Javascript function JSON.parse to parse JSON data
+            var jsObj = JSON.parse(httpRequest.responseText);
+    
+            // jsObj variable now contains the data structure and can
+            // be accessed as jsObj.name.
+            document.querySelector("#OfficialName").innerHTML =  jsObj.OfficialName;
+            document.querySelector("#Address").innerHTML =  jsObj.Address;
+            document.querySelector("#PostalCode").innerHTML =  jsObj.PostalCode;
+            document.querySelector("#CenterLat").innerHTML =  jsObj.CenterLat;
+            document.querySelector("#CenterLong").innerHTML =  jsObj.CenterLong;
+            document.querySelector("#CommunitySite").innerHTML =  
+				"<a href='" + jsObj.CommunitySite + "'>" + jsObj.CommunitySite + "</a>";
+          } else {
+            alert('There was a problem with the request.');
+          }
+        }
+      }
+   </script>
+   
+   <!-- for downloading source files --><br><br>
+   <p>
+     <a href="" Download>Download</a>&nbsp;&nbsp;
+	 <a href="firstnation.json" Download>Download JSON data</a>
+   </p>
+ </body>
+</html>

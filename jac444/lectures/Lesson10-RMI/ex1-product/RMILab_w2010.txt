@@ -1,0 +1,62 @@
+
+An Exercise on Deploying an RMI Application
+March 2010
+
+Part A
+1. Create a folder called "RMILab" and extract all the files into this folder.
+2. Create two subfolders called "ServerDir" and "ClientDir."
+3. Move these three source files into the folder "ServerDir": 
+
+      Product.java, ProductImpl.java, ProductServer.java.
+
+4. Move these two source files into the folder "ClietnDir":
+    
+      Product.java, ProductClient.java.
+
+
+Part B - The RMI Registry and the RMI Server
+1. Open a DOS command prompt window (for running the RMI Registry).
+
+   Go to the subfolder "ServerDir."
+
+2. Run the command line: >rmiregistry 6666
+
+3. Open another DOS command prompt window (for running the RMI server).
+
+   Go to the subfolder "ServerDir."
+   We should have three source files in the folder(ServerDir): 
+
+      Product.java, ProductImpl.java, ProductServer.java
+
+4. Run the command line: >javac ProudctImpl.java
+
+5. Run the command line: >rmic  -v1.2 ProductImpl
+
+6. Run the command lines:
+
+   >javac ProductServer.java
+
+   >java ProductServer
+
+
+(Question: How many class files do you have in this folder?)
+
+Part C - The RMI Client
+1. Open a DOS command prompt window.
+   Go to the folder "ClientDir."
+   We should have two source files in the folder(ClientDir): 
+
+      Product.java, ProductClient.java.
+
+2. Copy "ProductImpl_Stub.class" from "ServerDir" into this folder(i.e. ClientDir).
+
+3. Run the command line: >javac ProductClient.java
+
+4. Run the command line: >java ProductClient
+
+
+(Question: How many class files do you have in this folder?)
+
+(Question: What is the purpose of having the rmic-generated stub class?)
+(Question: For Java 1.5 and 1.6, is it necessary to have the rmic-generated stub class?)
+

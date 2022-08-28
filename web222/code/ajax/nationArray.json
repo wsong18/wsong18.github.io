@@ -1,0 +1,57 @@
+[
+  {
+    "Address": "PO BOX 36, MOUNT STEWART, PE",
+    "Number": 1,
+    "CenterLat": 46.3597,
+    "CenterLong": -62.9108,
+    "Province": "PE",
+    "CommunitySite": "http://www.abegweitfirstnations.com/",
+    "OfficialName": "Abegweit",
+    "Phone": "(902) 676-2353",
+    "PostalCode": "C0A 1T0"
+  },
+  {
+    "Address": "PO BOX 134, LENNOX ISLAND, PE",
+    "Number": 2,
+    "CenterLat": 46.6024,
+    "CenterLong": -63.8549,
+    "Province": "PE",
+    "CommunitySite": "http://www.lennoxisland.com/",
+    "OfficialName": "Lennox Island",
+    "Phone": "(902) 831-2779",
+    "PostalCode": "C0B 1P0"
+  },
+  {
+    "Address": "RR 1, 373 BIG COVE ROAD, ELSIPOGTOG FIRST NATION, NB",
+    "Number": 3,
+    "CenterLat": 46.5857,
+    "CenterLong": -64.9858,
+    "Province": "NB",
+    "CommunitySite": "http://www.elsipogtog.com/",
+    "OfficialName": "Elsipogtog First Nation",
+    "Phone": "(506) 523-8200",
+    "PostalCode": "E4W 2S3"
+  },
+  {
+    "Address": "9 RESERVE ROAD, BUCTOUCHE RESERVE, NB",
+    "Number": 4,
+    "CenterLat": 46.4525,
+    "CenterLong": -64.7586,
+    "Province": "NB",
+    "CommunitySite": "http://www.nsmdc.ca/content/13301",
+    "OfficialName": "Buctouche",
+    "Phone": "(506) 743-2520",
+    "PostalCode": "E4S 4G2"
+  },
+  {
+    "Address": "620 BAYVIEW DRIVE, BURNT CHURCH, NB",
+    "Number": 5,
+    "CenterLat": 47.2001,
+    "CenterLong": -65.1499,
+    "Province": "NB",
+    "CommunitySite": "http://mrc.uccb.ns.ca/nbcouncils.html#3",
+    "OfficialName": "Esgenoopetitj First Nation",
+    "Phone": "(506) 776-1200",
+    "PostalCode": "E9G 2A8"
+  }
+]

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>INT222</title>
+    <link rel="stylesheet" href="lab05-suggested.css"   type="text/css" media="screen" /> 
+  </head>
+  <body>
+    <header>
+    </header>
+    <nav>
+    </nav>
+    <div id="content">
+      <div id="mcontent">
+      <div class="spacer">
+       <div class="tableContainer">                     <!--start of row container-->
+          <div class="cellContainer">                   <!--start of cell (1) within row container-->
+               Row one (1) cell one (1) content
+               <br />1<br />2
+               <br />3<br />4
+          </div>                                        <!--end of cell (1) container-->
+          <div class="cellContainer">                   <!--start of cell (2) within row container-->
+               Row one (1) cell two (2) content
+               <br />1<br />2
+          </div>                                        <!--end of cell (2) container-->
+          <div class="cellContainer">                   <!--start of cell (3) within row container-->
+               Row one (1) cell three (3) content
+               <br />1<br />2<br />3<br />4
+          </div>                                        <!--end of cell (3) container-->
+       </div>                                           <!--end of row container-->
+    </div>
+    <div id="showcss">
+        <form method="post" action="#">
+        <textarea>
+		  .spacer { padding:5px 0px 5px;}
+		  .tableContainer {
+				  display:         table;
+				  width:           1000px;
+				  border:          #f00 groove 4px;
+				  border-collapse: collapse; 
+				  margin:          auto;
+		  }        
+		  .cellContainer {
+				  display:         table-cell;
+				  width:           300px;
+				  border:          dashed 2px;
+				  background:      #ccc;
+				  color:           #000;
+		  }</textarea>
+        </form>
+       </div>
+      </div>
+      <!-- Defining Sidebar / Aside -->
+    </div>
+    <!-- Defining Footer -->
+    <footer>
+      <section style="text-align:center;">
+        <script type="text/javascript">
+        //<![CDATA[
+          var dt=new Date(document.lastModified);   // Get document last modified date
+          document.write('This page was last updated on '+dt.toLocaleString()) 
+        //]]>
+        </script>
+      </section>
+    </footer>
+  </body>
+</html>

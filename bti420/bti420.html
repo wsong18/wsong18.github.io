@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>BTI420-Wei.Song</title>
+    <meta name="viewport" content="width=1000, initial-scale=1.0, maximum-scale=1.0">
+
+    <!-- Loading Bootstrap -->
+    <link href="../Flat-UI-master/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Loading Flat UI -->
+    <link href="../Flat-UI-master/css/flat-ui.css" rel="stylesheet">
+    <link href="../Flat-UI-master/css/demo.css" rel="stylesheet">
+    <link href="../Flat-UI-master/css/mystyle.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="../Flat-UI-master/js/html5shiv.js"></script>
+      <script src="../Flat-UI-master/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body onload="init();">
+    <div class="container">
+      
+      <a id="top"></a> 	
+      <div class="page-header">
+        <h3>BTI420</h3>
+	<p>
+	  BTI420 - Web Programming on Windows - 
+	  <a href="http://www.senecacollege.ca/"><img src=../Flat-UI-master/images/seneca_logo.png alt="Seneca"/></a> College
+	</p>
+      </div> <!-- /page-header -->	  
+	  
+      <div class="row demo-row">
+          <nav class="navbar navbar-inverse navbar-embossed" role="navigation">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
+                <span class="sr-only">Toggle navigation</span>
+              </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse-01">
+              <ul class="nav navbar-nav navbar-left">
+				<li><a href="../index.html"><span class="fui-user"></span></a></li>
+                <li><a href="#top">Announcements</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#standards">Standards</a></li>
+				<li><a href="http://petermcintyre.com/bti420/" target=_blank>Course Site<span class="navbar-unread">1</span></a></li>
+				<li><a href="http://petermcintyre.com/bti420/resources/" target='_blank'>Resources<span class="navbar-unread">1</span></a></li>
+                <li><a href="https://scs.senecac.on.ca/course/bti420" target="_blank">Outline</a></li>
+               </ul>
+            </div><!-- /.navbar-collapse -->
+          </nav><!-- /navbar -->	
+      </div> <!-- /row -->	
+	
+      
+      <div class="demo-row typography-row">
+        <div class="demo-content">
+	  <h3>
+	    <!--img src="../Flat-UI-master/images/announcements.png" alt="">&nbsp;-->
+	    Announcements
+	  </h3>
+	  
+	  <h3 class="demo-panel-title">Welcome</h3>
+	  <p>This webpage is for BTI420 course. Make sure to read the <a href="#standards">course
+	     standards</a> and <a href="https://scs.senecac.on.ca/course/bti420">course outline</a>.
+	     The weekly lecture notes, assignments and labs can be reached from the weekly schedule below
+		 or alternatively through <a href="http://petermcintyre.com/bti420/notes/" target="_blank">this link</a>.
+	  </p>
+	  <br>
+	  <h3 class="demo-panel-title">Code Examples on GitHub</h3>
+	  <p>BTI420 code examples for the Winter 2016 semester are now avaiable on GitHub:
+	     <a href=https://github.com/peteratseneca/bti420winter2016 target='_blank'>
+		    https://github.com/peteratseneca/bti420winter2016
+		 </a>.
+	  </p>
+	  <p>
+		 You can browse the code online. You can also download the repository as a zip file. Or, you can clone the repository to your own computer.
+	  </p>
+	  <br>
+	  <br><br>
+	</div><!-- /demo-content -->
+      </div><!-- /demo-row -->
+  
+  
+      <a id="schedule"></a> 
+      <div class="demo-row typography-row">
+        <div class="demo-content">
+	  <h3>
+        <!-- <img src="../Flat-UI-master/images/icons/svg/calendar.svg" alt="">&nbsp;&nbsp;-->
+	    <canvas id="calendarCanvas" width="100" height="100">
+	      <img src="../Flat-UI-master/images/calendar_background.png" alt="">
+	    </canvas>&nbsp;&nbsp;
+	    BTI420 Weekly Schedule&nbsp;&nbsp;
+	    <a href="#top" class="back">^</a>
+	  </h3>
+	  <br>
+	  <p>BTI420 - Winter 2016
+	    <span class="legend">
+	      LEGEND:
+	      <button type="button" class="btn btn-xs btn-default"
+		          title="The task or lecture has not be released yet."
+			  onclick="alert(this.title);">Not Available
+	      </button>
+	      <button type="button" class="btn btn-xs btn-inverse"
+		          title="For released lectures, tasks or examples."
+			  onclick="alert(this.title);">Released
+	      </button>
+	      <button type="button" class="btn btn-xs btn-danger"
+		          title="Indicates a task is due or a test will be held in this week."
+			  onclick="alert(this.title);">Task Due
+	      </button>
+	      <button type="button" class="btn btn-xs btn-info"
+		          title="For references, solutions or notifications."
+			  onclick="alert(this.title);">References
+	      </button>
+	    </span>
+	  </p>
+	  
+	  <table class="table table-bordered">
+	    <thead>
+	      <tr id=row0>
+			<th class=center>Wk<br>#</th>
+			<th class=center>Start-End<br>Date</th>
+			<th class=center>Topics *<br></th>
+			<th style="width:8em;">Lectures,<br>Tests</th>
+			<th style="width:8em;">Assignments,<br>Labs, Examples</th>
+	      </tr>
+	    </thead>
+	    <tbody>
+	      <tr id=row1>
+			<th class=center>1</th>
+			<td>Jan 12 - 15</td>
+			<td>
+			  <ul>
+				<li>Introduction to the course’s topics</li>
+				<li>Getting started – dev tools, ASP.NET MVC, C#, writing classes</li>
+				<li>Lifecycle of a request in ASP.NET MVC; hands-on Assignment 1</li>
+				<li>Creating objects and collections; hands-on data delivery</li>
+				<li>HTML Forms and controllers; hands-on data gathering</li>
+			  </ul>
+			</td>
+			<td>
+			  <button type="button" title="Course Introduction"
+				  class="btn btn-xs btn-inverse"
+				  onclick='window.open("lectures/BTI420-CourseIntro.pdf", "_blank","");'
+				  >Welcome
+			  </button>
+			  <br>
+			  <button type="button" title="Lecture Notes for Week 1"
+				  class="btn btn-xs btn-inverse"
+				  onclick='window.open("lectures/BTI420-Lecture1.pptx", "_blank","");'
+				  >Lecture 1
+			  </button>
+			  <button type="button" title="Lecture Notes for Week 1"
+				  class="btn btn-xs btn-inverse"
+				  onclick='window.open("lectures/BTI420-Lecture1.pdf", "_blank","");'
+				  >pdf
+			  </button>
+			  <br>
+			  <button type="button" title="Lecture Notes for Week 1 part 2"
+				  class="btn btn-xs btn-inverse"
+				  onclick='window.open("lectures/BTI420-Lecture1-2.pptx", "_blank","");'
+				  >Lecture 1-2
+			  </button>
+			  <button type="button" title="Lecture Notes for Week 1 part 2"
+				  class="btn btn-xs btn-inverse"
+				  onclick='window.open("lectures/BTI420-Lecture1-2.pdf", "_blank","");'
+				  >pdf
+			  </button>	
+			</td>
+			<td>
+			  <button type="button" title="Assignment 1 (3%) "
+				  class="btn btn-xs btn-inverse"
+				  onclick='window.open("http://petermcintyre.com/bti420/graded-work/assign1/", "_blank","");'
+				  >Assign 1 (3%) 
+			  </button>&nbsp;
+			  <br>
+			  <button type="button" title="Week 1 code examples on GitHub"
+				  class="btn btn-xs btn-info"
+				  onclick='window.open("https://github.com/peteratseneca/bti420winter2016/tree/master/Week_01", "_blank","");'
+				  >Code Examples 
+			  </button>
+			</td>
+	      </tr>
+	      <tr id="row2">
+			<th class=center>2</th>
+			<td>Jan 18 - 22</td>
+			<td>
+			  <ul>
+				<li>Data persistence introduction</li>
+				<li>System design guidance – data store, data manager,</li>
+				<li>view models, and use cases</li>
+				
+				<li>Get data from a user; HTML Forms refresher</li>
+				<li>More about the Razor View Engine</li>
+				<li>Introduction to scaffolding</li>
+				<li>Data persistence and management intro</li>
+				<li>Hands-on Assignment 2</li>		
+			  </ul>
+			</td>
+			<td>
+			  <button type="button" title="Lecture Notes for Week 2"
+				  class="btn btn-xs btn-inverse"
+				  onclick='window.open("http://petermcintyre.com/bti420/notes/jan20/", "_blank","");'
+				  >Lecture 2 (Web)
+			  </button>
+			  <br>
+			  <button type="button" title="Test 1 (3%):"
+				  class="btn btn-xs"
+				  >Test 1 (3%) 
+			  </button>
+			  <br>
+			  <button type="button" title="Lecture Notes for Week 2"
+				  class="btn btn-xs btn-inverse"
+				  onclick='window.open("http://petermcintyre.com/bti420/notes/jan22-jan25/", "_blank","");'
+				  >Lecture 2-2 (Web)
+			  </button>
+			</td>	  
+			<td>
+			  <button type="button" title="Assignment 2 (4%) "
+				  class="btn btn-xs btn-inverse"
+				  onclick='window.open("http://petermcintyre.com/bti420/graded-work/assign2/", "_blank","");'
+				  >Assign 2 (4%) 
+			  </button>
+			  <br>
+			  <button type="button" title="Week 1 code examples on GitHub"
+				  class="btn btn-xs btn-info"
+				  onclick='window.open("https://github.com/peteratseneca/bti420winter2016/tree/master/Week_02", "_blank","");'
+				  >Code Examples 
+			  </button>
+			</td>
+	      </tr>		
+	      <tr id=row3>
+			<th class=center>3</th>
+			<td>Jan 25 - 29</td>
+			<td>
+			  <ul>
+				<li>Handling the “edit existing” and “delete item” patterns</li>
+				<li>Introduction to data annotations, associations among entities</li>
+				<li>LINQ (Language-Integrated Query)</li>
+				<li>Patterns wrap-up and summary</li>
+				<li>More about LINQ; selecting, filtering, sorting</li>
+				<li>Hands-on Assignment 3</li>
+			  </ul> 
+			</td>
+			<td>
+			  <button type="button" title="Test 2 (5%)"
+				  class="btn btn-xs "
+				  >Test 2 (5%)  
+			  </button>
+			  <br>
+			  <button type="button" title="Lecture Notes for Week 3"
+				  class="btn btn-xs btn-inverse"
+				  onclick='window.open("http://petermcintyre.com/bti420/notes/jan27/", "_blank","");'
+				  >Lecture 3 (Web)
+			  </button>
+			  <br>
+			  <button type="button" title="Lecture Notes for Week 3"
+				  class="btn btn-xs btn-inverse"
+				  onclick='window.open("http://petermcintyre.com/bti420/notes/jan29-feb01/", "_blank","");'
+				  >Lecture 3-2 (Web)
+			  </button>
+			</td>
+			<td>
+			  <button type="button" title="Assignment 3 (4%) "
+				  class="btn btn-xs btn-inverse"
+				  onclick='window.open("http://petermcintyre.com/bti420/graded-work/assign3/", "_blank","");'
+				  >Assign 3 (4%) 
+			  </button>
+			  <br>
+			  <button type="button" title="Week 1 code examples on GitHub"
+				  class="btn btn-xs btn-info"
+				  onclick='window.open("https://github.com/peteratseneca/bti420winter2016/tree/master/Week_03", "_blank","");'
+				  >Code Examples 
+			  </button>
+			</td>
+	      </tr>
+	      <tr id=row4>
+			<th class=center>4</th>
+			<td>Feb 1 - 5</td>
+			<td>
+			  <ul>
+				<li>Associations among entities</li>
+				<li>Continue working with associated data</li>
+				<li>Introduction to debugging</li>
+				<li>Hands-on Assignment 4</li>
+			  </ul>
+			</td>
+			<td>
+			  <button type="button" title="Test 3 (5%) "
+				  class="btn btn-xs "
+				   
+				  >Test 3 (5%) 
+			  </button>
+			  <br>
+			  <button type="button" title="Lecture Notes for Week 4"
+				  class="btn btn-xs btn-inverse"
+				  onclick='window.open("http://petermcintyre.com/bti420/notes/feb03/", "_blank","");'
+				  >Lecture 4 (Web)
+			  </button>
+			  <br>
+			  <button type="button" title="Lecture Notes for Week 4 part 2"
+				  class="btn btn-xs btn-inverse"
+				  onclick='window.open("http://petermcintyre.com/bti420/notes/feb05-feb08/", "_blank","");'
+				  >Lecture 4-2 (Web)
+			  </button>
+			</td>
+			<td>
+			  <button type="button" title="Assignment 4 (4%) "
+				  class="btn btn-xs btn-inverse"
+				  onclick='window.open("http://petermcintyre.com/bti420/graded-work/assign4/", "_blank","");'
+				  >Assign 4 (4%) 
+			  </button>
+			  <br>
+			  <button type="button" title="Week 1 code examples on GitHub"
+				  class="btn btn-xs btn-info"
+				  onclick='window.open("https://github.com/peteratseneca/bti420winter2016/tree/master/Week_04", "_blank","");'
+				  >Code Examples 
+			  </button>
+			</td>
+	      </tr>
+	      <tr id=row5>
+			<th class=center>5</th>
+			<td>Feb 8 - 12</td>
+			<td>
+			  <ul>
+				<li>HTML Form building for associated data scenarios</li>
+                <li>Bootstrap introduction</li>
+				<li>Continue working with associated data</li>
+                <li>Hands-on Assignment 5</li>
+			  </ul>
+			</td>
+			<td>
+			  <button type="button" title="Test 4 (3%): Sample Answers."
+				  class="btn btn-xs  "
+				  
+				  >Test 4 (3%) 
+			  </button>
+			  <br>
+			  <button type="button" title="Lecture Notes for Week 5"
+				  class="btn btn-xs btn-inverse"
+				  onclick='window.open("http://petermcintyre.com/bti420/notes/feb10/", "_blank","");'
+				  >Lecture 5 (Web)
+			  </button>
+			  <br>
+			  <button type="button" title="Lecture Notes for Week 5 part 2"
+				  class="btn btn-xs btn-inverse"
+				  onclick='window.open("http://petermcintyre.com/bti420/notes/feb12-feb15/", "_blank","");'
+				  >Lecture 5-2 (Web)
+			  </button>
+			</td>
+			<td>
+			  <button type="button" title="Assignment 5 (4%) "
+				  class="btn btn-xs btn-inverse"
+				  onclick='window.open("http://petermcintyre.com/bti420/graded-work/assign5/", "_blank","");'
+				  >Assign 5 (4%) 
+			  </button>
+			  <br>
+			  <button type="button" title="Weekly code examples on GitHub"
+				  class="btn btn-xs btn-info"
+				  onclick='window.open("https://github.com/peteratseneca/bti420winter2016/tree/master/Week_05", "_blank","");'
+				  >Code Examples 
+			  </button>
+			</td>
+	      </tr>
+	      <tr id=row6>
+			<th class=center>6</th>
+			<td>Feb 15 - 19</td>
+			<td>
+			  <ul>    
+				<li>More HTML Form building for associated data scenarios</li>
+				<li>Continue working with associated data</li>
+				<li>Hands-on Assignment 6</li>
+			  </ul>
+			</td>
+			<td>
+			  <button type="button" title="Test 5 (5%): on Wednesday, at the beginning of the class time slot."
+				  class="btn btn-xs "
+				  
+				  >Test 5 (5%)
+			  </button>
+			  <br>
+			  <button type="button" title="Lecture Notes for Week 6"
+				  class="btn btn-xs btn-inverse"
+				  onclick='window.open("http://petermcintyre.com/bti420/notes/feb17/", "_blank","");'
+				  >Lecture 6 (Web)
+			  </button>
+			  <br>
+			  <button type="button" title="Lecture Notes for Week 6 part 2"
+				  class="btn btn-xs btn-inverse"
+				  onclick='window.open("http://petermcintyre.com/bti420/notes/feb19-feb22/", "_blank","");'
+				  >Lecture 6-2 (Web)
+			  </button>
+			</td>
+			<td>
+			  <button type="button" title="Assignment 6 (4%) "
+				  class="btn btn-xs btn-inverse"
+				  onclick='window.open("http://petermcintyre.com/bti420/graded-work/assign6/", "_blank","");'
+				  >assign 6 (4%) 
+			  </button>
+			  <br>
+			  <button type="button" title="Weekly code examples on GitHub"
+				  class="btn btn-xs btn-info"
+				  onclick='window.open("https://github.com/peteratseneca/bti420winter2016/tree/master/Week_06", "_blank","");'
+				  >Code Examples 
+			  </button>
+			</td>
+	      </tr>
+	      <tr id=row7>
+			<th class=center>7</th>
+			<td>Feb 22 - 26</td>
+			<td>
+			  <ul>
+				<li>Security topics introduction</li>
+				<li>Student help on outstanding assignments<br>(no assignment released this week)</li>
+			  </ul>
+			</td>
+			<td>
+			  <button type="button" title="Test 6 (5%): on Wednesday, at the beginning of the class time slot."
+				  class="btn btn-xs"
+				  onclick='window.open("http://petermcintyre.com/bti420/graded-work/tests/", "_blank","");'
+				  >Test 6 (5%) 
+			  </button>
+			  <br>
+			  <button type="button" title="Lecture Notes for Week 7"
+				  class="btn btn-xs btn-inverse"
+				  onclick='window.open("http://petermcintyre.com/bti420/notes/feb24/", "_blank","");'
+				  >Lecture 7 (Web)
+			  </button>
+			</td>
+			<td>
+			  <button type="button" title="Weekly code examples on GitHub"
+				  class="btn btn-xs btn-info"
+				  onclick='window.open("https://github.com/peteratseneca/bti420winter2016/tree/master/Week_07", "_blank","");'
+				  >Code Examples 
+			  </button>
+			</td>
+	      </tr>
+	      <tr id=row8>
+			<th class=center>-</th>
+			<td>Feb 29 - Mar 4</td>
+			<td><span style='color: red;'><b>Study Week </b></span></td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		  </tr>
+		  <tr id=row9>
+			<th class=center>8</th>
+			<td>Mar 7 - 11</td>
+			<td>
+			  <ul>
+				<li>New persistent data store creation, design model classes</li>
+				<li>Configuring Migrations</li>
+				<li>Microsoft Azure services introduction</li>
+				<li>Hands-on with Azure</li>
+				<li>Get started with Assignment 7</li>
+			  </ul>
+			</td>
+			<td>
+			  <button type="button" title="Test 7 (5%): on Wednesday, at the beginning of the class time slot."
+				  class="btn btn-xs btn-info"
+				  onclick='window.open("http://petermcintyre.com/bti420/graded-work/tests/", "_blank","");'
+				  >Test 7 (5%) - &#9911; 
+			  </button>
+			  <br>
+			  <button type="button" title="Lecture Notes for Week 8"
+				  class="btn btn-xs btn-inverse"
+				  onclick='window.open("http://petermcintyre.com/bti420/notes/mar09//", "_blank","");'
+				  >Lecture 8 (Web)
+			  </button>
+			  <br>
+			  <button type="button" title="Lecture Notes for Week 8 part 2"
+				  class="btn btn-xs btn-inverse"
+				  onclick='window.open("http://petermcintyre.com/bti420/notes/mar11-mar14//", "_blank","");'
+				  
+				  >Lecture 8-2 (Web)
+			  </button>
+			</td>
+			<td>
+			  <button type="button" title="Assignment 7 (5%) "
+				  class="btn btn-xs btn-inverse"
+				  onclick='window.open("http://petermcintyre.com/bti420/graded-work/assign7/", "_blank","");'
+				  >Assign 7 (8%) 
+			  </button>
+			  <br>
+			  <button type="button" title="Weekly code examples on GitHub"
+				  class="btn btn-xs btn-info"
+				  onclick='window.open("https://github.com/peteratseneca/bti420winter2016/tree/master/Week_08", "_blank","");'
+				  >Code Examples 
+			  </button>
+			  <br>
+			  <button type="button" title="Web Programming on Windows course and Microsoft Azure services"
+				  class="btn btn-xs btn-info"
+				  onclick='window.open("http://petermcintyre.com/topics/azure-deploy-web-apps/", "_blank","");'
+				  >Deploy to Azure
+			  </button>
+			</td>
+	      </tr>
+	      <tr id=row10>
+			<th class=center>9</th>
+			<td>Mar 14 - 18</td>
+			<td>
+			  <ul>
+				<li>Security scenarios, design and coding tactics</li>
+				<li>Gracefully handling HTTP 404 and other exceptions</li>
+				<li>Hands-on with Azure</li>
+				<li>Get started on Assignment 8</li>
+			  </ul>
+			</td>
+			<td>
+			  <button type="button" title="Test 8 (3%): on Wednesday, at the beginning of the class time slot."
+				  class="btn btn-xs btn-info"
+				  onclick='window.open("http://petermcintyre.com/bti420/graded-work/tests/", "_blank","");'
+				  >Test 8 (3%) - &#9911;
+			  </button>
+			  <br>
+			  <button type="button" title="Lecture Notes for Week 9"
+				  class="btn btn-xs btn-inverse"
+				  onclick='window.open("http://petermcintyre.com/bti420/notes/mar16/", "_blank","");'
+				  >Lecture 9 (Web)
+			  </button>
+			  <br>
+			  <button type="button" title="Lecture Notes for Week 9 Part 2"
+				  class="btn btn-xs btn-inverse"
+				  onclick='window.open("http://petermcintyre.com/bti420/notes/mar18-mar21/", "_blank","");'
+				  >Lecture 9-2 (Web)
+			  </button>
+			</td>
+			<td>
+			  <button type="button" title="Assignment 8 (10%) "
+				  class="btn btn-xs btn-inverse"
+				  onclick='window.open("http://petermcintyre.com/bti420/graded-work/assign8/", "_blank","");'
+				  >Assign 8 (10%) 
+			  </button>
+			  <br>
+			  <button type="button" title="Weekly code examples on GitHub"
+				  class="btn btn-xs btn-info"
+				  onclick='window.open("https://github.com/peteratseneca/bti420winter2016/tree/master/Week_09", "_blank","");'
+				  >Code Examples 
+			  </button>
+			</td>
+	      </tr>
+	      <tr id=row11>
+			<th class=center>10</th>
+			<td>Mar 21 - 24</td>
+			<td>
+			  <ul>
+				<li>Handling non-text media types in web apps – capture, storage, delivery</li>
+				<li>Continue working on Assignment 8</li>
+			  </ul>		  
+			  <span style='color: red;'><b>No class on Friday Mar 25</b> 
+				<span style="font-size: 75%">(Good Friday stat holiday, College is closed)</span>
+			  </span>
+			</td>
+			<td>
+			  <button type="button" title="Test 9 (5%): on Wednesday, at the beginning of the class time slot."
+				  class="btn btn-xs btn-info"
+				  onclick='window.open("http://petermcintyre.com/bti420/graded-work/tests/", "_blank","");'
+				  >Test 9 (5%) - &#9911;  
+			  </button>
+			  <br>
+			  <button type="button" title="Lecture Notes for Week 10"
+				  class="btn btn-xs btn-inverse"
+				  onclick='window.open("http://petermcintyre.com/bti420/notes/mar23/", "_blank","");'
+				  >Lecture 10 (Web)
+			  </button>
+			  <br>
+			  <button type="button" title="Lecture Notes for Week 10"
+				  class="btn btn-xs btn-inverse"
+				  onclick='window.open("http://petermcintyre.com/bti420/notes/http://petermcintyre.com/bti420/notes/mar25-mar28/", "_blank","");'
+				  >Lecture 10-2 (Web)
+			  </button>
+			</td>
+			<td>
+			  <button type="button" title="Weekly code examples on GitHub"
+				  class="btn btn-xs btn-info"
+				  onclick='window.open("https://github.com/peteratseneca/bti420winter2016/tree/master/Week_10", "_blank","");'
+				  >Code Examples 
+			  </button>
+			</td>
+	      </tr>
+	      <tr id=row12>
+			<th class=center>11</th>
+			<td>Mar 28 - Apr 1</td>
+			<td>
+			  <ul>
+				<li>Partial views</li>
+				<li>Using JavaScript and Ajax to enhance user interaction</li>
+				<li>Brief introduction to creating a web service endpoint</li>
+				<li>Get started on Assignment 9</li>
+			  </ul>
+			</td>
+			<td>
+			  <button type="button" title="Test 10 (3%): on Wednesday, at the end of the class time slot."
+				  class="btn btn-xs btn-info"
+				  onclick='window.open("http://petermcintyre.com/bti420/graded-work/tests/", "_blank","");'
+				  >Test 10 (3%)  
+			  </button>
+			  <br>
+			  <button type="button" title="Lecture Notes for Week 10"
+				  class="btn btn-xs btn-inverse"
+				  onclick='window.open("http://petermcintyre.com/bti420/notes/mar30/", "_blank","");'
+				  >Lecture 11 (Web)
+			  </button>
+			  <button type="button" title="Lecture Notes for Week 10 part 2"
+				  class="btn btn-xs btn-inverse"
+				  onclick='window.open("http://petermcintyre.com/bti420/notes/apr01-apr04/", "_blank","");'
+				  >Lecture 11-2 (Web)
+			  </button>
+			</td>
+			<td>
+			   <button type="button" title="Assignment 9 (10%) "
+				  class="btn btn-xs btn-inverse"
+				  onclick='window.open("http://petermcintyre.com/bti420/graded-work/assign9/", "_blank","");'
+				  >Assign 9 (10%) 
+			  </button>
+			  <br>
+			  <button type="button" title="Weekly code examples on GitHub"
+				  class="btn btn-xs btn-info"
+				  onclick='window.open("https://github.com/peteratseneca/bti420winter2016/tree/master/Week_11", "_blank","");'
+				  >Code Examples 
+			  </button>
+			</td>
+	      </tr>
+	      <tr id=row13>
+			<th class=center>12</th>
+			<td>April 4 - 8</td>
+			<td>
+			  <ul>
+				<li>Bulk data loading, and initial data</li>
+				<li>Continue work on Assignment 9</li>
+			  </ul>
+			</td>
+			<td>
+			  <button type="button" title="Test 11 (5%): on Wednesday, at the end of the class time slot."
+				  class="btn btn-xs btn-info"
+				  onclick='window.open("http://petermcintyre.com/bti420/graded-work/tests/", "_blank","");'
+				  >Test 11 (5%)  
+			  </button>
+			  <br>
+			  <button type="button" title="Lecture Notes for Week 12"
+				  class="btn btn-xs btn-inverse"
+				  onclick='window.open("http://petermcintyre.com/bti420/notes/apr06/", "_blank","");'
+				  >Lecture 12 (Web)
+			  </button>
+			  <br>
+			  <button type="button" title="Lecture Notes for Week 12 part 2"
+				  class="btn btn-xs btn-inverse"
+				  onclick='window.open("http://petermcintyre.com/bti420/notes/apr08-apr11/", "_blank","");'
+				  >Lecture 12-2 (Web)
+			  </button>
+			</td>
+			<td>
+			  <button type="button" title="Weekly code examples on GitHub"
+				  class="btn btn-xs btn-info"
+				  onclick='window.open("https://github.com/peteratseneca/bti420winter2016/tree/master/Week_12", "_blank","");'
+				  >Code Examples 
+			  </button>
+			</td>
+	      </tr>
+	      <tr id=row14>
+			<th class=center>13</th>
+			<td>April 11 - 15</td>
+			<td>
+			  <ul>
+				<li>No new topics today – optional attendance</li>
+				<li>Professors will be available in-class to help you with Assignment 9</li>
+				<li>This is the last class/session of the term</li>
+			  </ul>
+			</td>
+			<td>
+			  &nbsp;
+			</td>
+			<td>
+			  <a href="#">&nbsp;</a>
+			</td>
+		  </tr>
+		  <tr id=row15>
+			<th class=center>14</th>
+			<td>April 18 - 22</td>
+			<td><span style='color: red;'><b>Exam Week </b>(this course does not have a final exam)</span></td>
+			<td>
+			   &nbsp;
+			</td>
+			<td>&nbsp;</td>
+	      </tr>
+	    </tbody>
+	  </table>
+	</div><!-- /demo-content -->
+      </div><!-- /demo-row -->
+      <p style="text-align: center;">* Subject to change</p>
+      <br><br>
+      
+      <a id="standards"></a>
+      <div class="demo-row typography-row">
+        <div class="demo-content">
+	  <h3>
+	    <img src="../Flat-UI-master/images/icons/svg/retina.svg" alt="">&nbsp;&nbsp;
+	    Course Standards&nbsp;&nbsp;
+	    <a href="#top" class="back">^</a>
+	  </h3>
+	  <br>
+	  <p>For General Class Standards please refer also to the appropriate section on my home page from the link of <a href="https://scs.senecac.on.ca/~wei.song/index.html#standards">https://scs.senecac.on.ca/~wei.song/index.html#standards</a>.</p>
+	  <p>For Seneca College Information Technology Acceptable Use Policy please go to the link at
+	    <a href="https://scs.senecac.on.ca/page/computer-studies-academic-procedure">
+	      https://scs.senecac.on.ca/page/computer-studies-academic-procedure</a> </p>
+	  <br>
+	</div><!-- /demo-content -->
+      </div><!-- /demo-row -->
+      
+      <div class="row">
+	    <div class="col-xs-12">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Quizzes, Tests and Exam</h3>
+            </div>
+			  
+            <div class="panel-body">
+			  <ul>
+				<li>There will be about 10 to 12 tests in the semester with 50% final marks in total. 
+				</li>
+				<li>No final exam.</li>
+			  </ul>
+			</div>
+		  </div>
+		</div>
+      </div><!-- / row -->
+      
+      <div class="row">
+	    <div class="col-xs-12">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Labs and assignments</h3>
+            </div>
+			
+            <div class="panel-body">
+			  <ul>
+				<li>There will be 9 assignments in the semester with 50% final marks in total. 
+				</li>
+				<li>Late penalties: 10% for each day. Late after more than 5 days or reworked submissions will get the marks up to 50%.</li>
+			  </ul>
+			</div>
+		  </div>
+		</div>
+      </div><!-- / row -->
+	  
+      <div class="row">
+	    <div class="col-xs-12">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Evaluation</h3>
+            </div>
+			
+            <div class="panel-body">
+			  <table style="margin: 0 25px;">
+				<tr>
+				  <td style="padding-right: 50px;">9 assignments </td>
+				  <td style="padding-right: 50px;">(3%, 4%, or up to 15%)</td>
+				  <td>50%</td>
+				</tr><tr>
+				  <td>10 (up to 12) tests</td>
+				  <td>(3%, 4%, or up to 15%)</td>
+				  <td>50%</td>
+				</tr>
+				<tr>
+				  <td>Final exam</td>
+				  <td></td>
+				  <td>0%</td>
+				</tr>
+				<tr>
+				  <td>Total </td>
+				  <td></td>
+				  <td>100%</td>
+				</tr>
+			  </table>
+			  <br>
+			  <p>** Grades will be posted on Blackboard **</p>
+
+			</div>
+		  </div>
+		</div>
+      </div><!-- / row -->
+      
+      <div class="row">
+	
+	    <div class="col-xs-12">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Lectures</h3>
+            </div>
+            <div class="panel-body">
+			  <ul>
+				<li>be on time for class </li>
+				<li>respect other students</li>
+				<li>Lectures will explain and demonstrate the skills and concepts you need to complete a Lab assignment.</li>
+				<li>Formal attendance may be kept. Frequent absence will be noted. You are responsible on all tests and labs
+					for any material covered or assigned in class. People who do not come to class generally have significant
+					problems completing their labs and traditionally do not perform  well on their tests.</li>
+				<li>Classes will start on time and late arrivals must not disturb the class. Enter quietly and take a seat.
+					Do not disturb the class by asking questions about what took place before your arrival. </li>
+				<li>If you missed a class, please ask a colleague, not the instructor, about what was covered. An email to an
+					instructor about what was covered in class will get a response along the lines of "that was covered in class".</li>
+				<li>After the lecture, you are expected to work on the lab in preparation for the Interactive Lecture (Lab) Period.</li>
+			  </ul>
+            </div>
+          </div>
+	  
+      </div><!-- /.col-sm-4 -->
+	
+      </div><!-- / row -->
+
+      <div class="row">
+	    <div class="col-xs-12">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Promotion Policy</h3>
+            </div>
+			
+            <div class="panel-body">
+			  <p>To obtain a credit in this subject, a student must:</p>
+			  <ul>
+				<li>Pass the final exam.</li>
+				<li>Pass the weighted average of all tests and exam.</li>
+				<li>Pass the weighted average of all assessments.</li>
+				<li>Successfully complete all of the assignments.</li>
+			  </ul>
+			</div>
+		  </div>
+		</div>
+      </div><!-- / row -->
+
+
+	    
+      <a id="resources"></a>
+      <div class="demo-row typography-row">
+        <div class="demo-content">
+	  <h3>
+	    <img src="../Flat-UI-master/images/icons/svg/compas.svg" alt="">&nbsp;&nbsp;
+	    Resources&nbsp;&nbsp;
+	    <a href="#top" class="back">^</a>
+	  </h3>
+	  <h3 class="demo-panel-title">Reference Material/Documentation</h3>
+	  
+	  <br>
+	  </div><!-- /demo-content -->
+      </div><!-- /demo-row --> 
+        
+    </div> <!-- /container -->
+    
+    <footer>
+      <div class="container">
+        <div class="row">
+	  <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <li><a href="../index.html">Home&nbsp;&nbsp;<span class="fui-user"></span></a></li>
+	      <li><a href="https://scs.senecac.on.ca/">School of ICT</a></li>
+	      <li><a href="https://my.senecacollege.ca/webapps/portal/frameset.jsp">MySeneca</a></li>
+	      <li><a href="http://www.senecacollege.ca/">Seneca College</a></li>
+	      <li><a href="https://inside.senecacollege.ca/its/index.html">Help Desk</a></li>
+	      <li><a href="http://seneca.libguides.com/content.php?pid=53490">Library</a></li>
+	      <li>
+		  
+	      </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+ 
+          <div class="col-xs-7"> </div> <!-- /col-xs-7 -->
+        </div>
+      </div>
+    </footer>
+    
+    
+    <!-- Load JS here for greater good =============================-->
+    <!--<script src="../Flat-UI-master/js/jquery-1.8.3.min.js"></script>
+    <script src="../Flat-UI-master/js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="../Flat-UI-master/js/jquery.ui.touch-punch.min.js"></script>
+    <script src="../Flat-UI-master/js/bootstrap.min.js"></script>
+    <script src="../Flat-UI-master/js/bootstrap-select.js"></script>
+    <script src="../Flat-UI-master/js/bootstrap-switch.js"></script>
+    <script src="../Flat-UI-master/js/flatui-checkbox.js"></script>
+    <script src="../Flat-UI-master/js/flatui-radio.js"></script>
+    <script src="../Flat-UI-master/js/jquery.tagsinput.js"></script>
+    <script src="../Flat-UI-master/js/jquery.placeholder.js"></script>
+    <script src="../Flat-UI-master/js/jquery.stacktable.js"></script>
+    <script src="../Flat-UI-master/js/application.js"></script>-->
+    <script>
+      alert("This page is not available!");
+      window.location = "../index.html";
+    </script>
+    <script src="../Flat-UI-master/js/myscript.js"></script>
+  </body>
+</html>

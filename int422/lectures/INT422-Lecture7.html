@@ -1,0 +1,1200 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<base target="&quot;_blank&quot;">
+<title>Lec 7</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Segoe UI Symbol";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:"Lucida Console";
+	panose-1:2 11 6 9 4 5 4 2 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+h4
+	{mso-style-link:"Heading 4 Char";
+	margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:#954F72;
+	text-decoration:underline;}
+p
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+code
+	{font-family:"Courier New";}
+span.Heading4Char
+	{mso-style-name:"Heading 4 Char";
+	mso-style-link:"Heading 4";
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink="#954F72" background=bgw.gif>
+
+<div class=WordSection1 
+     style="margin: 0.5in auto; max-width: 50em; min-width: 30em;">
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:18.0pt;
+font-family:"Arial",sans-serif'>INT422 – Lecture 7</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Introduction to security topics.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Test today</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Test 6&nbsp;is today,
+at&nbsp;the beginning of the timeslot, and will run approximately 18 minutes.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Textbook coverage</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>As previously announced, the
+textbook will have a supporting role as you learn new topics from these notes
+and your classroom sessions. Use the table-of-contents and the index to locate
+the topic, and then read about it there. A reminder: The textbook does not use
+view model classes in its discussions and code examples. We do.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Code examples</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Project With Security</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Security Introduction</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Security Claims Introduction</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span style='font-size:16.0pt;line-height:107%;
+font-family:"Arial",sans-serif;color:#002060'>Theme for today </span></b><b><span
+style='font-size:16.0pt;line-height:107%;font-family:"Arial",sans-serif;
+color:#002060'>and the next few weeks</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>At this point in the INT422
+course, you have learnedthe foundations to build interactive web apps that work
+with persistent data.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Now, it’s time to get <strong><span
+style='font-family:"Arial",sans-serif'>security</span></strong> involved. This
+week, we begin a three-week study of security topics, including identity
+management, authentication, authorization, and interactive workflows/scenarios
+that involve security.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Along the way, you will learn
+something about Microsoft Azure services, and publicly hosting your web apps.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Security topics introduction and
+terminology</span></b></p>
+
+<p><b><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>ASP.NET
+Identity:</span></b><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>
+</span><span style='font-family:"Arial",sans-serif'>Web apps that you create
+with Visual Studio use a security system named </span><a
+href="http://www.asp.net/identity/overview/getting-started/introduction-to-aspnet-identity"
+target="_blank"><span style='font-family:"Arial",sans-serif'>ASP.NET Identity</span></a><span
+style='font-family:"Arial",sans-serif'>. Its components provide identity
+management (i.e. user <b>a</b>ccount creation and maintenance), <b>a</b>uthentication,
+and <b>a</b>uthorization.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>ASP.NET Identity is an
+implementation of widely-used and standards-based approaches to web app
+security (</span><a href="https://en.wikipedia.org/wiki/OAuth" target="_blank"><span
+style='font-family:"Arial",sans-serif'>OAuth2</span></a><span style='font-family:
+"Arial",sans-serif'>, and </span><a
+href="https://en.wikipedia.org/wiki/OpenID_Connect" target="_blank"><span
+style='font-family:"Arial",sans-serif'>OpenID Connect</span></a><span
+style='font-family:"Arial",sans-serif'>).</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>Terminology</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>A </span><a
+href="http://en.wikipedia.org/wiki/User_%28computing%29#User_account"
+target="_blank"><b><span style='font-family:"Arial",sans-serif'>User Account</span></b></a><span
+style='font-family:"Arial",sans-serif'> is an object that represents a human <em><span
+style='font-family:"Arial",sans-serif'>user</span></em> of a web app.
+A&nbsp;user account includes identification and description properties,
+including user name, a shared secret (i.e.&nbsp;a password), email address,
+etc.</span></p>
+
+<p><a href="https://en.wikipedia.org/wiki/Authentication" target="_blank"><b><span
+style='font-family:"Arial",sans-serif'>Authentication</span></b></a><span
+style='font-family:"Arial",sans-serif'> is the process of presenting and
+validating credentials. A web app that’s configured to use ASP.NET Identity
+includes the components needed for authentication, including a login page. The
+word <em><span style='font-family:"Arial",sans-serif'>authentication</span></em>
+is often abbreviated to <em><b><span style='font-family:"Arial",sans-serif'>AuthN</span></b></em>&nbsp;(or
+<em><span style='font-family:"Arial",sans-serif'>authN</span></em>).</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Also, after authentication, the
+ASP.NET Identity system creates a </span><a
+href="https://en.wikipedia.org/wiki/Principal_%28computer_security%29"
+target="_blank"><b><i><span style='font-family:"Arial",sans-serif'>security
+principal</span></i></b></a><b><span style='font-family:"Arial",sans-serif'> </span></b><span
+style='font-family:"Arial",sans-serif'>object, and attaches it to the execution
+context. Among other data, this object includes <b>claims</b>, which are
+descriptive pieces of information about the user (as you’ll learn more about
+soon). The web app returns an&nbsp;</span><a
+href="https://en.wikipedia.org/wiki/HTTP_cookie" target="_blank"><i><span
+style='font-family:"Arial",sans-serif'>authentication cookie</span></i></a><span
+style='font-family:"Arial",sans-serif'>&nbsp;in the response to the browser. By
+convention, the browser will include the cookie in every subsequent request to
+the web app.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>After a user authenticates
+successfully (i.e. logs in), the <b>user’s claims</b> determine whether they
+are authorized to perform tasks and access resources in the web app. This is
+the definition of </span><a
+href="http://en.wikipedia.org/wiki/Computer_access_control#Authorization"
+target="_blank"><b><span style='font-family:"Arial",sans-serif'>Authorization</span></b></a><span
+style='font-family:"Arial",sans-serif'>. The word <em><span style='font-family:
+"Arial",sans-serif'>authorization</span></em> is often abbreviated to <em><b><span
+style='font-family:"Arial",sans-serif'>AuthZ</span></b></em> (or <em><span
+style='font-family:"Arial",sans-serif'>authZ</span></em>).</span></p>
+
+<p style='margin-left:.5in'><span style='font-size:18.0pt;font-family:"Segoe UI Symbol",sans-serif;
+color:#0070C0'>&#10077;</span><span style='font-family:"Arial",sans-serif'>This
+process or workflow will be described in more detail, in a later section of
+these notes.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Transition your knowledge of web
+apps security</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>As a user of the web, you have
+experience with web apps that have security components.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>As a web programmer, you have
+some experience with security-related coding tasks. In INT322, you designed and
+created a credential store, to hold usernames and passwords. In addition, you
+coded a login form, and the credential validation (authentication) process. An
+access control list based scheme was used to&nbsp;protect resources. A useful
+experience, but not real-world enough.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In this INT422 course, we will
+use built-in components for all security tasks. In these components, there are
+several customization points to handle your app’s unique needs, so&nbsp;you
+will be introduced to a small number of useful customizations.</span></p>
+
+<p style='margin-left:.5in'><span style='font-size:18.0pt;font-family:"Segoe UI Symbol",sans-serif;
+color:#0070C0'>&#10077;</span><span style='font-family:"Arial",sans-serif'>Strong
+recommendation:</span></p>
+
+<p style='margin-left:.5in'><em><span style='font-family:"Arial",sans-serif;
+color:red'>Do not write your own security infrastructure for web apps.</span></em><em><span
+style='font-family:"Arial",sans-serif'>&nbsp;</span></em></p>
+
+<p style='margin-left:.5in'><span style='font-family:"Arial",sans-serif'>Take
+advantage of standards-based approaches, and the efforts of many smart and
+trusted programmers who have created modern security infrastructure components.
+And, after learning about these topics, if you think you’re smart enough to fix
+something or make contributions, get involved in the projects already out there
+on the web.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>How to create an ASP.NET MVC web
+app with security</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>As you work through this
+section of the notes, open the <em><span style='font-family:"Arial",sans-serif'>ProjectWithSecurity</span></em>
+sample app. Use the Visual Studio Task List to locate the “Attention” comment
+tokens.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Then, open another Visual
+Studio instance, and create a new web app project, with security:</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>File &gt; New &gt; Project.
+Select the standard “ASP.NET Web Application”.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>On the next dialog, choose the
+“Individual User Accounts” authentication scheme.</span></p>
+
+<p style='margin-left:.5in'><span style='font-size:18.0pt;font-family:"Segoe UI Symbol",sans-serif;
+color:#0070C0'>&#10077;</span><span style='font-family:"Arial",sans-serif'>For
+the next few weeks, we will NOT use the “Web app project template V1”.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif;color:blue'><img border=0
+width=721 height=561 id="Picture 7" src="INT422-Lecture7_files/image001.png"
+alt=new-project-dialog></span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>This article (on
+asp.net/visual-studio) has more detail about the available </span><a
+href="http://www.asp.net/visual-studio/overview/2013/creating-web-projects-in-visual-studio#auth"
+target="_blank"><i><span style='font-family:"Arial",sans-serif'>Authentication
+Methods</span></i></a><span style='font-family:"Arial",sans-serif'>. Here are
+some edited highlights:</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Visual Studio project templates
+offer the following authentication methods:</span></p>
+
+<ol start=1 type=1>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>No Authentication (which we have been
+     using up to now)</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Individual User Accounts (which we will
+     use now and in the future)</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Work and School Accounts, previously known
+     as Organizational Accounts</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Windows Authentication</span></li>
+</ol>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-family:"Arial",sans-serif'>Individual User
+Accounts</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif;color:red'>We will use this
+method now</span><span style='font-family:"Arial",sans-serif'>, and in the
+future, for our new web apps.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The app will use ASP.NET
+Identity for <em><span style='font-family:"Arial",sans-serif'>identity
+management</span></em> and <em><span style='font-family:"Arial",sans-serif'>authentication</span></em>.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Individual User Accounts
+provide two ways for a user to authenticate:</span></p>
+
+<ol start=1 type=1>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Local login</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Social login</span></li>
+</ol>
+
+<p><span style='font-family:"Arial",sans-serif'>With <em><b><span
+style='font-family:"Arial",sans-serif'>Local login</span></b></em>, the user
+can create a user account. The app stores user account (including a password
+hash) in the LocalDB database, which can be deployed to a hosted and public
+production environment. Local components perform authentication.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>With <em><b><span
+style='font-family:"Arial",sans-serif'>Social login</span></b></em>, the user
+authenticates with an external service, such as Facebook, Microsoft, or Google.
+The app creates a user account for the user in the local database, but does not
+store the password hash.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>For both local and social
+login, ASP.NET Identity&nbsp;uses standards-based <b>OAuth2</b> for
+authentication.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The database is managed by the <b>Entity
+Framework Code First</b> technologies, and all of the tables are represented by
+<em><span style='font-family:"Arial",sans-serif'>entity classes</span></em>
+that can be modified. This means that you can easily customize the security-
+and profile-related data&nbsp;to fit your app’s&nbsp;needs.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>ASP.NET Identity is a good choice
+if you are creating a public-facing web site which is mainly for users on the
+web. Which we are.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-family:"Arial",sans-serif'>Work and School
+Accounts (previously known as Organizational Accounts)</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>If your organization uses
+Microsoft Active Directory or Microsoft Office 365, and you want to create a
+project that enables single-sign-on for employees and business partners, this
+method is a good choice.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-family:"Arial",sans-serif'>Windows Authentication</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>If your organization is
+creating an internal-facing app, which will be used ONLY by employees who have
+Active Directory accounts, this method is a good choice.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>ASP.NET Identity components, and
+recognizing them</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In this section, you will learn
+how to locate and recognize the ASP.NET Identity components in the web app that
+you have just created.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>If you open the <b>NuGet
+Package Manager</b>, and then search for “identity”, you will see at least
+three installed packages.&nbsp;Click the image to open it in a new tab/window.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif;color:blue'><img border=0
+width=720 height=457 id="Picture 6" src="INT422-Lecture7_files/image002.png"
+alt=identity-libraries></span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The Microsoft-provided
+components are visible in the NuGet Package Manager, or as “assemblies” in the
+References branch of your project in Solution Explorer.&nbsp;Notable assemblies
+include a number of Microsoft.AspNet.Identity assemblies, and others in the
+Microsoft.Owin.Security group.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The other&nbsp;security-related
+components can be seen in source code files.&nbsp;Here’s a location and
+recognition tour:</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-family:"Arial",sans-serif'>Initial configuration
+of security, and loading the components at app startup</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Look at the Startup class, in
+the <b>Startup.cs</b> source code file <u>in the root of the project</u>. When
+the app loads for the first time, it instantiates this class, and runs the
+Configure() method, by convention. As you can see, that method&nbsp;simply
+calls the ConfigureAuth() method.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The class’ implementation is
+split over two source code files. (Notice the </span><a
+href="https://msdn.microsoft.com/en-CA/library/wa80x488.aspx" target="_blank"><span
+style='font-family:"Arial",sans-serif'>“partial” keyword</span></a><span
+style='font-family:"Arial",sans-serif'> in the class definition statement.) The
+other part of the implementation is in the&nbsp;App_Start/Startup.Auth.cs
+source code file. Its ConfigureAuth() method loads and configures the security
+components.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Look at the code in the <b>ConfigureAuth()</b>
+method. It does several&nbsp;very important tasks:</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>1. Open and use the data store
+(i.e. the LocalDB database):</span></p>
+
+<p style='margin-left:.5in'><code><span style='font-size:11.0pt;font-family:
+"Lucida Console"'>app.CreatePerOwinContext(ApplicationDbContext.Create);</span></code></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0>
+ <tr>
+  <td style='padding:0in 0in 0in 0in'></td>
+ </tr>
+</table>
+
+<p><span style='font-family:"Arial",sans-serif'>2. Load the “user manager” and
+authentication (“sign in manager”) components:</span></p>
+
+<p style='margin-left:.5in'><code><span style='font-size:11.0pt;font-family:
+"Lucida Console"'>app.CreatePerOwinContext&lt;ApplicationUserManager&gt;</span></code></p>
+
+<p style='margin-left:.5in'><code><span style='font-size:11.0pt;font-family:
+"Lucida Console"'>&nbsp;&nbsp;(ApplicationUserManager.Create);</span></code></p>
+
+<p style='margin-left:.5in'><code><span style='font-size:11.0pt;font-family:
+"Lucida Console"'>app.CreatePerOwinContext&lt;ApplicationSignInManager&gt;</span></code></p>
+
+<p style='margin-left:.5in'><code><span style='font-size:11.0pt;font-family:
+"Lucida Console"'>&nbsp;&nbsp;(ApplicationSignInManager.Create);</span></code></p>
+
+<p><span style='font-family:"Arial",sans-serif'>(The user and sign in manager
+classes are defined in a companion source code file,
+App_Start/IdentityConfig.cs.)</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>3. Load / activate and
+configure HTTP “cookie authentication” for the app:</span></p>
+
+<p style='margin-left:.5in'><code><span style='font-size:11.0pt;font-family:
+"Lucida Console"'>app.UseCookieAuthentication(new CookieAuthenticationOptions</span></code></p>
+
+<p style='margin-left:.5in'><code><span style='font-size:11.0pt;font-family:
+"Lucida Console";color:#00B050'>// ...more...</span></code></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-family:"Arial",sans-serif'>Locate the
+security-related persistence components</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In Solution Explorer, open the <u>Models
+folder</u>. Locate the <em><b><span style='font-family:"Arial",sans-serif'>IdentityModels.cs</span></b></em>
+source code file.&nbsp;Its classes&nbsp;enable the creation, storage, and
+management of user accounts.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The <b>ApplicationUser</b>
+class models a user account. We can extend the class by adding our own
+descriptive properties. However, before doing so, check the list of existing
+properties, which you can see in its superclass, </span><a
+href="https://msdn.microsoft.com/en-us/library/dn613256%28v=vs.108%29.aspx"
+target="_blank"><span style='font-family:"Arial",sans-serif'>IdentityUser&lt;TKey,
+TLogin, TRole, TClaim&gt;</span></a><span style='font-family:"Arial",sans-serif'>.
+(Use “Go To Definition”, F12, in the code editor to help with this.)</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The <b>ApplicationDbContext</b>
+class manages the persistent data store (the database). We can extend this
+class by adding our own <b>DbSet&lt;TEntity&gt;</b> properties for our web app’s
+entity collections (that we define in a separate&nbsp;<em><b><span
+style='font-family:"Arial",sans-serif'>DesignModelClasses.cs</span></b></em>
+source code file).&nbsp;The class inherits
+from&nbsp;IdentityDbContext&lt;TUser&gt;, and ultimately DbContext, just like
+the data context that we have been using for the past several weeks.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Now, locate the <em><span
+style='font-family:"Arial",sans-serif'>AccountViewModels.cs</span></em> and <em><span
+style='font-family:"Arial",sans-serif'>ManageViewModels.cs</span></em> source
+code files.</span></p>
+
+<p><b><span style='font-family:"Arial",sans-serif'>AccountViewModels.cs</span></b><span
+style='font-family:"Arial",sans-serif'> includes the classes needed by the <b>“Account”
+controller</b> (mentioned later) for the user interface views, such as
+register, login, forgot&nbsp;password, and so on. Typically used for tasks done
+by <em><span style='font-family:"Arial",sans-serif'>unauthenticated</span></em>
+users.</span></p>
+
+<p><b><span style='font-family:"Arial",sans-serif'>ManageViewModels.cs</span></b><span
+style='font-family:"Arial",sans-serif'> includes the classes needed by the <b>“Manage”
+controller</b> (mentioned later) for the user interface views, such as change
+password, etc. Typically used for tasks done by <em><span style='font-family:
+"Arial",sans-serif'>authenticated</span></em> users.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>When the database is accessed
+for the first time, the Entity Framework infrastructure creates a number of <u>tables
+in the database which support identity management</u>. All of the tables begin
+with the prefix “<b>AspNet</b>”. The most important are:</span></p>
+
+<ol start=1 type=1>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>AspNetUser</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>AspNetUserClaim</span></li>
+</ol>
+
+<p><span style='font-family:"Arial",sans-serif'>If we were to look at a diagram
+of the classes that are represented in the data store, it would look like the
+following. Click the image to open it in a new tab/window.</span></p>
+
+<p><a
+href="https://scs.senecac.on.ca/~wei.song/int422/lectures/images/L7.3-identity-models.png"><span
+style='color:windowtext;text-decoration:none'><img border=0 width=723
+height=486 id="Picture 8" src="INT422-Lecture7_files/image003.png"></span></a></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-family:"Arial",sans-serif'>Security-related
+controller, view model, and view components</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In Solution Explorer, open the
+Controllers folder. The <b>Account controller </b>has actions that enable a
+user to register for a new account, login, and do other tasks. As noted above,
+typically used for tasks done by <em><b><span style='font-family:"Arial",sans-serif'>unauthenticated</span></b></em>
+users.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Study the <b>Register</b>
+method pair. They enable a browser user to “register”, or create a new user
+account.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Next, study the view model that
+support this task (RegisterViewModel).</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Finally, study the
+Register.cshtml view (in Views/Account folder). This renders the UI for new
+account registration.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Now, study the <b>Login</b>
+method pair. They enable a browser user to “login”, or authenticate. This line
+of code performs authentication:</span></p>
+
+<p style='margin-left:.5in'><code><b><span style='font-size:11.0pt;font-family:
+"Lucida Console";color:#002060'>var</span></b></code><code><span
+style='font-size:11.0pt;font-family:"Lucida Console";color:#002060'> </span></code><code><span
+style='font-size:11.0pt;font-family:"Lucida Console"'>result = <b><span
+style='color:#002060'>await</span></b> SignInManager.PasswordSignInAsync</span></code></p>
+
+<p style='margin-left:.5in'><code><span style='font-size:11.0pt;font-family:
+"Lucida Console"'>&nbsp;&nbsp;(model.Email, model.Password, model.RememberMe,
+shouldLockout: <b><span style='color:#002060'>false</span></b>);</span></code></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Next, study the view models
+that support this task (LoginViewModel).</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Finally, study the Login.cshtml
+view (in Views/Account folder). This renders the UI for login.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The <b>Manage controller</b>
+has&nbsp;tasks which are done by <em><b><span style='font-family:"Arial",sans-serif'>authenticated</span></b></em>
+users, including password change, and some property value changes.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-family:"Arial",sans-serif'>Shared view components</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In the Views/Shared folder,
+there is a new <b>_LoginPartial.cshtml</b> view.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>It holds markup and code for
+rendering content on the _Layout.cshtml view. If the user is authenticated, it
+displays links that enable the user to manage their account, and&nbsp;logout.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>If not authenticated, it
+displays links for new account registration, and login.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Introduction to common security-related
+workflows</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>There are three common
+security-related workflows in an app:</span></p>
+
+<ol start=1 type=1>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>New user account registration</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Login / authentication</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Protecting and accessing protected
+     resources</span></li>
+</ol>
+
+<p><span style='font-family:"Arial",sans-serif'>Let’s get an introduction
+to&nbsp;each workflow.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-family:"Arial",sans-serif'>New user account
+registration</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>A new web app (with security)
+does NOT include any user accounts.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>After loading the app, notice
+the Register link in the upper-right area of the page. Follow it, and it will
+display a new account “Register” page:</span></p>
+
+<p><a
+href="https://scs.senecac.on.ca/~wei.song/int422/lectures/images/L7.4-register-1.png"><span
+style='color:windowtext;text-decoration:none'><img border=0 width=724
+height=309 id="Picture 9" src="INT422-Lecture7_files/image004.png"></span></a></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In the default configuration of
+ASP.NET Identity, <em><b><span style='font-family:"Arial",sans-serif'>the user
+name is an email address</span></b></em>. Also, it is configured to be a <em><b><span
+style='font-family:"Arial",sans-serif'>unique value</span></b></em>. Therefore,
+in summary, it can be reliably used as a unique identifier. We will have more
+information about this fact later in the course.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The password must follow some
+rules. These are found in the PasswordValidator property, in the Create()
+method of the ApplicationUserManager class (in App_Start/<b>IdentityConfig.cs</b>).</span></p>
+
+<p style='margin-top:6.0pt;margin-right:0in;margin-bottom:0in;margin-left:.5in;
+margin-bottom:.0001pt'><code><span style='font-size:11.0pt;font-family:"Lucida Console"'>manager.PasswordValidator
+= <b><span style='color:#002060'>new</span></b><span style='color:#002060'> </span>PasswordValidator</span></code></p>
+
+<p style='margin-top:6.0pt;margin-right:0in;margin-bottom:0in;margin-left:.5in;
+margin-bottom:.0001pt'><code><span style='font-size:11.0pt;font-family:"Lucida Console"'>{</span></code></p>
+
+<p style='margin-top:6.0pt;margin-right:0in;margin-bottom:0in;margin-left:.5in;
+margin-bottom:.0001pt'><code><span style='font-size:11.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;RequiredLength
+= 6,</span></code></p>
+
+<p style='margin-top:6.0pt;margin-right:0in;margin-bottom:0in;margin-left:.5in;
+margin-bottom:.0001pt'><code><span style='font-size:11.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;RequireNonLetterOrDigit
+= <b><span style='color:#002060'>true</span></b>,</span></code></p>
+
+<p style='margin-top:6.0pt;margin-right:0in;margin-bottom:0in;margin-left:.5in;
+margin-bottom:.0001pt'><code><span style='font-size:11.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;RequireDigit
+= <b><span style='color:#002060'>true</span></b>,</span></code></p>
+
+<p style='margin-top:6.0pt;margin-right:0in;margin-bottom:0in;margin-left:.5in;
+margin-bottom:.0001pt'><code><span style='font-size:11.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;RequireLowercase
+= <b><span style='color:#002060'>true</span></b>,</span></code></p>
+
+<p style='margin-top:6.0pt;margin-right:0in;margin-bottom:0in;margin-left:.5in;
+margin-bottom:.0001pt'><code><span style='font-size:11.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;RequireUppercase
+= <b><span style='color:#002060'>true</span></b>,</span></code></p>
+
+<p style='margin-top:6.0pt;margin-right:0in;margin-bottom:0in;margin-left:.5in;
+margin-bottom:.0001pt'><code><span style='font-size:11.0pt;font-family:"Lucida Console"'>};</span></code></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p style='margin-left:.5in'><span style='font-size:18.0pt;font-family:"Segoe UI Symbol",sans-serif;
+color:#0070C0'>&#10077;</span><span style='font-family:"Arial",sans-serif'>Warning:</span></p>
+
+<p style='margin-left:.5in'><span style='font-family:"Arial",sans-serif'>The
+user accounts that are created all have the same security profile. No account
+is more powerful or priviledged than another.</span></p>
+
+<p style='margin-left:.5in'><span style='font-family:"Arial",sans-serif'>We fix
+that soon, by using claims.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-family:"Arial",sans-serif'>Login / authentication</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>At the end of the new account
+registration process, the app authenticates you, and you are logged in.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Later, after logout, you can
+use the login page to authenticate.&nbsp;Click the image to open it in a new
+tab/window.</span></p>
+
+<p><a
+href="https://scs.senecac.on.ca/~wei.song/int422/lectures/images/L7.5-login-1.png"><span
+style='color:windowtext;text-decoration:none'><img border=0 width=723
+height=308 id="Picture 11" src="INT422-Lecture7_files/image005.png"></span></a></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>As noted earlier,
+authentication is the process of presenting and validating credentials.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>During authentication, the
+ASP.NET Identity system creates a security <b>principal</b> object, and
+attaches it to the execution context. Among other data, this object includes <b>claims</b>,
+which are descriptive pieces of information about the user (as you’ll learn
+more about soon).</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Also, the authentication
+process will create a <b>data package</b> – which is an HTTP <b>cookie</b> –
+and return it in the response to the browser user. The data package includes
+information about the authenticated user, but it does not include sensitive or
+secret data. It definitely includes the user name, and the user’s claims.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>On subsequent requests from the
+browser user, the data package – the HTTP cookie – is sent with the request.
+The browser handles this task automatically.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>How can you quickly determine
+whether you have successfully authenticated? Look in the upper-right area of
+the page. It will show a greeting, and a logout link.&nbsp;Click the image to
+open it in a new tab/window.</span></p>
+
+<p><a
+href="https://scs.senecac.on.ca/~wei.song/int422/lectures/images/L7.6-login-after-1.png"><span
+style='color:windowtext;text-decoration:none'><img border=0 width=724
+height=427 id="Picture 12" src="INT422-Lecture7_files/image006.png"></span></a></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>You can also use the web
+browser developer tools – <b>F12</b> in any browser – to inspect the HTTP
+cookie.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>How do you know this? Login to
+an ASP.NET MVC web app. Then, use the browser’s developer tool or inspector to
+examine the cookies collection for that web app/site. For example, using Google
+Chrome:</span></p>
+
+<ol start=1 type=1>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Press F12 to open the Developer Tools
+     panel or window</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Select the “Resources” item on the menu</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>On the left-side navigator, open Cookies,
+     then localhost</span></li>
+</ol>
+
+<p><span style='font-family:"Arial",sans-serif'>You will see a cookie named “<em><span
+style='font-family:"Arial",sans-serif'>.AspNet.ApplicationCookie</span></em>“.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The browser will include the
+cookie with every subsequent request to the web app.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Here’s an image of the scenario
+described above. Click the image to open it in a new tab/window.</span></p>
+
+<p><a
+href="https://scs.senecac.on.ca/~wei.song/int422/lectures/images/L7.7-dev-tools-1.png"><span
+style='font-family:"Arial",sans-serif;text-decoration:none'><img border=0
+width=718 height=184 id="Picture 1" src="INT422-Lecture7_files/image007.jpg"
+alt=dev-tools-1></span></a></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-family:"Arial",sans-serif'>Protecting and
+accessing protected resources</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>As noted above, when a web
+app&nbsp;receives a&nbsp;request with an HTTP cookie, the security
+infrastructure&nbsp;validates the cookie. If valid, it creates an <b>IPrincipal</b>
+object, and attaches it to the request. That way, information about the
+authenticated user is available to your code, as the request makes its way
+through the request-processing pipeline.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The user’s <u>claims</u>
+determine whether they are <em><b><span style='font-family:"Arial",sans-serif'>authorized</span></b></em>
+to perform tasks and access resources in the web app.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>On the controller class
+declaration, and/or on its methods, we can add the [Authorize] attribute. In
+its simplest form, its presence requires the request (from the browser user) to
+be authenticated. In other words, it must include the HTTP cookie that
+indicates that authentication has happened.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Soon, you will learn other
+forms of the <b>[Authorize] </b>attribute, to handle security scenarios that
+are more real-world in nature.</span></p>
+
+<p style='margin-left:.5in'><span style='font-size:18.0pt;font-family:"Segoe UI Symbol",sans-serif;
+color:red'>&#10077;</span><span style='font-family:"Arial",sans-serif'>Study
+the AccountController class. It includes an [Authorize] attribute on the class.
+This means that a request MUST be authenticated to run any method in the class.</span></p>
+
+<p style='margin-left:.5in'><span style='font-family:"Arial",sans-serif'>However,
+notice the Login() and Register() methods. They include the <b>[AllowAnonymous]</b>
+attribute. This means that ANY request will be able to run these methods. Makes
+sense now, right?</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In your code, how do you get
+access to the authenticated user’s information (in other words, its security
+principal)?</span></p>
+
+<p style='margin-left:.5in'><span style='font-size:18.0pt;font-family:"Segoe UI Symbol",sans-serif;
+color:red'>&#10077;</span><span style='font-family:"Arial",sans-serif'>A
+security principal is an object that represents the security context under
+which the code is running. It can be inspected by your program code, so that
+you have decision-making information in your code path.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The information is in the User
+property.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In a controller, it’s simply
+the top-level User property. If you want to determine whether&nbsp;a request
+is&nbsp;authenticated, the <em><span style='font-family:"Arial",sans-serif'>Request.IsAuthenticated</span></em>
+property will tell you.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In the&nbsp;manager object,
+it’s the HttpContext.Current.User property. If you want to determine
+whether&nbsp;a request is authenticated, the <em><span style='font-family:"Arial",sans-serif'>HttpContext.Current.Request.IsAuthenticated</span></em>
+property will tell you.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-family:"Arial",sans-serif'>Can I see an example?</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>“Can I see an example of the
+preceding section?”</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Yes. Open the <em><b><span
+style='font-family:"Arial",sans-serif'>SecurityIntro</span></b></em> code
+example, in Visual Studio. Study the code as you continue with the following
+tasks. The “Attention” comment tokens (on the Task List) are numbered, so sort
+the list, and go through them in sequence.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Run the app. Create a new user
+account, and login.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Then, use the nav menu links to
+perform the tasks on the menu. Notice that you have access to some information,
+and notice that you do not have access to other content.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-family:"Arial",sans-serif'>Summary table</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>We have created this summary
+table as a quick reference for the components, responsible entity, and code
+assets and tasks involved in security.</span></p>
+
+<table class=MsoNormalTable border=2  style="border-collapse: collapse;" cellspacing=3 cellpadding=0>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  style='font-family:"Arial",sans-serif'>Security task</span></b></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  style='font-family:"Arial",sans-serif'>Responsibility</span></b></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  style='font-family:"Arial",sans-serif'>Code assets and tasks</span></b></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-family:"Arial",sans-serif'>Identity
+  management</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-family:"Arial",sans-serif'>ASP.NET
+  Identity</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-family:"Arial",sans-serif'>ApplicationUser
+  class<br>
+  Customized data context (and security-related tables in the app’s database)<br>
+  Account controller and view to register a new user account<br>
+  Manage controller and view for account management tasks</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-family:"Arial",sans-serif'>Authentication</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-family:"Arial",sans-serif'>ASP.NET
+  Identity</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-family:"Arial",sans-serif'>Account
+  controller and view for login</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-family:"Arial",sans-serif'>Authorization</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-family:"Arial",sans-serif'>You, the web
+  app programmer</span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-family:"Arial",sans-serif'>Authorize
+  attribute on controller class and/or actions</span></p>
+  </td>
+ </tr>
+</table>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Problem, and solution</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Above, you learned that the
+user accounts that are created in an app that uses ASP.NET Identity all have
+the same security profile. No account is more powerful or priviledged than
+another.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>That’s a problem. A big
+problem, for real-world applications.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Most apps need user accounts
+with different security profiles.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>What’s the solution?</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Use <em><span style='font-family:
+"Arial",sans-serif'>claims</span></em>. Claims are the key to modern <em><span
+style='font-family:"Arial",sans-serif'>claims-based security</span></em>.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Introduction to claims</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>What is a claim? Here is an often-used
+definition:</span></p>
+
+<p style='margin-left:.5in'><span style='font-size:18.0pt;font-family:"Segoe UI Symbol",sans-serif;
+color:#0070C0'>&#10077;</span><span style='font-family:"Arial",sans-serif'>A
+claim is a&nbsp;a&nbsp;<em><span style='font-family:"Arial",sans-serif'>statement</span></em>
+that <em><span style='font-family:"Arial",sans-serif'>one subject</span></em>
+makes about <em><span style='font-family:"Arial",sans-serif'>itself</span></em>
+or <em><span style='font-family:"Arial",sans-serif'>another subject</span></em>.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Therefore, a&nbsp;<em><span
+style='font-family:"Arial",sans-serif'>statement</span></em> is <em><span
+style='font-family:"Arial",sans-serif'>descriptive information</span></em>&nbsp;about
+a subject.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>A <em><span style='font-family:
+"Arial",sans-serif'>subject</span></em> is a participant in the lifetime of an
+application. A subject could be a human user, or a corporate body, or a
+programmable object (e.g. a&nbsp;security provider).</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-family:"Arial",sans-serif'>Claim examples</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>What does a <em><span
+style='font-family:"Arial",sans-serif'>claim</span></em> (statement) look like?</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>It is a simple statement, in
+the format:</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Claim type = Value</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The <em><span style='font-family:
+"Arial",sans-serif'>claim type</span></em> is a string. There’s a list of </span><a
+href="https://msdn.microsoft.com/en-us/library/microsoft.identitymodel.claims.claimtypes_members.aspx"
+target="_blank"><span style='font-family:"Arial",sans-serif'>standard,
+predefined, or “well known” claim types</span></a><span style='font-family:
+"Arial",sans-serif'>, which are URIs. Here are some examples; assume that the
+subject is a user (and professor), Peter McIntyre.</span></p>
+
+<p><u><span style='font-family:"Arial",sans-serif'>User name:</span></u><span
+style='font-family:"Arial",sans-serif'><br>
+Known informally as “name”.<br>
+For example:<br>
+name = pmcintyr</span></p>
+
+<p><u><span style='font-family:"Arial",sans-serif'>Date of birth:</span></u><span
+style='font-family:"Arial",sans-serif'><br>
+Known informally as “dateofbirth”.<br>
+For example:<br>
+dateofbirth = 1980-05-15T08:00:00Z</span></p>
+
+<p><u><span style='font-family:"Arial",sans-serif'>Role (often used as a
+security-oriented access role):</span></u><span style='font-family:"Arial",sans-serif'><br>
+Known informally as “role” or “role claim”.<br>
+For example:<br>
+role = employee<br>
+role = faculty<br>
+role = coordinator</span></p>
+
+<p><u><span style='font-family:"Arial",sans-serif'>Surname (or family name, or
+last name):</span></u><span style='font-family:"Arial",sans-serif'><br>
+Known informally as “surname”.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>A claim type string can also be
+a simple string, and not a URI, if you are defining a custom claim type for
+local use within the app or the app ecosystem.&nbsp;Here are some examples.</span></p>
+
+<p><u><span style='font-family:"Arial",sans-serif'>Full name:</span></u><span
+style='font-family:"Arial",sans-serif'><br>
+The user’s full (readable) name (e.g. first name, and last name) is Peter
+McIntyre.<br>
+For example:<br>
+fullname = “Peter McIntyre”</span></p>
+
+<p><u><span style='font-family:"Arial",sans-serif'>Driver’s license:</span></u><span
+style='font-family:"Arial",sans-serif'><br>
+The user’s driver’s license number is M12345809515.<br>
+For example:<br>
+driverlicense = “M12345809515&#8243;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>etc.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-family:"Arial",sans-serif'>Claims management and
+issuance</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>While a claim is a statement
+about a subject, claims are <em><span style='font-family:"Arial",sans-serif'>managed</span></em>&nbsp;and
+<em><span style='font-family:"Arial",sans-serif'>issued</span></em> by an <em><span
+style='font-family:"Arial",sans-serif'>identity authority</span></em>&nbsp;(which
+is the ASP.NET Identity system in our web app).</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Then, a claim can be used by an
+application to authorize a user to access resources and/or perform tasks.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>For our web app, claims are
+packaged in an <em><span style='font-family:"Arial",sans-serif'>authentication
+cookie</span></em>, after a user successfully authenticates.&nbsp;Therefore,
+the <em><span style='font-family:"Arial",sans-serif'>result</span></em> of a
+successful authentication is a cookie&nbsp;that (among other data) includes
+claims.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Our web app&nbsp;<em><span
+style='font-family:"Arial",sans-serif'>must trust</span></em> the identity
+authority. (That is done by sharing a cryptographically-strong ‘machine key’
+value between among the identity authority and your app. If you separate the
+identity authority and web app, you may –&nbsp;or will&nbsp;-have to configure
+this value. Although we do not do this in this INT422 course, you may want to
+do it in the future, for work in other courses.)</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Code example with claims</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Open the <em><span
+style='font-family:"Arial",sans-serif'>SecurityClaimsIntro</span></em> code
+example.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Run the app, and study the
+code. The “Attention” comment tokens (on the Task List) are numbered, so sort
+the list, and go through them in sequence.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>It is similar to the
+SecurityIntro code example above, but it has a number of important
+modifications, which will form the base of all our future apps that use
+security:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Claims-aware app</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Role claims to help with power and
+     privilege questions</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Descriptive claims to help determine
+     access and capability</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Modified Register code assets</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Enables fine-grained access to controller
+     actions</span></li>
+</ul>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>ASP.NET Identity and security
+learning resources</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>ASP.NET team:&nbsp;</span><a
+href="http://www.asp.net/visual-studio/overview/2013/creating-web-projects-in-visual-studio"
+target="_blank"><span style='font-family:"Arial",sans-serif'>Creating ASP.NET
+Web Projects in Visual Studio 2013</span></a></p>
+
+<p><span style='font-family:"Arial",sans-serif'>ASP.NET team:&nbsp;</span><a
+href="http://www.asp.net/identity/overview/getting-started/introduction-to-aspnet-identity"
+target="_blank"><span style='font-family:"Arial",sans-serif'>Introduction to
+ASP.NET Identity</span></a></p>
+
+<p><a href="http://oauth.net/2/" target="_blank"><span style='font-family:"Arial",sans-serif'>OAuth2</span></a><span
+style='font-family:"Arial",sans-serif'> Authorization Framework (and in </span><a
+href="http://en.wikipedia.org/wiki/OAuth" target="_blank"><span
+style='font-family:"Arial",sans-serif'>Wikipedia</span></a><span
+style='font-family:"Arial",sans-serif'>) (skim/read)</span></p>
+
+<p><a href="http://openid.net/connect/" target="_blank"><span style='font-family:
+"Arial",sans-serif'>OpenID Connect</span></a><span style='font-family:"Arial",sans-serif'>
+(and in </span><a href="http://en.wikipedia.org/wiki/OpenID_Connect"
+target="_blank"><span style='font-family:"Arial",sans-serif'>Wikipedia</span></a><span
+style='font-family:"Arial",sans-serif'>) (skim/read)</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Microsoft </span><a
+href="http://www.asp.net/aspnet/overview/owin-and-katana/an-overview-of-project-katana"
+target="_blank"><span style='font-family:"Arial",sans-serif'>Katana</span></a><span
+style='font-family:"Arial",sans-serif'> project (and a ‘</span><a
+href="http://www.asp.net/aspnet/overview/owin-and-katana/getting-started-with-owin-and-katana"
+target="_blank"><span style='font-family:"Arial",sans-serif'>getting started</span></a><span
+style='font-family:"Arial",sans-serif'>‘ with OWIN and Katana) (skim only,
+because we use the components differently)</span></p>
+
+<p><a href="http://en.wikipedia.org/wiki/Claims-based_identity" target="_blank"><span
+style='font-family:"Arial",sans-serif'>Wikipedia article on claims-based
+identity</span></a></p>
+
+<p><span style='font-family:"Arial",sans-serif'>MSDN article on&nbsp;</span><a
+href="http://msdn.microsoft.com/en-us/library/ee534975.aspx" target="_blank"><span
+style='font-family:"Arial",sans-serif'>Claims-Based Identity Term Definitions</span></a></p>
+
+<p><span style='font-family:"Arial",sans-serif'>ASP.NET Identity: </span><a
+href="http://msdn.microsoft.com/en-us/library/microsoft.identitymodel.claims.claimtypes_fields.aspx"
+target="_blank"><span style='font-family:"Arial",sans-serif'>ClaimType Fields</span></a></p>
+
+<p><span style='font-family:"Arial",sans-serif'>ASP.NET Identity: </span><a
+href="http://msdn.microsoft.com/en-us/library/ms734687%28v=vs.110%29.aspx"
+target="_blank"><span style='font-family:"Arial",sans-serif'>How to: Create a
+Custom Claim</span></a></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Textbook (Professional ASP.NET
+MVC 5): Chapter 7</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Ignore the part on “Windows
+     Authentication”</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Ignore any content on “roles”,
+     “RoleManager”, and so on</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Ignore – for now – discussion about
+     external security providers</span></li>
+</ul>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Summary, and preview of what’s
+coming next</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Above, you learned about the
+essential security topics – identity management, authentication, and
+authorization.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>You were introduced to the
+ASP.NET Identity system, which “plugs in” to your web app. Then, you learned a
+number of introductory security configuration and use tasks.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In the next few weeks, we will
+continue learning more about writing security-aware web apps. Along the way, we
+will learn how to create our own data model, and host our web apps at a hosting
+service.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>

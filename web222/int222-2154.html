@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>INT222-Wei.Song</title>
+    <meta name="viewport" content="width=1000, initial-scale=1.0, maximum-scale=1.0">
+
+    <!-- Loading Bootstrap -->
+    <link href="../Flat-UI-master/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Loading Flat UI -->
+    <link href="../Flat-UI-master/css/flat-ui.css" rel="stylesheet">
+    <link href="../Flat-UI-master/css/demo.css" rel="stylesheet">
+    <link href="../Flat-UI-master/css/mystyle.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="../Flat-UI-master/js/html5shiv.js"></script>
+      <script src="../Flat-UI-master/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body onload="init();">
+    <div class="container">
+      
+      <a id="top"></a> 	
+      <div class="page-header">
+        <h3>INT222</h3>
+	<p>
+	  INT222 - Internet I - Internet Fundamentals - 
+	  <a href="http://www.senecacollege.ca/"><img src=../Flat-UI-master/images/seneca_logo.png alt="Seneca"/></a> College
+	</p>
+      </div> <!-- /page-header -->	  
+	  
+      <div class="row demo-row">
+          <nav class="navbar navbar-inverse navbar-embossed" role="navigation">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
+                <span class="sr-only">Toggle navigation</span>
+              </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse-01">
+              <ul class="nav navbar-nav navbar-left">
+				<li><a href="../index.html"><span class="fui-user"></span></a></li>
+                <li><a href="#top">Announcements</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#standards">Standards</a></li>
+				<li><a href="#resources">Resources</a></li>
+                <li><a href="https://scs.senecac.on.ca/course/int222">Outline</a></li>
+               </ul>
+            </div><!-- /.navbar-collapse -->
+          </nav><!-- /navbar -->	
+      </div> <!-- /row -->	
+	
+      
+      <div class="demo-row typography-row">
+        <div class="demo-content">
+	  <h3>
+	    <!--img src="../Flat-UI-master/images/announcements.png" alt="">&nbsp;-->
+	    Announcements
+	  </h3>
+	  
+	  <h3 class="demo-panel-title">Welcome</h3>
+	  <p>This webpage is for INT222 course. Make sure to read the <a href="#standards">course
+	     standards</a> and <a href="https://scs.senecac.on.ca/course/int222">course outline</a>.
+	     The links to weekly lecture notes, assignments and labs can be reached from the weekly schedule below. 
+	  </p>
+	  <br>
+	  <br><br>
+	</div><!-- /demo-content -->
+      </div><!-- /demo-row -->
+  
+  
+      <a id="schedule"></a> 
+      <div class="demo-row typography-row">
+        <div class="demo-content">
+	  <h3>
+<!--	    <img src="../Flat-UI-master/images/icons/svg/calendar.svg" alt="">&nbsp;&nbsp;-->
+	    <canvas id="calendarCanvas" width="100" height="100">
+	      <img src="../Flat-UI-master/images/calendar_background.png" alt="">
+	    </canvas>&nbsp;&nbsp;
+	    INT222 Weekly Schedule&nbsp;&nbsp;
+	    <a href="#top" class="back">^</a>
+	  </h3>
+	  <br>
+	  <p>INT222 - Summer 2015
+	    <span class="legend">
+	      LEGEND:
+	      <button type="button" class="btn btn-xs btn-default"
+		          title="The task or lecture has not be released yet."
+			  onclick="alert(this.title);">Not Available
+	      </button>
+	      <button type="button" class="btn btn-xs btn-inverse"
+		          title="For released lectures, tasks or examples."
+			  onclick="alert(this.title);">Released
+	      </button>
+	      <button type="button" class="btn btn-xs btn-danger"
+		          title="Indicates a task is due or a test will be held in this week."
+			  onclick="alert(this.title);">Task Due
+	      </button>
+	      <button type="button" class="btn btn-xs btn-info"
+		          title="For references, solutions or notifications."
+			  onclick="alert(this.title);">References
+	      </button>
+	    </span>
+	  </p>
+	  
+	  <table class="table table-bordered">
+	    <thead>
+	      <tr id=row0>
+		<th class=center>Week<br>#</th>
+		<th class=center>Start<br>Date</th>
+		<th class=center>Topics<br></th>
+		<th>Lectures<br></th>
+		<th>Assignment,<br>Labs</th>
+		<th>Task Due,<br>References</th>
+	      </tr>
+	    </thead>
+	    <tbody>
+	      <tr id=row1>
+			<th class=center>1</th>
+			<td>May. 12</td>
+			<td>
+			  <ul>
+				<li>Course introduction</li>
+				<li>Internet architecture </li>
+				<li>Introduction to JavaScript</li>
+			   </ul>
+			</td>
+			<td>
+			  <button type="button" title="Lecture Notes for Week 1"
+				  class="btn btn-xs btn-inverse"
+				  onclick="window.location='lectures/INT222-Lecture1.pptx';"
+				  >Lecture 1
+			  </button>
+			  <br>
+			  <button type="button" class="btn btn-xs btn-inverse"
+					  onclick='window.open("lectures/INT222-Lecture1.pdf", "_blank","");'
+					  title="The pdf version of the document." >pdf
+			  </button>		  
+			</td>
+			<td>
+			  <button type="button" class="btn btn-xs btn-inverse"  title="INT222 Lab #1"
+				  onclick='window.open("labs/INT222-lab01.pdf", "_blank","");'
+				  >Lab 01
+			  </button> 
+			</td>
+			<td>
+			  &nbsp;
+			</td>
+	      </tr>
+	      <tr id="row2">
+			<th class=center>2</th>
+			<td>May 19</td>
+			<td>
+			  <ul>
+				<li>JavaScript functions</li>
+				<li>Built-in and user-defined functions</li>
+				<li>JavaScript Scope and closure</li>
+			  </ul>
+			</td>
+			<td>
+			  <button type="button" title="Lecture Notes for Week 2"
+				  class="btn btn-xs btn-inverse"
+				  onclick="window.location='lectures/INT222-Lecture2.pptx';"	  
+				  >Lecture 2
+			  </button>
+			  <br>
+			  <button type="button" class="btn btn-xs btn-inverse"
+					  onclick='window.open("lectures/INT222-Lecture2.pdf", "_blank","");'
+					  title="The pdf version of the document." >pdf
+			  </button>	
+			</td>
+			<td>
+			  <button type="button" class="btn btn-xs btn-inverse"  title="Exercises - no mark"
+				  onclick='window.open("labs/exercises-w2.pdf", "_blank","");'
+				  >Exercises
+			  </button> 
+			  &nbsp;
+			</td>
+			<td>
+			  <button type="button" class="btn btn-xs btn-default"
+					  title="Lab - due on Friday, 23:59"
+				  onclick="alert(this.title);">Lab #1 Due
+			  </button>
+			</td>
+	      </tr>		
+	      <tr id=row3>
+			<th class=center>3</th>
+			<td>May 25</td>
+			<td>
+			  <ul>
+				<li>Built-in objects
+				  <ul>
+					<li>String, Array, RegExp</li>
+				  </ul>
+				</li>
+				<li>Creating Custom objects</li>
+				<li>Prototypal inheritance</li>
+			  </ul> 
+			</td>
+			<td>
+			  <button type="button" title="Lecture Notes for Week 3"
+				  class="btn btn-xs btn-inverse"
+				  onclick="window.location='lectures/INT222-Lecture3.pptx';"	  
+				  >Lecture 3
+			  </button>
+			  <br>
+			  <button type="button" class="btn btn-xs btn-inverse"
+					  onclick='window.open("lectures/INT222-Lecture3.pdf", "_blank","");'
+					  title="The pdf version of the document." >pdf
+			  </button>	
+			</td>
+			<td>
+			  <button type="button" class="btn btn-xs btn-inverse"  title="INT222 Lab #2"
+				  onclick='window.open("labs/INT222-lab02.pdf", "_blank","");'
+				  >Lab 02
+			  </button> 
+			  <br>
+			  <button type="button" class="btn btn-xs btn-inverse"
+					  title="INT222 Assignment #1 - released on Friday"
+					  onclick='window.open("assignments/Assignment1.pdf", "_blank","");'
+				  >Assignment #1
+			  </button>
+			</td>
+			<td>
+			  &nbsp;
+			</td>
+	      </tr>
+	      <tr id=row4>
+			<th class=center>4</th>
+			<td>June 1</td>
+			<td>
+			  <ul>
+				<li>Introduction to HTML5 </li>
+				<li>Document structure/overview</li>
+				<li>Important HTML elements</li>
+			   </ul>
+			</td>
+			<td>
+			  <button type="button" title="Lecture Notes for Week 4"
+				  class="btn btn-xs btn-inverse"
+				  onclick="window.location='lectures/INT222-Lecture4.pptx';"	  
+				  >Lecture 4
+			  </button>
+			  <br>
+			  <button type="button" class="btn btn-xs btn-inverse"
+					  onclick='window.open("lectures/INT222-Lecture4.pdf", "_blank","");'
+					  title="The pdf version of the document." >pdf
+			  </button>	
+			  <br>
+			</td>
+			<td>
+			  <button type="button" class="btn btn-xs btn-inverse"  title="INT222 Lab #3"
+				  onclick='window.open("labs/INT222-lab03.pdf", "_blank","");'
+				  >Lab 03
+			  </button>
+			  <br>&nbsp;
+			</td>
+			<td>
+			  <button type="button" class="btn btn-xs btn-default"
+					  title="Lab - due on Friday, 23:59"
+				  onclick="alert(this.title);">Lab #2 Due
+			  </button>
+			  &nbsp;
+			</td>
+	      </tr>
+	      <tr id=row5>
+			<th class=center>5</th>
+			<td>June 8</td>
+			<td>
+			  <ul>
+				<li>More about HTML5. </li>
+				<li>Introduction to CSS</li>
+			  </ul>
+			</td>
+			<td>
+			  <button type="button" title="Lecture Notes for Week 5"
+				  class="btn btn-xs btn-inverse"
+				  onclick="window.location='lectures/INT222-Lecture5.pptx';"	  
+				  >Lecture 5
+			  </button>
+			  <br>
+			  <button type="button" class="btn btn-xs btn-inverse"
+					  onclick='window.open("lectures/INT222-Lecture5.pdf", "_blank","");'
+					  title="The pdf version of the document." >pdf
+			  </button>	
+			</td>
+			<td>
+			  
+			  &nbsp;
+			</td>
+			<td>
+			  <button type="button" class="btn btn-xs btn-default"
+					  title="Lab - due on Friday, 23:59"
+				  onclick="alert(this.title);">Lab #3 Due
+			  </button>
+			</td>
+	      </tr>
+	      <tr id=row6>
+			<th class=center>6</th>
+			<td>June 15</td>
+			<td>
+			  <ul>    
+				<li>More on CSS</li>
+				<li>Test #1</li>
+			  </ul>
+			</td>
+			<td>
+			  <button type="button" title="Lecture Notes for Week 6"
+				  class="btn btn-xs btn-inverse"
+				  onclick="window.location='lectures/INT222-Lecture6.pptx';"	  
+				  >Lecture 6
+			  </button>
+			  <br>
+			  <button type="button" class="btn btn-xs btn-inverse"
+					  onclick='window.open("lectures/INT222-Lecture6.pdf", "_blank","");'
+					  title="The pdf version of the document." >pdf
+			  </button>
+			  <br>
+			  <button type="button" class="btn btn-xs btn-default"
+					  title="Test 1 is scheduled on Thursday of this week"
+					  onclick="alert(this.title);"
+				  >Test 1
+			  </button>
+			  <br>
+			  
+			</td>
+			<td>
+			  <button type="button" class="btn btn-xs btn-inverse"
+					  title="INT222 Assignment #2 - Released at end of Friday"
+					  onclick='window.open("assignments/Assignment2.pdf", "_blank","");'
+				  >Assignment #2
+			  </button>
+			</td>
+			<td>
+			  <button type="button" class="btn btn-xs btn-info" title="Reference Sheet for test 1"
+				  onclick='window.open("common/reference-sheet.pdf", "_blank","");'
+				  >Ref Sheet
+			  </button> 
+			  <br>
+			  <button type="button" class="btn btn-xs btn-default"
+					  title="Assignment #1 - due on Saturday, 23:59"
+				  onclick="alert(this.title);">Assign #1 Due
+			  </button>
+			</td>
+	      </tr>
+	      <tr id=row7>
+			<th class=center>7</th>
+			<td>June 22</td>
+			<td>
+			  <ul>
+				<li>Layouts, navigation, menus</li>
+				<li>Document Object Model (DOM)</li>
+			  </ul>
+			</td>
+			<td>
+			  <button type="button" title="Lecture Notes for Week 7"
+				  class="btn btn-xs btn-inverse"
+				  onclick="window.location='lectures/INT222-Lecture7.pptx';"	  
+				  >Lecture 7
+			  </button>
+			  <br>
+			  <button type="button" class="btn btn-xs btn-inverse"
+					  onclick='window.open("lectures/INT222-Lecture7.pdf", "_blank","");'
+					  title="The pdf version of the document." >pdf
+			  </button>
+			  &nbsp;
+			</td>
+			<td>
+			  <button type="button" class="btn btn-xs btn-inverse"  title="INT222 Lab #4"
+				  onclick='window.open("labs/INT222-lab04.pdf", "_blank","");'
+				  >Lab 04
+			  </button>
+			  <br>&nbsp;
+			</td>
+			<td>&nbsp;</td>
+	      </tr>
+	      <tr id=row8>
+			<th class=center>Study<br>Week</th>
+			<td>June 28</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>
+			  <button type="button" class="btn btn-xs btn-default"
+					  title="Lab - due on Friday, 23:59"
+				  onclick="alert(this.title);">Lab #4 Due
+			  </button>
+			  &nbsp;
+			</td>
+		  </tr>
+		  <tr id=row9>
+			<th class=center>8</th>
+			<td>July 6</td>
+			<td>
+			  <ul>
+				<li>HTML Forms and CSS Styling</li>
+			  </ul>
+			</td>
+			<td>
+			  <button type="button" title="Lecture Notes for Week 8"
+				  class="btn btn-xs btn-inverse"
+				  onclick="window.location='lectures/INT222-Lecture8.pptx';"	  
+				  >Lecture 8
+			  </button>
+			  <br>
+			  <button type="button" class="btn btn-xs btn-inverse"
+					  onclick='window.open("lectures/INT222-Lecture8.pdf", "_blank","");'
+					  title="The pdf version of the document." >pdf
+			  </button>
+			  &nbsp;
+			</td>
+			<td>
+			</td>
+			<td>
+			  &nbsp;
+			</td>
+	      </tr>
+	      <tr id=row10>
+			<th class=center>9</th>
+			<td>July 13</td>
+			<td>
+			  <ul>
+				<li>Using JavaScript in HTML Page</li>
+				<li>Introduction to Client-side validation</li>
+			  </ul>
+			</td>
+			<td>
+			  <button type="button" title="Lecture Notes for Week 9"
+				  class="btn btn-xs btn-inverse"
+				  onclick="window.location='lectures/INT222-Lecture9.pptx';"	  
+				  >Lecture 9
+			  </button>
+			  <br>
+			  <button type="button" class="btn btn-xs btn-inverse"
+					  onclick='window.open("lectures/INT222-Lecture9.pdf", "_blank","");'
+					  title="The pdf version of the document." >pdf
+			  </button>
+			  &nbsp;
+			</td>
+			<td>
+			  <button type="button" class="btn btn-xs btn-inverse"  title="INT222 Lab #5"
+				  onclick='window.open("labs/INT222-lab05.pdf", "_blank","");'
+				  >Lab 05
+			  </button>
+			  <br> 
+			  <button type="button" class="btn btn-xs btn-inverse"
+					  title="INT222 Assignment #3 - Released at end of Friday"
+					  onclick='window.open("assignments/Assignment3.pdf", "_blank","");'
+				  >Assignment #3
+			  </button>  
+			</td>
+			<td>
+			  <button type="button" class="btn btn-xs btn-default"
+					  title="Assignment #2 - due on Saturday, 23:59"
+				  onclick="alert(this.title);">Assign #2 Due
+			  </button>
+			  <br>
+			  &nbsp;
+			</td>
+	      </tr>
+	      <tr id=row11>
+			<th class=center>10</th>
+			<td>July 20</td>
+			<td>
+			  <ul>
+				<li>More about DOM</li>
+				<li>DOM Events</li>
+			  </ul>
+			</td>
+			<td>
+			  <button type="button" title="Lecture Notes for Week 10"
+				  class="btn btn-xs btn-inverse"
+				  onclick="window.location='lectures/INT222-Lecture10.pptx';"	  
+				  >Lecture 10
+			  </button>
+			  <br>
+			  <button type="button" class="btn btn-xs btn-inverse"
+					  onclick='window.open("lectures/INT222-Lecture10.pdf", "_blank","");'
+					  title="The pdf version of the document." >pdf
+			  </button>
+			  <br>
+			  <button type="button" class="btn btn-xs btn-info" title="Quiz 2 is scheduled in this week"
+				  >Quiz 2
+			  </button>   
+			</td>
+			<td>
+			  &nbsp;
+			</td>
+			<td>
+			  <button type="button" class="btn btn-xs btn-default"
+					  title="Lab - due on Friday, 23:59"
+				  onclick="alert(this.title);">Lab #5 Due
+			  </button>
+			  &nbsp;
+			</td>
+	      </tr>
+	      <tr id=row12>
+			<th class=center>11</th>
+			<td>July 27</td>
+			<td>
+			  <ul>
+				<li>Test 2</li>
+				<li>HTML5 Canvas</li>
+				<li>Image Gallery</li>
+			  </ul>
+			</td>
+			<td>
+			  <button type="button" title="Lecture Notes for Week 11"
+				  class="btn btn-xs btn-inverse"
+				  onclick="window.location='lectures/INT222-Lecture11.pptx';"	  
+				  >Lecture 11
+			  </button>
+			  <br>
+			  <button type="button" class="btn btn-xs btn-inverse"
+					  onclick='window.open("lectures/INT222-Lecture11.pdf", "_blank","");'
+					  title="The pdf version of the document." >pdf
+			  </button>
+			  <br>
+			  <button type="button" class="btn btn-xs btn-default"
+					  title="Test 2 is scheduled in this week."
+				  onclick="alert(this.title);">Test 2</button>
+			</td>
+			<td>
+			   &nbsp;
+			</td>
+			<td>
+			  <button type="button" class="btn btn-xs btn-info" title="Reference Sheet for test 1"
+				  onclick='window.open("common/reference-sheet.pdf", "_blank","");'
+				  >Ref Sheet
+			  </button> 
+			  <br>&nbsp;
+			</td>
+	      </tr>
+	      <tr id=row13>
+			<th class=center>12</th>
+			<td>Aug. 4</td>
+			<td>
+			  <ul>
+				<li>Introduction to Ajax and JSON</li>
+				<li>Browser Object Model</li>
+			  </ul>
+			</td>
+			<td>
+			  <button type="button" title="Lecture Notes for Week 12"
+				  class="btn btn-xs btn-inverse"
+				  onclick="window.location='lectures/INT222-Lecture12.pptx';"	  
+				  >Lecture 12
+			  </button>
+			  <br>
+			  <button type="button" class="btn btn-xs btn-inverse"
+					  onclick='window.open("lectures/INT222-Lecture12.pdf", "_blank","");'
+					  title="The pdf version of the document." >pdf
+			  </button>
+			  <br>   
+			</td>
+			<td>
+			  <button type="button" class="btn btn-xs btn-inverse"  title="INT222 Lab #6"
+				  onclick='window.open("labs/INT222-lab06.pdf", "_blank","");'
+				  >Lab 06
+			  </button>
+			</td>
+			<td>
+			  <button type="button" class="btn btn-xs btn-danger"
+					  title="Assignment #3 is due on Saturday, 23:59"
+				  onclick="alert(this.title);">Assign #3
+			  </button>
+			  <br>
+			</td>
+	      </tr>
+	      <tr id=row14>
+			<th class=center>13</th>
+			<td>Aug. 10</td>
+			<td>
+			  <ul>
+				<li>Student help on outstanding assignments</li>
+				<li>Review</li>
+			  </ul>
+			</td>
+			<td>&nbsp;</td>
+			<td>
+			  &nbsp;
+			</td>
+			<td>
+			  <button type="button" class="btn btn-xs btn-danger"
+					  title="Lab - due on Friday, 23:59"
+				  onclick="alert(this.title);">Lab #6 Due
+			  </button>
+			  &nbsp;
+			</td>
+		  </tr>
+		  <tr id=row15>
+			<th class=center>Exam<br>Week</th>
+			<td>Aug. 17</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+	      </tr>
+	    </tbody>
+	  </table>
+	</div><!-- /demo-content -->
+      </div><!-- /demo-row -->
+      
+      <br><br>
+      
+      <a id="standards"></a>
+      <div class="demo-row typography-row">
+        <div class="demo-content">
+	  <h3>
+	    <img src="../Flat-UI-master/images/icons/svg/retina.svg" alt="">&nbsp;&nbsp;
+	    Course Standards&nbsp;&nbsp;
+	    <a href="#top" class="back">^</a>
+	  </h3>
+	  <br>
+	  <p>For General Class Standards please refer also to the appropriate section on my home page from the link of <a href="https://scs.senecac.on.ca/~wei.song/index.html#standards">https://scs.senecac.on.ca/~wei.song/index.html#standards</a>.</p>
+	  <p>For Seneca College Information Technology Acceptable Use Policy please go to the link at
+	    <a href="https://scs.senecac.on.ca/page/computer-studies-academic-procedure">
+	      https://scs.senecac.on.ca/page/computer-studies-academic-procedure</a> </p>
+	  <br>
+	</div><!-- /demo-content -->
+      </div><!-- /demo-row -->
+      
+      <div class="row">
+	
+	<div class="col-sm-4">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Course Structure</h3>
+            </div>
+            <div class="panel-body">
+	      <ul>
+		<li>1 Weekly Lecture</li>
+		<li>1 Weekly Lab</li>
+	      </ul>
+	      <p>&nbsp;</p>
+	      <p>&nbsp;</p>
+	      <p>&nbsp;</p>
+            </div>
+          </div>
+	</div><!-- /.col-sm-4 -->
+	
+	<div class="col-sm-4">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Course Evaluation</h3>
+            </div>
+            <div class="panel-body">
+	      <ul>
+		<li>Assignments - 20%</li>
+		<li>Quizzes (3) - 5%</li>
+		<li>Labs (6) - 10%</li>
+		<li>Tests (2) - 35%</li>
+		<li>Final Exam - 30%</li>
+	      </ul>
+	      <p>&nbsp;</p>
+            </div>
+          </div>
+	</div><!-- /.col-sm-4 -->
+	
+	<div class="col-sm-4">  
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Promotion Policy</h3>
+            </div>
+            <div class="panel-body">
+              <p>To obtain a credit in this subject you must achieve the following:</p>
+	      <ul>
+		<li>50% on the final exam</li>
+		<li>50% weighted average on tests and overall course</li>
+		<li>50% on each assignment</li>
+	      </ul>
+            </div>
+          </div>
+	  
+        </div><!-- /.col-sm-4 -->
+
+      </div><!-- / row -->
+      
+      
+      
+      <div class="row">
+	
+	<div class="col-xs-12">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Lectures</h3>
+            </div>
+            <div class="panel-body">
+	      <ul>
+		<li>be on time for class </li>
+		<li>respect other students</li>
+		<li>Lectures will explain and demonstrate the skills and concepts you need to complete a Lab assignment.</li>
+		<li>Formal attendance may be kept. Frequent absence will be noted. You are responsible on all tests and labs
+		    for any material covered or assigned in class. People who do not come to class generally have significant
+		    problems completing their labs and traditionally do not perform  well on their tests.</li>
+		<li>Classes will start on time and late arrivals must not disturb the class. Enter quietly and take a seat.
+		    Do not disturb the class by asking questions about what took place before your arrival. </li>
+		<li>If you missed a class, please ask a colleague, not the instructor, about what was covered. An email to an
+		    instructor about what was covered in class will get a response along the lines of "that was covered in class".</li>
+		<li>After the lecture, you are expected to work on the lab in preparation for the Interactive Lecture (Lab) Period.</li>
+	      </ul>
+            </div>
+          </div>
+	  
+	  <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Term Tests and Quizzes</h3>
+            </div>
+            <div class="panel-body">
+	      <p>
+		There will 2 term tests during the semester worth 35% of the total mark. For test dates please click on the
+		test buttons in above weekly schedulei. 
+	      </p>
+	      <p>
+		If you do not write a term test, you will be assigned a mark of zero. The only acceptable reason for missing
+		a term test is a medical reason, verified by a note from your doctor. 
+	      </p>
+	      <p>Missing one term test for an acceptable reason will result in the following: </p>
+	      <ul>
+		<li>
+		  Missing term test 1 for a valid reason will result in using your term test 2 mark as well as the class
+		  average (all sections) for term test 1 as an average for your term test 1 mark;
+		</li>
+		<li>
+		  Missing term test 2 for a valid reason will result in using your final examination mark as well as the
+		  class average (all sections) for term test 2 will be used to determine the mark for term test 2 mark.
+		</li>
+		<li>
+		  Missing both term tests for any reason will result in an "F" grade in the course.
+		</li>
+	      </ul>
+	      <p>
+		Term Quizzes
+	      </p>
+	      <ul>
+		<li>
+		  There will be a minimum of 2 quizzes worth 5% during the semester. INT222 quizzes are unannounced and
+		  can be given any time during the semester.
+		</li>
+	      </ul>
+            </div>
+          </div>
+	  
+	  <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Assignments and Labs</h3>
+            </div>
+            <div class="panel-body">
+	      <p>
+		There will be 3 assignments and 6 labs during the semester. All assignments must be successfully
+		completed in order to pass the course.
+	        Assignments are due on the date/time specified on the INT222 web site.
+	      </p>
+	      <p>
+		Typically, all INT222 assignments are due on a Sunday @ 23:59. For more information, see the "Assignment"
+		buttons on the page.
+	      </p>
+	      <p>
+		Late submissions will be penalized an initial 20% plus 5% for each day thereafter to a maximum of 5 days.
+		The following also applies to all INT222 assignments:  
+	      </p>
+	      <ul>
+		<li>
+		  Submitting an assignment on the due date that doesn't work will result in an incomplete (INC) grade assigned
+		  (see incomplete below). You are better off to submit an assignment late than to submit an assignment that doesn't work.
+		</li>
+		<li>
+		  Late submissions will be penalized an initial 20% plus 5% for each day thereafter to a maximum of 5 days
+		  at which time an incomplete (INC) grade will be assigned.
+		</li>
+		<li>
+		  An incomplete assignment will receive a maximum grade of a "D" providing the assignment is submitted
+		  within two weeks from the original due date.
+		</li>
+		<li>
+		  An incomplete assignment not submitted within two weeks from the original due date will automatically
+		  be assigned a grade of zero (0).
+		</li>
+		<li>
+		  Incomplete assignments submitted within two weeks from the original due date will receive a maximum
+		  grade of a "D".
+		</li>
+		<li>
+		  Incomplete assignments not submitted within two weeks from the original due date will receive a grade of a zero (0).
+		  Please remember that the promotion policy for this course is that you must satisfactorily complete all assignments.
+		</li>
+	      </ul>
+	      <p>
+		Assignments should be prepared as specified in the assignment requirements.
+	      </p>
+	      <p>
+		Keep all copies of listings/files and any other documentation until the marked assignments are handed back.
+		This will be helpful in case of a dispute about "originality".
+	      </p>
+	      <p>
+		Keep marked assignments (marking sheets) until you have received a final course grade in case of mistakes
+		in recording marks. Check your version of marks against those that are posted.
+	      </p>
+	      
+            </div>
+          </div>
+	  
+	  <br><br>
+	  
+        </div><!-- /.col-sm-4 -->
+	
+      </div><!-- / row -->
+	    
+      <a id="resources"></a>
+      <div class="demo-row typography-row">
+        <div class="demo-content">
+	  <h3>
+	    <img src="../Flat-UI-master/images/icons/svg/compas.svg" alt="">&nbsp;&nbsp;
+	    Resources&nbsp;&nbsp;
+	    <a href="#top" class="back">^</a>
+	  </h3>
+	  <h3 class="demo-panel-title">Reference Material/Documentation</h3>
+	  <ul>
+	    <li>Mozilla Developer Network (MDN) <a href="http://developer.mozilla.org">Start Page</a></li>
+		<li>W3C Web Education Community Group <a href="http://www.w3.org/community/webed/wiki/Main_Page "> Wiki Page</a></li>
+		<li>W3C and the Web Platform stewards<a href="http://www.webplatform.org/">Your Web, Documented</a></li>
+		
+		<li>MDN <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">HTML element reference</a></li>
+	    <li>MDN <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">CSS reference</a></li>
+	    <li>MDN <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference">JavaScript reference</a></li>
+	    <li>MDN <a href="https://developer.mozilla.org/en-US/docs/Web/API/document">DOM 'document' reference</a></li>
+	  </ul>
+	  
+	  <h3 class="demo-panel-title">Development and debugging</h3>
+	  <ul>
+	    <li>MDN <a href="https://developer.mozilla.org/en-US/docs/Tools">Firefox Developer Tools</a></li>
+	    <li>JavaScript code quality tool - <a href="http://www.jslint.com/">JSLint</a></li>
+	    <li>Live testing of HTML, CSS, and Javascript with <a href="http://jsfiddle.net/">jsfiddle</a></li>
+		<li>Seneca CDOT Webmaker:  <a href="https://thimble.mozilla.org/en-US//">Thimble by mozilla</a></li>
+	  </ul>
+	  
+	  <h3 class="demo-panel-title">Validation</h3>
+	  <ul>
+	    <li>W3C <a href="http://validator.w3.org/">HTML Validator.</a></li>
+	    <li>W3C <a href="http://jigsaw.w3.org/css-validator/">CSS Validator.</a></li>
+	    <li>
+	      <a href="http://validator.w3.org/check?uri=https://scs.senecac.on.ca/~wei.song/int222/int222.html">
+		<img src="https://scs.senecac.on.ca/~wei.song/int222/images/vhtml5.png" alt="Valid HTML5" style="height:20px" />
+	      </a>
+	      <a href="http://jigsaw.w3.org/css-validator/validator?uri=https://scs.senecac.on.ca/~wei.song/Flat-UI-master/css/mystyle.css">
+		<img src="https://scs.senecac.on.ca/~wei.song/int222/images/vcss.png" alt="Valid CSS" style="height:20px" />
+	      </a>
+	      <!--<a href="http://jigsaw.w3.org/css-validator/validator?uri=https://scs.senecac.on.ca/~wei.song/int222/int222.html"><img src="images/vcss.png" alt="Valid CSS" /></a>-->
+	    </li>
+	  </ul>
+	  
+	  <h3 class="demo-panel-title">Working at Home</h3>
+	  <p>To work at home, you may install the following software for web programming:</p>
+	  <ul>
+	    <li>
+	      a web browser:
+	      <ul>
+		<li><a href="http://www.getfirefox.com/">Firefox</a>
+		  <ul>
+		    <li><a href="http://www.getfirebug.com/">Firebug</a> add-on for Firefox (recommended)</li>
+		  </ul>
+		</li>
+		<li><a href="http://www.google.com/chrome">Google Chrome</a></li>
+	      </ul>
+	    </li>
+
+	    <li>
+	      a text editor for typing your programs, such as:
+	      <ul>
+		<li><a href="http://notepad-plus-plus.org/">Notepad++</a> text editor (Windows)</li>
+		<li><a href="http://www.textpad.com/">TextPad</a> text editor (Windows), or ...</li>
+	      </ul>
+	    </li>
+
+	    <li>
+	      an <abbr title="Secure File Transfer Protocol">SFTP</abbr> file transfer program for uploading your programs to our ZENIT server:		
+	      <ul>
+		<li>SSH Secure Shell Client</li>
+		<li>
+		  <a href="http://winscp.net/eng/download.php">WinSCP</a> (Windows)
+		</li>		  
+		<li><a href="http://filezilla-project.org/">FileZilla (Windows/Mac/Linux)</a></li>
+	      </ul>
+	    </li>
+	  </ul>
+	  
+	  <h3 class="demo-panel-title">Reading Materials</h3>
+	  <ul>
+	    <li><a href="http://javascript.crockford.com/">Douglas Crockford's Javascript</a></li>
+	    <li><a href="http://addyosmani.com/blog/javascript-style-guides-and-beautifiers/">JavaScript Style Guides And Beautifiers</a></li>
+	    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript">MDN: A re-introduction to JavaScript (JS tutorial)</a></li>
+	  </ul>
+	  
+	  <p></p>
+	  <br>
+	</div><!-- /demo-content -->
+      </div><!-- /demo-row --> 
+        
+    </div> <!-- /container -->
+    
+    <footer>
+      <div class="container">
+        <div class="row">
+	  <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <li><a href="../index.html">Home&nbsp;&nbsp;<span class="fui-user"></span></a></li>
+	      <li><a href="https://scs.senecac.on.ca/">School of ICT</a></li>
+	      <li><a href="https://my.senecacollege.ca/webapps/portal/frameset.jsp">MySeneca</a></li>
+	      <li><a href="http://www.senecacollege.ca/">Seneca College</a></li>
+	      <li><a href="https://inside.senecacollege.ca/its/index.html">Help Desk</a></li>
+	      <li><a href="http://seneca.libguides.com/content.php?pid=53490">Library</a></li>
+	      <li>
+		  
+	      </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+ 
+          <div class="col-xs-7"> </div> <!-- /col-xs-7 -->
+        </div>
+      </div>
+    </footer>
+    
+    
+    <!-- Load JS here for greater good =============================-->
+    <!--<script src="../Flat-UI-master/js/jquery-1.8.3.min.js"></script>
+    <script src="../Flat-UI-master/js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="../Flat-UI-master/js/jquery.ui.touch-punch.min.js"></script>
+    <script src="../Flat-UI-master/js/bootstrap.min.js"></script>
+    <script src="../Flat-UI-master/js/bootstrap-select.js"></script>
+    <script src="../Flat-UI-master/js/bootstrap-switch.js"></script>
+    <script src="../Flat-UI-master/js/flatui-checkbox.js"></script>
+    <script src="../Flat-UI-master/js/flatui-radio.js"></script>
+    <script src="../Flat-UI-master/js/jquery.tagsinput.js"></script>
+    <script src="../Flat-UI-master/js/jquery.placeholder.js"></script>
+    <script src="../Flat-UI-master/js/jquery.stacktable.js"></script>
+    <script src="../Flat-UI-master/js/application.js"></script>-->
+    <!--script>
+      alert("This page is not available!");
+      window.location = "../index.html";
+    </script-->
+    <script src="../Flat-UI-master/js/myscript.js"></script>
+  </body>
+</html>

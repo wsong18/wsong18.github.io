@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <title>INT222</title>
+   <style> 
+      body { margin: 0 20%; }
+	  .highlight { 
+	    text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF; 
+		width: 500px;
+		border: 8px blue groove;
+		padding: 20px;
+		font-size: 2em;
+	  }
+   </style>
+   <script>      
+	  function changeCSS1() 
+      {
+	     var elem = document.getElementById("demo1");
+		 elem.style.color="blue";
+		 elem.style.backgroundColor="yellow";
+	  }
+	  function changeCSS2() 
+      {
+	     var elem = document.getElementById("demo2");
+		 elem.setAttribute("style", "text-decoration:underline; background:lightblue; ");
+	  }	
+      function changeCSS3() 
+      {
+	     var elem = document.getElementById("demo3");
+		 elem.setAttribute("class", "highlight");
+	  }		  
+   </script>
+</head>
+<body>
+  <h1>INT222 - Changing CSS with JS - style object</h1>
+  <p id="demo1">Changing CSS with JavaScript</p> 
+  <br>
+  <input type="button" value="Change CSS" onclick="changeCSS1()"> &nbsp;&nbsp;
+  <br><hr><br>
+
+  <h1>INT222 - Changing CSS with JS - setAttribute() - 1  </h1>
+  <p id="demo2">Changing CSS with JavaScript</p> 
+  <br>
+  <input type="button" value="Change CSS" onclick="changeCSS2()"> &nbsp;&nbsp;
+  <br><hr><br>
+
+  <h1>INT222 - Changing CSS with JS - setAttribute() - 2  </h1>
+  <p id="demo3">Changing CSS with JavaScript</p> 
+  <br>
+  <input type="button" value="Change CSS" onclick="changeCSS3()"> &nbsp;&nbsp;
+  <br><hr><br>
+  
+  <br>
+  <!-- for downloading source files -->
+  <p><a href="" Download>Download</a></p>
+</body>
+
+</html>

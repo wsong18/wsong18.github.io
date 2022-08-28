@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <title>HTML FORM</title>
+   <style> 
+      body { margin: 0 20%; }
+   </style>
+</head>
+<body>
+  <h1>EXAMPLE - &lt;select&gt; Tags and Attributes</h1>
+
+  <!-- Start of example -->
+  <form id=form1 action="https://httpbin.org/post" method="post">
+    <h3>Single Selection without size Attribute</h3>
+    <p>What would you like to do today?</p>
+	<p> 
+	  <select name="what-to-do" id="what-to-do">
+		<option value="1"> Drink Coffee </option>
+		<option value="2" selected> Read A Book </option>
+		<option value="3"> Take A Walk </option>
+		<option value="4"> Buy A Bagel </option>
+		<option value="5"> Watch TV    </option>
+	  </select>
+	</p>
+	<br><hr>
+
+	<h3>Single Selection with size Attribute</h3>
+    <p>What would you like to do today?</p> 
+	<p>
+	  <select name="what-to-do2" id="what-to-do2" size=5>
+		<option value="1"> Drink Coffee </option>
+		<option value="2" selected> Read A Book </option>
+		<option value="3"> Take A Walk </option>
+		<option value="4"> Buy A Bagel </option>
+		<option value="5"> Watch TV    </option>
+	  </select>
+	</p>
+	<hr>
+	
+	<h3>Multiple Selection</h3>
+    <p>What would you like to do today?</p> 
+	<p>
+	  <select name="what-to-do3" id="what-to-do3" multiple>
+		<option value="1" selected> Drink Coffee </option>
+		<option value="2" selected> Read A Book </option>
+		<option value="3"> Take A Walk </option>
+		<option value="4"> Buy A Bagel </option>
+		<option value="5"> Watch TV    </option>
+	  </select>
+	</p>
+	<hr>
+	
+    <input type='submit' value='Submit'>&nbsp;&nbsp;&nbsp;&nbsp;<input type='reset'  value='    Clear   '>
+  </form>
+  <!-- End of example -->
+  
+  <br>
+  <p><a href="" >Download</a></p>
+</body>
+</html>

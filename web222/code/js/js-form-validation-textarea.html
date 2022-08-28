@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"> 
+ <head>
+   <meta charset="UTF-8" />
+   <title>JS Validation</title>
+   <style> 
+      body { margin: 0 10%; }	  
+	  form { border: 10px solid #00ff00; padding: 5px; }	  
+	  #errors { color: red; }
+      .inputbox { 
+            background-color: #ffffff; 
+            border-top:    7px dashed #0000ff; 
+            border-bottom: 7px dashed #0000ff; 
+            border-left:   7px solid  #ff0000; 
+            border-right:  7px solid  #ff0000; 
+      }
+      .inputtext{
+            font-size: 14px; 
+            font-style:italic;
+            font-weight:bold;
+      }
+   </style>
+   <script>
+	  function formValidation(frm) {
+	     clearerrors();
+         return validateTextarea(frm);
+      }
+	  
+	  function validateTextarea(form)   {
+		 /* Validate that the textarea named "comments" in the form passed-in
+		    using this keyword*/
+		if (form1.comments.value.trim().length == 0) {// check length of textarea
+				 errors.innerHTML += "<p>* No input! Please enter your comments.</p>";
+				 form.comments.focus();
+				 return false;
+		 }
+		 return true;
+	  }
+	  
+	  function clearerrors() {
+         document.querySelector("#errors").innerHTML = "";
+      }
+   </script>
+ </head>
+ <body>
+    <div id="content" style="font-family:monospace;font-size:14px;">
+		<h1>Example - JavaScript Form Validation:<mark> textarea </mark></h1>
+        <p>Rule: not empty</p>
+		<form id='example' name='form1' 
+			  method='post' action='https://httpbin.org/post' 
+			  onsubmit="return formValidation(this);">
+		   <p>Your Comments</p> 
+	       <textarea name="comments" cols="80" rows="6"></textarea>
+		   <div id='errors'></div>
+		   <br>
+		   <p>
+			  <input type="submit" value="Submit Information" /> &nbsp;&nbsp;  
+			  <input type="reset"  value="    Clear   " onclick="clearerrors()"/>  
+		   </p> 
+		</form>
+		<!-- End of example -->
+    </div>
+ </body>
+</html>

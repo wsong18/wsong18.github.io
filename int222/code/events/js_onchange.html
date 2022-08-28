@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <title>INT222</title>
+   <style> 
+      body { margin: 0 18%; }
+   </style>
+</head>
+<body>
+  <h3><mark>onchange event handler</mark></h3>
+  <!-- Start of example -->
+  <form method='post' name='form1' action='#'>
+   <p>Name (First & Last) <input type='text' name='flname' autofocus
+			onchange='alert("Input text box has changed")' /></p>
+   <br />
+   
+	<select name='colors' size='5' onchange='alert("You made a new selection")'>
+	 <option value='0'>Select a color</option>
+	 <option value='1'>Red</option>
+	 <option value='2'>Green</option>
+	 <option value='3'>Blue</option>
+	 <option value='4'>Black</option>
+	 <option value='5'>Pink</option>
+	</select>
+
+   <ul>
+	<li>Notice that the focus is on the input text box when the page is loaded.</li>
+	<li>Click somewhere outside the text box without typing anything inside the text box and see what happens - nothing.</li>
+	<li>Now type something inside the text box then click outside and see what happens.</li>
+   </ul>
+
+ </form>
+<!-- End of example -->
+
+  <br>
+  <!-- for downloading source files -->
+  <p><a href="" Download>Download</a></p>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en"> 
+ <head>
+   <meta charset="UTF-8" />
+   <title>HTML Form</title>
+   <script src='js-form-validation-select-multiple.js'></script>
+   <style> 
+      body { margin: 0 10%; }	  
+	  form { border: 10px solid #00ff00; padding: 5px; }	  	  
+      .inputbox { 
+            background-color: #ffffff; 
+            border-top:    7px dashed #0000ff; 
+            border-bottom: 7px dashed #0000ff; 
+            border-left:   7px solid  #ff0000; 
+            border-right:  7px solid  #ff0000; 
+      }
+      .inputtext{
+            font-size: 14px; 
+            font-style:italic;
+            font-weight:bold;
+      }
+	  #errors { color: red; }
+   </style>
+ </head>
+ <body>
+    <header></header>
+    <nav></nav>
+    <div id="content" style="font-family:monospace;font-size:14px;">
+	   <h1>Example - JavaScript Form Validation</h1>
+	   <p><mark>select / options - with single multiple selections</mark></p>
+   
+	   <form method="post" name="example"
+			 action='https://formpost.azurewebsites.net/home/test'
+			 onsubmit="return checkForm();">       
+		 <table>
+		   <tr>
+			 <td>
+			   <p>Wish list for today</p> 
+				<select name="whatToDo" size="6" multiple="multiple">
+				  <option value="1"> Drink Coffee </option>
+				  <option value="2"> Read A Book </option>
+				  <option value="3"> Take A Walk </option>
+				  <option value="4"> Buy A Bagel </option>
+				  <option value="5"> Watch TV    </option>
+				  <option value="6"> Write a test </option>
+				</select>
+			 </td>
+			 <td>
+			   <ul>
+				<li>******* Select options logic **** multiple="multiple" ****</li>
+				<li>Get the number of the select options using length</li>
+				<li><mark>document.formname.selectname.options.length;</mark></li>
+				<li>Loop to check which one was selected</li>
+				<li>To determine which one is selected - if any - check if 
+				  <ul>
+					<li><mark>if (document.formname.selectname.selected == true) // selected</mark>
+					  <ul>
+						<li>document.formname.selectname[i].value</li>
+						<li>document.formname.selectname[i].text</li>
+					  </ul>        
+					<li>
+				  </ul></li>
+			   </ul> 
+			 </td>
+		   </tr>
+		   <tr>
+			 <th colspan='2'>
+				<hr>
+				<p>
+				   <input type="submit" value="Submit Information" />&nbsp;&nbsp;
+				   <input type="reset"  value="    Clear   " onclick="clearShowErrors();" />  
+				</p> 	  
+			 </th>
+		   </tr>
+		   <tr>
+			 <td colspan='2'><div id="errors"></div></td>
+		   </tr> 
+		 </table>
+	   </form>
+    </div>
+
+    <footer>
+	    <p><a href="" Download>Download html</a></p>
+		   <a href="js-form-validation-select-multiple.js" download>Download js</a>
+		</p>
+    </footer>
+ </body>
+</html>

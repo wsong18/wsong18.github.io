@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <title>WEB222</title>
+   <style> 
+      body { margin: 0 18%; }
+   </style>
+   <script>
+	 window.onload = function() { // why use window.onload?
+		 var elem = document.querySelector("#myBtn");
+		 
+         elem.onclick = displayDate;
+         //or:
+		 //elem.addEventListener( "click", displayDate );
+		 //or:
+		 //elem.onclick = function () { displayDate(); };
+		 //or:
+		 //elem.onclick = function () {
+		 //   document.querySelector("#demo").innerHTML = (new Date()).toLocaleString();
+		 //}; 
+
+	 }
+
+     function displayDate() {
+        document.querySelector("#demo").innerHTML = (new Date()).toLocaleString();
+	 }
+   </script>
+</head>
+<body>
+  <h1>WEB222 - HTML DOM Event</h1>
+  <p>Click "Show Current Time" to execute the displayDate() function.</p>
+  <p id="demo"></p>
+
+  <button id="myBtn">Show Current Time</button>
+  
+  <br>
+  <!-- for downloading source files -->
+  <p><a href="" Download>Download</a></p>
+</body>
+</html>

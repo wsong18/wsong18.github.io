@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>INT422-Wei.Song</title>
+    <meta name="viewport" content="width=1000, initial-scale=1.0, maximum-scale=1.0">
+
+	<link rel="icon" href="../Flat-UI-master/images/s.png" type="image/x-icon">
+    <!-- Loading Bootstrap -->
+    <link href="../Flat-UI-master/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Loading Flat UI -->
+    <link href="../Flat-UI-master/css/flat-ui.css" rel="stylesheet">
+    <link href="../Flat-UI-master/css/demo.css" rel="stylesheet">
+    <link href="../Flat-UI-master/css/mystyle.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="../Flat-UI-master/js/html5shiv.js"></script>
+      <script src="../Flat-UI-master/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body onload="init();">
+    <div class="container">
+      
+      <a id="top"></a> 	
+      <div class="page-header">
+        <h3>INT422</h3>
+	<p>
+	  INT422 - Internet III - Web Programming on Windows - 
+	  <a href="http://www.senecacollege.ca/"><img src="../Flat-UI-master/images/seneca_logo.png" alt="Seneca"></a> College
+	</p>
+      </div> <!-- /page-header -->	  
+	  
+      <div class="row demo-row">
+          <nav class="navbar navbar-inverse navbar-embossed" role="navigation">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-02">
+                <span class="sr-only">Toggle navigation</span>
+              </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse-02">
+              <ul class="nav navbar-nav navbar-left">
+				<li><a href="https://scs.senecac.on.ca/%7Ewei.song/index.html"><span class="fui-user"></span></a></li>
+                <li><a href="#top">Announcements</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#standards">Standards</a></li>
+				<li><a href="#resources">Resources<span class="navbar-unread">1</span></a></li>
+                <li><a href="https://ict.senecacollege.ca/course/int422" target="_blank">Outline</a></li>
+               </ul>
+            </div><!-- /.navbar-collapse -->
+          </nav><!-- /navbar -->	
+      </div> <!-- /row -->	
+	
+      
+      <div class="demo-row typography-row">
+        <div class="demo-content">
+	  <h3>
+	    <!--img src="../Flat-UI-master/images/announcements.png" alt="">&nbsp;-->
+	    Announcements
+	  </h3>
+	  
+	  <h3 class="demo-panel-title">Welcome to INT422!</h3>
+	  <p>This webpage is for INT422 course in the Summer of 2017. Make sure to read the <a href="#standards">course
+	     standards</a> and <a href="https://scs.senecac.on.ca/course/int422">course outline</a>.
+	     The weekly lecture notes, assignments and labs can be reached from the weekly schedule below.
+	  </p>
+	  <br>
+	</div><!-- /demo-content -->
+      </div><!-- /demo-row -->
+  
+  
+      <a id="schedule"></a> 
+      <div class="demo-row typography-row">
+        <div class="demo-content">
+	  <h3>
+        <!-- <img src="../Flat-UI-master/images/icons/svg/calendar.svg" alt="">&nbsp;&nbsp;-->
+	    <canvas id="calendarCanvas" width="100" height="100">
+	      <img src="INT422-Wei.Song_files/calendar_background.png" alt="">
+	    </canvas>&nbsp;&nbsp;
+	    INT422 Weekly Schedule&nbsp;&nbsp;
+	    <a href="#top" class="back">^</a>
+	  </h3>
+	  <br>
+	  <p>INT422 - Summer 2017
+	    <span class="legend">
+	      LEGEND:
+	      <button type="button" class="btn btn-xs"
+				  title="The task or lecture has not be released yet."
+				  onclick="alert(this.title);">Not Available
+	      </button>
+	      <button type="button" class="btn btn-xs btn-inverse"
+				  title="For released lectures, tasks or examples."
+				  onclick="alert(this.title);">Released
+	      </button>
+	      <button type="button" class="btn btn-xs btn-danger"
+				  title="Indicates a task is due or a test will be held in this week."
+				  onclick="alert(this.title);">Task Due
+	      </button>
+	      <button type="button" class="btn btn-xs btn-info"
+				  title="For references, solutions or notifications."
+				  onclick="alert(this.title);">References
+	      </button>
+	    </span>
+	  </p>
+	  
+	  <table class="table table-bordered">
+	    <thead>
+	      <tr id="row0">
+			<th class="center">Wk<br>#</th>
+			<th class="center">Start-End<br>Date</th>
+			<th class="center">Topic *<br>&nbsp;</th>
+			<th style="width:8em;">Lecture,<br>Test</th>
+			<th style="width:8em;">Assignment,<br>Lab, Example</th>
+	      </tr>
+	    </thead>
+	    <tbody>
+	      <tr id="row1">
+			<th class="center">1</th>
+			<td>May 8 - 12</td>
+			<td>
+			  <ul>
+				<li>Introduction to the course's topics</li>
+				<li>Getting started – dev tools, ASP.NET MVC, C#, writing classes</li>
+				<li>Lifecycle of a request in ASP.NET MVC; hands-on Assignment 1</li>
+				<li>Creating objects and collections; hands-on data delivery</li>
+				<li>HTML Forms and controllers; hands-on data gathering</li>
+			  </ul>
+			</td>
+			<td>
+			  <button type="button" title="Course Introduction"
+					  class="btn btn-xs btn-inverse"
+					  onclick='window.open("lectures/INT422-CourseIntro.pdf", "_blank","");'
+					  >Welcome
+			  </button>
+			  <br>
+			  <button type="button" title="Lecture Notes for Week 1"
+					  class="btn btn-xs btn-inverse"
+					  onclick='window.open("lectures/INT422-Lecture1.html", "_blank","");'
+					  >Lecture 1
+			  </button>
+			  <br>
+			  <button type="button" title="Lecture Notes for Week 1 part 2"
+					  class="btn btn-xs btn-inverse"
+					  onclick='window.open("lectures/INT422-Lecture1-2.html", "_blank","");'
+					  >Lecture 1-2
+			  </button>
+			  <br>
+			  <button type="button" title="Test 0 (0%): on Tuesday, at the beginning of the class time slot."
+					  class="btn btn-xs btn-info"
+					  onclick="alert(this.title);">Test 0 (0%) 
+			  </button>
+			</td>
+			<td>		  
+			  <button type="button" title="Assignment 1 (3%) "
+					  class="btn btn-xs btn-inverse"
+					  onclick='window.open("assignments/INT422-Assignment1.html", "_blank","");'
+					  >Assign 1 (3%) 
+			  </button>&nbsp;		  
+			  <br>
+			  <button type="button" title="Code examples for this week"
+					  class="btn btn-xs btn-info"
+					  onclick='window.open("code/Week_01.zip", "_blank","");'
+					  >Code Examples 
+			  </button>
+			  <br>
+			  <button type="button" title="How to get Visual Studio 2015 Enterprise from the Microsoft Imagine Premium WebStore"
+					  class="btn btn-xs btn-info"
+					  onclick='window.open("common/HowToUseMsImagine.html", "_blank","");'
+					  >Get VS2015 ent.
+			  </button>
+			</td>
+	      </tr>
+	      <tr id="row2">
+			<th class="center">2</th>
+			<td>May 15 - 19</td>
+			<td>
+			  <ul>
+				<li>Data persistence introduction</li>
+				<li>System design guidance – data store, data manager,</li>
+				<li>view models, and use cases</li>
+				
+				<li>Get data from a user; HTML Forms refresher</li>
+				<li>More about the Razor View Engine</li>
+				<li>Introduction to scaffolding</li>
+				<li>Data persistence and management intro</li>
+				<li>Hands-on Assignment 2</li>		
+			  </ul>
+			</td>
+			<td>
+			  <button type="button" title="Test 1 (3%): on Tuesday, at the beginning of the class time slot."
+					  class="btn btn-xs btn-info"
+					  onclick="alert(this.title);">Test 1 (3%) 
+			  </button>
+			  <br>
+			  <button type="button" title="Lecture Notes for Week 2"
+					  class="btn btn-xs btn-inverse"
+					  onclick='window.open("lectures/INT422-Lecture2.html", "_blank","");'
+					  >Lecture 2
+			  </button>
+			  <button type="button" title="Lecture Notes for Week 2 part 2"
+					  class="btn btn-xs btn-inverse"
+					  onclick='window.open("lectures/INT422-Lecture2-2.html", "_blank","");'
+					  >Lecture 2-2
+			  </button>
+			</td>	  
+			<td>
+			  <button type="button" title="Assignment 2 (4%) "
+					  class="btn btn-xs btn-inverse"
+					  onclick='window.open("assignments/INT422-Assignment2.html", "_blank","");'
+					  >Assign 2(4%) 
+			  </button>
+			  <br>
+			  <button type="button" title="Code examples for this week"
+					  class="btn btn-xs btn-info"
+					  onclick='window.open("code/Week_02.zip", "_blank","");'
+					  >Code Examples 
+			  </button>
+			  <br>
+			  <button type="button" title='Web app project template v1'
+					  class="btn btn-xs btn-info"
+					  onclick='window.open("templates/Web%20app%20project%20template%20v1.zip", "_blank","");'
+					  >Project Template v1
+			  </button>
+			  <br>
+			</td>
+	      </tr>		
+	      <tr id="row3">
+			<th class="center">3</th>
+			<td>May 23 - 26</td>
+			<td>
+			  <ul>
+				<li>Handling the edit existing and delete item patterns</li>
+				<li>Introduction to data annotations, associations among entities</li>
+				<li>LINQ (Language-Integrated Query)</li>
+				<li>Patterns wrap-up and summary</li>
+				<li>More about LINQ; selecting, filtering, sorting</li>
+				<li>Hands-on Assignment 3</li>
+			  </ul> 
+			</td>
+			<td>
+			  <button type="button" title="Test 2 (5%): on Tuesday, at the beginning of the class time slot."
+					  class="btn btn-xs btn-info"
+					  onclick="alert(this.title);"
+					  >Test 2 (5%)  
+			  </button>
+			  <br>
+			  <button type="button" title="Lecture Notes for Week 3"
+					  class="btn btn-xs btn-inverse"
+					  onclick='window.open("lectures/INT422-Lecture3.html", "_blank","");'
+					  >Lecture 3
+			  </button>
+			  <br>
+			  <button type="button" title="Lecture Notes for Week 3 Part 2"
+					  class="btn btn-xs btn-inverse"
+					  onclick='window.open("lectures/INT422-Lecture3-2.html", "_blank","");'
+					  >Lecture 3-2
+			  </button>
+			</td>
+			<td>
+			  <button type="button" title="Assignment 3 (4%) "
+					  class="btn btn-xs btn-inverse"
+					  onclick='window.open("assignments/INT422-Assignment3.html", "_blank","");'
+					  >Assign 3 (4%) 
+			  </button>
+			  <br>
+			  <button type="button"
+					  title="Submit completed worksheet on the Blackboard before the end of Saturday of week 4. And print out a hard copy for your own use as a quick reference in the future."
+					  class="btn btn-xs btn-inverse"
+					  onclick='window.open("common/patterns-summary-single-entity.docx", "_blank","");'
+					  >Home work (2%) 
+			  </button>
+			  <br>
+			  <button type="button" title="Code examples for this week"
+					  class="btn btn-xs btn-info"
+					  onclick='window.open("code/Week_03.zip", "_blank","");'
+					  >Code Examples 
+			  </button>
+			</td>
+	      </tr>
+	      <tr id="row4">
+			<th class="center">4</th>
+			<td>May 29 - June 2</td>
+			<td>
+			  <ul>
+				<li>Associations among entities</li>
+				<li>Continue working with associated data</li>
+				<li>Introduction to debugging</li>
+				<li>Hands-on Assignment 4</li>
+			  </ul>
+			</td>
+			<td>
+			  <button type="button" title="Test 3 (5%): on Tuesday, at the beginning of the class time slot."
+					  class="btn btn-xs btn-info"
+					  onclick="alert(this.title);"
+					  >Test 3 (5%) 
+			  </button>
+			  <br>
+			  <button type="button" title="Lecture Notes for Week 4"
+					  class="btn btn-xs btn-inverse"
+					  onclick='window.open("lectures/INT422-Lecture4.html", "_blank","");'
+					  >Lecture 4
+			  </button>
+			  <br>
+			  <button type="button" title="Lecture Notes for Week 4 part 2"
+					  class="btn btn-xs btn-inverse"
+					  onclick='window.open("lectures/INT422-Lecture4-2.html", "_blank","");'
+					  >Lecture 4-2
+			  </button>
+			</td>
+			<td>
+			  <button type="button" title="Assignment 4 (4%) "
+					  class="btn btn-xs btn-inverse"
+					  onclick='window.open("assignments/INT422-Assignment4.html", "_blank","");'
+					  >Assign 4 (4%) 
+			  </button>
+			  <br>
+			  <button type="button" title="Code examples for this week"
+					  class="btn btn-xs btn-info"
+					  onclick='window.open("code/Week_04.zip", "_blank","");'
+					  >Code Examples 
+			  </button>
+			  <br>
+			  <button type="button"
+					  title="Design Model Classes - Chinook Sample Database, Version 1"
+					  class="btn btn-xs btn-info"
+					  onclick='window.open("https://scs.senecac.on.ca/~wei.song/int422/common/chinook_designmodelclasses.png", "_blank","");'
+					  >Chinook DMC
+			  </button>
+			</td>
+	      </tr>
+	      <tr id="row5">
+			<th class="center">5</th>
+			<td>June 5 - 9</td>
+			<td>
+			  <ul>
+				<li>HTML Form building for associated data scenarios</li>
+                <li>Bootstrap introduction</li>
+				<li>Continue working with associated data</li>
+                <li>Hands-on Assignment 5</li>
+			  </ul>
+			</td>
+			<td>
+			  <button type="button" title="Test 4 (4%): on Tuesday, at the beginning of the class time slot."
+					  class="btn btn-xs btn-info"
+					  onclick="alert(this.title);"
+					  >Test 4 (4%) 
+			  </button>
+			  <br>
+			  <button type="button" title="Lecture Notes for Week 5"
+					  class="btn btn-xs btn-inverse"
+					  onclick='window.open("lectures/INT422-Lecture5.html", "_blank","");'
+					  >Lecture 5
+			  </button>
+			  <br>
+			  <button type="button" title="Lecture Notes for Week 5 part 2" 
+					  class="btn btn-xs btn-inverse"
+					  onclick='window.open("lectures/INT422-Lecture5-2.html", "_blank","");'
+					  >Lecture 5-2
+			  </button>
+			</td>
+			<td>
+			  <button type="button" title="Assignment 5 (4%)"
+					  class="btn btn-xs btn-inverse"
+					  onclick='window.open("assignments/INT422-Assignment5.html", "_blank","");'
+					  >Assign 5 (4%) 
+			  </button>
+			  <br>
+			  <button type="button" title="Code examples for this week"
+					  class="btn btn-xs btn-info"
+					  onclick='window.open("code/Week_05.zip", "_blank","");'
+					  >Code Examples 
+			  </button>
+			</td>
+	      </tr>
+	      <tr id="row6">
+			<th class="center">6</th>
+			<td>June 12 - 16</td>
+			<td>
+			  <ul>    
+				<li>More HTML Form building for associated data scenarios</li>
+				<li>Continue working with associated data</li>
+				<li>Hands-on Assignment 6</li>
+			  </ul>
+			</td>
+			<td>
+			  <button type="button" title="Test 5 (5%): on Tuesday, at the beginning of the class time slot."
+					  class="btn btn-xs btn-info"
+					  onclick="alert(this.title);"
+					  >Test 5 (5%)
+			  </button>
+			  <br>
+			  <button type="button" title="Lecture Notes for Week 6"
+					  class="btn btn-xs btn-inverse"
+					  onclick='window.open("lectures/INT422-Lecture6.html", "_blank","");'
+					  >Lecture 6
+			  </button>
+			  <br>
+			  <button type="button" title="Lecture Notes in pdf"
+					  class="btn btn-xs btn-inverse"
+					  onclick='window.open("lectures/INT422-Lecture6-2.html", "_blank","");'
+					  >Lecture 6-2
+			  </button>
+			</td>
+			<td>
+			  <button type="button" title="Assignment 6 (4%) "
+					  class="btn btn-xs btn-inverse"
+					  onclick='window.open("assignments/INT422-Assignment6.html", "_blank","");'
+					  >assign 6 (4%) 
+			  </button>
+			  <br>
+			  <button type="button" title="Code examples for this week"
+					  class="btn btn-xs btn-info"
+					  onclick='window.open("code/Week_06.zip", "_blank","");'
+					  >Code Examples 
+			  </button>
+			</td>
+	      </tr>
+	      <tr id="row7">
+			<th class="center">7</th>
+			<td>June 19 - 23</td>
+			<td>
+			  <ul>
+				<li>Security topics introduction</li>
+				<li>Microsoft Azure services introduction</li>
+				<li>Hands-on with Azure</li>
+				<li>Get started with Assignment 7</li>
+			  </ul>
+			</td>
+			<td>
+			  <button type="button" title="Test 6 (5%): on Tuesday, at the beginning of the class time slot."
+					  class="btn btn-xs btn-info"
+					  onclick="alert(this.title);"
+					  >Test 6 (5%) 
+			  </button>
+			  <br>
+			  <button type="button" title="Lecture Notes for Week 7"
+					  class="btn btn-xs btn-inverse"
+					  onclick='window.open("lectures/INT422-Lecture7.html", "_blank","");'
+					  >Lecture 7
+			  </button>
+			  <br>
+			  <button type="button" title="Lecture Notes for Week 7 part2"
+					  class="btn btn-xs btn-inverse"
+					  onclick='window.open("lectures/INT422-Lecture7-2.html", "_blank","");'
+					  >Lecture 7-2
+			  </button>
+			</td>
+			<td>
+			  <button type="button" title="Assignment 7 (2%) "
+					  class="btn btn-xs btn-inverse"
+					  onclick='window.open("assignments/INT422-Assignment7.html", "_blank","");'
+					  >Assign 7 (2%) 
+			  </button>
+			  <br>
+			  <button type="button" title="Code examples for this week"
+					  class="btn btn-xs btn-info"
+					  onclick='window.open("code/Week_07.zip", "_blank","");'
+					  >Code Examples 
+			  </button>
+			</td>
+	      </tr>
+	      <tr id="row8">
+			<th class="center">-</th>
+			<td>June 26 - 30</td>
+			<td><span style="color: red;"><b>Study Week </b></span></td>
+			<td>&nbsp;</td>
+			<td>
+			  
+			</td>
+		  </tr>
+		  <tr id="row9">
+			<th class="center">8</th>
+			<td>July 4 - 7</td>
+			<td>
+			  <ul>
+				<li>New persistent data store creation, design model classes</li>
+				<li>Configuring Migrations</li>
+				<li>Get started with Assignment 8</li>
+			  </ul>
+			</td>
+			<td>
+			  <button type="button" title="Test 7 (5%): on Tuesday, at the beginning of the class time slot."
+					  class="btn btn-xs btn-info"
+					  onclick="alert(this.title);"
+					  >Test 7 (5%)
+			  </button>
+			  <br>
+			  <button type="button" title="Lecture Notes for Week 8"
+					  class="btn btn-xs btn-inverse"
+					  onclick='window.open("lectures/INT422-Lecture8.html", "_blank","");'
+					  >Lecture 8
+			  </button>
+			  <br>
+			  <button type="button" title="Lecture Notes for Week 8 part 2"
+					  class="btn btn-xs btn-inverse"
+					  onclick='window.open("lectures/INT422-Lecture8-2.html", "_blank","");'
+					  >Lecture 8-2
+			  </button>
+			</td>
+			<td>
+			  <button type="button" title="Assignment 8 (6%) "
+					  class="btn btn-xs btn-inverse"
+					  onclick='window.open("assignments/INT422-Assignment8.html", "_blank","");'
+					  >Assign 8 (6%) 
+			  </button>
+			  <br>
+			  <button type="button" title="Code examples for this week"
+					  class="btn btn-xs btn-info"
+					  onclick='window.open("code/Week_08.zip", "_blank","");'
+					  >Code Examples 
+			  </button>
+			  <br>
+			  <button type="button" title="Web app project template v4 (which replaces the v2 template)"
+					  class="btn btn-xs btn-info"
+					  onclick='window.open("templates/Web app project template v2.zip", "_blank","");'
+					  >Project Template v2
+			  </button>
+			  <br>
+																		                            <br>		  
+			</td>
+	      </tr>
+	      <tr id="row10">
+			<th class="center">9</th>
+			<td>July 10 - 14</td>
+			<td>
+			  <ul>
+				<li>Security scenarios, design and coding tactics</li>
+				<li>Gracefully handling HTTP 404 and other exceptions</li>				
+			  </ul>
+			</td>
+			<td>
+			  <button type="button" title="Test 8 (4%): on Tuesday, at the beginning of the class time slot."
+					  class="btn btn-xs btn-info"
+					  onclick="alert(this.title);"
+					  >Test 8 (4%)
+			  </button>
+			  <br>
+			  <button type="button" title="Lecture Notes for Week 9"
+					  class="btn btn-xs btn-inverse"
+					  onclick='window.open("lectures/INT422-Lecture9.html", "_blank","");'
+					  >Lecture 9
+			  </button>
+			  <br>
+			  <button type="button" title="Lecture Notes for Week 9 Part 2"
+					  class="btn btn-xs btn-inverse"
+					  onclick='window.open("lectures/INT422-Lecture9-2.html", "_blank","");'
+					  >Lecture 9-2
+			  </button>
+			</td>
+			<td>
+			  <button type="button" title="Code examples for this week"
+					  class="btn btn-xs btn-info"
+					  onclick='window.open("code/Week_09.zip", "_blank","");'
+					  >Code Examples 
+			  </button>
+			  <br>
+			</td>
+	      </tr>
+	      <tr id="row11"  >
+			<th class="center">10</th>
+			<td>July 17 - 21</td>
+			<td>
+			  <ul>
+				<li>Handling non-text media types in web apps – capture, storage, delivery</li>
+				<li>Get started on Assignment 9</li>
+			  </ul>		  
+			</td>
+			<td>
+			  <button type="button" title="Test 9 (5%): on Tuesday, at the beginning of the class time slot."
+					  class="btn btn-xs btn-info"
+					  onclick="alert(this.title);"
+					  >Test 9 (5%)
+			  </button>
+			  <br>
+			  <button type="button" title="Lecture Notes for Week 10"
+					  class="btn btn-xs btn-inverse"
+					  onclick='window.open("lectures/INT422-Lecture10.html", "_blank","");'
+					  >Lecture 10
+			  </button>
+			  <br>
+			  <button type="button" title="Lecture Notes for Week 10"
+					  class="btn btn-xs btn-inverse"
+					  onclick='window.open("lectures/INT422-Lecture10-2.html", "_blank","");'
+					  >Lecture 10-2
+			  </button>
+			</td>
+			<td>
+			  <button type="button" title="Assignment 9 (10%) "
+					  class="btn btn-xs btn-inverse"
+					  onclick='window.open("assignments/INT422-Assignment9.html", "_blank","");'
+					  >Assign 9 (9%) 
+			  </button>
+			  <br>
+			  <button type="button" title="Code examples for this week"
+					  class="btn btn-xs btn-info"
+					  onclick='window.open("code/Week_10.zip", "_blank","");'
+					  >Code Examples 
+			  </button>
+			  <br>
+			  <!--button type="button" title="Web app project A9 - project template"
+					  class="btn btn-xs btn-info"
+					  onclick='window.open("templates/Web app project template A9.zip", "_blank","");'
+					  >Project Template A9
+			  </button>
+			  <br-->
+			  <button type="button" title="Web app project A9 - project template"
+					  class="btn btn-xs btn-info"
+					  onclick='window.open("templates/project_template_A9_new.zip", "_blank","");'
+					  >Proj Template A9 new
+			  </button>
+			</td>
+	      </tr>
+	      <tr id="row12">
+			<th class="center">11</th>
+			<td>July 24 - 28</td>
+			<td>
+			  <ul>
+				<li>Partial views</li>
+				<li>Using JavaScript and Ajax to enhance user interaction</li>
+				<li>Brief introduction to creating a web service endpoint</li>
+				<li>Continue working on Assignment 9</li>
+			  </ul>
+			</td>
+			<td>
+			  <button type="button"
+					  title="Test 10 (4%): on Tuesday, in the middle of the class time slot."
+					  class="btn btn-xs btn-info"
+					  onclick="alert(this.title);"
+					  >Test 10 (4%)  
+			  </button>
+			  <br>
+			  <button type="button" title="Lecture Notes for Week 11"
+					  class="btn btn-xs btn-inverse"
+					  onclick='window.open("lectures/INT422-Lecture11.html", "_blank","");'
+					  >Lecture 11
+			  </button>
+			  <button type="button" title="Lecture Notes for Week 11 part 2"
+					  class="btn btn-xs btn-inverse"
+					  onclick='window.open("lectures/INT422-Lecture11-2.html", "_blank","");'				  
+					  >Lecture 11-2
+			  </button>
+			</td>
+			<td>
+			   <button type="button" title="Assignment 9 (10%) "
+					   class="btn btn-xs"					   
+					   style="color:lightgrey;"
+					   >Assign 10 (8%) *
+			  </button>
+			  <br>
+			  <button type="button" title="Code examples for this week"
+					  class="btn btn-xs btn-info"
+					  onclick='window.open("code/Week_11.zip", "_blank","");'
+					  >Code Examples 
+			  </button>
+			</td>
+	      </tr>
+	      <tr id="row13">
+			<th class="center">12</th>
+			<td>Aug. 1 - 4</td>
+			<td>
+			  <ul>
+				<li>Bulk data loading, and initial data</li>
+				<li>Work on Assignment(s)</li>
+			  </ul>
+			</td>
+			<td>
+			  <button type="button" title="Test 11 (5%): on Tuesday, at the beginning of the class time slot."
+					  class="btn btn-xs btn-info"
+					  onclick="alert(this.title);"
+					  >Test 11 (5%)  
+			  </button>
+			  <br>
+			  <button type="button" title="Lecture Notes for Week 12"
+					  class="btn btn-xs btn-inverse"
+					  onclick='window.open("lectures/INT422-Lecture12.html", "_blank","");'
+					  >Lecture 12
+			  </button>
+			  <br>
+			  <button type="button" title="Lecture Notes for Week 12 part 2"
+					  class="btn btn-xs btn-inverse"
+					  onclick='window.open("lectures/INT422-Lecture12-2.html", "_blank","");'
+					  >Lecture 12-2
+			  </button>
+			</td>
+			<td>
+			  <button type="button" title="Code examples for this week"
+					  class="btn btn-xs btn-info"
+					  onclick='window.open("code/Week_12.zip", "_blank","");'
+					  >Code Examples 
+			  </button>
+			</td>
+	      </tr>
+	      <tr id="row14">
+			<th class="center">13</th>
+			<td>Aug. 8 - 11</td>
+			<td>
+			  <ul>
+				<li>No new topics today – optional attendance</li>
+				<li>Professors will be available in-class to help you with outstanding assignments</li>
+				<li>This is the last class/session of the term</li>
+			  </ul>
+			</td>
+			<td>
+			  &nbsp;
+			</td>
+			<td>
+			  <a href="#">&nbsp;</a>
+			</td>
+		  </tr>
+		  <tr id="row15">
+			<th class="center">14</th>
+			<td>Aug. 14 - 18</td>
+			<td><span style="color: red;"><b>Final Exam Period </b>(this course does not have a final exam)</span></td>
+			<td>
+			   &nbsp;
+			</td>
+			<td>&nbsp;</td>
+	      </tr>
+	    </tbody>
+	  </table>
+	</div><!-- /demo-content -->
+      </div><!-- /demo-row -->
+      <p style="text-align: center;">* Subject to change</p>
+      <br><br>
+      <br><br>
+      
+      <a id="standards"></a>
+      <div class="demo-row typography-row">
+        <div class="demo-content">
+	  <h3>
+	    <img src="../Flat-UI-master/images/icons/svg/retina.svg" alt="">&nbsp;&nbsp;
+	    Course Standards&nbsp;&nbsp;
+	    <a href="#top" class="back">^</a>
+	  </h3>
+	  <br>
+	  <p>For General Class Standards please refer also to the appropriate section on my home page from the link of <a href="https://scs.senecac.on.ca/~wei.song/index.html#standards">https://scs.senecac.on.ca/~wei.song/index.html#standards</a>.</p>
+	  <p>For Seneca College Information Technology Acceptable Use Policy please go to the link at
+	    <a href="https://scs.senecac.on.ca/page/computer-studies-academic-procedure">
+	      https://scs.senecac.on.ca/page/computer-studies-academic-procedure</a> </p>
+	  <br>
+	</div><!-- /demo-content -->
+      </div><!-- /demo-row -->
+      
+      <div class="row">
+	    <div class="col-xs-12">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Quizzes, Tests and Exam</h3>
+            </div>
+			  
+            <div class="panel-body">
+			  <ul>
+				<li>There will be about 11 tests in the semester with 50% final marks in total. 
+				</li>
+				<li>No final exam.</li>
+			  </ul>
+			</div>
+		  </div>
+		</div>
+      </div><!-- / row -->
+      
+      <div class="row">
+	    <div class="col-xs-12">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Labs and assignments</h3>
+            </div>
+			
+            <div class="panel-body">
+			  <ul>
+				<li>There will be 9 or 10 assignments in the semester with 50% final marks in total. 
+				</li>
+				<li>Late penalties: 10% for each day. Late after more than 5 days or reworked submissions will get the marks up to 50%.</li>
+			  </ul>
+			</div>
+		  </div>
+		</div>
+      </div><!-- / row -->
+	  
+      <div class="row">
+	    <div class="col-xs-12">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Evaluation</h3>
+            </div>
+			
+            <div class="panel-body">
+			  <table style="margin: 0 25px;">
+				<tr>
+				  <td style="padding-right: 50px;">9 or 10 assignments </td>
+				  <td style="padding-right: 50px;">(3%, 4%, or up to 10%)</td>
+				  <td>50%</td>
+				</tr><tr>
+				  <td>11 tests</td>
+				  <td>(3%, 4%, or up to 10%)</td>
+				  <td>50%</td>
+				</tr>
+				<tr>
+				  <td>Final exam</td>
+				  <td></td>
+				  <td>0%</td>
+				</tr>
+				<tr>
+				  <td>Total </td>
+				  <td></td>
+				  <td>100%</td>
+				</tr>
+			  </table>
+			  <br>
+			  <p>** Grades will be posted on Blackboard **</p>
+
+			</div>
+		  </div>
+		</div>
+      </div><!-- / row -->
+      
+      <div class="row">
+	
+	    <div class="col-xs-12">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Lectures</h3>
+            </div>
+            <div class="panel-body">
+			  <ul>
+				<li>be on time for class </li>
+				<li>respect other students</li>
+				<li>Lectures will explain and demonstrate the skills and concepts you need to complete a Lab assignment.</li>
+				<li>Formal attendance may be kept. Frequent absence will be noted. You are responsible on all tests and labs
+					for any material covered or assigned in class. People who do not come to class generally have significant
+					problems completing their labs and traditionally do not perform  well on their tests.</li>
+				<li>Classes will start on time and late arrivals must not disturb the class. Enter quietly and take a seat.
+					Do not disturb the class by asking questions about what took place before your arrival. </li>
+				<li>If you missed a class, please ask a colleague, not the instructor, about what was covered. An email to an
+					instructor about what was covered in class will get a response along the lines of "that was covered in class".</li>
+				<li>After the lecture, you are expected to work on the lab in preparation for the Interactive Lecture (Lab) Period.</li>
+			  </ul>
+            </div>
+          </div>
+	  
+      </div><!-- /.col-sm-4 -->
+	
+      </div><!-- / row -->
+
+      <div class="row">
+	    <div class="col-xs-12">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Promotion Policy</h3>
+            </div>
+			
+            <div class="panel-body">
+			  <p>To obtain a credit in this subject, a student must:</p>
+			  <ul>
+				<li>Achieve a passing grade on the term test(s).</li>
+				<li>Achieve a passing grade on the overall course.</li>
+				<li>Successfully complete all assignments.</li>
+			  </ul>
+			</div>
+		  </div>
+		</div>
+      </div><!-- / row -->
+
+
+	    
+      <a id="resources"></a>
+      <div class="demo-row typography-row">
+        <div class="demo-content">
+	  <h3>
+	    <img src="../Flat-UI-master/images/icons/svg/compas.svg" alt="">&nbsp;&nbsp;
+	    Resources&nbsp;&nbsp;
+	    <a href="#top" class="back">^</a>
+	  </h3>
+	  <p>This part has information about and links to resources that you will use in this course.</p>
+	  
+	  <h3 class="demo-panel-title">Developer tools</h3>
+	  <p>We will use this code editor (also known as “IDE”, integrated development environment):
+		<b>Visual Studio Enterprise 2015 (with Update 2 or later)</b>
+	  </p>
+	  <dl>
+		<dt>Do you need Visual Studio for your personal computer?</dt>
+		<dd>Read this article to learn
+		    <a href=https://scs.senecac.on.ca/~wei.song/int422/common/HowToUseMsImagine.html target=_blank>
+			  how to get it from the Microsoft Imagine Premium WebStore</a>.
+		</dd>
+	  </dl>
+	  <p>We will also use <b>browsers</b> – the latest versions of:</p>
+	  <ul>
+		<li>IE</li>
+		<li>Edge</li>
+		<li>Firefox</li>
+		<li>Chrome</li>
+		<li>Optional – Opera, Safari on Mac, mobile device browsers</li>
+	  </ul>
+	  
+	  <h3 class="demo-panel-title">Required textbook</h3>
+	  <p>For the Summer 2017 semester, this is the required textbook:
+	    <a target=_blank href="http://seneca.summon.serialssolutions.com/?q=Professional+ASP.NET+MVC+5+#!/search?ho=t&l=en&q=Professional%20ASP.NET%20MVC%205%20">
+		  <b>Professional ASP.NET MVC 5</b>
+		</a>
+	  </p>
+	  <table>
+	   <tr>
+		<td>
+		  <a target=_blank href="http://seneca.summon.serialssolutions.com/?q=Professional+ASP.NET+MVC+5+#!/search?ho=t&l=en&q=Professional%20ASP.NET%20MVC%205%20">  
+			<img src=https://scs.senecac.on.ca/~wei.song/int422/common/textbook.jpg alt="textbook">
+		  </a>	
+		</td>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+		<td>
+		  by Galloway, Wilson, Allen, Matson<br>
+		  Publisher’s <a
+		  href="http://www.wrox.com/WileyCDA/WroxTitle/Professional-ASP-NET-MVC-5.productCd-1118794753.html"
+		  target="_blank">information about the book</a><br>
+		  Sample <a
+		  href="http://media.wiley.com/product_data/excerpt/53/11187947/1118794753-8.pdf"
+		  target="_blank">Chapter 1 in PDF</a><br>
+		  The Seneca @ York book store should have this book. This book is also on&nbsp;Safari Books Online<br>
+		  Also available from <span>indigo.ca</span> and <a
+		  href="https://amazon.ca" data-skimwords-word=amazon.ca
+		  data-skim-creative=500005>amazon.ca</a><br>
+		  
+		</td>
+	  </table>
+
+	  <h3 class="demo-panel-title">Required online resources</h3>
+	  <dl>
+		<dt>There are three required online resources:</dt>
+		<dd><a href=http://www.asp.net/mvc>ASP.NET MVC web site</a>
+		</dd>
+		<dd><a href="https://msdn.microsoft.com/en-us/library/dn467680%28v=vs.108%29.aspx">
+		  MSDN Library – ASP.NET Web Frameworks</a>
+		</dd>
+		<dd><a href='https://developer.mozilla.org/en-US/'>Mozilla Developer Network</a>
+		</dd>
+	  </dl>
+	  <p>You  <del>should</del> must know (and love!) the series of RFCs that describe HTTP,
+	    <a href=http://tools.ietf.org/html/rfc7230>7230</a> through 7235. If you want a friendlier
+		introduction to HTTP, read <a href=https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol>
+		its Wikipedia article.</a></p>
+	  <br>
+	  
+	  <dl>
+		<dt>The <b>ASP.NET MVC web site</b> has many resources to introduce you to the platform. Here’s a
+		  sampling of some useful getting-started documents:</dt>
+		<dd><a href=https://docs.asp.net/en/latest/tutorials/first-mvc-app/index.html>Getting Started with ASP.NET MVC 6</a>
+		</dd>
+		<dd><a href=http://www.asp.net/mvc/overview/getting-started/introduction/getting-started>Getting Started with ASP.NET MVC 5</a>
+		</dd>
+		<dd><a href=https://mva.microsoft.com/en-US/training-courses/introduction-to-asp-net-mvc-8322>Introduction to ASP.NET MVC</a> (an 8-hour online course)
+		</dd>
+	  </dl>
+	  <br>
+	  
+	  <dl>
+		<dt>The Microsoft Developer Network Library, also known as the MSDN Library, is vast, with thousands of documents. The links below will get you started with a selection of the most useful and important documents.</dt>
+		<dd><a href=https://msdn.microsoft.com/en-us/library/z1zx9t92.aspx>Introduction to the C# Language and the .NET Framework</a>
+		</dd>
+		<dd><a href=https://msdn.microsoft.com/en-us/library/ms165079.aspx>Getting Started with Visual Studio</a>
+		</dd>
+		<dd><a href=https://msdn.microsoft.com/en-us/library/b142f8e7.aspx>What is a ‘Solution’? What is a ‘Project’?</a>
+		</dd>
+		<dd><a href=https://msdn.microsoft.com/en-us/library/ms173063.aspx>Using the Visual C# Development Environment</a>
+		</dd>
+		<dd><a href=http://visualstudioshortcuts.com/2015/>Visual Studio 2015 keyboard shortcuts</a>
+		</dd>
+		<dd><a href=https://msdn.microsoft.com/en-us/library/67ef8sbd.aspx>C# Programming Guide</a>
+		</dd>
+		<dd><a href=https://msdn.microsoft.com/en-us/library/618ayhy6.aspx>C# Reference</a>
+		</dd>
+		<dd><a href=https://msdn.microsoft.com/en-us/library/ms228593.aspx>C# Language Specification version 5.0</a>
+		</dd>
+	  </dl>
+	  <p>This document is also on your computer if you have Visual Studio 2015 installed, at this path:
+		C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC#\Specifications\1033\</p>
+	  <p>For version 6.0 – which is in Visual Studio 2015 – documentation is on CodePlex and GitHub (because the language and compiler are open source projects).</p>
+	  <br>
+	  
+	  <dl>
+		<dt>There are several C# coding standards documents that will help you learn to write good C# code:</dt>
+		<dd>In the C# Programming Guide (linked above),
+		<a href=https://msdn.microsoft.com/en-us/library/ff926074.aspx>C# Coding Conventions</a>
+		</dd>
+		<dd>From the Framework Design Guidelines:
+		  <ul>
+			<li><a href='https://msdn.microsoft.com/en-us/library/ms229012(v=vs.110).aspx'>Names of Type Members</a></li>
+			<li><a href='https://msdn.microsoft.com/en-us/library/ms229045(v=vs.110).aspx'>General Naming Conventions</a></li>
+			<li><a href='https://msdn.microsoft.com/en-us/library/ms229043(v=vs.110).aspx'>Capitalization Conventions</a></li>
+		  </ul>
+		</dd>
+	  </dl>
+	  <br>
+	  
+	  <dl>
+		<dt>The Mozilla Developer Network (MDN) is also vast, with thousands of documents. It is a trusted and authoritative source for web developer information. Of interest:</dt>
+		<dd><a href=https://developer.mozilla.org/en-US/docs/Web/Guide/HTML>HTML5 Guide</a>,
+		  including <a href=https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms>HTML Forms Guide</a>,
+		  and the <a href=https://developer.mozilla.org/en-US/docs/Web/HTML/Element>HTML5 Element List</a>
+		</dd>
+		<dd><a href=https://developer.mozilla.org/en-US/docs/Web/CSS>CSS Reference</a>
+		</dd>
+		<dd><a href=https://developer.mozilla.org/en-US/docs/Web/JavaScript>JavaScript Reference</a>
+		</dd>
+		<dd><a href=https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model>DOM Reference</a>
+		</dd>
+	  </dl>
+	  <br>
+	  
+	  <h3 class="demo-panel-title">Online resources that are acceptable, and unacceptable</h3>
+	  <p>As citizens in an online world, we are often tempted to seek answers online. We use a search engine,
+	    enter a few words, and boom! we go through the results.
+	  </p>
+	  <p>Manage your temptations. Much of the content you find online will not be useful. Some will waste
+	    your time. Some is just plain wrong.
+	  </p>
+	  <p>Until you gain some competence, use the “acceptable” sources of content (below), and avoid the
+	    “unacceptable” ones.
+	  </p>
+	  <p>DO NOT use a search engine to locate results – you’re not skilled enough yet to evaluate the quality
+	    and usefulness of the results. Instead, use trusted and/or authoritative sources, as noted during the
+		course.
+	  </p>
+	  <br>
+	 
+	  <dl>
+		<dt>Acceptable sources include:</dt>
+		<dd>
+		  <ul>
+			<li>The “required online resources” list, above</li>
+			<li>Any ASP.NET Web API-specific content by Mike Wasson, Henrik Nielsen, Howard Dierking, Rick
+			  Anderson, Darrel Miller, Glenn Block, Scott Hanselman, Julie Lerman, Dino Esposito, Jimmy
+			  Bogard, Ladislav Mrnka, and others to be added to this list as time passes</li>
+			<li>General web topic discussions by Roy Fielding, and others to be added to this list</li>
+			<li>Content on StackOverflow.com that’s tagged with [asp.net-mvc]</li>
+			<li>Content on this website</li>
+		  </ul>
+		</dd>
+	  </dl>
+	  <br>
+	  
+	  <dl>
+		<dt>Unacceptable sources include:</dt>
+		<dd>
+		  <ul>
+			<li>In general, search engine results, which do not link to the above sources</li>
+		  </ul>
+		</dd>
+	  </dl>
+	  <br>
+	  
+	  <p>Be very careful about the content you find “out there” on the web. If you have concerns about the
+	    veracity and usability of something that you find, send a link to it to your professor, and you will
+		receive feedback and commentary on it. (Maybe the content that you find will work its way up to the
+		“acceptable” part of the list.)
+	  </p>
+	  
+	  <p>DO NOT use content from W3Schools. That web site is not authoritative. Some of its coverage is out
+	    of date. Its existence and business model is not compatible with the needs of a web programming
+		student. A full argument is <a href=http://www.w3fools.com/>here</a>. Here’s
+		<a href=http://www.impressivewebs.com/w3schools-ugly-bad-good/>another article</a> by Louis Lazaris.
+	  </p>
+	  <br>
+	  
+	  <p>This Paul Ford article in The New Yorker (November 2014) describes a part of the governance structure
+	    for HTML5. Very interesting, and a recommended read:
+		<a href=http://www.newyorker.com/tech/elements/group-rules-web>On HTML5 and the Group that Rules the Web</a>
+	  </p>
+	  <br>
+
+	  <br>
+	  </div><!-- /demo-content -->
+      </div><!-- /demo-row --> 
+        
+    </div> <!-- /container -->
+    
+    <footer>
+      <div class="container">
+        <div class="row">
+	  <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <li><a href="../index.html">Home&nbsp;&nbsp;<span class="fui-user"></span></a></li>
+	      <li><a href="https://scs.senecac.on.ca/">School of ICT</a></li>
+	      <li><a href="https://my.senecacollege.ca/webapps/portal/frameset.jsp">MySeneca</a></li>
+	      <li><a href="http://www.senecacollege.ca/">Seneca College</a></li>
+	      <li><a href="https://inside.senecacollege.ca/its/index.html">Help Desk</a></li>
+	      <li><a href="http://seneca.libguides.com/content.php?pid=53490">Library</a></li>
+	      <li>
+		  
+	      </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+ 
+          <div class="col-xs-7"> </div> <!-- /col-xs-7 -->
+        </div>
+      </div>
+    </footer>
+    
+    
+    <!-- Load JS here for greater good =============================-->
+    <script src="../Flat-UI-master/js/jquery-1.8.3.min.js"></script>
+    <script src="../Flat-UI-master/js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="../Flat-UI-master/js/jquery.ui.touch-punch.min.js"></script>
+    <script src="../Flat-UI-master/js/bootstrap.min.js"></script>
+    <script src="../Flat-UI-master/js/bootstrap-select.js"></script>
+    <script src="../Flat-UI-master/js/bootstrap-switch.js"></script>
+    <script src="../Flat-UI-master/js/flatui-checkbox.js"></script>
+    <script src="../Flat-UI-master/js/flatui-radio.js"></script>
+    <script src="../Flat-UI-master/js/jquery.tagsinput.js"></script>
+    <script src="../Flat-UI-master/js/jquery.placeholder.js"></script>
+    <script src="../Flat-UI-master/js/jquery.stacktable.js"></script>
+    <script src="../Flat-UI-master/js/application.js"></script>
+    <!--script>
+      alert("This page is not available!");
+      window.location = "../index.html";
+    </script-->
+    <script src="../Flat-UI-master/js/myscript.js"></script>
+  </body>
+</html>

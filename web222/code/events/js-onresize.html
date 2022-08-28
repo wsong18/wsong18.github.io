@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <title>WEB222</title>
+   <style> 
+      body { margin: 0 18%; }
+   </style>
+   <script type='text/javascript'>
+       window.onload = init;
+	   
+	   function init() {
+		 document.body.onresize = function() {
+			document.body.style.background = "yellow";
+		 };
+	   }
+   </script>
+</head>
+<body onresize='alert("You have resized the window");'>
+  <h3><mark>onresize event handler</mark></h3>
+  <p>Resize the browser window and see what happens. </p>
+
+  <br>
+  <!-- for downloading source files -->
+  <p><a href="" Download>Download</a></p>
+</body>
+</html>

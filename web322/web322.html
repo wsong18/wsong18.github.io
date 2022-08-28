@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>WEB322-Wei.Song</title>
+    <meta name="viewport" content="width=1000, initial-scale=1.0, maximum-scale=1.0">
+
+    <!-- Loading Bootstrap -->
+    <link href="../Flat-UI-master/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Loading Flat UI -->
+    <link href="../Flat-UI-master/css/flat-ui.css" rel="stylesheet">
+    <link href="../Flat-UI-master/css/demo.css" rel="stylesheet">
+    <link href="../Flat-UI-master/css/mystyle.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="../Flat-UI-master/js/html5shiv.js"></script>
+      <script src="../Flat-UI-master/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body onload="init();">
+    <div class="container">
+      
+      <a id="top"></a> 	
+      <div class="page-header">
+        <h3>WEB322</h3>
+	<p>
+	  WEB322 - Web Programming Tools and Framework - 
+	  <a href="http://www.senecacollege.ca/"><img src="../Flat-UI-master/images/seneca_logo.png" alt="Seneca"></a> College
+	</p>
+      </div> <!-- /page-header -->	  
+	  
+      <div class="row demo-row">
+          <nav class="navbar navbar-inverse navbar-embossed" role="navigation">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-03">
+                <span class="sr-only">Toggle navigation</span>
+              </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse-03">
+              <ul class="nav navbar-nav navbar-left">
+				<li><a href="https://scs.senecac.on.ca/%7Ewei.song/index.html"><span class="fui-user"></span></a></li>
+                <li><a href="#top">Announcements</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#standards">Standards</a></li>
+				<li><a href="#resources">Resources<span class="navbar-unread">1</span></a></li>
+				<li><a href="https://github.com/Seneca-WEB322/examples">Examples(GitHub)<span class="navbar-unread">1</span></a></li>
+                <li><a href="https://ict.senecacollege.ca/course/web322?q=course/web322" target="_blank">Outline</a></li>
+               </ul>
+            </div><!-- /.navbar-collapse -->
+          </nav><!-- /navbar -->	
+      </div> <!-- /row -->	
+	
+      
+      <div class="demo-row typography-row">
+        <div class="demo-content">
+	  <h3>
+	    <!--img src="../Flat-UI-master/images/announcements.png" alt="">&nbsp;-->
+	    Announcements
+	  </h3>
+	  
+	  <h3 class="demo-panel-title">Welcome to WEB322!</h3>
+	  <p>This webpage is for WEB322 course in the second-half semester of Summer 2017. Make sure to read the <a href="#standards">course
+	     standards</a> and <a href="https://ict.senecacollege.ca/course/web322?q=course/web322">course outline</a>.
+	     The weekly lecture notes, assignments and labs can be reached from the weekly schedule below.
+	  </p>
+	  <br>
+	</div><!-- /demo-content -->
+      </div><!-- /demo-row -->
+  
+  
+      <a id="schedule"></a> 
+      <div class="demo-row typography-row">
+        <div class="demo-content">
+	  <h3>
+        <!-- <img src="../Flat-UI-master/images/icons/svg/calendar.svg" alt="">&nbsp;&nbsp;-->
+	    <canvas id="calendarCanvas" width="100" height="100">
+	      <img src="../Flat-UI-master/images/seneca_logo.png/calendar_background.png" alt="">
+	    </canvas>&nbsp;&nbsp;
+	    WEB322 Weekly Schedule&nbsp;&nbsp;
+	    <a href="#top" class="back">^</a>
+	  </h3>
+	  <br>
+	  <p>WEB322 - Summer 2017
+	    <span class="legend">
+	      LEGEND:
+	      <button type="button" class="btn btn-xs"
+				  title="The task or lecture has not be released yet."
+				  onclick="alert(this.title);">Not Available
+	      </button>
+	      <button type="button" class="btn btn-xs btn-primary"
+				  title="For released lectures, tasks or examples."
+				  onclick="alert(this.title);">Notes
+	      </button>
+	      <button type="button" class="btn btn-xs btn-inverse"
+				  title="Indicates a task is due or a test will be held in this week."
+				  onclick="alert(this.title);">Tasks
+	      </button>
+	      <button type="button" class="btn btn-xs btn-info"
+				  title="For references, solutions or notifications."
+				  onclick="alert(this.title);">Task Due, Refs
+	      </button>
+	    </span>
+	  </p>
+	  
+	  <table class="table table-bordered">
+	    <thead>
+	      <tr id="row0">
+			<th class="center">Wk<br>#</th>
+			<th class="center" style="width:7em;">Start-End<br>Date</th>
+			<th class="center">Topic *<br>&nbsp;</th>
+			<th style="width:7em;">Notes,Tasks<br>Assigned</th>
+			<th style="width:6em;">Task Due, Refs</th>
+	      </tr>
+	    </thead>
+	    <tbody>
+	      <tr id="row1">
+			<th class="center">1</th>
+			<td>May 8 - 12</td>
+			<td>
+			  <b>Course Introduction</b>
+			  <ul>
+				<li>Development Environment / Technology / Tools</li>
+				<li>Web Servers & HTTP Request / Response Paradigm</li>
+				<li>HTTP Protocol Overview
+				  <ul>
+					<li>Verbs</li>
+					<li>Status Codes</li>
+					<li>Headers</li>
+					<li>Request / Response Formats</li>
+			      </ul>
+				</li>
+			  </ul>
+			</td>
+			<td>
+			  <button type="button" title="Lecture Notes for Week 1"
+					  class="btn btn-xs btn-primary"
+					  onclick='window.open("http://zenit.senecac.on.ca/~patrick.crawford/index.php/web322/course-notes/week1-class1/", "_blank","");'
+					  >Notes
+			  </button>
+			  <br>
+			  <button type="button" title="Assignment 1 (5%) "
+					  class="btn btn-xs btn-inverse"
+					  onclick='window.open("", "_blank","");'
+					  >Assign 1 (5%) 
+			  </button>
+			</td>
+			<td>		  
+			  
+			</td>
+	      </tr>
+	      <tr id="row2">
+			<th class="center">2</th>
+			<td>May 15 - 19</td>
+			<td>
+			  <b>Node.js Introduction</b>
+			  <ul>
+				<li>What is Node.js / Why use it?</li>
+				<li>Modules explained</li>
+				<li>NPM – Node Package Manager</li>
+				<li>Package.json Explained</li>
+				<li>Building a simple web server using Node.js with Express.js 
+				  <ul>
+					<li>Files / Directory Structure</li>
+					<li>Downloading dependencies (Express.js) with NPM</li>
+					<li>Coding a simple server using Express</li>
+					<liSending Data back from a “get” request></li>
+				  </ul> 				  
+				</li>
+			  </ul>
+			</td>
+			<td>
+			  <button type="button" title="Lecture Notes for Week 2"
+					  class="btn btn-xs btn-primary"
+					  onclick='window.open("http://zenit.senecac.on.ca/~patrick.crawford/index.php/web322/course-notes/week2-class1/", "_blank","");'
+					  >Notes
+			  </button>
+			  <br>
+			  <button type="button" title="Assignment 2 (5%) "
+					  class="btn btn-xs btn-inverse"
+					  onclick='window.open("", "_blank","");'
+					  >Assign 2 (5%) 
+			  </button>
+			  <br>
+			  <button type="button" title="Test 1 (5%)"
+					  class="btn btn-xs btn-inverse"
+					  >Test 1 (5%)  
+			  </button>
+			</td>	  
+			<td>
+			  <button type="button" title="Assignment due "
+					  class="btn btn-xs btn-info"
+					  >Assign 1 Due 
+			  </button>
+			</td>
+	      </tr>		
+	      <tr id="row3">
+			<th class="center">3</th>
+			<td>May 23 - 26</td>
+			<td>
+			  <b>JavaScript Concept Review</b>
+			  <ul>
+				<li>Object Oriented JavaScript Review:
+				  <ul>
+					<li>Custom Objects using Object Literal Notation & Function Constructors</li>
+					<li>Prototypal Inheritance</li>
+				  </ul>
+				</li>
+				<li>Advanced JavaScript / ES6 Features:
+				  <ul>
+					<li>Promises/li>
+					<li>Error handling with try / catch / finally & throw</li>
+					<li>“var” vs “let” vs “const”</li>
+					<li>“this” keyword & arrow functions (lexical “this”)</li>
+				  </ul>
+				</li>
+			  </ul> 
+			</td>
+			<td>
+			  <button type="button" title="Lecture Notes for Week 3"
+					  class="btn btn-xs btn-primary"
+					  onclick='window.open("http://zenit.senecac.on.ca/~patrick.crawford/index.php/web322/course-notes/week3-class1/", "_blank","");'
+					  >Notes
+			  </button>
+			  <br>
+			  <button type="button" title="Assignment 3 (5%) "
+					  class="btn btn-xs btn-inverse"
+					  onclick='window.open("", "_blank","");'
+					  >Assign 3 (5%) 
+			  </button>
+			  <br>
+			  <button type="button" title="Test 2 (5%)"
+					  class="btn btn-xs btn-inverse"
+					  >Test 2 (5%)  
+			  </button>
+			</td>
+			<td>
+			  <button type="button" title="Assignment due "
+					  class="btn btn-xs btn-info"
+					  >Assign 2 Due 
+			  </button>
+			</td>
+	      </tr>
+	      <tr id="row4">
+			<th class="center">4</th>
+			<td>May 29 - June 2</td>
+			<td>
+			  <b>Express.js Introduction</b>
+			  <ul>
+				<li>What is Express.js?</li>
+				<li>Configuration & Settings</li>
+				<li>Routing</li>
+				<li>Middleware/li>
+				<li>Error Handling</li>
+				<li>Chrome Dev tools – Network tab, Response data</li>
+			  </ul>
+			</td>
+			<td>
+			  <button type="button" title="Lecture Notes for Week 8"
+					  class="btn btn-xs btn-primary"
+					  onclick='window.open("http://zenit.senecac.on.ca/~patrick.crawford/index.php/web322/course-notes/week4-class1/", "_blank","");'
+					  >Notes
+			  </button>
+			  <br>
+			  <button type="button" title="Test 3 (5%)"
+					  class="btn btn-xs btn-inverse"
+					  >Test 3 (5%)  
+			  </button>
+			</td>
+			<td></td>
+	      </tr>
+	      <tr id="row5">
+			<th class="center">5</th>
+			<td>June 5 - 9</td>
+			<td>
+			  <b>Processing Forms with Express.js</b>
+			  <ul>
+				<li>HTML Forms Review</li>
+				<li>Processing Forms in Express.js 
+				  <ul>
+					<li>HTTP Post & Urlencoded data</li>
+					<li>Content-Type in POST header & enctype in HTML forms</li>
+					<li>body-parser module (urlencoded form data)</li>
+					<li>Multer module (multipart form data – file uploads)</li>
+				  </ul>
+				</li>
+			  </ul>
+			</td>
+			<td>
+			  <button type="button" title="Lecture Notes for Week 5"
+					  class="btn btn-xs btn-primary"
+					  onclick='window.open("http://zenit.senecac.on.ca/~patrick.crawford/index.php/web322/course-notes/week5-class1/", "_blank","");'
+					  >Notes
+			  </button>
+			  <br>
+			  <button type="button" title="Assignment 4 (5%) - Released on Saturday June 10, 2017 "
+					  class="btn btn-xs btn-inverse"
+					  onclick='window.open("", "_blank","");'
+					  >Assign 4 (5%) 
+			  </button>
+			  <br>
+			  <button type="button" title="Test 4 (5%)"
+					  class="btn btn-xs btn-inverse"
+					  >Test 4 (5%)  
+			  </button>
+			</td>
+			<td>
+			  <button type="button" title="Assignment due "
+					  class="btn btn-xs btn-info"
+					  >Assign 3 Due 
+			  </button>
+			</td>
+	      </tr>
+	      <tr id="row6">
+			<th class="center">6</th>
+			<td>June 12 - 16</td>
+			<td>
+			  <b>Template Engines – Handlebars.js</b>
+			  <ul>
+				<li>Template Engines in Express.js 
+				  <ul>
+					<li>What is a Template Engine / Why do we need one</li>
+				  </ul>
+				</li>
+				<li>Handlebars.js 
+				  <ul>
+					<li>Including the express-handlebars module</li>
+					<li>Getting Started with Handlebars.js & Samples</li>
+					<li>Block Expressions / Helpers</li>
+					<li>Built-In Helpers: if, unless, each</li>
+					<li>Partials</li>
+				  </ul>
+				</li>
+			  </ul>
+			</td>
+			<td>
+			  <button type="button" title="Lecture Notes for Week 6"
+					  class="btn btn-xs btn-primary"
+					  onclick='window.open("http://zenit.senecac.on.ca/~patrick.crawford/index.php/web322/course-notes/week6-class1/", "_blank","");'
+					  >Notes
+			  </button>
+			  <br>
+			  <button type="button" title="Test 1 (5%)"
+					  class="btn btn-xs btn-inverse"
+					  >Test 5 (5%)  
+			  </button>
+			</td>
+			<td></td>
+	      </tr>
+	      <tr id="row7">
+			<th class="center">7</th>
+			<td>June 19 - 23</td>
+			<td>
+			  <b>Relational Database</b>
+			  <ul>
+				<li>Setting up a “Postgres” Database</li>
+				<li>Downloading the “sequelize” & “pg” modules</li>
+				<li>Object-Relational Mapping Explained & Requesting Data</li>
+				<li>Returning & Formatting data using Handlebars.js</li>
+			  </ul>
+			</td>
+			<td>
+			  <button type="button" title="Lecture Notes for Week 7"
+					  class="btn btn-xs btn-primary"
+					  onclick='window.open("http://zenit.senecac.on.ca/~patrick.crawford/index.php/web322/course-notes/week7-class1/", "_blank","");'
+					  >Notes
+			  </button>
+			  <br>
+			  <button type="button" title="Assignment 5 (5%) - Released on Saturday June 24, 2017"
+					  class="btn btn-xs btn-inverse"
+					  onclick='window.open("", "_blank","");'
+					  >Assign 5 (5%) 
+			  </button>
+			  <br>
+			  <button type="button" title="Test 6 (5%)"
+					  class="btn btn-xs btn-inverse"
+					  >Test 6 (5%)  
+			  </button>
+			</td>
+			<td>
+			  <button type="button" title="Assignment due on Friday June 10, 2017"
+					  class="btn btn-xs btn-info"
+					  >Assign 4 Due 
+			  </button>
+			</td>
+	      </tr>
+	      <tr id="row8">
+			<th class="center">-</th>
+			<td>June 26 - 30</td>
+			<td><span style="color: red;"><b>Study Week </b></span></td>
+			<td>&nbsp;</td>
+			<td>
+			  
+			</td>
+		  </tr>
+		  <tr id="row9">
+			<th class="center">8</th>
+			<td>July 4 - 7</td>
+			<td>
+			  <b>MongoDB</b>
+			  <ul>
+				<li>What is a NoSQL Database? Advances / Disadvantages</li>
+				<li>Configuring a NoSQL Database (MongoDB)</li>
+				<li>Downloading / installing MongoDB Driver (module) for Node</li>
+				<li>Queries</li>
+				<li>Tools – Robo 3T (Robomongo) </li>
+				<li>Mongoose.js</li>
+				<li>Schema, indexes</li>
+			  </ul>
+			</td>
+			<td>
+			  <button type="button" title="Lecture Notes for Week 8"
+					  class="btn btn-xs btn-primary"
+					  onclick='window.open("http://zenit.senecac.on.ca/~patrick.crawford/index.php/web322/course-notes/week8-class1/", "_blank","");'
+					  >Notes
+			  </button>
+			  <br>
+			  <button type="button" title="Assignment 6 (5%) - released on Friday July 8, 2017"
+					  class="btn btn-xs btn-inverse"
+					  onclick='window.open("", "_blank","");'
+					  >Assign 6 (5%) 
+			  </button>
+			  <br>
+			  <button type="button" title="Test 7 (5%)"
+					  class="btn btn-xs btn-inverse"
+					  >Test 7 (5%)  
+			  </button>
+			</td>
+			<td>
+			  <button type="button" title="Assignment due on Friday July 8, 2017"
+					  class="btn btn-xs btn-info"
+					  >Assign 5 Due 
+			  </button>												                            <br>		  
+			</td>
+	      </tr>
+	      <tr id="row10">
+			<th class="center">9</th>
+			<td>July 10 - 14</td>
+			<td>
+			  <b>AJAX Review / Practical AJAX Programming</b>
+			  <ul>
+				<li>Review: What is AJAX? Why do we need it?</li>
+				<li>Requesting data (JSON) on the Client Side using JavaScript 
+				  <ul>
+					<li>XMLHttpRequest Object</li>
+					<li>Handling State Changes & Processing the Response</li>
+					<li>Updating the DOM</li>
+				  </ul>
+				</li>
+				<li>Processing XMLHttpRequest Requests on the server and returning data</li>
+				<li>RESTful API Introduction</li>
+			  </ul>
+			</td>
+			<td>
+			  <button type="button" title="Lecture Notes for Week 9"
+					  class="btn btn-xs btn-primary"
+					  onclick='window.open("http://zenit.senecac.on.ca/~patrick.crawford/index.php/web322/course-notes/week9-class1/", "_blank","");'
+					  >Notes
+			  </button>
+			  <br>
+			  <button type="button" title="Test 8 (5%)"
+					  class="btn btn-xs btn-inverse"
+					  >Test 8 (5%)  
+			  </button>
+			</td>
+			<td></td>
+	      </tr>
+	      <tr id="row11"  >
+			<th class="center">10</th>
+			<td>July 17 - 21</td>
+			<td>
+			  <b>Managing State Information</b>
+			  <ul>
+				<li>Cookies</li>
+				<li>Sessions</li>
+				<li>Authorization vs. Authentication</li>
+			  </ul>		  
+			</td>
+			<td>
+			  <button type="button" title="Lecture Notes for Week 10"
+					  class="btn btn-xs btn-primary"
+					  onclick='window.open("http://zenit.senecac.on.ca/~patrick.crawford/index.php/web322/course-notes/week10-class1/", "_blank","");'
+					  >Notes
+			  </button>
+			  <br>
+			  <button type="button" title="Assignment 7 (5%) - released on Friday July 22, 2017"
+					  class="btn btn-xs btn-inverse"
+					  onclick='window.open("https://my.senecacollege.ca/bbcswebdav/pid-7251312-dt-content-rid-18294874_2/courses/WEB322SCC.06170.2174/WEB322%20Assignment%207.pdf", "_blank","");'
+					  >Assign 7 (5%) 
+			  </button>
+			  <br>
+			  <button type="button" title="Test 9 (5%)"
+					  class="btn btn-xs btn-inverse"
+					  >Test 9 (5%)  
+			  </button>
+			</td>
+			<td>
+			  <button type="button" title="Assignment 6 due on Friday July 22, 2017"
+					  class="btn btn-xs btn-info"
+					  >Assign 6 Due 
+			  </button>
+			</td>
+	      </tr>
+	      <tr id="row12">
+			<th class="center">11</th>
+			<td>July 24 - 28</td>
+			<td>
+			  <b>Introduction to jQuery & Bootstrap Frameworks</b>
+			  <ul>
+				<li>jQuery Introduction 
+				  <ul>
+					<li>Selectors, event handlers, AJAX</li>
+				  </ul>
+				</li>
+				<li>Introduction to the Bootstrap UI Framework 
+				  <ul>
+					<li>Responsive Layouts, HTML / CSS & jQuery Components</li>
+				  </ul>
+				</li>
+			  </ul>
+			</td>
+			<td>
+			  <button type="button" title="Lecture Notes for Week 11"
+					  class="btn btn-xs btn-primary"
+					  onclick='window.open("http://zenit.senecac.on.ca/~patrick.crawford/index.php/web322/course-notes/week11-class1/", "_blank","");'
+					  >Notes
+			  </button>
+			  <br>
+			  <button type="button" title="Test 10 (5%)"
+					  class="btn btn-xs btn-inverse"
+					  >Test 10 (5%)  
+			  </button>
+			</td>
+			<td></td>
+	      </tr>
+	      <tr id="row13">
+			<th class="center">12</th>
+			<td>Aug. 1 - 4</td>
+			<td>
+			  <b>Security Considerations</b>
+			  <ul>
+				<li>HTTPS</li>
+				<li>Letsencypt.org, free https certificates forever</li>
+				<li>Password Encryption, bcrypt.js</li>
+			  </ul>
+			</td>
+			<td>
+			  <button type="button" title="Lecture Notes for Week 12"
+					  class="btn btn-xs btn-primary"
+					  onclick='window.open("http://zenit.senecac.on.ca/~patrick.crawford/index.php/web322/course-notes/week12-class1/", "_blank","");'
+					  >Notes
+			  </button>
+			  <br>
+			  <button type="button" title="Assignment 8 (5%) - released on on Friday Aug 5, 2017""
+					  class="btn btn-xs btn-inverse"
+					  onclick='window.open("https://my.senecacollege.ca/bbcswebdav/pid-7251325-dt-content-rid-18322945_2/courses/WEB322SCC.06170.2174/WEB322%20Assignment%208.pdf", "_blank","");'
+					  >Assign 8 (5%) 
+			  </button>
+			  <br>
+			  <button type="button" title="Test 11 (5%)"
+					  class="btn btn-xs btn-inverse"
+					  >Test 11 (5%)  
+			  </button>
+			</td>
+			<td>
+			  <button type="button" title="Assignment 7 due on Friday Aug 5, 2017"
+					  class="btn btn-xs btn-info"
+					  >Assign 7 Due 
+			  </button>
+			</td>
+	      </tr>
+	      <tr id="row14">
+			<th class="center">13</th>
+			<td>Aug. 8 - 11</td>
+			<td>
+			  <b>Course Review</b>
+			  <ul>
+				<li>Course Review</li>
+				<li>Help with any outstanding Projects</li>
+			  </ul>
+			</td>
+			<td>
+			  <button type="button" title="Test 12 (5%)"
+					  class="btn btn-xs btn-inverse"
+					  >Test 12 (5%)  
+			  </button>
+			</td>
+			<td>
+			  <button type="button" title="Assignment due on Friday Aug 12, 2017"
+					  class="btn btn-xs btn-info"
+					  >Assign 8 Due 
+			  </button>
+			</td>
+		  </tr>
+		  <tr id="row15">
+			<th class="center">14</th>
+			<td>Aug. 14 - 18</td>
+			<td><span style="color: red;"><b>Final Exam Period </b>(this course does not have a final exam)</span></td>
+			<td>
+			   &nbsp;
+			</td>
+			<td></td>
+	      </tr>
+	    </tbody>
+	  </table>
+	</div><!-- /demo-content -->
+      </div><!-- /demo-row -->
+      <p style="text-align: center;">* Subject to change</p>
+      <br><br>
+      <br><br>
+      
+      <a id="standards"></a>
+      <div class="demo-row typography-row">
+        <div class="demo-content">
+	  <h3>
+	    <img src="../Flat-UI-master/images/icons/svg/retina.svg" alt="">&nbsp;&nbsp;
+	    Course Standards&nbsp;&nbsp;
+	    <a href="#top" class="back">^</a>
+	  </h3>
+	  <br>
+	  <p>For General Class Standards please refer also to the appropriate section on my home page from the link of <a href="https://scs.senecac.on.ca/~wei.song/index.html#standards">https://scs.senecac.on.ca/~wei.song/index.html#standards</a>.</p>
+	  <p>For Seneca College Information Technology Acceptable Use Policy please go to the link at
+	    <a href="https://scs.senecac.on.ca/page/computer-studies-academic-procedure">
+	      https://scs.senecac.on.ca/page/computer-studies-academic-procedure</a> </p>
+	  <br>
+	</div><!-- /demo-content -->
+      </div><!-- /demo-row -->
+      
+      <div class="row">
+	    <div class="col-xs-12">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Quizzes, Tests and Exam</h3>
+            </div>
+			  
+            <div class="panel-body">
+			  <ul>
+				<li>There will be about 12 tests in the semester with 60% final marks in total. 
+				</li>
+				<li>No final exam.</li>
+				<li>A test missed for any reason will receive a grade of zero (0). This includes illness, travel delays, personal reasons, etc.</li>
+				<li>Make up tests will not be given.</li>
+				<li>The 2 lowest tests will be dropped.</li>
+			  </ul>
+			</div>
+		  </div>
+		</div>
+      </div><!-- / row -->
+      
+      <div class="row">
+	    <div class="col-xs-12">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Labs and assignments</h3>
+            </div>
+			
+            <div class="panel-body">
+			  <ul>
+				<li>There will be 8 assignments in the semester with 40% final marks in total. 
+				</li>
+				<li>Late Assignment submissions will not be accepted and will receive a grade of zero (0) if not complete by the due date</li>
+			    <li>The lowest assignment will be dropped</li>
+				<li>Students must successfully complete all assignments to pass the course</li>
+			  </ul>
+			</div>
+		  </div>
+		</div>
+      </div><!-- / row -->
+	  
+      <div class="row">
+	    <div class="col-xs-12">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Evaluation</h3>
+            </div>
+			
+            <div class="panel-body">
+			  <table style="margin: 0 25px;">
+				<tr>
+				  <td style="padding-right: 50px;">8 assignments </td>
+				  <td style="padding-right: 50px;">(5% each)</td>
+				  <td>50%</td>
+				</tr><tr>
+				  <td>12 tests</td>
+				  <td>(5% each)</td>
+				  <td>50%</td>
+				</tr>
+				<tr>
+				  <td>Final exam</td>
+				  <td></td>
+				  <td>0%</td>
+				</tr>
+				<tr>
+				  <td>Total </td>
+				  <td></td>
+				  <td>100%</td>
+				</tr>
+			  </table>
+			  <br>
+			  <p>** Grades will be posted on Blackboard **</p>
+
+			</div>
+		  </div>
+		</div>
+      </div><!-- / row -->
+      
+      <div class="row">
+	
+	    <div class="col-xs-12">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Lectures</h3>
+            </div>
+            <div class="panel-body">
+			  <ul>
+				<li>be on time for class </li>
+				<li>respect other students</li>
+				<li>Lectures will explain and demonstrate the skills and concepts you need to complete a Lab assignment.</li>
+				<li>Formal attendance may be kept. Frequent absence will be noted. You are responsible on all tests and labs
+					for any material covered or assigned in class. People who do not come to class generally have significant
+					problems completing their labs and traditionally do not perform  well on their tests.</li>
+				<li>Classes will start on time and late arrivals must not disturb the class. Enter quietly and take a seat.
+					Do not disturb the class by asking questions about what took place before your arrival. </li>
+				<li>If you missed a class, please ask a colleague, not the instructor, about what was covered. An email to an
+					instructor about what was covered in class will get a response along the lines of "that was covered in class".</li>
+				<li>After the lecture, you are expected to work on the lab in preparation for the Interactive Lecture (Lab) Period.</li>
+			  </ul>
+            </div>
+          </div>
+	  
+      </div><!-- /.col-sm-4 -->
+	
+      </div><!-- / row -->
+
+      <div class="row">
+	    <div class="col-xs-12">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Promotion Policy</h3>
+            </div>
+			
+            <div class="panel-body">
+			  <p>To obtain a credit in this subject, a student must:</p>
+			  <ul>
+				<li>Achieve an average of 50% or better for all tests</li>
+				<li>Achieve a passing grade on the overall course.</li>
+				<li>Successfully complete all assignments.</li>
+			  </ul>
+			</div>
+		  </div>
+		</div>
+      </div><!-- / row -->
+
+
+	    
+      <a id="resources"></a>
+      <div class="demo-row typography-row">
+        <div class="demo-content">
+	  <h3>
+	    <img src="../Flat-UI-master/images/icons/svg/compas.svg" alt="">&nbsp;&nbsp;
+	    Resources&nbsp;&nbsp;
+	    <a href="#top" class="back">^</a>
+	  </h3>
+	  <p>This part has information about and links to resources that you will use in this course.</p>
+	  
+	  <h3 class="demo-panel-title">Software and Developer Tools</h3>
+
+	  <ul>
+		<li><a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a></li>
+		<li>Modern Web Browser (<a href="https://www.google.ca/chrome/browser/" target="_blank">Chrome</a>, <a href="http://www.mozilla.org/firefox" target="_blank">Firefox</a>, <a href="https://www.microsoft.com/en-ca/windows/microsoft-edge" target="_blank">Edge</a>)</li>
+		<li><a href="https://nodejs.org/en/" target="_blank">Node.js</a></li>
+		<li><a href="https://git-scm.com/downloads" target="_blank">Git</a></li>
+		<li><a href="https://devcenter.heroku.com/articles/heroku-cli#download-and-install" target="_blank">Heroku CLI</a></li>
+		<li>[ see individual weekly notes for additional software that may be used during that week ]</li>
+	  </ul>
+
+	  <h3 class="demo-panel-title">Reference Material / Documentation</h3>
+	  <ul>
+		  <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">Mozilla Developer Network (JavaScript)</a></li>
+		  <li><a href="https://nodejs.org/api/" target="_blank">Node.js Documentation</a></li>
+		  <li><a href="https://expressjs.com/en/api.html" target="_blank">Express.js Documentation</a></li>
+		  <li><a href="https://git-scm.com/documentation" target="_blank">Git Documentation</a></li>
+		  <li><a href="https://devcenter.heroku.com/" target="_blank">Heroku Documentation</a></li>
+		  <li>[ see individual weekly notes for additional reference material ]</li>
+	  </ul>
+	  <br>
+
+	  <br>
+	  </div><!-- /demo-content -->
+      </div><!-- /demo-row --> 
+        
+    </div> <!-- /container -->
+    
+    <footer>
+      <div class="container">
+        <div class="row">
+	  <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <li><a href="../index.html">Home&nbsp;&nbsp;<span class="fui-user"></span></a></li>
+	      <li><a href="https://scs.senecac.on.ca/">School of ICT</a></li>
+	      <li><a href="https://my.senecacollege.ca/webapps/portal/frameset.jsp">MySeneca</a></li>
+	      <li><a href="http://www.senecacollege.ca/">Seneca College</a></li>
+	      <li><a href="https://inside.senecacollege.ca/its/index.html">Help Desk</a></li>
+	      <li><a href="http://seneca.libguides.com/content.php?pid=53490">Library</a></li>
+	      <li>
+		  
+	      </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+ 
+          <div class="col-xs-7"> </div> <!-- /col-xs-7 -->
+        </div>
+      </div>
+    </footer>
+    
+    
+    <!-- Load JS here for greater good =============================-->
+    <script src="../Flat-UI-master/js/jquery-1.8.3.min.js"></script>
+    <script src="../Flat-UI-master/js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="../Flat-UI-master/js/jquery.ui.touch-punch.min.js"></script>
+    <script src="../Flat-UI-master/js/bootstrap.min.js"></script>
+    <script src="../Flat-UI-master/js/bootstrap-select.js"></script>
+    <script src="../Flat-UI-master/js/bootstrap-switch.js"></script>
+    <script src="../Flat-UI-master/js/flatui-checkbox.js"></script>
+    <script src="../Flat-UI-master/js/flatui-radio.js"></script>
+    <script src="../Flat-UI-master/js/jquery.tagsinput.js"></script>
+    <script src="../Flat-UI-master/js/jquery.placeholder.js"></script>
+    <script src="../Flat-UI-master/js/jquery.stacktable.js"></script>
+    <script src="../Flat-UI-master/js/application.js"></script>
+    <!--script>
+      alert("This page is not available!");
+      window.location = "../index.html";
+    </script-->
+    <script src="../Flat-UI-master/js/myscript.js"></script>
+  </body>
+</html>

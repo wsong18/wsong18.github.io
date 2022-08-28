@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+   <title>Position</title>
+   <meta charset="utf-8">
+   <script>
+	  function changeof(value) {
+        document.querySelector("#texbox").style.overflow = value;
+	  }
+   </script>
+   <style type="text/css">
+	  #texbox {
+		 /* set dimension for the dive element */
+		 width:300px;
+		 height:120px;
+		 
+		 /* set position for the div element */
+		 position: absolute; /* relative */
+		 left:150px;
+		 top:150px;
+		  
+		 /* set overflow feature for the content of the div element */		 
+		 overflow: visible; /* auto;  hidden; visible; scroll; */
+		 
+		 background: lightblue;
+	  }
+   </style>
+</head>
+
+<body>
+   <h3>CSS Example: CSS Positioning & overflow property </h3>
+   <p>The div element is set to { position:absolute;
+		 left:150px;
+		 top:150px; }</p>
+   <div id="texbox">
+       This will have a blue background.
+       <p>Here's the text for a magazine-style column.<br/>
+       Here's the text for a magazine-style column.<br/>
+       Here's the text for a magazine-style column.<br/>
+       Here's the text for a magazine-style columnafsklllsfdakdalaskpppppppppppppppppppppppppppppppppppppppppppp.<br/>
+	   Here's the text for a magazine-style column.<br/>
+       Here's the text for a magazine-style column.<br/>
+       </p>	   
+   </div>
+   
+   <p>property overflow value:
+	  <input type=radio name=overflow value=scroll onclick=changeof(this.value)>scroll
+	  <input type=radio name=overflow value=auto onclick=changeof(this.value)>auto
+	  <input type=radio name=overflow value=hidden onclick=changeof(this.value)>hidden
+	  <input type=radio name=overflow value=visible onclick=changeof(this.value)>visible
+   </p>
+   
+  <!-- for download -->
+  <br><p><a href='' download>Download</a></p> 	 
+</body>

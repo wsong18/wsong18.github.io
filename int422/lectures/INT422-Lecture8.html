@@ -1,0 +1,1070 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<title>Lec 8</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Consolas;
+	panose-1:2 11 6 9 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Segoe UI Symbol";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:"Lucida Console";
+	panose-1:2 11 6 9 4 5 4 2 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:#954F72;
+	text-decoration:underline;}
+p
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+code
+	{font-family:"Courier New";}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:.5in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:.5in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink="#954F72" background=bgw.gif>
+
+<div class=WordSection1 
+     style="margin: 0.5in auto; max-width: 50em; min-width: 30em;">
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:18.0pt;
+font-family:"Arial",sans-serif'>INT422 - Lecture 8 : Part 1</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Design and create our own domain and design
+model, and its database. Security regarding class design and code workflows. </span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Test today</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Test 7&nbsp;is today, at&nbsp;the beginning of
+the timeslot, and will run approximately 18 minutes.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Textbook coverage</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>As previously announced, the textbook will have
+a supporting role as you learn new topics from these notes and your classroom
+sessions. Use the table-of-contents and the index to locate the topic, and then
+read about it there. A reminder: The textbook does not use view model classes
+in its discussions and code examples. We do.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Code example</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Custom Data Model, Secured, Car Business</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Theme for this week and next</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Before study week, we introduced <i>security
+topics</i> for ASP.NET MVC web apps.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>While studying the topic, we learned that the
+Visual Studio project template with security included the <i>persistent storage
+components</i>. It included a data context class, and we learned that its
+database had the data tables needed to implement security for a web app.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Today, and next week, we will build upon this
+knowledge, to learn about and use these topics:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Design and create our own data model</span><span
+     style='font-family:"Arial",sans-serif'> </span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Loading the model with some initial or
+     starter data</span><span style='font-family:"Arial",sans-serif'> </span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Making design changes to the model</span><span
+     style='font-family:"Arial",sans-serif'> </span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Publishing the web app to a public host</span><span
+     style='font-family:"Arial",sans-serif'> </span></li>
+</ul>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>While learning and using these topics, we will
+use secure coding techniques to protect some of the controller actions/methods.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Checkpoint: Your current
+knowledge about models and data</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Before we cover the new topics, let’s pause at
+this checkpoint, and briefly review your current knowledge about data models,
+and data persistence.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Weeks 2, 3, 4, 5, and 6</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>During these weeks, we used the Chinook sample
+database (customer, employee, invoice, track, album, etc.). This sample
+database was included in the new-project template that was provided by your
+teacher team.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><a
+href="https://scs.senecac.on.ca/~wei.song/int422/lectures/images/lec8-designmodelclasses.png"><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif;text-decoration:none'><img
+border=0 width=658 height=859 id="Picture 9"
+src="INT422-Lecture8_files/image001.png" alt=DesignModelClasses></span></a></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In the Models folder, you saw source code files
+that defined the classes for real-world entities/objects, and their
+associations with other objects. It was explained that a Visual Studio code
+generator created those classes by examining the structure of an existing
+database (Chinook). The take-away was that the app’s design model classes are
+defined in the Models folder.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'><img border=0 width=220 height=266
+id="Picture 8" src="INT422-Lecture8_files/image002.jpg"
+alt=model-classes-chinook></span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Also in the Models folder, you saw a source
+code file that defined the data context,&nbsp;which is the app’s gateway to the
+persistent store (database). It included DbSet&lt;TEntity&gt; collection
+property definitions for each entity in the design model. These properties
+could then be used by the Manager class methods, to perform typical data
+service tasks (fetch, add, edit, and delete).</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'><img border=0 width=463 height=315
+id="Picture 7" src="INT422-Lecture8_files/image003.jpg"
+alt=data-context-chinook></span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Week 7</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In week 7, we were introduced to security
+topics. We created new projects that used the built-in Visual Studio
+new-project template, configured to use “Individual User Accounts” security.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In the Models folder, you noticed that the
+source code files, and classes, were a bit different than before.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>First, there were no design model classes. That
+is by design. Visual Studio creates a new web app with the foundational components,
+and expects that you will add your own data model.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'><img border=0 width=258 height=97 id="Picture 6"
+src="INT422-Lecture8_files/image004.jpg"
+alt=model-classes-new-project-with-security></span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Next, you saw that the data context class was
+located in an IdentityModels.cs source code file. That too is by design. A web
+app with security needs the foundational components needed for identity
+management, authentication, and authorization. This source code file configures
+some of these components, including the data context.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'><img border=0 width=560 height=125
+id="Picture 5" src="INT422-Lecture8_files/image005.jpg"
+alt=data-context-new-project-with-security></span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>We’ll use this template for a few weeks, by
+itself (in a file &gt; new &gt; project scenario), or as part of a new project template
+provided by your teacher team.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Back to basics – persistent
+storage in an ASP.NET MVC web app</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In an ASP.NET MVC web app, persistent storage
+for the data model is provided by Entity Framework technologies.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Before continuing, review the </span><a
+href="https://scs.senecac.on.ca/~wei.song/int422/lectures/INT422-Lecture2.html"
+target="_blank"><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>week
+2 lecture notes page</span></a><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>,
+which introduced:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Persistent data storage, in a database</span><span
+     style='font-family:"Arial",sans-serif'> </span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Facade service, Entity Framework</span><span
+     style='font-family:"Arial",sans-serif'> </span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Design model classes</span><span
+     style='font-family:"Arial",sans-serif'> </span></li>
+</ul>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Since then, you have created web apps that
+included those components as part of the new-project template.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Can you create and configure these components
+yourself?</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Yes.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Do you need to?</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>No. Not for web apps that you create in this
+course.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>However, if you’re interested in
+creating your own persistence layer…</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>If you’re interested in creating your own
+persistence layer, this section lists the tasks that must be done.</span></p>
+
+<ol start=1 type=1>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Using the NuGet Package Manager Console,
+     install-package entityframework</span><span style='font-family:"Arial",sans-serif'>
+     </span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>While you are still using the console,
+     install-package automapper</span><span style='font-family:"Arial",sans-serif'>
+     </span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Add a connection string to the web app’s
+     Web.config source code file</span><span style='font-family:"Arial",sans-serif'>
+     </span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Write one or more design model classes</span><span
+     style='font-family:"Arial",sans-serif'> </span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Write a data context class (that inherits
+     from DbContext), and add DbSet&lt;TEntity&gt; properties for the design
+     model classes that will be persisted</span><span style='font-family:"Arial",sans-serif'>
+     </span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Add a “manager” class that will handle
+     data service tasks for the app</span><span style='font-family:"Arial",sans-serif'>
+     </span></li>
+</ol>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>If you do all these steps correctly, you will
+have a project that looks similar to one that uses one of the new-project
+templates that were created by your teacher team.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Moving on… understanding the
+new-project template that includes authentication</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>As noted above, a new project with security
+has&nbsp;source code files, and classes, that were a bit different from those
+you worked with earlier in the course:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>There were no design model classes</span><span
+     style='font-family:"Arial",sans-serif'> </span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>The data context class was located in an
+     IdentityModels.cs source code file</span><span style='font-family:"Arial",sans-serif'>
+     </span></li>
+</ul>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>This kind of project is ready for your own
+domain data model. All we have to do is add these pieces:</span></p>
+
+<ol start=1 type=1>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Using the NuGet Package Manager
+     Console,&nbsp;install-package automapper</span><span style='font-family:
+     "Arial",sans-serif'> </span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Write one or more design model classes</span><span
+     style='font-family:"Arial",sans-serif'> </span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>In the data context class, add
+     DbSet&lt;TEntity&gt; collection properties for the design model classes</span><span
+     style='font-family:"Arial",sans-serif'> </span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Add a “manager” class that will handle
+     data service tasks for the app</span><span style='font-family:"Arial",sans-serif'>
+     </span></li>
+</ol>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>This is still a lot of work. The teacher team
+has created another template that captures this work.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Understanding the new “Web app project v2”
+template</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>This new template includes starter code for the
+items above. You must do tasks 2 and 3, and obviously task 4.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Download it, and add it to your computer’s
+folder that holds new-project templates.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Create a new throw-away project, based on the
+new template. Build/compile, and then run the web app.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>When the web app loads, its front page tells
+you to complete these two important tasks:</span></p>
+
+<ol start=1 type=1>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Customize the role claims</span><span
+     style='font-family:"Arial",sans-serif'> </span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Write the design model classes</span><span
+     style='font-family:"Arial",sans-serif'> </span></li>
+</ol>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>A full tour of the web app’s features are
+highlighted on the <b>Task List</b>. Open it to view the list of “<b>Attention</b>”
+comment tokens.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'><img border=0 width=720 height=374
+id="Picture 4" src="INT422-Lecture8_files/image006.png"
+alt=template-v3-highlights></span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>If you run the “Register” action, you will
+notice that the form includes generic or placeholder names for the role claims.
+Click the image to open it full-size in a new tab/window.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><a
+href="https://scs.senecac.on.ca/~wei.song/int422/lectures/images/lec8-template-v3-register-roles.png"
+target="_blank"><span style='font-size:12.0pt;font-family:"Arial",sans-serif;
+text-decoration:none'><img border=0 width=722 height=395 id="Picture 3"
+src="INT422-Lecture8_files/image007.png" alt=template-v3-register-roles></span></a></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Notes: the Roles, e.g. RoleOne, RoleTwo,
+RoleThree, will not show up on the page until you load these roles in the
+persistent storage.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In the project template, they are defined in
+the GET form-building Register() method in the account controller:</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'><b><span style='font-size:10.0pt;
+line-height:107%;font-family:"Courier New";color:#00B050'>// Define your custom
+role claims here</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'><b><span style='font-size:10.0pt;
+line-height:107%;font-family:"Courier New";color:#00B050'>// However, in a
+real-world in-production app, you would likely maintain</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'><b><span style='font-size:10.0pt;
+line-height:107%;font-family:"Courier New";color:#00B050'>// a valid list of custom
+claims in persistent storage somewhere</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'><b><span style='font-size:10.0pt;
+line-height:107%;font-family:"Courier New";color:#0070C0'>Manager</span></b><b><span
+style='font-size:10.0pt;line-height:107%;font-family:"Courier New"'> m = <span
+style='color:#0070C0'>new</span> <span style='color:#0070C0'>Manager</span>();</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'><b><span style='font-size:10.0pt;
+line-height:107%;font-family:"Courier New";color:#0070C0'>var</span></b><b><span
+style='font-size:10.0pt;line-height:107%;font-family:"Courier New"'> roles =
+m.RoleClaimGetAllStrings();</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'><b>&nbsp;</b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'><b><span style='font-size:10.0pt;
+line-height:107%;font-family:"Courier New";color:#00B050'>// Define a register
+form</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'><b><span style='font-size:10.0pt;
+line-height:107%;font-family:"Courier New";color:#0070C0'>var</span> </b><b><span
+style='font-size:10.0pt;line-height:107%;font-family:"Courier New"'>form = <span
+style='color:#0070C0'>new</span></span> </b><b><span style='font-size:10.0pt;
+line-height:107%;font-family:"Courier New"'>RegisterViewModelForm();</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'><b><span style='font-size:10.0pt;
+line-height:107%;font-family:"Courier New"'>form.RoleList = <span
+style='color:#0070C0'>new</span></span> </b><b><span style='font-size:10.0pt;
+line-height:107%;font-family:"Courier New"'>MultiSelectList(roles);</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'><b>&nbsp;</b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'><b><span style='font-size:10.0pt;
+line-height:107%;font-family:"Courier New";color:#00B050'>// Send it to the
+view</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:10.0pt;font-family:"Courier New";color:#0070C0'>return</span> </b><b><span
+style='font-size:10.0pt;font-family:"Courier New"'>View(form);</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>As it states in the code comments, in a
+real-world in-production app, you would likely maintain a valid list of custom
+claims in persistent storage. The general approach is to define an entity set, </span><b><span
+style='font-family:Consolas;color:#2B91AF'>RoleClaim</span></b><span
+style='font-size:9.5pt;font-family:Consolas;color:#2B91AF'>,</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> in your design model,
+and use it as a “lookup table”.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Let’s look at task 2 (write one or more design
+model classes) in more detail now.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>New topic – defining and creating
+a new persistent store (i.e. database)</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>For the next few sections, open and study
+the&nbsp;</span><em><span style='font-size:12.0pt;font-family:"Calibri",sans-serif'>CustomStoreForCarBusiness</span></em><span
+style='font-size:12.0pt'>&nbsp;</span><span style='font-size:14.0pt;font-family:
+"Arial",sans-serif'> </span><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>code
+example.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In the DesignModelClasses.cs source code file,
+write classes for your domain objects.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Assume that our problem domain is the familiar
+car business. It has classes for Country, Manufacturer, and Vehicle. A country
+has zero or more manufacturers. A manufacturer has a collection of vehicles. A
+vehicle is associated with one manufacturer. </span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Remember these rules – conventions – when
+writing design model classes:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>To ease other coding tasks, the name of
+     the integer identifier property should be “Id”</span><span
+     style='font-family:"Arial",sans-serif'> </span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Collection properties (including
+     navigation properties) must be of type ICollection&lt;T&gt;</span><span
+     style='font-family:"Arial",sans-serif'> </span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Valid data annotations are pretty much
+     limited to [Required] and [StringLength(n)]</span><span style='font-family:
+     "Arial",sans-serif'> </span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>When defining an association between two
+     classes, navigation properties MUST be configured in both classes</span><span
+     style='font-family:"Arial",sans-serif'> </span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Required to-one navigation properties must
+     include the [Required] attribute</span><span style='font-family:"Arial",sans-serif'>
+     </span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Do NOT configure scalar properties (e.g.
+     int, double) with the [Required] attribute</span><span style='font-family:
+     "Arial",sans-serif'> </span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Initialize DateTime and collection
+     properties in a default constructor</span><span style='font-family:"Arial",sans-serif'>
+     </span></li>
+</ul>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Following these rules/conventions will ensure
+that the database is initialized and configured correctly, and will improve the
+quality of other coding tasks as you build the app.</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:18.0pt;font-family:"Segoe UI Symbol",sans-serif;color:#0070C0'>&#10077;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> Special note:</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>A few weeks ago, we
+wrote that you must NOT use the “virtual” keyword when defining navigation
+properties in your design model classes. <i>This is a reminder.</i></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>(If you are interested
+in the reason, “virtual” partly enables a feature – lazy loading – that we do
+not and must not use in web apps. By default, our web apps deactivates that
+feature. Adding “virtual” in this situation is both wrong and useless.)</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>After you write your design model classes, you
+should create/complete a <i>class diagram</i>. It’s an easy thing to do, and it
+will give you a visual way to verify that you have coded the design model
+classes correctly.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>After completing the design model classes,
+add&nbsp;DbSet&lt;TEntity&gt; properties to the IdentityModels.cs source code
+file.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Database creation – when? how?</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>When does the database actually get created by
+the database engine?</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Recall that the data context class is the
+“gateway” to the persistent data store.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>By convention, during the lifetime of an app,
+the <i>first time</i> a database is accessed – read or written –  the data
+context calls a “database initializer”. By default, the specific kind of
+database initializer that is called will <i>create</i> the database if it does
+not yet exist. (If the database <i>does</i> exist, then the database
+initializer will see that, and complete/exit/return without making any
+changes.)</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>New topic – adding new objects to
+the persistent store</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>After defining a data store, we can
+programmatically add new objects.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>How? There are several ways. In the ASP.NET and
+MSDN documentation, the “initializer” strategy&nbsp;is discussed, demonstrated,
+and recommended. It is a convention-based strategy, that uses a Seed() method
+to “seed” the data store with new objects. We have used this in past versions
+of this course.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>For this course, we will use a new strategy,
+which is a bit simpler to understand, and is compatible with a future “bulk
+data load” topic.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The strategy is to code one or more Manager
+class methods that “load” programmatically-generated objects into the data
+store. The “…V2” project template includes one method example, that you can
+edit and use:</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'><b><span style='font-size:10.0pt;
+line-height:107%;font-family:"Courier New";color:#0070C0'>public</span><span
+style='color:#0070C0'> </span></b><b><span style='font-size:10.0pt;line-height:
+107%;font-family:"Courier New";color:#0070C0'>bool</span><span
+style='color:#0070C0'> </span></b><b><span style='font-size:10.0pt;line-height:
+107%;font-family:"Courier New"'>LoadData()</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'><b><span style='font-size:10.0pt;
+line-height:107%;font-family:"Courier New"'>{</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'><b><span style='font-size:10.0pt;
+line-height:107%;font-family:"Courier New"'>&nbsp;&nbsp;<span style='color:
+#00B050'>// Return if there's existing data</span></span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'><b><span style='font-size:10.0pt;
+line-height:107%;font-family:"Courier New";color:#00B050'>&nbsp;&nbsp;//if
+(ds.Your_Entity_Set.Count() &gt; 0) { return false; }</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'><b><span style='color:#00B050'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'><b><span style='font-size:10.0pt;
+line-height:107%;font-family:"Courier New";color:#00B050'>&nbsp;&nbsp;//
+Otherwise...</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'><b><span style='font-size:10.0pt;
+line-height:107%;font-family:"Courier New";color:#00B050'>&nbsp;&nbsp;// Create
+and add objects</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'><b><span style='font-size:10.0pt;
+line-height:107%;font-family:"Courier New";color:#00B050'>&nbsp;&nbsp;// Save
+changes</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'><b>&nbsp;</b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'><b><span style='font-size:10.0pt;
+line-height:107%;font-family:"Courier New"'>&nbsp;&nbsp;<span style='color:
+#0070C0'>return</span></span> </b><b><span style='font-size:10.0pt;line-height:
+107%;font-family:"Courier New";color:#0070C0'>true</span></b><b><span
+style='font-size:10.0pt;line-height:107%;font-family:"Courier New"'>;</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:10.0pt;font-family:"Courier New"'>}</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Then, we create a special-purpose (or
+throw-away) “<b>LoadData</b>” controller that calls into the Manager methods.
+As the programmer, you can choose whether to “protect” the controller (and its
+methods) with an <i>Authorize</i> attribute. You can also choose to keep or
+delete the “LoadData” controller after it has done its job.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In summary, the strategy includes:</span></p>
+
+<ol start=1 type=1>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Add one or more Manager methods that add
+     programmatically-generated objects into the data store</span><span
+     style='font-family:"Arial",sans-serif'> </span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Create a special-purpose controller that
+     calls into the Manager method(s)</span><span style='font-family:"Arial",sans-serif'>
+     </span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Run the controller action(s)/method(s)</span><span
+     style='font-family:"Arial",sans-serif'> </span></li>
+</ol>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>New topic – making changes to the
+design of the persistent store</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>After an&nbsp;app has been running for a few
+hours/days, how do you handle a situation where you need to add another entity
+class to a design model?</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Or, add a property to a design model class?</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Or, change a property’s configuration?</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>This can be done if you activate a feature
+named (<b>Code First</b>)&nbsp;<b><i>Migrations</i></b>. Its biggest benefit is
+that it will attempt to <i><span style='color:red'>keep&nbsp;your existing data</span></i>&nbsp;after
+minor changes to the design model and database. (Another benefit, discussed
+later, is that the feature enables us to publish our web app to a public host).</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Please note that changes to an existing
+property’s configuration will work correctly for data
+transformations/conversions that are implicit. These “widening” transformations/conversions
+will work without any additional code or data preparation. For our changes,
+let’s attempt to ensure that our changes are implicit in nature.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<a id=migrations></a>
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Configuring Migrations</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Configuring Migrations requires two simple
+tasks:</span></p>
+
+<ol start=1 type=1>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Enable migrations</span><span
+     style='font-family:"Arial",sans-serif'> </span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>After a change (or set of changes), add a
+     “migration” definition, and update the data store.</span><span
+     style='font-family:"Arial",sans-serif'> </span></li>
+</ol>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The <u><span style='color:blue'>first task</span></u>
+is to <i>enable</i> Migrations. In Visual Studio, open the Package Manager
+Console.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Type the following command. It’s a <i>once-per-project
+</i>command. After you do this, you will not have to do it again for the
+current project:</span></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0>
+ <tr>
+  <td style='padding:0in 0in 0in 0in'></td>
+  <td style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Lucida Console"'>PM&gt; enable-migrations</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>This command configures the base or start state
+of your the design&nbsp;model classes, and its persistent store implementation.
+The following is a typical result from running the “enable-migrations” command:</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'><img border=0 width=723 height=354
+id="Picture 2" src="INT422-Lecture8_files/image008.png" alt=migrations-enable></span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>After running the command, look in Solution
+Explorer. Notice the new “Migrations” folder, and two source code files:</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'><img border=0 width=292 height=175
+id="Picture 1" src="INT422-Lecture8_files/image009.jpg"
+alt=migrations-code-items></span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The classes in these source code files are used
+by the Entity Framework data migrator process, and by the Microsoft Azure
+services publishing process. Typically, we do not edit these classes.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>If you have existing data, and have <i>not</i>
+made a change to your design&nbsp;model classes, then&nbsp;you can skip the
+second task below. Read the package manager console messages carefully – it
+will tell you the status.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Later, whenever you have made a change to your
+design&nbsp;model classes, do the <u><span style='color:blue'>second task</span></u>,
+by executing the following two commands in the Package Manager Console:</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>PM&gt;
+add-migration&nbsp;descriptive_name_for_the_change</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>PM&gt; update-database</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In a new (or almost new) project, the
+descriptive name for your first migration definition can be “Initial” or
+something similar.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>If you anticipate performing many changes, then
+you can do the add-migration and update-database in a granular way. Or, you
+could just do all your changes, and run these commands once.</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:18.0pt;font-family:"Segoe UI Symbol",sans-serif;color:#0070C0'>&#10077;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> Please note:</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>Working with migrations
+is typically a simple task. Do not add complexity. Do not try to make it more
+complicated than it is. Follow the guidance above.</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>There’s some reference
+information that you could read/skim, to learn more about the technology:</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>Introduction and
+overview –&nbsp;</span><a
+href="http://msdn.microsoft.com/en-us/data/JJ591621.aspx" target="_blank"><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>Code First Migrations</span></a></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>Migrations commands
+–&nbsp;</span><a
+href="http://coding.abel.nu/2012/03/ef-migrations-command-reference/"
+target="_blank"><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Entity
+Framework Code First Migrations Command Reference</span></a></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>What can you do if you run into trouble while
+using/configuring migrations? Try this, before contacting your teacher:</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>1. In Visual Studio Solution Explorer, delete
+the Migrations folder.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>2. Do the first task described above – <i>enable-migrations</i>
+– which will re-write/re-create the migration code.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>What can you do if the design model has changes
+that are not minor?</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>If the data transformation/conversion is
+“narrowing” in nature, which could cause loss of data or precision, then you
+must inspect and/or prepare the data before and after the property
+configuration change.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>For example, if you plan to add a
+[StringLength(200)] attribute to a string property that did not have such an
+attribute already, it is possible that some objects in the data store will have
+property values that exceed 200 characters in length. Before editing the
+property configuration, you must locate, and potentially edit/truncate, the
+existing data, so that the property configuration change will succeed.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Or, if you plan to convert a double property
+into an integer property, it is possible that some existing objects will have
+real numbers (with a decimal portion) in the property value. Before editing the
+property configuration, you must locate and edit the existing data.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>See </span><a
+href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/type-conversion"
+target="_blank"><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>this
+MSDN article</span></a><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>
+for more information about data conversions.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>An alternative strategy, which works for
+existing in-production apps, would involve several tasks:</span></p>
+
+<ol start=1 type=1>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Add a new property, which will hold the
+     destination value</span><span style='font-family:"Arial",sans-serif'> </span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>As a special task, go through all objects
+     in the entity set, and use data from the existing property to populate the
+     desired value in the new property</span><span style='font-family:"Arial",sans-serif'>
+     </span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>If you want to start using the new
+     property in your manager and controller code, go ahead</span><span
+     style='font-family:"Arial",sans-serif'> </span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Alternatively, you could delete the old
+     property, add it back again with the desired data type, go through all the
+     objects in the entity set to copy from the property added in step 1 above,
+     to the just-added-again property, and then finally, delete the property
+     added in step 1 above</span><span style='font-family:"Arial",sans-serif'> </span></li>
+</ol>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Real-world in-production handling of database
+changes</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Incidentally, are the change-handling
+strategies above strong enough for real-world in-production use?</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>No, not really.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Real-world in-production apps&nbsp;tend to
+separate the persistence layer from the application. This is a technique that
+we may get an opportunity to learn, near the end of the course.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>To preview the technique, we create a “class
+library” project that defines and hosts the design model classes and data
+context. This action creates a “persistence layer” (aka “data layer” in some
+documentation sets). Then, in a web app project, we “add a reference” to the
+persistence layer, so that our Manager class can work with the data.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>If and when we need changes to the database,
+then we use traditional database administration tools to perform the
+modifications. In the persistence layer project, we modify its code to match
+the new reality in the persistence layer.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>

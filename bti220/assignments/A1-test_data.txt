@@ -1,0 +1,12 @@
+roy,bean,056.171.486,rbean@myseneca.ca,bti220
+carl,bell,121.126.536,cbell@myseneca.ca,btd210,bti220
+eric,brand,046.123.976,ebrand@myseneca.ca,btp200,btd210,bti220
+henry, clay, 034.146.412, hclay@myseneca.ca , btc140 ,btp200 ,btd210 ,bti220
+bob,dylan,076.182.443,bdylan@myseneca.ca, btc140, btp200, btd210, bti220, btc240
+thomas,gray,021.147.566,tgray@myseneca.ca,ios110,bto130,btc140,btp200,btd210,bti220,btc240
+stephen,harper,030.128.746,sharper@myseneca.ca,bto120,bto130,btc140,btp200,btd210,bti220,btc240
+
+joe,hill,O3O.152.471,jhill@myseneca.ca,btp100,btb110,bto120,bto130
+steve,jobs,010.125.236,sjobs@myseneca.ca,iOS201
+jhon,smith,012.023.165,jsmith@myseneca.ca
+

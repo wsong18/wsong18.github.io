@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta charset="UTF-8" />
+  <title>INT222 - Canvas Test</title>
+  <script type="application/javascript">
+    function draw() {
+      var canvas = document.getElementById("my-canvas");
+      if (canvas.getContext) {
+        var ctx = canvas.getContext("2d");
+
+		ctx.fillRect(25,25,100,100);
+		ctx.clearRect(45,45,60,60);
+		ctx.strokeRect(50,50,50,50);
+	
+        ctx.fillStyle = "rgb(200,0,0)";
+        ctx.fillRect (160, 25, 55, 50);
+
+        ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
+        ctx.fillRect (180, 45, 55, 50);
+      }
+    }
+  </script>
+  <style> 
+      body { margin: 0 18%; }
+	  canvas { 
+	    border: 7px ridge #369; 
+	  } 
+  </style>
+</head>
+  <body onload="draw();">
+    <h1>INT222 - Canvas Test: rectangle</h1>
+
+    <canvas id="my-canvas" width="300" height="150">[Canvas Area]</canvas>
+    <br>
+    <p><a href="view-source:">View-source</a>&nbsp;&nbsp;&nbsp;&nbsp;
+       <a href="" onclick="download=document.referrer">Download</a></p>
+  </body>
+</html>

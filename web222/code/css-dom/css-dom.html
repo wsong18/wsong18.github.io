@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> DOM &amp; CSS </title>
+    <meta charset="UTF-8">
+    <style>
+		.blue {
+			font: italic normal bold 2em "Lucida","Arial"; 
+			background-color: lightblue;
+		}
+	</style>
+	<script>
+		function setToYellow(selector) {
+			
+            var elements = document.querySelectorAll(selector);		
+			for (var i=0; i<elements.length; i++) {
+				elements[i].style.backgroundColor = "Yellow";
+				elements[i].style.fontSize = "1.5em";
+				elements[i].style.fontVariant = "small-caps";
+			}
+        }
+		
+		function setToGreen(selector) {
+            var elem = document.querySelector(selector);
+			elem.setAttribute("style", "background-color: lightgreen; font: normal 16px 'Cursive';");
+        }
+		
+		function setToBlue(selector) {
+            var elem = document.querySelector(selector);
+			console.log(elem);
+			elem.style = null;
+			elem.classList.add("blue");
+			//elem.setAttribute("class", "blue");
+        }
+	</script>
+</head>
+<body>
+	<h2>Updating CSS Using the DOM</h2>
+	<div id=newnham class=highlight>
+		<h3>Newnham Campus</h3>
+		<p>1750 Finch Ave. East Toronto, Ontario M2J 2X5<br>Tel: 416.491.5050 or 416.493.4144</p>
+	</div>
+	<div>
+		<h3>King Campus</h3>
+		<p>13990 Dufferin St. King City, Ontario L7B 1B3<br>Tel: 416.491.5050</p>
+	</div>
+	<div class=highlight>
+		<h3>Markham Campus</h3>
+		<p>8 The Seneca Way (Highway 7 and Highway 404) Markham, Ontario L3R 5Y1<br>Tel: 416.491.5050</p>
+	</div>
+	<div id=senecayork class=highlight>
+		<h3>Seneca@York Campus</h3>
+		<p>70 The Pond Road Toronto, Ontario M3J 3M6<br>Tel: 416.491.5050 or 416.493.4144</p>
+	</div>
+	<hr>
+	<div>
+		<p><button onclick="setToYellow('.highlight p')">Set Highlight</button> using the DOM style object.</p>
+		<p><button onclick="setToGreen('#senecayork p')">Set to Green</button> using setAttribute() method.</p>
+		<p><button onclick="setToBlue('#newnham p')">Set to Blue</button> using predifined CSS rules and manipulating the class attribute values.</p>
+	</div>
+
+  
+    <!-- for view-source and download -->
+    <br><p><a href='' download>Download</a></p>	  
+</body>
+</html>

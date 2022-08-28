@@ -1,0 +1,595 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<base target="_blank">
+<title>Lec 10-2</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Lucida Console";
+	panose-1:2 11 6 9 4 5 4 2 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+h4
+	{mso-style-link:"Heading 4 Char";
+	margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:#954F72;
+	text-decoration:underline;}
+p
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+code
+	{font-family:"Courier New";}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:.5in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:.5in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+span.Heading4Char
+	{mso-style-name:"Heading 4 Char";
+	mso-style-link:"Heading 4";
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink="#954F72" background=bgw.gif>
+
+<div class=WordSection1 
+     style="margin: 0.5in auto; max-width: 50em; min-width: 30em;">
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:18.0pt;
+font-family:"Arial",sans-serif'>INT422 – Lecture 10 Part 2</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>More non-text media type&nbsp;handling, this
+time with a dedicated media item class.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>These notes will help you understand and
+implement a media handling solution that <u>uses a dedicated media item class</u>.
+This enables you to associate multiple media items with a single object.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Review and checkpoint</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Recently, you began to learn how to handle
+non-text media types in an ASP.NET MVC web app. The sample solution that we
+worked with had these characteristics:</span></p>
+
+<p class=MsoListParagraphCxSpFirst style='text-indent:-.25in;line-height:normal'><span
+style='font-size:12.0pt;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>A&nbsp;design
+model&nbsp;class&nbsp;was configured with properties to hold the digital
+content of a single media item, in addition to the properties that held text
+and numbers.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in;line-height:normal'><span
+style='font-size:12.0pt;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>The
+web app allowed or enabled a browser user to “upload” a media item, when
+creating a new object.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in;line-height:normal'><span
+style='font-size:12.0pt;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>The
+digital content of the media item (bytes, string for content type) was stored
+in the web app’s persistent store (i.e. the database).</span></p>
+
+<p class=MsoListParagraphCxSpLast style='text-indent:-.25in;line-height:normal'><span
+style='font-size:12.0pt;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Finally,
+the &nbsp;web app delivered the media item, in its native format, upon request.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>While this kind of sample solution was suitable
+for an object that could also be represented by its media item, it’s not
+suitable for all situations. We will learn how to build on the learned concepts
+and techniques, to build a larger solution.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>The new problem and opportunity</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In many situations, an object is associated
+with a collection of media items. For example, a <i>product</i> could be
+associated with a <i>collection of photos</i>, each showing a different part of
+the product.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Open and study the <i>PhotoEntity</i> code
+example as you read this section.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The most important idea in this code example is
+a dedicated design model class for the media item. It has properties to hold
+the digital content, as well as other identifying and descriptive properties.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Study the image below, and the code for the
+Photo design model class in the code example.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'><img width=719 height=270 id="Picture 5"
+src="INT422-Lecture10-2_files/image001.png" alt=separate-media-entity></span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Identifier comments</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In the other scenario – where a class included
+media item properties in its definition – we could use the object identifier to
+work with the object or its media item. The <i>representation</i> of the object
+could have been the HTML or maybe JSON data, or it could have been the media
+item. As a result, there was no ambiguity with the identifier.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In this new scenario, we want to <u>discourage
+the use of the int identifier</u> that’s generated by the database/storage
+engine. Instead, we should create an identifier.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>We really <u>do not want to use an identifier
+that’s influenced by the original name</u> or content of the media item. For
+example, before uploading, a photo could be saved as “fuzzy-kitten.jpg” on
+someone’s computer. In this new scenario, we do not want to use “fuzzy-kitten”
+or any value that the browser user provides.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>We <u>will generate our own identifier</u>, as
+the media item is being prepared for storing/saving. We start with the known
+principle that a GUID – </span><a
+href="https://en.wikipedia.org/wiki/Globally_unique_identifier" target="_blank"><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>globally unique
+identifier</span></a><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>
+– is, or will be, as unique as we need it to be.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>A minor problem is that the standard format of
+a GUID is 36 characters in length (hex digits and dash-separators).&nbsp;That’s
+a bit too long. Mads Kristensen </span><a
+href="http://madskristensen.net/post/generate-unique-strings-and-numbers-in-c"
+target="_blank"><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>thought
+of a way</span></a><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>
+to capture the uniqueness of a GUID in a 16-character string. We’ll use that.
+Study the constructor in the design model class to see its code.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The benefit is that we can now create a
+controller to deliver media items, and use the string identifier as part of the
+URL (instead of the int “Id” value). For example:</span></p>
+
+<p class=MsoNormal style='line-height:normal'><a
+href="http://www.example.com/photo/3c4ebc5f5f2c4edc"><span style='font-size:
+12.0pt;font-family:"Arial",sans-serif'>http://www.example.com/photo/3c4ebc5f5f2c4edc</span></a></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>For an object, rendering its collection of
+media items</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The <i>PhotoEntity</i> code example covers the
+residential real estate sales problem domain. It enables a browser user to
+create an object that represents a <u>for-sale residential property</u>. Then,
+the browser user can <u>add photos</u> to this existing object.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The design and coding approach for upload is
+exactly the same as the one we have used before: Add an associated object, for
+a known existing object.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>For delivery (i.e. photo viewing), we adapt the
+object-with-collection delivery approach.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In the code example, start by looking at the
+list of for-sale residential properties. It has a new link.&nbsp;Click the
+image to open it full-size in a new tab/window.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><a
+href="https://scs.senecac.on.ca/~wei.song/int422/lectures/images/lec10.2-pe-list-with-new-link-v1.png"><span
+style='color:windowtext;text-decoration:none'><img border=0 width=724
+height=234 id="Picture 6" src="INT422-Lecture10-2_files/image002.png"></span></a></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Alternatively, from the standard “details”
+page. It too has a new link.&nbsp;Click the image to open it full-size in a new
+tab/window.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><a
+href="https://scs.senecac.on.ca/~wei.song/int422/lectures/images/lec10.2-pe-details-with-new-link-v1.png"><span
+style='color:windowtext;text-decoration:none'><img border=0 width=725
+height=205 id="Picture 7" src="INT422-Lecture10-2_files/image003.png"></span></a></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>When you follow the link, you will see a
+details view that renders the photos.&nbsp;Click the image to open it full-size
+in a new tab/window.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><img border=0 width=723
+height=530 id="Picture 8" src="INT422-Lecture10-2_files/image004.png"></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>To make this work, we create a PhotoBase view
+model class.</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console";color:green'>// FYI - data
+annotations were removed to help clarify the concept</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Lucida Console";color:#002060'>public class</span></b><span
+style='font-size:12.0pt;font-family:"Lucida Console";color:#002060'> </span><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>PhotoBase</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>{</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;<b><span
+style='color:#002060'>public</span></b> <b><span style='color:#002060'>int</span></b>
+Id { <b><span style='color:#002060'>get; set;</span></b> }</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;<b><span
+style='color:#002060'>public</span></b> DateTime Timestamp { <b><span
+style='color:#002060'>get; set;</span></b> }</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;<b><span
+style='color:#002060'>public</span></b> <b><span style='color:#002060'>string</span></b>
+StringId { <b><span style='color:#002060'>get</span></b>; <b><span
+style='color:#002060'>set</span></b>; }</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;<b><span
+style='color:#002060'>public</span></b> <b><span style='color:#002060'>string</span></b>
+Caption { <b><span style='color:#002060'>get</span></b>; <b><span
+style='color:#002060'>set</span></b>; }</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>}</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>A Photo object (from the persistent store) maps
+enough properties to the PhotoBase object to allow us to construct a URL to the
+photo, in our view code.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The controller’s “get one” method calls a
+Manager class method that fetches/includes the object’s photos. Here’s what the
+view model class looks like for the object-with-a-photo-collection.</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Lucida Console";color:#002060'>public</span></b><span
+style='font-size:16.0pt;font-family:"Lucida Console"'> </span><b><span
+style='font-size:12.0pt;font-family:"Lucida Console";color:#002060'>class</span></b><span
+style='font-size:16.0pt;font-family:"Lucida Console"'> </span><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>PropertyWithPhotoStringIds
+: PropertyBase</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>{</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;<b><span
+style='color:#002060'>public</span></b></span><span style='font-size:16.0pt;
+font-family:"Lucida Console"'> </span><span style='font-size:12.0pt;font-family:
+"Lucida Console"'>PropertyWithPhotoStringIds()</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;{</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;Photos
+= <b><span style='color:#002060'>new</span></b></span><span style='font-size:
+16.0pt;font-family:"Lucida Console"'> </span><span style='font-size:12.0pt;
+font-family:"Lucida Console"'>List&lt;PhotoBase&gt;();</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;}</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:16.0pt;font-family:"Lucida Console"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;<b><span
+style='color:#002060'>public</span></b></span><span style='font-size:16.0pt;
+font-family:"Lucida Console"'> </span><span style='font-size:12.0pt;font-family:
+"Lucida Console"'>IEnumerable&lt;PhotoBase&gt; Photos { <b><span
+style='color:#002060'>get</span></b>; <b><span style='color:#002060'>set</span></b>;
+}</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>}</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Here’s what the relevant view model classes
+look like:</span></p>
+
+<p class=MsoNormal style='line-height:normal'><img border=0 width=718
+height=712 id="Picture 2" src="INT422-Lecture10-2_files/image005.png"></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In the view, we loop through the object’s
+collection of photos, and render an HTML &lt;img&gt; element.</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&lt;<b><span
+style='color:#002060'>dd</span></b>&gt;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;@<b><span
+style='color:#002060'>if</span></b> (Model.Photos.Count() == 0)</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;{</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;&lt;<b><span
+style='color:#002060'>span</span></b>&gt;(none)&lt;/<b><span style='color:#002060'>span</span></b>&gt;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;}</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;<b><span
+style='color:#002060'>else</span></b></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;{</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;<b><span
+style='color:#002060'>foreach</span></b> (<b><span style='color:#002060'>var</span></b>
+item <b><span style='color:#002060'>in</span></b> Model.Photos)</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;{</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<b><span
+style='color:#002060'>div</span></b> class=<span style='color:#CC0000'>&quot;col-md-4
+col-sm-5 col-xs-10&quot;</span>&gt;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<b><span
+style='color:#002060'>span</span></b>&gt;@item.Caption&lt;/<b><span
+style='color:#002060'>span</span></b>&gt;&lt;<b><span style='color:#002060'>br</span></b>&gt;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<b><span
+style='color:#002060'>img</span></b> src=&quot;<span style='color:#CC0000'>~/photo/@item.StringId</span>&quot;
+alt=<span style='color:#CC0000'>&quot;@item.Caption&quot;</span> class=<span
+style='color:#CC0000'>&quot;img-responsive img-rounded&quot;</span>&gt;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/<b><span
+style='color:#002060'>div</span></b>&gt;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;}</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;}</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;&lt;<b><span
+style='color:#002060'>hr</span></b>&gt;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&lt;/<b><span
+style='color:#002060'>dd</span></b>&gt;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In the dedicated photo delivery controller, the
+“get one” photo method uses a string identifier, which is a bit different from
+the other code example and scenario which used the containing object’s int
+identifier. Other than that, it works the same as before.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Bonus feature – allow download-and-save of a
+media item</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The dedicated photo delivery controller
+includes another “get one” photo method, with a modified attribute routing
+string (photo/{stringId}/download).</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Its purpose is to enable the download-and-save
+workflow. Sometimes you will want to do this. It may not always be appropriate
+to render a media item in a browser/view. Try using the code example to
+fetch-and-save an image.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Arial",sans-serif'>Study the code in the method. It is well-commented to
+explain what it does. Notice the extra code that generates a file extension,
+which is needed for the “save” task. Is there another way to do this? Probably,
+by saving the file extension in the “add/upload photo task”, which implies that
+the design model class would need changes.</span></p>
+
+<p class=MsoNormal><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Reminder&nbsp;– making changes to
+the </span></b><b><i><span style='font-size:16.0pt;color:#002060'>design</span></i></b><b><span
+style='font-size:16.0pt;font-family:"Arial",sans-serif;color:#002060'> of the
+persistent store</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>We first presented this topic
+in the March 8 class notes.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>After an&nbsp;app has been
+running for a few hours/days, how do you handle a situation where you need to
+add another entity class to a design model?</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Or, add a property to an
+existing design model class?</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Or, change a property’s
+configuration or data annotations?</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>This can be done if you
+activate a feature named (Code First)&nbsp;<em><span style='font-family:"Arial",sans-serif'>Migrations</span></em>.
+Its biggest benefit is that it will attempt to <em><span style='font-family:
+"Arial",sans-serif;color:red'>keep&nbsp;your existing data</span></em>&nbsp;after
+minor changes to the design model and database. (Another benefit, discussed
+later, is that the feature enables us to publish our web app to a public host).</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>* * *</span></p>
+
+<p class=MsoNormal><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,432 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<title>Lec4-2</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Segoe UI Symbol";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+h4
+	{mso-style-link:"Heading 4 Char";
+	margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:#954F72;
+	text-decoration:underline;}
+p
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+code
+	{font-family:"Courier New";}
+span.Heading4Char
+	{mso-style-name:"Heading 4 Char";
+	mso-style-link:"Heading 4";
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+span.skimlinks-unlinked
+	{mso-style-name:skimlinks-unlinked;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink="#954F72" background=bgw.gif>
+
+<div class=WordSection1 
+     style="margin: 0.5in auto; max-width: 50em; min-width: 30em;">
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:18.0pt;
+font-family:"Arial",sans-serif'>INT422 – Lecture 4-2</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Debugging introduction. Begin
+work on Assignment 4.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Textbook coverage</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>As announced last week, the
+textbook will have a supporting role as you learn new topics from these notes
+and your classroom sessions. Use the table-of-contents and the index to locate
+the topic, and then read about it there. A reminder: The textbook does not use
+view model classes in its discussions and code examples. We do.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Homework reminder</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In the last class, your teacher
+may have assigned homework, to complete the “pattern summary” quick reference
+document. Please submit it to the blackboard before the end of Saturday of week
+4. Print out a hard copy for your own use as a quick reference.&quot;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Code examples</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Debugging introduction</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Debugging introduction</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>This section introduces
+students to the Visual Studio debugger.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>At this point, you have used
+Visual Studio for a few weeks, or for a few months or academic terms. It is
+likely that you have a little experience with coding errors, which appear when
+you do a build/compile. The “Error List” window/panel at the bottom of the
+editor area shows a list of errors and warnings.</span></p>
+
+<p style='margin-left:.5in'><span style='font-size:18.0pt;font-family:"Segoe UI Symbol",sans-serif;
+color:#0070C0'>&#10077;</span><span style='font-family:"Arial",sans-serif;
+color:#262626'>Did you know…?</span></p>
+
+<p style='margin-left:.5in'><span style='font-family:"Arial",sans-serif;
+color:#262626'>Did you know that you can simply double-click the error, and the
+code editor will open the source code file, and position the cursor at the
+point of the error?</span></p>
+
+<p style='margin-left:.5in'><span style='font-family:"Arial",sans-serif;
+color:#262626'>Or, did you know that you can right-click an error, and it will
+(among other tasks) enable you to get more detailed info about the error in
+another window or browser window?</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>However, you likely also have a
+little experience with an app – e.g. an <span class=skimlinks-unlinked>ASP.NET</span>
+MVC web app – which DOES build/compile correctly and without errors, but it has
+a runtime error.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The error will appear in the
+browser. Often, it describes what is wrong, with the implication that you will
+be able to fix it. For beginners, that implication may not be valid, and you
+may still need help. (Yes, you can contact your teacher in those situations.)</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The Visual Studio debugger can
+help you fix these errors. It can also help you as you write code, and (for
+example) work through the code that implements a somewhat-complex algorithm or
+coding plan.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>To get started, read and study
+this MSDN document:</span></p>
+
+<p><a href="https://msdn.microsoft.com/en-us/library/dn986851.aspx"
+target="_blank"><span style='font-family:"Arial",sans-serif'>Getting Started
+with Debugging in Visual Studio 2015</span></a></p>
+
+<p><span style='font-family:"Arial",sans-serif'>You can skim the top 2/3 of the
+document. The part that you MUST read and study is titled:</span></p>
+
+<p><strong><span style='font-family:"Arial",sans-serif'>Debugging Your Running
+Code</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Important concepts in the debug
+experience</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>There are several important
+concepts that you must know at the beginning of your debugging experience.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>Breakpoint</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>A breakpoint is a line
+marker/indicator that will stop execution <em><span style='font-family:"Arial",sans-serif'>before</span></em>
+the line of code is executed. In the code editor, it appears as a bright red
+dot.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'><img border=0 width=723
+height=55 id="Picture 8" src="INT422-Lecture4-2_files/image001.jpg"
+alt=debug-breakpoint></span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The following image shows a
+full-screen Visual Studio window, which has a breakpoint.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif;color:blue'><img border=0
+width=721 height=453 id="Picture 7" src="INT422-Lecture4-2_files/image002.png"
+alt=debug-set-breakpoint-annotated></span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Set (or remove) a breakpoint in
+one of two ways:</span></p>
+
+<ol start=1 type=1>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>In the left margin (gutter), click the
+     line of code that needs the breakpoint</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Move the cursor to the line of code, and
+     press the F9 function key</span></li>
+</ol>
+
+<p><span style='font-family:"Arial",sans-serif'>If you have many (many!)
+breakpoints, you can view a list of them, and manage them, in your
+“breakpoints” window/panel. On the Debug menu, choose Windows &gt; Breakpoints.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>When writing code, you can
+consider adding breakpoints in these scenarios:</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>When you introduce new code,
+set a breakpoint at the beginning of the code block, and step through the code
+(described below) to make sure it is behaving as expected.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>If you have implemented a
+complicated behavior, set breakpoint(s) for the algorithmic code so you can
+inspect the values of the variables and data when the program breaks.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In a Manager class, set a
+breakpoint when you are making changes in the data store. For example, the “add
+new” and “edit existing” use cases. This enables you to inspect, and compare,
+values in <em><span style='font-family:"Arial",sans-serif'>view model</span></em>
+objects, with <em><span style='font-family:"Arial",sans-serif'>design model</span></em>
+objects.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>Start
+the app with the debugger</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In the past, you have used
+Ctrl+F5 to run your app. Now, to start the app with the debug environment,
+simply press F5. Use the app until it runs the code that has a breakpoint.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The Visual Studio window
+(usually) gets the foreground focus.&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif;color:blue'><img border=0
+width=723 height=454 id="Picture 6" src="INT422-Lecture4-2_files/image003.png"
+alt=debug-stop-at-breakpoint-annotated></span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The next line of code to be
+executed has a yellow background. At this point in time, you can:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-family:"Arial",sans-serif'>Continue
+     execution (with F5 or the “Continue” toolbar button)</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-family:"Arial",sans-serif'>Stop
+     execution (with Shift+F5 or the “Stop” toolbar button)</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-family:"Arial",sans-serif'>Inspect
+     the value of the variables in the local scope</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-family:"Arial",sans-serif'>Execute
+     the line of code</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-family:"Arial",sans-serif'>Or,
+     if the line of code runs a method that YOU wrote, you can jump to the
+     beginning of that method</span></li>
+</ul>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>Step
+over – F10</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>“Stepping” is the process of
+executing code, one line at a time.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Execute the line of code by
+pressing the F10 function key (or by using the debug toolbar). F10 is “step
+over”.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In the image below, it would
+move the pointer from line 28, to line 30.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'><img border=0 width=719
+height=428 id="Picture 5" src="INT422-Lecture4-2_files/image004.png"
+alt=debug-step-over></span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>Step
+into – F11</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>If the current (pointed to)
+line of code has a method call, to a method that YOU wrote, you can jump to the
+beginning of that method.&nbsp; F11 is “step into”.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In the image below, it would
+move the pointer from line 28 in the <span class=skimlinks-unlinked>CustomersController.cs</span>
+source code file, to line 41 in the <span class=skimlinks-unlinked>Manager.cs</span>
+source code file.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'><img border=0 width=722
+height=429 id="Picture 4" src="INT422-Lecture4-2_files/image005.png"
+alt=debug-step-into></span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>While in the method, you can
+continue to F10 “step over”, or F11 “step into”, if appropriate.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>If/when you want to leave that
+method, you can Shift+F11 to “step out” of the method, and return to the line
+of code that was pointed to before entering the method.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Here’s a full-screen image that
+summarizes the difference between “step into” and “step over”.&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif;color:blue'><img border=0
+width=721 height=453 id="Picture 3" src="INT422-Lecture4-2_files/image006.png"
+alt=debug-step-into-vs-over></span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>During
+a break, inspect variable values</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>During a break in execution,
+you can inspect variable values, in at least two commonly-used ways:</span></p>
+
+<ol start=1 type=1>
+ <li class=MsoNormal style='line-height:normal'><span style='font-family:"Arial",sans-serif'>In
+     the code editor, hover your mouse over a variable, and it will show you
+     its value</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-family:"Arial",sans-serif'>Use
+     the Locals window</span></li>
+</ol>
+
+<p><span style='font-family:"Arial",sans-serif'>The following image shows the
+Locals window – lower-left – at the first breakpoint.&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif;color:blue'><img border=0
+width=721 height=453 id="Picture 2" src="INT422-Lecture4-2_files/image007.png"
+alt=debug-stop-at-breakpoint></span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Assume that F10 (step over) was
+done. It moves the line pointer from line 43 to line 46. Notice the contents of
+the Locals window now.&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif;color:blue'><img border=0
+width=724 height=455 id="Picture 1" src="INT422-Lecture4-2_files/image008.png"
+alt=debug-step-over-once-annotated></span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Hands-on with the debugger, and
+the code example</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Today’s code example –
+DebuggingIntro – is a copy of the “EditDelete” web app from last week.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>It has been changed, to introduce
+errors, and to get you started with a debugging experience. Your teacher will
+take you through the code example, in your hands-on computer-lab class/session.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Example error conditions. Go
+through them in sequence.</span></p>
+
+<ol start=1 type=1>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Object reference not set to an instance of
+     an object</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Mapping error; missing AutoMapper map</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Validation error when saving to the data
+     store</span></li>
+</ol>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Summary, and more information</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>There are four MSDN documents
+that will help you with the debugging experience. Read and study them.</span></p>
+
+<p><a href="https://msdn.microsoft.com/en-us/library/dn986851.aspx"
+target="_blank"><span style='font-family:"Arial",sans-serif'>Getting Started
+with Debugging in Visual Studio 2015</span></a></p>
+
+<p><a href="https://msdn.microsoft.com/en-us/library/5557y8b4.aspx"
+target="_blank"><span style='font-family:"Arial",sans-serif'>Using Breakpoints</span></a></p>
+
+<p><a href="https://msdn.microsoft.com/en-us/library/bhawk8xd.aspx"
+target="_blank"><span style='font-family:"Arial",sans-serif'>Autos and Locals
+Windows</span></a></p>
+
+<p><a href="https://msdn.microsoft.com/en-us/library/y740d9d3.aspx"
+target="_blank"><span style='font-family:"Arial",sans-serif'>Navigating through
+Code with the Debugger</span></a></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Work on Assignment&nbsp;4</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Your professor will guide
+students as we get started on&nbsp;Assignment 4.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Before you leave the room at
+the end of the time slot, ensure that you give the Work Report to your
+professor, for the&nbsp;<em><span style='font-family:"Arial",sans-serif'>in-class
+grading</span></em>&nbsp;part of the assignment.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>

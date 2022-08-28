@@ -1,0 +1,1314 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<base target="_blank">
+<title>Lec 10</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Lucida Console";
+	panose-1:2 11 6 9 4 5 4 2 2 4;}
+@font-face
+	{font-family:"Segoe UI Symbol";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+h2
+	{mso-style-link:"Heading 2 Char";
+	margin-right:0in;
+	margin-left:0in;
+	font-size:18.0pt;
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+h4
+	{mso-style-link:"Heading 4 Char";
+	margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:#954F72;
+	text-decoration:underline;}
+p
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+code
+	{font-family:"Courier New";}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-link:"Heading 2";
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+span.Heading4Char
+	{mso-style-name:"Heading 4 Char";
+	mso-style-link:"Heading 4";
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink="#954F72" background=bgw.gif>
+
+<div class=WordSection1 
+     style="margin: 0.5in auto; max-width: 50em; min-width: 30em;">
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:18.0pt;
+font-family:"Arial",sans-serif'>INT422 – Lecture 10</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Handling non-text&nbsp;media items.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Test today</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Test 9&nbsp;is today, at&nbsp;the beginning of
+the timeslot, and will run approximately 18 minutes.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Code examples</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>PhotoProperty </span><span style='font-family:
+"Arial",sans-serif'>(simple scenario)</span><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>, PhotoEntity </span><span style='font-family:
+"Arial",sans-serif'>(complex scenario)</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Theme for this week</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>It’s time to work with non-text&nbsp;media
+types. Our web apps must <i>capture</i>, <i>store</i>, and <i>deliver</i> these
+content types.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Today, we’ll cover the concepts and techniques
+for handling a simple scenario where an entity class (Product, Player, Vehicle,
+Album, etc.) includes a single&nbsp;photo.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Then, on Thursday or Friday, we’ll covers the
+concepts and techniques for handling a more complex scenario, where an entity
+class is <i>associated</i> with a collection of non-text media items.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Review the concepts, requesting
+photos/images from a browser</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Every student in this course has coded a static
+HTML document that includes a photo. For example:</span></p>
+
+<p class=MsoNormal style='line-height:normal'><a
+href="https://scs.senecac.on.ca/~wei.song/int422/lectures/car.html"><span
+style='color:windowtext;text-decoration:none'><img border=0 width=400
+height=320 id="Picture 11" src="INT422-Lecture10_files/image001.png"></span></a></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The HTML for this document is:</span></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0>
+ <tr>
+  <td style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;</span></p>
+  </td>
+  <td style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt;font-family:"Lucida Console"'>&lt;!<b><span
+  style='color:#002060'>DOCTYPE</span></b></span><span style='font-size:12.0pt;
+  font-family:"Lucida Console";color:#002060'> </span><span style='font-size:
+  10.0pt;font-family:"Lucida Console"'>html&gt;</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt;font-family:"Lucida Console"'>&lt;<b><span
+  style='color:#002060'>html</span></b>&gt;</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;&lt;<b><span
+  style='color:#002060'>head</span></b>&gt;</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;&lt;<b><span
+  style='color:#002060'>title</span></b>&gt;About Peter&lt;/<b><span
+  style='color:#002060'>title</span></b>&gt;</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;&lt;<b><span
+  style='color:#002060'>meta</span></b></span><span style='font-size:12.0pt;
+  font-family:"Lucida Console"'> </span><span style='font-size:10.0pt;
+  font-family:"Lucida Console"'>charset=&quot;<b><span style='color:#7015BB'>utf-8</span></b>&quot;</span><span
+  style='font-size:12.0pt;font-family:"Lucida Console"'> </span><span
+  style='font-size:10.0pt;font-family:"Lucida Console"'>/&gt;</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;&lt;/<b><span
+  style='color:#002060'>head</span></b>&gt;</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;&lt;<b><span
+  style='color:#002060'>body</span></b>&gt;</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;&lt;<b><span
+  style='color:#002060'>h2</span></b>&gt;This is Peter&lt;/<span
+  style='color:#0070C0'>h2</span>&gt;</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;&lt;<b><span
+  style='color:#002060'>img</span></b></span><span style='font-size:12.0pt;
+  font-family:"Lucida Console"'> </span><span style='font-size:10.0pt;
+  font-family:"Lucida Console"'>src=&quot;<b><span style='color:#7015BB'>peter.jpg</span></b>&quot;</span><span
+  style='font-size:12.0pt;font-family:"Lucida Console"'> </span><span
+  style='font-size:10.0pt;font-family:"Lucida Console"'>alt=&quot;&quot;</span><span
+  style='font-size:12.0pt;font-family:"Lucida Console"'> </span><span
+  style='font-size:10.0pt;font-family:"Lucida Console"'>/&gt;</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;&lt;/<b><span
+  style='color:#002060'>body</span></b>&gt;</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt;font-family:"Lucida Console"'>&lt;/<b><span
+  style='color:#002060'>html</span></b>&gt;</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Notice that the photo is defined by the HTML
+&lt;img&gt; element.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The &lt;img&gt; element has two attributes that
+must be included, <i>alt</i>, and <i>src</i>.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The value of the <i>src</i> attribute must be a
+path – absolute, or relative to the current document – to the photo.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In other words, the value of the <i>src</i>
+attribute is a URL.</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:18.0pt;font-family:"Segoe UI Symbol",sans-serif;color:#0070C0'>&#10077;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>This is <i>very</i>
+important:</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>In an &lt;img&gt;
+element, the value of the <i>src</i> attribute is <b>a</b> URL.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Using a browser, fetch the document from the
+server</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>How does a browser fetch and render the example
+document from above?</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>To see how, and learn the details, use the
+browser developer tools.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>For example, in Chrome, open the developer
+tools, and select the Network item. Then, request the document. This is what
+you’ll see.&nbsp;Click the image to open it full-size in a new tab/window.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><a
+href="https://scs.senecac.on.ca/~wei.song/int422/lectures/images/lec10-devtools1.png"
+target="_blank"><span style='font-size:12.0pt;font-family:"Arial",sans-serif;
+text-decoration:none'><img border=0 width=721 height=226 id="Picture 10"
+src="INT422-Lecture10_files/image002.png" alt=devtools1></span></a></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Notice that there were <b>TWO requests</b>:</span></p>
+
+<ol start=1 type=1>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>The first request was for “aboutme.html”</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>The second request was for “peter.jpg”</span></li>
+</ol>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>This is how it works. Always. When the browser
+fetches an HTML document, it&nbsp;parses the content. When it finds an HTML
+&lt;img&gt; element, it sends&nbsp;another request, to the URL value of the <i>src</i>
+attribute.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In detail, here’s what the request for
+“aboutme.html” looks like. Notice:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>The request URL and method</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>The “Accept” request header, in which the
+     requestor indicates the acceptable content types</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>The “Content-Type” response header, in
+     which the server identifies the resource’s content type</span></li>
+</ul>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Click the image to open it full-size in a new
+tab/window.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><a
+href="https://scs.senecac.on.ca/~wei.song/int422/lectures/images/lec10-devtools2-document.png"
+target="_blank"><span style='font-size:12.0pt;font-family:"Arial",sans-serif;
+text-decoration:none'><img border=0 width=721 height=517 id="Picture 9"
+src="INT422-Lecture10_files/image003.png" alt=devtools2-document></span></a></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In detail, here’s what the request for
+“peter.jpg” looks like. Notice:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>The request URL and method</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>The “Referrer” request header</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>The “Accept” request header, in which the
+     requestor indicates the acceptable content types</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>The “Content-Type” response header, in
+     which the server identifies the resource’s content type</span></li>
+</ul>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Click the image to open it full-size in a new
+tab/window.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><a
+href="https://scs.senecac.on.ca/~wei.song/int422/lectures/images/lec10-devtools3-jpg.png"
+target="_blank"><span style='font-size:12.0pt;font-family:"Arial",sans-serif;
+text-decoration:none'><img border=0 width=721 height=491 id="Picture 8"
+src="INT422-Lecture10_files/image004.png" alt=devtools3-jpg></span></a></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Definitions and terminology</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The terminology used to identify, define, and
+categorize web content is a bit sloppy. Yes, there are terms that are very
+precise, but often they are used in an imprecise manner. That’s the sloppy
+part. Here, we will attempt to be precise, but we will still need to be
+flexible sometimes.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The example above worked with two kinds of <b>web
+content</b>, <i>text</i>, and a <i>photo</i>.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Each kind of web content is defined by its </span><a
+href="https://en.wikipedia.org/wiki/Media_type" target="_blank"><b><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>media type</span></b></a><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>. In its strict
+definition, every kind of content – text and non-text – has a <i>media type</i>.
+For example, an HTML document’s media type is <i>text/html</i>.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>As you know, we can work with many kinds of
+non-text content, including audio, video, digital documents (e.g. PDF),
+etc.&nbsp;In general, on the web, each non-text content item is defined as a <b><u>media
+item</u></b>.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>While each media item can be completely defined
+by its media type (in its Content-Type header), web developers can
+also&nbsp;use <i>an application of</i>&nbsp;media types, known as&nbsp;</span><a
+href="https://en.wikipedia.org/wiki/MIME" target="_blank"><b><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>MIME</span></b></a><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>. Among other
+capabilities, the <b>MIME</b> standard describes how to deliver/render/present
+a media item. We often see this on pages that offer a PDF document: Sometimes,
+clicking the link to a PDF document will display the document in the browser.
+Alternatively, sometimes the PDF document&nbsp;will be downloaded (with our without
+a pop-up dialog that enables the user to continue and/or save to a specific
+location&nbsp;on their device). This behavior is influenced by the web
+developer, by using the Content-Disposition header.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>To repeat the definitions and terminology from
+above:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>We will generally refer to non-text
+     content as a <i>media item</i></span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>A media item is defined by its <i>media
+     type</i></span></li>
+</ul>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>A summary of this concept review section</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>If an HTML document includes a media item, the
+browser creates a separate request for that media item.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Therefore, whatever solution we create, it must
+expose the media item as a URL.</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:18.0pt;font-family:"Segoe UI Symbol",sans-serif;color:#0070C0'>&#10077;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>Note: Some students may
+have seen or used a “data URI”.</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>The Data
+URI&nbsp;scheme provides a way to include the media item’s encoded data as the
+value for the “src” attribute.</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>We will not be covering
+this topic, as it is beyond the scope of this course.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>The big question – static media
+items, or dynamically-handled&nbsp;media items</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In the past, you have written web pages and web
+apps that have used <i>static</i> media items.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In other words, you – the web developer – have
+added media items (photos etc.) to your project, alongside the HTML, CSS, and
+JavaScript source code files. Each had its own name (e.g. logo.png,
+banner1.jpg, etc.). If you had many similar media items, maybe you created a
+folder (e.g. /images/) to organize them within your project and URL namespace.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Each media item could then be referenced by a
+URL, using an absolute or relative path from the document that includes the
+(for example) HTML &lt;img&gt; element.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Is this the only way to handle media items?</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>No.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>We can also dynamically handle&nbsp;a media
+item. In an ASP.NET MVC web app, what this means is that the URL to the media
+item would be handled by an action/method in a controller.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Why would we do this?&nbsp;For many reasons,
+including design, user experience, security, scale, flexibility, and others. In
+other words, we want to <i>actively manage</i> the way that media items are
+handled.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Storage of media items</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>So, from above, you learned that you can use a <i>static</i>
+or <i>dynamic</i> approach for media items.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>A related issue is the <i>storage</i> of media
+items:&nbsp;Where should the media item be stored?</span></p>
+
+<p class=MsoNormal style='line-height:normal'><u><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>File system:</span></u><span style='font-size:
+12.0pt;font-family:"Arial",sans-serif'> Media items are&nbsp;in the file
+system, within the URL namespace of the web app.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><u><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Persistent&nbsp;store (i.e. database):</span></u><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> Media items
+are&nbsp;in the persistent store (i.e. the database). The media item can be an
+embedded property of another entity class, or it can be defined in its own
+dedicated entity class.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><u><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Hybrid combination:</span></u><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> A media item is in the
+file system, but its </span><a href="https://en.wikipedia.org/wiki/Metadata"
+target="_blank"><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>metadata</span></a><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> is in the persistent
+store. Similar to above, the media item’s metadata can be in embedded
+properties of another entity class, or it can be defined in its own dedicated
+entity class.</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:18.0pt;font-family:"Segoe UI Symbol",sans-serif;color:#0070C0'>&#10077;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>Note: If/when the web
+app is hosted in the cloud (e.g. Azure), the cloud service may offer additional
+ways to store media items. Learn the foundations in today’s notes and code
+examples, and then you’ll be able to adapt to other approaches as needed.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The following introduces some implications for
+static and dynamic handling of media items, and their storage.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Implications – file system storage</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In a web app that uses the file system to store
+media items, it must have a folder to hold the media items, maybe called
+“images”, or “assets”,&nbsp;or something that fits with the web app’s </span><a
+href="http://en.wikipedia.org/wiki/Problem_domain" target="_blank"><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>problem domain</span></a><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In an ASP.NET MVC web app, you may be tempted
+to use an existing folder, but resist that temptation. You cannot use App_Data,
+because its contents are not publicly accessible. You should not use Content,
+because that has a specific use now, and may evolve in the future. Therefore,
+create another folder.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Using a static delivery approach, the file name
+<u>extension</u>&nbsp;of the media item is <i>super important</i>. The web
+server (that is hosting your web app) will use the extension to set the
+Content-Type header in the response.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>File names (for the media items) are important.
+Their length must be reasonable. They must be <i>unique</i>. To simplify coding
+and handling, the character set used for the file names should be neutral,
+especially for a web app that’s used worldwide.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Also, about the file names, should they be </span><a
+href="https://en.wikipedia.org/wiki/Semantics" target="_blank"><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>semantic</span></a><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>? That’s a big area of
+discussion and controversy.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Using this file system storage approach, each
+media item is logically associated with an entity object in your problem
+domain. How do you maintain that association? Carefully. And separately. It is
+likely that the media item itself cannot store information about the
+association, and the file name may not be enough do do the job. Therefore, the
+entity object must include a property to hold the media item’s file name.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>How should a file system based media item be
+delivered to a browser user? Statically, using a URL that maps to its file
+system location and file name? Or through some other dynamic and
+managed&nbsp;approach?</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Beyond file names, extension names, and
+created/modified dates, the file system will not (and cannot) support </span><a
+href="http://en.wikipedia.org/wiki/Metadata" target="_blank"><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>metadata</span></a><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> querying. For example,
+it will become difficult (and non-performant) to handle a query, for example,
+for all photos larger than 1000px wide and 800px tall, for example.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>It also may be difficult or impossible to store
+descriptive metadata in the media item&nbsp;(depending upon its format).</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Finally, in a web app that uses both a
+persistent&nbsp;store (i.e. database) and the file system for data storage, the
+web app manager now must manage two separate storage locations, and ensure
+they’re backed up and secure.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Implications – persistent&nbsp;store
+(database-hosted)</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In a database-hosted data store, the media
+item’s data is stored in a byte array (the C# type is Byte[]). This data type
+maps nicely to both the storage and delivery components involved. As a result,
+it’s on equal footing with the file system in this respect.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>You MUST store the media item’s&nbsp;<i>media
+type</i> string. During the file upload task (as you’ll learn below), that
+metadata is available in&nbsp;the Content-Type of the request.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>An advantage of this storage approach is that
+media item&nbsp;metadata can be stored alongside its data, as additional
+properties in the class that holds the media item’s&nbsp;data. For example, you
+can store a “Title”, a lengthy “Description”, and maybe some “tags” or
+“keywords”. Other properties that are relevant to the media item&nbsp;can be
+stored, and their values can come from the browser user, or by programmatically
+inspecting the media item. (For example, the pixel resolution of an image can
+be extracted from the data, without user intervention.)</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Delivery of the media item&nbsp;is managed by
+your app. Usually, a special-purpose controller accepts an identifier in the
+request URL, then locates the requested media item, and finally delivers it to
+the requestor.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Backing up the web app’s data is simple,
+because there’s a single location for all the app’s data – the persistent
+store.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>A frequent and notable criticism of this
+approach is that a&nbsp;media item&nbsp;is transformed when stored, then again
+when retrieved, from the data store. For large media items, this work can be
+considerable, and may hurt performance. Acknowledged.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Implications – hybrid approach, using both
+techniques</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>It is also possible to combine both
+techniques.&nbsp;In this approach, your app stores the media item’s&nbsp;data
+in the file system, and metadata in the data store.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The file system location can be a folder in the
+web app’s URL namespace. Often, the file name is a </span><a
+href="http://en.wikipedia.org/wiki/Globally_unique_identifier" target="_blank"><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>GUID</span></a><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>, or an adaptation of a
+GUID.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The data store class includes media
+item&nbsp;metadata, including (most importantly) the file name.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Similar to above, a special-purpose controller
+is used to help locate and deliver the requested media item.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>This approach is often used in situations where
+the media item&nbsp;size is large (multi-MB or multi-GB), or where there’s a
+large number (e.g. millions) of media items&nbsp;to manage.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>As you would suspect, today’s best-known and
+widely-used web apps use this approach. Name any of them, they do it: YouTube,
+Facebook, Netflix, etc.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Entity class design considerations when using
+the data store</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>As noted above, when using the
+persistent&nbsp;store, an entity class that includes a&nbsp;media
+item&nbsp;MUST have two properties:</span></p>
+
+<ol start=1 type=1>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>A byte array, for the media
+     item’s&nbsp;data</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>A string, for the media type</span></li>
+</ol>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Beyond that, other properties – metadata – can
+be added, if desired.</span></p>
+
+<p class=MsoNormal style='margin-left:22.5pt;line-height:normal'><span
+style='font-size:18.0pt;font-family:"Segoe UI Symbol",sans-serif;color:#0070C0'>&#10077;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>Pause, before
+continuing:</span></p>
+
+<p class=MsoNormal style='margin-left:22.5pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>This is <i>super
+important</i>.</span></p>
+
+<p class=MsoNormal style='margin-left:22.5pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>In a class, a media
+item needs two properties: A byte array for the data, and a string for the
+media type.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>If the design of an entity class is intended to
+hold one single, distinct, and unique media item, then it’s acceptable to
+simply add these properties to the entity class. For example, if an Employee
+class will hold one – and only one ever – photo for the employee’s photo
+identification card, then the Employee class will include these two properties.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In the “…Base”&nbsp;view model classes, DO NOT
+include these properties.&nbsp;In fact, NEVER include these properties in view
+models that are used to deliver data to a browser. (However, if you want or
+need to detect the presence of a media item, then you can add a property to do
+this. For example, a bool property, programmatically-determined. Or an int
+property that holds the size of the byte array data.)</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>If an entity object logically needs a
+collection of media items (e.g. a photo gallery for a Product object), then
+create a separate entity class for the media item, and then configure the
+to-one and to-many (or whatever) associations needed to meet the needs of the
+problem domain.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Finally, if the primary purpose of the app is
+to manage media items (like YouTube, for example), then the entity class(es)
+must be designed around the needs of the app, and the media item&nbsp;entity
+classes become the central part of the design model. This topic is beyond the
+scope of this course.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Our task today:<br>
+Build a dynamic solution to capture, store, and deliver media items</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Based on your past experience, you already know
+how to statically store and deliver media items. (A media item is located in
+your web app, and it can be accessed by a URL.) If you have ever used the HTML
+&lt;input type=file&gt; element, then you know how to capture (i.e. upload) a
+media item; this task requires server-side logic to save the media item in the
+file system. If you have not ever done this, then you will learn how capture
+works below, and can adapt it.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Let’s learn something new:</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>We will build a dynamic solution to <u>capture</u>,
+<u>store</u>, and <u>deliver</u> media items.&nbsp;Media items will be in the
+persistent store (i.e. database).</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Here’s a preview of the solution’s parts and
+tasks:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Entity classes will include properties for
+     the media items’s <i>data bytes</i> and <i>media type</i></span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Capturing a media item is done with&nbsp;a
+     view + view model + controller + manager</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Delivering a media item is done
+     with&nbsp;a controller + manager</span></li>
+</ul>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Open the <i>PhotoProperty</i> code example, and
+study it as you continue reading the next sections.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>If you want to use the code example, there are
+some extra photos in the project’s App_Data folder that you can choose/select.
+If you want accurate model, trim, and price data, it’s on the ford.ca web site.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Click the image to open it full-size in a new
+tab/window.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><a
+href="https://scs.senecac.on.ca/~wei.song/int422/lectures/images/lec10-app-list.png"><span
+style='color:windowtext;text-decoration:none'><img border=0 width=725
+height=309 id="Picture 13" src="INT422-Lecture10_files/image005.png"></span></a></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Entity class design</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>We return to the familiar vehicle /
+manufacturer problem domain. We will have only a Vehicle class.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>As noted above, it has properties for the media
+item’s <i>data</i> and <i>media type</i>:</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'><img border=0 width=374 height=471
+id="Picture 6" src="INT422-Lecture10_files/image006.jpg" alt=vehicle-class></span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Capturing a media item is done
+with a<br>
+view + view model + controller + manager</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Let’s start with the <u>VehicleAddForm</u> view
+model class that is used to build an object for the HTML Form.&nbsp;It will
+have the expected properties.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>It has a PhotoUpload property, of type string.
+It will also use a DataType data annotation, to identify it as a file upload
+property.</span></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0>
+ <tr>
+  <td style='padding:0in 0in 0in 0in'></td>
+  <td style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-family:"Lucida Console"'>[Required]</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-family:"Lucida Console"'>[Display(Name = &quot;<span
+  style='color:#7015BB'>Vehicle Photo</span>&quot;)]</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-family:"Lucida Console"'>[DataType(DataType.Upload)]</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><b><span style='font-family:"Lucida Console";color:#002060'>public</span></b><span
+  style='font-family:"Lucida Console";color:#002060'> </span><b><span
+  style='font-family:"Lucida Console";color:#002060'>string</span></b><span
+  style='font-family:"Lucida Console";color:#0070C0'> </span><span
+  style='font-family:"Lucida Console"'>PhotoUpload { <b><span style='color:
+  #002060'>get; set;</span></b> }</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Normally, when you ask the scaffolder to build
+a “create” view for a string property that uses DataType.Upload, the scaffolder
+will NOT generate the code in the view. You would have to add it yourself.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>To save a bit of work, the code example
+includes an <i>editor template</i>, which is a feature of ASP.NET MVC. In
+Solution Explorer, look in the Views &gt; Shared folder, and you will see a
+partial view, Upload.cshtml. Its code will be automatically used by the
+scaffolder to generate the code for a DataType.Upload string property.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'><img border=0 width=333 height=144
+id="Picture 5" src="INT422-Lecture10_files/image007.jpg" alt=editor-template></span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Next, look at the VehicleAdd view model class,
+which describes the data submitted by the browser user.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>It also has a PhotoUpload property, but its
+type is </span><a
+href="https://msdn.microsoft.com/en-us/library/system.web.httppostedfilebase%28v=vs.110%29.aspx"
+target="_blank"><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HttpPostedFileBase</span></a><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>. As noted in the MSDN
+documentation, it is “the base class …&nbsp;that provide access to individual
+files that have been uploaded by a client”.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Compare these two classes, side-by-side. Only
+the type of PhotoUpload is different:</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'><img border=0 width=717 height=353
+id="Picture 4" src="INT422-Lecture10_files/image008.jpg" alt=vehicle-add-form></span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Before continuing, check that the AutoMapper
+“create map” statements have been defined.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Next, let’s work with the controller. The good
+news is that the configuration of the two “add new” methods (GET and POST) is
+similar to almost every other “add new” use case.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Next, the view. Use the scaffolder to generate
+the Create view. Then edit it, to clean up its title etc.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>There is an <b><span style='color:red'>extremely
+important</span></b> edit that you must make to the view. The scaffolder does
+not do it, unfortunately. As you have seen in all scaffolded Create views, the
+HTML Form is defined by this code:</span></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='margin-left:.5in'>
+ <tr>
+  <td style='padding:0in 0in 0in 0in'></td>
+  <td style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console"'>@using
+  (Html.BeginForm())</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>That specific constructor will NOT configure
+the form to allow file uploads. Therefore, we must write our own constructor.
+Use the following, which will work for almost all scenarios that you’ll code:</span></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0>
+ <tr>
+  <td style='padding:0in 0in 0in 0in'></td>
+  <td style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Lucida Console"'>@using (Html.BeginForm(<b><span
+  style='color:#002060'>null</span></b>, <b><span style='color:#002060'>null</span></b>,
+  FormMethod.Post, <b><span style='color:#002060'>new</span></b> { enctype =
+  &quot;<span style='color:#7015BB'>multipart/form-data</span>&quot; }))</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Click the image to open it full-size in a new
+tab/window.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><a
+href="https://scs.senecac.on.ca/~wei.song/int422/lectures/images/lec10-app-create.png"><span
+style='color:windowtext;text-decoration:none'><img border=0 width=727
+height=378 id="Picture 14" src="INT422-Lecture10_files/image009.png"></span></a></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The Manager class is the next place to get some
+attention. Its “add new” method will look similar to all others that you’ve
+coded, but it will have more statements to handle the uploaded media item.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Notice that the view model class properties for
+PhotoUpload have the [Required] attribute. Therefore, if the code in the
+manager method is running, you can be assured that it has a PhotoUpload object,
+and therefore you don’t have to test for null etc.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Here’s the code for a typical “add new” manager
+method that handles an uploaded media item:</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Lucida Console";color:#002060'>public</span></b><span
+style='font-size:16.0pt;font-family:"Lucida Console";color:#002060'> </span><span
+style='font-size:12.0pt;font-family:"Lucida Console";color:#00B0F0'>VehicleBase</span><span
+style='font-size:12.0pt;font-family:"Lucida Console"'> VehicleAdd(<span
+style='color:#00B0F0'>VehicleAdd</span> newItem)</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>{</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;<span
+style='color:#006600'>// Attempt to add the new item</span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;<b><span
+style='color:#002060'>var</span></b></span><span style='font-size:16.0pt;
+font-family:"Lucida Console"'> </span><span style='font-size:12.0pt;font-family:
+"Lucida Console"'>addedItem = ds.Vehicles.Add(<span style='color:#00B0F0'>Mapper</span>.Map&lt;<span
+style='color:#00B0F0'>VehicleAdd</span>, <span style='color:#00B0F0'>Vehicle</span>&gt;(newItem));</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:16.0pt;font-family:"Lucida Console"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console";color:#006600'>&nbsp;&nbsp;//
+Handle the uploaded photo...</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console";color:#006600'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console";color:#006600'>&nbsp;&nbsp;//
+First, extract the bytes from the HttpPostedFile object</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;<b><span
+style='color:#002060'>byte</span></b>[] photoBytes = <b><span style='color:
+#002060'>new</span></b></span><span style='font-size:16.0pt;font-family:"Lucida Console"'>
+</span><span style='font-size:12.0pt;font-family:"Lucida Console"'>byte[newItem.PhotoUpload.ContentLength];</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;newItem.PhotoUpload.InputStream.Read(photoBytes,
+0, newItem.PhotoUpload.ContentLength);</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:16.0pt;font-family:"Lucida Console"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;<span
+style='color:#006600'>// Then, configure the new object's properties</span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;addedItem.Photo
+= photoBytes;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;addedItem.PhotoContentType
+= newItem.PhotoUpload.ContentType;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:16.0pt;font-family:"Lucida Console"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;ds.SaveChanges();</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:16.0pt;font-family:"Lucida Console"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;<b><span
+style='color:#002060'>return</span></b></span><span style='font-size:16.0pt;
+font-family:"Lucida Console"'> </span><span style='font-size:12.0pt;font-family:
+"Lucida Console"'>(addedItem == <b><span style='color:#002060'>null</span></b>)
+? <b><span style='color:#002060'>null</span></b></span><span style='font-size:
+16.0pt;font-family:"Lucida Console"'> </span><span style='font-size:12.0pt;
+font-family:"Lucida Console"'>: <span style='color:#00B0F0'>Mapper</span>.Map&lt;<span
+style='color:#00B0F0'>Vehicle</span>, <span style='color:#00B0F0'>VehicleBase</span>&gt;(addedItem);</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>}</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>A few notes about the Manager class “get…”
+methods, and the “…Base” class. The manager methods look the same as other
+methods that you have written. And, as noted earlier, the “…Base” class does
+NOT (and must not) include properties for the media item. Therefore, we are not
+leaking – unintentionally or otherwise – media item data to the controllers and
+views. We continue to work with relatively small-sized objects in memory.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Delivering a media item is done
+with a controller + manager</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>At this point in time in the solution, we have
+a way to save a media item into the persistent store (i.e. database).</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>How do we get it out, to deliver it to a
+browser user?</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In our dynamic approach, we will use a
+special-purpose controller to deliver a media item. It will use attribute
+routing to shape the URL segment. The result will be that the media item is
+available to the browser user at a specific URL.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Above, you learned that the “…Base” class does
+not include media item properties. Here, we need them.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>How do we fix that?</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>By creating a <i>new</i>&nbsp;view model class,
+perhaps named “…Media” or “…Photo”. It will be a really simple class, with few
+properties:</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'><img border=0 width=370 height=230
+id="Picture 2" src="INT422-Lecture10_files/image010.jpg" alt=vehicle-photo></span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In the Manager class, the VehiclePhotoGetById()
+method looks like any other “get one” method, and it returns a VehiclePhoto
+object. (Yes, there is an AutoMapper “create map” defined.)</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Designing the special-purpose media item
+delivery controller</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In the code example, a Photo controller was
+created. Its singular purpose will be to host a “get one” method that accepts
+an identifier for a media item, and then deliver it.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>It will use attribute routing to shape the URL,
+so that the web app programmer and the browser user need only use a very simple
+URL format:</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>/photo/123</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The code will look like the following. Notice
+that it is NOT returning a <u>view</u> ActionResult. Instead, it is returning a
+<u>file</u> ActionResult. The File() constructor arguments will cause the
+request-handling pipeline to construct a correct response. Yes, it is as simple
+as that.</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console";color:#006600'>// GET:
+Photo/5</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>[Route(&quot;<span
+style='color:#7015BB'>photo/{id}</span>&quot;)]</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Lucida Console";color:#002060'>public</span></b><span
+style='font-size:12.0pt;font-family:"Lucida Console";color:#002060'> </span><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>ActionResult Details(<b><span
+style='color:#002060'>int</span></b>? id)</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>{</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;<span
+style='color:#006600'>// Attempt to get the matching object</span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;<b><span
+style='color:#002060'>var</span></b> o =
+m.VehiclePhotoGetById(id.GetValueOrDefault());</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;<b><span
+style='color:#002060'>if</span></b> (o == <b><span style='color:#002060'>null</span></b>)</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;{</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;<b><span
+style='color:#002060'>return</span></b> HttpNotFound();</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;}</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;<b><span
+style='color:#002060'>else</span></b></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;{</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;<span
+style='color:#006600'>// Return a file content result</span></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console";color:#006600'>&nbsp;&nbsp;&nbsp;&nbsp;//
+Set the Content-Type header, and return the photo bytes</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;<b><span
+style='color:#002060'>return</span></b> File(o.Photo, o.PhotoContentType);</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;}</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>}</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Click the image to open it full-size in a new
+tab/window.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><a
+href="https://scs.senecac.on.ca/~wei.song/int422/lectures/images/lec10-app-details.png"><span
+style='color:windowtext;text-decoration:none'><img border=0 width=725
+height=374 id="Picture 15" src="INT422-Lecture10_files/image011.png"></span></a></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>What next?</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>This week, your teacher team plans to&nbsp;post
+another&nbsp;notes document and code example that covers the concepts and
+techniques for handling a more complex scenario, where an entity class is
+associated with a <i>collection</i> of non-text media items.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>

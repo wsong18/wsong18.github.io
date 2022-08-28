@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+   <meta charset="UTF-8" />
+   <title>INT222</title>
+   <style> 
+      body { margin: 0 18%; }
+   </style>
+</head>
+<body>
+  <h1>INT222 - DOM node: insertBefore()</h1>
+
+  <div id='org_div1'> The text above has been created dynamically.</div>
+  <button onclick="addElement()">Try it</button>
+  
+  <br>
+  <p><a href="view-source:">View-source</a>&nbsp;&nbsp;&nbsp;&nbsp;
+     <a href="" onclick="download=document.referrer">Download</a></p>
+	 
+  <script>
+	// document.body.onload = addElement;
+	var my_div = null; 
+	var newDiv = null; 
+	function addElement () { 
+	  // create a new div element and give it some content 
+	  var newDiv = document.createElement("div"); 
+	  var newContent = document.createTextNode("Hi there and greetings!"); 
+	  //add the text node to the newly created div. 
+	  newDiv.appendChild(newContent); 
+	  
+	  // add the newly created element and its content into the DOM 
+	  my_div = document.getElementById("org_div1"); 
+	  document.body.insertBefore(newDiv, my_div); 
+	} 
+  </script>
+</body>
+</html>

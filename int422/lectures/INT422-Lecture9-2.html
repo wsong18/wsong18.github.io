@@ -1,0 +1,576 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<title>Lec 9-2</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Segoe UI Symbol";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:"Lucida Console";
+	panose-1:2 11 6 9 4 5 4 2 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+h4
+	{mso-style-link:"Heading 4 Char";
+	margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:#954F72;
+	text-decoration:underline;}
+p
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+code
+	{font-family:"Courier New";}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:.5in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:.5in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+span.Heading4Char
+	{mso-style-name:"Heading 4 Char";
+	mso-style-link:"Heading 4";
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink="#954F72" background=bgw.gif>
+
+<div class=WordSection1 
+     style="margin: 0.5in auto; max-width: 50em; min-width: 30em;">
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:18.0pt;
+font-family:"Arial",sans-serif'>INT422 – Week 9 Lecture Notes – Part 2</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Error handling. Assignment 8 hands-on.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Handle request errors in an
+ASP.NET MVC web app</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>This section&nbsp;suggests an approach for
+gracefully handling request errors in an ASP.NET MVC web app.&nbsp;Inspiration
+for some of this was suggested by </span><a
+href="http://stackoverflow.com/a/9026907" target="_blank"><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>this StackOverflow
+answer</span></a><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>What is the problem?</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>For new ASP.NET MVC programmers, two request
+errors are often seen:</span></p>
+
+<ol start=1 type=1>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>HTTP 404</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Server Error – An unhandled exception…</span></li>
+</ol>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The first error – <b>HTTP 404</b> – happens <u>when
+a requested resource does not exist</u>.&nbsp;Click the image to open it
+full-size in a new tab/window.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><a
+href="https://scs.senecac.on.ca/~wei.song/int422/lectures/images/l9-2-error-httpnotfound.png"
+target="_blank"><span style='font-size:12.0pt;font-family:"Arial",sans-serif;
+text-decoration:none'><img border=0 width=720 height=454 id="Picture 9"
+src="INT422-Lecture9-2_files/image001.png" alt=error-httpnotfound></span></a></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The other happens <u>when there’s a logic error
+in your code</u>. For example, if you make a request that does not include a
+required argument (e.g. /products/details, without the /123 argument), you will
+see the following:</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'><img border=0 width=719 height=719
+id="Picture 8" src="INT422-Lecture9-2_files/image002.png"
+alt=error-unhandled-exception></span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In both situations – and <b>in <i>any</i> error
+situation</b> <b>– you must&nbsp;NOT show this error screen to users</b>.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>What should you do?</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Add code to your project, so that <b>a “not
+found” response looks similar to this</b>:</span></p>
+
+<p class=MsoNormal style='line-height:normal'><a
+href="http://wsong18-wa2017a7.azurewebsites.net/xx"><span style='font-size:
+12.0pt;font-family:"Arial",sans-serif;color:windowtext;text-decoration:none'><img
+border=0 width=721 height=484 id="Picture 7"
+src="INT422-Lecture9-2_files/image003.png" alt=error-http-404-formatted></span></a></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>And <b>a ‘server error’ response looks similar
+to this</b>, for browser users on the web:</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'><img border=0 width=721 height=484
+id="Picture 6" src="INT422-Lecture9-2_files/image004.png"
+alt=error-unhandled-exception-formatted></span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>For you – <u>the programmer</u> – <b>a bit more
+information can be&nbsp;added</b>, to help you locate the error:</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'><img border=0 width=720 height=602
+id="Picture 5" src="INT422-Lecture9-2_files/image005.png"
+alt=error-unhandled-exception-formatted-localhost></span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:18.0pt;font-family:"Segoe UI Symbol",sans-serif;color:#0070C0'>&#10077;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>Writing a suitable 404
+page can be a serious yet amusing undertaking.</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>In a search engine,
+look for:&nbsp;404 page custom or creative or best</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>Look at some of the
+results for inspiration.</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>Google has some
+suggestions on how to </span><a
+href="https://support.google.com/webmasters/answer/93641?hl=en" target="_blank"><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>create a useful 404
+page</span></a><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>.</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:18.0pt;font-family:"Segoe UI Symbol",sans-serif;color:#0070C0'>&#10077;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>Also…</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>This suggested solution
+is <i>not</i> the last word on this topic.</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>It is enough for new
+ASP.NET MVC programmers, but it may not be enough for a production web app at
+scale.</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>There are third-party
+(via NuGet) error logging frameworks that can be added to a project, which
+offer more features and functionality.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Adding error-handling to a
+project</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>This solution will be added to a future project
+template. Here’s how it works.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>We will add code to the project. We’ll add an
+‘errors’ controller (and some views), and another (event handling) method in
+the MvcApplication class.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Add an ‘errors’ controller</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Add an errors controller; you can use the
+’empty’ template.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Change its class declaration to include the ‘<b>sealed</b>’
+modifier:</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:10.0pt;font-family:"Lucida Console";color:#002060'>public</span></b><b><span
+style='font-size:12.0pt;font-family:"Lucida Console";color:#002060'> </span></b><b><span
+style='font-size:10.0pt;font-family:"Lucida Console";color:#002060'>sealed</span></b><b><span
+style='font-size:12.0pt;font-family:"Lucida Console";color:#002060'> </span></b><b><span
+style='font-size:10.0pt;font-family:"Lucida Console";color:#002060'>class</span></b><span
+style='font-size:12.0pt;font-family:"Lucida Console";color:#002060'> </span><span
+style='font-size:10.0pt;font-family:"Lucida Console"'>ErrorsController :
+Controller</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Our solution will handle two types of errors:</span></p>
+
+<ol start=1 type=1>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>not found, and</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>server error</span></li>
+</ol>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Here’s some suggested code. We will use the </span><a
+href="https://msdn.microsoft.com/en-us/library/system.web.mvc.controllerbase.viewbag%28v=vs.118%29.aspx"
+target="_blank"><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>ViewBag</span></a><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;property to
+easily pass simple data to the view, and avoid the need to create view model
+classes.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'><img border=0 width=719 height=610
+id="Picture 4" src="INT422-Lecture9-2_files/image006.png"
+alt=error-controller-methods></span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Add views for ‘not found’ and ‘server error’</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Add views for the two methods. You can <u>use
+the <b>’empty’</b> template</u>.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Add your own content to make a useful page. You
+can implement the suggestions seen above.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Add methods to the MvcApplication class</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>We will write two methods in this class:</span></p>
+
+<ol start=1 type=1>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>an event-handler, for “end request”</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>a private method, to initialize the errors
+     controller, and call one of its methods</span></li>
+</ol>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In an ASP.NET MVC 5 web app, <u>the an instance
+of the MvcApplication class is created (by the ASP.NET runtime) when the first
+request is received</u>. The app’s lifetime is twenty (20) minutes after
+receiving a request (and this timer is reset with each new request). At the end
+of the app’s lifetime, the ASP.NET runtime gracefully terminates the app.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The purpose of the MvcApplication class is to
+handle events that happen during the app’s lifetime. As a web app, all events
+are triggered during the handling of an HTTP request.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><u><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The Global.asax.cs source code file holds the
+definition of the MvcApplication class</span></u><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>. It includes code for the <b><i>Application_Start()</i></b>
+method, which is called by the ASP.NET runtime to handle the <i>Start</i>
+event, and thereby begins the app’s lifetime.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>We can write methods to handle other events.
+Which other events? A few are interesting now, and perhaps in the near future:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>BeginRequest</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>EndRequest</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Error</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>AuthenticateRequest</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>AuthorizeRequest</span></li>
+</ul>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>For this situation, we will write a method to
+handle the <i>EndRequest</i>&nbsp;event</span></b><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>. How?</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>By convention, event-handling methods in the
+MvcApplication class return void, and have a composite name:</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Application <i>underscore event-name</i></span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Look at the <i>Application_Start()</i> method
+name as an example. To handle the <i>EndRequest</i> event, the declaration of
+its event-handling method will be:</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:10.0pt;font-family:"Lucida Console";color:#002060'>protected</span></b><b><span
+style='font-size:12.0pt;font-family:"Lucida Console";color:#002060'> </span></b><b><span
+style='font-size:10.0pt;font-family:"Lucida Console";color:#002060'>void</span></b><span
+style='font-size:12.0pt;font-family:"Lucida Console";color:#002060'> </span><span
+style='font-size:10.0pt;font-family:"Lucida Console"'>Application_EndRequest()</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Here’s a sample implementation, which handles
+HTTP status codes 404 (not found) and anything above 500 (server error):</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'><img border=0 width=721 height=238
+id="Picture 3" src="INT422-Lecture9-2_files/image007.png"
+alt=mvcapplication-end-request-method></span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>To simplify the coding, and reduce code
+replication, the <b>HandleError()</b>&nbsp;method does most of the work:</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'><img border=0 width=720 height=406
+id="Picture 2" src="INT422-Lecture9-2_files/image008.png"
+alt=mvcapplication-utility-method></span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Optional – resources, and more
+information</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The following resources were used to inform and
+help assemble this document:</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>StackOverflow</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>MSDN – </span><a
+href="https://msdn.microsoft.com/en-us/library/system.web.httpapplication%28v=vs.110%29.aspx"
+target="_blank"><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HttpApplication
+Class</span></a><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>
+reference</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>MSDN – </span><a
+href="https://msdn.microsoft.com/en-us/library/system.web.httpapplication_events%28v=vs.110%29.aspx"
+target="_blank"><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HttpApplication
+Events</span></a><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>
+reference</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>MSDN – </span><a
+href="https://msdn.microsoft.com/en-us/library/ms178473%28v=vs.140%29.aspx"
+target="_blank"><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>App
+Lifecycle Overview on IIS 5 and 6</span></a></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>MSDN – </span><a
+href="https://msdn.microsoft.com/en-us/library/bb470252%28v=vs.140%29.aspx"
+target="_blank"><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>App
+Lifecycle Overview on IIS 7</span></a><span style='font-size:12.0pt;font-family:
+"Arial",sans-serif'> (and 8)</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>K. Scott Allen – …</span><a
+href="http://odetocode.com/articles/89.aspx" target="_blank"><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>the HttpApplication
+class</span></a></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Andre Loker – </span><a
+href="http://blog.andreloker.de/post/2008/05/HttpApplication-instances.aspx"
+target="_blank"><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HttpApplication
+instances</span></a></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Sebastian Solnica – </span><a
+href="https://lowleveldesign.wordpress.com/2011/07/20/global-asax-in-asp-net/"
+target="_blank"><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Global.asax
+in ASP.NET</span></a></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>More information about MvcApplication</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>An&nbsp;MvcApplication instance handles one
+request at a time.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The ASP.NET runtime will create additional
+instances of MvcApplication, to enable the app to handle multiple requests (in
+parallel) at the same time. How many? That number is set by default at the web
+server, and can be changed by an agreement between the app programmer(s) and
+the web site manager(s).</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>While there may be multiple instances of
+MvcApplication running, the <i>Application_Start()</i>method runs only once at
+the beginning of the app’s lifetime.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>If you are using the MvcApplication class to
+initialize global (to the app) state (e.g. data, resources), be careful. Do
+the&nbsp;research. Make sure that you use the different kinds of app state
+storage appropriately. Recognize what kind of app state storage is global to
+the app (e.g.</span><a
+href="https://msdn.microsoft.com/en-us/library/system.web.httpapplicationstate%28v=vs.110%29.aspx"
+target="_blank"><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>application
+state</span></a><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>),
+and what kind of app state storage is local to a specific instance of an
+MvcApplication class (e.g. class-level properties and fields).</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Work on Assignment&nbsp;8</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Continue on&nbsp;Assignment 8 – deploy your assignment
+8 to MS Azure.</span></p>
+
+<p class=MsoNormal><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>

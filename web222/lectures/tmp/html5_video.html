@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+   <meta charset="UTF-8" />
+   <title>WEB222</title>
+   <style>
+	  div.picture { width:650px; border:6px outset #369;padding:10px;margin:0 auto;}
+	  figcaption {
+		 padding: 5px;
+		 margin:  5px;
+		 font-size: 1em;
+		 font-weight: 700;
+		 border: 2px solid;
+		 word-wrap:normal;
+		 text-align:center;
+	  }
+	  figure {text-align: center;} 
+   </style>
+</head>
+<body>
+   <div class="picture">
+	  <figure>
+		 <video width="320" height="240"  controls>
+			<source src="movie.mp4"      type="video/mp4"/> 
+			<source src="movie.ogg" type="video/webm" />
+			<source src="movie.webm" type="video/webm" />
+			Your browser does not support the video tag / type
+		 </video>
+		 <figcaption>Video Caption</figcaption> 
+	  </figure>
+   </div>
+   
+   <!-- for view-source and download -->
+   <br>
+   <p>
+	  <a href="html5_video.html" download>Download</a>
+	  <a href="movie.ogg" download>movie.ogg</a>
+   </p>	  
+</body>
+
+</html>

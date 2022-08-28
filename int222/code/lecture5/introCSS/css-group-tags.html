@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+   <meta charset="UTF-8" />
+   <title>INT222</title>
+   <style>
+	  #menu { background-color:lightblue; }
+	  .content { background-color:lightgreen; }
+	  .inline { color: red; font-weight: bold; font-style: italic; }
+	  .block { color: purple; font-weight: bold; font-style: italic;}
+	  #cnt2 span { background: yellow; text-decoration: underline overline;} 
+   </style>
+</head>
+<body>
+  <div id="menu">
+    <a href="/index.htm">HOME</a> | 
+    <a href="/about/contact_us.htm">CONTACT</a> | 
+    <a href="/about/index.htm">ABOUT</a>
+  </div>
+    
+  <div class="content" id="cnt1">
+    <h4>About</h4>
+    <p>
+	  This is the example of <span class="inline">span</span> tag and
+	  the <span class="block">div</span> tag alongwith CSS.
+	</p>
+  </div>
+  <div class="content" id="cnt2">
+    <h5>Content</h5>
+	<p>The element <span class="inline">span</span> is what you could call a
+	   neutral element which does not add anything to the document itself. But
+	   with CSS, <span class="inline">span</span> can be used to add visual
+	   features to specific parts of text in your documents.</p>
+	<p>Whereas element <span class="inline">span</span> is used within a
+	   block-level element as seen in the previous example,
+	   <span class="block">div</span> is used to group one or more block-level
+	   elements. Aside from this difference, the grouping with
+	   <span class="block">div</span> works in more or less the same way.</p>
+  </div>
+  
+   <!-- for view-source and download -->
+   <br>
+   <p><a href="" download>Download</a></p>	  
+</body>
+
+</html>

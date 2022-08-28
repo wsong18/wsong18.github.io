@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <title>WEB222</title>
+   <style type="text/css">
+
+		body{	background:#eeeeee;
+			color:#333333;
+			font-family:Arial,sans-serif;
+			font-size:12px;
+			line-height:14px; 
+			text-shadow:0 1px 0 #ffffff;
+		}
+		li { padding-left:2px; padding-bottom:10px; font-size:12px;}
+
+		form p{
+			margin-bottom:5px;
+		}
+
+		fieldset { border:4px outset #00f;padding:10px 2px;margin-bottom:4px; }
+
+		legend { border: 4px groove #ff0000;
+			background-color: #99ff99; 
+			color: #FFFFFF;
+			font-size: 16px;
+			font-weight: bold;
+			padding: 15px; 
+			text-shadow:0.1em 0.2em 0.09em #333333 ;}
+
+		div.all { width:1200px; margin:0 auto; display:table; padding:10px; }
+		div.left{ width:500px; display:table-cell; margin:5px;vertical-align:top; }
+		div.right{ width:500px; display:table-cell; margin:5px; padding:20px; }
+
+		label{ 	cursor:pointer; 
+			display:block;
+			float:left;
+			font-size:13px;
+			font-weight:bold;
+			line-height:14px; 
+			margin-bottom:3px;
+			width:190px;
+		}
+
+
+		a { text-decoration:none; }
+
+		a:hover{ /* Pseudo-classes */
+		    color:#ff0000;
+			background:#eeeeee;
+		}
+
+		form p:hover label{
+			color:#336699;
+			background:#eeeeee;
+		}
+		form p:hover label::after{ 
+			content: " \2192";
+		}
+
+		input[type=text]{   /*  attribute selector */
+			background:#dddddd;
+			color:#000000;
+			font-family:Arial,sans-serif;
+			font-size:12px;
+			font-weight:bold;
+			padding:5px 10px; 
+			text-transform:uppercase;
+		}
+		
+		.p1::first-letter, li::first-letter { /* Pseudo-elements */
+			font-size:       xx-large;
+            font-weight:     800;
+            color:           #ff6633;
+            background-color:#ffffff;
+        }
+		
+	    li:nth-child(odd) {   /* :last-child */ /* :first:child */ /* :nth-child(n) */ /* :nth-child(even) */
+			color:#ff0000;
+			background:#eeeeee;
+	    }
+
+   </style>
+</head>
+<body>
+
+     <div class="all">
+    <form name="example" action="#">
+      <div class="left">
+          <fieldset><legend>This is a legend</legend>
+            <p>
+                <label for="example01"><a title="whatever text you wish to convey to the visitor">Example 1</a></label>
+                <input id="example01" name="example01" type="text" maxlength="20"/>
+            </p>
+            <p>
+                <label for="example02"><a title="Whatever">Example No. 2</a></label>
+                <input id="example02" name="example02" type="text" size="12" maxlength="10" />
+            </p>
+          </fieldset>
+        <br /><br />
+        <p class="p1">This is an example of fancy CSS</p>
+        <p>The CSS selectors used in this example is called pseudo-class (:) or pseudo-element (::)</p>
+           <br /><br />
+           <ul>
+             <li>:link -- matches link elements that are unvisited</li>
+             <li>:visited -- matches link elements that have been visited</li>
+             <li>:active -- matches any element that's being activated by the user</li>
+             <li>:hover -- matches elements that are being designated by a pointing device</li>
+             <li>:focus -- matches any element that's currently in focus</li>
+             <li>::first-letter -- matches the first letter (pseudo-element)</li>
+             <li>:last-child -- matches the last child element of its parent element</li>
+           </ul>
+        <p>CSS attribute selector example &#8658; &#8658; input[type="text"] {......}</p>
+
+        <p>&#8594; <a href="http://brajeshwar.github.com/entities/">List of Entities</a></p>
+        <p><a href="javascript:history.back()">Back</a></p>
+
+
+      </div>
+      <div class="right">
+          <textarea cols="60" rows="6">a {
+        text-decoration: none;
+}
+a:hover { /* Pseudo-classes */
+        color:           #ff0000;
+        background:      #eeeeee; 
+}</textarea>
+          <textarea cols="60" rows="16">label { 	
+        cursor:          pointer; 
+	display:         block;
+	float:           left;
+	font-size:       13px;
+	font-weight:     bold;
+	line-height:     14px; 
+	margin-bottom:   3px;
+	width:           190px;
+}
+form p:hover label {
+	color:           #336699;
+        background:      #eeeeee; 
+}
+form p:hover label::after {
+	content:         " \2192"; /* See Entities */
+}</textarea>
+          <textarea cols="60" rows="7">input[type=text] {    /*  attribute selector */
+	background:      #dddddd;
+	color:           #000000;
+	font-size:       12px;
+	font-weight:     bold;
+	padding:         5px 10px; 
+	text-transform:  uppercase;
+}</textarea>
+          <textarea cols="60" rows="11">.p1::first-letter, li::first-letter { /* Pseudo elements */
+        font-size:       xx-large;
+        font-weight:     800;
+        color:           #ff6633;
+        background-color:#ffffff;
+}
+li:nth-child(odd) {   /* li:last-child */ /* :first:child */
+                    /* :nth-child(n) */ /* :nth-child(even) */
+        color:#ff0000;
+        background:#eeeeee;
+}
+		 </textarea>
+      </div>
+    </form>
+   </div>
+
+  <br>
+  <p><a href="" onclick="download=document.referrer">Download</a></p>
+</body>
+</html>

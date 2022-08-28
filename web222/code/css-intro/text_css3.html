@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title> CSS3 text  </title>
+   <meta charset="UTF-8"/>
+   <style type="text/css" >
+        h1 { text-shadow: 5px 5px 5px grey; }
+		h2 { text-shadow: 0 0 3px red; color: white; }
+		#p1 { text-shadow: 0 0 3px #FF0000; }
+		
+        div .wrap {
+	       width: 200px; /* 10em; */
+	       border:1px solid blue;
+	       word-wrap:break-word;
+        }
+		div p {
+	       width: 200px; /* 10em; */
+	       border:1px solid blue;
+        }
+   </style>
+</head>
+<body>
+   <h1>Text-shadow effect!</h1>
+   <h2>Text-shadow effect!</h2>
+   <p id=p1>Text-shadow effect!</p>
+   
+   <div>
+     <p class="wrap"> This paragraph contains a very long word:
+	   thisisaveryveryveryveryveryverylongword. The long word will break and wrap
+	   to the next line.</p>
+     <p> This paragraph contains a very long word:
+	   thisisaveryveryveryveryveryverylongword. The long word will break and wrap
+	   to the next line.</p>
+   </div>
+   
+   <!-- for download -->
+   <br><p><a href='' download>Download</a></p> 	  
+</body>
+</html>

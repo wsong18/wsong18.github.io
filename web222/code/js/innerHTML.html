@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <title>WEB222</title>
+   <style> 
+      body { margin: 0 20%; }
+   </style>
+   <script>
+      function readParagraph() {
+	     alert( document.getElementById("para1").innerHTML );
+	  }
+	  
+	  function changeParagraph (id) {
+		 document.getElementById(id).innerHTML = "The paragraph was changed.";
+	  }
+	  
+	  var appendParagraph = function () {
+	     document.getElementById("para1").innerHTML += "This is appended text.";
+	  }
+	  
+	  var clearParagraph = function (id) {
+		 document.getElementById(id).innerHTML = "";
+	  };  
+   </script>
+</head>
+<body>
+  <h1>WEB222 - innerHTML</h1>
+  
+  <p id="para1">This is a paragraph: practice on document.getElementById() method and element.innerHTML property</p>
+  
+  <button type=button onclick="readParagraph()" >Read Text</button>
+  <button type=button onclick="changeParagraph('para1')" >Change Text</button>
+  <button type=button onclick="appendParagraph()" >Append Text</button>
+  <button type=button onclick="clearParagraph('para1')" >Clear Text</button>
+  
+  <br><br><hr><br>
+
+  <br>
+  <!-- for downloading source files -->
+  <p><a href="" Download>Download</a></p>
+</body>
+</html>

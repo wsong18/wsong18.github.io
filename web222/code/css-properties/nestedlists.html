@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   <meta charset="UTF-8" />
+   <title>INT222</title>
+   <link rel="stylesheet" href="../int222/includes/reset-a1.css" type="text/css" /> 
+   <style type="text/css">
+     .level-01      {list-style-type:circle; list-style-position:inside;padding-left:20px;} 
+     .level-02      {list-style-type:lower-alpha;list-style-position:inside; padding-left:20px;} 
+     .level-03      {list-style-type:square;list-style-position:inside; padding-left:20px;}
+   </style>
+ </head>
+ <body>
+<p>Nested list</p>
+  <ul class="level-01">
+    <li>first level - 1</li>
+    <li>first level - 2
+      <ol class="level-02">
+        <li>second level - 1</li>
+        <li>second level - 2
+          <ul class="level-03">
+            <li>third level - 1</li> 
+            <li>third level - 2</li>
+          </ul></li>
+        <li>second level - 3</li>
+      </ol></li>
+    <li>first level - 3</li>
+  </ul>
+ </body>
+</html>

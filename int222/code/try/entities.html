@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <title>Example</title>
+   <style>
+      span {
+         position:relative;
+         font-size: 0.7em;
+         left:-1.5em;
+         background-color:red;
+         color:white;
+		 border-radius:50%;
+         display:inline-block;
+         vertical-align: middle;
+         font-weight: 900;
+         font-family: black, sans-serif;
+      }
+      
+      #stop {
+         position:relative;
+         left:-1.1em;
+         background-color:white;
+         color:red;
+         font-size: 0.75em;
+         vertical-align:baseline;
+      }
+      
+      input {border:red solid 1px;}
+      
+      [type=submit] {
+         border:1px;
+         display: inline-block;
+         border-radius: .25em;
+         background-image: linear-gradient(#3c88cc,#276195);
+         box-shadow: 0 2px 0 0 rgba(0,0,0,0.1), inset 0 -2px 0 0 rgba(0,0,0,0.2);
+      }
+   </style>
+</head>
+<body>
+   <h3>Example</h3>
+   <p>&#x26d4; or &#9940;</p>
+   <p>&#10003;&#9989;&#10004;</p>
+   <p>&#10060;&#10060;&#10006</p>
+   <form>
+   <p><span>&nbsp;&nbsp;<b>!</b>&nbsp;&nbsp;</span> <p>
+   <p></p><input type="text"/><span>&nbsp;!&nbsp;</span> </p>
+   <p></p><input type="text"/><span id=stop >&#9940;</span> </p>
+   
+   <p></p><input type="email"/><span id=stop >&#9940;</span> </p>
+   
+   <p><input type=submit value="Create Account"/></p>
+   </form>
+   <!-- for view-source and download -->
+   <br><p><a href="view-source:">View-source</a>&nbsp;&nbsp;&nbsp;<a href='' download>Download</a></p>
+</body>
+</html>

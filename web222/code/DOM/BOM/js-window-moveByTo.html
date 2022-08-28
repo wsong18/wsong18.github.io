@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+   <meta charset="UTF-8" />
+   <title>BOM</title>
+   <style> 
+      body { margin: 0 18%; }
+   </style>
+   <script>
+     var myWindow; // global variables
+	 
+	 function openWin()
+     {
+	    //myWindow = window.open('http://www.google.com','MsgWindow','width=200,height=200'); //Permission denied
+		myWindow=window.open('','MsgWindow','width=200,height=200');
+        myWindow.document.write("<p>This window's name is: " + myWindow.name + "</p>");
+     }
+   </script>
+</head>
+<body>
+  <h3>BOM - window.moveBy() and window.moveTo()</h3>
+  <br>  
+  <p>
+    <input type="button" value="Open 'myWindow'" onclick="openWin()" />
+    <input type="button" value="Move By (200, 100)" 
+	       onclick="myWindow.moveBy(200,100);myWindow.focus();" />
+	<input type="button" value="Move To (0, 0)" 
+	       onclick="myWindow.moveTo(0,0);myWindow.focus();" />
+	<input type="button" value="Close" onclick="myWindow.close()" />
+  </p>
+
+  <br> <hr>
+  <p><a href="view-source:">View-source</a>&nbsp;&nbsp;&nbsp;&nbsp;
+     <a href="" onclick="download=document.referrer">Download</a></p>
+</body>
+
+</html>

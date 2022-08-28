@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+   <meta charset="UTF-8" />
+   <title>BOM</title>
+   <style> 
+      body { margin: 0 20%; }
+   </style>
+   <script>
+     var myWindow; // global variables
+	 
+	 function openWin()
+     {
+	    myWindow = window.open('http://www.google.com','MsgWindow','width=400,height=400');
+     }
+   </script>
+</head>
+<body>
+   <h3>DOM - Syntax - window.focus() and window.blur()</h3>
+   <br>  
+   <p>
+	  <input type="button" value="Open 'myWindow'" onclick="openWin()" />
+	  <input type="button" value="Set focus" onclick="myWindow.focus()" />
+	  <input type="button" value="Set blur" onclick="myWindow.blur()" />
+   </p>
+   <hr>
+  
+   <!-- for view-source and download -->
+   <br><p><a href="view-source:">View-source</a> <a href="js-window-focus.html" download>Download</a></p>	
+</body>
+
+</html>

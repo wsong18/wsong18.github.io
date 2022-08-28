@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <!-- Latest compiled and minified Bootstrap 3.3.7 CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <title>Knockout</title>
+    </head>
+    <body>
+        <h3>"Text" bindings</h3>
+
+        <p id=first>The name is <span data-bind="text: personName"></span> and
+        the age is <span data-bind="text: personAge"></span>  </p>
+        
+        <div id="person">
+            The Person name is <span data-bind="text: personName"></span>  
+        </div>
+        <div id="pet">
+            The Pet name is <span data-bind="text: petName"></span>    
+        </div>
+        
+        <h3>The Mapping Plugin - Using Existing Data - Single object</h3>
+        <div id="employee1">
+            The first Employee's first name is <span data-bind="text: FirstName"></span>  
+        </div>
+		
+		<h3>The Mapping Plugin - Using Existing Data - Object array</h3>
+		<div class="row">
+
+            <!--<div data-bind="text: employeesModel()[0].FirstName"></div> --> <!-- see updates immediately -->
+            <div class="container bootstrap-header-table">
+                <div class="row header-row">
+                    <div>
+                        <div class="col-xs-6 header-column">First Name</div>
+                        <div class="col-xs-6 header-column">Last Name</div>
+                    </div>
+                </div>
+                <div class="row body-rows" data-bind="foreach: employeesModel">
+                    <div class="row body-row">
+                        <div class="col-xs-6 body-column">
+                            <input type='text' class='form-control' placeholder='First Name' 
+                                    name='FirstName' data-bind="value: FirstName">
+                        </div>
+                        <div class="col-xs-6 body-column">
+                            <input type='text' class='form-control' placeholder='Last Name' 
+                                    name='LastName' data-bind="value: LastName">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Latest compiled and minified jQuery 3.2.1 JavaScript -->
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+        <!-- Latest compiled and minified Bootstrap 3.3.7 JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        <!-- Knockout.js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
+        
+        <!-- Knockout Mapping 2017.12.28 ws -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout.mapping/2.4.1/knockout.mapping.min.js"></script>
+        
+        <!-- custom JS (main) -->
+        <script src="js/main.js"></script>    
+    </body>
+</html>

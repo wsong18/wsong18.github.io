@@ -1,0 +1,669 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<title>Lecture 2-2</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Segoe UI Symbol";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+h4
+	{mso-style-link:"Heading 4 Char";
+	margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:#954F72;
+	text-decoration:underline;}
+p
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+code
+	{font-family:"Courier New";}
+span.Heading4Char
+	{mso-style-name:"Heading 4 Char";
+	mso-style-link:"Heading 4";
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink="#954F72" background=bgw.gif>
+
+<div class=WordSection1 
+     style="margin: 0.5in auto; max-width: 50em; min-width: 30em;">
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:18.0pt;
+font-family:"Arial",sans-serif'>INT422 – Lecture 2-2</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Learn the “add new” pattern.
+Hands-on with Assignment 2.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Code examples</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Today: Using a persistent store
+– add new</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Reminder: Principal theme for
+next few weeks</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The key objective for this
+course is:&nbsp;<em><span style='font-family:"Arial",sans-serif'>Create
+interactive web apps, which have some complexity, and can scale.</span></em></span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>To make progress in the next
+few weeks, the teacher team will give you a <em><span style='font-family:"Arial",sans-serif'>project
+template</span></em>&nbsp;that includes a pre-configured, ready-to-use database
+– also known as a <em><span style='font-family:"Arial",sans-serif'>persistent
+store</span></em> – and all the program objects that enable us to interact with
+it. As a result, we can use the next few weeks to focus&nbsp;on learning how to
+create interactive web apps, without worrying about data storage.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Checkpoint – we recently covered
+“get all” and “get one”</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In the previous class, we
+covered the “get all” and “get one” use cases.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>As we implemented these use
+cases, many new concepts and topics were introduced:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Modular and layered software architecture
+     model</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Persistent storage with a database, using
+     the Entity Framework</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Two kinds of classes for objects – <em><span
+     style='font-family:"Arial",sans-serif'>design model</span></em> classes,
+     and <em><span style='font-family:"Arial",sans-serif'>view model</span></em>
+     classes</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>AutoMapper, a library to map objects
+     between types (classes)</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Manager class, to handle data service
+     operations, and used by all controllers</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Customized Visual Studio project template</span></li>
+</ul>
+
+<p><span style='font-family:"Arial",sans-serif'>Let’s continue, by adding more
+functionality.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Adding more functionality – “add
+new”</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>For this use case, we must
+deliver an HTML Form to the browser user.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Then, we must accept the posted
+data, and process it (by adding a new customer).</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>To preview our work, the
+controller method will call a manager method, which does the add-and-save work.
+The newly-added object is then returned to the controller, for final
+processing.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>There are several tasks in the
+work plan. Here’s a list. Details follow.</span></p>
+
+<ol start=1 type=1>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Create a view model</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Create a mapper</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>In the Manager, create an “add new” method</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>In the controller, modify the first
+     Create() method, if necessary</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Create an “add new” view, using the
+     scaffolder</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>In the controller, modify the other
+     Create() method, to call the manager “add new” method, and handle the
+     result</span></li>
+</ol>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Create a view model</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>We already have a CustomerBase
+view model class. It has all the properties we need to describe a customer
+object.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Can we use it for the “add new”
+use case?</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>NO.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>As you recently learned, we
+need a <b>CustomerAdd view model class</b>. It has the properties needed for a
+new object, EXCEPT for the identifier.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Why don’t we need to gather the
+identifier from the browser user?</span></p>
+
+<p style='margin-left:.5in'><span style='font-family:"Arial",sans-serif'>“By
+default, and by convention, the database server automatically assigns the
+identifier.</span></p>
+
+<p style='margin-left:.5in'><span style='font-family:"Arial",sans-serif'>Note
+that this design approach says nothing about indexes that you (or your database
+administrator) may wish to create in a database, to support fast lookups etc.
+That’s an advanced topic, not covered in this course.”</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In the view model source code
+file, add a new CustomerAdd class.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'><img width=305 height=126
+id="Picture 6" src="INT422-Lecture2-2_files/image001.jpg" alt=addnew01></span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>It needs a constructor. Add it.
+Later, we may – or may not – add code to the constructor.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Now, cut – NOT copy – all
+properties EXCEPT the identifier from the CustomerBase view model class. Paste
+them into the CustomerAdd class.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>We will now modify the
+CustomerBase class, to </span><a
+href="https://msdn.microsoft.com/en-us/library/ms173149.aspx" target="_blank"><span
+style='font-family:"Arial",sans-serif'>inherit</span></a><span
+style='font-family:"Arial",sans-serif'> from CustomerAdd. The syntax is simple,
+and perhaps similar to what you see in other programming languages. After the class
+name, add a colon, and then the name of the superclass.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'><img border=0 width=527
+height=287 id="Picture 5" src="INT422-Lecture2-2_files/image002.jpg"
+alt=addnew02></span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Here’s another way to look at
+it:</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'><img border=0 width=730
+height=588 id="Picture 4" src="INT422-Lecture2-2_files/image003.png"
+alt=addnew03></span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>We will use view model class
+inheritance often, so make sure that you understand the concept and its
+implementation.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Create a mapper</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The next mapping we need will
+map from a view model CustomerAdd class, to a design model Customer class. When
+you write the “create map”&nbsp;statement, ensure that you include the
+fully-qualified class&nbsp;name.&nbsp;Click to open the image full-size in a
+new tab/window.</span></p>
+
+<p><img border=0 width=719 height=513 id="Picture 7"
+src="INT422-Lecture2-2_files/image004.png"></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>In the Manager, create an “add
+new” method</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>If you skimmed the
+documentation for the </span><a
+href="https://msdn.microsoft.com/en-us/library/gg696460%28v=vs.113%29.aspx"
+target="_blank"><span style='font-family:"Arial",sans-serif'>DbSet&lt;T&gt;</span></a><span
+style='font-family:"Arial",sans-serif'> class, you may have noticed an </span><a
+href="https://msdn.microsoft.com/en-us/library/mt136632%28v=vs.113%29.aspx#M:System.Data.Entity.DbSet%601.Add%28%600%29"
+target="_blank"><span style='font-family:"Arial",sans-serif'>Add()</span></a><span
+style='font-family:"Arial",sans-serif'> method, and a </span><a
+href="https://msdn.microsoft.com/en-us/library/system.data.entity.dbcontext.savechanges%28v=vs.113%29.aspx#M:System.Data.Entity.DbContext.SaveChanges"
+target="_blank"><span style='font-family:"Arial",sans-serif'>SaveChanges()</span></a><span
+style='font-family:"Arial",sans-serif'> method in the </span><a
+href="https://msdn.microsoft.com/en-us/library/system.data.entity.dbcontext%28v=vs.113%29.aspx"
+target="_blank"><span style='font-family:"Arial",sans-serif'>DbContext</span></a><span
+style='font-family:"Arial",sans-serif'> class.</span></p>
+
+<p><b><span style='font-family:"Arial",sans-serif'>Add()</span></b><span
+style='font-family:"Arial",sans-serif'> will add a new object to the data
+context (which really is an in-memory temporary work area for data objects).</span></p>
+
+<p><b><span style='font-family:"Arial",sans-serif'>SaveChanges()</span></b><span
+style='font-family:"Arial",sans-serif'> will save any changes in the data
+context to the data store.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Now that we know the plan, we
+create an “<b>add new</b>” method. Its features:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>An argument, of type CustomerAdd, that can
+     be passed in from the controller</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>A return type, of type CustomerBase, that
+     can be passed back to the controller</span></li>
+</ul>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Our&nbsp;first task is to
+attempt to add a new object to the data context Customers collection. The Add()
+method is expecting&nbsp;an object of type Customer. Therefore, we must map <u>from</u>
+CustomerAdd <u>to</u> Customer.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Next, attempt to save the
+changes.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Finally, return the object,
+guarding against a null result, and using AutoMapper to transform it into a <em><span
+style='font-family:"Arial",sans-serif'>view model</span></em> object.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Here’s a typical “add new”
+method. Click to open the image full-size in a new tab/window.</span></p>
+
+<p><img border=0 width=714 height=250 id="Picture 3"
+src="INT422-Lecture2-2_files/image005.jpg"></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>In the controller, modify the
+first Create() method, if necessary</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In ASP.NET MVC web apps, we
+ALWAYS use two methods for “add new”, “edit existing”, and “delete item”.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The first method responds to HTTP
+GET. Its job is to prepare the data that’s needed for an HTML Form, and pass
+the data to the view, which appears in the user’s browser.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The other method responds to
+HTTP POST, when the user submits the HTML Form. Its job is to validate the
+incoming data, process it, and handle the result.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-family:"Arial",sans-serif'>First Create() method,
+for HTTP GET</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Its job is to prepare the data
+that’s needed for an HTML Form, and pass the data to the view, which appears in
+the user’s browser.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The CustomerAdd class is
+simple, with text-only properties. For this situation, it probably is not
+necessary to send any data to the HTML Form. Therefore, the method body can be
+simple.</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New";color:#00B050'>// GET:
+Customers/Create</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New";color:#002060'>public</span></b><b><span
+style='font-size:16.0pt;font-family:"Times New Roman",serif;color:#002060'> </span></b><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>ActionResult Create()</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>{</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;<span
+style='color:#00B050'>// At your option, create and send an object to the view</span></span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;<span
+style='color:#002060'>return</span></span></b><b><span style='font-size:16.0pt;
+font-family:"Times New Roman",serif'> </span></b><b><span style='font-size:
+12.0pt;font-family:"Courier New"'>View();</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>}</span></b></p>
+
+<h4><span style='font-family:"Arial",sans-serif'>&nbsp;</span></h4>
+
+<h4><span style='font-family:"Arial",sans-serif'>Create an “add new” view,
+using the scaffolder</span></h4>
+
+<p><span style='font-family:"Arial",sans-serif'>Create the “get one” view.
+Complete the dialog as shown below:</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'><img border=0 width=721
+height=445 id="Picture 1" src="INT422-Lecture2-2_files/image006.png"
+alt=addnew06></span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-family:"Arial",sans-serif;color:red'>Important:</span></strong></p>
+
+<p style='margin-left:.5in'><span style='font-size:18.0pt;font-family:"Segoe UI Symbol",sans-serif;
+color:#0070C0'>&#10077;</span><span style='font-family:"Arial",sans-serif'>The
+“Data context class” field MUST be EMPTY.&nbsp;Do NOT enter a value.</span></p>
+
+<p style='margin-left:.5in'><span style='font-family:"Arial",sans-serif'>Also,
+check/mark the “Reference script libraries” checkbox<i>.</i></span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Now, going back to the browser,
+the “Create new” link on the list-of-customers page will work, and take you to
+a create&nbsp;view.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Also, as you learned in
+Assignment 1, you can edit the view, to make its appearance and text content
+nicer.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>In the controller, modify the
+other Create() method,<br>
+to call the manager “add new” method, and handle the result</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The&nbsp;job of this method is
+to validate the incoming data, process it, and handle the result.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>How does it validate incoming
+data? An ASP.NET MVC feature named </span><a
+href="https://msdn.microsoft.com/en-CA/library/dd410405%28v=vs.100%29.aspx#Anchor_2"
+target="_blank"><i><span style='font-family:"Arial",sans-serif'>model binding
+and validation</span></i></a><span style='font-family:"Arial",sans-serif'>.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In Assignment 1, your Create()
+method that handled HTTP POST had an argument of type <b>FormCollection</b>.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>From now on, we will use <em><b><span
+style='font-family:"Arial",sans-serif'>strong typing</span></b></em>, and set
+the argument to the view model type that we are expecting from the posted HTML
+Form.</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New";color:#002060'>public</span></b><b><span
+style='font-size:16.0pt;font-family:"Times New Roman",serif;color:#002060'> </span></b><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>ActionResult Create(<span
+style='background:yellow'>CustomerAdd newItem</span>)</span></b></p>
+
+<p><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>This is <b>super</b> important.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Pause for a moment, and make
+sure that you understand the feature.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Next, we check whether the
+incoming object&nbsp;is valid. If not, we redisplay the form, with the bad
+data. The view will show relevant error message(s) to the browser user. (How?
+You will learn that later in the course.)</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Otherwise, if the
+object&nbsp;is valid, we can continue. Call the manager “add new” method, and
+pass in the object. We expect a fully-configured object to be returned. The
+returned object will have the unique identifier that was assigned when the
+object was saved in the data store.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>If there was a problem adding
+or saving, we redisplay the form, with the bad data.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Otherwise, we handle the
+result, and decide what to do next.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>A best practice is that these
+three kinds of requests – “<u>add new”, “edit existing”, and “delete item” –
+use <b>a web app pattern</b></u> named </span><a
+href="http://www.wikiwand.com/en/Post/Redirect/Get" target="_blank"><b><span
+style='font-family:"Arial",sans-serif'>Post – Redirect – Get</span></b></a><b><span
+style='font-family:"Arial",sans-serif'> (PRG)</span></b><span style='font-family:
+"Arial",sans-serif'>. The biggest benefit of this pattern is that it prevents
+problems that may arise from attempts by a user to re-submit an
+already-processed HTML Form, or refresh a&nbsp;submitted&nbsp;HTML Form, or an
+attempt at using the browser’s “back” button/functionality on a submitted HTML
+Form.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>How is that pattern
+implemented? Very easily. At the end of the method, return a </span><a
+href="https://msdn.microsoft.com/en-us/library/system.web.mvc.controller.redirecttoaction%28v=vs.118%29.aspx"
+target="_blank"><span style='font-family:"Arial",sans-serif'>RedirectToAction()</span></a><span
+style='font-family:"Arial",sans-serif'> result. That will send HTTP 302 to the
+browser, with a Location header value that points to the resource you specify.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>After “add new”, an acceptable
+best practice is to <b>redirect to a “details” view</b>, which you already have
+coded.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Here’s the complete code for
+the method:</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New";color:#00B050'>// POST:
+Customers/Create</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>[HttpPost]</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New";color:#002060'>public</span></b><b><span
+style='font-size:16.0pt;font-family:"Times New Roman",serif;color:#002060'> </span></b><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>ActionResult Create(CustomerAdd
+newItem)</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>{</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;<span
+style='color:#00B050'>// Validate the input</span></span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;<span
+style='color:#002060'>if</span></span></b><b><span style='font-size:16.0pt;
+font-family:"Times New Roman",serif'> </span></b><b><span style='font-size:
+12.0pt;font-family:"Courier New"'>(!ModelState.IsValid)</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;{</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;<span
+style='color:#002060'>return</span></span></b><b><span style='font-size:16.0pt;
+font-family:"Times New Roman",serif'> </span></b><b><span style='font-size:
+12.0pt;font-family:"Courier New"'>View(newItem);</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;}</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:16.0pt;font-family:"Times New Roman",serif'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;<span
+style='color:#00B050'>// Process the input</span></span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;<span
+style='color:#002060'>var</span></span></b><b><span style='font-size:16.0pt;
+font-family:"Times New Roman",serif'> </span></b><b><span style='font-size:
+12.0pt;font-family:"Courier New"'>addedItem = m.CustomerAdd(newItem);</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:16.0pt;font-family:"Times New Roman",serif'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;<span
+style='color:#002060'>if</span></span></b><b><span style='font-size:16.0pt;
+font-family:"Times New Roman",serif'> </span></b><b><span style='font-size:
+12.0pt;font-family:"Courier New"'>(addedItem == <span style='color:#002060'>null</span>)</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;{</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;<span
+style='color:#002060'>return</span></span></b><b><span style='font-size:16.0pt;
+font-family:"Times New Roman",serif'> </span></b><b><span style='font-size:
+12.0pt;font-family:"Courier New"'>View(newItem);</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;}</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;<span
+style='color:#002060'>else</span></span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;{</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;<span
+style='color:#002060'>return</span></span></b><b><span style='font-size:16.0pt;
+font-family:"Times New Roman",serif'> </span></b><b><span style='font-size:
+12.0pt;font-family:"Courier New"'>RedirectToAction(&quot;details&quot;, <span
+style='color:#002060'>new</span></span></b><b><span style='font-size:16.0pt;
+font-family:"Times New Roman",serif'> </span></b><b><span style='font-size:
+12.0pt;font-family:"Courier New"'>{ id = addedItem.CustomerId });</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;}</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>}</span></b></p>
+
+<h4><span style='font-family:"Arial",sans-serif'>&nbsp;</span></h4>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Work on Assignment&nbsp;2</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Your professor will guide
+students as we get started on Assignment 2.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Before you leave the room at
+the end of the time slot, ensure that your professor has checked your work, for
+the&nbsp;<em><span style='font-family:"Arial",sans-serif'>in-class grading</span></em>&nbsp;part
+of the assignment.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>

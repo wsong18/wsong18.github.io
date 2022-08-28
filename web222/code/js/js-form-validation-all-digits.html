@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en"> 
+ <head>
+   <meta charset="UTF-8" />
+   <title>JS Validation</title>
+   <style> 
+      body { margin: 0 10%; }	  
+	  form { border: 10px solid #00ff00; padding: 5px; }	  	  
+      .inputbox { 
+            background-color: #ffffff; 
+            border-top:    7px dashed #0000ff; 
+            border-bottom: 7px dashed #0000ff; 
+            border-left:   7px solid  #ff0000; 
+            border-right:  7px solid  #ff0000; 
+      }
+      .inputtext{
+            font-size: 14px; 
+            font-style:italic;
+            font-weight:bold;
+      }
+	  #errors { color: red; }
+   </style>
+   <script>
+	  function formValidation() {
+	     clearerrors();
+         return validatePhoneNumber();
+      }
+	  
+      function validatePhoneNumber() {
+         var errors = document.querySelector("#errors");
+         var input = document.form1.phone.value.trim();
+
+		 if (input.length != 10) { // check 10 characters
+            errors.innerHTML += "<p>* Please enter 10 digits.</p>";
+			document.form1.phone.focus();
+			return false; // failed for validation
+         }
+		 
+         if (parseInt(input) != input) { // check all digits
+            errors.innerHTML += "<p>* Please enter a phone number, numbers only.</p>";
+            document.form1.phone.focus();
+	        return false; // failed for validation
+         }
+       
+         return true; // passed for validation
+
+      }  //  End of function
+	  
+	  function clearerrors() {
+         document.querySelector("#errors").innerHTML = "";
+      }
+   </script>
+ </head>
+ <body>
+    <div id="content" style="font-family:monospace;font-size:14px;">
+		<h1>JavaScript - Form Validation</h1>
+		<h4><mark> - Validating Text Field</mark></h4>
+		<h4> - Rules: </h4>
+		<ul>
+		  <li><mark> 10 characters</mark></li>
+		  <li><mark> all digits</mark></li>
+		</ul>
+		
+		<!-- Start of example -->
+		<form id='example' name='form1' 
+			  method='post' action='https://httpbin.org/post' 
+			  onsubmit='return formValidation();'><br>
+		   <p>
+			   <label title="Phone number must be all digits." for="pnumber"> Phone Number </label> 
+			   <span class='inputbox'>
+					<input class='inputtext' type="tel" id='pnumber' name='phone' autofocus required size='20' value='' maxlength='15'>
+			   </span>
+		   </p>
+		   <div id='errors'></div>
+		   <br>
+		   <p>
+			  <input type="submit" value="Submit Information" /> &nbsp;&nbsp;  
+			  <input type="reset"  value="    Clear   " onclick="clearerrors()"/>  
+		   </p> 
+		</form>
+		<!-- End of example -->
+    </div>
+ </body>
+</html>

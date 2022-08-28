@@ -1,0 +1,306 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<base target="_blank">
+<title>Lec 12-2</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+h4
+	{mso-style-link:"Heading 4 Char";
+	margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:#954F72;
+	text-decoration:underline;}
+p
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+span.Heading4Char
+	{mso-style-name:"Heading 4 Char";
+	mso-style-link:"Heading 4";
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+span.skimlinks-unlinked
+	{mso-style-name:skimlinks-unlinked;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink="#954F72" background=bgw.gif>
+
+<div class=WordSection1 
+     style="margin: 0.5in auto; max-width: 50em; min-width: 30em;">
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:18.0pt;
+font-family:"Arial",sans-serif'>INT422 – Lecture 12 Part 2</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Bonus coverage – load data from a web service. </span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Code examples</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>WebServiceExample</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>LoadDataFromWebService</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Bonus coverage – Load data from a
+web service</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Some students have asked about loading data
+(e.g. JSON) from a web service. Learn how in this section.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Fetching JSON from a web service – design
+considerations</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>When designing a solution that will fetch JSON
+from a web service, you will realize that it is possible to perform the fetch
+by using JavaScript in the browser, or by using server-side code.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Which to use?</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The answer is determined by the intended use of
+the JSON. If you want to create objects that will be used <i>in the controller
+or manager</i>, or <i>saved in the data store</i>, we recommend that you use
+server-side code. Otherwise, you can use JavaScript.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Fetch JSON using JavaScript</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The Week 11 code example <i>AjaxWithWebService</i>&nbsp;implements
+this use case.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>A new Week 12 code example <i>LoadDataFromWebService</i>
+also implements this use case, in its “ArtistsHTML5Page.html” page and linked
+script.&nbsp;Click the image to open it full-size in a new tab/window.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><img width=718 height=299
+id="Picture 7" src="INT422-Lecture12-2_files/image001.png"></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Fetch JSON using C# (Manager class and
+controller classes)</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>As noted above, this use case is for situations
+where you need to work with the data in the controller or manager, or you need
+to save the data in the data store.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Open two code examples as you work through this
+section:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><i><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>WebServiceExample</span></i></li>
+ <li class=MsoNormal style='line-height:normal'><i><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>LoadDataFromWebService</span></i></li>
+</ul>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The <i>WebServiceExample</i> publishes data
+from the Chinook <i>music business</i> database. Artists and employees. Start
+and run that app so that it is running on your computer’s per-instance
+on-demand web server.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Click the image to open it full-size in a new
+tab/window.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><a
+href="https://scs.senecac.on.ca/~wei.song/int422/lectures/images/lec12.2-web-svc-home.png"><span
+style='color:windowtext;text-decoration:none'><img border=0 width=719
+height=449 id="Picture 8" src="INT422-Lecture12-2_files/image002.png"></span></a></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Study the code. Its Manager class methods are
+similar to others you have written. Its Artists and Employees controllers are <i>Web
+API</i> controllers, which will return JSON (or XML) data.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The <i>LoadDataFromWebService</i> code example
+is a standard ASP.NET MVC web app, and has Manager class methods which call out
+to the web service. Every programming platform has an object that can make an
+HTTP request and handle its response. In your ASP.NET MVC apps, you can use the
+</span><a
+href="https://msdn.microsoft.com/en-us/library/system.net.http.httpclient%28v=vs.118%29.aspx"
+target="_blank"><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>HttpClient</span></a><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> class to do this work.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In the Manager, there is a custom “factory”
+method that creates an HttpClient object. Each data-fetching method uses the
+factory to create a custom object.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Notice also the use of the </span><a
+href="https://msdn.microsoft.com/en-us/library/hh191443.aspx" target="_blank"><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>async-await pattern</span></a><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>. When doing any task
+that has the potential of running for a long time, or not completing at all,
+you should use the&nbsp;async pattern. For this task, we do not know if – or
+when – a response will come back from the web service. When we use the async
+pattern, the task is done in the background, while the foreground task –
+whatever that is – remains running. There’s a simple recipe for using the async
+pattern, for most simple situations:</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>When <u>calling</u> an async method, prefix the
+method call with the <b>await</b> keyword.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>When writing an async method,</span></p>
+
+<ol start=1 type=1>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Wrap the method’s return type in a
+     Task&lt;T&gt;</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Prefix this return type with the <b>async</b>
+     keyword</span></li>
+</ol>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Notice that the methods still return an object
+or collection (as the type in Task&lt;T&gt;) that’s based on a view model
+class. Yes, we still continue to use all that we have learned in the past.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Load the web app, and the list of artists. Data
+comes from the web service.&nbsp;Click the image to open it full-size in a new
+tab/window.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><a
+href="https://scs.senecac.on.ca/~wei.song/int422/lectures/images/lec12.2-web-svc-call-artists.png"><span
+style='color:windowtext;text-decoration:none'><img border=0 width=719
+height=240 id="Picture 9" src="INT422-Lecture12-2_files/image003.png"></span></a></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Click any artist to see its details. Data comes
+from the web service.&nbsp;Click the image to open it full-size in a new
+tab/window.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><a
+href="https://scs.senecac.on.ca/~wei.song/int422/lectures/images/lec12.2-web-svc-call-artist-detail.png"><span
+style='color:windowtext;text-decoration:none'><img border=0 width=720
+height=375 id="Picture 10" src="INT422-Lecture12-2_files/image004.png"></span></a></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Load the list of employees. Data comes from the
+web service.&nbsp;Click the image to open it full-size in a new tab/window.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><a
+href="https://scs.senecac.on.ca/~wei.song/int422/lectures/images/lec12.2-web-svc-call-employees.png"><span
+style='color:windowtext;text-decoration:none'><img border=0 width=719
+height=240 id="Picture 11" src="INT422-Lecture12-2_files/image005.png"></span></a></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Click any employee&nbsp;to see its details.
+Data comes from the web service.&nbsp;Click the image to open it full-size in a
+new tab/window.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><a
+href="https://scs.senecac.on.ca/~wei.song/int422/lectures/images/lec12.2-web-svc-call-employee-detail.png"><span
+style='color:windowtext;text-decoration:none'><img border=0 width=719
+height=360 id="Picture 12" src="INT422-Lecture12-2_files/image006.png"></span></a></p>
+
+<h4>&nbsp;</h4>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Work on Assignment(s)</span></b></p>
+
+<p>Your professor will be available in the computer-lab room during the normal
+class/session time slot.</p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>

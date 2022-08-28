@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>WEB222</title>
+  <script src="js/populate-table-dom.js"></script>
+  <style>
+      thead {background-color:lightblue;}
+	  tbody {background-color:lightyellow;}
+	  tfoot {background-color:lightgreen;}
+	  table, th, td {border: inset 2px #333333;}
+   </style>
+</head>
+<body>
+  <!--  code for the web page  -->
+  <h1>Example: populates table using DOM API</h1>
+  <table id="outputTable">
+     <thead>
+        <tr>
+            <th>User</th><th>Address</th><th>Email</th>
+        </tr>    
+     </thead>
+  </table>
+
+  <br><br>
+  <input type="button" value="Generate a table." id="button1">
+
+  <br>
+  <!-- for downloading this file, don't include this line-->
+  <p>Download: <a href="populate-table-dom.zip" download>populate-table-dom.zip</a></p>
+  
+</body>
+</html>

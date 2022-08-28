@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Class & ID</title>
+  <style>
+	/* HTML tag/type Selector */
+	p { background-color:yellow; color:red; }
+	
+	/* Class Selector */
+	.type1 { text-decoration:underline; }
+	
+	/* Class Selector with the tag it is associated with (p: paragraph) */
+	p.note   { font-style: italic; text-decoration:underline; }
+	
+	/* Id Selectors */
+	#special { letter-spacing: 0.2em; }
+   
+	/* Grouping Selectors */
+	h1, h2, h3 { font-family: Serif; color: blue;}
+ 
+	/* Contextual Selectors */
+	div h5 { border: 15px inset blue; }
+  </style>
+</head>
+<body>
+  <h1>Heading - the h1 tag</h1>
+  <h2>Heading - the h2 tag</h2>
+  <h3>Heading - the h3 tag</h3>
+  <h4>Heading - the h4 tag</h4>
+  <h5>Heading - the h5 tag</h5>
+  <h6>Heading - the h6 tag</h6>
+  
+  <div style="text-align: center;">
+	<p>1. This line uses the tag selector "p"</p>
+	<p class="type1">2. This one uses class selector: ".type1"</p>
+	<h5 class="type1  type2" >3. This &lt;h5&gt; element has a class attribure with 2 values: ".type1" and "type2" </h5>
+  </div>
+ 
+  <div style="text-align: right;"> <!-- inline selector -->
+	<p>4. a paragraph contains <span class="note">a &lt;span&gt; element which has a class attribute with value ".note" - selector "p.note" not applied</span></p>
+	<p class="note">5. This paragraph has a class attribute with value ".note" - selector "p.note" applied </p>
+	<p>6. This paragraph contains <span id="special">a &lt;span&gt; element which has a id attribute with value #special</span></p>
+  </div>
+ 
+  <!-- for view-source and download -->
+  <br>
+  <p><a href='' download>Download</a></p>
+</body>
+</html>
+

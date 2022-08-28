@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <title>DOM Event</title>
+</head>
+<body>
+   <h3>Example - DOM onbeforeunload Event</h3>
+   <p>Click this link <a href="http://www.google.com">google.com</a> to leave the page.</p>
+    <script type="text/javascript">
+        window.onbeforeunload = function () {
+            return "Are you sure you want to close this window?";
+        }
+    </script>
+  <br>
+  <!-- for downloading source files -->
+  <p><a href="" Download>Download</a></p>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+   <meta charset="UTF-8" />
+   <title>INT222</title>
+   <style> 
+      body { margin: 0 18%; }
+   </style>
+	<script>
+		function myFunction()
+		{
+			// create an empty element node
+			// without an ID, any attributes, or any content
+			var sp1 = document.createElement("span");
+
+			// give it an id attribute called 'newSpan'
+			sp1.setAttribute("id", "newSpan");
+
+			// create some content for the new element.
+			var sp1_content = document.createTextNode("new replacement span element.");
+
+			// apply that content to the new element
+			sp1.appendChild(sp1_content);
+
+			// build a reference to the existing node to be replaced
+			var sp2 = document.getElementById("childSpan");
+			var parentDiv = sp2.parentNode;
+
+			// replace existing node sp2 with the new span element sp1
+			parentDiv.replaceChild(sp1, sp2);
+		
+          // replace the anchor		
+		  var myAnchor = document.getElementById("myAnchor");
+		  var mySpan = document.createElement("span");
+		  mySpan.innerHTML = "replaced anchor!";
+		  myAnchor.parentNode.replaceChild(mySpan, myAnchor);
+		}
+	</script>
+</head>
+<body>
+  <h1>INT222 - DOM node - replaceChild()</h1>
+
+	<div>
+		This is a span: <span id="childSpan">foo bar</span>
+	</div>
+	<div>
+       This is an anchor: <a id="myAnchor" href="http://www.senecacollege.ca">Seneca College</a>
+    </div>
+	
+	<p id="demo">Click the button to replace the span and anchor above.</p>
+
+	<button onclick="myFunction()">Try it</button>
+  
+  <br>
+  <p><a href="view-source:">View-source</a>&nbsp;&nbsp;&nbsp;&nbsp;
+     <a href="" onclick="download=document.referrer">Download</a></p>
+</body>
+
+</html>

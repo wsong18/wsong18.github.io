@@ -1,0 +1,1556 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<base target="_blank">
+<title>Lecture 2</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Segoe UI Symbol";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+h1
+	{mso-style-link:"Heading 1 Char";
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:107%;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:"Calibri Light",sans-serif;
+	color:#2E74B5;
+	font-weight:normal;}
+h4
+	{mso-style-link:"Heading 4 Char";
+	margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:#954F72;
+	text-decoration:underline;}
+p
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+code
+	{font-family:"Courier New";}
+span.Heading4Char
+	{mso-style-name:"Heading 4 Char";
+	mso-style-link:"Heading 4";
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+span.Heading1Char
+	{mso-style-name:"Heading 1 Char";
+	mso-style-link:"Heading 1";
+	font-family:"Calibri Light",sans-serif;
+	color:#2E74B5;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink="#954F72" background=bgw.gif>
+
+<div class=WordSection1 
+     style="margin: 0.5in auto; max-width: 50em; min-width: 30em;">
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:18.0pt;
+font-family:"Arial",sans-serif'>INT422 – Lecture 2</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Work with a persistent data store.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Test today</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Test 1 is today.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>All tests in this course are
+hand-written. Pen or pencil. Answer styles will vary, but we’re mostly looking
+for short- to medium-length answers, and/or diagrams, and so on.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>No references or resources are
+permitted – “closed book, open brain”. </span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The tested topics are mostly
+forward-looking. You will be&nbsp;tested on comprehension, understanding, and
+the application of the current week’s topics. For this week, it’s mostly the notes
+below, and the posted code examples. Also, you may be tested on a past
+recently-covered topic, which enables you to show that you have the
+foundational knowledge needed for current and future tasks.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>For test 1, we will have the
+test at the <u>end</u> of the timeslot. Start from test 2, we’ll have the test
+at the <u>beginning</u> of the timeslot of the class. Today’s test will run
+about 12 minutes.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Textbook coverage</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Last week, for the first
+class/session, Chapter 1 was assigned as a reading.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Then, for the second class/session
+in the computer-lab room, Chapters 2 and 3 were assigned as readings.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>From now on, you will learn
+about the week’s topics in THESE class notes, and then use the textbook to
+supplement these notes. Use the table-of-contents and the index to locate the
+topic, and then read about it there.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Notice, and warning:</span></p>
+
+<p style='margin-left:.5in'><span style='font-size:18.0pt;font-family:"Segoe UI Symbol",sans-serif;
+color:#0070C0'>❝</span><span style='font-family:"Arial",sans-serif'>The
+textbook has code examples that directly use persistent storage, where
+controllers interact with the data context object.</span></p>
+
+<p style='margin-left:.5in'><span style='font-family:"Arial",sans-serif'>We
+will NOT, and CANNOT, do that.</span></p>
+
+<p style='margin-left:.5in'><span style='font-family:"Arial",sans-serif'>We
+MUST use <em><b><span style='font-family:"Arial",sans-serif'>view model</span></b></em><b>
+classes</b>. Unfortunately, the textbook does not work with the&nbsp;<em><span
+style='font-family:"Arial",sans-serif'>view model</span></em> class topic,
+which is&nbsp;<em><span style='font-family:"Arial",sans-serif'>the most
+important topic and concept</span></em> that you will learn and use in this
+course.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Code examples</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Today: Using a persistent store
+– get all, get one</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Next class: Using a persistent
+store – add new</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Principal theme for next few
+weeks</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The key objective for this
+course is:&nbsp;<em><span style='font-family:"Arial",sans-serif'>Create
+interactive web apps, which have some complexity, and can scale.</span></em></span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>During the first week of the
+course, we were introduced to:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>The Microsoft web dev stack, including
+     ASP.NET, C#, and Visual Studio</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>The model-view-controller (MVC) design
+     pattern</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Round-trip data to-and-from a browser user</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Collections</span></li>
+</ul>
+
+<p><span style='font-family:"Arial",sans-serif'>To make progress in the next
+few weeks, the teacher team will give you a <em><b><span style='font-family:
+"Arial",sans-serif'>project template</span></b></em>&nbsp;that includes a pre-configured,
+ready-to-use <b>database </b>– also known as<b> a <em><span style='font-family:
+"Arial",sans-serif'>persistent store</span></em></b> – and all the program
+objects that enable us to interact with it. As a result, we can use the next
+few weeks to focus&nbsp;on learning how to create interactive web apps, without
+worrying about data storage.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Later in the course, we will
+learn to create our own data store, to support new projects and new data
+entities.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>System&nbsp;design guidance</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In term/level/semester 4, we
+begin to use an <em><b><span style='font-family:"Arial",sans-serif'>architectural
+model</span></b></em> to guide us as we create larger and more complex apps. It
+presents a “layered” architecture, and you locate your source code modules
+within the architectural model.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Open and briefly study the
+diagram. Click to open the image full-size in a new tab/window.</span></p>
+
+<p><a
+href="https://scs.senecac.on.ca/~wei.song/int422/lectures/images/system-design-guidance-v7-for-asp-net-mvc.png"
+target="_blank"><span style='font-family:"Arial",sans-serif;text-decoration:
+none'><img border=0 width=718 height=522 id="Picture 12"
+src="INT422-Lecture2_files/image001.jpg"
+alt="System Design Guidance V7 for ASP.NET MVC"></span></a></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Starting on the left side of
+the diagram, you will see the <em><b><span style='font-family:"Arial",sans-serif'>actors</span></b></em>,
+who have <b>use cases</b>.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>They interact with your web
+app’s <em><span style='font-family:"Arial",sans-serif'>views</span></em>, which
+are defined by the cshtml source code files in your project’s Views folder.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Views get data from, or deliver
+data to, <em><b><span style='font-family:"Arial",sans-serif'>controllers</span></b></em>.
+Last week, and in Assignment 1, you had a brief introduction to a <em><b><span
+style='font-family:"Arial",sans-serif'>view model</span></b></em> class, which
+described the shape of the data object(s) coming in to, or leaving the
+controllers. You will learn much more about view models below.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Also today, several other pink
+or blue boxes will be introduced, including:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Data store, as a locally-stored (with the
+     app) database</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Facade service, provided by the Entity
+     Framework</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Design model classes, which describe the
+     data in the persistent store</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Manager class, for app and business logic</span></li>
+</ul>
+
+<p><span style='font-family:"Arial",sans-serif'>Let’s get started, in sequence.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Persistent data storage, in a
+database</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Our web apps will use a
+relational database to persist data. The database is located in the <b>App_Data</b>
+folder. The web app’s Web.config settings file includes a <em><b><span
+style='font-family:"Arial",sans-serif'>connection string</span></b></em>&nbsp;that
+is used to connect to and use the database.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>As you know, Visual Studio
+includes an on-demand web server to host our web apps, to serve our needs as
+software developers.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Visual Studio also includes an
+on-demand instance-based </span><a
+href="https://en.wikipedia.org/wiki/Microsoft_SQL_Server" target="_blank"><span
+style='font-family:"Arial",sans-serif'>SQL Server</span></a><span
+style='font-family:"Arial",sans-serif'> database server engine. When you run a
+web app that uses a data store, Visual Studio starts the web server, and the
+database server engine.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>When you get to the point where
+you want to deploy your web app on a publicly-available host, you can configure
+a host-based database server engine as your data store. We learn about this
+later in the course.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Facade service, Entity Framework</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In our web app code, we NEVER
+interact directly with the database. Instead, we use a facade service, also
+known as an <b><i>ORM</i></b>, or </span><a
+href="https://en.wikipedia.org/wiki/Object-relational_mapping" target="_blank"><span
+style='font-family:"Arial",sans-serif'>object-relational mapper</span></a><span
+style='font-family:"Arial",sans-serif'>.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The Microsoft Entity Framework
+enables C# programmers to work with objects <em><b><span style='font-family:
+"Arial",sans-serif'>in memory</span></b></em>, and persist them in a relational
+database management system.</span></p>
+
+<p style='margin-bottom:0in;margin-bottom:.0001pt'><span style='font-family:
+"Arial",sans-serif'>Another definition:</span></p>
+
+<p style='margin-top:6.0pt;margin-right:0in;margin-bottom:5.0pt;margin-left:
+.5in'><span style='font-family:"Arial",sans-serif'>Entity Framework is an
+object design, management, and persistence framework.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Most ASP.NET MVC web apps
+include the Entity Framework. It is visible to us as two components, located in
+the project’s Models folder:</span></p>
+
+<ol start=1 type=1>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>A “<i>data context</i>”, which is a class
+     that acts as a gateway to the data store</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>One or more “<i>design model classes</i>”,
+     which describe the entities in the data store</span></li>
+</ol>
+
+<p><span style='font-family:"Arial",sans-serif'>The data context class has a
+rich set of functionality. It includes properties for each and every entity
+that’s present in the data store. It also supports the typical range of data
+store operations, including querying and data modification (add, change,
+delete).</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Design model classes</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>As defined above, <em><b><span
+style='font-family:"Arial",sans-serif'>design model</span></b></em> classes
+describe the entities in the data store.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>They are simple classes,
+consisting mostly of properties, and often constructors. The Entity Framework
+maps a class to a table in the database. Each property is a column in a table. <b>Associations</b>
+– “relationships” in a relational database management system – are defined by
+properties.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>As noted above, design model
+classes are located in the <b><i>Models</i></b> folder. Optionally, you can
+also create a “class diagram” in that folder. A class diagram is a Visual Studio
+object that enables you to visually <em><span style='font-family:"Arial",sans-serif'>diagram</span></em>
+(and design/edit) your classes.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Manager class, for app and
+business logic</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Our controllers NEVER work
+directly with the data store.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Instead, we create a “manager”
+class, in the <i>Controllers</i> folder, to handle data service operations.
+This approach offers at least two benefits:</span></p>
+
+<ol start=1 type=1>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>A task that’s defined in the Manager can
+     be used by any controller, if appropriate.</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>It promotes the use of a layered system
+     architecture, for safe and efficient coding.</span></li>
+</ol>
+
+<p><span style='font-family:"Arial",sans-serif'>The Manager class has a
+reference to the <em><span style='font-family:"Arial",sans-serif'>data context</span></em>.
+It has methods that can be called by controllers (e.g. “get all products”, “add
+supplier”, etc.).</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Another design feature is that
+data sent to and delivered from Manager methods are based on <em><span
+style='font-family:"Arial",sans-serif'>view model</span></em> classes. We NEVER
+leak information or details about the data store.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>However, it is also possible
+that a Manager method can accept or deliver value types (i.e. int, double) or
+nothing. Therefore, for completeness,&nbsp;<em><u><span style='font-family:
+"Arial",sans-serif'>parameter</span></u></em> or <em><u><span style='font-family:
+"Arial",sans-serif'>return types</span></u></em> in Manager methods must be any
+one of these:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>empty parameter list, or null return type</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>a value type (see “Value Types” in </span><a
+     href="https://msdn.microsoft.com/en-us/library/ms173104.aspx"
+     target="_blank"><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>this
+     document</span></a><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>)</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>a view model object</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>a view model collection</span></li>
+</ul>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Thorough introduction to view
+model classes</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>A <em><b><span
+style='font-family:"Arial",sans-serif'>view model</span></b></em> class is used
+when interacting with the browser user. It is typically used for three
+purposes.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>1. Sending data <u>to</u> a
+view, for displaying/viewing.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>2. Sending data <u>to</u> a
+view, to provide initial data and settings for an HTML Form.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>3. Receiving data that was
+POSTed&nbsp;<u>from</u> a view that has an HTML Form.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>A view model class is
+customized for the use case. It takes on the exact shape of the data needed to
+fulfill the use case.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-family:"Arial",sans-serif'>Why have view model
+classes?</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>We follow some system
+architecture rules when building an app. The most important rule is this: We
+NEVER allow user-interaction code in controllers to get access to the app’s
+design (storage) model (i.e. the database). We ALWAYS use a </span><a
+href="https://en.wikipedia.org/wiki/Separation_of_concerns" target="_blank"><span
+style='font-family:"Arial",sans-serif'>layered approach</span></a><span
+style='font-family:"Arial",sans-serif'>.&nbsp;As a result, we need other
+classes that define the data that the user interacts with.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>There are several advantages to
+using view model classes. The way our app works with data is more flexible and
+adaptable. Our code is safer, because user interaction data is customized. And
+many more.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-family:"Arial",sans-serif'>What does a view model
+class look like?</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>As noted above, a view model
+class is customized for the use case. However, to simplify coding and understanding,
+it uses property names and types that match those in design model classes, plus
+other properties as required by the use case.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-family:"Arial",sans-serif'>How do I create a view
+model class?</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>View model classes, for this
+course, should be written in source code files located in the Controllers
+folder.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>We suggest that you create a
+separate source code file to hold the view model classes needed for each entity
+or entity group. For example, assume that you have a <em><span
+style='font-family:"Arial",sans-serif'>Suppliers</span></em> and <em><span
+style='font-family:"Arial",sans-serif'>Products</span></em> business domain
+model. Therefore, you should create a source code file named “Supplier_vm.cs”,
+and another named “Product_vm.cs”.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>What classes do you
+write?&nbsp;The answer is&nbsp;<em><span style='font-family:"Arial",sans-serif'>totally</span></em>
+and <em><span style='font-family:"Arial",sans-serif'>completely&nbsp;dependent</span></em>
+upon your app’s use cases.&nbsp;However, there are some common and obvious use
+case patterns for data management:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Get all</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Get one</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Add new</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Edit existing</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Delete item</span></li>
+</ul>
+
+<p><span style='font-family:"Arial",sans-serif'>To get started, create a class,
+and then copy the properties you want/need from the design model class. Then,
+customize, to match the use case.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>You can also use inheritance
+when creating view model classes.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-family:"Arial",sans-serif'>What names are used for
+view model classes?</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Use a composite name – &lt;<b>entity</b>&gt;
+&lt;<b>use case</b>&gt;. For example, a class that includes the properties
+needed to fulfill the “add new” use case could be named “ProductAdd”. Another
+example: A class that is used for view/display purposes could be named
+“ProductBase”.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Follow these suggestions as you
+write view model classes for your first few apps.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Continuing the theme introduced
+above, assume a <em><span style='font-family:"Arial",sans-serif'>Suppliers</span></em>
+and <em><span style='font-family:"Arial",sans-serif'>Products</span></em>
+business domain model. A supplier can have zero or more products, and a product
+is always linked to one supplier.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Notice the use of the entity’s
+name in the classes. Notice also the inheritance chain.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&lt;entity&gt;List&nbsp;– a
+class that can be used in the user interface as a simple lookup list (e.g.
+drop-down list)</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>public class ProductList</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>For all kinds of users</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Include the Id property, and one or two
+     descriptive properties</span></li>
+</ul>
+
+<p><b><span style='font-family:"Arial",sans-serif'>&lt;entity&gt;AddForm</span></b><span
+style='font-family:"Arial",sans-serif'> – a class that defines the data for an
+HTML Form</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>public class ProductAddForm</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Designed for an HTML Form</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Includes initial or default data, and any
+     other content/data to help build the HTML Form (for example, the items
+     that will appear in an item-selection list)</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Do NOT include the Id property</span></li>
+</ul>
+
+<p><b><span style='font-family:"Arial",sans-serif'>&lt;entity&gt;Add</span></b><span
+style='font-family:"Arial",sans-serif'> – a class that describes the data
+needed for a new object</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>public class ProductAdd</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>For all kinds of users</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>To be used for add-new tasks</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Therefore, include properties that must be
+     present in an add-new task</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Do NOT include the Id property</span></li>
+</ul>
+
+<p><b><span style='font-family:"Arial",sans-serif'>&lt;entity&gt;Base</span></b><span
+style='font-family:"Arial",sans-serif'>&nbsp;– for get-some and get-one tasks</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>public class ProductBase : ProductAdd</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>For public or trusted users</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Adds the Id property to the ‘…Add’ class
+     (and any other useful/required properties)</span></li>
+</ul>
+
+<p><b><span style='font-family:"Arial",sans-serif'>&lt;entity&gt;BaseWithAssociatedObject</span></b><span
+style='font-family:"Arial",sans-serif'> – for get-some and get-one tasks</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>public class ProductBaseWithSupplier :
+     ProductBase</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>For public or trusted users</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Adds the associated Supplier property, to
+     enable richer data display</span></li>
+</ul>
+
+<p><b><span style='font-family:"Arial",sans-serif'>&lt;entity&gt;EditForm</span></b><span
+style='font-family:"Arial",sans-serif'> –&nbsp;a class that defines the data
+for an HTML Form</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>public class ProductEditForm</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>For partially-trusted users</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Includes all properties that you allow to
+     be edited, plus others needed by the HTML Form</span></li>
+</ul>
+
+<p><b><span style='font-family:"Arial",sans-serif'>&lt;entity&gt;Edit</span></b><span
+style='font-family:"Arial",sans-serif'>&nbsp;– for update-item tasks</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>public class ProductEdit</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>For partially-trusted users</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Includes all properties that you allow to
+     be edited</span></li>
+</ul>
+
+<p><span style='font-family:"Arial",sans-serif'>&lt;entity&gt;Full&nbsp;– to
+deliver all (most) properties of an object</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>public class ProductFull : ProductBase</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>For trusted users</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Includes all (most) properties that you
+     allow to be viewed or edited</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Can include computed or temporal
+     properties</span></li>
+</ul>
+
+<p><span style='font-family:"Arial",sans-serif'>You do not have to write all
+these classes.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Conversely, you may need more
+classes to handle some use cases. Don’t be afraid of doing that.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Problem&nbsp;– two kinds of
+classes: Design model, and view model<br>
+Solution: AutoMapper</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Objects in the data store are
+defined by <em><span style='font-family:"Arial",sans-serif'>design model</span></em>
+classes.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>We have just learned that we
+can NEVER allow user-interaction code to work with these objects.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>They must work with objects
+defined by <em><span style='font-family:"Arial",sans-serif'>view model</span></em>
+classes.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>How do we go back-and-forth
+between these kinds of objects? We use a technique named <em><span
+style='font-family:"Arial",sans-serif'>mapping</span></em>.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>And, we use a library named
+AutoMapper to help with this task. Jimmy Bogard created AutoMapper; here’s his </span><a
+href="https://lostechies.com/jimmybogard/2009/01/23/automapper-the-object-object-mapper/"><span
+style='font-family:"Arial",sans-serif'>blog post</span></a><span
+style='font-family:"Arial",sans-serif'> that has the introduction to
+AutoMapper.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>It is a convention-based
+mapper: When it maps between objects, it simply maps/assigns values if both
+the&nbsp;<em><span style='font-family:"Arial",sans-serif'>property type</span></em>&nbsp;and&nbsp;<em><span
+style='font-family:"Arial",sans-serif'>property name</span></em>&nbsp;matches.
+Easy. Non-matching properties are ignored. (There are many other features, and
+you will learn some of them later in this course.)</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Static and Instance API: In
+4.2.1 version of AutoMapper and later, AutoMapper provides two APIs: </span><a
+href="https://github.com/AutoMapper/AutoMapper/wiki/Static-and-Instance-API"><span
+style='font-family:"Arial",sans-serif'>a static and an instance API</span></a><span
+style='font-family:"Arial",sans-serif'>. In this semester of the INT422 course,
+you are requested to use the instance API in your all assignments. Failure to
+do so will result in a big penalty on the assignment grade(s).</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>How do you add AutoMapper to
+your app?</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Via NuGet: In Solution
+Explorer, right-click your project, and choose “<i>Manage NuGet Packages</i>”.
+A dialog appears. In the left-side navigator, click/select “Online”. In the
+upper-right “search” area, enter (and look for) “automapper”. Then install it.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Introducing the “Web app project </span></b><b><span
+style='font-size:16.0pt;font-family:"Arial",sans-serif;color:#002060'>template </span></b><b><span
+style='font-size:16.0pt;font-family:"Arial",sans-serif;color:#002060'>v1”
+project template</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Your team of professors has
+created a Visual Studio <em><span style='font-family:"Arial",sans-serif'>project
+template</span></em> that can be used to create new web apps.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Its main feature is that
+includes a fully-configured data persistence scheme, based on everything
+described above. We will use it in the next few weeks, as we learn how to build
+interactive ASP.NET MVC web apps.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>You can download the project
+template from the </span><a
+href="https://scs.senecac.on.ca/~wei.song/int422/int422.html"><span
+style='font-family:"Arial",sans-serif'>course’s website</span></a><span
+style='font-family:"Arial",sans-serif'>. Copy the “Web app project v1.zip”
+file&nbsp;to the following path. You must create the “<b>Web</b>” folder at the
+end of the path:</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>%userprofile%\Documents\Visual
+Studio 2015\Templates\ProjectTemplates\Visual C#\Web\</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>To go to this folder, open Windows
+<i>File Explorer</i>, then from the left panel, click <i>Documents</i> under <i>My
+Computer</i>, …</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Then, when you choose File &gt;
+New &gt; Project in Visual Studio, the template will appear in the center panel,
+and can be selected to create new web apps.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>How to: Use the “Web app project </span></b><b><span
+style='font-size:16.0pt;font-family:"Arial",sans-serif;color:#002060'>template </span></b><b><span
+style='font-size:16.0pt;font-family:"Arial",sans-serif;color:#002060'>v1”
+project template</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In Visual Studio, create a new
+project (File &gt; New &gt; Project). A dialog appears. </span></p>
+
+<p><img border=0 width=730 height=506 id="Picture 4"
+src="INT422-Lecture2_files/image002.png"></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In the center panel, select “<span
+style='background:yellow'>WebAppProjectTemplate-v1</span>”.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>After the project loads, do a
+build/compile. This action will download the packages it needs.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In the project, double click
+the database file <b>Chinook.mdf</b> under the  folder <b>App_Data</b>, Then
+the view of <i>Server Explorer</i> will show up. </span></p>
+
+<p><img border=0 width=412 height=280 id="Picture 16"
+src="INT422-Lecture2_files/image003.png"></p>
+
+<p><span style='font-family:"Arial",sans-serif'>If the item <b>DataContext</b>
+under the <i>Data Connections</i> has a red </span><b><span style='font-family:
+"Segoe UI Symbol",sans-serif;color:red'>✖</span></b><span style='font-family:
+"Arial",sans-serif'> on it, that means the database need to be updated to a
+newer version. To do so, right click <i>DataContext</i>, select <i>Data
+Connections</i>…, change nothing and click OK. </span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Our work plan</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Let’s use the template to build
+a web app. It will work with the “Customer” entity.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>There are several tasks in the
+work plan. Here’s a list. Details follow.</span></p>
+
+<ol start=1 type=1>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Create a view model</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Create a mapper</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>In the Manager, create a “get all” method</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>In the Manager, create a “get one” method</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Create a controller, add a reference to
+     the manager</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Modify the Index() method, to call the
+     manager “get all” method</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Create a “get all” view, using the
+     scaffolder</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Modify the Details() method, to call the
+     manager “get one” method</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Create a “get one” view, using the
+     scaffolder</span></li>
+</ol>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Create a view model</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In the controllers folder,
+create a source code file to hold a class that will describe a “customer”
+object.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>A reminder: The source code
+file name has two parts:</span></p>
+
+<ol start=1 type=1>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>The singular word form of the entity, or
+     entity group, that is being modeled</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>A suffix, _vm</span></li>
+</ol>
+
+<p><span style='font-family:"Arial",sans-serif'>Inside the source code file, we
+will create a “CustomerBase” class. As its name suggests, it will have the
+basic, or base, properties that describe a customer. You can edit the
+template-provided class name to complete this step.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>An easy way to add the
+properties is to copy them from <u>the Customer <b>design model</b> <b>class</b>
+(storage model) in the Models folder</u>. For this example, we want the
+properties starting with CustomerId, and ending with Email. Ignore (do not
+copy) the other members. It should look like the following.&nbsp;<span
+style='color:blue'> <img border=0 width=721 height=632 id="Picture 9"
+src="INT422-Lecture2_files/image004.png" alt=getallgetone02></span></span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Notice that some statements
+have errors. We can fix this, easily.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Click on one of the
+red-underlined statements. Press <b>Ctrl+.</b> (Control + dot or period).
+Visual Studio will analyze the code, and suggest some possible changes.&nbsp;<span
+style='color:blue'> </span></span><a
+href="https://petermcintyre.files.wordpress.com/2016/01/getallgetone03.png"
+target="_blank"><span style='font-family:"Arial",sans-serif;text-decoration:
+none'><img border=0 width=717 height=213 id="Picture 8"
+src="INT422-Lecture2_files/image005.png" alt=getallgetone03></span></a></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Then, look at the list of
+“using” statements at the top of the source code file. Notice that it added the
+statement that references the data annotations namespace of classes.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The reason for the error
+message was simply that the source code file did not initially know about the
+need for data annotations. This technique – Ctrl+. – will be used frequently to
+enable Visual Studio to help you write better code.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><strong><span style='font-family:"Arial",sans-serif'>Primary key</span></strong></p>
+
+<p><span style='font-family:"Arial",sans-serif'>What is the primary key of the <u>Customer</u>
+<em><span style='font-family:"Arial",sans-serif'>design model</span></em>
+class?</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The <em><span style='font-family:
+"Arial",sans-serif'>CustomerId</span></em> property.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>How do we know this? <em><span
+style='font-family:"Arial",sans-serif'>By convention</span></em>, the primary
+key is an int, and its name is either:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><strong><span style='font-family:
+     "Arial",sans-serif;background:yellow'>Id</span></strong><span
+     style='font-family:"Arial",sans-serif'>, or</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-family:"Arial",sans-serif;
+     background:yellow'>&lt;entityName&gt;Id</span><span style='font-family:
+     "Arial",sans-serif'>, i.e. <strong><span style='font-family:"Arial",sans-serif'>CustomerId</span></strong>
+     for the Customer class</span></li>
+</ul>
+
+<p><span style='font-family:"Arial",sans-serif'>Now…</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>What is the primary key of the <u>CustomerBase</u>
+<em><span style='font-family:"Arial",sans-serif'>view model</span></em> class?</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Look for <strong><span
+style='font-family:"Arial",sans-serif'>Id</span></strong>, or <strong><span
+style='font-family:"Arial",sans-serif'>CustomerBaseId</span></strong>.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Did you find it? No. That will
+be a problem for the Visual Studio code generators (e.g. view scaffolder).</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Can you fix this? Yes. Easily.
+Add a “key” attribute, just above the property declaration:</span></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='margin-left:31.5pt'>
+ <tr>
+  <td width=6 style='width:4.8pt;padding:0in 0in 0in 0in'></td>
+  <td style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal><code><b><span style='font-size:10.0pt;line-height:107%;
+  font-family:"Arial",sans-serif'>[Key]</span></b></code></p>
+  <p class=MsoNormal><code><b><span style='font-size:10.0pt;line-height:107%;
+  font-family:"Arial",sans-serif;color:#002060'>public</span></b></code><b><span
+  style='font-family:"Arial",sans-serif;color:#002060'> </span></b><code><b><span
+  style='font-size:10.0pt;line-height:107%;font-family:"Arial",sans-serif;
+  color:#002060'>int</span></b></code><b><span style='font-family:"Arial",sans-serif'>
+  </span></b><code><b><span style='font-size:10.0pt;line-height:107%;
+  font-family:"Arial",sans-serif'>CustomerId { <span style='color:#002060'>get</span>;
+  <span style='color:#002060'>set</span>; }</span></b></code></p>
+  </td>
+ </tr>
+</table>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Create a mapper</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>At this point in time, we have
+a design model class named “Customer”.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>We also have a view model class
+named “CustomerBase”.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>We must “map” back-and-forth
+between design model and view model objects. Why? Remember the dominant system
+architecture rule: We NEVER allow user-interaction code in controllers to get
+access to the app’s design model. We ALWAYS use a layered approach. That means
+that we must map between objects.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>AutoMapper, as you have briefly
+learned above, is a lovely library that will make our life better. It does the
+mapping.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The first mapping we need will
+map <b><u>from</u></b> a design model Customer class, <b><u>to</u></b> a view model
+CustomerBase class. When you write the “create map”&nbsp;statement, ensure that
+you include the&nbsp;namespace name.&nbsp;</span> </p>
+
+<p><img border=0 width=721 height=616 id="Picture 13"
+src="INT422-Lecture2_files/image006.jpg"></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Remember, after you write some
+code, ensure that there are no errors. Do a build/compile frequently. </span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>In the Manager, create a “get
+all” method</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>As you have learned, the
+purpose of the Manager class is to “manage” all the data tasks and operations.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The manager has a reference
+named “<b>ds</b>”, to the data store.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Also, the manager has a
+reference named “<b>mapper</b>” to the instance of AutoMapper.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>As stated in the source code
+comments, ensure that the methods accept and deliver ONLY <em><span
+style='font-family:"Arial",sans-serif'>view model</span></em> objects and
+collections. The collection return type is almost always IEnumerable&lt;T&gt;,
+and it will be in this situation.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The ds reference knows about
+all the entity stores:</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'><img border=0 width=267
+height=311 id="Picture 6" src="INT422-Lecture2_files/image007.jpg"
+alt=getallgetone05></span></p>
+
+<p><u><span style='font-family:"Arial",sans-serif'>Customers is a </span></u><a
+href="https://msdn.microsoft.com/en-us/library/gg696460%28v=vs.113%29.aspx"
+target="_blank"><span style='font-family:"Arial",sans-serif'>DbSet&lt;T&gt;</span></a><u><span
+style='font-family:"Arial",sans-serif'>&nbsp;data type</span></u><span
+style='font-family:"Arial",sans-serif'>. In plain English, the data context
+class (DataContext, in the Models &gt; DataContext.cs source code file) defines
+a DbSet&lt;T&gt; property for each entity in the database. DbSet and the
+superclass of DataContext (which is </span><a
+href="https://msdn.microsoft.com/en-us/library/system.data.entity.dbcontext%28v=vs.113%29.aspx"
+target="_blank"><span style='font-family:"Arial",sans-serif'>DbContext</span></a><span
+style='font-family:"Arial",sans-serif'>) are classes in the </span><a
+href="https://msdn.microsoft.com/en-us/library/gg696172%28v=vs.103%29.aspx"
+target="_blank"><span style='font-family:"Arial",sans-serif'>Entity Framework</span></a><span
+style='font-family:"Arial",sans-serif'>.&nbsp;DbSet inherits from a number of
+interfaces, including </span><a
+href="https://msdn.microsoft.com/en-us/library/9eekhta0%28v=vs.110%29.aspx"
+target="_blank"><span style='font-family:"Arial",sans-serif'>IEnumerable&lt;T&gt;</span></a><span
+style='font-family:"Arial",sans-serif'>, which is useful. And necessary, for
+AutoMapper to do its work.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>So… </span><code><b><span
+style='font-size:11.0pt;font-family:"Arial",sans-serif'>ds.Customers</span></b></code><span
+style='font-size:14.0pt;font-family:"Arial",sans-serif'> </span><span
+style='font-family:"Arial",sans-serif'>is a collection of Customer objects from
+the data store. We CANNOT return that collection directly. Instead, we MUST
+transform it into a collection that’s defined by a <em><span style='font-family:
+"Arial",sans-serif'>view model</span></em> class.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>If you were to do this
+transformation in code, without AutoMapper, you would typically do this:</span></p>
+
+<ol start=1 type=1>
+ <li class=MsoNormal style='line-height:normal'><span style='font-family:"Arial",sans-serif'>Define
+     a new empty view model collection</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-family:"Arial",sans-serif'>Loop
+     through the source collection, maybe with a “for” or “foreach” loop</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-family:"Arial",sans-serif'>For
+     each item in the source collection, create a view model object, and using
+     one statement for each property</span></li>
+</ol>
+
+<p><span style='font-family:"Arial",sans-serif'>For example:</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New";color:#00B050'>// Manually
+map objects, source to target</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New";color:#002060'>public</span></b><b><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif'> </span></b><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>IEnumerable&lt;CustomerBase&gt;
+CustomerGetAll()</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>{</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;<span
+style='color:#00B050'>// Define a new empty view model collection</span></span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;<span
+style='color:#002060'>var</span></span></b><b><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif'> </span></b><b><span style='font-size:
+12.0pt;font-family:"Courier New"'>results = <span style='color:#002060'>new</span></span></b><b><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif'> </span></b><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>List&lt;CustomerBase&gt;();</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;<span
+style='color:#00B050'>// Fetch all the objects from the data store</span></span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;<span
+style='color:#002060'>var</span></span></b><b><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif'> </span></b><b><span style='font-size:
+12.0pt;font-family:"Courier New"'>allCustomers = ds.Customers;</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;<span
+style='color:#00B050'>// Manually map each source object to a target object</span></span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;<span
+style='color:#002060'>foreach</span></span></b><b><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif'> </span></b><b><span style='font-size:
+12.0pt;font-family:"Courier New"'>(<span style='color:#002060'>var</span></span></b><b><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif'> </span></b><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>customer <span
+style='color:#002060'>in</span></span></b><b><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif'> </span></b><b><span style='font-size:
+12.0pt;font-family:"Courier New"'>allCustomers)</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;{</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;<span
+style='color:#00B050'>// Create and configure a new target object</span></span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;<span
+style='color:#002060'>var</span></span></b><b><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif'> </span></b><b><span style='font-size:
+12.0pt;font-family:"Courier New"'>c = <span style='color:#002060'>new</span></span></b><b><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif'> </span></b><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>CustomerBase();</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;c.Address
+= customer.Address;</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;c.City
+= customer.City;</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;c.Company
+= customer.Company;</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;c.Country
+= customer.Country;</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;c.CustomerId
+= customer.CustomerId;</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;c.Email
+= customer.Email;</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;c.Fax
+= customer.Fax;</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;c.FirstName
+= customer.FirstName;</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;c.LastName
+= customer.LastName;</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;c.Phone
+= customer.Phone;</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;c.PostalCode
+= customer.PostalCode;</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;c.State
+= customer.State;</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;<span
+style='color:#00B050'>// Add the new target object to the results collection</span></span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;results.Add(c);</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;}</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;<span
+style='color:#00B050'>// Return the results</span></span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;<span
+style='color:#002060'>return</span></span></b><b><span style='font-size:12.0pt;
+font-family:"Times New Roman",serif;color:#002060'> </span></b><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>results;</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>}</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>With AutoMapper, it becomes a
+one-line statement:</span></p>
+
+<p><img border=0 width=721 height=162 id="Picture 7"
+src="INT422-Lecture2_files/image008.jpg"></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>In the Manager, create a “get
+one” method</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>If you skimmed the
+documentation for the </span><a
+href="https://msdn.microsoft.com/en-us/library/gg696460%28v=vs.113%29.aspx"
+target="_blank"><span style='font-family:"Arial",sans-serif'>DbSet&lt;T&gt;</span></a><span
+style='font-family:"Arial",sans-serif'> class, you may have noticed a </span><a
+href="https://msdn.microsoft.com/en-us/library/mt136630%28v=vs.113%29.aspx#M:System.Data.Entity.DbSet%601.Find%28System.Object[]%29"
+target="_blank"><span style='font-family:"Arial",sans-serif'>Find()</span></a><span
+style='font-family:"Arial",sans-serif'> method. As stated in the documentation,
+“Finds an entity with the given primary key values. … If no entity is found in
+the [data] context or the [data] store, then null is returned.”.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>That’s what we can use to “get
+one” object from the store. We use the primary key, which is in the CustomerId
+property, as you learned above.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The first task is to attempt to
+fetch a matching object from the data store.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Then, return the object,
+guarding against a null result, and using AutoMapper to transform it into a <em><span
+style='font-family:"Arial",sans-serif'>view model</span></em> object.</span></p>
+
+<p><img border=0 width=718 height=255 id="Picture 14"
+src="INT422-Lecture2_files/image009.jpg"></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Remember, after you write some
+code, ensure that there are no errors. Do a build/compile frequently.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Create a controller, add a
+reference to the manager</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Add a Customers controller:</span></p>
+
+<ol start=1 type=1>
+ <li class=MsoNormal style='line-height:normal'><span style='font-family:"Arial",sans-serif'>Right-click
+     the Controllers folder</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-family:"Arial",sans-serif'>Add
+     &gt; Controller<br>
+     <img border=0 width=472 height=46 id="Picture 3"
+     src="INT422-Lecture2_files/image010.png" alt=getallgetone08></span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-family:"Arial",sans-serif'>Name
+     it “<b>Customers</b>Controller”</span></li>
+</ol>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The controller must have a
+reference to a manager object. Therefore, at the top of the controller class,
+declare&nbsp;a private field for the manager, and initialize it during the declaration:</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New";color:#00B050'>// Reference
+to a manager object</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New";color:#002060'>private</span></b><b><span
+style='font-size:12.0pt;font-family:"Courier New";color:#002060'> </span></b><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>Manager m = <span
+style='color:#002060'>new</span></span></b><b><span style='font-size:12.0pt;
+font-family:"Courier New"'> </span></b><b><span style='font-size:12.0pt;
+font-family:"Courier New"'>Manager();</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Modify the Index() method, to
+call the manager “get all” method</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Above, you wrote the manager
+“get all” method. We will call that method, which will return a collection of CustomerBase
+objects, and then pass the collection to the view.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>We have a choice to code this
+task as two statements, or as one statement. The choice depends upon whether
+you need to validate, transform, modify, or manipulate the fetched results,
+before passing them to the view. If you do, you can use a variant of this
+approach:</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New";color:#00B050'>// Fetch the
+collection</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New";color:#002060'>var</span></b><b><span
+style='font-size:12.0pt;font-family:"Courier New"'> c = m.CustomerGetAll();</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal'><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New";color:#00B050'>// Pass the
+collection to the view</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New";color:#002060'>return</span></b><b><span
+style='font-size:12.0pt;font-family:"Courier New"'> View(c);</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Alternatively, if the fetched
+results are ready-to-use, you can simply call the method as the argument to the
+View() method. With a collection, we do not have to worry about a null result,
+because a collection with zero objects will simply return an empty collection.
+An empty collection is a valid object. Here’s the code:</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New";color:#002060'>return</span></b><b><span
+style='font-size:12.0pt;font-family:"Courier New"'> View(m.CustomerGetAll());</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;</span></b></p>
+
+<h4><span style='font-family:"Arial",sans-serif'>&nbsp;</span></h4>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Create a “get all” view, using
+the scaffolder</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Now, we can create the view. As
+you have learned (in Assignment 1), with the cursor anywhere in the Index()
+method code block, right-click and choose Add View. Complete the dialog as
+shown below:</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'><img border=0 width=721
+height=445 id="Picture 2" src="INT422-Lecture2_files/image011.png"
+alt=getallgetone09></span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Also, as you learned in
+Assignment 1, you can edit the view, to make its appearance and text content
+nicer.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>At this point in time, you can
+run the app (Ctrl+F5). The <u>/customers/index</u> URI segment will show the
+list of customer objects.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Modify the Details() method, to
+call the manager “get one” method</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Study the signature of the “get
+one” method. It accepts an <em><span style='font-family:"Arial",sans-serif'>int</span></em>
+argument, presumably the object’s identifier.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>What if the method is called
+with an empty/null identifier value? We must guard against that. How?</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>It <b>is a <em><span
+style='font-family:"Arial",sans-serif'>best practice</span></em> to change the
+signature of the “get one” method: The <em><span style='font-family:"Arial",sans-serif'>int</span></em>
+data type can be changed to a <em><span style='font-family:"Arial",sans-serif;
+background:yellow'>nullable int</span></em>, written as “<span
+style='background:yellow'>int?</span>”.</b></span></p>
+
+<p style='margin-left:.5in'><b><span style='font-family:"Courier New";
+color:#002060'>public</span></b><b><span style='font-family:"Courier New";
+color:#002060'> </span></b><b><span style='font-family:"Courier New"'>ActionResult
+Details(<span style='color:#002060'>int</span>? id)</span></b></p>
+
+<p><b><span style='font-family:"Courier New"'>&nbsp;</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Then, a method on <b>int?</b>
+will be used, </span><a
+href="https://msdn.microsoft.com/en-us/library/72cec0e0%28v=vs.110%29.aspx"
+target="_blank"><span style='font-family:"Arial",sans-serif'>GetValueOrDefault()</span></a><span
+style='font-family:"Arial",sans-serif'>. If the value is valid (e.g. 3, 275,
+etc.), it will be used. If the value is NOT valid (e.g. null, “abc”, etc.),
+then the default value – zero (0) – will be used. This is a safe coding
+practice.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Next, if the return value is
+null, we tell the browser user, by returning </span><a
+href="https://msdn.microsoft.com/en-us/library/system.web.mvc.httpnotfoundresult%28v=vs.118%29.aspx"
+target="_blank"><span style='font-family:"Arial",sans-serif'>HttpNotFound()</span></a><span
+style='font-family:"Arial",sans-serif'>. (Later in the course, you will learn a
+more elegant way to handle “not found” and other error-like results.)</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Otherwise, pass the fetched
+object to the view.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Here’s the complete method
+body:</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New";color:#00B050'>// GET:
+Customers/Details/5</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New";color:#002060'>public</span></b><b><span
+style='font-size:16.0pt;font-family:"Times New Roman",serif;color:#002060'> </span></b><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>ActionResult Details(<span
+style='color:#002060'>int</span>? id)</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>{</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;<span
+style='color:#00B050'>// Attempt to get the matching object</span></span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;<span
+style='color:#002060'>var</span></span></b><b><span style='font-size:16.0pt;
+font-family:"Times New Roman",serif'> </span></b><b><span style='font-size:
+12.0pt;font-family:"Courier New"'>o =
+m.CustomerGetById(id.GetValueOrDefault());</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:16.0pt;font-family:"Times New Roman",serif'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;<span
+style='color:#002060'>if</span></span></b><b><span style='font-size:16.0pt;
+font-family:"Times New Roman",serif'> </span></b><b><span style='font-size:
+12.0pt;font-family:"Courier New"'>(o == null)</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;{</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;<span
+style='color:#002060'>return</span></span></b><b><span style='font-size:16.0pt;
+font-family:"Times New Roman",serif'> </span></b><b><span style='font-size:
+12.0pt;font-family:"Courier New"'>HttpNotFound();</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;}</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;<span
+style='color:#002060'>else</span></span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;{</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;<span
+style='color:#002060'>return</span></span></b><b><span style='font-size:16.0pt;
+font-family:"Times New Roman",serif'> </span></b><b><span style='font-size:
+12.0pt;font-family:"Courier New"'>View(o);</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>&nbsp;&nbsp;}</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-size:12.0pt;font-family:"Courier New"'>}</span></b></p>
+
+<h4><span style='font-family:"Arial",sans-serif'>&nbsp;</span></h4>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Create a “get one” view, using
+the scaffolder</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Create the “get one” view.
+Complete the dialog as shown below:</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'><img border=0 width=717
+height=442 id="Picture 1" src="INT422-Lecture2_files/image012.png"
+alt=getallgetone10></span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Now, going back to the browser,
+the “Details” link for each of the items on the list of customers will work,
+and take you to a details view.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Also, as you learned in
+Assignment 1, you can edit the view, to make its appearance and text content
+nicer.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Adding more functionality – “add
+new”</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Covered in the next class.</span></p>
+
+<p class=MsoNormal><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+body { background-image: url("NiagaraFalls.jpg"); }
+
+h1 {
+     background-image: url("seneca_logo.gif");
+     background-repeat: repeat; /* no-repeat, repeat-x, repeat-y */
+     background-position: center center;
+     background-color: #33AA33; 
+}
+
+p { background-color: #993333; }
+ 
+

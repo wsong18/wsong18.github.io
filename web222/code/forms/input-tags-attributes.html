@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <title>HTML FORM</title>
+   <style> 
+      body { margin: 0 20%; }
+   </style>
+</head>
+<body>
+  <h1>Example - &lt;input&gt; Tags and Attributes</h1>
+
+  <!-- Start of example -->
+  <form method="post" name="example"
+		 action="https://formpost.azurewebsites.net/home/test">
+   <p>
+	  Text field 1 <input type="text" name="entry1" id="entry1" /> <mark> name / id</mark>
+	  <br />  
+	  Text field 2 <input size="30" name="entry2" id="entry2" /> <mark>size</mark>
+	  <br />  
+	  Text field 3 <input size="5" maxlength="15" name="entry3" id="entry3" /> <mark>maxlength</mark>
+	  <br />  
+	  Text field 4 <input size="12" value="416-" name="entry4" id="entry4" /> <mark>value</mark>
+	  <br />  
+	  Disabled field 5 <input size="50" disabled
+					   value="This one is disabled - Will not be sent to the CGI" name="entry5" id="entry5" /> <mark>disabled="disabled"</mark>
+	  <br />
+	  Read only field 6 <input size="50" readonly
+					   value="This one is a readonly - Will be sent to the CGI" name="entry6" id="entry6" /> <mark>readonly="readonly"</mark>
+   </p>
+   <p>
+	 <input type="submit" value="Submit Information" />
+		
+	 <input type="reset"  value="    Clear   " />  
+   </p> 
+  </form>
+  <!-- End of example -->
+  
+  <br>
+  <p><a href="" >Download</a></p>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <title>INT222</title>
+   <style> 
+      body { margin: 0 18%; }
+   </style>
+</head>
+<body>
+
+    <h3><mark>ondblclick event handler</mark></h3>
+	Field1: <input type="text" id="field1" value="Hello World!">
+	<br />
+
+	Field2: <input type="text" id="field2" value="default value">
+	<br /><br />
+
+	Double click the button below to append the content of Field1 to Field2.
+	<br />
+
+	<button ondblclick="document.getElementById('field2').value=
+	document.getElementById('field2').value +
+	document.getElementById('field1').value">Append Text</button>
+	
+	<hr>
+
+<!-- Start of example -->
+   <form method='post' name='form1' action='#'>
+    <table>
+     <tr>
+      <td>
+       Which Browser do you use?   
+       <ol>      
+        <li> <input type='checkbox' name='browser_name'  value='ns' 
+                  ondblclick='alert("Make up your mind.")' />Firefox.</li>      
+        <li> <input type='checkbox' name='browser_name'  value='ie' 
+                  ondblclick='alert("Make up your mind.")' />Internet Explorer.</li>
+       </ol>
+      </td>
+      <td>
+       How would you like to pay?   
+       <ol>
+        <li> <input type='radio' name='paymethod' value='cash' 
+                  ondblclick='alert("You do not need to double click on a radio button.")' /> Cash.</li>   
+        <li> <input type='radio' name='paymethod' value='cheque' 
+                  ondblclick='alert("You double clicked on cheque, probably N.S.F.")' /> Cheque.</li>   
+       </ol>
+      </td>
+     </tr>
+     <tr>
+      <td colspan='2'>
+       <br />
+       To submit, press <input type='submit' value='Submit Information'
+                  onclick='return false'
+                  ondblclick='alert("You double clicked on the submit button"); return false' />
+       &nbsp;&nbsp;
+       To clear, press  <input type='reset'  value='    Clear   ' 
+                  ondblclick='alert("You double clicked on the reset/clear button")' />  
+       <br />
+      </td>
+     </tr>
+     <tr>
+      <td colspan='2'>
+       <br />
+       <ul>
+        <li>Double click on anything that's clickable and I will tell you which one you double clicked on.</li>
+       </ul>
+       <br />
+      </td>
+     </tr>
+    </table>
+   </form>
+<!-- End of example -->
+
+  <br>
+  <!-- for downloading source files -->
+  <p><a href="" Download>Download</a></p>
+</body>
+</html>

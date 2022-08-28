@@ -1,0 +1,745 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<title>A5 - CSS</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+h2
+	{mso-style-link:"Heading 2 Char";
+	margin-right:0in;
+	margin-left:0in;
+	font-size:18.0pt;
+	font-family:"Times New Roman",serif;}
+h4
+	{mso-style-link:"Heading 4 Char";
+	margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-link:"Header Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-link:"Footer Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+pre
+	{mso-style-link:"HTML Preformatted Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Courier New";}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-link:"Balloon Text Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:8.0pt;
+	font-family:"Tahoma",sans-serif;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:.5in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:.5in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+span.Heading4Char
+	{mso-style-name:"Heading 4 Char";
+	mso-style-link:"Heading 4";
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+span.BalloonTextChar
+	{mso-style-name:"Balloon Text Char";
+	mso-style-link:"Balloon Text";
+	font-family:"Tahoma",sans-serif;}
+span.HeaderChar
+	{mso-style-name:"Header Char";
+	mso-style-link:Header;}
+span.FooterChar
+	{mso-style-name:"Footer Char";
+	mso-style-link:Footer;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-link:"Heading 2";
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+span.HTMLPreformattedChar
+	{mso-style-name:"HTML Preformatted Char";
+	mso-style-link:"HTML Preformatted";
+	font-family:"Courier New";}
+span.st
+	{mso-style-name:st;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:10.0pt;
+	line-height:115%;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:8.5in 11.0in;
+	margin:56.7pt 56.7pt 56.7pt 56.7pt;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink=purple background=bgw.gif>
+
+<div class=WordSection1 
+     style="margin: 0.5in auto; max-width: 50em; min-width: 30em;">
+
+<h2><span style='font-family:"Arial",sans-serif'>WEB222 - Assignment 5:  Cascading
+Style Sheets - CSS</span></h2>
+
+<h2><span style='font-size:12.0pt;font-family:"Arial",sans-serif;color:#002060'>&nbsp;</span></h2>
+
+<h2><span style='font-size:16.0pt;font-family:"Arial",sans-serif;color:#002060'>Due
+date</span></h2>
+
+<p class=MsoNormal style='margin-bottom:6.0pt'><span lang=EN-CA
+style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>All
+Sections:   </span><span lang=EN-CA style='font-family:"Arial",sans-serif;
+background:yellow'>Friday, December 22</span><span lang=EN-CA style='font-size:
+12.0pt;line-height:115%;font-family:"Arial",sans-serif'>, 2017 - 23:59 </span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt'><span lang=EN-CA
+style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>Grade
+value:   5% of </span><span lang=EN-CA style='font-size:12.0pt;line-height:
+115%;font-family:"Arial",sans-serif'>your final course grade</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt'><span lang=EN-CA
+style='font-size:10.0pt;line-height:115%;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<h2><span style='font-size:16.0pt;font-family:"Arial",sans-serif;color:#002060'>Objective
+</span></h2>
+
+<p class=MsoNormal style='margin-bottom:6.0pt'><span lang=EN-CA
+style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>Practice
+Styling elements, page layout and image gallery with CSS.</span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt'><span lang=EN-CA
+style='font-size:10.0pt;line-height:115%;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<h2><span style='font-size:16.0pt;font-family:"Arial",sans-serif;color:#002060'>Specifications</span></h2>
+
+<p class=MsoNormal><span lang=EN-CA style='font-size:12.0pt;line-height:115%;
+font-family:"Arial",sans-serif'>This assignment contains two parts - part A and
+part B. In part A you’ll work on basic CSS coding tasks. In part B you’ll play
+on page layout and basic tasks of image gallery and so on. Download and unzip
+the <b><span style='background:yellow'>assignment5-template.zip</span></b> file
+from Blackboard and there will be the folders <b>partA</b> and <b>partB</b> in
+the package. Complete the tasks in the following two parts.</span></p>
+
+<p class=MsoNormal><span lang=EN-CA style='font-size:12.0pt;line-height:115%;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span lang=EN-CA style='font-size:14.0pt;line-height:
+115%;font-family:"Arial",sans-serif'>Part A </span></b></p>
+
+<p class=MsoNormal><span lang=EN-CA style='font-size:12.0pt;line-height:115%;
+font-family:"Arial",sans-serif'>In the folder <b>partA</b>, work on the <b>ontario.html</b>
+and/or <b>css/partA.css </b>files and create CSS rules base the following
+specifications. Ether internal or external CSS can be used for creating these
+rules.</span></p>
+
+<p class=MsoListParagraphCxSpFirst style='text-indent:-.25in'><span lang=EN-CA
+style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>1.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>Create
+a CSS rule to set the page width to 80% and horizontally centered. Hint: you
+can use ether <i>body</i> or <i>.main-container</i> as CSS selector, and set
+property margin with value auto. </span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>2.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>For
+text of all <b>level-2 headings</b>, create a CSS rule to set text color to <i>dark
+blue</i> and background color to <i>#cccccc  </i>(using tag selector).</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>3.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>For
+the <b>paragraph</b> with id=&quot;paragraph2&quot;, create a CSS rule to set
+font family to <i>&quot;Comic Sans MS&quot;, &quot;Comic Sans&quot;,
+&quot;cursive&quot;</i>, set font size to <i>20pt</i> (using ID selector). </span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>4.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>For
+all <b>span</b> element with class=&quot;on&quot;, create a CSS rule to set
+text color to <i>#5cb85c</i>, font weight to <i>bold</i>, and text decoration
+to <i>underline</i> (using class selector). </span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>5.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>For
+<b>table</b> within <b>div</b> element with id=&quot;section2&quot;, create a
+CSS rule to set background image to </span><span lang=EN-CA><a
+href="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX23025384.jpg"><span
+style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX23025384.jpg</span></a></span><i><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>,
+</span></i><span lang=EN-CA style='font-size:12.0pt;line-height:115%;
+font-family:"Arial",sans-serif'>repeat, and set text color to <i>#2f4f4f </i>(using
+ID and contextual selector).</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>6.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>For
+both <b>thead</b> and <b>tfoot</b>, create a CSS rule to set background color
+to <i>rgba(255, 255, 0, 0.6)</i>, which is a RGB color with opacity, and set
+font style to <i>italic</i> (using group selector).</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>7.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>Create
+a CSS rule to change the color of any <b>paragraph</b> in the document to blue
+color using hexadecimal value when the cursor hovers over the <b>paragraph</b>.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>8.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>Create
+a CSS rule to set the list style type of all <b>unorder list</b> to <i>square</i>,
+and create another rule to set the list style type of all <b>order list</b> to <i>lower
+alpha</i>.</span></p>
+
+<p class=MsoListParagraphCxSpLast style='text-indent:-.25in'><span lang=EN-CA
+style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>9.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>Add
+©2017 and your full name into the <b>footer</b> and text align it to <i>center</i>.</span></p>
+
+<p class=MsoNormal><span lang=EN-CA style='font-size:12.0pt;line-height:115%;
+font-family:"Arial",sans-serif'>The screenshot of completed part A: </span><span
+lang=EN-CA><a
+href="https://scs.senecac.on.ca/~wei.song/web222/assignments/assignment5/ontario.jpg"><span
+style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>ontario.html</span></a></span></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt'><span lang=EN-CA
+style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span lang=EN-CA style='font-size:14.0pt;line-height:
+115%;font-family:"Arial",sans-serif'>Part B </span></b></p>
+
+<p class=MsoNormal><span lang=EN-CA style='font-size:12.0pt;line-height:115%'>Go
+to the <b>partB</b> folder in the package, you will find an html file <b>canadianPT.html
+</b>and a folder<b> images </b>with a number of images inside. Based on what
+you have been provided, complete the 8 tasks below, and mimic the screenshots
+as more as you can.  The screenshots for each task is as following:</span></p>
+
+<p class=MsoNormal style='margin-top:.25in'><b><span lang=EN-CA
+style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>The screenshot
+before start: </span></b><span lang=EN-CA><a
+href="https://scs.senecac.on.ca/~wei.song/web222/assignments/assignment5/task.jpg"><span
+style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>template-screenshot</span></a></span><span
+lang=EN-CA style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif'>                                                                                 
+</span></p>
+
+<p class=MsoNormal><b><span lang=EN-CA style='font-size:12.0pt;line-height:
+115%;font-family:"Arial",sans-serif'>Task 1: Creating a CSS file for the page</span></b></p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-bottom:6.0pt;text-indent:-.25in;
+line-height:normal'><span lang=EN-CA style='font-size:10.0pt;font-family:Wingdings'>§<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=EN-CA
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>Embed the CSS file <b>css/partB.css</b>
+into the HTML file <b>canadianPT.html</b>. All your CSS rules should be in the <b>partB.css
+</b>file.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:6.0pt;text-indent:
+-.25in;line-height:normal'><span lang=EN-CA style='font-size:10.0pt;font-family:
+Wingdings'>§<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;font-family:"Arial",sans-serif'>Set page
+background using the provided image <b>images/canada_theme.jpg</b>, and make
+the background image to cover whole page.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:6.0pt;text-indent:
+-.25in;line-height:normal'><span lang=EN-CA style='font-size:10.0pt;font-family:
+Wingdings'>§<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;font-family:"Arial",sans-serif'>Center the
+heading text “<i>Canadian Provinces and Territories</i>”.</span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-bottom:6.0pt;text-indent:-.25in;
+line-height:normal'><span class=MsoHyperlink><span lang=EN-CA style='font-size:
+10.0pt;font-family:Wingdings;color:windowtext;text-decoration:none'>§<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span><span
+lang=EN-CA style='font-size:12.0pt;font-family:"Arial",sans-serif'>After
+completing this task, the web page should be like: </span><span lang=EN-CA><a
+href="https://scs.senecac.on.ca/~wei.song/web222/assignments/assignment5/task1.jpg"><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>task1-screenshot</span></a></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in;line-height:normal'><span lang=EN-CA style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span lang=EN-CA style='font-size:12.0pt;line-height:
+115%;font-family:"Arial",sans-serif'>Task 2: Specify width for the page</span></b></p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-bottom:6.0pt;text-indent:-.25in;
+line-height:normal'><span lang=EN-CA style='font-size:10.0pt;font-family:Wingdings'>§<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=EN-CA
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>If the target screen
+resolution width is 1024, you may set the width of the web page to 960px,
+900px, or other values. But here, we use a relative width setting.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:6.0pt;text-indent:
+-.25in;line-height:normal'><span lang=EN-CA style='font-size:10.0pt;font-family:
+Wingdings'>§<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;font-family:"Arial",sans-serif'>Center the
+page. </span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:6.0pt;text-indent:
+-.25in;line-height:normal'><span lang=EN-CA style='font-size:10.0pt;font-family:
+Wingdings'>§<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;font-family:"Arial",sans-serif'>After
+completing this task, the web page should be like: </span><span lang=EN-CA><a
+href="https://scs.senecac.on.ca/~wei.song/web222/assignments/assignment5/task2.jpg"><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>task2-screenshot</span></a></span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-bottom:6.0pt;text-indent:-.25in;
+line-height:normal'><span lang=EN-CA style='font-size:10.0pt;font-family:Wingdings'>§<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=EN-CA
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>Hint:</span></p>
+
+<pre style='margin-left:1.0in'><b><span lang=EN-CA style='font-size:11.0pt'>body { </span></b></pre><pre
+style='margin-left:1.0in'><b><span lang=EN-CA style='font-size:11.0pt'>   … …</span></b></pre><pre
+style='margin-left:1.0in'><b><span lang=EN-CA style='font-size:11.0pt'>   width: 85%;</span></b></pre><pre
+style='margin-left:1.0in'><b><span lang=EN-CA style='font-size:11.0pt'>   margin: 0 auto;</span></b></pre><pre
+style='margin-left:1.0in'><b><span lang=EN-CA style='font-size:11.0pt'>}</span></b></pre>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in;line-height:normal'><span lang=EN-CA style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span lang=EN-CA style='font-size:12.0pt;line-height:
+115%;font-family:"Arial",sans-serif'>Task 3: Place navigation bar</span></b></p>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;line-height:normal'><span
+lang=EN-CA style='font-size:12.0pt;font-family:"Arial",sans-serif'>In this step
+we will arrange for the navigation bar to be placed on the left part of the
+page, and under the header.</span></p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-bottom:6.0pt;text-indent:-.25in;
+line-height:normal'><span lang=EN-CA style='font-size:10.0pt;font-family:Wingdings'>§<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=EN-CA
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>Give the nav a width,
+and float it to the left.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:6.0pt;text-indent:
+-.25in;line-height:normal'><span lang=EN-CA style='font-size:10.0pt;font-family:
+Wingdings'>§<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;font-family:"Arial",sans-serif'>After</span><span
+lang=EN-CA style='font-size:12.0pt;font-family:"Arial",sans-serif'> completing
+this task, the web page should be like: </span><span lang=EN-CA><a
+href="https://scs.senecac.on.ca/~wei.song/web222/assignments/assignment5/task3.jpg"><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>task3-screenshot</span></a></span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-bottom:6.0pt;text-indent:-.25in;
+line-height:normal'><span lang=EN-CA style='font-size:10.0pt;font-family:Wingdings'>§<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=EN-CA
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>H</span><span
+lang=EN-CA style='font-size:12.0pt;font-family:"Arial",sans-serif'>int:</span></p>
+
+<pre style='margin-left:1.0in'><b><span lang=EN-CA style='font-size:11.0pt'>nav {</span></b></pre><pre
+style='margin-left:1.0in'><b><span lang=EN-CA style='font-size:11.0pt'>      width: 250px;</span></b></pre><pre
+style='margin-left:1.0in'><b><span lang=EN-CA style='font-size:11.0pt'>      float: left;</span></b></pre><pre
+style='margin-left:1.0in'><b><span lang=EN-CA style='font-size:11.0pt'>}</span></b></pre>
+
+<p class=MsoNormal style='margin-bottom:6.0pt;line-height:normal'><span
+lang=EN-CA style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span lang=EN-CA style='font-size:12.0pt;line-height:
+115%;font-family:"Arial",sans-serif'>Task 4: Clear space under navigation bar</span></b></p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-bottom:6.0pt;text-indent:-.25in;
+line-height:normal'><span lang=EN-CA style='font-size:10.0pt;font-family:Wingdings'>§<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=EN-CA
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>To stop wrapping under
+the navigation bar, give a width to main section, and </span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:6.0pt;text-indent:
+-.25in;line-height:normal'><span lang=EN-CA style='font-size:10.0pt;font-family:
+Wingdings'>§<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;font-family:"Arial",sans-serif'>float it to
+the left.</span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-bottom:6.0pt;text-indent:-.25in;
+line-height:normal'><span lang=EN-CA style='font-size:10.0pt;font-family:Wingdings'>§<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=EN-CA
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>Hint</span><span
+lang=EN-CA style='font-size:12.0pt;font-family:"Arial",sans-serif'>:</span></p>
+
+<pre style='margin-left:1.0in'><b><span lang=EN-CA style='font-size:11.0pt'>.main {</span></b></pre><pre
+style='margin-left:1.0in'><b><span lang=EN-CA style='font-size:11.0pt'>     width: 60%; /* width: 600px; */</span></b></pre><pre
+style='margin-left:1.0in'><b><span lang=EN-CA style='font-size:11.0pt'>     float: left;</span></b></pre><pre
+style='margin-left:1.0in'><b><span lang=EN-CA style='font-size:11.0pt'>}</span></b></pre>
+
+<p class=MsoListParagraphCxSpFirst style='margin-bottom:6.0pt;text-indent:-.25in;
+line-height:normal'><span lang=EN-CA style='font-size:10.0pt;font-family:Wingdings'>§<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=EN-CA
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>Make the footer
+underneath both the nav and main section blocks, and set the clear property of
+footer to both.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:6.0pt;text-indent:
+-.25in;line-height:normal'><span lang=EN-CA style='font-size:10.0pt;font-family:
+Wingdings'>§<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;font-family:"Arial",sans-serif'>After </span><span
+lang=EN-CA style='font-size:12.0pt;font-family:"Arial",sans-serif'>completing
+this task, the web page should be like: </span><span lang=EN-CA><a
+href="https://scs.senecac.on.ca/~wei.song/web222/assignments/assignment5/task4.jpg"><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>task4-screenshot</span></a></span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-bottom:6.0pt;text-indent:-.25in;
+line-height:normal'><span lang=EN-CA style='font-size:10.0pt;font-family:Wingdings'>§<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=EN-CA
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>H</span><span
+lang=EN-CA style='font-size:12.0pt;font-family:"Arial",sans-serif'>int:</span></p>
+
+<pre style='margin-left:1.0in'><b><span lang=EN-CA style='font-size:11.0pt'>footer {  clear: both; }</span></b></pre><pre
+style='margin-left:1.0in'><b><span lang=EN-CA style='font-size:11.0pt'>&nbsp;</span></b></pre>
+
+<p class=MsoNormal><b><span lang=EN-CA style='font-size:12.0pt;line-height:
+115%;font-family:"Arial",sans-serif'>Task 5: Position the Canada flag and text</span></b></p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-bottom:6.0pt;text-indent:-.25in;
+line-height:normal'><span lang=EN-CA style='font-size:10.0pt;font-family:Wingdings'>§<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=EN-CA
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>Set the size of the Canada
+flag. </span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-bottom:6.0pt;text-indent:-.25in;
+line-height:normal'><span lang=EN-CA style='font-size:10.0pt;font-family:Wingdings'>§<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=EN-CA
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>Hint: use the
+combination of ID selector and contextual selector:</span></p>
+
+<pre style='margin-left:1.0in'><b><span lang=EN-CA style='font-size:11.0pt'>#CA img { width: 50px; }</span></b></pre><pre
+style='margin-left:1.0in'><b><span lang=EN-CA style='font-size:11.0pt'>&nbsp;</span></b></pre>
+
+<p class=MsoListParagraphCxSpFirst style='margin-bottom:6.0pt;text-indent:-.25in;
+line-height:normal'><span lang=EN-CA style='font-size:10.0pt;font-family:Wingdings'>§<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=EN-CA
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>Set the font size of
+the Canada text.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:6.0pt;text-indent:
+-.25in;line-height:normal'><span lang=EN-CA style='font-size:10.0pt;font-family:
+Wingdings'>§<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;font-family:"Arial",sans-serif'>Position the
+flag and text to the top-right corner </span><span lang=EN-CA style='font-family:
+"Arial",sans-serif'>relative to the browser window</span><span lang=EN-CA
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> (as showed in the
+screenshot).</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:6.0pt;text-indent:
+-.25in;line-height:normal'><span lang=EN-CA style='font-size:10.0pt;font-family:
+Wingdings'>§<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;font-family:"Arial",sans-serif'>After
+completing this task, the web page should be like: </span><span lang=EN-CA><a
+href="https://scs.senecac.on.ca/~wei.song/web222/assignments/assignment5/task5.jpg"><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>task5-screenshot</span></a></span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-bottom:6.0pt;text-indent:-.25in;
+line-height:normal'><span lang=EN-CA style='font-size:10.0pt;font-family:Wingdings'>§<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=EN-CA
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>Hint: use fixed
+position.</span></p>
+
+<pre style='margin-left:1.0in'><b><span lang=EN-CA style='font-size:11.0pt'>&nbsp;</span></b></pre>
+
+<p class=MsoNormal><b><span lang=EN-CA style='font-size:12.0pt;line-height:
+115%;font-family:"Arial",sans-serif'>Task 6: Create float-based grid</span></b></p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-bottom:6.0pt;text-indent:-.25in;
+line-height:normal'><span lang=EN-CA style='font-size:10.0pt;font-family:Wingdings'>§<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=EN-CA
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>Set the flag sizes of
+all provinces and territories – width: 100px;</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:6.0pt;text-indent:
+-.25in;line-height:normal'><span lang=EN-CA style='font-size:10.0pt;font-family:
+Wingdings'>§<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;font-family:"Arial",sans-serif'>Display the
+information (flags and text) of provinces and territories in a grid with the
+size of 220px x 200px.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:6.0pt;text-indent:
+-.25in;line-height:normal'><span lang=EN-CA style='font-size:10.0pt;font-family:
+Wingdings'>§<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;font-family:"Arial",sans-serif'>After
+completing this task, the web page should be like: </span><span lang=EN-CA><a
+href="https://scs.senecac.on.ca/~wei.song/web222/assignments/assignment5/task6.jpg"><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>task6-screenshot</span></a></span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-bottom:6.0pt;text-indent:-.25in;
+line-height:normal'><span lang=EN-CA style='font-size:10.0pt;font-family:Wingdings'>§<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=EN-CA
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>Hint: </span></p>
+
+<pre style='margin-left:1.0in'><b><span lang=EN-CA style='font-size:11.0pt'>.province</span></b></pre><pre
+style='margin-left:1.0in'><b><span lang=EN-CA style='font-size:11.0pt'>{</span></b></pre><pre
+style='margin-left:1.0in'><b><span lang=EN-CA style='font-size:11.0pt'>     float: left;</span></b></pre><pre
+style='margin-left:1.0in'><b><span lang=EN-CA style='font-size:11.0pt'>     width:  220px;</span></b></pre><pre
+style='margin-left:1.0in'><b><span lang=EN-CA style='font-size:11.0pt'>     height: 200px;</span></b></pre><pre
+style='margin-left:1.0in'><b><span lang=EN-CA style='font-size:11.0pt'>}</span></b></pre>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in;line-height:normal'><span lang=EN-CA style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span lang=EN-CA style='font-size:12.0pt;line-height:
+115%;font-family:"Arial",sans-serif'>Task 7: Wrap the flags with Text </span></b></p>
+
+<p class=MsoListParagraph style='margin-bottom:6.0pt;text-indent:-.25in;
+line-height:normal'><span lang=EN-CA style='font-size:10.0pt;font-family:Wingdings'>§<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=EN-CA
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>Use the following code
+to make the text wrap the provincial flag images with text:</span></p>
+
+<pre style='margin-left:1.0in'><b><span lang=EN-CA style='font-size:11.0pt'>.province img { float: left; margin: 5px;}</span></b></pre><pre
+style='margin-left:1.0in'><b><span lang=EN-CA style='font-size:11.0pt'>&nbsp;</span></b></pre>
+
+<p class=MsoListParagraph style='margin-bottom:6.0pt;text-indent:-.25in;
+line-height:normal'><span lang=EN-CA style='font-size:10.0pt;font-family:Wingdings'>§<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=EN-CA
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>After completing this
+task, the web page should be like: </span><span lang=EN-CA><a
+href="https://scs.senecac.on.ca/~wei.song/web222/assignments/assignment5/task7.jpg"><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>task7-screenshot</span></a></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in;line-height:normal'><span lang=EN-CA style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span lang=EN-CA style='font-size:12.0pt;line-height:
+115%;font-family:"Arial",sans-serif'>Task 8: final work</span></b></p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-bottom:6.0pt;text-indent:-.25in;
+line-height:normal'><span lang=EN-CA style='font-size:10.0pt;font-family:Wingdings'>§<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=EN-CA
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>Remove the bullets (list
+style) for the list of provinces and territories in the <b>nav</b> block. Set
+font family and size with appropriate values.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:6.0pt;text-indent:
+-.25in;line-height:normal'><span lang=EN-CA style='font-size:10.0pt;font-family:
+Wingdings'>§<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;font-family:"Arial",sans-serif'>Decorate the
+text in the page with text-shadow so all text is easy to read.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:6.0pt;text-indent:
+-.25in;line-height:normal'><span lang=EN-CA style='font-size:10.0pt;font-family:
+Wingdings'>§<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;font-family:"Arial",sans-serif'>Wrap
+&lt;div&gt; of each province with border, and set margins, paddings and text
+color. </span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:6.0pt;text-indent:
+-.25in;line-height:normal'><span lang=EN-CA style='font-size:10.0pt;font-family:
+Wingdings'>§<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;font-family:"Arial",sans-serif'>In Firefox,
+type Ctrl+Shift+C to open the Inspector window – a tool for web developers.
+Check the HTML elements in the web page and CSS rules which apply to them.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:6.0pt;text-indent:
+-.25in;line-height:normal'><span lang=EN-CA style='font-size:10.0pt;font-family:
+Wingdings'>§<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;font-family:"Arial",sans-serif'>After
+completing this task, resize the window of your web page (don’t change the
+code) to see the effect. (Float-based grid can make your page fit to different
+size screens, such mobile screen). The web page should be like: </span><span
+lang=EN-CA><a
+href="https://scs.senecac.on.ca/~wei.song/web222/assignments/assignment5/task8.jpg"><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>task8-screenshot</span></a></span><span
+lang=EN-CA style='font-size:12.0pt;font-family:"Arial",sans-serif'> and </span><span
+lang=EN-CA><a
+href="https://scs.senecac.on.ca/~wei.song/web222/assignments/assignment5/task8-resize.jpg"><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>resize-screenshot</span></a></span><span
+lang=EN-CA style='font-size:12.0pt;font-family:"Arial",sans-serif'>.</span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-bottom:6.0pt;line-height:normal'><span
+lang=EN-CA style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:6.0pt;
+margin-left:.5in;line-height:normal'><span lang=EN-CA style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span lang=EN-CA style='font-size:14.0pt;line-height:
+115%;font-family:"Arial",sans-serif'>OTHER REQUIREMENTS</span></b></p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-bottom:6.0pt;text-indent:-.25in;
+line-height:normal'><span lang=EN-CA style='font-size:10.0pt;font-family:Wingdings'>§<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=EN-CA
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>Use CSS comments to
+label your CSS rules, e.g. /* Task 8 */</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:6.0pt;text-indent:
+-.25in;line-height:normal'><span lang=EN-CA style='font-size:10.0pt;font-family:
+Wingdings'>§<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;font-family:"Arial",sans-serif'>The HTML
+page must pass </span><span lang=EN-CA><a
+href="https://validator.w3.org/#validate_by_input"><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>the W3C's HTML Validation</span></a></span><span
+lang=EN-CA style='font-size:12.0pt;font-family:"Arial",sans-serif'>.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:6.0pt;text-indent:
+-.25in;line-height:normal'><span lang=EN-CA style='font-size:10.0pt;font-family:
+Wingdings'>§<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;font-family:"Arial",sans-serif'>CSS used in
+the assignment must pass </span><span lang=EN-CA><a
+href="https://jigsaw.w3.org/css-validator/#validate_by_input"><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>the W3C CSS validation</span></a></span><span
+lang=EN-CA style='font-size:12.0pt;font-family:"Arial",sans-serif'>.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:6.0pt;text-indent:
+-.25in;line-height:normal'><span lang=EN-CA style='font-size:10.0pt;font-family:
+Wingdings'>§<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;font-family:"Arial",sans-serif'>Any error(s)
+for HTML and/or CSS validation will result in 25% penalty for the grade of your
+assignment.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:6.0pt;text-indent:
+-.25in;line-height:normal'><span lang=EN-CA style='font-size:10.0pt;font-family:
+Wingdings'>§<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+lang=EN-CA style='font-size:12.0pt;font-family:"Arial",sans-serif'>Enclose the
+following declaration with your name and date at the top of your<b> partA.css and
+partB.css </b>files:  </span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-bottom:6.0pt;line-height:normal'><span
+lang=EN-CA style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-CA style='font-size:12.0pt;font-family:"Courier New"'>/********************************************************************</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-CA style='font-size:12.0pt;font-family:"Courier New"'>I
+declare that my assignment is wholly my own work in accordance with Seneca
+Academic Policy. No part of this assignment has been copied manually or
+electronically from any other source (including web sites) except for the information
+supplied by the WEB222 instructors and / or made available in this assignment
+for my use.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-CA style='font-size:12.0pt;font-family:"Courier New"'>I
+also declare that no part of this assignment has been distributed to other
+students.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-CA style='font-size:12.0pt;font-family:"Courier New"'>Name: 
+(your name here)                    </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-CA style='font-size:12.0pt;font-family:"Courier New"'>Dated:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-CA style='font-size:12.0pt;font-family:"Courier New"'>********************************************************************/
+</span></p>
+
+<h2><span style='font-size:16.0pt;font-family:"Arial",sans-serif;color:#002060'>&nbsp;</span></h2>
+
+<h2><span style='font-size:16.0pt;font-family:"Arial",sans-serif;color:#002060'>Assignment
+submission</span></h2>
+
+<p class=MsoListParagraph style='margin-bottom:6.0pt;text-indent:-.25in;
+line-height:normal'><span lang=EN-CA style='font-size:10.0pt;font-family:Wingdings'>§<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=EN-CA
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>Compact your assignment
+5 part A and B files including all directory structures into one zip file named
+<b>assignment5.zip</b> and submit this file to the Blackboard (My.Seneca).</span></p>
+
+<p class=MsoNormal><span lang=EN-CA style='font-size:12.0pt;line-height:115%;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<h2><span style='font-size:16.0pt;font-family:"Arial",sans-serif;color:#002060'>Important
+note</span></h2>
+
+<p class=MsoListParagraphCxSpFirst style='margin-bottom:6.0pt;text-indent:-.25in;
+line-height:normal'><span lang=EN-CA style='font-size:10.0pt;font-family:Wingdings'>§<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=EN-CA
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>NO LATE SUBMISSIONS for
+assignments. Late Assignment submissions will not be accepted and will receive
+a grade of zero (0).</span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-bottom:6.0pt;text-indent:-.25in;
+line-height:normal'><span lang=EN-CA style='font-size:10.0pt;font-family:Wingdings'>§<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=EN-CA
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>After the end (23:59)
+of the due date, the assignment submission link on the Blackboard will no
+longer available.</span></p>
+
+<p class=MsoNormal><span lang=EN-CA>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>

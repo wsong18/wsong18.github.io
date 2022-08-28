@@ -1,0 +1,2437 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<base target="_blank">
+<title>A8</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Segoe UI Symbol";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:"Lucida Console";
+	panose-1:2 11 6 9 4 5 4 2 2 4;}
+@font-face
+	{font-family:"Arial Rounded MT Bold";
+	panose-1:2 15 7 4 3 5 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:105%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+h2
+	{mso-style-link:"Heading 2 Char";
+	margin-right:0in;
+	margin-left:0in;
+	font-size:18.0pt;
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+h4
+	{mso-style-link:"Heading 4 Char";
+	margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-link:"Header Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-link:"Footer Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:#954F72;
+	text-decoration:underline;}
+p
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+code
+	{font-family:"Courier New";}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-link:"Heading 2";
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+span.Heading4Char
+	{mso-style-name:"Heading 4 Char";
+	mso-style-link:"Heading 4";
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+p.msonormal0, li.msonormal0, div.msonormal0
+	{mso-style-name:msonormal;
+	margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+span.HeaderChar
+	{mso-style-name:"Header Char";
+	mso-style-link:Header;}
+span.FooterChar
+	{mso-style-name:"Footer Char";
+	mso-style-link:Footer;}
+p.msopapdefault, li.msopapdefault, div.msopapdefault
+	{mso-style-name:msopapdefault;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:105%;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+.MsoChpDefault
+	{font-size:10.0pt;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:.75in .75in .75in .75in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink="#954F72" background=bgw.gif>
+
+<div class=WordSection1 
+     style="margin: 0.5in auto; max-width: 50em; min-width: 30em;">
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:18.0pt;
+font-family:"Arial",sans-serif'>INT422 Assignment 8</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Build a data model. Implement security. Post to
+a public web server.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Read/skim all of this document before you begin
+work.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Due date</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Section A: Tuesday, April 3, 2018, 11:59pm</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Grade value: 8% of your final course grade</span></p>
+
+<p class=MsoNormal style='line-height:normal'><i><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>If you wish to submit the lab before the due
+date and time, you can do that.</span></i></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Objective(s)</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Build a data model. Implement security. Post to
+a public web server.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Introduction to the problem to be
+solved</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The app serves the needs of companies in the </span><a
+href="https://en.wikipedia.org/wiki/Music_industry" target="_blank"><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>music business</span></a><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>. We need an app that
+will enable a </span><a href="https://en.wikipedia.org/wiki/Record_label"
+target="_blank"><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>record
+label</span></a><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;to
+manage their artists, albums, and tracks.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>For this app, it will be helpful to know that
+people who work at a record label have various responsibilities, roles, and job
+duties. We will focus on three job titles, and enable each to perform a
+selection of tasks in the app:</span></p>
+
+<p class=MsoNormal style='line-height:normal'><a
+href="https://en.wikipedia.org/wiki/Artists_and_repertoire" target="_blank"><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>Executive</span></a><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> – Also known as an
+“artists &amp; repertoire” (A&amp;R) executive, manages the talent acquisition
+and management process.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Coordinator – Oversees or coordinates the work
+on an album, all aspects and phases.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Clerk – Supports the coordinator and executive,
+during the time that the artist makes progress on an album.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Specifications overview and work
+plan</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Here’s a brief list of specifications that you
+must implement:</span></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Follows best practices</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Implements the recommended system design guidance</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Customized appearance, with appropriate
+     menu items</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Enable “add new” use case for
+     Artist&nbsp;and&nbsp;Album objects</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Enable “add new” use cases for the Track
+     object</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Implement security that limits who can do
+     which tasks</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Publish the app to the web</span></li>
+</ul>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Here is a brief work plan sequence:</span></p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Create the project</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Customize the app’s appearance</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Create the design model classes</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Create view models and mappers that cover
+     the initial use cases</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Configure the security settings for the
+     app</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Add methods to the Manager class that handle
+     the use cases, and load initial data</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Add the Artist&nbsp;controller, implement
+     the use cases, including views</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Add the Album&nbsp;controller, implement
+     the use cases, including views</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Add the Track&nbsp;controller, implement
+     the use cases, including views</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Publish to Azure</span></li>
+</ol>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Get started on the assignment during the week. Your
+professor will help you&nbsp;make progress&nbsp;on this assignment. There will
+be in-class grading&nbsp;during the class/session.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Create the project, based on the
+project template</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Create a new web app, must be named <b>Assignment8</b>.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>It MUST use the new “Web app project <b><span
+style='color:red'>v2</span></b>” project template. Get this new project
+template from the course site, and install it into your Visual Studio
+configuration.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>After creating the web app, customize the home
+page. Change the large “<b><span style='color:white;background:blue'>Learn more
+&gt;&gt;</span></b>”<span style='color:white'> </span>button to <b>“<span
+style='color:white;background:blue'>Assignment 8 on Azure</span></b>” and set
+the button link to the URL of your assignment 8 on Azure,</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Warning: Your teachers believe that the best
+way to work through this assignment is to do incrementally. Get one thing
+working, before moving on to the next. Test each part.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Customize the app’s appearance</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>You will customize the appearance all of your
+web apps and assignments. Never submit an assignment that has the generic
+auto-generated text content. Make the time to customize the web app’s
+appearance.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>For this assignment, you can defer this
+customization work until later. Come back to it at any time, and complete it
+before you submit your work.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Follow the guidance from </span><a
+href="https://scs.senecac.on.ca/~wei.song/int422/assignments/INT422-Assignment1.html"
+target="_blank"><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Assignment
+1</span></a><span style='font-size:12.0pt;font-family:"Arial",sans-serif'> to
+customize the app’s appearance.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Create the design model classes</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In the Models folder, there is an empty
+DesignModelClasses.cs source code file.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Add design model classes to this source code
+file. You will need:</span></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Artist</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Album</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Track</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Genre</span></li>
+</ul>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Follow the guidance about rules/conventions
+from week 8 lecture notes, when writing design model classes:</span></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>To ease other coding tasks, the name of
+     the integer identifier property should be “Id”</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Collection properties (including
+     navigation properties) must be of type ICollection&lt;T&gt;</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Valid </span><a
+     href="https://scs.senecac.on.ca/~wei.song/int422/lectures/INT422-Lecture3.html"><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif'>data annotations</span></a><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif'> are pretty much
+     limited to [Required] and [StringLength(n)]</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Required to-one navigation properties must
+     include the [Required] attribute</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Do NOT configure scalar properties (e.g.
+     int, double) with the [Required] attribute</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Initialize DateTime and collection
+     properties in a default constructor</span></li>
+</ul>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Following these rules/conventions will ensure
+that the database is initialized and configured correctly, and will improve the
+quality of other coding tasks as you build the app.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Here’s an image of the completed data model,
+from the “class diagram” feature in Visual Studio:</span></p>
+
+<p class=MsoNormal style='line-height:normal'><img border=0 width=744
+height=787 id="Picture 14" src="INT422-Assignment8_files/image001.png"></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>A few notes about the design model classes, and
+how they model the real world:</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Associations</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Artist has a to-many with Album, as you would
+expect. An artist can have many albums.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In our model, an Album has a to-many with
+Artist. This means that more than one artist can work on an album. This often
+happens with&nbsp;collaborations or duets.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Album has a to-many with Track, as you would
+expect. An album can have many tracks.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In our model, a Track has a to-many with Album.
+This means that a track can appear on more than one album. This often happens
+when an artist releases a “greatest hits” album.</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:18.0pt;font-family:"Segoe UI Symbol",sans-serif;color:#0070C0'>❝</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>Real world notice:</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>In the real world, an
+artist could be a group. For example, The Beatles. Every group will obviously
+have members. For example, John, Paul, George, and Ringo were in The Beatles.
+Therefore, for a <i>really</i> real-world implementation of the artist entity,
+we really should have a self-referencing to-one association (e.g. John is a
+member of The Beatles), and we really should have a self-referencing to-many
+association property (e.g. The Beatles have a collection of members, John,
+Paul, George, and Ringo).</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>However, we are not
+asking you to implement this design feature.&nbsp;We are deliberately limiting
+the scope of this assignment. Although it would be fun to do.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Artist</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In the music business, an artist can be an
+individual person (e.g. Adele), or an artist can be a duo, group, band,
+orchestra, etc. (e.g. Florida Georgia Line).</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The “Name” property is the artist’s name:</span></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>For a person, it can be their birth name
+     (e.g. Ray LaMontagne), or a stage name (e.g. P!nk)</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>For all others, it will typically be a
+     stage/performer name (e.g. The Beatles)</span></li>
+</ul>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The “BirthName” property is used <i>only</i>
+for a person who uses a stage name. For example “Alecia Beth Moore” is the
+birth name of “P!nk”.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The “BirthOrStartDate” property is used this
+way:</span></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>For an individual person, it is their
+     birth date</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>For all others, it is the date that the
+     artist started working in the music business</span></li>
+</ul>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The “UrlArtist” property will hold a URL to a
+photo of the artist. You can find a URL for an artist almost anywhere,
+including:</span></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Google or Bing image search</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Wikipedia</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Amazon.ca</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>iTunes Preview</span></li>
+</ul>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The “Genre” property holds a genre
+string/value. In the user interface, when creating a new artist object, the
+available genres will be shown in an item-selection element.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The “Executive” property holds the user name
+(e.g. amanda@example.com) of the authenticated user who is in the process of
+adding a new artist object.</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:18.0pt;font-family:"Segoe UI Symbol",sans-serif;color:#0070C0'>❝</span><u><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>Warning:</span></u></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>Do NOT make
+associations with&nbsp;the security classes, from your own design model
+classes.</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>Instead, use the
+security APIs.</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>For example, assume
+that you need to keep track of a user name in an entity (for whatever reason).
+Here’s how to approach this task:</span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;line-height:
+normal'><span style='font-size:10.0pt;font-family:Symbol'>·</span><span
+style='font-size:7.0pt;font-family:"Times New Roman",serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Get the
+user name (i.e. email address) from the current execution context (User
+property in the controller, or HttpContext.Current.User property in the manager
+object)</span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;line-height:
+normal'><span style='font-size:10.0pt;font-family:Symbol'>·</span><span
+style='font-size:7.0pt;font-family:"Times New Roman",serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Or use the
+security API to fetch/lookup the desired user and get its user name; we may
+learn a bit more about using the security API&nbsp;in the near future</span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;line-height:
+normal'><span style='font-size:10.0pt;font-family:Symbol'>·</span><span
+style='font-size:7.0pt;font-family:"Times New Roman",serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Store that
+value as a non-associated string property, in your entity</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>The user name (email
+address) is GUARANTEED to be unique, so it can safely be used.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Album</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The “UrlArtist” property will hold a URL to an
+image&nbsp;of the album. You can find a URL for an album&nbsp;almost anywhere,
+including:</span></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Google or Bing image search</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Wikipedia</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Amazon.ca</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>iTunes Preview</span></li>
+</ul>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The “Genre” property holds a genre
+string/value. In the user interface, when creating a new album&nbsp;object, the
+available genres will be shown in an item-selection element.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The “Coordinator” property holds the user name (e.g.
+amanda@example.com) of the authenticated user who is in the process of adding a
+new album&nbsp;object.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Track</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The “Composers” property holds the names of the
+track’s composers. It is a simple string property. The browser user will simply
+use comma separators between the names of multiple composers.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The “Genre” property holds a genre
+string/value. In the user interface, when creating a new track&nbsp;object, the
+available genres will be shown in an item-selection element.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The “Clerk” property holds the user name (e.g.
+amanda@example.com) of the authenticated user who is in the process of adding a
+new track&nbsp;object.</span></p>
+
+<p class=MsoNormal style='line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Create view models and mappers
+that cover the initial use cases</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In the specifications list above, you saw the
+following:</span></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Enable “add new” use case for Artist and
+     Album objects</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Enable “add new”, use case for the Track
+     object</span></li>
+</ul>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Therefore, you will need view models (and
+mappers) that support these use cases. We suggest that you use the following
+procedure to assemble the “add new” view model classes:</span></p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Write the “…AddForm” class first, by
+     copying the properties from the design model class</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Add more </span><a
+     href="https://scs.senecac.on.ca/~wei.song/int422/lectures/INT422-Lecture3.html"><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif'>data annotations</span></a><span
+     style='font-size:12.0pt;font-family:"Arial",sans-serif'>, as appropriate</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>For genre, add the select list property
+     for the HTML Form item-selection element</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Write the “…Add” class next, it does NOT
+     inherit from another class</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Add data annotations, as appropriate</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>You must refer the screenshots (which can
+     be found in the sections below) of GetOne, GetAll and AddNew use cases for
+     Artist, Album and Track entities when creating these view models</span></li>
+</ol>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Associated data</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>When <b>adding a new <u>artist</u></b>, we will
+not need to configure an associated album.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>When <b>adding a new <u>album</u></b>, we WILL
+need to configure an associated artist. As a starting point, assume that it
+will work the same as it does in the “</span><a
+href="https://scs.senecac.on.ca/~wei.song/int422/code/Week_05.zip"
+target="_blank"><b><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Associations
+Add Edit</span></b></a><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>”
+code example, where <i>a vehicle could be added while working with a
+manufacturer</i>. Here, we will be <span style='background:yellow'>adding an
+album for a known artist</span>. However, we will <u>also allow the browser
+user to select other artists</u>, if any. Therefore, add a string property to
+display the name of&nbsp;the known associated artist, and a multi select list
+property for all&nbsp;artists. Later, in the controller, we will pre-select the
+known artist, when we create the MultiSelectList object.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Similarly, when <b>adding a new <u>track</u></b>,
+we WILL need to configure an associated album. Assume that it will work in a
+way similar to above, where we will be <span style='background:yellow'>adding a
+track for a known album</span>. <u>Do not allow the browser user to select the
+album</u>. Therefore, add properties to the TrackAddForm and TrackAdd view
+model classes&nbsp;that enable you to display information <u>about the
+associated album</u>, and <u>configure its&nbsp;identifier as a hidden HTML
+Forms element</u>.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Other considerations</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>It should be obvious by now that you will also
+need view models for the “get all” and “get one” use cases, because these are
+always needed.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Yes, you will need some view model classes that
+include associated data for <i>display</i> purposes. Carefully plan this step.
+You can use a mix of techniques, including composed properties, or by including
+associated objects or collections. Don’t worry about getting this step perfect
+for the interim progress submission. You can modify these classes before the
+final submission.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Each entity has a “Genre” property. Therefore,
+you will need to support the “get all” use case for the <b>Genre entity</b>
+too. (We will not need to support “get one”, because the destination for the
+“get all” use case will be an item-selection element in the user interface. We
+will not need to support “add”, “edit”, or “delete”, because you will
+programmatically build and load the genre data.)</span></p>
+
+<p class=MsoNormal style='line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif;color:blue'>At this point in time, you will have
+written your design model classes, view model classes, and mappers. Make sure
+the project builds/compiles without errors. Demonstrate this
+partially-completed project in the lab sessions.&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Configure the security settings
+for the app</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>After writing the design model classes and the
+view model classes, you have a pretty good idea about the tasks that could be
+done with the data. Therefore, let’s think about, design, and configure the
+security settings for the app.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The most important task is to identify the
+“role claims” we will need in the app. Then, you can edit the Register() method
+in the account controller to match. We suggest that you will need these role
+claims:</span></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Executive</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Coordinator</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Clerk</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Staff</span></li>
+</ul>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The next step is to register some new user
+accounts. The safest internet top-level domain name to use is “example.com”,
+because it is not processed by the internet’s </span><a
+href="https://en.wikipedia.org/wiki/Domain_Name_System"><span style='font-size:
+12.0pt;font-family:"Arial",sans-serif'>DNS</span></a><span style='font-size:
+12.0pt;font-family:"Arial",sans-serif'> infrastructure. <b>Please use the same
+password for all accounts (for example, Password123!)</b>, so that your teacher
+team can run and test the app with each account.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Role claims can be hierarchical in nature, or
+not. It depends upon the situation.&nbsp;For this app, we will pay attention to
+that.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>For example, a user account for an executive
+(maybe named <b>exec</b>@example.com) should be configured with the <u>Executive</u>,
+<u>Coordinator</u>, and <u>Staff</u> role claims.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>A&nbsp;user account for a coordinator (maybe
+named coord@example.com) should be configured with the Coordinator, Clerk, and
+Staff role claims.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>A user account for a clerk (maybe named
+clerk@example.com) should be configured with the Clerk and Staff role claims.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Finally, a user account for a person who is NOT
+directly involved in the A&amp;R chain (e.g. receptionist, payroll clerk, tech
+support, etc.) should be configured only with the Staff role claim.</span></p>
+
+<p class=MsoNormal style='line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Add methods to the Manager class
+that handle the use cases,&nbsp;and load initial data</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Let’s begin by loading initial data. Real data,
+not crappy data (e.g. we NEVER want to see “aaaa” “1234” etc.).</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>We need initial data for all entities – genre,
+artist, album, and track.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Create one or more methods that load initial
+data for each entity.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>When you are coding the Add() methods for
+artist, album, and track, you will <span style='background:yellow'>need the
+name of the current authenticated user</span> for setting the value of the
+property Executive, Coordinator or Clerk. Therefore – just a suggestion – fetch
+that value into a temporary variable, just to simplify your coding task.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>A special-purpose or temporary throw-away
+controller can be used to call these methods. We suggest that you protect that
+controller/method, so that only the “admin@example.com” user can load the data.
+(If you use a temporary throw-away controller, leave it in your project when
+you submit it, so that it can be inspected and graded.)</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Initial data – genres</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Open up your iTunes app (or any other digital
+music app). Identify ten genres.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Add these ten genres to the data store (and
+save changes).</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Note – When you are adding artists, albums, and
+tracks (below), you must enter a genre. To make your coding task easier, you
+can use simple strings. Make sure that you use the exact same string
+(upper/lower case etc.).</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Initial data – artists</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Identify three&nbsp;of your favourite artists
+in the music business. Try to choose a combination of individual artists and
+duo/group/band artists, so that you can uniquely configure some of the name /
+birth name / birth or start date properties.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>If you need information, Wikipedia is often a
+pretty good source for data about an artist (or album or track).</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Add these three artists to the data store (and
+save changes).</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Initial data – albums</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Select one of your just-added artists from
+above.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>To add an album, you must specify its artist.
+Therefore, fetch the artist object from the data store. For example:</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif;color:#002060'>var</span><span
+style='font-size:16.0pt;font-family:"Arial",sans-serif;color:#002060'> </span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>john&nbsp;=
+ds.Artists.SingleOrDefault(a =&gt; a.Name == &quot;John Legend&quot;);</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:10.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Next, for the artist,&nbsp;identify two of
+their albums.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Add each of these two albums to the data store.
+Notice that an album has an Artists property, which is a collection of artist
+objects. Logically, when adding a new album, the collection is empty (duh), so
+that we do not have to worry about overwriting it and losing data. As a result,
+we can simply create a new artist collection, which has one artist object only,
+which is our selected artist. For example:</span></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0>
+ <tr style='height:56.25pt'>
+  <td style='padding:0in 0in 0in 0in;height:56.25pt'>
+  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+  </td>
+  <td style='padding:0in 0in 0in 0in;height:56.25pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console"'>ds.Albums.Add(<span
+  style='color:#06069C'>new</span><span style='color:#002060'> </span>Album</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console"'>{</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;Artists
+  = <span style='color:#06069C'>new</span> List&lt;Artist&gt; { john },</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;Name
+  = &quot;<span style='color:#721FB1'>Love in the Future</span>&quot;,</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;<span
+  style='color:#00863D'>// etc</span></span><span style='font-size:12.0pt;
+  font-family:"Arial",sans-serif;color:#00B050'>.</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Save changes.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Initial data – tracks</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>For both&nbsp;albums (above), identify five tracks
+on each album.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Add these ten tracks to the data store (and
+save changes).</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Similar to the album-add task (above), you will
+need a reference to the album object as you add each track. Therefore, plan to
+fetch the album object from the data store before you add tracks.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Check your progress</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>If you have correctly-defined your design model
+classes, and correctly done the data loading, the database will exist, and have
+data.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>If you’re careful, you can open the database,
+and check your progress. How?</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>First, in Solution Explorer, select/highlight
+the “Assignment8” project item.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>On the toolbar, choose Show All Files.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Open (reveal) the contents of the App_Data
+folder. It will show “DBCustomStore.mdf”. This is the file that’s used to hold
+the contents of the database.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><img border=0 width=495
+height=377 id="Picture 15" src="INT422-Assignment8_files/image002.png"></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Double-click it, and it will open on the
+left-side “Server Explorer” panel.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Look for the item named “DefaultConnection
+(Assignment8)”. Open (reveal) the contents of the Tables folder.</span></p>
+
+<p class=MsoNormal style='line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='line-height:normal'><img border=0 width=494
+height=624 id="Picture 16" src="INT422-Assignment8_files/image003.png"></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Notice several things:</span></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>There are several tables that begin with
+     “AspNet…” – those hold the ASP.NET Identity security-related data</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>You can see tables for your design model
+     entities – Artists, Albums, Tracks, Genres</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>To support many-to-many associations,
+     there are also “bridge” tables, ArtistAlbums, and TrackAlbums</span></li>
+</ul>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>You can right-click any of these tables, and
+choose “Show Table Data”, to show the data in a grid in the Visual Studio
+editor area.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><img border=0 width=741
+height=162 id="Picture 23" src="INT422-Assignment8_files/image004.png"></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif;color:red'>Very important:</span></b><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> When you’re done
+looking, right-click “DefaultConnection (Assignment8)”, and choose “Close
+connection”. If you do not do this, then some of your future coding and testing
+tasks will fail.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Uh oh – data loading problems</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>If your data did not load correctly, then you
+should remove the data, fix the coding problem, and attempt to load the data
+again.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>How to remove the data?</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Create another method in the Manager class for
+this purpose. (Later, you will call this method from a controller
+action/method.)</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Remove ALL the objects in each entity
+collection. Here’s an example of how you would do this for the track entity
+collection; you would repeat this code for the other entity collections:</span></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='margin-left:.5in'>
+ <tr>
+  <td style='padding:0in 0in 0in 0in'></td>
+  <td style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console";
+  color:#002060'>foreach </span><span style='font-size:12.0pt;font-family:"Lucida Console"'>(<span
+  style='color:#002060'>var</span><span style='color:#00B0F0'> </span>e <span
+  style='color:#002060'>in</span> ds.Tracks)</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console"'>{</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;ds.Entry(e).State
+  = System.Data.Entity.EntityState.Deleted;</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console"'>}</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console"'>ds.SaveChanges();</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Note: There are other ways to remove objects.
+This is the way that your teacher team recommends at this time.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Arg – the database is <i>really</i> messed up –
+I want to delete it and start again</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Maybe your data items are messed up. Maybe the
+design model classes are wrong. Maybe there are just too many little problems,
+and they’re preventing progress.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>You’re thinking “I want to delete the database
+and start fresh”. Here’s how:</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The data context has a database Delete()
+method. Be careful. </span><a
+href="http://quoteinvestigator.com/2015/07/23/great-power/" target="_blank"><i><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>With great power, there
+is great responsibility.</span></i></a></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:18.0pt;font-family:"Segoe UI Symbol",sans-serif;color:#0070C0'>❝</span><a
+href="https://msdn.microsoft.com/en-us/library/system.data.entity.database.delete%28v=vs.113%29.aspx"
+target="_blank"><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>From
+MSDN</span></a><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>:</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>Deletes the database on
+the database server if it exists, otherwise does nothing.</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>Calling this method
+from outside of an initializer will mark the database as having not been
+initialized. This means that if an attempt is made to use the database again
+after it has been deleted, then any initializer set will run again and,
+usually, will try to create the database again automatically.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>We suggest that you add another method to the
+Manager class (which can then be called from a controller action/method). Its
+code:</span></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='margin-left:.5in'>
+ <tr>
+  <td style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;</span></p>
+  </td>
+  <td style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console";
+  color:#002060'>public bool</span><span style='font-size:12.0pt;font-family:
+  "Lucida Console"'> RemoveDatabase()</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console"'>{</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;
+  <span style='color:#002060'>try</span></span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;
+  {</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <span style='color:#00863D'>// Delete database</span></span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <span style='color:#002060'>return</span> ds.Database.Delete();</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;
+  &nbsp;}</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;
+  <span style='color:#002060'>catch</span> (Exception)</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;
+  {</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <span style='color:#002060'>return</span> <span style='color:#002060'>false</span>;</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;
+  }</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console"'>}</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>After the database delete task, run the data
+load task again.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Next, let’s code the methods that support the
+app’s data service tasks:</span></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Genre – get all</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Artist – get all, get one (with detail),
+     add new</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Album – get all, get one (with detail),
+     add new</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Track – get all, get one (with detail),
+     add new </span></li>
+</ul>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Genre – get all</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Easy. Get all, return as a sorted/ordered
+collection of GenreBase objects.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Artist – get all, get one (with detail), add
+new</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The initial goal with “get all” is to simply
+return a sorted/ordered collection of ArtistBase objects.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Maybe later you can modify that, to return
+artist objects that have some associated data, in the form of objects and/or
+composed properties.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The initial goal with “get one” is to return an
+artist object that <b><i>does</i></b> have some associated data. Study the
+associated album entity, and decide what would be good to return, and then make
+it happen.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>For the “add new” use case, treat it like any
+other “add new” situation. Don’t worry about associated data when adding an
+artist. Treat it as the most important object in the Artist-Album-Track interrelationship,
+so an artist object must always be created before we create an album (or track)
+object.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>However, please note that you must configure
+the Executive property&nbsp;(in the added Artist object) with the user name of
+the current security principal (i.e. authenticated user). Otherwise, the
+SaveChanges() method will fail, because an empty Executive property will not
+pass validation.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Album – get all, get one (with detail), add new</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The initial goal with “get all” is to simply
+return a sorted/ordered collection of AlbumBase objects.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Maybe later you can modify that, to return
+album&nbsp;objects that have some associated data, in the form of objects
+and/or composed properties.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The initial goal with “get one” is to return an
+album&nbsp;object that <i>does</i> have some associated data. Study the
+associated album entity, and decide what would be good to return, and then make
+it happen. It’s in the “middle” of two associations (to artist, and to track),
+so seriously consider including data from both.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The&nbsp;“<b>add new</b>” use case will probably
+be the most challenging to handle.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>When adding a new album, we will assume that
+we’re currently working with – and have a reference to – an existing known
+artist object. Therefore, we must have that reference, and handle that data
+configuration task.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>We will also allow other artists to be selected
+in the user interface, and therefore configured in this Manager class method.
+As a result, you will expect to get a collection of int values (artist
+identifiers), each of which must be validated and configured.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Finally, we will allow tracks to be selected in
+the user interface, and therefore configured in this Manager class
+method.&nbsp;As a result, you will expect to get a collection of int values
+(track identifiers), each of which must be validated and configured.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Like the artist entity above,&nbsp;please note
+that you must configure the Coordinator&nbsp;property&nbsp;(in the added
+Album&nbsp;object) with <u>the user name of the current security principal</u>
+(i.e. authenticated user). Otherwise, the SaveChanges() method will fail, because
+an empty Coordinator&nbsp;property will not pass validation.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Here’s a coding plan that you can follow
+for&nbsp;the “add new” album method in the Manager class:</span></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0>
+ <tr>
+  <td style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;</span></p>
+  </td>
+  <td style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+  style='font-family:"Lucida Console";color:#00863D'>// Assume that the name of
+  the incoming AlbumAdd parameter/argument is &quot;newItem&quot;</span></p>
+  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+  style='font-family:"Lucida Console";color:#00863D'>&nbsp;</span></p>
+  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+  style='font-family:"Lucida Console";color:#00863D'>// Validate each of the
+  associated artists:</span></p>
+  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+  style='font-family:"Lucida Console";color:#00863D'>// Create a new empty
+  collection of Artist objects</span></p>
+  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+  style='font-family:"Lucida Console";color:#00863D'>// For each artist ID in
+  newItem.ArtistIds</span></p>
+  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+  style='font-family:"Lucida Console";color:#00863D'>&nbsp;&nbsp; // Find the
+  artist by its ID</span></p>
+  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+  style='font-family:"Lucida Console";color:#00863D'>&nbsp;&nbsp; // If found,
+  add it to the collection of Artist objects</span></p>
+  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+  style='font-family:"Lucida Console";color:#00863D'>&nbsp;</span></p>
+  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+  style='font-family:"Lucida Console";color:#00863D'>// Validate each of the
+  associated tracks:</span></p>
+  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+  style='font-family:"Lucida Console";color:#00863D'>// Create a new empty
+  collection of Track objects</span></p>
+  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+  style='font-family:"Lucida Console";color:#00863D'>// For each artist ID in
+  newItem.ArtistIds</span></p>
+  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+  style='font-family:"Lucida Console";color:#00863D'> &nbsp;&nbsp;// Find the
+  artist by its ID</span></p>
+  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+  style='font-family:"Lucida Console";color:#00863D'>&nbsp; &nbsp;// If found,
+  add it to the collection of Track objects</span></p>
+  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+  style='font-family:"Lucida Console";color:#00863D'>&nbsp;</span></p>
+  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+  style='font-family:"Lucida Console";color:#00863D'>// Continue only if there
+  is at least one associated artist object</span></p>
+  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+  style='font-family:"Lucida Console";color:#00863D'>&nbsp;</span></p>
+  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+  style='font-family:"Lucida Console";color:#00863D'>// Attempt to add the new
+  album</span></p>
+  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+  style='font-family:"Lucida Console";color:#00863D'>&nbsp;</span></p>
+  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+  style='font-family:"Lucida Console";color:#00863D'>// For each associated
+  artist</span></p>
+  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+  style='font-family:"Lucida Console";color:#00863D'>&nbsp;&nbsp; // Add it to
+  the new album's Artists collection</span></p>
+  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+  style='font-family:"Lucida Console";color:#00863D'>&nbsp;</span></p>
+  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+  style='font-family:"Lucida Console";color:#00863D'>// For each associated
+  track</span></p>
+  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+  style='font-family:"Lucida Console";color:#00863D'>&nbsp; &nbsp;// Add it to
+  the new album's Tracks collection</span></p>
+  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+  style='font-family:"Lucida Console";color:#00863D'>&nbsp;</span></p>
+  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+  style='font-family:"Lucida Console";color:#00863D'>// Set the Coordinator
+  user name property</span></p>
+  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+  style='font-family:"Lucida Console";color:#00863D'>&nbsp;</span></p>
+  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+  style='font-family:"Lucida Console";color:#00863D'>// Save changes</span></p>
+  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+  style='font-family:"Lucida Console";color:#00863D'>// Return the new album </span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Track – get all, get one (with detail), add new</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The initial goal with “get all” is to simply
+return a sorted/ordered collection of TrackBase objects.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Maybe later you can modify that, to return
+artist objects that have some associated data, in the form of objects and/or
+composed properties.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The initial goal with “get one” is to return a
+track&nbsp;object that <i>does</i> have some associated data. Study the
+associated album and artist entities, and decide what would be good to return,
+and then make it happen.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The “add new” use case will be much easier than
+album above, but not as easy as artist above.&nbsp;When adding a new track, we
+will assume that we’re currently working with – and have a reference to – an
+existing known album&nbsp;object. Therefore, we must have that reference, and
+handle that data configuration task. Expect to get a single int value (album
+identifier), which must be validated and configured.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Like the artist entity above,&nbsp;please note
+that you must configure the Clerk&nbsp;property&nbsp;(in the added
+Album&nbsp;object) with the user name of the current security principal (i.e.
+authenticated user). Otherwise, the SaveChanges() method will fail, because an
+empty Clerk&nbsp;property will not pass validation. </span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Add the Artist controller,
+implement the use cases, including views</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Add the Artist controller.&nbsp;Protect it so
+that only authenticated users can use its actions/methods.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Get all</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Handling the “get all” use case is familiar,
+and has no surprises.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Here’s what your initial result may look like.
+Click the image to open it full-size in a new tab/window.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><a
+href="https://scs.senecac.on.ca/~wei.song/int422/assignments/images/a8-artist-list-plain.png"><span
+style='color:windowtext;text-decoration:none'><img border=0 width=742
+height=372 id="Picture 1" src="INT422-Assignment8_files/image005.png"></span></a></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The page title needs fixing, and the URL text
+is ugly. Why not rewrite that part of the view to render an HTML &lt;img&gt;
+element? Here’s what it could look like. Click the image to open it full-size
+in a new tab/window.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><a
+href="https://scs.senecac.on.ca/~wei.song/int422/assignments/images/a8-artist-list-better.png"><span
+style='color:windowtext;text-decoration:none'><img border=0 width=743
+height=341 id="Picture 2" src="INT422-Assignment8_files/image006.png"></span></a></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Get one</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Handling the “get one” use case is familiar,
+and has no surprises.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Here’s what your initial result may look like.
+Click the image to open it full-size in a new tab/window.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><a
+href="https://scs.senecac.on.ca/~wei.song/int422/assignments/images/a8-artist-detail-plain.png"><span
+style='color:windowtext;text-decoration:none'><img border=0 width=743
+height=310 id="Picture 3" src="INT422-Assignment8_files/image007.png"></span></a></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The page title needs fixing, and the URL text
+is ugly. As above, why not rewrite that part of the view to render an HTML
+&lt;img&gt; element? Here’s what it could look like. Click the image to open it
+full-size in a new tab/window.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><a
+href="https://scs.senecac.on.ca/~wei.song/int422/assignments/images/a8-artist-detail-better.png"><span
+style='color:windowtext;text-decoration:none'><img border=0 width=744
+height=341 id="Picture 4" src="INT422-Assignment8_files/image008.png"></span></a></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Add new</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Handling the “add new” use case is familiar,
+and has no surprises. Just a few things to consider.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>First, as noted earlier, the “add new” pair of
+methods must be protected with an authorize attribute which allows <i>only</i>
+those with the Executive role claim to run the code.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Next, in the GET method, the “…AddForm” object
+must be created, and the select list object configured, before the object is
+passed to the view.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In the view, you must add the code to render an
+single-selection item selection element (e.g. dropdown list, or radio button
+group). And fix the title etc.</span></p>
+<a id=newartists></a>
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Here’s what your initial result may look like.
+Click the image to open it full-size in a new tab/window.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><a
+href="https://scs.senecac.on.ca/~wei.song/int422/assignments/images/a8-artist-add-better.png"><span
+style='color:windowtext;text-decoration:none'><img border=0 width=742
+height=371 id="Picture 5" src="INT422-Assignment8_files/image009.png"></span></a></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In the POST method, handle the user-submitted
+data as you have done before.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>After successfully adding the new artist
+object, redirect to the details view for the new artist object.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Add the Album&nbsp;controller,
+implement the use cases, including views</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Add the Artist controller.&nbsp;Protect it so
+that only authenticated users can use its actions/methods.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Get all</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Handling the “get all” use case is familiar,
+and has no surprises.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Here’s what your initial result may look like.
+Click the image to open it full-size in a new tab/window.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><a
+href="https://scs.senecac.on.ca/~wei.song/int422/assignments/images/a8-album-list-plain.png"><span
+style='color:windowtext;text-decoration:none'><img border=0 width=743
+height=217 id="Picture 7" src="INT422-Assignment8_files/image010.png"></span></a></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The page title needs fixing, and the URL text
+is ugly. As above, why not rewrite that part of the view to render an HTML
+&lt;img&gt; element? Here’s what it could look like. Click the image to open it
+full-size in a new tab/window. Click the image to open it full-size in a new
+tab/window.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><a
+href="https://scs.senecac.on.ca/~wei.song/int422/assignments/images/a8-album-list-better.png"><span
+style='color:windowtext;text-decoration:none'><img border=0 width=743
+height=372 id="Picture 8" src="INT422-Assignment8_files/image011.png"></span></a></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Get one</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Handling the “get one” use case is familiar,
+and has no surprises.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In the view, fix the title etc. Also, use an
+HTML &lt;img&gt; element to render the album image / cover art. Here’s what
+your initial result may look like. Click the image to open it full-size in a
+new tab/window.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><a
+href="https://scs.senecac.on.ca/~wei.song/int422/assignments/images/a8-album-detail-better.png"><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif;color:windowtext;
+text-decoration:none'><img border=0 width=744 height=403 id="Picture 9"
+src="INT422-Assignment8_files/image012.png"></span></a><span style='font-size:
+12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>It’s not perfect. Why? Well, do you see the
+artist’s name? No. We could fix that later.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Add new – GET method</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>As noted above, this will be the most
+challenging to implement.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>When adding a new album, we WILL need to
+configure an associated artist. As a starting point, assume that it will work
+the same as it does in the “</span><a
+href="https://scs.senecac.on.ca/~wei.song/int422/code/Week_05.zip"
+target="_blank"><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Associations
+Add Edit</span></a><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>”
+code example, wherea<i> vehicle could be added while working with a
+manufacturer</i>.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In that code example, you learned that the code
+to add a new <i>vehicle</i> was in the <i>manufacturer</i> controller.</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:18.0pt;font-family:"Segoe UI Symbol",sans-serif;color:#0070C0'>❝</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>Note: It would probably
+be a good idea to have that code example open, so that you could remind
+yourself about the design technique and coding style.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>We will follow that example here. So, switch
+over to the <i>artists</i>&nbsp;controller. We will <span style='background:
+yellow'>create the “add new” album method pair in the <i>artists</i> controller</span>.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>As noted earlier, <u>the “add new” album pair
+of methods</u> must be protected with an authorize attribute which allows <i>only</i>
+those with the </span><span style='font-size:12.0pt;font-family:"Arial Rounded MT Bold",sans-serif'>Coordinator</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;role claim to run
+the code.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Create an </span><span style='font-size:12.0pt;
+font-family:"Lucida Console"'>AddAlbum(int? id)</span><span style='font-size:
+12.0pt;font-family:"Arial",sans-serif'> method. Use attribute routing; the
+route should be:<br>
+</span><b><span style='font-size:12.0pt;font-family:"Lucida Console"'>artist/{id}/addalbum</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Next, a quick detour: The project template
+unfortunately does not include the command that activates attribute routing.
+You must add it. How? Open the <i>App_Start &gt; RouteConfig.cs</i> source code
+file. In the RegisterRoutes() method, add this statement:</span></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='margin-left:.5in'>
+ <tr>
+  <td width=15 style='width:11.2pt;padding:0in 0in 0in 0in'></td>
+  <td style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console"'>routes.MapMvcAttributeRoutes();</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Next, write code to get/fetch the associated
+artist object, based on the “id” method parameter.&nbsp;In code, if the object
+exists, there are several tasks to complete.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><u><span style='font-size:
+12.0pt;font-family:"Arial",sans-serif'>First</span></u></b><u><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>:</span></u><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;Create a new
+AlbumAddForm.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><u><span style='font-size:
+12.0pt;font-family:"Arial",sans-serif'>Second</span></u></b><u><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>:</span></u><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> Configure the artist
+name. Your AlbumAddForm should have a string property for that.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><u><span style='font-size:
+12.0pt;font-family:"Arial",sans-serif'>Third</span></u></b><u><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>:</span></u><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> Configure the select
+list object for the genres.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><u><span style='font-size:
+12.0pt;font-family:"Arial",sans-serif'>Fourth</span></u></b><u><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>:</span></u><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> Configure the multi
+select list object for the artists. Remember, we are adding an album for the
+current known artist. However, we will allow the user to select other artists
+too.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Therefore, we will configure the multi select
+list object with the current known artist identifier, as the selected value.
+The multi select list object constructor takes a <i>collection</i> of selected
+values, so you’ll have to package the current known artist identifier inside a
+new collection.</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:18.0pt;font-family:"Segoe UI Symbol",sans-serif;color:#0070C0'>❝</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>Hint: Look at any of
+the code examples we have done, and the code that you have written, to remind
+yourself about the suggested way to code/configure a multi select list object.
+For example, look at </span><a
+href="https://github.com/peteratseneca/bti420winter2016/blob/master/Week_06/AssocManyToMany/AssocManyToMany/Controllers/MatchesController.cs"
+target="_blank"><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>this
+controller</span></a><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>,
+starting at line 75.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><u><span style='font-size:
+12.0pt;font-family:"Arial",sans-serif'>Fifth</span></u></b><u><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>:</span></u><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> Configure the multi
+select list object for the tracks.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Add new – view</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Generate the view.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Run the web app, and then attempt to display
+this new view.&nbsp;Here’s what your initial result may look like. Click the
+image to open it full-size in a new tab/window.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><a
+href="https://scs.senecac.on.ca/~wei.song/int422/assignments/images/a8-album-add-plain.png"><span
+style='color:windowtext;text-decoration:none'><img border=0 width=672
+height=308 id="Picture 11" src="INT422-Assignment8_files/image013.png"></span></a></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>To allow a browser user to navigate to the
+view, we suggest&nbsp;adding a hyperlink to the “Artist detail” view, which
+will point to this new&nbsp;view. This makes sense, because we are starting at
+a specific known artist, and adding a new album for that artist.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Another fix-up, on the list-of-albums view:
+Comment out or remove&nbsp;the “Create new album” hyperlink.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Now, look at the generated “add new” album
+view.&nbsp;It does not have any of the select list items. Or a title. So, fix
+these problems:</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Change the title so that it’s useful.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Add the code to render the genres dropdown
+list.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Add the mult select list code for the artists
+check box group. Add another for the tracks check box group.</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:18.0pt;font-family:"Segoe UI Symbol",sans-serif;color:#0070C0'>❝</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>Hint: </span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>Use the Bootstrap <i>row</i>
+class to position the&nbsp;check box groups beside each other.</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>Offset the left-side
+group by 2 (which is the standard width of the form label area), and the
+right-side group by 1 (to create some space between). If you want to shade
+their backgrounds, use the <i>well</i> class.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>You may end up with a result that looks like
+this. Click the image to open it full-size in a new tab/window.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><a
+href="https://scs.senecac.on.ca/~wei.song/int422/assignments/images/a8-album-add-better.png"><span
+style='color:windowtext;text-decoration:none'><img border=0 width=742
+height=557 id="Picture 12" src="INT422-Assignment8_files/image014.png"></span></a></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Add new – POST method</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>This method will be similar to almost all other
+“add new” POST methods that you have written.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>After model state validation, it will call a
+method in the manager object, and pass on the user-submitted data.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>After a successful result, it will redirect to
+the details view for the new album.</span></p>
+
+<p class=MsoNormal style='line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Add the Track&nbsp;controller,
+implement the use cases, including views</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Add the Track&nbsp;controller.&nbsp;Protect it
+so that only authenticated users can use its actions/methods.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Get all</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Handling the “get all” use case is familiar,
+and has no surprises.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Here’s what your initial result may look like.
+Click the image to open it full-size in a new tab/window.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><a
+href="https://scs.senecac.on.ca/~wei.song/int422/assignments/images/a8-track-list-plain.png"><span
+style='color:windowtext;text-decoration:none'><img border=0 width=743
+height=403 id="Picture 13" src="INT422-Assignment8_files/image015.png"></span></a></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>As is typical, there are a few things wrong
+with this list. We can fix some easily. So, fix the title, and remove (comment
+out) the “Create New” hyperlink. (<u>The “add new” track feature will be linked
+from an <i>album details</i> page.</u>) The AlbumId is useless on this “get
+all” list, so remove that data.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Get one</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Handling the “get one” use case is familiar,
+and has no surprises.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Here’s what your initial result may look like.
+Click the image to open it full-size in a new tab/window.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><a
+href="https://scs.senecac.on.ca/~wei.song/int422/assignments/images/a8-track-detail-plain.png"><span
+style='color:windowtext;text-decoration:none'><img border=0 width=742
+height=278 id="Picture 6" src="INT422-Assignment8_files/image016.png"></span></a></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The title is ugly, so it must be fixed. Also,
+it would be nice for the tracks to include some album name information. For
+example, see below.&nbsp;&nbsp;Click the image to open it full-size in a new
+tab/window.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><a
+href="https://scs.senecac.on.ca/~wei.song/int422/assignments/images/a8-track-detail-better.png"><span
+style='color:windowtext;text-decoration:none'><img border=0 width=742
+height=278 id="Picture 10" src="INT422-Assignment8_files/image017.png"></span></a></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Here’s how to make that happen.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>First, in the TrackWithDetail view model class,
+add a collection-of-strings property (maybe named AlbumNames), which will hold
+the names of the albums with this track.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Next, modify the Manager class “get one” track
+method.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>You have learned to code it in this general
+way:</span></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0>
+ <tr style='height:56.25pt'>
+  <td style='padding:0in 0in 0in 0in;height:56.25pt'>
+  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Lucida Console";color:#0808CE'>var</span><span
+  style='font-size:16.0pt;font-family:"Lucida Console";color:#06069C'> </span><span
+  style='font-size:12.0pt;font-family:"Lucida Console"'>o =
+  ds.Tracks.Include(&quot;<span style='color:#721FB1'>Albums.Artists</span>&quot;).SingleOrDefault(t
+  =&gt; t.Id == id);</span></p>
+  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Lucida Console";color:#0808CE'>return</span><span
+  style='font-size:16.0pt;font-family:"Lucida Console"'> </span><span
+  style='font-size:12.0pt;font-family:"Lucida Console"'>(o == <span
+  style='color:#0808CE'>null</span>) ? <span style='color:#0808CE'>null</span></span><span
+  style='font-size:16.0pt;font-family:"Lucida Console"'> </span><span
+  style='font-size:12.0pt;font-family:"Lucida Console"'>: mapper.Map&lt;Track, TrackWithDetails&gt;(o);</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>However, with this code, we do not get the
+opportunity to set the value of the AlbumNames collection. So, let’s rewrite
+the method:</span></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='margin-left:.5in'>
+ <tr>
+  <td style='padding:0in 0in 0in 0in'></td>
+  <td style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console";
+  color:#06069C'>var</span><span style='font-size:12.0pt;font-family:"Lucida Console";
+  color:#00B0F0'> </span><span style='font-size:12.0pt;font-family:"Lucida Console"'>o
+  = ds.Tracks.Include(&quot;<span style='color:#721FB1'>Albums.Artists</span>&quot;).SingleOrDefault(t
+  =&gt; t.Id == id);</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console"'>if (o == <span
+  style='color:#06069C'>null</span>)</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console"'>{</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;
+  <span style='color:#06069C'>return</span> <span style='color:#06069C'>null</span>;</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console"'>}</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console";
+  color:#06069C'>else</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console"'>{</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;
+  <span style='color:#00863D'>// Create the result collection</span></span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;
+  <span style='color:#06069C'>var</span> result = mapper.Map&lt;Track, TrackWithDetails&gt;(o);</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;
+  <span style='color:#00863D'>// Fill in the album names</span></span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;
+  result.AlbumNames = o.Albums.Select(a =&gt; a.Name);</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;
+  <span style='color:#06069C'>return</span> result;</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console"'>}</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Now, in the view, you will have a collection of
+strings in the AlbumNames property, which you can render in a foreach loop or
+whatever.</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:18.0pt;font-family:"Segoe UI Symbol",sans-serif;color:#0070C0'>❝</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>Note: Remember back in
+the <i>album details</i> section, where we stated that it would be nice to show
+the album artist(s) with the album details? You could fix that now, if you
+wish, using this same procedure.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Add new – GET method</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>When adding a new track, we WILL need to
+configure an associated album. As a starting point, assume that it will work
+the same as it did above (add an album for an artist), and also as it does in
+the “</span><a
+href="https://scs.senecac.on.ca/~wei.song/int422/code/Week_05.zip"
+target="_blank"><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Associations
+Add Edit</span></a><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>”
+code example, where<i>as vehicle could be added while working with a
+manufacturer</i>.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>We will follow the same pattern. Switch over to
+the <i>albums</i>&nbsp;controller. We will create the “add new”
+track&nbsp;method pair in <i>that</i> controller.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>As noted earlier, the “add new” track&nbsp;pair
+of methods must be protected with an authorize attribute which allows <i>only</i>
+those with the Clerk role claim to run the code.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Create an </span><span style='font-size:12.0pt;
+font-family:"Lucida Console"'>AddTrack(int? id)</span><span style='font-size:
+12.0pt;font-family:"Arial",sans-serif'> method. Use attribute routing; the
+route should be:<br>
+</span><b><span style='font-size:12.0pt;font-family:"Lucida Console"'>album/{id}/addtrack</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Next, write code to get/fetch the associated
+album&nbsp;object, based on the “id” method parameter.&nbsp;In code, if the
+object exists, there are several tasks to complete.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><u><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>First:</span></u><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;Create a new TrackAddForm.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><u><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Second:</span></u><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'> Configure the album&nbsp;name. Your TrackAddForm
+should have a string property for that.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><u><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Third:</span></u><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'> Configure the album identifier. Your
+TrackAddForm should have an int property for that.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><u><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Fourth:</span></u><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'> Configure the select list object for the
+genres.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Add new – view</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Generate the view.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Run the web app, and then attempt to display
+this new view.&nbsp;Here’s what your initial result may look like. Click the
+image to open it full-size in a new tab/window.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><a
+href="https://scs.senecac.on.ca/~wei.song/int422/assignments/images/a8-track-add-plain.png"><span
+style='color:windowtext;text-decoration:none'><img border=0 width=742
+height=341 id="Picture 40" src="INT422-Assignment8_files/image018.png"></span></a></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>To allow a browser user to navigate to the
+view, we suggest&nbsp;adding a hyperlink to the “Album&nbsp;detail” view, which
+will point to this new&nbsp;view. This makes sense, because we are starting at
+a specific known album, and adding a new track&nbsp;for that album.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Another fix-up, on the list-of-tracks view:
+Comment out or remove&nbsp;the “Create new track” hyperlink.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Now, look at the generated “add new”
+track&nbsp;view.&nbsp;It does not have the item-selection element. Or a title.
+It also displays data in editable fields. So, fix these problems:</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Change the title so that it’s useful.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Add the code to render the genres dropdown
+list.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>We need the album identifier, but we must not
+display it. Therefore, inside the HTML Form code in the view source code file,
+add code to keep it around as an HTML input field that’s hidden.</span></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0>
+ <tr>
+  <td style='padding:0in 0in 0in 0in'></td>
+  <td style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Arial",sans-serif'>@Html.Hidden(&quot;AlbumId&quot;,
+  Model.AlbumId)</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>You may end up with a result that looks like
+this. Click the image to open it full-size in a new tab/window.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><a
+href="https://scs.senecac.on.ca/~wei.song/int422/assignments/images/a8-track-add-better.png"><span
+style='color:windowtext;text-decoration:none'><img border=0 width=742
+height=310 id="Picture 41" src="INT422-Assignment8_files/image019.png"></span></a></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Add new – POST method</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>This method will be similar to almost all other
+“add new” POST methods that you have written.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>After model state validation, it will call a
+method in the manager object, and pass on the user-submitted data.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>After a successful result, it will redirect to
+the details view for the new track.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Optional – solving a problem with
+“add new” album</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>You may have noticed that the “add new” album
+task will display ALL tracks in the data store.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>That does not make sense, because the “add new”
+album task is always done for a specific artist. We should display only the
+artist’s tracks.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>We can fix this by writing one more method in
+the Manager class. It will be called when you create/configure the multi select
+list in the albums controller. Here’s the code:</span></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='margin-left:.5in'>
+ <tr>
+  <td style='padding:0in 0in 0in 0in'></td>
+  <td style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console";
+  color:#06069C'>public </span><span style='font-size:12.0pt;font-family:"Lucida Console"'>IEnumerable&lt;TrackBase&gt;
+  TrackGetAllByArtistId(<span style='color:#00B050'>int</span> id)</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console"'>{</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;
+  &nbsp;<span style='color:#00863D'>// Fetch the artist</span></span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;
+  <span style='color:#06069C'>var</span> o = ds.Artists.Include(&quot;<span
+  style='color:#721FB1'>Albums.Tracks</span>&quot;).SingleOrDefault(a =&gt; a.Id
+  == id);</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;
+  <span style='color:#00863D'>// Continue?</span></span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;
+  if (o == <span style='color:#06069C'>null</span>) { <span style='color:#06069C'>return</span>
+  <span style='color:#06069C'>null</span>; }</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;
+  <span style='color:#00863D'>// Create a collection to hold the results</span></span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;
+  &nbsp;&nbsp; <span style='color:#06069C'>var</span> c = <span
+  style='color:#06069C'>new</span> List&lt;Track&gt;();</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;
+  &nbsp;&nbsp;<span style='color:#00863D'>// Go through each album, and get the
+  tracks</span></span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;
+  <span style='color:#06069C'>foreach</span> (<span style='color:#06069C'>var</span>
+  album <span style='color:#06069C'>in</span> o.Albums)</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;
+  {</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  c.AddRange(album.Tracks);</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;
+  }</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;
+  <span style='color:#00863D'>// Remove duplicates</span></span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;
+  c = c.Distinct().ToList();</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;
+  <span style='color:#06069C'>return</span> mapper.Map&lt;
+  IEnumerable&lt;Track&gt;, IEnumerable &lt; TrackBase &gt; &gt;(c.OrderBy(t
+  =&gt; t.Name));</span></p>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:12.0pt;font-family:"Lucida Console"'>}</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Publish to Azure</span></b></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:105%;font-family:
+"Arial",sans-serif'>Follow the guidance in this document to deploy/publish your
+web app to Azure:</span></p>
+
+<p class=MsoNormal><a
+href="https://scs.senecac.on.ca/~wei.song/int422/assignments/INT422-Assignment7.html"><span
+style='font-size:12.0pt;line-height:105%;font-family:"Arial",sans-serif'>https://scs.senecac.on.ca/~wei.song/int422/assignments/INT422-Assignment7.html</span></a></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:105%;font-family:
+"Arial",sans-serif'>Please note that you may have to create a new <u>database
+server</u>. And you need to create a new <u>SQL Database. </u></span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>You may need to delete the items that is longer
+needed For example, if you have your assignment 7 marked already, you can
+remove the web app server, database server and database used for assignment 7
+on Azure.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Suggested names, assuming that your Microsoft
+Account name uses the recommended format “wsong18-wa2017”:</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:105%;font-family:
+"Arial",sans-serif'>Web app: <span style='color:red'>wsong18-wa2018<u>a8</u></span></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:105%;font-family:
+"Arial",sans-serif'>Database server: <span style='color:red'>wsong18-ds2018<u>a8</u></span></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:105%;font-family:
+"Arial",sans-serif'>Database: <u><span style='color:red'>Assign8</span></u><span
+style='color:red'>Store (or <u>A8</u>Store)</span></span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Testing your work</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>While designing and coding your web app, use
+the Visual Studio debugger to test your algorithms, and inspect the data that
+you are working with.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In a browser, test your work, by doing tasks
+that fulfill the use cases in the specifications.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Reminder about academic honesty</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>You must comply with the College’s academic
+honesty policy. Although you may interact and collaborate with others,&nbsp;<i>you
+must submit your own work</i>.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Important note</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif;color:black'>You MUST use the provided “Web app
+project <span style='background:yellow'>v2”  project template</span> and <span
+style='background:yellow'>AutoMapper instance API</span> for your assignment.
+Failure to do so will result in a huge penalty (failing grade) for the
+assignment.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Submitting your work</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Here’s how to submit your work, before the due
+date and time:</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>1. Locate the folder that holds your
+solution&nbsp;files. In Solution Explorer, right-click the “Solution” item, and
+choose “Open Folder in File Explorer”.&nbsp;It has three &nbsp;(or more) items:
+a Visual Studio Solution file, a folder that has your project’s source code, and
+a “packages” folder.&nbsp;Go UP one level.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>2. Make a copy of the folder. This is the
+version&nbsp;that you will be uploading.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>3. Remove the “<b>packages</b>” folder from the
+copied folder; also, remove the “<b>bin</b>” and “<b>obj</b>” folders.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>4. Compress/zip the copied folder. The zip file
+SHOULD be about 2MB or less in size. If it isn’t, you haven’t followed the
+instructions properly.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>5. Login to My.Seneca/Blackboard. Open the Web
+Programming on Windows&nbsp;course area. Click the “Assignments” link on the
+left-side navigator. Follow the link for this lab. Submit/upload your zip file.
+The page will accept three submissions, so if you upload, then decide to fix
+something and upload again, you can do so.</span></p>
+
+<p class=MsoNormal><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>

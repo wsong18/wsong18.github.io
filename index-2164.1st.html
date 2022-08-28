@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Wei Song - School of ICT</title>
+    <meta name="viewport" content="width=1000, initial-scale=1.0, maximum-scale=1.0">
+
+    <!-- Loading Bootstrap -->
+    <link href="Flat-UI-master/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Loading Flat UI -->
+    <link href="Flat-UI-master/css/flat-ui.css" rel="stylesheet">
+    <link href="Flat-UI-master/css/demo.css" rel="stylesheet">
+    <link href="Flat-UI-master/css/mystyle.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="Flat-UI-master/js/html5shiv.js"></script>
+      <script src="Flat-UI-master/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body onload="init('main');">
+    <div class="container">
+      
+      <a id="top"></a> 	
+      <div class="page-header">
+        <h3>Wei Song</h3>
+		<p>School of Information & Communications Technology -
+		  <a href="http://www.senecacollege.ca/"><img src=Flat-UI-master//images/seneca_logo.png alt="Seneca College"/></a>@York Campus</p>
+      </div> <!-- /page-header -->	  
+	  
+      <div class="row demo-row">
+          <nav class="navbar navbar-inverse navbar-embossed" role="navigation">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
+                <span class="sr-only">Toggle navigation</span>
+              </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbar-collapse-01">
+              <ul class="nav navbar-nav navbar-left">           
+                <li><a href="#top">Home</a></li>
+                <li><a href="#timetable">Timetable</a></li>
+                <li><a href="#standards">Standards</a></li>
+				<li><a href="int422/int422.html">INT422<span class="navbar-unread">1</span></a></li>
+				<li><a href="https://online.ict.senecacollege.ca">JAC444<span class="navbar-unread">1</span></a></li>							
+				<li class="dropdown">
+				  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Past Courses<b class="caret"></b></a>
+				  <span class="dropdown-arrow"></span>
+				  <ul class="dropdown-menu">
+					<li><a href="bti220/bti220.html">BTI220</a></li>
+					<li><a href="bti420/bti420.html">BTI420</a></li>
+					<li><a href="https://online.ict.senecacollege.ca/dashboard">DBJ565</a></li>
+					<li><a href="https://online.ict.senecacollege.ca/">DPS904</a></li>
+					<li><a href="jac444/jac444.html">CJV805</a></li>
+					<li><a href="ibc233/ibc233.html">IBC233</a></li>
+					<li><a href="int222/int222.html">INT222</a></li>
+					<li><a href="ios110/ios110.html">IOS110</a></li>
+					
+				  </ul>
+				</li>
+
+               </ul>
+            </div><!-- /.navbar-collapse -->
+          </nav><!-- /navbar -->	
+      </div> <!-- /row -->	
+	
+      
+      <div class="demo-row typography-row">
+        <div class="demo-content">
+	  <h3>Welcome...</h3>
+	  <br>
+	  <p>I'll be teaching <a href="https://online.ict.senecacollege.ca">JAC444</a> (1<sup>st</sup>half),
+	     <a href="int222/int222.html">INT222</a> (2<sup>nd</sup>half), and
+	     <a href="int422/int422.html">INT422</a>
+	     in the Summer semester of 2016, please click the subject above to go to the respective course page.</p>
+	  <p>This site is intended to provide my students with basic information about my schedule and my class
+	     standards as well as the materials of the subjects which I teach. </p>
+	  <br><br><br>
+	</div><!-- /demo-content -->
+      </div><!-- /demo-row -->
+ 
+      <a id="contact"></a> 
+      <div class="demo-row typography-row">
+        <div class="demo-content">
+	  <h3>
+	    <img src="Flat-UI-master/images/icons/svg/mail.svg" alt="">&nbsp;&nbsp;
+	    Contact Me&nbsp;&nbsp;
+	  </h3>
+	  <br>
+	  <p>Email: <a href="mailto:wei.song@senecacollege.ca">wei.song@senecacollege.ca</a></p>
+	  <p>Office: TEL 2099</p>
+	  <p>Phone: (416) 491-5050 Ext 33741</p>
+	  <br><br><br>
+	</div><!-- /demo-content -->
+      </div><!-- /demo-row --> 
+ 
+      <a id="timetable"></a> 
+      <div class="demo-row typography-row">
+        <div class="demo-content">
+	  <h3>
+	    <canvas id="calendarCanvas" width="100" height="100">
+	      <img src="Flat-UI-master/images/icons/svg/calendar.svg" alt="Calendar">
+	    </canvas>&nbsp;&nbsp;
+	    My Timetable - Summer 2016&nbsp;&nbsp;
+	    <a href="#top" class="back">^</a>
+	  </h3>
+	    <br>
+	    <table class="table table-hover">
+	      <thead>
+			<tr id=row0>
+			  <th class=center>Period</th>
+			  <th>Time</th>
+			  <th>Monday</th>
+			  <th>Tuesday</th>
+			  <th>Wednesday</th>
+			  <th>Thursday</th>
+			  <th>Friday</th>
+			</tr>
+		  </thead>
+		  <tfoot>
+			<tr id=row11>
+			  <th class=center>Period</th>
+			  <th>Time</th>
+			  <th>Monday</th>
+			  <th>Tuesday</th>
+			  <th>Wednesday</th>
+			  <th>Thursday</th>
+			  <th>Friday</th>
+			</tr>
+		  </tfoot>
+		  <tbody>
+			<tr id=row1>
+			  <th class=center>1</th>
+			  <td>8:00 am - 8:50 am</td>
+			  <td>&nbsp;</td>
+			  <td>&nbsp;</td>
+			  <td>&nbsp;</td>
+			  <td>&nbsp;</td>
+			  <td>&nbsp;</td>
+			</tr>
+			<tr id=row2>
+			  <th class=center>2</th>
+			  <td>8:55 am - 9:45 am</td>
+			  <td>&nbsp;</td>
+			  <td>&nbsp;</td>
+			  <td>&nbsp;</td>
+			  <td>&nbsp;</td>
+			  <td>&nbsp;</td>
+			</tr>		
+			<tr id=row3>
+			  <th class=center>3</th>
+			  <td>9:50 am - 10:40am</td>
+			  <td>&nbsp;</td>
+			  <td>&nbsp;</td>
+			  <td>JAC444 - SBB<br>T2107</td>
+			  <td>&nbsp;</td>
+			  <td>&nbsp;</td>
+			</tr>
+			<tr id=row4>
+			  <th class=center>4</th>
+			  <td>10:45am - 11:35am</td>
+			  <td>&nbsp;</td>
+			  <td>&nbsp;</td>
+			  <td>JAC444 - SBB<br>T2107</td>
+			  <td>&nbsp;</td>
+			  <td>&nbsp;</td>	  
+			</tr>
+			<tr id=row5>
+			  <th class=center>5</th>
+			  <td>11:40am - 12:30pm</td>
+			  <td>&nbsp;</td>
+			  <td>&nbsp;</td>
+			  <td>Student Help<br>(by appointment)</td>
+			  <td>&nbsp;</td>
+			  <td>INT422 - SAA<br>T3074</td>
+			  
+			</tr>
+			<tr id=row6>
+			  <th class=center>6</th>
+			  <td>12:30pm - 1:25 pm</td>
+			  <td>&nbsp;</td>
+			  <td>&nbsp;</td>
+			  <td>&nbsp;</td>
+			  <td>&nbsp;</td>
+			  <td>INT422 - SAA<br>T3074</td>
+			</tr>
+			<tr id=row7>
+			  <th class=center>7</th>
+			  <td>1:30 pm - 2:20 pm</td>
+			  <td>&nbsp;</td>
+			  <td>&nbsp;</td>
+			  <td>INT422 - SAA<br>T4044</td>
+			  <td>&nbsp;</td>
+			  <td>Student Help<br>(by appointment)</td>
+			</tr>
+			<tr id=row8>
+			  <th class=center>8</th>
+			  <td>2:25 pm - 3:15 pm</td>
+			  <td>&nbsp;</td>
+			  <td>&nbsp;</td>
+			  <td>INT422 - SAA<br>T4044</td>
+			  <td>&nbsp;</td>
+			  <td>&nbsp;</td>
+			</tr>
+			<tr id=row9>
+			  <th class=center>9</th>
+			  <td>3:20 pm - 4:10 pm</td>
+			  <td>&nbsp;</td>
+			  <td>&nbsp;</td>
+			  <td>JAC444 - SAA<br>T2107</td>
+			  <td>&nbsp;</td>
+			  <td>&nbsp;</td>
+			</tr>
+			<tr id=row10>
+			  <th class=center>10</th>
+			  <td>4:15 pm - 5:05 pm</td>
+			  <td>&nbsp;</td>
+			  <td>&nbsp;</td>
+			  <td>JAC444 - SAA<br>T2107</td>
+			  <td>&nbsp;</td>
+			  <td>&nbsp;</td>
+			</tr>
+	      </tbody>
+	    </table>
+	    <br><br><br>
+	</div><!-- /demo-content -->
+      </div><!-- /demo-row -->
+      
+      <a id="standards"></a>
+      <div class="demo-row typography-row">
+        <div class="demo-content">
+	  <h3>
+	    <img src="Flat-UI-master/images/icons/svg/book.svg" alt="">&nbsp;&nbsp;
+	    General Class Standards&nbsp;&nbsp;
+	    <a href="#top" class="back">^</a>
+	  </h3>
+	  <br>
+	  <p>For course-specific policies or topics please refer also to the appropriate section for the course concerned.</p>
+	  <p>For Seneca College Information Technology Acceptable Use Policy please go to the link at
+	    <a href="https://scs.senecac.on.ca/page/computer-studies-academic-procedure">
+	      https://scs.senecac.on.ca/page/computer-studies-academic-procedure</a> </p>
+	  <br>
+	</div><!-- /demo-content -->
+      </div><!-- /demo-row -->
+      
+      <div class="row">
+	
+        <div class="col-sm-4">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Office Hours</h3>
+            </div>
+            <div class="panel-body">
+              <p>I am available for help during student help hours in class rooms, open lab or my office.</p>
+	      <p>I may be available outside of my office hours (Student Help time), please e-mail me to schedule an appointment in advance.</p>
+            </div>
+          </div><!-- / panel -->
+
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Attendance</h3>
+            </div>
+            <div class="panel-body">
+              <p>Regular attendance in classes is important. It provides opportunities for seeing techniques and program code developed and for asking questions which would otherwise be missed. In addition, lecture-specific material may be included on tests, quizzes, or assignments. If any class is missed, it is your (the student's) responsibility to acquire the notes from a fellow classmate. Failing to attend a class which involves an evaluation of some kind (i.e. quiz, test, etc.) will result in a mark of 0 for that evaluation unless a legitimate reason (which must include proper validation) is provided. If a valid reason is given, the missed evaluation will be given the averaged score of other subsequent evaluation(s).</p>
+            </div>
+          </div>
+ 
+        </div><!-- /.col-sm-4 -->	
+		
+        <div class="col-sm-4">
+	  <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Email Standards</h3>
+            </div>
+            <div class="panel-body">
+              <p>All email must be sent using your Seneca email address and must contain the course code and section letter in the subject line. e.g. using "INT222A" in the subject line.</p>
+              <p>Failure to do so may result in your message being miss-filed and therefore ignored.</p>
+	    </div>
+          </div><!-- / panel -->
+	  
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Classroom Behaviour</h3>
+            </div>
+            <div class="panel-body">
+              <p>To ensure good learning environment please:</p>
+	      <ul>
+		<li>be on time for class </li>
+		<li>respect other students</li>
+		<li>turn your cell phone off during class</li>
+		<li>if you arrive late, or if you need to leave early, please do so quietly.</li>
+		<li>do feel free to ask questions relating to material covered </li>
+		<li>do actively involve yourself in interactive sessions in class </li>
+		<li>do not have private conversations with other students or engage in any behaviour that disrupts other students during class time</li>
+              </ul>
+	    </div>
+	    <br>
+          </div><!-- / panel -->	  	  
+        </div><!-- /.col-sm-4 -->
+	
+
+        <div class="col-sm-4">
+	  
+	  <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Academic Honesty</h3>
+            </div>
+            <div class="panel-body">
+              <p>It is expected that everyone proceeds in an honest manner with regard to all aspects of academics at Seneca. Students are to submit their work with integrity. The value of your own work is held very highly at Seneca. </p>
+	      <ul>
+		<li>When submitting assignments, students must submit a signed statement that the work being submitted is their own. See http://cs.senecac.on.ca/bullets/cheating.html.</li>
+		<li>Cheating or plagiarism is an extremely serious academic offence and carries penalties varying from failure in an assignment to expulsion from the college. </li>
+		<li>Students who collude in cheating or plagiarism will also be guilty of academic dishonesty. If one student copies from another, both will be charged.</li>
+	        <li>Helping each other is one of the best ways to learn. However, you have to avoid copying from each other in this situation. Talk all you want. Don't write anything down..</li>
+	      </ul>
+	    </div>
+          </div><!-- / panel -->
+	  
+        </div><!-- /.col-sm-4 -->
+	
+      </div><!-- /row -->
+      <br>
+	  
+    </div> <!-- /container -->
+    
+    <footer>
+      <div class="container">
+        <div class="row">
+	  <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+	      <li><a href="#top">Home&nbsp;&nbsp;<span class="fui-user"></span></a></li>
+	      <li><a href="https://scs.senecac.on.ca/">School of ICT</a></li>
+	      <li><a href="https://my.senecacollege.ca/webapps/portal/frameset.jsp">MySeneca</a></li>
+	      <li><a href="http://www.senecacollege.ca/">Seneca College</a></li>
+	      <li><a href="https://inside.senecacollege.ca/its/index.html">Help Desk</a></li>
+	      <li><a href="http://seneca.libguides.com/content.php?pid=53490">Library</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+ 
+          <div class="col-xs-7"> </div> <!-- /col-xs-7 -->
+        </div>
+      </div>
+    </footer>
+    
+    
+    <!-- Load JS here for greater good =============================-->
+    <script src="Flat-UI-master/js/jquery-1.8.3.min.js"></script>
+    <script src="Flat-UI-master/js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="Flat-UI-master/js/jquery.ui.touch-punch.min.js"></script>
+    <script src="Flat-UI-master/js/bootstrap.min.js"></script>
+    <script src="Flat-UI-master/js/bootstrap-select.js"></script>
+    <script src="Flat-UI-master/js/bootstrap-switch.js"></script>
+    <script src="Flat-UI-master/js/flatui-checkbox.js"></script>
+    <script src="Flat-UI-master/js/flatui-radio.js"></script>
+    <script src="Flat-UI-master/js/jquery.tagsinput.js"></script>
+    <script src="Flat-UI-master/js/jquery.placeholder.js"></script>
+    <script src="Flat-UI-master/js/jquery.stacktable.js"></script>
+    <script src="Flat-UI-master/js/application.js"></script>
+    <script src="Flat-UI-master/js/myscript.js"></script>
+  </body>
+</html>

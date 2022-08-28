@@ -1,0 +1,1276 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<title>Lec 6</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Lucida Console";
+	panose-1:2 11 6 9 4 5 4 2 2 4;}
+@font-face
+	{font-family:"Segoe UI Symbol";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+h4
+	{mso-style-link:"Heading 4 Char";
+	margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:#954F72;
+	text-decoration:underline;}
+p
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+code
+	{font-family:"Courier New";}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:.5in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:.5in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+span.Heading4Char
+	{mso-style-name:"Heading 4 Char";
+	mso-style-link:"Heading 4";
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink="#954F72" background=bgw.gif>
+
+<div class=WordSection1 
+     style="margin: 0.5in auto; max-width: 50em; min-width: 30em;">
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:18.0pt;
+font-family:"Arial",sans-serif'>INT422 – Lecture 6 </span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>More work with associations, many-to-many, and
+self-referencing.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Test today</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Test 5&nbsp;is today, at&nbsp;the beginning of
+the timeslot, and will run approximately 18 minutes.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Textbook coverage</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>As previously announced, the textbook will have
+a supporting role as you learn new topics from these notes and your classroom
+sessions. Use the table-of-contents and the index to locate the topic, and then
+read about it there. A reminder: The textbook does not use view model classes
+in its discussions and code examples. We do.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Code examples</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Associations – Many to many</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Associations – Self-referencing</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Theme for today</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Last week, we learned to add objects that have
+an association with other objects. We focused on the <i>one-to-many</i> kind of
+association.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Today, we will look at two other common kinds
+of associations:</span></p>
+
+<ol start=1 type=1>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Many to many</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Self-referencing (to-one, and to-many)</span></li>
+</ol>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Remember that the key objective for this course
+is: <i>Create interactive web apps, which have some complexity, and can scale.</i>
+This week’s topics help us make progress.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Association – many-to-many</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Surprisingly, this pattern is very similar to
+the familiar <i>one-to-many</i> pattern.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>When we are working with this kind of
+association, we are almost always working with one object at a time at one end
+of the association. Then, it becomes possible to think about and work with
+items at the other end of the association.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>To get started with this kind of association,
+open and study the <i>AssocManyToMany</i> code example.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>It has a really simple design model: Two
+classes, Employee and JobDuty, have a to-many association with each other.
+Sample data comes from the School of ICT.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In other words, an employee can have multiple
+job duties. Some of your “professors” are also “program coordinators”, or
+“researchers”. All of these are job duties.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Obviously, a job duty can be performed by
+multiple employees. A “student advisor” job duty is performed by Brenda, Peter,
+Ian, and others in the School of ICT office.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'><img width=718 height=182 id="Picture 11"
+src="INT422-Lecture6_files/image001.jpg" alt=many-to-many-design-model></span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Displaying data from a many-to-many association</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Not surprisingly, this task is similar to
+working with <i>one-to-many</i>&nbsp;associated data.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Here are screen captures of <u>employee</u>
+data. Each shows the associated job duty data. Click an image to open it
+full-size in a new tab/window.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><a
+href="https://scs.senecac.on.ca/~wei.song/int422/lectures/images/L6-1-list-employees-1.png"><span
+style='color:windowtext;text-decoration:none'><img border=0 width=332
+height=225 id="Picture 12" src="INT422-Lecture6_files/image002.png"></span></a><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>   </span><a
+href="https://scs.senecac.on.ca/~wei.song/int422/lectures/images/L6-2-detail-employees-1.png"><span
+style='color:windowtext;text-decoration:none'><img border=0 width=334
+height=226 id="Picture 13" src="INT422-Lecture6_files/image003.png"></span></a></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>On the <u>list of employees</u>, the new column
+“Job duties” was added. The view’s model object&nbsp;is a collection of
+employees. Each employee object has a collection of job duties. Rendering it is
+easy:</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&lt;<b><span style='color:#002060'>td</span></b>&gt;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;@if (item.JobDuties.Count()
+&gt; 0)</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;{</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;var jd =
+string.Join(&quot;&lt;<b><span style='color:#002060'>br</span></b></span><span
+style='font-size:14.0pt;font-family:"Lucida Console"'> </span><span
+style='font-family:"Lucida Console"'>/&gt;&quot;, item.JobDuties.Select(jdn
+=&gt; jdn.Name));</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;@Html.Raw(jd)</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;}</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&lt;/<b><span style='color:#002060'>td</span></b>&gt;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Notice two things about this effort:</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>1. We are creating a string that includes
+markup (the &lt;br /&gt; element). If a string includes markup, we MUST use the
+Raw() HTML Helper to pass it to the view, unencoded.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>2. Notice the use of the Select() method on the
+collection. Briefly, when used like this, it enables us to&nbsp;<i>select</i>
+one specific property from each item in the collection, instead of having to
+work with all properties. Sweet. Essentially, what is happening is that the
+result of item.JobDuties.Select() is an array of strings. That result enables
+us to use the string.Join() method to create a nicely-formatted list of job
+duty strings.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>On the <u>employee details</u> view, we can do
+a similar task. The view’s model is an employee object, which has a collection
+of job duties. Rendering it is easy:</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&lt;<b><span style='color:#002060'>dt</span></b>&gt;Job
+duties&lt;/<b><span style='color:#002060'>dt</span></b>&gt;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&lt;<b><span style='color:#002060'>dd</span></b>&gt;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;@if (Model.JobDuties.Count()
+&gt; 0)</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;{</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;foreach (var jd in
+Model.JobDuties)</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;{</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<b><span
+style='color:#002060'>span</span></b>&gt;@jd.Name&lt;/<b><span
+style='color:#002060'>span</span></b>&gt;&lt;br /&gt;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;}</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;}</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;else</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;{</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;&nbsp;&nbsp;&lt;<b><span
+style='color:#002060'>span</span></b>&gt;(none)&lt;/<b><span style='color:#002060'>span</span></b>&gt;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;}</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&lt;/<b><span style='color:#002060'>dd</span></b>&gt;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Looking at the other end – the job duty end –
+you will notice a similar pattern.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Here are screen captures of job duty&nbsp;data.
+Each shows the associated employee&nbsp;data. Click an image to open it
+full-size in a new tab/window.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><a
+href="https://scs.senecac.on.ca/~wei.song/int422/lectures/images/L6-3-list-job-duties-1.png"><span
+style='color:windowtext;text-decoration:none'><img border=0 width=318
+height=216 id="Picture 14" src="INT422-Lecture6_files/image004.png"></span></a><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>  </span><a
+href="https://scs.senecac.on.ca/~wei.song/int422/lectures/images/L6-4-detail-job-duties-1.png"><span
+style='color:windowtext;text-decoration:none'><img border=0 width=318
+height=216 id="Picture 15" src="INT422-Lecture6_files/image005.png"></span></a></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>On the <u>list of job duties</u>, the new
+column “Employees with this job duty” was added. The view’s model
+object&nbsp;is a collection of job duties. Each job duty&nbsp;object has a
+collection of employees. Rendering it is similar to the code above.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Editing data in a to-many
+association</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Last week, when you learned to edit data in a
+one-to-many association, we focused selecting and saving <i><span
+style='color:blue'>a single object</span></i> – chosen from a collection – as
+the associated data.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In other words, for a specific manufacturer, we
+added a vehicle. Or, for a new vehicle, we configured a specific
+manufacturer.&nbsp;This approach carried over to Assignment 5. For a new track,
+we configured a specific media type. In summary, it felt like we were working
+with single objects.&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>What’s different in a many-to-many association
+is that often you will want to select and save <i><span style='color:blue'>multiple
+objects</span></i> – again chosen from a collection – as the associated data.
+Therefore, we need to present UI to enable that, and write code to handle the
+results.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Let’s study the code example again. We will
+work with an <u>employee</u> object, and configure some job duties. (The other
+way – job duty to employees – would work exactly the same.)</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>It implements a design and coding approach, for
+each entity:</span></p>
+
+<ol start=1 type=1>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Write a “…Base” view model class</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Write a “…With…” view model class, to add
+     the to-many collection of the other entity</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Write a “…Edit…Form” view model class, to
+     package the data to send to the form</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Write an “…Edit…” view model class, for
+     the data submitted by the browser user</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>In the Manager class, write a method that
+     will process the submitted data</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>In the Controller class, write the pair of
+     methods that enable this use case</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Generate the View, and hand-edit it to add
+     an item-selection element</span></li>
+</ol>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Below, each step is described.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>At the end, you may end up with something that
+looks like the following.&nbsp;Click an image to open it full-size in a new
+tab/window.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><a
+href="https://scs.senecac.on.ca/~wei.song/int422/lectures/images/L6-5-edit-job-duties-1.png"><span
+style='color:windowtext;text-decoration:none'><img border=0 width=722
+height=485 id="Picture 16" src="INT422-Lecture6_files/image006.png"></span></a></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><a
+href="https://scs.senecac.on.ca/~wei.song/int422/lectures/images/L6-6-edit-employees-1.png"><span
+style='color:windowtext;text-decoration:none'><img border=0 width=725
+height=366 id="Picture 17" src="INT422-Lecture6_files/image007.png"></span></a></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Write a “…Base” view model class</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>This is a familiar task. Include only the
+properties that you will display and allow editing for.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Write a “…With…” view model class, to add the
+to-many collection of the other entity</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>For this class, add a collection navigation
+property to hold the associated objects. In the code example, the class is
+named “<span style='color:red'>Employee</span><span style='color:green'>With</span><span
+style='color:blue'>JobDuties</span>“, and includes this:</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-family:"Lucida Console";color:#002060'>public</span></b><span
+style='font-size:14.0pt;font-family:"Lucida Console";color:#002060'> </span><span
+style='font-family:"Lucida Console"'>IEnumerable&lt;JobDutyBase&gt; JobDuties {
+<b><span style='color:#002060'>get</span></b>; <b><span style='color:#002060'>set</span></b>;
+}</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Write a “…Edit…Form” view model class, to
+package the data to send to the form</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>This class needs a select list – specifically a
+<i>MultiSelectList</i>. Its data will be used to render the item-selection
+elements in the HTML Form in the view.</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console";color:green'>// Multiple select requires a
+MultiSelectList object</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>[Display(Name = &quot;<span
+style='color:#0070C0'>Job duties</span>&quot;)]</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-family:"Lucida Console";color:#002060'>public</span></b><span
+style='font-family:"Lucida Console"'> MultiSelectList JobDutyList { <b><span
+style='color:#002060'>get</span></b>; <b><span style='color:#002060'>set</span></b>;
+}</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Write an “…Edit…” view model class, for the
+data submitted by the browser user</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>This class needs only a few properties:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>The employee object identifier</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Optionally, if you allowed editing of any
+     other property, include that property</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>A collection of int identifiers, for the
+     multiple selected objects</span></li>
+</ul>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-family:"Lucida Console";color:#002060'>public</span></b><span
+style='font-family:"Lucida Console"'> <b><span style='color:#002060'>int</span></b>
+Id { <b><span style='color:#002060'>get</span></b>; <b><span style='color:#002060'>set</span></b>;
+}</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console";color:green'>// Incoming collection of
+selected job duty identifiers</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-family:"Lucida Console";color:#002060'>public</span></b><span
+style='font-family:"Lucida Console"'> IEnumerable&lt;<b><span style='color:
+#002060'>int</span></b>&gt; JobDutyIds { <b><span style='color:#002060'>get</span></b>;
+<b><span style='color:#002060'>set</span></b>; }</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>In the Manager class, write a method that will
+process the submitted data</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>When you fetch the employee object from the
+data store, you MUST include the associated data.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Now, you have to stop and think.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The fetched employee object will already have
+an <i>existing</i> collection of job duties. The incoming data has a <i>new</i>
+collection of job duty identifiers. What should we do about that?</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>One approach is to clear (remove, delete) the <i>existing</i>
+collection of job duties. Then, for each <i>new</i> job duty identifier, fetch
+the job duty object, and add it to the employee’s collection of job duties.
+That’s exactly what’s done in the code example:</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>o.JobDuties.Clear();</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console";color:green'>// Then, go through the
+incoming items</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console";color:green'>// For each one, add to the
+fetched object's collection</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-family:"Lucida Console";color:#002060'>foreach</span></b><span
+style='font-family:"Lucida Console"'> (<b><span style='color:#002060'>var</span></b>
+item <b><span style='color:#002060'>in</span></b> newItem.JobDutyIds)</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>{</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;<b><span style='color:#002060'>var</span></b>
+a = ds.JobDuties.Find(item);</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;o.JobDuties.Add(a);</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>}</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>In the Controller class, write the pair of methods
+that enable this use case</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The pair of methods will be familiar, except
+for one task – the configuration of the select list object.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>New this week: When we need to edit an
+employee’s collection of job duties, we MUST pay attention to the already-selected
+items, and send that to the select list object. That way, we can show the
+already-selected items in the view.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Both SelectList and MultiSelectList have a
+constructor parameter to hold the selected value(s). In this code example, we
+must use the MultiSelectList. Therefore, when we make one of these objects, we
+need TWO collections:</span></p>
+
+<ol start=1 type=1>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>The collection of <i><span
+     style='color:blue'>items</span></i> that will be rendered in the user
+     interface</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>A collection of currently (previously) <i><span
+     style='color:blue'>selected values</span></i></span></li>
+</ol>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The manager object already has a method to
+deliver #1, the collection of all job duties.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Where do we get #2? Well, we have already
+fetched the employee object that we want to edit. It has the collection we
+need! From that collection of JobDutyBase objects, we need only the identifier,
+so we can use the Select() method again.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Then, we can build the MultiSelectList object.</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-family:"Lucida Console";color:#002060'>var</span></b><span
+style='font-family:"Lucida Console"'> selectedValues = o.JobDuties.Select(jd
+=&gt; jd.Id);</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console";color:green'>// For clarity, use the named
+parameter feature of C#</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>form.JobDutyList = new MultiSelectList</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;(items: m.JobDutyGetAll(),</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;dataValueField: &quot;<span
+style='color:purple'>Id</span>&quot;,</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;dataTextField: &quot;<span
+style='color:purple'>FullName</span>&quot;,</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&nbsp;&nbsp;selectedValues:
+selectedValues);</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Generate the View, and hand-edit it to add an
+item-selection element</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In this code example – as noted above – we are
+using an HTML table to render the items. You can use a checkbox group or
+multiple-select listbox if you wish. Or any other bright idea that you may
+have.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The key take-away from this part of the work is
+that we MUST render the “checked” attribute for the &lt;input type=checkbox
+element. When we use the MultiSelectList constructor (above) with the
+selectedValues argument, it builds a boolean “Selected” property for each item
+in the select list object. We can render it like this:</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-family:"Lucida Console"'>&lt;<b><span style='color:#002060'>input</span></b>
+type=&quot;<span style='color:purple'>checkbox</span>&quot; name=&quot;<span
+style='color:purple'>JobDutyIds</span>&quot; value=&quot;@<span
+style='color:purple'>item.Value</span>&quot; checked=&quot;<span
+style='color:purple'>@item.Selected</span>&quot; /&gt;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Association – self-referencing
+to-one (same entity)</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>For this and the next section – which discuss
+self-referencing associations – open and study the <i>AssocSelf</i> code
+example. It uses the music business base project as its problem domain.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Some entities can have “self” associations.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The example web app’s “Employee” entity has two
+self-referencing associations:</span></p>
+
+<ol start=1 type=1>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>To-one, used to indicate the supervisor
+     (or boss/manager)</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>To-many, used to indicate the collection
+     of direct-reports</span></li>
+</ol>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>This scenario is quite common. For example, if
+we consider a generic “Person” class, we can have properties for “Mother” and
+“Father”. Each will point to (have a reference to) another existing Person
+object. It can also have a “Children” collection property, with pointers
+(references) to a collection of existing Person objects.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>When coding the <i>design model class</i>, we
+MUST follow these rules, for the to-one association:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>TWO properties are required</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>One property is a <i>nullable int</i> – it
+     will hold the identifier of the associated object</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>The other property is a reference to the
+     associated object (i.e. its type is the class type)</span></li>
+</ul>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Here’s what the Employee class in the code
+example looks like:</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-family:"Lucida Console";color:#002060'>public</span></b><span
+style='font-family:"Lucida Console"'> <b><span style='color:#002060'>int</span></b>?
+ReportsTo { <b><span style='color:#002060'>get</span></b>; <b><span
+style='color:#002060'>set</span></b>; }</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-family:"Lucida Console";color:#002060'>public</span></b><span
+style='font-family:"Lucida Console"'> <b><span style='color:#002060'>virtual</span></b>
+Employee Employee2 { <b><span style='color:#002060'>get</span></b>; <b><span
+style='color:#002060'>set</span></b>; }</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:18.0pt;font-family:"Segoe UI Symbol",sans-serif;color:#0070C0'>&#10077;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>Note: “Employee2” is a
+terrible name for this property. Your teachers did not name this property (or
+another terribly-named property, “Employee1”). For your own projects, do NOT
+use names like these.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>When you update this associated object, you
+must update BOTH properties.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Association – self-referencing
+to-many (same entity)</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>When coding the <i>design model class</i>, the
+to-many association looks like any other that you have code. Therefore, you can
+continue to use previously-learned design and coding techniques.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Here’s what the Employee class in the code
+example looks like:</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.0in;margin-bottom:.0001pt;line-height:normal'><b><span
+style='font-family:"Lucida Console";color:#002060'>public</span></b><span
+style='font-size:14.0pt;font-family:"Lucida Console";color:#002060'> </span><b><span
+style='font-family:"Lucida Console";color:#002060'>virtual</span></b><span
+style='font-size:14.0pt;font-family:"Lucida Console"'> </span><span
+style='font-family:"Lucida Console"'>ICollection&lt;Employee&gt; Employee1 { <b><span
+style='color:#002060'>get</span></b>; <b><span style='color:#002060'>set</span></b>;
+}</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:18.0pt;font-family:"Segoe UI Symbol",sans-serif;color:#0070C0'>&#10077;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>Note: Do NOT use
+“virtual” in your own projects. Also, use a better name for the property in
+your own projects.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Highlights from the
+self-referencing code example<br>
+to-one “edit supervisor”</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>This section features some highlights from the <i>AssocSelf</i>
+code example.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>When you run the web app, it shows a list of
+employees.&nbsp;&nbsp;Click the&nbsp;image to open it full-size in a new
+tab/window.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><a
+href="https://scs.senecac.on.ca/~wei.song/int422/lectures/images/L6-7-self-employee-list.png"
+target="_blank"><span style='font-size:12.0pt;font-family:"Arial",sans-serif;
+text-decoration:none'><img border=0 width=724 height=367 id="Picture 4"
+src="INT422-Lecture6_files/image008.png" alt=self-employee-list></span></a></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>This view is an&nbsp;edited version of the
+scaffolded view, which had too many columns. A copy of the original scaffolded
+view is in the code example as “IndexOriginal.cshtml”. The new view is more
+interesting.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Notice that the dates were formatted nicely.
+Study the view code. We had to do an additional check (item.BirthDate.HasValue)
+because it was configured as a nullable date, so we have to guard against null
+values.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Notice the new “Reports to” column. A
+collection of employees “with details” was passed to the view. Study the view
+code.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The “Details” button is an &lt;a&gt;
+element/link, which has been styled with Bootstrap classes. Following that link
+will show details for a selected&nbsp;employee.&nbsp;Click the image to open it
+full-size in a new tab/window.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><a
+href="https://scs.senecac.on.ca/~wei.song/int422/lectures/images/L6-8-self-employee-detail.png"><span
+style='color:windowtext;text-decoration:none'><img border=0 width=724
+height=427 id="Picture 18" src="INT422-Lecture6_files/image009.png"></span></a></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Study the “Details.cshtml” view code. It
+repeats some of the code from the list-of-employees view. However, it adds a
+list/collection of direct reports (employees who report to this employee).</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>At this point in time, you can:</span></p>
+
+<ol start=1 type=1>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Edit the employee’s supervisor, or</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Edit the employee’s direct reports</span></li>
+</ol>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Let’s look at editing the supervisor
+first.&nbsp;Click the image to open it full-size in a new tab/window.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><a
+href="https://scs.senecac.on.ca/~wei.song/int422/lectures/images/L6-9-self-employee-edit-supervisor.png"><span
+style='color:windowtext;text-decoration:none'><img border=0 width=722
+height=367 id="Picture 19" src="INT422-Lecture6_files/image010.png"></span></a></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>It takes some work to construct this view:</span></p>
+
+<ol start=1 type=1>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Write&nbsp;the “…Form” view model
+     class&nbsp;(that will be used to build the HTML Form)</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Write the “…Edit…” view model
+     class&nbsp;for the submitted data from the browser user</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Write the Manager class method to process
+     the submitted data</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Write the Controller class method pair</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Generate&nbsp;and customize the View</span></li>
+</ol>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Write the “…Form” view model class&nbsp;(that
+will be used to build the HTML Form)</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>This class includes properties to help identify
+the object, when displayed in the browser.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Logically, if we’re allowing a change in supervisor,
+it’s possible that the job title will change. Therefore, We will permit the
+browser user to edit the job title.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>For convenience, we will also show/display the
+employee’s current supervisor. Why? When the form loads&nbsp;in the browser, it
+will show the current supervisor. However, when the browser user clicks a
+different name on the list, the context of the original supervisor is lost. The
+browser user may forget. This is just a helpful convenience.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The class will obviously also need a select
+list property, to hold the items for an item-selection element on the HTML
+Form.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Write the “…Edit…” view model class&nbsp;for
+the submitted data from the browser user</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>This class has view properties: The object
+identifier, the edited job title, and the identifier of the employee who will
+be the supervisor.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Write the Manager class method to process the
+submitted data</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Like others in the past, use the passed-in
+object identifier to fetch the employee that we must update.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>And, like the others in the past, we must
+attempt to fetch the associated item – the employee object for the
+newly-selected supervisor.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The next step is new. We can continue
+processing only if BOTH objects exist. Think about this, and it will make
+sense. That’s why the “if” statement has the two conditions.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>If we can continue, then we can update values,
+using the SetValues() method, as we have done before in “edit existing” use
+cases. Remember that this method does NOT update object identifiers or
+navigation properties.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Next, we update the navigation properties.
+There’s only one – the supervisor is “Employee2”. (Yes, a terrible name for a
+property.) One more new task: We MUST also update the nullable int,
+“ReportsTo”, with the identifier of the supervisor object.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Write the Controller class method pair</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In the GET method, which prepares the “…Form”
+view model object, we must think about and implement the logic carefully.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>First, we must fetch a list/collection of
+employees, so that the employee-being-edited can select&nbsp;a new supervisor.
+However, the employee-being-edited must NOT be on the list. (Right?) We must
+remove it. There’s additional logic to do that.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Next, we must determine which employee is the
+current supervisor. We will render that in the user interface, and use its
+identifier when we build the select list object.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Finally, we build the SelectList object. Use
+the employee collection that does NOT include the employee-being-edited.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The POST method, which handles the data
+submitted by the browser user, looks similar to the others you have written in
+the past.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Generate and customize the View</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The scaffolder will generate editable textboxes
+for the name properties that must not be edited. And, it will not generate an
+item-selection element.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Therefore, we must hand-edit the view to match
+the image above. Notice the use of a &lt;p&gt; element with a class to display
+the name of the current supervisor.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Highlights from the
+self-referencing code example<br>
+to-many “edit direct reports”</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Now,&nbsp;let’s look at editing the direct
+reports. Click the image to open it full-size in a new tab/window.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><a
+href="https://scs.senecac.on.ca/~wei.song/int422/lectures/images/L6-10-self-employee-edit-directreportsv2.png"><span
+style='color:windowtext;text-decoration:none'><img border=0 width=722
+height=426 id="Picture 20" src="INT422-Lecture6_files/image011.png"></span></a></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>As you would expect, it also&nbsp;takes some
+work to construct this view:</span></p>
+
+<ol start=1 type=1>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Write&nbsp;the “…Form” view model
+     class&nbsp;(that will be used to build the HTML Form)</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Write the “…Edit…” view model
+     class&nbsp;for the submitted data from the browser user</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Write the Manager class method to process
+     the submitted data</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Write the Controller class method pair</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Generate&nbsp;and customize the View</span></li>
+</ol>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Write&nbsp;the “…Form” view model
+class&nbsp;(that will be used to build the HTML Form)</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Similar to the design approach above, we need
+properties for display, and for editing.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>As a convenience, we can have &nbsp;a property
+– DirectReports – which holds the names of the employees who currently report
+directly to the employee-being-edited.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The select list property is of type MultiSelectList.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Write the “…Edit…” view model class&nbsp;for
+the submitted data from the browser user</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>This is a very simple class: It has the
+employee-being-edited object identifier, and an int collection for the selected
+employees.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Write the Manager class method to process the
+submitted data</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The design and coding approach here will be the
+same as discussed earlier/above (in the many-to-many section).</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The important concept is that we must first
+clear the existing direct reports, and then add in the new direct reports.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Write the Controller class method pair</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>For the GET method, the design and coding
+approach here will be the same as discussed in the “edit supervisor” section
+above. A couple of things are different, however:</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>We get a collection of the existing direct report
+object identifiers. This collection is used to build the MultiSelectList
+object.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>We send along a collection of existing direct
+report objects (EmployeeBase). We will display those in the user interface.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>We build a <u>Multi</u>SelectList object.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>For the POST method, it uses the same familiar
+pattern as before.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Generate&nbsp;and customize the View</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The scaffolder will generate editable textboxes
+for the name properties that must not be edited. And, it will not generate an
+item-selection element.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Therefore, we must hand-edit the view to match
+the image above.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>&nbsp;Summary, and preview of
+what’s coming next</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Working with many-to-many and self-referencing
+associations is comfortable and familiar enough to do in code.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>However, constructing the user interface
+correctly is a real challenge. All programmers – beginners and experienced –
+must follow a checklist in a disciplined manner, because there are simply too
+many implementation details. Be careful. Take your time. Write a checklist (use
+the in-class and posted versions as a foundation). Work incrementally. Test
+frequently.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>

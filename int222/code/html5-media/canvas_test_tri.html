@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta charset="UTF-8" />
+  <title>INT222 - Canvas Test</title>
+  <script type="application/javascript">
+    window.onload = draw;
+    function draw() {
+      var canvas = document.getElementById("my-canvas");
+      if (canvas.getContext) {
+        var ctx = canvas.getContext("2d");
+
+        ctx.beginPath();
+		ctx.moveTo(175,50);
+		ctx.lineTo(200,75);
+		ctx.lineTo(200,25);
+		ctx.fillStyle = "rgb(200,0,0)";
+		ctx.fill();
+		
+		// Filled triangle
+		ctx.beginPath();
+		ctx.moveTo(25,25);
+		ctx.lineTo(105,25);
+		ctx.lineTo(25,105);
+		ctx.fillStyle = "rgb(0,200,0)";
+		ctx.fill();
+
+		// Stroked triangle
+		ctx.beginPath();
+		ctx.moveTo(125,125);
+		ctx.lineTo(125,45);
+		ctx.lineTo(45,125);
+		ctx.closePath();
+		ctx.strokeStyle = '#0000ff';
+		ctx.stroke();
+      }
+    }
+  </script>
+  <style> 
+      body { margin: 0 18%; }
+	  canvas { 
+	    border: 7px ridge #369; 
+	  } 
+  </style>
+</head>
+  <body>
+    <h1>INT222 - Canvas Test: triangle</h1>
+
+    <canvas id="my-canvas" width="300" height="150">[Canvas Area]</canvas>
+    <br>
+    <p><a href="view-source:">View-source</a>&nbsp;&nbsp;&nbsp;&nbsp;
+       <a href="" onclick="download=document.referrer">Download</a></p>
+  </body>
+</html>

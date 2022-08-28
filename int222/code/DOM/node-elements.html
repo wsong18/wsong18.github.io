@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+   <meta charset="UTF-8" />
+   <title>INT222</title>
+   <style> 
+      body { margin: 0 18%; }
+   </style>
+   <script>
+		function tryit(){
+			var addrParas = document.getElementById("address").getElementsByTagName("p"); 
+
+			// highlight all paragraphs inside of the section with ID "address": 
+			for (var i = 0; i < addrParas.length; i++) {   
+					addrParas[i].style.backgroundColor = "yellow"; 
+			}
+		}
+	</script>
+</head>
+<body>
+  <h1>INT222 - Accessing elements within an element (node)</h1>
+
+   <p>Mail to: </p> 
+   <div id="address"> 
+       <p>70 The Pond Road</p> 
+       <p>Toronto, ON</p>
+   </div>
+
+   <br>
+	<input type="button" onclick="tryit()" value="Try it">
+  <br><hr>
+
+
+  <!-- for view-source and download -->
+   <br><p><a href="view-source:">View-source</a>&nbsp;&nbsp;&nbsp;<a href='' download>Download</a></p>
+</body>
+
+</html>

@@ -1,0 +1,1247 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<title>Lec 11</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Consolas;
+	panose-1:2 11 6 9 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Segoe UI";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:"Segoe UI Symbol";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:"Lucida Console";
+	panose-1:2 11 6 9 4 5 4 2 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+h4
+	{mso-style-link:"Heading 4 Char";
+	margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:#954F72;
+	text-decoration:underline;}
+p
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+code
+	{font-family:"Courier New";}
+span.Heading4Char
+	{mso-style-name:"Heading 4 Char";
+	mso-style-link:"Heading 4";
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+span.comment2
+	{mso-style-name:comment2;
+	color:#008200;
+	border:none windowtext 1.0pt;
+	padding:0in;}
+span.string2
+	{mso-style-name:string2;
+	color:blue;
+	border:none windowtext 1.0pt;
+	padding:0in;}
+span.keyword2
+	{mso-style-name:keyword2;
+	color:#006699;
+	border:none windowtext 1.0pt;
+	padding:0in;
+	font-weight:bold;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink="#954F72" background=bgw.gif>
+
+<div class=WordSection1 
+     style="margin: 0.5in auto; max-width: 50em; min-width: 30em;">
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:18.0pt;
+font-family:"Arial",sans-serif'>INT422 – Lecture 11</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Using <b>JavaScript</b> and <b>Ajax</b> in
+ASP.NET MVC web apps. Introduction to web services.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Test today</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Test 10&nbsp;is today, <b>in the middle</b> of
+the timeslot, and will run approximately 18 minutes. </span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>We will begin the class/session with coverage
+of recent and new topics, before we do the test.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Code examples</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Playlist Filtering</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Photo Upload With Preview</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Search Music</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Review (and reinforce) media
+handling topic coverage</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The lecture notes of week 10 part 2 introduced
+students to the idea of a dedicated media item class, for web apps that make
+extensive use of non-text media items.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>We will review the topic highlights, and
+reinforce some design and coding techniques and practices.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Theme for this week</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Modern web apps use JavaScript, Ajax, and web
+services to improve the user experience. This week, we will introduce coverage
+of these topics, and discuss some typical use cases.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Using JavaScript in ASP.NET MVC
+web apps</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>JavaScript is the web’s programming language.
+Historically know as a client (user agent) browser programming language, the
+introduction of <b>Node.js</b> (by Ryan Dahl) in 2009 began a trend to
+server-based web apps and services that are written in JavaScript. Many –
+including your teacher team – believe that JavaScript will soon dominate web
+app and service development, supplanting ASP.NET MVC, PHP, Java, and other
+platforms.</span></p>
+
+<p style='margin:0in;margin-bottom:.0001pt'><span style='font-family:"Arial",sans-serif'>Links
+to more information:</span></p>
+
+<p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;
+margin-bottom:.0001pt;text-indent:-.25in'><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"Arial",sans-serif'>Node.js </span><a
+href="https://nodejs.org/en/" target="_blank"><span style='font-family:"Arial",sans-serif'>web
+site</span></a></p>
+
+<p style='margin-left:.5in;text-indent:-.25in'><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><a href="https://en.wikipedia.org/wiki/Node.js" target="_blank"><span
+style='font-family:"Arial",sans-serif'>Wikipedia article</span></a><span
+style='font-family:"Arial",sans-serif'> on Node.js</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Do we have and use JavaScript in our existing
+ASP.NET MVC web apps? Yes. Built-in. JavaScript is used to help with
+browser-based HTML Forms validation, among other tasks.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>From our perspective as ASP.NET MVC web app
+programmers, we will want to use JavaScript in the browser to improve the
+browser user’s experience and interaction, and to modify the </span><a
+href="https://en.wikipedia.org/wiki/Document_Object_Model" target="_blank"><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>DOM</span></a><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>To get a feel for the kind of use cases that
+would benefit from a little JavaScript, we’ll study two code examples:</span></p>
+
+<ol start=1 type=1>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Data filtering in the browser</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Image preview</span></li>
+</ol>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Both are <i>browser-only</i> solutions. So, in
+general, if there is a task or feature that can be implemented only in the
+browser, with&nbsp;no interaction or communication needed beyond the browser,
+then we can consider adding&nbsp;some JavaScript.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>JavaScript – data filtering in
+the browser</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>You will recall the main task in Assignment 6,
+playlist editing.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'><img border=0 width=722 height=544
+id="Picture 4" src="INT422-Lecture11_files/image001.png"
+alt=phase1-playlist-edit1></span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The left side of the page shows a list of a
+couple thousand tracks. Way too many to be useful for playlist editing.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Back in the Assignment 6 timeframe, we could
+have asked you to fix this problem, server-side, by adding the ability to
+filter the list of tracks somehow. But that would have derailed the opportunity
+to learn a&nbsp;really nice client-side solution.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>So, what we’ll do, is show the view, but with
+NO tracks on the list. It will also have a new feature, a checkbox group of
+genres.&nbsp;Click the image to open it full-size in a new tab/window.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><a
+href="https://scs.senecac.on.ca/~wei.song/int422/lectures/images/lec11-js-playlist-edit-1.png"
+target="_blank"><span style='font-size:12.0pt;font-family:"Arial",sans-serif;
+text-decoration:none'><img border=0 width=720 height=543 id="Picture 3"
+src="INT422-Lecture11_files/image002.png" alt=js-playlist-edit-1></span></a></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Then, when a genre checkbox is
+checked/selected, the list of tracks in that genre appear.&nbsp;Click the image
+to open it full-size in a new tab/window.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><a
+href="https://scs.senecac.on.ca/~wei.song/int422/lectures/images/lec11-js-playlist-edit-2.png"
+target="_blank"><span style='font-size:12.0pt;font-family:"Arial",sans-serif;
+text-decoration:none'><img border=0 width=720 height=543 id="Picture 2"
+src="INT422-Lecture11_files/image003.png" alt=js-playlist-edit-2></span></a></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>General approach to using JavaScript in a web
+app</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In Solution Explorer, in the Scripts folder,
+create an App folder.&nbsp; (This is a soft but emerging best practice for
+ASP.NET MVC web apps.) In that folder, we add our own JavaScript code. In this
+code example, “core.js” was added.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The core.js source code file will hold
+JavaScript functions that will be called from the browser.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>How does it get loaded on the page? With an
+HTML &lt;script&gt; element. (Duh, it’s HTML.)</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Where do we write the HTML &lt;script&gt;
+element? Well, that depends:</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>If the functions in the JavaScript&nbsp;source
+code file can be used by ALL (or most) views in the app, then add it to the
+shared _Layout.cshtml template. Where? Near the bottom, following the statement
+that renders the “jquery” bundle.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Alternatively, if the functions in the
+JavaScript source code file will be used by only one (or few) view, then add it
+to the view(s) that needs it, at the bottom of the view file, at the end of the
+scripts section block of code.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Note: If the view does not currently have a
+scripts section, add it:</span></p>
+
+<div style='border:none;border-left:solid #6CE26C 2.25pt;padding:0in 0in 0in 0in;
+background:white;margin-left:15.75pt;margin-right:0in'>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:white;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>@section&nbsp;Scripts&nbsp;{&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:#F8F8F8;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>    </span><span style='font-size:12.0pt;font-family:Consolas;
+color:#008200;border:none windowtext 1.0pt;padding:0in'>//&nbsp;The&nbsp;next&nbsp;statement&nbsp;may&nbsp;or&nbsp;may&nbsp;not&nbsp;be&nbsp;present&nbsp;&nbsp;</span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>&nbsp;&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:white;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>&nbsp;&nbsp;&nbsp;&nbsp;@Scripts.Render(</span><span
+style='font-size:12.0pt;font-family:Consolas;color:blue;border:none windowtext 1.0pt;
+padding:0in'>&quot;~/bundles/jqueryval&quot;</span><span style='font-size:12.0pt;
+font-family:Consolas;color:black;border:none windowtext 1.0pt;padding:0in'>)&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:#F8F8F8;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>    </span><span style='font-size:12.0pt;font-family:Consolas;
+color:#008200;border:none windowtext 1.0pt;padding:0in'>//&nbsp;Add&nbsp;this&nbsp;reference&nbsp;&nbsp;</span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>&nbsp;&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:white;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>5.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>&nbsp;&nbsp;</span><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>&nbsp;&nbsp;</span><span style='font-size:12.0pt;font-family:
+Consolas;color:black;border:none windowtext 1.0pt;padding:0in'>&lt;&nbsp;script&nbsp;src=</span><span
+style='font-size:12.0pt;font-family:Consolas;color:blue;border:none windowtext 1.0pt;
+padding:0in'>&quot;~/Scripts/App/core.js&quot;</span><span style='font-size:
+12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>&nbsp;&gt;&nbsp;&lt;&nbsp;/script&gt;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:#F8F8F8;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>6.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>}</span></p>
+
+</div>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:9.0pt;
+font-family:Consolas;color:black;border:none windowtext 1.0pt;padding:0in'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The important idea is that the JavaScript code
+is delivered to the browser, along with the desired HTML.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Next, design your HTML markup so that it can be
+modified by JavaScript. This means that it will&nbsp;need values for the&nbsp;id
+and/or&nbsp;class&nbsp;attributes. Then, add event handlers to elements that
+will call into the JavaScript function(s).</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>To summarize:</span></p>
+
+<ol start=1 type=1>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>JavaScript source code is added to the
+     Scripts &gt; App folder</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>A reference to the code is added to the
+     desired view</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>HTML markup is edited – attributes and
+     event handlers – to call into the JavaScript code</span></li>
+</ol>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Specific tasks done in the data filtering app</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Open and study the <i>PlaylistFiltering</i>
+code example as you read this section.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The original web app displayed a list of
+tracks, without any genre information. In this web app, we need that data.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In addition, we will need more data than a
+SelectList (or MultiSelectList) object can provide. (One of those provides an
+item’s value, text, and selected state. We need more – the genre information.)</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Therefore, another view model class was
+created, TrackWithGenre:</span></p>
+
+<div style='border:none;border-left:solid #6CE26C 2.25pt;padding:0in 0in 0in 0in;
+background:white;margin-left:15.75pt;margin-right:0in'>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:white;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><b><span
+style='font-size:12.0pt;font-family:Consolas;color:#006699;border:none windowtext 1.0pt;
+padding:0in'>public</span></b><span style='font-size:12.0pt;font-family:Consolas;
+color:black;border:none windowtext 1.0pt;padding:0in'>&nbsp;</span><b><span
+style='font-size:12.0pt;font-family:Consolas;color:#006699;border:none windowtext 1.0pt;
+padding:0in'>class</span></b><span style='font-size:12.0pt;font-family:Consolas;
+color:black;border:none windowtext 1.0pt;padding:0in'>&nbsp;TrackWithGenre:&nbsp;TrackBase&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:#F8F8F8;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>{&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:white;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>&nbsp;&nbsp;&nbsp;&nbsp;</span><b><span style='font-size:12.0pt;
+font-family:Consolas;color:#006699;border:none windowtext 1.0pt;padding:0in'>public</span></b><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>&nbsp;</span><b><span style='font-size:12.0pt;font-family:Consolas;
+color:#006699;border:none windowtext 1.0pt;padding:0in'>int</span></b><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>&nbsp;GenreId&nbsp;{ get; set; }&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:#F8F8F8;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>&nbsp;&nbsp;&nbsp;&nbsp;</span><b><span style='font-size:12.0pt;
+font-family:Consolas;color:#006699;border:none windowtext 1.0pt;padding:0in'>public</span></b><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>&nbsp;bool&nbsp;Selected&nbsp;{ get; set; }&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:white;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>5.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>}&nbsp;&nbsp;</span></p>
+
+</div>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>As a result of this, we need to edit the
+PlaylistEditTracksForm view model class. Replace its MultiSelectList object
+with a collection of TrackWithGenre objects.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Also, while we’re here, add a collection of
+GenreBase objects. We’ll need those too in the UI.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The controller GET method will get edited, to
+prepare the track list and genre list properties. These tasks imply that a new
+Manager class method is needed to deliver the track-with-genre collection.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>As noted above, we want the initial load/view
+to have an empty list of tracks. The thought process is that each track –
+rendered in a <i>div</i> container – would be displayed or not, based on the
+browser interaction.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Therefore, we needed an multi item-selection
+list to hold the genres. The important code is the event handler.</span></p>
+
+<div style='border:none;border-left:solid #6CE26C 2.25pt;padding:0in 0in 0in 0in;
+background:white;margin-left:15.75pt;margin-right:0in'>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:white;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>&lt;div&nbsp;</span><b><span style='font-size:12.0pt;font-family:
+Consolas;color:#006699;border:none windowtext 1.0pt;padding:0in'>class</span></b><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>&nbsp;=&nbsp;</span><span style='font-size:12.0pt;font-family:
+Consolas;color:blue;border:none windowtext 1.0pt;padding:0in'>&quot;row&quot;</span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>&nbsp;&gt;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:#F8F8F8;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>&nbsp;&nbsp;&nbsp;@foreach(</span><b><span style='font-size:12.0pt;
+font-family:Consolas;color:#006699;border:none windowtext 1.0pt;padding:0in'>var</span></b><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>&nbsp;item&nbsp;</span><b><span style='font-size:12.0pt;
+font-family:Consolas;color:#006699;border:none windowtext 1.0pt;padding:0in'>in</span></b><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>&nbsp;Model.GenreList)&nbsp;&nbsp;&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:white;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>   {</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:#F8F8F8;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;</span><b><span
+style='font-size:12.0pt;font-family:Consolas;color:#006699;border:none windowtext 1.0pt;
+padding:0in'>class</span></b><span style='font-size:12.0pt;font-family:Consolas;
+color:black;border:none windowtext 1.0pt;padding:0in'>&nbsp;=&nbsp;</span><span
+style='font-size:12.0pt;font-family:Consolas;color:blue;border:none windowtext 1.0pt;
+padding:0in'>&quot;checkbox&nbsp;col-md-3&quot;</span><span style='font-size:
+12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>&gt;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:white;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>5.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&gt;&nbsp;&lt;input&nbsp;type=</span><span
+style='font-size:12.0pt;font-family:Consolas;color:blue;border:none windowtext 1.0pt;
+padding:0in'>&quot;checkbox&quot;</span><span style='font-size:12.0pt;
+font-family:Consolas;color:black;border:none windowtext 1.0pt;padding:0in'>
+name=</span><span style='font-size:12.0pt;font-family:Consolas;color:blue;
+border:none windowtext 1.0pt;padding:0in'>&quot;Genres&quot;</span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'> value=</span><span style='font-size:12.0pt;font-family:Consolas;
+color:blue;border:none windowtext 1.0pt;padding:0in'>&quot;@item.GenreId&quot;</span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'> onchange=</span><span style='font-size:12.0pt;font-family:Consolas;
+color:blue;border:none windowtext 1.0pt;padding:0in'>&quot;toggleGenre('g'&nbsp;+&nbsp;'@item.GenreId',&nbsp;this.checked);&quot;&nbsp;</span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>/&gt;          </span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:#F8F8F8;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>6.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>              @item.Name&nbsp;&lt;/label&gt;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:white;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>7.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/div&gt;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:#F8F8F8;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>8.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>}&nbsp;&lt;/div&gt;&nbsp;&nbsp;</span></p>
+
+</div>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Rendering the tracks is next. The thought
+process is that each track needs to be identified with its genre. Therefore,
+make sure the <i>div</i> container includes the genre id – here formatted as
+the letter “g” with the genre identifier as a suffix.</span></p>
+
+<div style='border:none;border-left:solid #6CE26C 2.25pt;padding:0in 0in 0in 0in;
+background:white;margin-left:15.85pt;margin-right:0in'>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:white;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>@foreach(</span><b><span style='font-size:12.0pt;font-family:Consolas;
+color:#006699;border:none windowtext 1.0pt;padding:0in'>var</span></b><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>&nbsp;item&nbsp;</span><b><span style='font-size:12.0pt;
+font-family:Consolas;color:#006699;border:none windowtext 1.0pt;padding:0in'>in</span></b><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>&nbsp;Model.TrackList)&nbsp;</span></p>
+
+</div>
+
+<div style='border:none;border-left:solid #6CE26C 2.25pt;padding:0in 0in 0in 0in;
+background:#F8F8F8;margin-left:15.75pt;margin-right:0in'>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:#F8F8F8;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>{</span></p>
+
+</div>
+
+<div style='border:none;border-left:solid #6CE26C 2.25pt;padding:0in 0in 0in 0in;
+background:white;margin-left:15.85pt;margin-right:0in'>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:white;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>&nbsp;&nbsp;&nbsp;&lt;div&nbsp;</span><b><span style='font-size:
+12.0pt;font-family:Consolas;color:#006699;border:none windowtext 1.0pt;
+padding:0in'>class</span></b><span style='font-size:12.0pt;font-family:Consolas;
+color:black;border:none windowtext 1.0pt;padding:0in'>=</span><span
+style='font-size:12.0pt;font-family:Consolas;color:blue;border:none windowtext 1.0pt;
+padding:0in'>&quot;checkbox&nbsp;</span><a href="mailto:g@(item.GenreId)"><span
+style='font-size:12.0pt;font-family:Consolas;border:none windowtext 1.0pt;
+padding:0in'>g@(item.GenreId)</span></a><span style='font-size:12.0pt;
+font-family:Consolas;color:blue;border:none windowtext 1.0pt;padding:0in'>&quot;
+</span><span style='font-size:12.0pt;font-family:Consolas;color:black;
+border:none windowtext 1.0pt;padding:0in'>style=</span><span style='font-size:
+12.0pt;font-family:Consolas;color:blue;border:none windowtext 1.0pt;padding:
+0in'>&quot;display:&nbsp;none;&quot;</span><span style='font-size:12.0pt;
+font-family:Consolas;color:black;border:none windowtext 1.0pt;padding:0in'>&gt;</span></p>
+
+</div>
+
+<div style='border:none;border-left:solid #6CE26C 2.25pt;padding:0in 0in 0in 0in;
+background:#F8F8F8;margin-left:15.75pt;margin-right:0in'>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:#F8F8F8;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&gt;&nbsp;&lt;input&nbsp;type=</span><span
+style='font-size:12.0pt;font-family:Consolas;color:blue;border:none windowtext 1.0pt;
+padding:0in'>&quot;checkbox&quot;</span><span style='font-size:12.0pt;
+font-family:Consolas;color:black;border:none windowtext 1.0pt;padding:0in'> name=</span><span
+style='font-size:12.0pt;font-family:Consolas;color:blue;border:none windowtext 1.0pt;
+padding:0in'>&quot;TrackIds&quot; </span><span style='font-size:12.0pt;
+font-family:Consolas;color:black;border:none windowtext 1.0pt;padding:0in'>value=</span><span
+style='font-size:12.0pt;font-family:Consolas;color:blue;border:none windowtext 1.0pt;
+padding:0in'>&quot;@item.TrackId&quot; </span><span style='font-size:12.0pt;
+font-family:Consolas;color:black;border:none windowtext 1.0pt;padding:0in'>checked=</span><span
+style='font-size:12.0pt;font-family:Consolas;color:blue;border:none windowtext 1.0pt;
+padding:0in'>&quot;@item.Selected&quot;</span><span style='font-size:12.0pt;
+font-family:Consolas;color:black;border:none windowtext 1.0pt;padding:0in'>&nbsp;/&gt;&nbsp;</span></p>
+
+</div>
+
+<div style='border:none;border-left:solid #6CE26C 2.25pt;padding:0in 0in 0in 0in;
+background:white;margin-left:15.85pt;margin-right:0in'>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:white;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>5.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>              @item.NameFull&nbsp;&lt;/label&gt;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:#F8F8F8;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>6.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>&nbsp;&nbsp;&nbsp;&lt;&nbsp;/div&gt;&nbsp;&nbsp;</span></p>
+
+</div>
+
+<div style='border:none;border-left:solid #6CE26C 2.25pt;padding:0in 0in 0in 0in;
+background:white;margin-left:15.75pt;margin-right:0in'>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;background:white;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>7.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>}&nbsp;</span></p>
+
+</div>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Returning to the JavaScript <i>toggleGenre()</i>
+function, you can see that it is simple. It selects all nodes in the DOM that
+match the genre (e.g. “div.g14”), and displays them, or not.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>An important concept is that the &lt;input&gt;
+elements are still in the DOM, whether they’re displayed or not. Therefore, the
+browser user’s item selections will be retained, and posted to the server when
+the HTML Form is submitted.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>JavaScript – image preview</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Last week, you&nbsp;learned something
+about&nbsp;non-text media item handling. The <i>PhotoProperty</i>&nbsp;code
+example gently introduced the topic, by enabling you to create Vehicle objects
+that included a photo.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>You will remember how that processed worked,
+from the perspective of the browser user: The HTML Form’s text-and-number
+fields were filled with data, and then the browser user clicked a “Choose”
+button, to open and enable a standard file-selection dialog. Upon selection,
+the dialog was dismissed, and the name of the selected photo&nbsp;appeared next
+to the “Choose” button.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Wouldn’t it be nice to show an image thumbnail
+of the selected photo?</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Yes.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Open and study the <i>PhotoWithPreview</i> code
+example as you read this section.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Design and coding tasks</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The key to making this feature work is to add
+a&nbsp;<i>div</i> container&nbsp;element to the view, probably located just
+below the file-input HTML element. (When the page loads, the element will be
+empty.) Then, we add an event handler to the file-input element, which calls a
+JavaScript function. That function renders an <i>img</i> element inside the <i>div</i>.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Let’s get this done now.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><u><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Add a <i>div</i> container:</span></u><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;As noted above,
+in the vehicle-create view, add a div container, located just below the
+file-input element. It needs a unique identifier.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><u><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Edit the file-input element:</span></u><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;Add an <i>onchange</i>
+event handler, with the name of the JavaScript function that you’ll write next.
+It passes&nbsp;one argument, <i>event</i>. The <i>event</i> object holds all
+the info about the file-input <i>onchange</i> event.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><u><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Write the JavaScript:</span></u><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>&nbsp;In Scripts &gt;
+App, add a source code file to hold JavaScript functions. Make sure that you
+reference it where it’s needed (in the vehicle-create view). Its job is simply
+to render an <i>img</i> element, based on the file (photo) that the browser
+user selected. File (photo) info is found in the event <i>object</i>.</span></p>
+
+<div style='border:none;border-left:solid #6CE26C 2.25pt;padding:0in 0in 0in 0in;
+background:white;margin-left:15.75pt;margin-right:0in'>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:white;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><b><span
+style='font-size:12.0pt;font-family:Consolas;color:#006699;border:none windowtext 1.0pt;
+padding:0in'>function</span></b><span style='font-size:12.0pt;font-family:Consolas;
+color:black;border:none windowtext 1.0pt;padding:0in'>&nbsp;previewImage(event)&nbsp;{</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:#F8F8F8;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>&nbsp;&nbsp;&nbsp;</span><span style='font-size:12.0pt;font-family:
+Consolas;color:#008200;border:none windowtext 1.0pt;padding:0in'>//&nbsp;Get&nbsp;a&nbsp;reference&nbsp;to&nbsp;the&nbsp;image&nbsp;element</span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>&nbsp;&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:white;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>&nbsp;&nbsp;&nbsp;</span><b><span style='font-size:12.0pt;
+font-family:Consolas;color:#006699;border:none windowtext 1.0pt;padding:0in'>var</span></b><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>&nbsp;div&nbsp;=&nbsp;document.querySelector(</span><span
+style='font-size:12.0pt;font-family:Consolas;color:blue;border:none windowtext 1.0pt;
+padding:0in'>&quot;#photoPreview&quot;</span><span style='font-size:12.0pt;
+font-family:Consolas;color:black;border:none windowtext 1.0pt;padding:0in'>);</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:#F8F8F8;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>&nbsp;&nbsp;&nbsp;</span><span style='font-size:12.0pt;font-family:
+Consolas;color:#008200;border:none windowtext 1.0pt;padding:0in'>//&nbsp;Add&nbsp;an&nbsp;img&nbsp;element</span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>&nbsp;&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:white;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>5.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>&nbsp;&nbsp;&nbsp;div.innerHTML&nbsp;=&nbsp;</span><span
+style='font-size:12.0pt;font-family:Consolas;color:blue;border:none windowtext 1.0pt;
+padding:0in'>'&lt;p&gt;&lt;img&nbsp;src=&quot;'</span><span style='font-size:
+12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>&nbsp;+&nbsp;URL.createObjectURL(event.target.files[0])&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:#F8F8F8;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>6.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>                 +&nbsp;</span><span style='font-size:12.0pt;
+font-family:Consolas;color:blue;border:none windowtext 1.0pt;padding:0in'>'&quot;&nbsp;alt=&quot;&quot;&nbsp;width=&quot;300&quot;&gt;&lt;/p&gt;'</span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>&nbsp;&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:white;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>7.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>};&nbsp;&nbsp;</span></p>
+
+</div>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>OK, what else can we do?</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Above, we learned that if there is a task or
+feature that can be implemented only in the browser, with&nbsp;no interaction
+or communication is needed beyond the browser, then we can consider
+using&nbsp;some JavaScript.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>What can we do if we need more or new data from
+the network, but we don’t want to GET or POST and fully refresh the view?</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>We can use Ajax.&nbsp;We’ll study&nbsp;two
+scenarios and code examples:</span></p>
+
+<ol start=1 type=1>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Search</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Cascading (dependent) dropdowns</span></li>
+</ol>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Learning more about Ajax</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In the past, you probably learned that Ajax is
+a <i>web client</i> programming technique that enables JavaScript code to
+asynchronously request new content for the document that’s in the browser.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>To refresh your memory, here are some
+introductory documents that will help you get started with Ajax:</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Wikipedia – </span><a
+href="http://en.wikipedia.org/wiki/Ajax_%28programming%29" target="_blank"><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>Ajax (programming)</span></a></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>MDN – </span><a
+href="https://developer.mozilla.org/en-US/docs/AJAX" target="_blank"><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>AJAX</span></a><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'> info start page</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>MDN – </span><a
+href="https://developer.mozilla.org/en-US/docs/AJAX/Getting_Started"
+target="_blank"><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Getting
+Started</span></a><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>
+(with AJAX)</span></p>
+
+<p class=MsoNormal style='line-height:normal'><a
+href="http://www.adaptivepath.com/ideas/ajax-new-approach-web-applications"
+target="_blank"><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>Ajax
+– A New Approach…</span></a><span style='font-size:12.0pt;font-family:"Arial",sans-serif'>
+(the article that popularized the Ajax technique)</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Ajax – search&nbsp;use case</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>As noted above, JavaScript code can request new
+content. (While beyond the scope of this course, you should be aware that the
+code can also send content to a web app.)</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The new content can be used in the DOM.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>What kind of content? Most often, the new
+content is one of these types:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>HTML</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Data (typically as JSON)</span></li>
+</ul>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In a web app, how does the request get
+serviced?&nbsp;Well, the request is made to a specific resource URL. The
+controller action/method that services that URL composes and returns the
+response.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>When returning HTML, we often use a pattern
+where we return a <i>partial view</i>. This source code container is similar to
+the familiar view, but it is not attached to the _Layout.cshtml template, and
+its intention is to be used as a component within an existing markup container.</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;line-height:normal'><span
+style='font-size:18.0pt;font-family:"Segoe UI Symbol",sans-serif;color:#0070C0'>&#10077;</span><span
+style='font-size:12.0pt;font-family:"Arial",sans-serif'>A partial view contains
+<i>only</i> the markup and code expressions that are needed for a very small
+area of the page.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>For example, assume a scenario where a standard
+view has defined an HTML &lt;div&gt; element. We can separately define a
+partial view, which renders an HTML table, with rows that render items in a
+data set. Then, using Ajax, some browser-based JavaScript code can request the
+partial view, and add it to <i>div</i> in the DOM.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:14.0pt;
+font-family:"Arial",sans-serif'>Assembling the solution</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Open and study the <b><i>SearchMusic</i></b>
+code example as you read this section.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>We need many of the same moving parts that you
+saw in the JavaScript-only code examples, above:</span></p>
+
+<ol start=1 type=1>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>JavaScript code to handle a
+     user-interaction event</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>Edited markup in the “search” view</span></li>
+</ol>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The JavaScript code does the asynchronous
+request to a resource URL. The code example uses a pure JavaScript approach, to
+leverage your introductory level of experience with JavaScript. The use of
+jQuery (as well as unobtrusive JavaScript) is beyond the scope of this course.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>To this, we add one or more actions/methods to
+a controller. An action/method will be a “listener” for a specific resource
+URL. A GET method will have one or more parameters for incoming data. For more
+complex interactions, we should use a POST method, and a package of data thats
+defined by a view model class. (This treatment is beyond the scope of this
+course.)</span></p>
+
+<div style='border:none;border-left:solid #6CE26C 2.25pt;padding:0in 0in 0in 0in;
+background:white;margin-left:15.75pt;margin-right:0in'>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:white;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>[Route(</span><span style='font-size:12.0pt;font-family:Consolas;
+color:blue;border:none windowtext 1.0pt;padding:0in'>&quot;music/tracks/{searchText}&quot;</span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>)]&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:#F8F8F8;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><b><span
+style='font-size:12.0pt;font-family:Consolas;color:#006699;border:none windowtext 1.0pt;
+padding:0in'>public</span></b><span style='font-size:12.0pt;font-family:Consolas;
+color:black;border:none windowtext 1.0pt;padding:0in'>&nbsp;ActionResult&nbsp;Tracks(string&nbsp;searchText&nbsp;=&nbsp;</span><span
+style='font-size:12.0pt;font-family:Consolas;color:blue;border:none windowtext 1.0pt;
+padding:0in'>&quot;&quot;</span><span style='font-size:12.0pt;font-family:Consolas;
+color:black;border:none windowtext 1.0pt;padding:0in'>)&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:white;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>{</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:#F8F8F8;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>&nbsp;&nbsp;&nbsp;</span><span style='font-size:12.0pt;font-family:
+Consolas;color:#008200;border:none windowtext 1.0pt;padding:0in'>//&nbsp;Fetch&nbsp;matching&nbsp;objects</span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>&nbsp;&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:white;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>5.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>&nbsp;&nbsp;&nbsp;</span><b><span style='font-size:12.0pt;
+font-family:Consolas;color:#006699;border:none windowtext 1.0pt;padding:0in'>var</span></b><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>&nbsp;c&nbsp;=&nbsp;m.TrackGetAllByText(searchText);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:#F8F8F8;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>6.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:#5C5C5C'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:white;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>7.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>&nbsp;&nbsp;&nbsp;</span><b><span style='font-size:12.0pt;
+font-family:Consolas;color:#006699;border:none windowtext 1.0pt;padding:0in'>if</span></b><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>&nbsp;(</span><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>c</span><span style='font-size:12.0pt;font-family:Consolas;
+color:black;border:none windowtext 1.0pt;padding:0in'>&nbsp;==&nbsp;</span><b><span
+style='font-size:12.0pt;font-family:Consolas;color:#006699;border:none windowtext 1.0pt;
+padding:0in'>null</span></b><span style='font-size:12.0pt;font-family:Consolas;
+color:black;border:none windowtext 1.0pt;padding:0in'>)</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:#F8F8F8;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>8.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>&nbsp;&nbsp;&nbsp;{</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:white;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>9.<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:#5C5C5C'>&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;</span><span style='font-size:12.0pt;font-family:Consolas;color:#008200;
+border:none windowtext 1.0pt;padding:0in'>//&nbsp;Empty&nbsp;list</span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>&nbsp;&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:#F8F8F8;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>10.<span style='font:7.0pt "Times New Roman"'> </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><b><span
+style='font-size:12.0pt;font-family:Consolas;color:#006699;border:none windowtext 1.0pt;
+padding:0in'>return</span></b><span style='font-size:12.0pt;font-family:Consolas;
+color:black;border:none windowtext 1.0pt;padding:0in'>&nbsp;PartialView(</span><span
+style='font-size:12.0pt;font-family:Consolas;color:blue;border:none windowtext 1.0pt;
+padding:0in'>&quot;_TrackList&quot;</span><span style='font-size:12.0pt;
+font-family:Consolas;color:black;border:none windowtext 1.0pt;padding:0in'>,&nbsp;</span><b><span
+style='font-size:12.0pt;font-family:Consolas;color:#006699;border:none windowtext 1.0pt;
+padding:0in'>new</span></b><span style='font-size:12.0pt;font-family:Consolas;
+color:black;border:none windowtext 1.0pt;padding:0in'>&nbsp;List&lt;TrackBase&gt;&nbsp;());</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:white;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>11.<span style='font:7.0pt "Times New Roman"'> </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:#F8F8F8;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>12.<span style='font:7.0pt "Times New Roman"'> </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>&nbsp;&nbsp;&nbsp;</span><b><span style='font-size:12.0pt;
+font-family:Consolas;color:#006699;border:none windowtext 1.0pt;padding:0in'>else</span></b></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:white;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>13.<span style='font:7.0pt "Times New Roman"'> </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:#5C5C5C'>&nbsp;&nbsp;&nbsp;</span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:#F8F8F8;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>14.<span style='font:7.0pt "Times New Roman"'> </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><b><span
+style='font-size:12.0pt;font-family:Consolas;color:#006699;border:none windowtext 1.0pt;
+padding:0in'>return</span></b><span style='font-size:12.0pt;font-family:Consolas;
+color:black;border:none windowtext 1.0pt;padding:0in'>&nbsp;PartialView(</span><span
+style='font-size:12.0pt;font-family:Consolas;color:blue;border:none windowtext 1.0pt;
+padding:0in'>&quot;_TrackList&quot;</span><span style='font-size:12.0pt;
+font-family:Consolas;color:black;border:none windowtext 1.0pt;padding:0in'>,&nbsp;c);&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:white;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>15.<span style='font:7.0pt "Times New Roman"'> </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:#5C5C5C'>&nbsp;&nbsp;&nbsp;</span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>}&nbsp;&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;background:#F8F8F8;
+border:none;padding:0in'><span style='font-size:12.0pt;font-family:Consolas;
+color:#5C5C5C'>16.<span style='font:7.0pt "Times New Roman"'> </span></span><span
+style='font-size:12.0pt;font-family:Consolas;color:black;border:none windowtext 1.0pt;
+padding:0in'>}&nbsp;&nbsp;</span></p>
+
+</div>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt;line-height:normal'><span
+style='font-size:12.0pt;font-family:"Lucida Console"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The controller action/method will call a
+Manager class method, which returns a collection of zero or more tracks that
+match the text search condition.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>The action/method will return a <i>partial view</i>
+result. We create a partial view in a way that’s similar to a standard view. A
+convention and best practice is to use an underscore ( _ ) as the <i>first
+character</i> in the name of the partial view source code file. (Ah, so that’s
+why _Layout.cshtml and _Login.cshtml are named that way!)</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'><img border=0 width=652 height=361
+id="Picture 1" src="INT422-Lecture11_files/image004.png" alt=partial-view-add></span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>Study the _TrackList.cshtml partial view source
+code. It is created with the <u>List</u> template and accepts an IEnumerable of
+<u>TrackBase</u>, and renders an HTML table. The intention is that it will be
+added to the DOM on the “search” view/page.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>~~~~~</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Arial",sans-serif'>In the next class/session, we’ll look at
+cascading dropdown lists, and get an introduction to web services.</span></p>
+
+<p class=MsoNormal><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>

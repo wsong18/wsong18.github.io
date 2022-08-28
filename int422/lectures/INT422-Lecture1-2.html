@@ -1,0 +1,420 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<title>Lecture 1-2</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Segoe UI Symbol";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+h4
+	{mso-style-link:"Heading 4 Char";
+	margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:#954F72;
+	text-decoration:underline;}
+p
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+code
+	{font-family:"Courier New";}
+span.Heading4Char
+	{mso-style-name:"Heading 4 Char";
+	mso-style-link:"Heading 4";
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink="#954F72" background=bgw.gif>
+
+<div class=WordSection1 
+     style="margin: 0.5in auto; max-width: 50em; min-width: 30em;">
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:18.0pt;
+font-family:"Arial",sans-serif'>INT422 – Lecture 1-2</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Hands-on with Visual Studio.
+Writing a C# class. Working with a controller and views. Begin work on
+Assignment 1.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Typical agenda for Lab&nbsp;sessions</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>On your timetable, this course
+is a four-hour course. The Thursday (section A) or Friday (sections B) session,
+in a computer-lab room, is part of the course. It is not optional, and you
+cannot skip it.&nbsp;In each lab session, there will be in-class grading which
+will make 10% of the assignment mark.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>During our lab&nbsp;sessions,
+we will typically have a mix of discussion/lecture, and hands-on activity. The
+hands-on activity may help you learn the application of a concept or technique,
+and will also typically include some time where you get started on the weekly
+assignment.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Also, the lab sessions give you
+an ideal opportunity to get help from your professor. We&nbsp;can help then, or
+during the&nbsp;“student help time” usually in the same lab room or in the open
+lab. We are&nbsp;not available at 3:00am to help you by email/online, so take
+advantage of the scheduled class times and office hours.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Textbook coverage</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Chapter 2 – Controllers – skim
+the content</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Chapter 3 – Views – skim the
+content</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Code examples</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>For this course, the code
+examples will be published weekly, on the course website.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>During the course’s lifetime,
+about thirty&nbsp;code examples will be published.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>As you have observed, each
+ASP.NET web app or web service project includes a sizable “packages” folder. Each
+code example does not include the “packages” folder, as a time-saving measure.
+Each “packages” folder is about 50MB in size, so twenty code examples would
+require about 1GB storage. The contents of the “packages” folder does not
+compress much.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Therefore, if you have
+downloaded and opened a project in Visual Studio, do a build/compile using Ctrl+Shift+B
+(Build&gt;Build Slution), or start/run the project using Ctrl+F5 (Debug&gt;Start
+Without Debugging) before you begin working with it. These build/compile and
+start/run actions will fetch the packages it needs from the web.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif;color:blue'>All code examples
+are designed to be usable immediately and error-free. Each should compile and
+execute correctly.&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif;color:blue'>If you have any
+problems with a code example, please contact your professor.&nbsp;</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Console applications for
+prototyping and testing</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>A new ASP.NET MVC web app or
+web service project has many files and folders, and “moving parts”. The task of
+quickly prototyping or testing an idea can be burdensome. You have to work with
+a controller, a view, and&nbsp;perhaps other classes (HttpApplication,
+“startup”, or Manager classes).</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>How can you quickly prototype
+or test an idea?</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>With a <em><span
+style='font-family:"Arial",sans-serif'>Console Application</span></em>.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>File &gt; New &gt; Project,
+then in the Visual C# group, choose “<b>Console</b> Application”.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Run a console app with Ctrl+F5
+(Start Without Debugging). It will open a text-based window.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The Console.WriteLine() static
+method will “write” or send text content to standard output.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Use Console.Read() (or
+ReadLine()) to get user input. Or, just code the data you need in variables.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The three Week 1 code examples
+are console apps. Enjoy.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Collections</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Recently, you were introduced
+to the job of writing a class to model a real-world object.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Now, it’s time to learn about
+collections.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>When we work with data in our
+web apps, we are going to do lots of work with <em><span style='font-family:
+"Arial",sans-serif'>objects</span></em>, and <em><span style='font-family:"Arial",sans-serif'>collections
+of objects</span></em>.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In lecture 1, there is a sample
+class <i>Manufacture</i> that have a navigation property <i>Products</i> with
+data type <i>ICollection&lt;Product&gt;</i>. However, the <i>Products</i>
+property is initialized to an object of <i>List&lt;Product&gt;</i>. (why?).
+Both <i>ICollection</i> and <i>List</i> are examples of using collection.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The following is from the MSDN
+Library&nbsp;</span><a
+href="http://msdn.microsoft.com/en-us/library/7y3x785f.aspx" target="_blank"><span
+style='font-family:"Arial",sans-serif'>Collections and Data Structures</span></a><span
+style='font-family:"Arial",sans-serif'>&nbsp;document:</span></p>
+
+<p style='margin-left:.5in'><span style='font-size:18.0pt;font-family:"Segoe UI Symbol",sans-serif;
+color:#0070C0'>&#10077;</span><em><span style='font-family:"Arial",sans-serif;
+font-style:normal'>Closely related data can be handled more efficiently when
+grouped together into a collection. Instead of writing separate code to handle
+each individual object, you can use the same code to process all the elements
+of a collection.</span></em></p>
+
+<p style='margin-left:.5in'><em><span style='font-family:"Arial",sans-serif;
+font-style:normal'>To manage a collection, you can … add, remove, and modify
+either individual elements or a range of elements in the collection.</span></em></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Here’s some more information,
+from the MSDN Library:</span></p>
+
+<p><a href="http://msdn.microsoft.com/en-us/library/0ytkdh4s.aspx"
+target="_blank"><span style='font-family:"Arial",sans-serif'>Commonly Used
+Collection Types</span></a><span style='font-family:"Arial",sans-serif'>&nbsp;(we
+will use ICollection&lt;T&gt;, List&lt;T&gt;, and IEnumerable&lt;T&gt;)</span></p>
+
+<p><a href="http://msdn.microsoft.com/en-us/library/ms172181.aspx"
+target="_blank"><span style='font-family:"Arial",sans-serif'>When To Use
+Generic Collections</span></a></p>
+
+<p><a href="http://msdn.microsoft.com/en-us/library/0x6a29h6.aspx"
+target="_blank"><span style='font-family:"Arial",sans-serif'>Introduction to
+Generics</span></a><span style='font-family:"Arial",sans-serif'>&nbsp;(first
+paragraph only)</span></p>
+
+<p style='margin-left:.5in'><span style='font-size:18.0pt;font-family:"Segoe UI Symbol",sans-serif;
+color:#0070C0'>&#10077;</span><span style='font-family:"Arial",sans-serif'>Note:
+In C++, you are familiar with templates. In C#, this concept is known as
+generics. Same idea, with some differences.</span></p>
+
+<p><a href="http://msdn.microsoft.com/en-us/library/6sh2ey19.aspx"
+target="_blank"><span style='font-family:"Arial",sans-serif'>List&lt;T&gt;
+Class</span></a><span style='font-family:"Arial",sans-serif'>&nbsp;reference</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>A collection can be created and
+used anywhere in your code. We also see collections as data types for some
+properties in data classes.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>When we declare a collection
+property in a data class, we use one of two collection types:</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>For objects that browser users
+interact with, we use the data type <span style='color:red'>IEnumerable&lt;T&gt;.</span></span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>For objects that are defined by
+the persistent store model, we use the data type <span style='color:red'>ICollection&lt;T&gt;.</span></span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The <b>T</b> is a type name <b>placeholder</b>,
+which will be replaced by the actual type of the object in the collection (e.g.
+IEnumerable&lt;Person&gt;, IEnumerable&lt;Vehicle&gt;,
+IEnumerable&lt;Product&gt;, etc.).</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Reference information is
+described in the </span><a
+href="https://msdn.microsoft.com/en-us/library/9eekhta0%28v=vs.110%29.aspx"
+target="_blank"><span style='font-family:"Arial",sans-serif'>IEnumerable&lt;T&gt;</span></a><span
+style='font-family:"Arial",sans-serif'> and&nbsp;</span><a
+href="http://msdn.microsoft.com/en-us/library/92t2ye13%28v=vs.110%29.aspx"
+target="_blank"><span style='font-family:"Arial",sans-serif'>ICollection&lt;T&gt;</span></a><span
+style='font-family:"Arial",sans-serif'>&nbsp;documents. The “Remarks” and
+“Examples” sections of these document will help you learn.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>When you add a collection
+property, you MUST do one other task: In the default constructor, initialize
+the property by using <b>a concrete type</b>.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Both IEnumerable&lt;T&gt; and
+ICollection&lt;T&gt; are&nbsp;</span><a
+href="http://msdn.microsoft.com/en-us/library/ms173156.aspx" target="_blank"><span
+style='font-family:"Arial",sans-serif'>interfaces</span></a><span
+style='font-family:"Arial",sans-serif'>. You can tell, because .NET Framework
+interfaces have an upper-case letter “I” prefix. In C++ programming, you
+learned about an abstract class with pure virtual methods. In C# and the .NET
+Framework, the counterpart is an&nbsp;<em><span style='font-family:"Arial",sans-serif'>interface</span></em>.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>A&nbsp;<em><span
+style='font-family:"Arial",sans-serif'>best practice</span></em>&nbsp;tells us <u>to
+use an interface as the data type</u> when declaring properties in a class.
+However, just as in C++, we cannot initialize an interface. Instead, we must <u>use
+a concrete type that implements/inherits the interface</u>. (Why don’t we just
+declare the property’s data type as the concrete type? Well, it’s not a best
+practice. You’ll understand more later.)</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>So, in a data class that has a
+collection property (probably named “Products”, of data type “Product”), we
+write the following code in the default constructor:</span></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='margin-left:.5in'>
+ <tr>
+  <td style='padding:0in 0in 0in 0in'></td>
+  <td style='padding:0in 0in 0in 0in'>
+  <p class=MsoNormal><code><b><span style='font-size:12.0pt;line-height:107%'>Products
+  = <span style='color:#002060'>new</span></span></b></code><b><span
+  style='font-size:14.0pt;line-height:107%;font-family:"Courier New";
+  color:#002060'> </span></b><code><b><span style='font-size:12.0pt;line-height:
+  107%'>List&lt;Product&gt;();</span></b></code></p>
+  </td>
+ </tr>
+</table>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>More about the Razor View Engine</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The textbook has good coverage
+of this topic in chapter 3, “Views”.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The Razor View Engine is used
+during request processing to generate an HTML response. The view is the source
+code file that contains <em><span style='font-family:"Arial",sans-serif'>markup</span></em>
+and <em><span style='font-family:"Arial",sans-serif'>code expressions</span></em>.</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>The <em><span style='font-family:"Arial",sans-serif'>markup</span></em>
+     language is HTML</span></li>
+ <li class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+     font-family:"Arial",sans-serif'>The <em><span style='font-family:"Arial",sans-serif'>code
+     expression</span></em> language is C#</span></li>
+</ul>
+
+<p><span style='font-family:"Arial",sans-serif'>Begin a code expression with
+the ‘at’ sign, @. Then use C#. Razor will transition back to markup at the end
+of the code expression (in most situations).</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>In a view, the “Model” property
+is the strongly-typed model object that is passed in from the controller:</span></p>
+
+<p style='margin-left:.5in'><span style='font-size:18.0pt;font-family:"Segoe UI Symbol",sans-serif;
+color:#0070C0'>&#10077;</span><i><span style='font-family:"Arial",sans-serif'>The
+first line of code in the view should declare the model object’s type…<br>
+<b>@model</b> IEnumerable&lt;MyProject.Controllers.PersonBase&gt;</span></i></p>
+
+<p style='margin-left:.5in'><i><span style='font-family:"Arial",sans-serif'>Then,
+in the markup, it is dereferenced with “<b>Model</b>”.</span></i></p>
+
+<p style='margin-left:.5in'><i><span style='font-family:"Arial",sans-serif'>Notice
+the difference – in the declaration, “model” begins with a lower-case letter.
+However, the “Model” property begins with an upper-case letter.</span></i></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The “ViewBag” property provides
+access to other data that is passed in from the controller. It is dereferenced
+with “@ViewBag”. You should try to avoid its frequent use.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>A multi-line code expression is
+placed in a code block: <b><span style='background:yellow'>@{ }</span></b></span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Use parentheses to remove
+ambiguity: @( )</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Introduction to “scaffolding”</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>This is a feature of the
+framework that’s well-loved by developers.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Question – what web app
+programming task is annoying?</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Answer – for most people, its
+programming pages that perform common data operations – get-all, get-one,
+create, update, and delete.</span></p>
+
+<p><a href="http://www.wikiwand.com/en/Scaffold_%28programming%29"
+target="_blank"><span style='font-family:"Arial",sans-serif'>Scaffolding</span></a><span
+style='font-family:"Arial",sans-serif'> helps address this task. We can build
+controllers easier, and views easier. Although some of the results may not make
+a web designer happy, they enable us to get results fast, and build a base that
+can be extended.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The ASP.NET MVC designers
+didn’t invent this approach. It was a well-established feature by the time they
+got started in 2009. Every major web app framework does this now.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:normal'><b><span style='font-size:16.0pt;
+font-family:"Arial",sans-serif;color:#002060'>Work on Assignment 1</span></b></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Your professor will guide
+students as we get started on Assignment 1.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>The assignment specifications
+document is much longer than it will be for later assignments. Why? We want to
+include details and screenshots to help you get started in a productive and
+informed manner. We also use it to teach you some things about ASP.NET MVC web
+apps, as you work on the assignment. Have fun.</span></p>
+
+<p><span style='font-family:"Arial",sans-serif'>Before you leave the room at
+the end of the time slot, ensure that your professor has checked your work, for
+the&nbsp;<em><span style='font-family:"Arial",sans-serif'>in-class grading</span></em>&nbsp;part
+of the assignment.</span></p>
+
+<p class=MsoNormal><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+# rmic is the RMI Compiler
+#
+#   rmic compiles the stub file (which is deployed on the client side) necessary
+#   to communicate with the client using the JRMP stub protocol to support
+#   the RMI communication with the remote object/service
+#
+#   In java releases prior to V1.5 rmic also generated a skeleton file
+#   (which needed to be deployed on the server side of the application) to
+#   support the RMI communications with the client.  Much of the RMI
+#   documentation still refers to the skeleton concept ... but in Java 1.5
+#   or later the stub  needs to be deployed at both the client and server
+#   ends of the communication
+#
+#   The input to the compiler is the implementation object *.class file
+#
+#   (rmic needs to use the same CLASSPATH as the compiles of the interface
+#   and implementation and that used at run-time otherwise errors will
+#   happen.  
+#
+
+rmic CalculatorImpl

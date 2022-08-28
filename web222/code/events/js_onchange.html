@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <title>WEB222</title>
+   <style> 
+      body { margin: 0 18%; }
+   </style>
+   <script>
+	  window.onload = function() {		 
+		 document.querySelector("#fullname").onchange = setOutput1;
+		 document.querySelector("#colors").addEventListener( "change", setOutput2 );
+	  }
+	 
+	  function setOutput1() {
+		 document.querySelector("#output").innerHTML
+		    = "onchange event was trigger from the input box - <mark>"
+			+  document.querySelector("#fullname").value + "</mark> was entered."    
+      }
+	  
+	  function setOutput2() {
+		 document.querySelector("#output").innerHTML
+		    = "onchange event was trigger from the Dropdone list - <mark>"
+			+ document.querySelector("#colors").options[document.querySelector("#colors").selectedIndex].text
+			+ "</mark> color was selected." 
+      }
+   </script>
+</head>
+<body>
+  <h3>Example: onchange event handler</h3>
+  
+  <!-- Start of example -->
+  <form name='form1' action='#'>
+    <p>Name (First & Last)
+	  <input type='text' name='fullname' id='fullname' >
+	  <!--input type='text' name='fullname' id='fullname' onchange='setOutput1()' -->
+	</p>
+    <br>
+	
+	<select name='colors' id='colors' size='4' >
+	  <option value='0'>Select a color</option>
+	  <option value='1'>Red</option>
+	  <option value='2'>Green</option>
+	  <option value='3'>Blue</option>
+	  <option value='4'>Black</option>
+	</select>
+
+   <p>Output: <span id='output'></span></p>
+   <ul>
+	<li>Notice that the focus is on the input text box when the page is loaded.</li>
+	<li>Click somewhere outside the text box without typing anything inside the text box and see what happens - nothing.</li>
+	<li>Now type something inside the text box then click outside and see what happens.</li>
+   </ul>
+
+ </form>
+<!-- End of example -->
+
+  <br>
+  <!-- for downloading source files -->
+  <p><a href="" Download>Download</a></p>
+</body>
+</html>

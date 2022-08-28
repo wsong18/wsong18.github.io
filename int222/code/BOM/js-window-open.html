@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+   <meta charset="UTF-8" />
+   <title>BOM</title>
+   <style> 
+      body { margin: 0 20%; }
+   </style>
+   <script>
+	  var flyWindow1, flyWindow2, myWindow; // global variables
+	   
+	  function  openFlyWin1() {
+		 var content = "";
+   
+		 content = '<!DOCTYPE html>\n';
+		 content += '<html lang=\"en\">\n';
+		 content += '  <head>\n';
+		 content += '    <meta charset=\"UTF-8\" />\n';
+		 content += '    <title>INT222</title>\n';
+		 content += "   <link rel=\"stylesheet\" type=\"text/css\" href=\"css.css\" />\n";
+		 content += '  </head>\n';
+		 content += '  <body>\n';
+		 content += '   <div>\n';
+		 content += '    <a href="" onclick=window.close();>Close</a>\n';      
+		 content += '   </div>\n';
+		 content += '   <div>\n';
+		 content += '   <h2>INT222</h2>\n'; 
+		 content += '   <p>The window\'s name: <mark><span id=winname></span></mark><p>\n'; 
+		 content += '   </div>\n';
+		 content += '  </body>\n';        
+		 content += ' </html>\n';  
+		 
+		 var str="toolbar=no,menubar=no,scrollbars=yes,resizable=yes,directories=no,status=no,location=no,width=450,height=550";
+		 flyWindow1=window.open('','theOnFlyWindow',str);
+		 flyWindow1.document.writeln(content);
+		 flyWindow1.document.getElementById("winname").innerHTML = flyWindow1.window.name; // window.name property
+		 flyWindow1.document.close(); //closes the output stream to the document.
+		 flyWindow1.theWindow.focus();
+	  }
+	   
+	  function  openFlyWin2() {  
+		 flyWindow2=window.open('','theOnFlyWindow2',"width=220,height=220");
+		 flyWindow2.document.writeln("I am flying!");
+		 flyWindow2.document.close(); //closes the output stream to the document.
+		 flyWindow2.theWindow.focus();
+	  }
+   </script>
+</head>
+<body>
+   <h1>BOM - open and close window Syntax</h1>
+   
+   <h3>The code - Generate on the fly</h3>
+   <pre>
+	  messageWindow=window.open('','window target name','window properties');
+	  messageWindow.document.write(content); 
+	  messageWindow.document.close(); // closes the output stream to the document.
+   </pre>
+   <p>
+	  <input type="button" value="Open 'flyWindow'" onclick="openFlyWin1()" />
+	  <input type="button" value="close" onclick="flyWindow1.close()" />
+   </p>
+   <p>
+	  <input type="button" value="Open 'flyWindow2'" onclick="openFlyWin2()" />
+	  <input type="button" value="close" onclick="flyWindow2.close()" />
+   </p>
+   <hr>
+   
+   <h3>The code - Static</h3>
+   
+   <p>
+	  <input type="button" value="Open a Window" onclick="window.open('http://www.google.com');" />
+   </p>
+   <pre>
+	  window.open('url','window target name','window properties');
+   </pre>  
+   
+   <p>
+	  <input type="button" value="Open 'myWindow'"
+			 onclick="myWindow = window.open('http://www.google.com','MsgWindow','width=400,height=200');" />
+	  <input type="button" value="close" onclick="myWindow.close()" />
+   </p>
+   <pre>
+	  myWindow = window.open('url','window target name','window properties');
+	  myWindow.close()
+   </pre>
+   
+   <hr>
+  
+   <!-- for view-source and download -->
+   <br><p><a href="view-source:">View-source</a> <a href="js-window-open.html" download>Download</a></p>	
+</body>
+
+</html>

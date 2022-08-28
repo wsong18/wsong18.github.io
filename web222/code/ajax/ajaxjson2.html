@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8" />
+   <title>JSON - Example</title>
+   <style>
+      body {width: 80%; margin:auto;}
+      #table-1 tr:first-child td {color: blue; font-weight: bolder; font-family: monospace; font-size:1.2em;}
+      #table-1 tr:nth-child(2n+1) {background: #d8d8d8;}
+      #table-1 tr:nth-child(2n) {background: #f0f0f0;}
+   </style>
+ </head>
+ <body>
+   <h2>The First Nations</h2>
+   <div id="data"></div>
+   <br />
+   <p><button type="button" onclick="makeRequest();">Make a request</button></p>
+   
+   <script type="text/javascript">
+      var httpRequest;
+    
+      function makeRequest() {
+        var url = 'https://scs.senecac.on.ca/~wei.song/web222/code/ajax/nationArray.json'; 
+
+        // make an HTTP request object
+        if (window.XMLHttpRequest) { // Mozilla, Safari, ...
+           httpRequest = new XMLHttpRequest();
+        } else if (window.ActiveXObject) { // Windows Internet Explorer 8
+           httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+    
+        //if (!httpRequest) {
+        //  alert('Giving up :( Cannot create an XMLHTTP instance');
+        //  return false;
+        //}
+        
+        // register a request listener
+        httpRequest.onreadystatechange = showContents;
+        // make the HTTP request 
+        httpRequest.open('GET', url, true);
+        httpRequest.send();
+      }
+    
+      // the function that handles the serve response
+      function showContents() {
+        
+        // check for response state
+        if (httpRequest.readyState === 4) {
+          // check the respone code
+          if (httpRequest.status === 200) {
+
+            // for debugging only
+            console.log(httpRequest.responseText);
+
+            // Javascript function JSON.parse to parse JSON data
+            var jsArray = JSON.parse(httpRequest.responseText);
+			
+            var str = "<table id=table-1>" ;
+			str += "<tr><td>Official Name</td><td>Address</td><td>Postal Code</td><td>Latitude</td><td>Longitude</td><td>Community Site</td></tr>";
+			for (var i=0; i<jsArray.length; i++) { 
+			  str += "<tr><td>" + jsArray[i].OfficialName + "</td>";
+			  str += "<td>" + jsArray[i].Address + "</td>";
+			  str += "<td>" + jsArray[i].PostalCode + "</td>";
+			  str += "<td>" + jsArray[i].CenterLat + "</td>";
+			  str += "<td>" + jsArray[i].CenterLong + "</td>";
+			  str += "<td><a href='" + jsArray[i].CommunitySite + "'>" + jsArray[i].CommunitySite + "</a></td></tr>";
+			}
+			str += "</table>";
+			document.querySelector("#data").innerHTML = str;
+            document.querySelector("button").style.display = "none";
+          } else {
+            alert('There was a problem with the request.');
+          }
+        }
+      }
+   </script>
+   
+   <!-- for downloading source files --><br><br>
+   <p>
+     <a href="" Download>Download</a>&nbsp;&nbsp;
+     <a href="nationArray.json" Download>Download JSON data</a>
+   </p>
+ </body>
+</html>
