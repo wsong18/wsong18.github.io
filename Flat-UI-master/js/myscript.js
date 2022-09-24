@@ -1,8 +1,13 @@
 function drawCalendar(pars) {
     var months = ['January','February','March','April','May','June','July',
                   'August','September','October','November','December'];
-    var days =  ['Sunday','Monday','Tuesday','Wednesday', 'Thursday','Friday','Saturday'];
+    var days = ['Sunday','Monday','Tuesday','Wednesday', 'Thursday','Friday','Saturday'];
+    var semesters = ['Winter','Summer','Fall'];
+    
     var today = new Date();
+    
+    // shows current semester, e.g. "Fall 2022"
+    $('#semester').html(semesters[Math.floor(today.getMonth()/4)] + " " + today.getFullYear());
     
     var canvas = document.getElementById("calendarCanvas");
     if (canvas.getContext) {
@@ -94,7 +99,7 @@ function init(args) {
     else {
         highlightWeekRow(args);    
     }
-    
+
 }
 
 
