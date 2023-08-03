@@ -4,22 +4,41 @@
   <meta charset="UTF-8" />
   <title>Centering Vertically</title>
   <style type="text/css">
-	 div { height: 100px; width: 500px; }
+    div.center {
+      height: 100px; width: 500px; 
+      border: 10px dotted red;
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+    }
 
-	 div.center {
-	   border: 10px dotted red;
-	   display: table-cell;
-	   vertical-align: middle;
-	   text-align: center;
-	 }
+    .container {
+      margin: 0 auto;
+      height: 200px; width: 500px; 
+      border: 5px dotted lightblue;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .item {
+      width: 10em;
+      border: lightblue solid;
+    }
 
   </style>
 </head>
 <body>
   <h3>CSS Example: Centering Content vertically in a block </h3>
   
-  <div class="center"> This Text Content is centered vertically and horizontally</div>
+  <div class="center"> 
+    This Text Content is centered vertically and horizontally
+  </div>
+  <br><br>
 
+  <div class="container">
+    <div class="item">I am centered, too!</div>
+  </div>
   <!-- for download -->
   <br><p><a href='' download>Download</a></p> 
 </body>

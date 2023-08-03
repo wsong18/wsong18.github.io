@@ -4,26 +4,42 @@
    <meta charset="UTF-8" />
    <title>CSS Square and Ball</title>
    <style>
-	  #se {
-		 box-shadow: 5px 5px 5px #303030;
-		 border: 5px solid red; color: red;
-	  }
-	  
-	  #co {
-		 border: 5px dashed black;
-		 text-decoration:underline;
-		 background-color: lightgreen;
-		 border-radius:20% 20% 0 0;
-		 
-	  }
-	  #ball {
-		 background-color:#4545ff;
-		 border-radius:50%;
-		 box-shadow: -6px -6px 15px rgba(0,0,0,.8) inset;
-	     width: 50px;
-		 height: 50px;
-	  }
-	  span { padding:1em; margin:1em; }
+		#se {
+			box-shadow: 5px 5px 5px #303030;
+			border: 5px solid red; color: red;
+		}
+		
+		#co {
+			border: 5px dashed black;
+			text-decoration:underline;
+			background-color: lightgreen;
+			border-radius:20% 20% 0 0;
+			
+		}
+		#ball {
+			background-color:#4545ff;
+			border-radius:50%;
+			box-shadow: -6px -6px 15px rgba(0,0,0,.8) inset;
+			width: 50px;
+			height: 50px;
+		}
+		span { padding:1em; margin:1em; }
+
+		#img01 {
+			border-radius: 50%;
+			width: 220px;
+		}
+
+		#img02 {
+			border: 1px solid #d1d1d1;
+			border-radius: 6px;
+			padding: 6px;
+			width: 220px;
+		}
+
+		#img02:hover {
+			box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+		}
 	</style>
 </head>
 <body>
@@ -35,7 +51,15 @@
   </p>
   <br>
   <div id=ball></div>
+  <br><br>
+
+  <img src="css-mednatgeo11.jpg" alt="Skiing" id="img01">
+  <br><br>
   
+  <p>Thumbnail Image:</p>
+  <img src="css-mednatgeo11.jpg" alt="Skiing" id="img02">
+
+
   <!-- for download -->
   <br><p><a href='' download>Download</a></p> 
 </body>
