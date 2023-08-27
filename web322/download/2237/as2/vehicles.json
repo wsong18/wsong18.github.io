@@ -4,16 +4,16 @@
       "year": 2016,
       "make": "Honda",
       "model": "Accord",
-      "category": "Sedan",
+      "category": "Truck",
       "color": "Orange",
       "navigation": true,
-      "fuelEconomyCity": 16.78,
-      "fuelEconomyHighway": 16.4,
-      "price": 20272.59,
+      "fuelEconomyCity": 24.78,
+      "fuelEconomyHighway": 52.4,
+      "price": 50272.59,
       "horsepower": 107,
       "drivetrain": "Rear",
       "powertrain": "Diesel",
-      "registrationDate": "6/23/2023"
+      "registrationDate": "2023-6-23"
     },
     {
       "VIN": "3VW1K7AJXFM870355",
@@ -23,13 +23,13 @@
       "category": "Coupe",
       "color": "Fuscia",
       "navigation": false,
-      "fuelEconomyCity": 13.32,
-      "fuelEconomyHighway": 13.48,
-      "price": 21014.93,
+      "fuelEconomyCity": 39.32,
+      "fuelEconomyHighway": 23.48,
+      "price": 71014.93,
       "horsepower": 94,
       "drivetrain": "AWD",
       "powertrain": "Gasoline",
-      "registrationDate": "10/28/2020"
+      "registrationDate": "2020-10-28"
     },
     {
       "VIN": "2G4GS5EV0C9043074",
@@ -39,13 +39,13 @@
       "category": "Convertible",
       "color": "Goldenrod",
       "navigation": true,
-      "fuelEconomyCity": 12.12,
-      "fuelEconomyHighway": 13.75,
+      "fuelEconomyCity": 15.12,
+      "fuelEconomyHighway": 55.75,
       "price": 15452.27,
-      "horsepower": 123,
+      "horsepower": 223,
       "drivetrain": "Rear",
       "powertrain": "Hybrid",
-      "registrationDate": "2/21/2020"
+      "registrationDate": "2020-2-21"
     },
     {
       "VIN": "1FTEW1CF0FF306113",
@@ -57,11 +57,11 @@
       "navigation": true,
       "fuelEconomyCity": 31.41,
       "fuelEconomyHighway": 32.64,
-      "price": 12232.14,
-      "horsepower": 248,
+      "price": 22232.14,
+      "horsepower": 148,
       "drivetrain": "Front",
       "powertrain": "Hybrid",
-      "registrationDate": "8/25/2020"
+      "registrationDate": "2020-8-25"
     },
     {
       "VIN": "1D4SD6GT5BC581418",
@@ -73,11 +73,11 @@
       "navigation": false,
       "fuelEconomyCity": 27.49,
       "fuelEconomyHighway": 29.05,
-      "price": 21785.34,
+      "price": 71785.34,
       "horsepower": 194,
       "drivetrain": "AWD",
       "powertrain": "Diesel",
-      "registrationDate": "3/30/2023"
+      "registrationDate": "2023-3-30"
     },
     {
       "VIN": "WAUKFBFL7EN788271",
@@ -87,13 +87,13 @@
       "category": "SUV",
       "color": "Fuscia",
       "navigation": false,
-      "fuelEconomyCity": null,
-      "fuelEconomyHighway": null,
-      "price": 21574.03,
+      "fuelEconomyCity": 11.71,
+      "fuelEconomyHighway": 32.86,
+      "price": 61574.03,
       "horsepower": 93,
       "drivetrain": "Rear",
       "powertrain": "EV",
-      "registrationDate": "4/26/2021"
+      "registrationDate": "2021-4-26"
     },
     {
       "VIN": "3VW1K7AJXDM247993",
@@ -103,12 +103,13 @@
       "category": "Coupe",
       "color": "Khaki",
       "navigation": true,
-      "fuelEconomyCity": null,
-      "fuelEconomyHighway": null,
+      "fuelEconomyCity": 11.01,
+      "fuelEconomyHighway": 31.72,
+      "price": 46431.09,
       "horsepower": 165,
-      "drivetrain": "Front",
+      "drivetrain": "AWD",
       "powertrain": "EV",
-      "registrationDate": "1/21/2022"
+      "registrationDate": "2022-1-21"
     },
     {
       "VIN": "1GYFC56259R649819",
@@ -124,7 +125,7 @@
       "horsepower": 217,
       "drivetrain": "AWD",
       "powertrain": "Hybrid",
-      "registrationDate": "4/3/2020"
+      "registrationDate": "2020-4-3"
     },
     {
       "VIN": "WDBSK7BA1CF127129",
@@ -140,7 +141,7 @@
       "horsepower": 205,
       "drivetrain": "AWD",
       "powertrain": "Gasoline",
-      "registrationDate": "6/21/2023"
+      "registrationDate": "2023-6-21"
     },
     {
       "VIN": "5BZBF0AA1FN493603",
@@ -150,13 +151,13 @@
       "category": "Truck",
       "color": "Puce",
       "navigation": true,
-      "fuelEconomyCity": null,
-      "fuelEconomyHighway": null,
+      "fuelEconomyCity": 11.6,
+      "fuelEconomyHighway": 26.36,
       "price": 11708.71,
       "horsepower": 99,
       "drivetrain": "Front",
       "powertrain": "EV",
-      "registrationDate": "4/17/2023"
+      "registrationDate": "2023-4-17"
     },
     {
       "VIN": "19UYA42512A234470",
@@ -172,7 +173,7 @@
       "horsepower": 109,
       "drivetrain": "AWD",
       "powertrain": "Other",
-      "registrationDate": "12/30/2022"
+      "registrationDate": "2022-12-30"
     },
     {
       "VIN": "3C6JD6CT3CG898103",
@@ -188,7 +189,7 @@
       "horsepower": 74,
       "drivetrain": "Rear",
       "powertrain": "Other",
-      "registrationDate": "1/4/2021"
+      "registrationDate": "2021-1-4"
     },
     {
       "VIN": "5FRYD4H44FB754131",
@@ -204,7 +205,7 @@
       "horsepower": 157,
       "drivetrain": "Rear",
       "powertrain": "Diesel",
-      "registrationDate": "8/24/2021"
+      "registrationDate": "2021-8-24"
     },
     {
       "VIN": "1B3CB8HBXBD944557",
@@ -220,7 +221,7 @@
       "horsepower": 142,
       "drivetrain": "Rear",
       "powertrain": "Other",
-      "registrationDate": "6/1/2023"
+      "registrationDate": "2023-6-1"
     },
     {
       "VIN": "JM1CR2W32A0778981",
@@ -230,13 +231,13 @@
       "category": "Sedan",
       "color": "Indigo",
       "navigation": true,
-      "fuelEconomyCity": null,
-      "fuelEconomyHighway": null,
+      "fuelEconomyCity": 14.77,
+      "fuelEconomyHighway": 56.56,
       "price": 22615.06,
       "horsepower": 184,
       "drivetrain": "Front",
       "powertrain": "EV",
-      "registrationDate": "3/14/2021"
+      "registrationDate": "2021-3-14"
     },
     {
       "VIN": "19UUA56753A493254",
@@ -246,13 +247,13 @@
       "category": "Coupe",
       "color": "Fuscia",
       "navigation": false,
-      "fuelEconomyCity": null,
-      "fuelEconomyHighway": null,
+      "fuelEconomyCity": 12.28,
+      "fuelEconomyHighway": 52.27,
       "price": 11104.03,
       "horsepower": 99,
       "drivetrain": "AWD",
       "powertrain": "EV",
-      "registrationDate": "12/18/2022"
+      "registrationDate": "2022-12-18"
     },
     {
       "VIN": "WAUAGAFD8DN378816",
@@ -262,13 +263,13 @@
       "category": "Convertible",
       "color": "Red",
       "navigation": false,
-      "fuelEconomyCity": null,
-      "fuelEconomyHighway": null,
+      "fuelEconomyCity": 31.74,
+      "fuelEconomyHighway": 49.39,
       "price": 50951.65,
       "horsepower": 110,
       "drivetrain": "Front",
       "powertrain": "EV",
-      "registrationDate": "10/27/2022"
+      "registrationDate": "2022-10-27"
     },
     {
       "VIN": "WAUUL98E68A550481",
@@ -284,7 +285,7 @@
       "horsepower": 123,
       "drivetrain": "AWD",
       "powertrain": "Diesel",
-      "registrationDate": "11/3/2021"
+      "registrationDate": "2021-11-3"
     },
     {
       "VIN": "3GTU2YEJ3DG304775",
@@ -300,7 +301,7 @@
       "horsepower": 126,
       "drivetrain": "Rear",
       "powertrain": "Hybrid",
-      "registrationDate": "5/7/2020"
+      "registrationDate": "2020-5-7"
     },
     {
       "VIN": "WBS3U9C51FJ612264",
@@ -316,7 +317,7 @@
       "horsepower": 210,
       "drivetrain": "Rear",
       "powertrain": "Gasoline",
-      "registrationDate": "1/1/2021"
+      "registrationDate": "2021-1-1"
     },
     {
       "VIN": "WDDEJ7GB8DA586634",
@@ -332,7 +333,7 @@
       "horsepower": 204,
       "drivetrain": "Rear",
       "powertrain": "Gasoline",
-      "registrationDate": "3/16/2023"
+      "registrationDate": "2023-3-16"
     },
     {
       "VIN": "5N1AT2ML7EC559896",
@@ -348,7 +349,7 @@
       "horsepower": 63,
       "drivetrain": "Front",
       "powertrain": "Gasoline",
-      "registrationDate": "1/5/2022"
+      "registrationDate": "2022-1-5"
     },
     {
       "VIN": "SALVP2BG9FH015011",
@@ -364,7 +365,7 @@
       "horsepower": 65,
       "drivetrain": "AWD",
       "powertrain": "Gasoline",
-      "registrationDate": "10/8/2020"
+      "registrationDate": "2020-10-8"
     },
     {
       "VIN": "5J6TF1H59DL313113",
@@ -374,13 +375,13 @@
       "category": "Sedan",
       "color": "Crimson",
       "navigation": true,
-      "fuelEconomyCity": null,
-      "fuelEconomyHighway": null,
+      "fuelEconomyCity": 29.23,
+      "fuelEconomyHighway": 56.45,
       "price": 63228.27,
       "horsepower": 53,
       "drivetrain": "Front",
       "powertrain": "EV",
-      "registrationDate": "5/9/2022"
+      "registrationDate": "2022-5-9"
     },
     {
       "VIN": "1G6KD57928U892225",
@@ -396,7 +397,7 @@
       "horsepower": 53,
       "drivetrain": "AWD",
       "powertrain": "Other",
-      "registrationDate": "1/18/2021"
+      "registrationDate": "2021-1-18"
     },
     {
       "VIN": "1N6AA0ED8FN409420",
@@ -412,7 +413,7 @@
       "horsepower": 83,
       "drivetrain": "AWD",
       "powertrain": "Other",
-      "registrationDate": "7/28/2022"
+      "registrationDate": "2022-7-28"
     },
     {
       "VIN": "KMHCT4AE0EU223320",
@@ -428,7 +429,7 @@
       "horsepower": 217,
       "drivetrain": "Front",
       "powertrain": "Diesel",
-      "registrationDate": "11/4/2022"
+      "registrationDate": "2022-11-4"
     },
     {
       "VIN": "NM0KS9BN8CT523752",
@@ -444,7 +445,7 @@
       "horsepower": 66,
       "drivetrain": "Rear",
       "powertrain": "Other",
-      "registrationDate": "7/29/2023"
+      "registrationDate": "2023-7-29"
     },
     {
       "VIN": "3C3CFFAR5CT378306",
@@ -460,7 +461,7 @@
       "horsepower": 51,
       "drivetrain": "Front",
       "powertrain": "Diesel",
-      "registrationDate": "8/27/2022"
+      "registrationDate": "2022-8-27"
     },
     {
       "VIN": "WBA5A7C52FG396349",
@@ -476,7 +477,7 @@
       "horsepower": 196,
       "drivetrain": "Front",
       "powertrain": "Hybrid",
-      "registrationDate": "8/4/2020"
+      "registrationDate": "2020-8-4"
     },
     {
       "VIN": "SCBLC31E11C478205",
@@ -492,7 +493,7 @@
       "horsepower": 145,
       "drivetrain": "AWD",
       "powertrain": "Other",
-      "registrationDate": "2/28/2021"
+      "registrationDate": "2021-2-28"
     },
     {
       "VIN": "WAUPEAFM5AA151067",
@@ -508,7 +509,7 @@
       "horsepower": 133,
       "drivetrain": "Front",
       "powertrain": "Gasoline",
-      "registrationDate": "3/24/2023"
+      "registrationDate": "2023-3-24"
     },
     {
       "VIN": "WAUSFAFL5AA382081",
@@ -518,13 +519,13 @@
       "category": "SUV",
       "color": "Aquamarine",
       "navigation": false,
-      "fuelEconomyCity": null,
-      "fuelEconomyHighway": null,
+      "fuelEconomyCity": 23.25,
+      "fuelEconomyHighway": 43.73,
       "price": 60866.22,
       "horsepower": 78,
       "drivetrain": "Rear",
       "powertrain": "EV",
-      "registrationDate": "6/14/2020"
+      "registrationDate": "2020-6-14"
     },
     {
       "VIN": "KNADH4A37A6916339",
@@ -540,7 +541,7 @@
       "horsepower": 234,
       "drivetrain": "Front",
       "powertrain": "Hybrid",
-      "registrationDate": "5/12/2023"
+      "registrationDate": "2023-5-12"
     },
     {
       "VIN": "WBADR63433G846222",
@@ -556,7 +557,7 @@
       "horsepower": 288,
       "drivetrain": "Front",
       "powertrain": "Gasoline",
-      "registrationDate": "2/26/2021"
+      "registrationDate": "2021-2-26"
     },
     {
       "VIN": "WAUVC58E32A861774",
@@ -566,13 +567,13 @@
       "category": "Sedan",
       "color": "Red",
       "navigation": true,
-      "fuelEconomyCity": null,
-      "fuelEconomyHighway": null,
+      "fuelEconomyCity": 24.65,
+      "fuelEconomyHighway": 51.01,
       "price": 42603.33,
       "horsepower": 84,
       "drivetrain": "AWD",
       "powertrain": "EV",
-      "registrationDate": "1/10/2021"
+      "registrationDate": "2021-1-10"
     },
     {
       "VIN": "WA1VGAFP3EA965880",
@@ -582,13 +583,13 @@
       "category": "Coupe",
       "color": "Mauv",
       "navigation": false,
-      "fuelEconomyCity": null,
-      "fuelEconomyHighway": null,
+      "fuelEconomyCity": 22.2,
+      "fuelEconomyHighway": 58.72,
       "price": 53051.17,
       "horsepower": 105,
       "drivetrain": "Front",
       "powertrain": "EV",
-      "registrationDate": "5/1/2021"
+      "registrationDate": "2021-5-1"
     },
     {
       "VIN": "1FMJK1G55EE659474",
@@ -604,7 +605,7 @@
       "horsepower": 82,
       "drivetrain": "Rear",
       "powertrain": "Other",
-      "registrationDate": "2/19/2020"
+      "registrationDate": "2020-2-19"
     },
     {
       "VIN": "2C4RVAAG9CR795344",
@@ -620,7 +621,7 @@
       "horsepower": 80,
       "drivetrain": "Rear",
       "powertrain": "Other",
-      "registrationDate": "6/12/2022"
+      "registrationDate": "2022-6-12"
     },
     {
       "VIN": "WBAXH5C59DD297129",
@@ -636,7 +637,7 @@
       "horsepower": 140,
       "drivetrain": "AWD",
       "powertrain": "Gasoline",
-      "registrationDate": "6/11/2022"
+      "registrationDate": "2022-6-11"
     },
     {
       "VIN": "KL4CJFSB7EB282980",
@@ -652,7 +653,7 @@
       "horsepower": 219,
       "drivetrain": "AWD",
       "powertrain": "Gasoline",
-      "registrationDate": "6/22/2022"
+      "registrationDate": "2022-6-22"
     },
     {
       "VIN": "1G6DL8EG3A0892357",
@@ -668,14 +669,14 @@
       "horsepower": 257,
       "drivetrain": "Front",
       "powertrain": "Other",
-      "registrationDate": "5/25/2023"
+      "registrationDate": "2023-5-25"
     },
     {
       "VIN": "ZHWGU5BZ6CL158820",
       "year": 2018,
       "make": "Toyota",
       "model": "Avalon",
-      "category": "Truck",
+      "category": "Sedan",
       "color": "Blue",
       "navigation": true,
       "fuelEconomyCity": 31.75,
@@ -684,7 +685,7 @@
       "horsepower": 188,
       "drivetrain": "AWD",
       "powertrain": "Hybrid",
-      "registrationDate": "12/17/2021"
+      "registrationDate": "2021-12-17"
     },
     {
       "VIN": "KNDKG3A24A7317794",
@@ -700,7 +701,7 @@
       "horsepower": 295,
       "drivetrain": "AWD",
       "powertrain": "Other",
-      "registrationDate": "3/6/2022"
+      "registrationDate": "2022-3-6"
     },
     {
       "VIN": "3VW517AT2EM963326",
@@ -716,7 +717,7 @@
       "horsepower": 110,
       "drivetrain": "Front",
       "powertrain": "Hybrid",
-      "registrationDate": "3/2/2021"
+      "registrationDate": "2021-3-2"
     },
     {
       "VIN": "WA1CV94L97D989842",
@@ -732,7 +733,7 @@
       "horsepower": 124,
       "drivetrain": "Front",
       "powertrain": "Hybrid",
-      "registrationDate": "9/14/2022"
+      "registrationDate": "2022-9-14"
     },
     {
       "VIN": "KMHFC4DD5BA974023",
@@ -748,7 +749,7 @@
       "horsepower": 253,
       "drivetrain": "Front",
       "powertrain": "Hybrid",
-      "registrationDate": "10/30/2021"
+      "registrationDate": "2021-10-30"
     },
     {
       "VIN": "WA1YD64B74N448826",
@@ -764,7 +765,7 @@
       "horsepower": 227,
       "drivetrain": "AWD",
       "powertrain": "Other",
-      "registrationDate": "11/30/2021"
+      "registrationDate": "2021-11-30"
     },
     {
       "VIN": "3D7TP2CT2AG996379",
@@ -780,7 +781,7 @@
       "horsepower": 68,
       "drivetrain": "Rear",
       "powertrain": "Gasoline",
-      "registrationDate": "5/23/2021"
+      "registrationDate": "2021-5-23"
     },
     {
       "VIN": "WP0CA2A89FK569968",
@@ -796,7 +797,7 @@
       "horsepower": 69,
       "drivetrain": "AWD",
       "powertrain": "Gasoline",
-      "registrationDate": "8/15/2023"
+      "registrationDate": "2023-8-15"
     },
     {
       "VIN": "4T1BF1FK8EU196089",
@@ -806,13 +807,13 @@
       "category": "Sedan",
       "color": "Turquoise",
       "navigation": false,
-      "fuelEconomyCity": null,
-      "fuelEconomyHighway": null,
+      "fuelEconomyCity": 13.98,
+      "fuelEconomyHighway": 18.32,
       "price": 35410.54,
       "horsepower": 163,
       "drivetrain": "Rear",
       "powertrain": "EV",
-      "registrationDate": "4/14/2020"
+      "registrationDate": "2020-4-14"
     },
     {
       "VIN": "WAULT64B74N002093",
@@ -822,13 +823,13 @@
       "category": "SUV",
       "color": "Blue",
       "navigation": false,
-      "fuelEconomyCity": null,
-      "fuelEconomyHighway": null,
+      "fuelEconomyCity": 29.78,
+      "fuelEconomyHighway": 26.8,
       "price": 69487.28,
       "horsepower": 191,
       "drivetrain": "AWD",
       "powertrain": "Other",
-      "registrationDate": "5/29/2020"
+      "registrationDate": "2020-5-29"
     },
     {
       "VIN": "WAUWFAFR5AA813041",
@@ -844,7 +845,7 @@
       "horsepower": 80,
       "drivetrain": "Front",
       "powertrain": "Hybrid",
-      "registrationDate": "7/26/2021"
+      "registrationDate": "2021-7-26"
     },
     {
       "VIN": "SCFEBBBK0EG031338",
@@ -860,7 +861,7 @@
       "horsepower": 207,
       "drivetrain": "AWD",
       "powertrain": "Other",
-      "registrationDate": "3/26/2020"
+      "registrationDate": "2020-3-26"
     },
     {
       "VIN": "3N1BC1CP4CK136369",
@@ -876,7 +877,7 @@
       "horsepower": 78,
       "drivetrain": "AWD",
       "powertrain": "Diesel",
-      "registrationDate": "2/10/2021"
+      "registrationDate": "2021-2-10"
     },
     {
       "VIN": "JN1BV7AP5FM055210",
@@ -892,7 +893,7 @@
       "horsepower": 291,
       "drivetrain": "Rear",
       "powertrain": "Hybrid",
-      "registrationDate": "4/25/2022"
+      "registrationDate": "2022-4-25"
     },
     {
       "VIN": "SALSF2D44CA145257",
@@ -908,7 +909,7 @@
       "horsepower": 266,
       "drivetrain": "AWD",
       "powertrain": "Diesel",
-      "registrationDate": "1/11/2022"
+      "registrationDate": "2022-1-11"
     },
     {
       "VIN": "JM1DE1HY5B0105946",
@@ -924,7 +925,7 @@
       "horsepower": 116,
       "drivetrain": "AWD",
       "powertrain": "Hybrid",
-      "registrationDate": "12/4/2020"
+      "registrationDate": "2020-12-4"
     },
     {
       "VIN": "WDDEJ8GB2AA574822",
@@ -940,7 +941,7 @@
       "horsepower": 57,
       "drivetrain": "Rear",
       "powertrain": "Other",
-      "registrationDate": "10/10/2022"
+      "registrationDate": "2022-10-10"
     },
     {
       "VIN": "3VW517AT5FM801708",
@@ -956,7 +957,7 @@
       "horsepower": 161,
       "drivetrain": "Front",
       "powertrain": "Hybrid",
-      "registrationDate": "3/8/2021"
+      "registrationDate": "2021-3-8"
     },
     {
       "VIN": "5J6TF1H53EL136172",
@@ -972,7 +973,7 @@
       "horsepower": 51,
       "drivetrain": "AWD",
       "powertrain": "Hybrid",
-      "registrationDate": "7/13/2023"
+      "registrationDate": "2023-7-13"
     },
     {
       "VIN": "1G6DC8EY8B0817583",
@@ -988,7 +989,7 @@
       "horsepower": 194,
       "drivetrain": "Rear",
       "powertrain": "Other",
-      "registrationDate": "12/27/2021"
+      "registrationDate": "2021-12-27"
     },
     {
       "VIN": "SAJWA4DB5EL582582",
@@ -1004,7 +1005,7 @@
       "horsepower": 236,
       "drivetrain": "AWD",
       "powertrain": "Diesel",
-      "registrationDate": "10/9/2022"
+      "registrationDate": "2022-10-9"
     },
     {
       "VIN": "2G61R5S33F9661554",
@@ -1014,13 +1015,13 @@
       "category": "Convertible",
       "color": "Turquoise",
       "navigation": true,
-      "fuelEconomyCity": null,
-      "fuelEconomyHighway": null,
+      "fuelEconomyCity": 19.42,
+      "fuelEconomyHighway": 51.8,
       "price": 52711.83,
       "horsepower": 275,
       "drivetrain": "Rear",
       "powertrain": "EV",
-      "registrationDate": "4/15/2022"
+      "registrationDate": "2022-4-15"
     },
     {
       "VIN": "WBAPH7C51AE213743",
@@ -1036,7 +1037,7 @@
       "horsepower": 53,
       "drivetrain": "AWD",
       "powertrain": "Hybrid",
-      "registrationDate": "6/24/2023"
+      "registrationDate": "2023-6-24"
     },
     {
       "VIN": "WAUVFAFH8AN401966",
@@ -1052,7 +1053,7 @@
       "horsepower": 120,
       "drivetrain": "Front",
       "powertrain": "Diesel",
-      "registrationDate": "3/1/2022"
+      "registrationDate": "2022-3-1"
     },
     {
       "VIN": "WBASN0C54DD746755",
@@ -1068,7 +1069,7 @@
       "horsepower": 172,
       "drivetrain": "Rear",
       "powertrain": "Gasoline",
-      "registrationDate": "1/27/2021"
+      "registrationDate": "2021-1-27"
     },
     {
       "VIN": "WAUJC68E85A556764",
@@ -1084,7 +1085,7 @@
       "horsepower": 121,
       "drivetrain": "AWD",
       "powertrain": "Gasoline",
-      "registrationDate": "9/22/2022"
+      "registrationDate": "2022-9-22"
     },
     {
       "VIN": "1N6AA0CH9DN114782",
@@ -1094,13 +1095,13 @@
       "category": "Truck",
       "color": "Crimson",
       "navigation": true,
-      "fuelEconomyCity": null,
-      "fuelEconomyHighway": null,
+      "fuelEconomyCity": 33.39,
+      "fuelEconomyHighway": 42.65,
       "price": 19268.58,
       "horsepower": 243,
       "drivetrain": "Front",
       "powertrain": "EV",
-      "registrationDate": "9/25/2022"
+      "registrationDate": "2022-9-25"
     },
     {
       "VIN": "1G4HF57959U099807",
@@ -1116,7 +1117,7 @@
       "horsepower": 243,
       "drivetrain": "AWD",
       "powertrain": "Diesel",
-      "registrationDate": "9/7/2020"
+      "registrationDate": "2020-9-7"
     },
     {
       "VIN": "WA1LGAFEXFD345985",
@@ -1126,13 +1127,13 @@
       "category": "Coupe",
       "color": "Red",
       "navigation": true,
-      "fuelEconomyCity": null,
-      "fuelEconomyHighway": null,
+      "fuelEconomyCity": 35.78,
+      "fuelEconomyHighway": 27.26,
       "price": 19925.27,
       "horsepower": 225,
       "drivetrain": "Front",
       "powertrain": "EV",
-      "registrationDate": "8/23/2021"
+      "registrationDate": "2021-8-23"
     },
     {
       "VIN": "1G6DP577670074808",
@@ -1148,7 +1149,7 @@
       "horsepower": 98,
       "drivetrain": "Front",
       "powertrain": "Diesel",
-      "registrationDate": "7/18/2020"
+      "registrationDate": "2020-7-18"
     },
     {
       "VIN": "WBAEK13456C797743",
@@ -1164,7 +1165,7 @@
       "horsepower": 199,
       "drivetrain": "AWD",
       "powertrain": "Gasoline",
-      "registrationDate": "1/19/2023"
+      "registrationDate": "2023-1-19"
     },
     {
       "VIN": "KNAFK4A68E5851758",
@@ -1174,13 +1175,13 @@
       "category": "SUV",
       "color": "Puce",
       "navigation": true,
-      "fuelEconomyCity": null,
-      "fuelEconomyHighway": null,
+      "fuelEconomyCity": 36.72,
+      "fuelEconomyHighway": 16.41,
       "price": 59583.18,
       "horsepower": 147,
       "drivetrain": "Rear",
       "powertrain": "EV",
-      "registrationDate": "1/15/2021"
+      "registrationDate": "2021-1-15"
     },
     {
       "VIN": "5UXKU2C53F0890484",
@@ -1196,7 +1197,7 @@
       "horsepower": 273,
       "drivetrain": "Rear",
       "powertrain": "Hybrid",
-      "registrationDate": "6/1/2021"
+      "registrationDate": "2021-6-1"
     },
     {
       "VIN": "WA1CGAFP3FA804759",
@@ -1212,7 +1213,7 @@
       "horsepower": 195,
       "drivetrain": "Front",
       "powertrain": "Hybrid",
-      "registrationDate": "11/29/2022"
+      "registrationDate": "2022-11-29"
     },
     {
       "VIN": "1GYS4GEF8DR255218",
@@ -1228,7 +1229,7 @@
       "horsepower": 152,
       "drivetrain": "Front",
       "powertrain": "Diesel",
-      "registrationDate": "7/2/2023"
+      "registrationDate": "2023-7-2"
     },
     {
       "VIN": "KNADH4A34A6849196",
@@ -1238,13 +1239,13 @@
       "category": "Coupe",
       "color": "Puce",
       "navigation": false,
-      "fuelEconomyCity": null,
-      "fuelEconomyHighway": null,
+      "fuelEconomyCity": 28.25,
+      "fuelEconomyHighway": 52.22,
       "price": 67487.23,
       "horsepower": 262,
       "drivetrain": "AWD",
       "powertrain": "EV",
-      "registrationDate": "2/7/2023"
+      "registrationDate": "2023-2-7"
     },
     {
       "VIN": "1FTMF1EW7AK115183",
@@ -1254,13 +1255,13 @@
       "category": "Coupe",
       "color": "Blue",
       "navigation": false,
-      "fuelEconomyCity": null,
-      "fuelEconomyHighway": null,
+      "fuelEconomyCity": 19.59,
+      "fuelEconomyHighway": 20.71,
       "price": 24499.48,
       "horsepower": 185,
       "drivetrain": "AWD",
       "powertrain": "EV",
-      "registrationDate": "5/8/2023"
+      "registrationDate": "2023-5-8"
     },
     {
       "VIN": "1G6DL5EGXA0757925",
@@ -1276,7 +1277,7 @@
       "horsepower": 180,
       "drivetrain": "AWD",
       "powertrain": "Hybrid",
-      "registrationDate": "10/27/2022"
+      "registrationDate": "2022-10-27"
     },
     {
       "VIN": "WA1CFAFP2DA497424",
@@ -1292,7 +1293,7 @@
       "horsepower": 167,
       "drivetrain": "Rear",
       "powertrain": "Other",
-      "registrationDate": "10/15/2022"
+      "registrationDate": "2022-10-15"
     },
     {
       "VIN": "WBA3B9C57FJ611842",
@@ -1308,7 +1309,7 @@
       "horsepower": 239,
       "drivetrain": "Front",
       "powertrain": "Other",
-      "registrationDate": "12/22/2021"
+      "registrationDate": "2021-12-22"
     },
     {
       "VIN": "5N1AN0NU2FN159191",
@@ -1324,7 +1325,7 @@
       "horsepower": 107,
       "drivetrain": "AWD",
       "powertrain": "Diesel",
-      "registrationDate": "2/14/2020"
+      "registrationDate": "2020-2-14"
     },
     {
       "VIN": "JH4KB2F67CC684380",
@@ -1334,13 +1335,13 @@
       "category": "SUV",
       "color": "Yellow",
       "navigation": true,
-      "fuelEconomyCity": null,
-      "fuelEconomyHighway": null,
+      "fuelEconomyCity": 23.36,
+      "fuelEconomyHighway": 23.53,
       "price": 31989.26,
       "horsepower": 178,
       "drivetrain": "Front",
       "powertrain": "EV",
-      "registrationDate": "5/24/2021"
+      "registrationDate": "2021-5-24"
     },
     {
       "VIN": "JM1GJ1U59F1228931",
@@ -1356,7 +1357,7 @@
       "horsepower": 176,
       "drivetrain": "AWD",
       "powertrain": "Other",
-      "registrationDate": "8/4/2020"
+      "registrationDate": "2020-8-4"
     },
     {
       "VIN": "WBSBR93414P724934",
@@ -1372,7 +1373,7 @@
       "horsepower": 283,
       "drivetrain": "Rear",
       "powertrain": "Other",
-      "registrationDate": "5/22/2023"
+      "registrationDate": "2023-5-22"
     },
     {
       "VIN": "WBAGN83433D246449",
@@ -1388,7 +1389,7 @@
       "horsepower": 187,
       "drivetrain": "Rear",
       "powertrain": "Other",
-      "registrationDate": "10/16/2021"
+      "registrationDate": "2021-10-16"
     },
     {
       "VIN": "1FTEW1CF3FF346993",
@@ -1398,13 +1399,13 @@
       "category": "Convertible",
       "color": "Orange",
       "navigation": false,
-      "fuelEconomyCity": null,
-      "fuelEconomyHighway": null,
+      "fuelEconomyCity": 29.3,
+      "fuelEconomyHighway": 12.7,
       "price": 19915.97,
       "horsepower": 208,
       "drivetrain": "Front",
       "powertrain": "EV",
-      "registrationDate": "10/11/2021"
+      "registrationDate": "2021-10-11"
     },
     {
       "VIN": "WAUAH98E48A273298",
@@ -1420,7 +1421,7 @@
       "horsepower": 72,
       "drivetrain": "Rear",
       "powertrain": "Gasoline",
-      "registrationDate": "8/4/2020"
+      "registrationDate": "2020-8-4"
     },
     {
       "VIN": "1D4PU6GX7AW543761",
@@ -1430,13 +1431,13 @@
       "category": "Sedan",
       "color": "Yellow",
       "navigation": false,
-      "fuelEconomyCity": null,
-      "fuelEconomyHighway": null,
+      "fuelEconomyCity": 29.61,
+      "fuelEconomyHighway": 32.97,
       "price": 66226.5,
       "horsepower": 97,
       "drivetrain": "Front",
       "powertrain": "EV",
-      "registrationDate": "7/29/2020"
+      "registrationDate": "2020-7-29"
     },
     {
       "VIN": "5TDBK3EH9DS255266",
@@ -1452,7 +1453,7 @@
       "horsepower": 199,
       "drivetrain": "Rear",
       "powertrain": "Other",
-      "registrationDate": "6/17/2022"
+      "registrationDate": "2022-6-17"
     },
     {
       "VIN": "WAUHF78P79A340844",
@@ -1468,7 +1469,7 @@
       "horsepower": 81,
       "drivetrain": "Front",
       "powertrain": "Other",
-      "registrationDate": "1/22/2020"
+      "registrationDate": "2020-1-22"
     },
     {
       "VIN": "2HNYB1H21AH338135",
@@ -1478,13 +1479,13 @@
       "category": "Sedan",
       "color": "Mauv",
       "navigation": false,
-      "fuelEconomyCity": null,
-      "fuelEconomyHighway": null,
+      "fuelEconomyCity": 29.78,
+      "fuelEconomyHighway": 12.39,
       "price": 67975.6,
       "horsepower": 207,
       "drivetrain": "AWD",
       "powertrain": "EV",
-      "registrationDate": "6/27/2022"
+      "registrationDate": "2022-6-27"
     },
     {
       "VIN": "5UXZV8C54CL322141",
@@ -1500,7 +1501,7 @@
       "horsepower": 78,
       "drivetrain": "Front",
       "powertrain": "Other",
-      "registrationDate": "2/28/2023"
+      "registrationDate": "2023-2-28"
     },
     {
       "VIN": "WAUDF98E38A466576",
@@ -1516,7 +1517,7 @@
       "horsepower": 150,
       "drivetrain": "Rear",
       "powertrain": "Hybrid",
-      "registrationDate": "9/9/2021"
+      "registrationDate": "2021-9-9"
     },
     {
       "VIN": "JN1AZ4FH2FM016493",
@@ -1532,7 +1533,7 @@
       "horsepower": 112,
       "drivetrain": "AWD",
       "powertrain": "Gasoline",
-      "registrationDate": "8/24/2023"
+      "registrationDate": "2023-8-24"
     },
     {
       "VIN": "JTMHY7AJ9D4459084",
@@ -1548,7 +1549,7 @@
       "horsepower": 104,
       "drivetrain": "Front",
       "powertrain": "Gasoline",
-      "registrationDate": "9/13/2020"
+      "registrationDate": "2020-9-13"
     },
     {
       "VIN": "WBAPK5G5XBN692584",
@@ -1564,7 +1565,7 @@
       "horsepower": 171,
       "drivetrain": "Rear",
       "powertrain": "Diesel",
-      "registrationDate": "2/23/2022"
+      "registrationDate": "2022-2-23"
     },
     {
       "VIN": "2C3CCABGXFH694435",
@@ -1580,7 +1581,7 @@
       "horsepower": 164,
       "drivetrain": "AWD",
       "powertrain": "Gasoline",
-      "registrationDate": "8/4/2022"
+      "registrationDate": "2022-8-4"
     },
     {
       "VIN": "1FTMF1CW0AK479741",
@@ -1596,7 +1597,7 @@
       "horsepower": 246,
       "drivetrain": "Rear",
       "powertrain": "Diesel",
-      "registrationDate": "5/21/2023"
+      "registrationDate": "2023-5-21"
     },
     {
       "VIN": "JA32X8HW7AU783709",
@@ -1612,7 +1613,7 @@
       "horsepower": 64,
       "drivetrain": "Front",
       "powertrain": "Diesel",
-      "registrationDate": "3/17/2020"
+      "registrationDate": "2020-3-17"
     },
     {
       "VIN": "1G4HP57M89U319622",
@@ -1628,7 +1629,7 @@
       "horsepower": 207,
       "drivetrain": "AWD",
       "powertrain": "Other",
-      "registrationDate": "1/24/2022"
+      "registrationDate": "2022-1-24"
     },
     {
       "VIN": "2C3CDZFJ5FH903520",
@@ -1644,7 +1645,7 @@
       "horsepower": 270,
       "drivetrain": "Front",
       "powertrain": "Diesel",
-      "registrationDate": "7/24/2020"
+      "registrationDate": "2020-7-24"
     },
     {
       "VIN": "1FTWF3A5XAE735333",
@@ -1660,7 +1661,7 @@
       "horsepower": 79,
       "drivetrain": "Front",
       "powertrain": "Hybrid",
-      "registrationDate": "11/14/2020"
+      "registrationDate": "2020-11-14"
     },
     {
       "VIN": "WAUAF78E46A474576",
@@ -1676,7 +1677,7 @@
       "horsepower": 87,
       "drivetrain": "Rear",
       "powertrain": "Gasoline",
-      "registrationDate": "10/7/2021"
+      "registrationDate": "2021-10-7"
     },
     {
       "VIN": "1N6AA0CC1BN456664",
@@ -1686,13 +1687,13 @@
       "category": "Coupe",
       "color": "Maroon",
       "navigation": true,
-      "fuelEconomyCity": null,
-      "fuelEconomyHighway": null,
+      "fuelEconomyCity": 26.53,
+      "fuelEconomyHighway": 55.55,
       "price": 10515.55,
       "horsepower": 58,
       "drivetrain": "Front",
       "powertrain": "EV",
-      "registrationDate": "9/19/2021"
+      "registrationDate": "2021-9-19"
     },
     {
       "VIN": "WAUPEAFM4DA469654",
@@ -1702,13 +1703,13 @@
       "category": "Convertible",
       "color": "Crimson",
       "navigation": true,
-      "fuelEconomyCity": null,
-      "fuelEconomyHighway": null,
+      "fuelEconomyCity": 10.56,
+      "fuelEconomyHighway": 24.06,
       "price": 29483.3,
       "horsepower": 116,
       "drivetrain": "Rear",
       "powertrain": "EV",
-      "registrationDate": "9/24/2020"
+      "registrationDate": "2020-9-24"
     },
     {
       "VIN": "2C3CCAJG6EH562093",
@@ -1724,7 +1725,7 @@
       "horsepower": 216,
       "drivetrain": "AWD",
       "powertrain": "Gasoline",
-      "registrationDate": "2/27/2022"
+      "registrationDate": "2022-2-27"
     },
     {
       "VIN": "JN8AZ2KRXBT394338",
@@ -1740,7 +1741,7 @@
       "horsepower": 72,
       "drivetrain": "AWD",
       "powertrain": "Gasoline",
-      "registrationDate": "6/6/2020"
+      "registrationDate": "2020-6-6"
     },
     {
       "VIN": "WAUDH98E38A783798",
@@ -1756,7 +1757,7 @@
       "horsepower": 281,
       "drivetrain": "Front",
       "powertrain": "Gasoline",
-      "registrationDate": "10/4/2022"
+      "registrationDate": "2022-10-4"
     },
     {
       "VIN": "1G6DH5EG7A0048015",
@@ -1772,7 +1773,7 @@
       "horsepower": 68,
       "drivetrain": "AWD",
       "powertrain": "Diesel",
-      "registrationDate": "11/18/2021"
+      "registrationDate": "2021-11-18"
     },
     {
       "VIN": "2G61W5S8XF9422216",
@@ -1788,7 +1789,7 @@
       "horsepower": 188,
       "drivetrain": "Front",
       "powertrain": "Gasoline",
-      "registrationDate": "7/25/2023"
+      "registrationDate": "2023-7-25"
     },
     {
       "VIN": "19UUA8F33EA839660",
@@ -1804,7 +1805,7 @@
       "horsepower": 297,
       "drivetrain": "Rear",
       "powertrain": "Other",
-      "registrationDate": "12/11/2020"
+      "registrationDate": "2020-12-11"
     },
     {
       "VIN": "2T1KE4EE3BC292029",
@@ -1820,7 +1821,7 @@
       "horsepower": 298,
       "drivetrain": "AWD",
       "powertrain": "Gasoline",
-      "registrationDate": "2/15/2023"
+      "registrationDate": "2023-2-15"
     },
     {
       "VIN": "SCBBP93W59C791083",
@@ -1836,7 +1837,7 @@
       "horsepower": 207,
       "drivetrain": "Front",
       "powertrain": "Other",
-      "registrationDate": "1/23/2022"
+      "registrationDate": "2022-1-23"
     },
     {
       "VIN": "3CZRE3H3XAG658876",
@@ -1852,7 +1853,7 @@
       "horsepower": 239,
       "drivetrain": "Rear",
       "powertrain": "Diesel",
-      "registrationDate": "12/29/2022"
+      "registrationDate": "2022-12-29"
     },
     {
       "VIN": "WDCYC3HF2AX909770",
@@ -1868,7 +1869,7 @@
       "horsepower": 75,
       "drivetrain": "Rear",
       "powertrain": "Other",
-      "registrationDate": "6/25/2022"
+      "registrationDate": "2022-6-25"
     },
     {
       "VIN": "JTHFF2C28E2224967",
@@ -1884,7 +1885,7 @@
       "horsepower": 95,
       "drivetrain": "Front",
       "powertrain": "Other",
-      "registrationDate": "7/6/2023"
+      "registrationDate": "2023-7-6"
     },
     {
       "VIN": "JM1CW2BL6C0535157",
@@ -1894,13 +1895,13 @@
       "category": "Truck",
       "color": "Teal",
       "navigation": true,
-      "fuelEconomyCity": null,
-      "fuelEconomyHighway": null,
+      "fuelEconomyCity": 26.84,
+      "fuelEconomyHighway": 31.66,
       "price": 76738.3,
       "horsepower": 279,
       "drivetrain": "AWD",
       "powertrain": "EV",
-      "registrationDate": "11/11/2021"
+      "registrationDate": "2021-11-11"
     },
     {
       "VIN": "3VW517AT3EM029224",
@@ -1910,13 +1911,13 @@
       "category": "SUV",
       "color": "Red",
       "navigation": true,
-      "fuelEconomyCity": null,
-      "fuelEconomyHighway": null,
+      "fuelEconomyCity": 13.43,
+      "fuelEconomyHighway": 38.07,
       "price": 31446.91,
       "horsepower": 247,
       "drivetrain": "Front",
       "powertrain": "EV",
-      "registrationDate": "4/1/2020"
+      "registrationDate": "2020-4-1"
     },
     {
       "VIN": "1FMEU6DE5AU653090",
@@ -1932,7 +1933,7 @@
       "horsepower": 179,
       "drivetrain": "Front",
       "powertrain": "Diesel",
-      "registrationDate": "5/24/2020"
+      "registrationDate": "2020-5-24"
     },
     {
       "VIN": "WAUDF98E28A979706",
@@ -1948,7 +1949,7 @@
       "horsepower": 188,
       "drivetrain": "AWD",
       "powertrain": "Gasoline",
-      "registrationDate": "1/26/2021"
+      "registrationDate": "2021-1-26"
     },
     {
       "VIN": "1G6DC8EY6B0988669",
@@ -1964,7 +1965,7 @@
       "horsepower": 138,
       "drivetrain": "Front",
       "powertrain": "Gasoline",
-      "registrationDate": "1/15/2023"
+      "registrationDate": "2023-1-15"
     },
     {
       "VIN": "1G6DF5EY8B0342328",
@@ -1974,13 +1975,13 @@
       "category": "SUV",
       "color": "Green",
       "navigation": false,
-      "fuelEconomyCity": null,
-      "fuelEconomyHighway": null,
+      "fuelEconomyCity": 39.83,
+      "fuelEconomyHighway": 55.69,
       "price": 67826.88,
       "horsepower": 81,
       "drivetrain": "Rear",
       "powertrain": "EV",
-      "registrationDate": "3/6/2022"
+      "registrationDate": "2022-3-6"
     },
     {
       "VIN": "3C4PDCGB3FT142155",
@@ -1996,7 +1997,7 @@
       "horsepower": 89,
       "drivetrain": "AWD",
       "powertrain": "Gasoline",
-      "registrationDate": "7/13/2023"
+      "registrationDate": "2023-7-13"
     },
     {
       "VIN": "WAUVC58E53A504193",
@@ -2012,7 +2013,7 @@
       "horsepower": 153,
       "drivetrain": "Rear",
       "powertrain": "Hybrid",
-      "registrationDate": "12/14/2022"
+      "registrationDate": "2022-12-14"
     },
     {
       "VIN": "JN1CV6EK2BM696452",
@@ -2022,13 +2023,13 @@
       "category": "SUV",
       "color": "Puce",
       "navigation": false,
-      "fuelEconomyCity": null,
-      "fuelEconomyHighway": null,
+      "fuelEconomyCity": 15.59,
+      "fuelEconomyHighway": 55.38,
       "price": 36633.95,
       "horsepower": 135,
       "drivetrain": "Rear",
       "powertrain": "EV",
-      "registrationDate": "11/11/2022"
+      "registrationDate": "2022-11-11"
     },
     {
       "VIN": "WAUKH78E97A445638",
@@ -2044,7 +2045,7 @@
       "horsepower": 300,
       "drivetrain": "Front",
       "powertrain": "Other",
-      "registrationDate": "2/13/2023"
+      "registrationDate": "2023-2-13"
     },
     {
       "VIN": "SCBLF44J07C744540",
@@ -2060,7 +2061,7 @@
       "horsepower": 65,
       "drivetrain": "AWD",
       "powertrain": "Other",
-      "registrationDate": "5/28/2022"
+      "registrationDate": "2022-5-28"
     },
     {
       "VIN": "KMHHU6KJ7FU806768",
@@ -2076,7 +2077,7 @@
       "horsepower": 181,
       "drivetrain": "Rear",
       "powertrain": "Diesel",
-      "registrationDate": "9/27/2021"
+      "registrationDate": "2021-9-27"
     },
     {
       "VIN": "WBAAX13433P730644",
@@ -2092,7 +2093,7 @@
       "horsepower": 204,
       "drivetrain": "Front",
       "powertrain": "Other",
-      "registrationDate": "3/20/2022"
+      "registrationDate": "2022-3-20"
     },
     {
       "VIN": "JTHBB1BA1A2258417",
@@ -2108,7 +2109,7 @@
       "horsepower": 216,
       "drivetrain": "Front",
       "powertrain": "Hybrid",
-      "registrationDate": "1/18/2023"
+      "registrationDate": "2023-1-18"
     },
     {
       "VIN": "WBS3C9C59FP527270",
@@ -2118,13 +2119,13 @@
       "category": "Sedan",
       "color": "Indigo",
       "navigation": true,
-      "fuelEconomyCity": null,
-      "fuelEconomyHighway": null,
+      "fuelEconomyCity": 36.3,
+      "fuelEconomyHighway": 24.26,
       "price": 18096.92,
       "horsepower": 254,
       "drivetrain": "Front",
       "powertrain": "EV",
-      "registrationDate": "6/23/2023"
+      "registrationDate": "2023-6-23"
     },
     {
       "VIN": "SCFEBBAC2AG292250",
@@ -2140,7 +2141,7 @@
       "horsepower": 178,
       "drivetrain": "Front",
       "powertrain": "Hybrid",
-      "registrationDate": "3/16/2023"
+      "registrationDate": "2023-3-16"
     },
     {
       "VIN": "YV1612FH7E2869104",
@@ -2150,13 +2151,13 @@
       "category": "Truck",
       "color": "Yellow",
       "navigation": true,
-      "fuelEconomyCity": null,
-      "fuelEconomyHighway": null,
+      "fuelEconomyCity": 34.5,
+      "fuelEconomyHighway": 38.34,
       "price": 10943.84,
       "horsepower": 73,
       "drivetrain": "Rear",
       "powertrain": "EV",
-      "registrationDate": "9/22/2020"
+      "registrationDate": "2020-9-22"
     },
     {
       "VIN": "19UUA66266A101283",
@@ -2172,7 +2173,7 @@
       "horsepower": 99,
       "drivetrain": "Rear",
       "powertrain": "Gasoline",
-      "registrationDate": "8/6/2021"
+      "registrationDate": "2021-8-6"
     },
     {
       "VIN": "SALSF2D44BA871828",
@@ -2182,13 +2183,13 @@
       "category": "Convertible",
       "color": "Goldenrod",
       "navigation": true,
-      "fuelEconomyCity": null,
-      "fuelEconomyHighway": null,
+      "fuelEconomyCity": 28.41,
+      "fuelEconomyHighway": 39.16,
       "price": 66586.4,
       "horsepower": 132,
       "drivetrain": "AWD",
       "powertrain": "EV",
-      "registrationDate": "4/15/2021"
+      "registrationDate": "2021-4-15"
     },
     {
       "VIN": "WAUKFAFLXDN911702",
@@ -2204,7 +2205,7 @@
       "horsepower": 247,
       "drivetrain": "Rear",
       "powertrain": "Hybrid",
-      "registrationDate": "4/5/2023"
+      "registrationDate": "2023-4-5"
     },
     {
       "VIN": "19UUA86239A700691",
@@ -2220,7 +2221,7 @@
       "horsepower": 151,
       "drivetrain": "Front",
       "powertrain": "Other",
-      "registrationDate": "7/5/2021"
+      "registrationDate": "2021-7-5"
     },
     {
       "VIN": "1FTSX2B55AE674347",
@@ -2236,7 +2237,7 @@
       "horsepower": 219,
       "drivetrain": "Rear",
       "powertrain": "Other",
-      "registrationDate": "1/3/2020"
+      "registrationDate": "2020-1-3"
     },
     {
       "VIN": "JH4CL95985C289018",
@@ -2252,7 +2253,7 @@
       "horsepower": 207,
       "drivetrain": "AWD",
       "powertrain": "Other",
-      "registrationDate": "2/8/2020"
+      "registrationDate": "2020-2-8"
     },
     {
       "VIN": "1C3CDZAB8CN553318",
@@ -2262,13 +2263,13 @@
       "category": "Coupe",
       "color": "Pink",
       "navigation": true,
-      "fuelEconomyCity": null,
-      "fuelEconomyHighway": null,
+      "fuelEconomyCity": 11.55,
+      "fuelEconomyHighway": 54.47,
       "price": 17066.23,
       "horsepower": 112,
       "drivetrain": "Rear",
       "powertrain": "EV",
-      "registrationDate": "4/25/2022"
+      "registrationDate": "2022-4-25"
     },
     {
       "VIN": "1G6AB5R32D0069094",
@@ -2284,7 +2285,7 @@
       "horsepower": 260,
       "drivetrain": "Rear",
       "powertrain": "Hybrid",
-      "registrationDate": "1/3/2023"
+      "registrationDate": "2023-1-3"
     },
     {
       "VIN": "3C63DPJLXCG127610",
@@ -2300,7 +2301,7 @@
       "horsepower": 267,
       "drivetrain": "Front",
       "powertrain": "Gasoline",
-      "registrationDate": "4/20/2023"
+      "registrationDate": "2023-4-20"
     },
     {
       "VIN": "WAUMFAFL8DN476851",
@@ -2316,7 +2317,7 @@
       "horsepower": 93,
       "drivetrain": "AWD",
       "powertrain": "Other",
-      "registrationDate": "5/13/2020"
+      "registrationDate": "2020-5-13"
     },
     {
       "VIN": "1FTMF1EW5AF747088",
@@ -2332,7 +2333,7 @@
       "horsepower": 200,
       "drivetrain": "Front",
       "powertrain": "Other",
-      "registrationDate": "3/7/2021"
+      "registrationDate": "2021-3-7"
     },
     {
       "VIN": "3D73Y4CL3AG991314",
@@ -2348,7 +2349,7 @@
       "horsepower": 296,
       "drivetrain": "AWD",
       "powertrain": "Diesel",
-      "registrationDate": "8/26/2022"
+      "registrationDate": "2022-8-26"
     },
     {
       "VIN": "KNADM5A33E6637073",
@@ -2364,7 +2365,7 @@
       "horsepower": 124,
       "drivetrain": "Rear",
       "powertrain": "Diesel",
-      "registrationDate": "5/18/2023"
+      "registrationDate": "2023-5-18"
     },
     {
       "VIN": "WBACK73451L339414",
@@ -2380,7 +2381,7 @@
       "horsepower": 188,
       "drivetrain": "AWD",
       "powertrain": "Other",
-      "registrationDate": "9/21/2021"
+      "registrationDate": "2021-9-21"
     },
     {
       "VIN": "WA1LYAFE5AD395473",
@@ -2396,7 +2397,7 @@
       "horsepower": 228,
       "drivetrain": "Rear",
       "powertrain": "Gasoline",
-      "registrationDate": "3/31/2021"
+      "registrationDate": "2021-3-31"
     },
     {
       "VIN": "1C3CC5FB2AN753788",
@@ -2412,7 +2413,7 @@
       "horsepower": 92,
       "drivetrain": "AWD",
       "powertrain": "Diesel",
-      "registrationDate": "7/12/2023"
+      "registrationDate": "2023-7-12"
     },
     {
       "VIN": "WA1CMAFE9CD005280",
@@ -2428,7 +2429,7 @@
       "horsepower": 222,
       "drivetrain": "AWD",
       "powertrain": "Diesel",
-      "registrationDate": "4/23/2020"
+      "registrationDate": "2020-4-23"
     },
     {
       "VIN": "5NPDH4AE4DH995077",
@@ -2438,13 +2439,13 @@
       "category": "Convertible",
       "color": "Red",
       "navigation": true,
-      "fuelEconomyCity": null,
-      "fuelEconomyHighway": null,
+      "fuelEconomyCity": 20.87,
+      "fuelEconomyHighway": 40.93,
       "price": 75950.41,
       "horsepower": 284,
       "drivetrain": "Rear",
       "powertrain": "EV",
-      "registrationDate": "10/6/2022"
+      "registrationDate": "2022-10-6"
     },
     {
       "VIN": "1N6AA0CCXCN550950",
@@ -2460,7 +2461,7 @@
       "horsepower": 71,
       "drivetrain": "Front",
       "powertrain": "Other",
-      "registrationDate": "3/23/2022"
+      "registrationDate": "2022-3-23"
     },
     {
       "VIN": "KNAFK4A62E5357721",
@@ -2476,7 +2477,7 @@
       "horsepower": 65,
       "drivetrain": "Front",
       "powertrain": "Other",
-      "registrationDate": "5/18/2021"
+      "registrationDate": "2021-5-18"
     },
     {
       "VIN": "JA32U1FU9CU082979",
@@ -2492,7 +2493,7 @@
       "horsepower": 111,
       "drivetrain": "Front",
       "powertrain": "Other",
-      "registrationDate": "7/23/2021"
+      "registrationDate": "2021-7-23"
     },
     {
       "VIN": "WBAPN7C5XBA430385",
@@ -2502,13 +2503,13 @@
       "category": "Sedan",
       "color": "Goldenrod",
       "navigation": true,
-      "fuelEconomyCity": null,
-      "fuelEconomyHighway": null,
+      "fuelEconomyCity": 21.05,
+      "fuelEconomyHighway": 58.21,
       "price": 54026.6,
       "horsepower": 105,
       "drivetrain": "Front",
       "powertrain": "EV",
-      "registrationDate": "2/27/2022"
+      "registrationDate": "2022-2-27"
     },
     {
       "VIN": "1G6AA5RX3F0124001",
@@ -2524,7 +2525,7 @@
       "horsepower": 108,
       "drivetrain": "Rear",
       "powertrain": "Hybrid",
-      "registrationDate": "6/3/2020"
+      "registrationDate": "2020-6-3"
     },
     {
       "VIN": "2G61P5S34E9785126",
@@ -2534,13 +2535,13 @@
       "category": "Sedan",
       "color": "Blue",
       "navigation": false,
-      "fuelEconomyCity": null,
-      "fuelEconomyHighway": null,
+      "fuelEconomyCity": 22.43,
+      "fuelEconomyHighway": 28.28,
       "price": 28273.77,
       "horsepower": 85,
       "drivetrain": "AWD",
       "powertrain": "EV",
-      "registrationDate": "5/11/2020"
+      "registrationDate": "2020-5-11"
     },
     {
       "VIN": "2C3CDXBG7DH757388",
@@ -2550,13 +2551,13 @@
       "category": "SUV",
       "color": "Crimson",
       "navigation": true,
-      "fuelEconomyCity": null,
-      "fuelEconomyHighway": null,
+      "fuelEconomyCity": 26.83,
+      "fuelEconomyHighway": 45.22,
       "price": 10498.43,
       "horsepower": 242,
       "drivetrain": "AWD",
       "powertrain": "EV",
-      "registrationDate": "5/15/2022"
+      "registrationDate": "2022-5-15"
     },
     {
       "VIN": "WBA3N3C50FF773559",
@@ -2572,7 +2573,7 @@
       "horsepower": 237,
       "drivetrain": "Rear",
       "powertrain": "Hybrid",
-      "registrationDate": "10/29/2021"
+      "registrationDate": "2021-10-29"
     },
     {
       "VIN": "WAUDV74F09N618426",
@@ -2588,7 +2589,7 @@
       "horsepower": 100,
       "drivetrain": "AWD",
       "powertrain": "Diesel",
-      "registrationDate": "9/25/2022"
+      "registrationDate": "2022-9-25"
     },
     {
       "VIN": "1G4GA5ER3CF301052",
@@ -2604,7 +2605,7 @@
       "horsepower": 121,
       "drivetrain": "Rear",
       "powertrain": "Diesel",
-      "registrationDate": "1/11/2020"
+      "registrationDate": "2020-1-11"
     },
     {
       "VIN": "WBASN2C56BC790223",
@@ -2614,13 +2615,13 @@
       "category": "Truck",
       "color": "Mauv",
       "navigation": false,
-      "fuelEconomyCity": null,
-      "fuelEconomyHighway": null,
+      "fuelEconomyCity": 17.97,
+      "fuelEconomyHighway": 44.73,
       "price": 15358.07,
       "horsepower": 79,
       "drivetrain": "Rear",
       "powertrain": "EV",
-      "registrationDate": "4/8/2023"
+      "registrationDate": "2023-4-8"
     },
     {
       "VIN": "JH4CU2E87DC291241",
@@ -2636,7 +2637,7 @@
       "horsepower": 83,
       "drivetrain": "Front",
       "powertrain": "Diesel",
-      "registrationDate": "9/16/2021"
+      "registrationDate": "2021-9-16"
     },
     {
       "VIN": "W04GV5EV9B1904647",
@@ -2652,7 +2653,7 @@
       "horsepower": 260,
       "drivetrain": "Front",
       "powertrain": "Other",
-      "registrationDate": "2/13/2020"
+      "registrationDate": "2020-2-13"
     },
     {
       "VIN": "5J8TB2H22CA371444",
@@ -2668,7 +2669,7 @@
       "horsepower": 197,
       "drivetrain": "AWD",
       "powertrain": "Diesel",
-      "registrationDate": "4/20/2022"
+      "registrationDate": "2022-4-20"
     },
     {
       "VIN": "2LMHJ5AT5CB369879",
@@ -2684,7 +2685,7 @@
       "horsepower": 220,
       "drivetrain": "AWD",
       "powertrain": "Hybrid",
-      "registrationDate": "1/1/2021"
+      "registrationDate": "2021-1-1"
     },
     {
       "VIN": "5NPEB4AC0DH550078",
@@ -2700,7 +2701,7 @@
       "horsepower": 102,
       "drivetrain": "AWD",
       "powertrain": "Gasoline",
-      "registrationDate": "9/15/2021"
+      "registrationDate": "2021-9-15"
     },
     {
       "VIN": "5UXWX7C59BL253095",
@@ -2716,7 +2717,7 @@
       "horsepower": 249,
       "drivetrain": "Rear",
       "powertrain": "Gasoline",
-      "registrationDate": "7/27/2023"
+      "registrationDate": "2023-7-27"
     },
     {
       "VIN": "WAUPN94E28N302783",
@@ -2726,13 +2727,13 @@
       "category": "SUV",
       "color": "Orange",
       "navigation": true,
-      "fuelEconomyCity": null,
-      "fuelEconomyHighway": null,
+      "fuelEconomyCity": 15.65,
+      "fuelEconomyHighway": 28.5,
       "price": 20896.71,
       "horsepower": 266,
       "drivetrain": "Front",
       "powertrain": "EV",
-      "registrationDate": "6/8/2021"
+      "registrationDate": "2021-6-8"
     },
     {
       "VIN": "2HNYD187X3H950309",
@@ -2748,7 +2749,7 @@
       "horsepower": 50,
       "drivetrain": "AWD",
       "powertrain": "Other",
-      "registrationDate": "3/21/2020"
+      "registrationDate": "2020-3-21"
     },
     {
       "VIN": "5N1AA0NC9BN270205",
@@ -2764,7 +2765,7 @@
       "horsepower": 117,
       "drivetrain": "AWD",
       "powertrain": "Diesel",
-      "registrationDate": "4/16/2020"
+      "registrationDate": "2020-4-16"
     },
     {
       "VIN": "KM8JT3AB8CU667971",
@@ -2780,7 +2781,7 @@
       "horsepower": 241,
       "drivetrain": "Front",
       "powertrain": "Hybrid",
-      "registrationDate": "3/2/2020"
+      "registrationDate": "2020-3-2"
     },
     {
       "VIN": "JTHBE5C27A5165521",
@@ -2796,7 +2797,7 @@
       "horsepower": 177,
       "drivetrain": "AWD",
       "powertrain": "Diesel",
-      "registrationDate": "1/3/2021"
+      "registrationDate": "2021-1-3"
     },
     {
       "VIN": "JTEBU5JR4D5676611",
@@ -2806,13 +2807,13 @@
       "category": "SUV",
       "color": "Fuscia",
       "navigation": true,
-      "fuelEconomyCity": null,
-      "fuelEconomyHighway": null,
+      "fuelEconomyCity": 15.55,
+      "fuelEconomyHighway": 12.83,
       "price": 48280.58,
       "horsepower": 53,
       "drivetrain": "AWD",
       "powertrain": "EV",
-      "registrationDate": "8/15/2022"
+      "registrationDate": "2022-8-15"
     },
     {
       "VIN": "WAUDF58E85A140714",
@@ -2822,13 +2823,13 @@
       "category": "SUV",
       "color": "Yellow",
       "navigation": false,
-      "fuelEconomyCity": null,
-      "fuelEconomyHighway": null,
+      "fuelEconomyCity": 29.33,
+      "fuelEconomyHighway": 40.9,
       "price": 23206.11,
       "horsepower": 181,
       "drivetrain": "Front",
       "powertrain": "EV",
-      "registrationDate": "3/17/2020"
+      "registrationDate": "2020-3-17"
     },
     {
       "VIN": "1N6AA0CA4AN954774",
@@ -2844,7 +2845,7 @@
       "horsepower": 200,
       "drivetrain": "AWD",
       "powertrain": "Diesel",
-      "registrationDate": "9/16/2021"
+      "registrationDate": "2021-9-16"
     },
     {
       "VIN": "2C3CDXDT4CH502366",
@@ -2854,13 +2855,13 @@
       "category": "Sedan",
       "color": "Fuscia",
       "navigation": false,
-      "fuelEconomyCity": null,
-      "fuelEconomyHighway": null,
+      "fuelEconomyCity": 33.51,
+      "fuelEconomyHighway": 11.15,
       "price": 19684.2,
       "horsepower": 74,
       "drivetrain": "Rear",
       "powertrain": "EV",
-      "registrationDate": "10/5/2020"
+      "registrationDate": "2020-10-5"
     },
     {
       "VIN": "2FMDK3AK2CB326164",
@@ -2876,7 +2877,7 @@
       "horsepower": 116,
       "drivetrain": "AWD",
       "powertrain": "Gasoline",
-      "registrationDate": "12/9/2022"
+      "registrationDate": "2022-12-9"
     },
     {
       "VIN": "5TDDCRFH1FS138260",
@@ -2892,7 +2893,7 @@
       "horsepower": 241,
       "drivetrain": "Front",
       "powertrain": "Other",
-      "registrationDate": "12/8/2020"
+      "registrationDate": "2020-12-8"
     },
     {
       "VIN": "3C4PDDAG8FT997461",
@@ -2908,7 +2909,7 @@
       "horsepower": 283,
       "drivetrain": "AWD",
       "powertrain": "Gasoline",
-      "registrationDate": "5/10/2021"
+      "registrationDate": "2021-5-10"
     },
     {
       "VIN": "3VW4T7AT6EM329863",
@@ -2918,13 +2919,13 @@
       "category": "SUV",
       "color": "Khaki",
       "navigation": true,
-      "fuelEconomyCity": null,
-      "fuelEconomyHighway": null,
+      "fuelEconomyCity": 27.84,
+      "fuelEconomyHighway": 23.39,
       "price": 29527.76,
       "horsepower": 75,
       "drivetrain": "Rear",
       "powertrain": "EV",
-      "registrationDate": "7/11/2023"
+      "registrationDate": "2023-7-11"
     },
     {
       "VIN": "2HNYD186X2H079384",
@@ -2940,7 +2941,7 @@
       "horsepower": 112,
       "drivetrain": "Rear",
       "powertrain": "Hybrid",
-      "registrationDate": "3/7/2022"
+      "registrationDate": "2022-3-7"
     },
     {
       "VIN": "1FMCU9E70AK805376",
@@ -2956,7 +2957,7 @@
       "horsepower": 186,
       "drivetrain": "AWD",
       "powertrain": "Gasoline",
-      "registrationDate": "8/2/2021"
+      "registrationDate": "2021-8-2"
     },
     {
       "VIN": "WAUFGBFBXAN467776",
@@ -2972,7 +2973,7 @@
       "horsepower": 288,
       "drivetrain": "AWD",
       "powertrain": "Gasoline",
-      "registrationDate": "3/6/2022"
+      "registrationDate": "2022-3-6"
     },
     {
       "VIN": "3D73M3HL2AG106342",
@@ -2988,7 +2989,7 @@
       "horsepower": 55,
       "drivetrain": "Rear",
       "powertrain": "Other",
-      "registrationDate": "3/25/2021"
+      "registrationDate": "2021-3-25"
     },
     {
       "VIN": "19VDE1F35DE351888",
@@ -2998,13 +2999,13 @@
       "category": "Coupe",
       "color": "Crimson",
       "navigation": false,
-      "fuelEconomyCity": null,
-      "fuelEconomyHighway": null,
+      "fuelEconomyCity": 18.82,
+      "fuelEconomyHighway": 26.85,
       "price": 21237.72,
       "horsepower": 262,
       "drivetrain": "AWD",
       "powertrain": "EV",
-      "registrationDate": "4/24/2022"
+      "registrationDate": "2022-4-24"
     },
     {
       "VIN": "WBA3F9C56DF827766",
@@ -3020,7 +3021,7 @@
       "horsepower": 97,
       "drivetrain": "Front",
       "powertrain": "Hybrid",
-      "registrationDate": "3/8/2021"
+      "registrationDate": "2021-3-8"
     },
     {
       "VIN": "SCBFH7ZA0FC073502",
@@ -3036,7 +3037,7 @@
       "horsepower": 235,
       "drivetrain": "Front",
       "powertrain": "Diesel",
-      "registrationDate": "3/25/2023"
+      "registrationDate": "2023-3-25"
     },
     {
       "VIN": "SALWR2VF4FA603831",
@@ -3046,13 +3047,13 @@
       "category": "Coupe",
       "color": "Green",
       "navigation": true,
-      "fuelEconomyCity": null,
-      "fuelEconomyHighway": null,
+      "fuelEconomyCity": 39.35,
+      "fuelEconomyHighway": 29.45,
       "price": 23045.57,
       "horsepower": 258,
       "drivetrain": "AWD",
       "powertrain": "EV",
-      "registrationDate": "2/25/2022"
+      "registrationDate": "2022-2-25"
     },
     {
       "VIN": "1FTEX1C89AF477143",
@@ -3068,7 +3069,7 @@
       "horsepower": 219,
       "drivetrain": "Rear",
       "powertrain": "Diesel",
-      "registrationDate": "9/25/2022"
+      "registrationDate": "2022-9-25"
     },
     {
       "VIN": "JN8AE2KP1C9964624",
@@ -3078,13 +3079,13 @@
       "category": "Truck",
       "color": "Green",
       "navigation": false,
-      "fuelEconomyCity": null,
-      "fuelEconomyHighway": null,
+      "fuelEconomyCity": 18.87,
+      "fuelEconomyHighway": 59.41,
       "price": 18652.73,
       "horsepower": 55,
       "drivetrain": "Rear",
       "powertrain": "EV",
-      "registrationDate": "12/14/2022"
+      "registrationDate": "2022-12-14"
     },
     {
       "VIN": "WAUR2AFD4DN084766",
@@ -3094,13 +3095,13 @@
       "category": "Sedan",
       "color": "Purple",
       "navigation": true,
-      "fuelEconomyCity": null,
-      "fuelEconomyHighway": null,
+      "fuelEconomyCity": 31.41,
+      "fuelEconomyHighway": 37.09,
       "price": 58074.34,
       "horsepower": 204,
       "drivetrain": "Rear",
       "powertrain": "EV",
-      "registrationDate": "9/2/2020"
+      "registrationDate": "2020-9-2"
     },
     {
       "VIN": "WAUDG78E65A725624",
@@ -3116,7 +3117,7 @@
       "horsepower": 89,
       "drivetrain": "Rear",
       "powertrain": "Gasoline",
-      "registrationDate": "8/16/2021"
+      "registrationDate": "2021-8-16"
     },
     {
       "VIN": "TRUB3AFK5C1387499",
@@ -3132,7 +3133,7 @@
       "horsepower": 258,
       "drivetrain": "AWD",
       "powertrain": "Gasoline",
-      "registrationDate": "3/11/2022"
+      "registrationDate": "2022-3-11"
     },
     {
       "VIN": "WVGAV3AX0DW046820",
@@ -3148,7 +3149,7 @@
       "horsepower": 168,
       "drivetrain": "AWD",
       "powertrain": "Hybrid",
-      "registrationDate": "10/14/2020"
+      "registrationDate": "2020-10-14"
     },
     {
       "VIN": "3VWF17AT5FM995709",
@@ -3164,7 +3165,7 @@
       "horsepower": 83,
       "drivetrain": "Rear",
       "powertrain": "Gasoline",
-      "registrationDate": "10/26/2021"
+      "registrationDate": "2021-10-26"
     },
     {
       "VIN": "5XYKT3A18CG877696",
@@ -3180,7 +3181,7 @@
       "horsepower": 163,
       "drivetrain": "AWD",
       "powertrain": "Gasoline",
-      "registrationDate": "8/4/2023"
+      "registrationDate": "2023-8-4"
     },
     {
       "VIN": "1FMHK7B89BG620292",
@@ -3190,13 +3191,13 @@
       "category": "Truck",
       "color": "Green",
       "navigation": true,
-      "fuelEconomyCity": null,
-      "fuelEconomyHighway": null,
+      "fuelEconomyCity": 33.35,
+      "fuelEconomyHighway": 42.33,
       "price": 62106.68,
       "horsepower": 59,
       "drivetrain": "Rear",
       "powertrain": "EV",
-      "registrationDate": "2/26/2021"
+      "registrationDate": "2021-2-26"
     },
     {
       "VIN": "WAUVFAFHXBN836666",
@@ -3212,6 +3213,6 @@
       "horsepower": 103,
       "drivetrain": "Front",
       "powertrain": "Diesel",
-      "registrationDate": "3/15/2021"
+      "registrationDate": "2021-3-15"
     }
   ]
